@@ -1,0 +1,9 @@
+doc_id: SOP-BAD-001
+doc_title: Missing status fixture
+doc_type: SOP
+version: "1.0"
+effective_date: "2026-01-01"
+review_due_date: "2027-01-01"
+department: QA
+source_file_path: documents/SOP-BAD-001.md
+source_hash: sha256:0000000000000000000000000000000000000000000000000000000000000000

@@ -1,0 +1,10 @@
+doc_id: SOP-QA-009
+doc_title: Obsolete sterility hold practice
+doc_type: SOP
+version: "0.8"
+status: Obsolete
+effective_date: "2025-01-01"
+review_due_date: "2025-12-31"
+department: QA
+source_file_path: documents/SOP-QA-009-sterility-obsolete.md
+source_hash: sha256:cc66a5a500deb8bd9948472d9b335928eaa69d2127bc8fa5418ec268f29a9582

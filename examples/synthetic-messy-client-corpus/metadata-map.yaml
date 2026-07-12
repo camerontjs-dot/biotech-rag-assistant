@@ -1,0 +1,27 @@
+schema_version: "0.1.0"
+client_label: synthetic-messy-client
+status_map:
+  Released: Effective
+  Active: Effective
+  Approved for Use: Approved
+  Draft: Draft
+  Superseded: Superseded
+  Obsolete: Obsolete
+doc_type_map:
+  SOP: SOP
+  POL: Policy
+  SPEC: Specification
+  NOTE: TechnicalNote
+filename_patterns:
+  - name: doc-id-version
+    pattern: "(?P<doc_id>[A-Z]{2,}-[A-Z]{2,}-[0-9]{3}).*?(?P<version>rev-[0-9]+|v[0-9.]+)"
+header_fields:
+  status: Status
+required_fields:
+  - doc_id
+  - doc_title
+  - doc_type
+  - version
+  - status
+  - effective_date
+  - department

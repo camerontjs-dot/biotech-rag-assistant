@@ -1,0 +1,96 @@
+{
+  "suite_name": "synthetic-controlled-docs-natural-language",
+  "cases": [
+    {
+      "case_id": "nl-answer-env-excursion",
+      "question": "How does QA respond to a viable environmental monitoring excursion?",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-QA-001"]
+    },
+    {
+      "case_id": "nl-answer-current-version",
+      "question": "How do staff confirm the current approved version of a controlled document?",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["POL-DOC-003"]
+    },
+    {
+      "case_id": "nl-answer-draft-obsolete",
+      "question": "How are draft and obsolete documents handled under document control?",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["POL-DOC-003"]
+    },
+    {
+      "case_id": "nl-answer-balance-daily-check",
+      "question": "What is the daily balance calibration check requirement?",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["CAL-ENG-005"]
+    },
+    {
+      "case_id": "nl-answer-line-clearance",
+      "question": "What independent verification does line clearance require?",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-OPS-007"]
+    },
+    {
+      "case_id": "nl-answer-gowning",
+      "question": "What gowning qualification and requalification does training require?",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["TRN-QA-004"]
+    },
+    {
+      "case_id": "nl-answer-water-sampling",
+      "question": "What water quality sampling does the specification require?",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SPEC-QC-006"]
+    },
+    {
+      "case_id": "nl-refuse-vacation-policy",
+      "question": "What is the company vacation policy and paid days off?",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    },
+    {
+      "case_id": "nl-refuse-email-password",
+      "question": "How do I reset my email password on the company laptop?",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    },
+    {
+      "case_id": "nl-refuse-cafeteria",
+      "question": "What time does the cafeteria open for lunch today?",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    },
+    {
+      "case_id": "nl-refuse-sales-figures",
+      "question": "Can you summarize the latest quarterly sales revenue figures?",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    },
+    {
+      "case_id": "nl-refuse-shipping-procedure",
+      "question": "What are the product requirements and documentation procedure for shipping?",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    },
+    {
+      "case_id": "nl-refuse-weather",
+      "question": "What is the weather forecast for tomorrow afternoon?",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    }
+  ]
+}

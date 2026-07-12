@@ -1,0 +1,10 @@
+{
+  "answer_text": "The obsolete sterility instruction says verbal confirmation is enough. [source: obsolete]",
+  "citations": [
+    {
+      "chunk_id": "SOP-QA-009_v0_8_chunk_001",
+      "label": "obsolete"
+    }
+  ],
+  "expected_outcome": "answer"
+}

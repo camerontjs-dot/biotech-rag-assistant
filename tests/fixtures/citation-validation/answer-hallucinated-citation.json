@@ -1,0 +1,10 @@
+{
+  "answer_text": "QA should place affected material on hold while the deviation is opened. [source: bad-id]",
+  "citations": [
+    {
+      "chunk_id": "NOT-A-REAL-CHUNK",
+      "label": "bad-id"
+    }
+  ],
+  "expected_outcome": "answer"
+}

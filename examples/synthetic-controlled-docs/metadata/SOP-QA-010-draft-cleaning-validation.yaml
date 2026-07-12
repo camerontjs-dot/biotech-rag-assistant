@@ -1,0 +1,10 @@
+doc_id: SOP-QA-010
+doc_title: Draft cleaning validation approach
+doc_type: SOP
+version: "0.1"
+status: Draft
+effective_date: "2026-02-01"
+review_due_date: "2027-02-01"
+department: QA
+source_file_path: documents/SOP-QA-010-draft-cleaning-validation.md
+source_hash: sha256:76e75176052e59f0dc641b20ee387b1ac98d7ddae6c23c0fa5805e9c8042efcb

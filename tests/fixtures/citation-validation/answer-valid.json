@@ -1,0 +1,10 @@
+{
+  "answer_text": "QA opens a deviation and places affected product lots on hold until the initial impact assessment is documented. [source: 1]",
+  "citations": [
+    {
+      "chunk_id": "SOP-QA-001_v1_0_chunk_002",
+      "label": "1"
+    }
+  ],
+  "expected_outcome": "answer"
+}

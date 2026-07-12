@@ -1,0 +1,10 @@
+doc_id: NOTE-TS-008
+doc_title: Customer requirement review note
+doc_type: TechnicalNote
+version: "1.0"
+status: Approved
+effective_date: "2026-01-25"
+review_due_date: "2027-01-25"
+department: Technical Services
+source_file_path: documents/NOTE-TS-008-customer-requirements.md
+source_hash: sha256:f119013d1b32adfc0eb9ddb016d0a02e35754835e4aad48ce50eed72280035cb

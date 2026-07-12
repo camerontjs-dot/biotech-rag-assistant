@@ -1,0 +1,305 @@
+{
+  "canonical_status_counts": {
+    "Approved": 1,
+    "Draft": 1,
+    "Effective": 5,
+    "Superseded": 1
+  },
+  "emitted_document_count": 4,
+  "field_coverage": {
+    "department": {
+      "established": 10,
+      "missing": 1
+    },
+    "doc_id": {
+      "established": 10,
+      "missing": 1
+    },
+    "doc_title": {
+      "established": 10,
+      "missing": 1
+    },
+    "doc_type": {
+      "established": 10,
+      "missing": 1
+    },
+    "effective_date": {
+      "established": 9,
+      "missing": 2
+    },
+    "status": {
+      "established": 8,
+      "missing": 3
+    },
+    "version": {
+      "established": 10,
+      "missing": 1
+    }
+  },
+  "input_document_count": 11,
+  "mapping_config_hash": "sha256:f75d7e6d8e7c0168aa180d6832cd23459f35ed618232ce8a7d8901d8312c1621",
+  "normalized_corpus_dir": "build/onboarded-synthetic-corpus",
+  "records": [
+    {
+      "department": "QA",
+      "doc_id": "DEV-QA-002",
+      "doc_title": "Deviation triage conflict example",
+      "doc_type": "SOP",
+      "effective_date": "2026-02-15",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "filename",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "version": "filename"
+      },
+      "reasons": [
+        "conflicting_field_sources:status",
+        "missing_required_field:status"
+      ],
+      "retrievable": false,
+      "source_path": "incoming/documents/DEV-QA-002_v1.0_conflicting-status.md",
+      "state": "needs_review",
+      "version": "1.0"
+    },
+    {
+      "department": "Technical Services",
+      "doc_id": "NOTE-TS-099",
+      "doc_title": "Technical services unknown status note",
+      "doc_type": "TechnicalNote",
+      "effective_date": "2026-03-10",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "filename",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "version": "filename"
+      },
+      "reasons": [
+        "missing_required_field:status",
+        "unknown_status_value:In use pending QA"
+      ],
+      "retrievable": false,
+      "source_path": "incoming/documents/NOTE-TS-099_v1.0_unknown-status.md",
+      "state": "needs_review",
+      "version": "1.0"
+    },
+    {
+      "canonical_status": "Approved",
+      "department": "Document Control",
+      "doc_id": "POL-DOC-003",
+      "doc_title": "Document control policy",
+      "doc_type": "Policy",
+      "effective_date": "2026-02-01",
+      "emitted_metadata_path": "metadata/POL-DOC-003_v2.0_approved.yaml",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "filename",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "status": "register",
+        "version": "filename"
+      },
+      "reasons": [],
+      "retrievable": true,
+      "source_path": "incoming/documents/POL-DOC-003_v2.0_approved.md",
+      "state": "mapped_cleanly",
+      "version": "2.0"
+    },
+    {
+      "canonical_status": "Effective",
+      "department": "Operations",
+      "doc_id": "SOP-OPS-007",
+      "doc_title": "Line clearance current candidate A",
+      "doc_type": "SOP",
+      "effective_date": "2026-01-20",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "register",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "status": "register",
+        "version": "filename"
+      },
+      "reasons": [
+        "duplicate_current_version"
+      ],
+      "retrievable": false,
+      "source_path": "incoming/documents/SOP-OPS-007_v1.0_current-a.md",
+      "state": "needs_review",
+      "version": "1.0"
+    },
+    {
+      "canonical_status": "Effective",
+      "department": "Operations",
+      "doc_id": "SOP-OPS-007",
+      "doc_title": "Line clearance current candidate B",
+      "doc_type": "SOP",
+      "effective_date": "2026-02-20",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "register",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "status": "register",
+        "version": "filename"
+      },
+      "reasons": [
+        "duplicate_current_version"
+      ],
+      "retrievable": false,
+      "source_path": "incoming/documents/SOP-OPS-007_v1.1_current-b.md",
+      "state": "needs_review",
+      "version": "1.1"
+    },
+    {
+      "canonical_status": "Superseded",
+      "department": "QA",
+      "doc_id": "SOP-QA-001",
+      "doc_title": "Superseded environmental monitoring response",
+      "doc_type": "SOP",
+      "effective_date": "2025-01-10",
+      "emitted_metadata_path": "metadata/SOP-QA-001_v0.9_superseded.yaml",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "filename",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "status": "register",
+        "version": "filename"
+      },
+      "reasons": [],
+      "retrievable": false,
+      "source_path": "incoming/documents/SOP-QA-001_v0.9_superseded.md",
+      "state": "excluded",
+      "version": "0.9"
+    },
+    {
+      "canonical_status": "Effective",
+      "department": "QA",
+      "doc_id": "SOP-QA-001",
+      "doc_title": "Environmental monitoring response",
+      "doc_type": "SOP",
+      "effective_date": "2026-01-15",
+      "emitted_metadata_path": "metadata/SOP-QA-001_v1.0_current-release.yaml",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "filename",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "status": "register",
+        "version": "filename"
+      },
+      "reasons": [],
+      "retrievable": true,
+      "source_path": "incoming/documents/SOP-QA-001_v1.0_current-release.md",
+      "state": "mapped_cleanly",
+      "version": "1.0"
+    },
+    {
+      "canonical_status": "Draft",
+      "department": "QA",
+      "doc_id": "SOP-QA-010",
+      "doc_title": "Draft cleaning validation wording",
+      "doc_type": "SOP",
+      "effective_date": "2026-03-01",
+      "emitted_metadata_path": "metadata/SOP-QA-010_v0.1_draft.yaml",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "filename",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "status": "register",
+        "version": "filename"
+      },
+      "reasons": [],
+      "retrievable": false,
+      "source_path": "incoming/documents/SOP-QA-010_v0.1_draft.md",
+      "state": "excluded",
+      "version": "0.1"
+    },
+    {
+      "canonical_status": "Effective",
+      "department": "QC",
+      "doc_id": "SPEC-QC-006",
+      "doc_title": "Water quality specification",
+      "doc_type": "Specification",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "filename",
+        "doc_title": "register",
+        "doc_type": "register",
+        "status": "register",
+        "version": "filename"
+      },
+      "reasons": [
+        "missing_required_field:effective_date"
+      ],
+      "retrievable": false,
+      "source_path": "incoming/documents/SPEC-QC-006_v1.2_missing-effective-date.md",
+      "state": "needs_review",
+      "version": "1.2"
+    },
+    {
+      "canonical_status": "Effective",
+      "department": "QA",
+      "doc_id": "EMP-QA-000",
+      "doc_title": "Empty placeholder",
+      "doc_type": "TechnicalNote",
+      "effective_date": "2026-04-01",
+      "field_sources": {
+        "department": "register",
+        "doc_id": "register",
+        "doc_title": "register",
+        "doc_type": "register",
+        "effective_date": "register",
+        "status": "register",
+        "version": "register"
+      },
+      "reasons": [
+        "empty_source_text"
+      ],
+      "retrievable": false,
+      "source_path": "incoming/documents/empty-placeholder.md",
+      "state": "rejected",
+      "version": "1.0"
+    },
+    {
+      "field_sources": {},
+      "reasons": [
+        "missing_required_field:department",
+        "missing_required_field:doc_id",
+        "missing_required_field:doc_title",
+        "missing_required_field:doc_type",
+        "missing_required_field:effective_date",
+        "missing_required_field:status",
+        "missing_required_field:version",
+        "no_establishable_doc_id"
+      ],
+      "retrievable": false,
+      "source_path": "incoming/documents/unlabeled-lab-note.md",
+      "state": "rejected"
+    }
+  ],
+  "report_type": "client_corpus_onboarding",
+  "schema_version": "0.1.0",
+  "source_bundle": "synthetic-messy-client-corpus",
+  "source_register_hash": "sha256:cef95b17fe5f7827f5f52daabca8a7a48a888ac2150f82f23d428d0c29f63beb",
+  "state_counts": {
+    "excluded": 2,
+    "mapped_cleanly": 2,
+    "needs_review": 5,
+    "rejected": 2
+  },
+  "unknown_status_values": [
+    "In use pending QA"
+  ]
+}

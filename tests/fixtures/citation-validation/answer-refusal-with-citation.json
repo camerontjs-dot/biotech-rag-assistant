@@ -1,0 +1,10 @@
+{
+  "answer_text": "The retrieved documents do not contain enough information to answer this question. [source: 1]",
+  "citations": [
+    {
+      "chunk_id": "SOP-QA-001_v1_0_chunk_002",
+      "label": "1"
+    }
+  ],
+  "expected_outcome": "refusal"
+}

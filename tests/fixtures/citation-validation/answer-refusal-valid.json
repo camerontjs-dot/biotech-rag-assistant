@@ -1,0 +1,5 @@
+{
+  "answer_text": "The retrieved documents do not contain enough information to answer this question.",
+  "citations": [],
+  "expected_outcome": "refusal"
+}

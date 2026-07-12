@@ -1,0 +1,10 @@
+doc_id: CAL-ENG-005
+doc_title: Analytical balance calibration note
+doc_type: CalibrationNote
+version: "1.0"
+status: Effective
+effective_date: "2026-01-22"
+review_due_date: "2027-01-22"
+department: Engineering
+source_file_path: documents/CAL-ENG-005-balance-calibration.md
+source_hash: sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4

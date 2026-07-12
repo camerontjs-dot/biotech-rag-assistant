@@ -1,0 +1,4 @@
+# Experiment-only dependencies (NOT part of the biotech-rag-assistant package).
+# Pulls torch + numpy transitively; CPU is fine. The all-MiniLM-L6-v2 model is
+# downloaded to the local HuggingFace cache on first run (~90 MB), then reused offline.
+sentence-transformers>=5,<6

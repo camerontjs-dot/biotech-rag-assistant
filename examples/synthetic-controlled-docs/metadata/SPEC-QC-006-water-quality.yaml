@@ -1,0 +1,10 @@
+doc_id: SPEC-QC-006
+doc_title: Purified water quality specification
+doc_type: Specification
+version: "3.0"
+status: Approved
+effective_date: "2026-01-12"
+review_due_date: "2027-01-12"
+department: QC
+source_file_path: documents/SPEC-QC-006-water-quality.md
+source_hash: sha256:96890f5c832612ab282098b0780ed95641a09eeaf5e605485d917f3317f8d943

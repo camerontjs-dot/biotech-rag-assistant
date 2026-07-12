@@ -1,0 +1,10 @@
+doc_id: SOP-QA-001
+doc_title: Environmental monitoring excursion response
+doc_type: SOP
+version: "1.0"
+status: Approved
+effective_date: "2026-01-15"
+review_due_date: "2027-01-15"
+department: QA
+source_file_path: documents/SOP-QA-001-environmental-monitoring.md
+source_hash: sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923

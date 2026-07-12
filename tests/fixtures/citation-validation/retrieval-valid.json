@@ -1,0 +1,20 @@
+{
+  "query": "viable excursion affected product lots immediate containment",
+  "retrievable_documents": 8,
+  "hits": [
+    {
+      "rank": 1,
+      "score": 7.964522892761949,
+      "chunk_id": "SOP-QA-001_v1_0_chunk_002",
+      "doc_id": "SOP-QA-001",
+      "doc_title": "Environmental monitoring excursion response",
+      "status": "Approved",
+      "version": "1.0",
+      "section_heading": "Immediate containment",
+      "source_file_path": "documents/SOP-QA-001-environmental-monitoring.md",
+      "source_hash": "sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923",
+      "line_or_page_span": "lines 9-9",
+      "text": "Immediate containment\nWhen viable monitoring exceeds an action limit, QA opens a deviation before product disposition."
+    }
+  ]
+}

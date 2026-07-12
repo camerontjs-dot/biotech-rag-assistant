@@ -1,0 +1,728 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "n_chunks": 18,
+  "metrics": {
+    "all": {
+      "bm25": {
+        "n": 16,
+        "recall@1": 0.6875,
+        "recall@3": 0.6875,
+        "recall@5": 0.8125,
+        "mrr": 0.7438988095238095
+      },
+      "semantic": {
+        "n": 16,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "n": 16,
+        "recall@1": 0.875,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 0.9166666666666666
+      }
+    },
+    "easy": {
+      "bm25": {
+        "n": 8,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 1.0
+      },
+      "semantic": {
+        "n": 8,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "n": 8,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 1.0
+      }
+    },
+    "hard": {
+      "bm25": {
+        "n": 8,
+        "recall@1": 0.375,
+        "recall@3": 0.375,
+        "recall@5": 0.625,
+        "mrr": 0.48779761904761904
+      },
+      "semantic": {
+        "n": 8,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "n": 8,
+        "recall@1": 0.75,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 0.8333333333333334
+      }
+    }
+  },
+  "separation": {
+    "bm25": {
+      "min_ontopic_top": 2.1147476027682197,
+      "max_offtopic_top": 3.1194524618714796,
+      "clean_threshold_exists": false,
+      "on_tops": [
+        2.1147476027682197,
+        3.811303108579345,
+        4.014897178228397,
+        5.148661276944965,
+        5.621888410228095,
+        5.831218928790227,
+        7.620255778429398,
+        7.9767260689389206,
+        8.693543801857636,
+        9.633129650333867,
+        9.652522379682306,
+        11.734204982720168,
+        14.16326421172715,
+        16.251070041521952,
+        16.409341628245805,
+        17.325998793103402
+      ],
+      "off_tops": [
+        1.0185237643806038,
+        1.998823385432322,
+        2.804587230259263,
+        2.82392523213062,
+        2.82392523213062,
+        3.1194524618714796
+      ]
+    },
+    "semantic": {
+      "min_ontopic_top": 0.35010045766830444,
+      "max_offtopic_top": 0.24360105395317078,
+      "clean_threshold_exists": true,
+      "on_tops": [
+        0.35010045766830444,
+        0.36949509382247925,
+        0.3758167624473572,
+        0.3773162364959717,
+        0.3823172450065613,
+        0.384003221988678,
+        0.42218440771102905,
+        0.5271077156066895,
+        0.5290026664733887,
+        0.6075046062469482,
+        0.6259344220161438,
+        0.6294029951095581,
+        0.6866612434387207,
+        0.6934769749641418,
+        0.7667738795280457,
+        0.8405407667160034
+      ],
+      "off_tops": [
+        0.07682819664478302,
+        0.09394127130508423,
+        0.12148956209421158,
+        0.18700271844863892,
+        0.18778802454471588,
+        0.24360105395317078
+      ]
+    },
+    "hybrid": {
+      "min_ontopic_top": 0.031544957774465976,
+      "max_offtopic_top": 0.03252247488101534,
+      "clean_threshold_exists": false,
+      "on_tops": [
+        0.031544957774465976,
+        0.031746031746031744,
+        0.03177805800756621,
+        0.03177805800756621,
+        0.032266458495966696,
+        0.03252247488101534,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.03278688524590164
+      ],
+      "off_tops": [
+        0.031054405392392875,
+        0.03177805800756621,
+        0.03177805800756621,
+        0.03177805800756621,
+        0.032018442622950824,
+        0.03252247488101534
+      ]
+    }
+  },
+  "production_coverage_gate": {
+    "offtopic_correctly_refused": 6,
+    "offtopic_total": 6,
+    "ontopic_wrongly_refused": 9,
+    "ontopic_total": 16
+  },
+  "per_query": [
+    {
+      "id": "easy-em-excursion",
+      "tier": "easy",
+      "relevant_doc": "SOP-QA-001",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-001",
+          "score": 9.652522379682306
+        },
+        "semantic": {
+          "doc": "SOP-QA-001",
+          "score": 0.5290026664733887
+        },
+        "hybrid": {
+          "doc": "SOP-QA-001",
+          "score": 0.03252247488101534
+        }
+      },
+      "bm25_top_coverage": 0.4444444444444444
+    },
+    {
+      "id": "easy-deviation-major",
+      "tier": "easy",
+      "relevant_doc": "SOP-QA-002",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-002",
+          "score": 8.693543801857636
+        },
+        "semantic": {
+          "doc": "SOP-QA-002",
+          "score": 0.6075046062469482
+        },
+        "hybrid": {
+          "doc": "SOP-QA-002",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.8571428571428571
+    },
+    {
+      "id": "easy-current-version",
+      "tier": "easy",
+      "relevant_doc": "POL-DOC-003",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "POL-DOC-003",
+          "score": 14.16326421172715
+        },
+        "semantic": {
+          "doc": "POL-DOC-003",
+          "score": 0.6294029951095581
+        },
+        "hybrid": {
+          "doc": "POL-DOC-003",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 1.0
+    },
+    {
+      "id": "easy-gowning-requal",
+      "tier": "easy",
+      "relevant_doc": "TRN-QA-004",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "TRN-QA-004",
+          "score": 9.633129650333867
+        },
+        "semantic": {
+          "doc": "TRN-QA-004",
+          "score": 0.6866612434387207
+        },
+        "hybrid": {
+          "doc": "TRN-QA-004",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.8
+    },
+    {
+      "id": "easy-balance-daily",
+      "tier": "easy",
+      "relevant_doc": "CAL-ENG-005",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "CAL-ENG-005",
+          "score": 16.251070041521952
+        },
+        "semantic": {
+          "doc": "CAL-ENG-005",
+          "score": 0.6934769749641418
+        },
+        "hybrid": {
+          "doc": "CAL-ENG-005",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.875
+    },
+    {
+      "id": "easy-water-sampling",
+      "tier": "easy",
+      "relevant_doc": "SPEC-QC-006",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SPEC-QC-006",
+          "score": 16.409341628245805
+        },
+        "semantic": {
+          "doc": "SPEC-QC-006",
+          "score": 0.8405407667160034
+        },
+        "hybrid": {
+          "doc": "SPEC-QC-006",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.875
+    },
+    {
+      "id": "easy-line-clearance",
+      "tier": "easy",
+      "relevant_doc": "SOP-OPS-007",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-OPS-007",
+          "score": 17.325998793103402
+        },
+        "semantic": {
+          "doc": "SOP-OPS-007",
+          "score": 0.6259344220161438
+        },
+        "hybrid": {
+          "doc": "SOP-OPS-007",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 1.0
+    },
+    {
+      "id": "easy-customer-conflict",
+      "tier": "easy",
+      "relevant_doc": "NOTE-TS-008",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "NOTE-TS-008",
+          "score": 11.734204982720168
+        },
+        "semantic": {
+          "doc": "NOTE-TS-008",
+          "score": 0.7667738795280457
+        },
+        "hybrid": {
+          "doc": "NOTE-TS-008",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.7777777777777778
+    },
+    {
+      "id": "hard-em-excursion",
+      "tier": "hard",
+      "relevant_doc": "SOP-QA-001",
+      "ranks": {
+        "bm25": 5,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-002",
+          "score": 4.014897178228397
+        },
+        "semantic": {
+          "doc": "SOP-QA-001",
+          "score": 0.384003221988678
+        },
+        "hybrid": {
+          "doc": "SOP-QA-001",
+          "score": 0.03177805800756621
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "hard-deviation-escalate",
+      "tier": "hard",
+      "relevant_doc": "SOP-QA-002",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-002",
+          "score": 7.620255778429398
+        },
+        "semantic": {
+          "doc": "SOP-QA-002",
+          "score": 0.35010045766830444
+        },
+        "hybrid": {
+          "doc": "SOP-QA-002",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.16666666666666666
+    },
+    {
+      "id": "hard-outdated-procedure",
+      "tier": "hard",
+      "relevant_doc": "POL-DOC-003",
+      "ranks": {
+        "bm25": 7,
+        "semantic": 1,
+        "hybrid": 3
+      },
+      "top": {
+        "bm25": {
+          "doc": "CAL-ENG-005",
+          "score": 5.621888410228095
+        },
+        "semantic": {
+          "doc": "POL-DOC-003",
+          "score": 0.3823172450065613
+        },
+        "hybrid": {
+          "doc": "CAL-ENG-005",
+          "score": 0.031746031746031744
+        }
+      },
+      "bm25_top_coverage": 0.14285714285714285
+    },
+    {
+      "id": "hard-gowning-reprove",
+      "tier": "hard",
+      "relevant_doc": "TRN-QA-004",
+      "ranks": {
+        "bm25": 7,
+        "semantic": 1,
+        "hybrid": 3
+      },
+      "top": {
+        "bm25": {
+          "doc": "POL-DOC-003",
+          "score": 5.148661276944965
+        },
+        "semantic": {
+          "doc": "TRN-QA-004",
+          "score": 0.36949509382247925
+        },
+        "hybrid": {
+          "doc": "POL-DOC-003",
+          "score": 0.032266458495966696
+        }
+      },
+      "bm25_top_coverage": 0.125
+    },
+    {
+      "id": "hard-scale-fails",
+      "tier": "hard",
+      "relevant_doc": "CAL-ENG-005",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "CAL-ENG-005",
+          "score": 2.1147476027682197
+        },
+        "semantic": {
+          "doc": "CAL-ENG-005",
+          "score": 0.5271077156066895
+        },
+        "hybrid": {
+          "doc": "CAL-ENG-005",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "hard-skip-water-check",
+      "tier": "hard",
+      "relevant_doc": "SPEC-QC-006",
+      "ranks": {
+        "bm25": 6,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-001",
+          "score": 5.831218928790227
+        },
+        "semantic": {
+          "doc": "SPEC-QC-006",
+          "score": 0.42218440771102905
+        },
+        "hybrid": {
+          "doc": "SPEC-QC-006",
+          "score": 0.031544957774465976
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "hard-area-clear",
+      "tier": "hard",
+      "relevant_doc": "SOP-OPS-007",
+      "ranks": {
+        "bm25": 1,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-OPS-007",
+          "score": 7.9767260689389206
+        },
+        "semantic": {
+          "doc": "SOP-OPS-007",
+          "score": 0.3773162364959717
+        },
+        "hybrid": {
+          "doc": "SOP-OPS-007",
+          "score": 0.03278688524590164
+        }
+      },
+      "bm25_top_coverage": 0.3333333333333333
+    },
+    {
+      "id": "hard-client-demands",
+      "tier": "hard",
+      "relevant_doc": "NOTE-TS-008",
+      "ranks": {
+        "bm25": 4,
+        "semantic": 1,
+        "hybrid": 1
+      },
+      "top": {
+        "bm25": {
+          "doc": "POL-DOC-003",
+          "score": 3.811303108579345
+        },
+        "semantic": {
+          "doc": "NOTE-TS-008",
+          "score": 0.3758167624473572
+        },
+        "hybrid": {
+          "doc": "NOTE-TS-008",
+          "score": 0.03177805800756621
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "off-vacation",
+      "tier": "offtopic",
+      "relevant_doc": null,
+      "ranks": {
+        "bm25": null,
+        "semantic": null,
+        "hybrid": null
+      },
+      "top": {
+        "bm25": {
+          "doc": "TRN-QA-004",
+          "score": 2.82392523213062
+        },
+        "semantic": {
+          "doc": "CAL-ENG-005",
+          "score": 0.18700271844863892
+        },
+        "hybrid": {
+          "doc": "TRN-QA-004",
+          "score": 0.032018442622950824
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "off-password",
+      "tier": "offtopic",
+      "relevant_doc": null,
+      "ranks": {
+        "bm25": null,
+        "semantic": null,
+        "hybrid": null
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-001",
+          "score": 2.804587230259263
+        },
+        "semantic": {
+          "doc": "SOP-QA-001",
+          "score": 0.12148956209421158
+        },
+        "hybrid": {
+          "doc": "SOP-QA-001",
+          "score": 0.03177805800756621
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "off-weather",
+      "tier": "offtopic",
+      "relevant_doc": null,
+      "ranks": {
+        "bm25": null,
+        "semantic": null,
+        "hybrid": null
+      },
+      "top": {
+        "bm25": {
+          "doc": "TRN-QA-004",
+          "score": 2.82392523213062
+        },
+        "semantic": {
+          "doc": "SOP-QA-001",
+          "score": 0.07682819664478302
+        },
+        "hybrid": {
+          "doc": "CAL-ENG-005",
+          "score": 0.031054405392392875
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "off-sales",
+      "tier": "offtopic",
+      "relevant_doc": null,
+      "ranks": {
+        "bm25": null,
+        "semantic": null,
+        "hybrid": null
+      },
+      "top": {
+        "bm25": {
+          "doc": "CAL-ENG-005",
+          "score": 1.0185237643806038
+        },
+        "semantic": {
+          "doc": "NOTE-TS-008",
+          "score": 0.18778802454471588
+        },
+        "hybrid": {
+          "doc": "CAL-ENG-005",
+          "score": 0.03252247488101534
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "off-cafeteria",
+      "tier": "offtopic",
+      "relevant_doc": null,
+      "ranks": {
+        "bm25": null,
+        "semantic": null,
+        "hybrid": null
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-002",
+          "score": 1.998823385432322
+        },
+        "semantic": {
+          "doc": "CAL-ENG-005",
+          "score": 0.09394127130508423
+        },
+        "hybrid": {
+          "doc": "CAL-ENG-005",
+          "score": 0.03177805800756621
+        }
+      },
+      "bm25_top_coverage": 0.0
+    },
+    {
+      "id": "off-meeting-room",
+      "tier": "offtopic",
+      "relevant_doc": null,
+      "ranks": {
+        "bm25": null,
+        "semantic": null,
+        "hybrid": null
+      },
+      "top": {
+        "bm25": {
+          "doc": "SOP-QA-001",
+          "score": 3.1194524618714796
+        },
+        "semantic": {
+          "doc": "SOP-QA-001",
+          "score": 0.24360105395317078
+        },
+        "hybrid": {
+          "doc": "SOP-QA-001",
+          "score": 0.03177805800756621
+        }
+      },
+      "bm25_top_coverage": 0.0
+    }
+  ]
+}

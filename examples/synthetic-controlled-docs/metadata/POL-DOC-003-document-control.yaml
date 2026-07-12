@@ -1,0 +1,10 @@
+doc_id: POL-DOC-003
+doc_title: Document control policy
+doc_type: Policy
+version: "2.0"
+status: Approved
+effective_date: "2026-01-10"
+review_due_date: "2027-01-10"
+department: Document Control
+source_file_path: documents/POL-DOC-003-document-control.md
+source_hash: sha256:acfe9abe53ae560853b206c7230f50667619117592a7c9a9881363c43b86e85f

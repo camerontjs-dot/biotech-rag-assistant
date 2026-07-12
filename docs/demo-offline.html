@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biotech RAG Assistant — controlled-document demo</title>
+<meta name="description" content="A controlled-document assistant that answers only from approved documents, cites the exact source span, and refuses when nothing supports the answer — the trust layer, built before the model." />
+<meta property="og:title" content="Biotech RAG Assistant — controlled-document demo" />
+<meta property="og:description" content="Answers only from Approved/Effective documents, cites the exact source section, and refuses when the documents don't support an answer." />
+<meta property="og:type" content="website" />
+<style>
+  :root {
+    --bg:#f4f6f8; --panel:#fff; --ink:#1b2733; --muted:#5b6b7a; --line:#d8e0e8;
+    --accent:#0f6e8c; --accent-ink:#fff;
+    --approved-bg:#e6f4ea; --approved-ink:#1d6b3a; --approved-line:#9fd4b1;
+    --refuse-bg:#fff4e2; --refuse-ink:#8a5a12; --refuse-line:#f0cf95;
+    --held-bg:#eef1f4; --held-ink:#5b6b7a; --held-line:#cdd6df; --hl:#fde68a;
+    --shadow:0 1px 2px rgba(16,40,60,.06), 0 6px 20px rgba(16,40,60,.06);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:880px; margin:0 auto; padding:24px 20px 64px; }
+  header.top { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:4px; }
+  header.top h1 { font-size:20px; margin:0; letter-spacing:-0.01em; }
+  .pill { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.04em;
+    padding:3px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:#fff; }
+  .tagline { color:var(--muted); font-size:13.5px; margin:2px 0 18px; }
+  .tagline b { color:var(--ink); font-weight:600; }
+  .askbar { display:flex; gap:8px; }
+  .askbar input { flex:1; padding:12px 14px; font-size:15px; border:1px solid var(--line);
+    border-radius:10px; background:#fff; color:var(--ink); box-shadow:var(--shadow); }
+  .askbar input:focus { outline:2px solid var(--accent); border-color:var(--accent); }
+  .askbar button { padding:0 18px; font-size:15px; font-weight:600; border:0; border-radius:10px;
+    background:var(--accent); color:var(--accent-ink); cursor:pointer; box-shadow:var(--shadow); }
+  .askbar button:disabled { opacity:.55; cursor:default; }
+  .examples { margin:12px 0 0; display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
+  .examples .lbl { font-size:12px; color:var(--muted); margin-right:2px; }
+  .chip { font-size:12.5px; padding:5px 10px; border-radius:999px; cursor:pointer;
+    border:1px solid var(--line); background:#fff; color:var(--accent); }
+  .chip.warn { color:var(--refuse-ink); border-color:var(--refuse-line); background:var(--refuse-bg); }
+  .chip:hover { border-color:var(--accent); }
+  .status { margin:16px 0 6px; font-size:12.5px; color:var(--muted); }
+  .status code { color:#0b3d4d; }
+  .excluded { margin:0 0 4px; font-size:12.5px; color:var(--muted); display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .heldchip { font-size:12px; padding:4px 9px; border-radius:8px; cursor:pointer; border:1px solid var(--held-line);
+    background:var(--held-bg); color:var(--held-ink); display:inline-flex; gap:6px; align-items:center; }
+  .heldchip:hover { border-color:var(--muted); }
+  .heldchip .st { font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.03em; }
+  .answer-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:13.5px; color:var(--muted); margin:14px 2px; }
+  .check { color:var(--approved-ink); font-weight:600; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:0 0 12px; box-shadow:var(--shadow); }
+  .card .meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
+  .docid { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13px; font-weight:600; color:#0b3d4d; }
+  .badge { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:2px 8px; border-radius:6px;
+    background:var(--approved-bg); color:var(--approved-ink); border:1px solid var(--approved-line); }
+  .ver, .score, .span { font-size:12px; color:var(--muted); }
+  .ver { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+  .sec { font-weight:600; font-size:14px; margin:2px 0 6px; }
+  .quote { border-left:3px solid var(--approved-line); padding:4px 0 4px 12px; margin:6px 0 4px; color:#243240; white-space:pre-wrap; }
+  .srcfile { font-size:11.5px; color:var(--muted); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; margin-top:6px; }
+  .provbtn { margin-top:8px; font-size:12px; color:var(--accent); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; }
+  .refusal { background:var(--refuse-bg); border:1px solid var(--refuse-line); border-radius:12px; padding:16px; box-shadow:var(--shadow); }
+  .refusal .rtitle { font-weight:700; color:var(--refuse-ink); margin-bottom:4px; }
+  .refusal .rbody { color:#4a3a1c; }
+  .review { display:inline-block; margin-top:10px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+    padding:3px 9px; border-radius:6px; background:#fde8c8; color:var(--refuse-ink); border:1px solid var(--refuse-line); }
+  .heldnote { margin-top:12px; font-size:12.5px; color:#4a3a1c; border-top:1px dashed var(--refuse-line); padding-top:10px; }
+  .heldnote button { font-size:12.5px; color:var(--refuse-ink); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; font-weight:600; }
+  .err { color:#9a2b2b; font-size:13px; margin-top:10px; }
+  footer.boundary { margin-top:28px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
+  footer.boundary b { color:var(--ink); }
+  .overlay { position:fixed; inset:0; background:rgba(16,30,44,.55); display:none; align-items:flex-start; justify-content:center; padding:5vh 16px; z-index:50; }
+  .overlay.open { display:flex; }
+  .modal { background:#fff; border-radius:12px; max-width:760px; width:100%; max-height:88vh; overflow:auto; box-shadow:0 12px 48px rgba(16,30,44,.3); }
+  .modal .mhead { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:14px 18px; border-bottom:1px solid var(--line); position:sticky; top:0; background:#fff; }
+  .modal .mhead h3 { margin:0; font-size:14.5px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+  .modal .mclose { border:0; background:none; font-size:22px; line-height:1; cursor:pointer; color:var(--muted); }
+  .modal .mbody { padding:16px 18px; }
+  .banner { border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:12px; font-weight:600; }
+  .banner.held { background:var(--refuse-bg); color:var(--refuse-ink); border:1px solid var(--refuse-line); }
+  .banner.ok { background:var(--approved-bg); color:var(--approved-ink); border:1px solid var(--approved-line); }
+  pre.src { white-space:pre-wrap; word-break:break-word; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background:#f7f9fb; border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:0; color:#243240; }
+  mark.hl { background:var(--hl); padding:1px 0; border-radius:2px; }
+  .provfoot { margin-top:12px; font-size:12px; color:var(--muted); border-top:1px solid var(--line); padding-top:10px; }
+  .provfoot code { color:#0b3d4d; word-break:break-all; }
+  .provfoot b { color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Biotech RAG Assistant</h1>
+    <span class="pill" id="corpus-pill">synthetic corpus</span>
+    <span class="pill" title="Retrieval runs entirely in your browser — no server, no data leaves the page.">client-side · no backend</span>
+  </header>
+  <p class="tagline">
+    Answers <b>only from Approved&nbsp;/&nbsp;Effective documents</b>, cites the <b>exact source section</b>,
+    and <b>refuses</b> when the documents don't support an answer.
+  </p>
+
+  <div class="askbar">
+    <input id="q" type="text" autocomplete="off" placeholder="Ask a question about the controlled documents…" disabled />
+    <button id="ask" disabled>Ask</button>
+  </div>
+
+  <div class="examples">
+    <span class="lbl">Try:</span>
+    <span class="chip" data-q="How does QA respond to a viable environmental monitoring excursion?">env excursion response</span>
+    <span class="chip" data-q="How do staff confirm the current approved version of a controlled document?">current approved version</span>
+    <span class="chip" data-q="What is the daily balance calibration check requirement?">balance calibration</span>
+    <span class="chip warn" data-q="What is the membrane filtration hold time for sterility?" data-reveal="SOP-QA-009">obsolete-doc trap → watch it refuse</span>
+    <span class="chip warn" data-q="What is the company vacation policy and paid days off?">off-topic → refuse</span>
+  </div>
+
+  <div class="status" id="status">Loading corpus…</div>
+  <div class="excluded" id="excluded"></div>
+  <div class="results" id="results"></div>
+
+  <footer class="boundary">
+    <b>What this is not.</b> Not a validated GxP / regulated quality system. It does not certify compliance, verify that a
+    document is true, or make batch-release, deviation, or any regulated decision. Retrieval nominates candidate passages;
+    a qualified human decides. Runs on a synthetic corpus only; the retrieval logic here mirrors the Python core (BM25 +
+    relevance gate + status gating), verified at parity.
+  </footer>
+</div>
+
+<div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
+
+<script>window.CORPUS_DATA = {
+  "corpus_name": "synthetic-controlled-docs",
+  "documents_total": 10,
+  "documents_retrievable": 8,
+  "documents_excluded": 2,
+  "min_top_coverage": 0.6,
+  "score_floor": 0.0,
+  "refusal_text": "The retrieved documents do not contain enough information to answer this question.",
+  "chunks": [
+    {
+      "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+      "doc_id": "CAL-ENG-005",
+      "doc_title": "Analytical balance calibration note",
+      "doc_type": "CalibrationNote",
+      "version": "1.0",
+      "status": "Effective",
+      "department": "Engineering",
+      "section_heading": "Daily check",
+      "source_file_path": "documents/CAL-ENG-005-balance-calibration.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service.",
+      "char_start": 55,
+      "char_end": 240,
+      "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4"
+    },
+    {
+      "chunk_id": "CAL-ENG-005_v1_0_chunk_002",
+      "doc_id": "CAL-ENG-005",
+      "doc_title": "Analytical balance calibration note",
+      "doc_type": "CalibrationNote",
+      "version": "1.0",
+      "status": "Effective",
+      "department": "Engineering",
+      "section_heading": "Calibration failure",
+      "source_file_path": "documents/CAL-ENG-005-balance-calibration.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "Engineering reviews the failure, QA assesses product impact, and the owning lab documents whether any results generated since the last passing check need review.",
+      "char_start": 266,
+      "char_end": 427,
+      "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4"
+    },
+    {
+      "chunk_id": "NOTE-TS-008_v1_0_chunk_001",
+      "doc_id": "NOTE-TS-008",
+      "doc_title": "Customer requirement review note",
+      "doc_type": "TechnicalNote",
+      "version": "1.0",
+      "status": "Approved",
+      "department": "Technical Services",
+      "section_heading": "Intake",
+      "source_file_path": "documents/NOTE-TS-008-customer-requirements.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "Technical services records each customer-specific requirement in the request log before committing to a batch, method, label statement, or certificate language.",
+      "char_start": 47,
+      "char_end": 207,
+      "source_hash": "sha256:f119013d1b32adfc0eb9ddb016d0a02e35754835e4aad48ce50eed72280035cb"
+    },
+    {
+      "chunk_id": "NOTE-TS-008_v1_0_chunk_002",
+      "doc_id": "NOTE-TS-008",
+      "doc_title": "Customer requirement review note",
+      "doc_type": "TechnicalNote",
+      "version": "1.0",
+      "status": "Approved",
+      "department": "Technical Services",
+      "section_heading": "Conflict review",
+      "source_file_path": "documents/NOTE-TS-008-customer-requirements.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "When a customer request conflicts with an approved procedure or specification, technical services routes the item to QA and regulatory before accepting the requirement.",
+      "char_start": 229,
+      "char_end": 397,
+      "source_hash": "sha256:f119013d1b32adfc0eb9ddb016d0a02e35754835e4aad48ce50eed72280035cb"
+    },
+    {
+      "chunk_id": "POL-DOC-003_v2_0_chunk_001",
+      "doc_id": "POL-DOC-003",
+      "doc_title": "Document control policy",
+      "doc_type": "Policy",
+      "version": "2.0",
+      "status": "Approved",
+      "department": "Document Control",
+      "section_heading": "Current version rule",
+      "source_file_path": "documents/POL-DOC-003-document-control.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "Staff must use the current approved or effective version from the controlled repository. Printed copies are uncontrolled unless document control stamps them for a defined use period.",
+      "char_start": 52,
+      "char_end": 234,
+      "source_hash": "sha256:acfe9abe53ae560853b206c7230f50667619117592a7c9a9881363c43b86e85f"
+    },
+    {
+      "chunk_id": "POL-DOC-003_v2_0_chunk_002",
+      "doc_id": "POL-DOC-003",
+      "doc_title": "Document control policy",
+      "doc_type": "Policy",
+      "version": "2.0",
+      "status": "Approved",
+      "department": "Document Control",
+      "section_heading": "Draft and obsolete documents",
+      "source_file_path": "documents/POL-DOC-003-document-control.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "Draft, obsolete, and superseded documents cannot be used to train staff, release product, or answer operational procedure questions. If a user finds a conflicting copy, document control records the conflict and routes the item for review.",
+      "char_start": 269,
+      "char_end": 507,
+      "source_hash": "sha256:acfe9abe53ae560853b206c7230f50667619117592a7c9a9881363c43b86e85f"
+    },
+    {
+      "chunk_id": "SOP-OPS-007_v1_2_chunk_001",
+      "doc_id": "SOP-OPS-007",
+      "doc_title": "Packaging line clearance",
+      "doc_type": "SOP",
+      "version": "1.2",
+      "status": "Approved",
+      "department": "Operations",
+      "section_heading": "Pre-run clearance",
+      "source_file_path": "documents/SOP-OPS-007-line-clearance.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "Operations verifies that the previous product, labels, inserts, and reconciliation sheets are removed before the next packaging run starts.",
+      "char_start": 50,
+      "char_end": 189,
+      "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735"
+    },
+    {
+      "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+      "doc_id": "SOP-OPS-007",
+      "doc_title": "Packaging line clearance",
+      "doc_type": "SOP",
+      "version": "1.2",
+      "status": "Approved",
+      "department": "Operations",
+      "section_heading": "Independent check",
+      "source_file_path": "documents/SOP-OPS-007-line-clearance.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record.",
+      "char_start": 213,
+      "char_end": 415,
+      "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735"
+    },
+    {
+      "chunk_id": "SOP-QA-001_v1_0_chunk_001",
+      "doc_id": "SOP-QA-001",
+      "doc_title": "Environmental monitoring excursion response",
+      "doc_type": "SOP",
+      "version": "1.0",
+      "status": "Approved",
+      "department": "QA",
+      "section_heading": "Purpose",
+      "source_file_path": "documents/SOP-QA-001-environmental-monitoring.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "This synthetic SOP describes how QA triages a viable environmental monitoring excursion in a controlled manufacturing suite.",
+      "char_start": 59,
+      "char_end": 183,
+      "source_hash": "sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923"
+    },
+    {
+      "chunk_id": "SOP-QA-001_v1_0_chunk_002",
+      "doc_id": "SOP-QA-001",
+      "doc_title": "Environmental monitoring excursion response",
+      "doc_type": "SOP",
+      "version": "1.0",
+      "status": "Approved",
+      "department": "QA",
+      "section_heading": "Immediate containment",
+      "source_file_path": "documents/SOP-QA-001-environmental-monitoring.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "When viable monitoring exceeds an action limit, QA opens a deviation before product disposition. The area owner places affected room status, related product lots, and exposed materials on hold until QA documents the initial impact assessment.",
+      "char_start": 211,
+      "char_end": 453,
+      "source_hash": "sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923"
+    },
+    {
+      "chunk_id": "SOP-QA-001_v1_0_chunk_003",
+      "doc_id": "SOP-QA-001",
+      "doc_title": "Environmental monitoring excursion response",
+      "doc_type": "SOP",
+      "version": "1.0",
+      "status": "Approved",
+      "department": "QA",
+      "section_heading": "Investigation record",
+      "source_file_path": "documents/SOP-QA-001-environmental-monitoring.md",
+      "chunk_index": 3,
+      "line_or_page_span": "lines 13-13",
+      "text": "The investigation record must identify the sample location, sampling date, organism result if available, affected room, affected product lots, containment action, and the person who approved reopening the room.",
+      "char_start": 480,
+      "char_end": 690,
+      "source_hash": "sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923"
+    },
+    {
+      "chunk_id": "SOP-QA-002_v1_1_chunk_001",
+      "doc_id": "SOP-QA-002",
+      "doc_title": "Deviation triage and escalation",
+      "doc_type": "SOP",
+      "version": "1.1",
+      "status": "Effective",
+      "department": "QA",
+      "section_heading": "Purpose",
+      "source_file_path": "documents/SOP-QA-002-deviation-triage.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "This synthetic SOP defines how quality events are triaged before a full investigation starts.",
+      "char_start": 47,
+      "char_end": 140,
+      "source_hash": "sha256:b2b12d22bfe50aed5c5d9f84c155dbb27984e0b72cfd2086e9c6597686827f7c"
+    },
+    {
+      "chunk_id": "SOP-QA-002_v1_1_chunk_002",
+      "doc_id": "SOP-QA-002",
+      "doc_title": "Deviation triage and escalation",
+      "doc_type": "SOP",
+      "version": "1.1",
+      "status": "Effective",
+      "department": "QA",
+      "section_heading": "Triage categories",
+      "source_file_path": "documents/SOP-QA-002-deviation-triage.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "Minor deviations may be contained within the owning department when there is no product impact. Major deviations require QA review, documented impact assessment, and escalation to the quality council when repeat events suggest a process weakness.",
+      "char_start": 164,
+      "char_end": 410,
+      "source_hash": "sha256:b2b12d22bfe50aed5c5d9f84c155dbb27984e0b72cfd2086e9c6597686827f7c"
+    },
+    {
+      "chunk_id": "SOP-QA-002_v1_1_chunk_003",
+      "doc_id": "SOP-QA-002",
+      "doc_title": "Deviation triage and escalation",
+      "doc_type": "SOP",
+      "version": "1.1",
+      "status": "Effective",
+      "department": "QA",
+      "section_heading": "Closure rule",
+      "source_file_path": "documents/SOP-QA-002-deviation-triage.md",
+      "chunk_index": 3,
+      "line_or_page_span": "lines 13-13",
+      "text": "A deviation cannot close until the record identifies root cause status, immediate containment, corrective action if needed, and the owner for any preventive action.",
+      "char_start": 429,
+      "char_end": 593,
+      "source_hash": "sha256:b2b12d22bfe50aed5c5d9f84c155dbb27984e0b72cfd2086e9c6597686827f7c"
+    },
+    {
+      "chunk_id": "SPEC-QC-006_v3_0_chunk_001",
+      "doc_id": "SPEC-QC-006",
+      "doc_title": "Purified water quality specification",
+      "doc_type": "Specification",
+      "version": "3.0",
+      "status": "Approved",
+      "department": "QC",
+      "section_heading": "Sampling",
+      "source_file_path": "documents/SPEC-QC-006-water-quality.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "QC samples the purified water loop at approved points listed in the sampling schedule. Missed samples require QA notification and documented rationale.",
+      "char_start": 53,
+      "char_end": 204,
+      "source_hash": "sha256:96890f5c832612ab282098b0780ed95641a09eeaf5e605485d917f3317f8d943"
+    },
+    {
+      "chunk_id": "SPEC-QC-006_v3_0_chunk_002",
+      "doc_id": "SPEC-QC-006",
+      "doc_title": "Purified water quality specification",
+      "doc_type": "Specification",
+      "version": "3.0",
+      "status": "Approved",
+      "department": "QC",
+      "section_heading": "Alert response",
+      "source_file_path": "documents/SPEC-QC-006-water-quality.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "An alert limit excursion starts a trend review. An action limit excursion requires investigation, affected-use assessment, and documented QA disposition before routine use resumes.",
+      "char_start": 225,
+      "char_end": 405,
+      "source_hash": "sha256:96890f5c832612ab282098b0780ed95641a09eeaf5e605485d917f3317f8d943"
+    },
+    {
+      "chunk_id": "TRN-QA-004_v1_0_chunk_001",
+      "doc_id": "TRN-QA-004",
+      "doc_title": "Gowning training note",
+      "doc_type": "TrainingNote",
+      "version": "1.0",
+      "status": "Approved",
+      "department": "QA",
+      "section_heading": "Training scope",
+      "source_file_path": "documents/TRN-QA-004-gowning-training.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "Personnel must complete gowning training before entering the controlled suite without a trainer. The training record includes classroom review, observed gowning practice, and a documented qualification attempt.",
+      "char_start": 44,
+      "char_end": 254,
+      "source_hash": "sha256:1bf23522004cf07f26698e019c98a2ecf8a477e57cbd0d13206b7c86748dacd8"
+    },
+    {
+      "chunk_id": "TRN-QA-004_v1_0_chunk_002",
+      "doc_id": "TRN-QA-004",
+      "doc_title": "Gowning training note",
+      "doc_type": "TrainingNote",
+      "version": "1.0",
+      "status": "Approved",
+      "department": "QA",
+      "section_heading": "Requalification trigger",
+      "source_file_path": "documents/TRN-QA-004-gowning-training.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "Requalification is required after a failed observation, a long absence from the suite, or a procedural revision that changes the gowning sequence.",
+      "char_start": 284,
+      "char_end": 430,
+      "source_hash": "sha256:1bf23522004cf07f26698e019c98a2ecf8a477e57cbd0d13206b7c86748dacd8"
+    }
+  ],
+  "excluded_documents": [
+    {
+      "doc_id": "SOP-QA-009",
+      "doc_title": "Obsolete sterility hold practice",
+      "doc_type": "SOP",
+      "version": "0.8",
+      "status": "Obsolete",
+      "department": "QA",
+      "source_file_path": "documents/SOP-QA-009-sterility-obsolete.md"
+    },
+    {
+      "doc_id": "SOP-QA-010",
+      "doc_title": "Draft cleaning validation approach",
+      "doc_type": "SOP",
+      "version": "0.1",
+      "status": "Draft",
+      "department": "QA",
+      "source_file_path": "documents/SOP-QA-010-draft-cleaning-validation.md"
+    }
+  ],
+  "sources": {
+    "documents/CAL-ENG-005-balance-calibration.md": "# Analytical balance calibration note\n\n## Daily check\n\nThe analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service.\n\n## Calibration failure\n\nEngineering reviews the failure, QA assesses product impact, and the owning lab documents whether any results generated since the last passing check need review.\n",
+    "documents/NOTE-TS-008-customer-requirements.md": "# Customer requirement review note\n\n## Intake\n\nTechnical services records each customer-specific requirement in the request log before committing to a batch, method, label statement, or certificate language.\n\n## Conflict review\n\nWhen a customer request conflicts with an approved procedure or specification, technical services routes the item to QA and regulatory before accepting the requirement.\n",
+    "documents/POL-DOC-003-document-control.md": "# Document control policy\n\n## Current version rule\n\nStaff must use the current approved or effective version from the controlled repository. Printed copies are uncontrolled unless document control stamps them for a defined use period.\n\n## Draft and obsolete documents\n\nDraft, obsolete, and superseded documents cannot be used to train staff, release product, or answer operational procedure questions. If a user finds a conflicting copy, document control records the conflict and routes the item for review.\n",
+    "documents/SOP-OPS-007-line-clearance.md": "# Packaging line clearance\n\n## Pre-run clearance\n\nOperations verifies that the previous product, labels, inserts, and reconciliation sheets are removed before the next packaging run starts.\n\n## Independent check\n\nQA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record.\n",
+    "documents/SOP-QA-001-environmental-monitoring.md": "# Environmental monitoring excursion response\n\n## Purpose\n\nThis synthetic SOP describes how QA triages a viable environmental monitoring excursion in a controlled manufacturing suite.\n\n## Immediate containment\n\nWhen viable monitoring exceeds an action limit, QA opens a deviation before product disposition. The area owner places affected room status, related product lots, and exposed materials on hold until QA documents the initial impact assessment.\n\n## Investigation record\n\nThe investigation record must identify the sample location, sampling date, organism result if available, affected room, affected product lots, containment action, and the person who approved reopening the room.\n",
+    "documents/SOP-QA-002-deviation-triage.md": "# Deviation triage and escalation\n\n## Purpose\n\nThis synthetic SOP defines how quality events are triaged before a full investigation starts.\n\n## Triage categories\n\nMinor deviations may be contained within the owning department when there is no product impact. Major deviations require QA review, documented impact assessment, and escalation to the quality council when repeat events suggest a process weakness.\n\n## Closure rule\n\nA deviation cannot close until the record identifies root cause status, immediate containment, corrective action if needed, and the owner for any preventive action.\n",
+    "documents/SOP-QA-009-sterility-obsolete.md": "# Obsolete sterility hold practice\n\n## Obsolete instruction\n\nThis obsolete synthetic procedure says membrane filtration hold time may extend to 96 hours with verbal QA approval.\n\n## Obsolete status\n\nThis document is included only to test that obsolete documents stay out of retrieval context.\n",
+    "documents/SOP-QA-010-draft-cleaning-validation.md": "# Draft cleaning validation approach\n\n## Draft instruction\n\nThis draft synthetic procedure proposes a visual-only residue check after campaign changeover.\n\n## Draft status\n\nThis document is included only to test that draft documents stay out of retrieval context.\n",
+    "documents/SPEC-QC-006-water-quality.md": "# Purified water quality specification\n\n## Sampling\n\nQC samples the purified water loop at approved points listed in the sampling schedule. Missed samples require QA notification and documented rationale.\n\n## Alert response\n\nAn alert limit excursion starts a trend review. An action limit excursion requires investigation, affected-use assessment, and documented QA disposition before routine use resumes.\n",
+    "documents/TRN-QA-004-gowning-training.md": "# Gowning training note\n\n## Training scope\n\nPersonnel must complete gowning training before entering the controlled suite without a trainer. The training record includes classroom review, observed gowning practice, and a documented qualification attempt.\n\n## Requalification trigger\n\nRequalification is required after a failed observation, a long absence from the suite, or a procedural revision that changes the gowning sequence.\n"
+  }
+};</script>
+<script>
+/*
+ * Client-side port of the Biotech RAG Assistant deterministic retrieval path.
+ * Mirrors the Python core (tokenize -> BM25Okapi -> score_floor -> deterministic
+ * tie-break -> ADR-012 coverage relevance gate -> extractive answer). Runs in the
+ * browser (static GitHub Pages demo) and under node (parity test). No backend.
+ *
+ * Faithful to rank-bm25 BM25Okapi defaults: k1=1.5, b=0.75, epsilon=0.25.
+ * The corpus chunks are status-gated (Approved/Effective only) at export time,
+ * exactly as Python chunk_documents() does, so Draft/Obsolete never appear here.
+ */
+(function (global) {
+  "use strict";
+
+  var STOPWORDS = new Set(
+    ("a an the of for to and or in on is are was were be been being this that these those " +
+      "what which who whom how when where why do does did we you they it its our your their " +
+      "with without within into onto from by as at if then than so such not no can could should " +
+      "would will may might must have has had i me my them he she his her him us about over under")
+      .split(/\s+/)
+  );
+
+  function tokenize(text) {
+    var m = String(text).toLowerCase().match(/\w+/g);
+    return m || [];
+  }
+
+  function contentTerms(text) {
+    var s = new Set();
+    tokenize(text).forEach(function (t) {
+      if (!STOPWORDS.has(t) && t.length > 1) s.add(t);
+    });
+    return s;
+  }
+
+  function coverage(queryText, chunkText) {
+    var q = contentTerms(queryText);
+    if (q.size === 0) return 0.0;
+    var c = new Set(tokenize(chunkText));
+    var hit = 0;
+    q.forEach(function (t) { if (c.has(t)) hit += 1; });
+    return hit / q.size;
+  }
+
+  // Faithful BM25Okapi (rank-bm25 defaults).
+  function BM25(docsTokens, k1, b, epsilon) {
+    this.k1 = k1 == null ? 1.5 : k1;
+    this.b = b == null ? 0.75 : b;
+    this.epsilon = epsilon == null ? 0.25 : epsilon;
+    this.N = docsTokens.length;
+    this.docFreqs = [];
+    this.docLen = [];
+    var nd = Object.create(null);
+    var totalLen = 0;
+    for (var i = 0; i < this.N; i++) {
+      var tokens = docsTokens[i];
+      this.docLen.push(tokens.length);
+      totalLen += tokens.length;
+      var freq = Object.create(null);
+      for (var j = 0; j < tokens.length; j++) {
+        var w = tokens[j];
+        freq[w] = (freq[w] || 0) + 1;
+      }
+      this.docFreqs.push(freq);
+      for (var word in freq) nd[word] = (nd[word] || 0) + 1;
+    }
+    this.avgdl = this.N ? totalLen / this.N : 0;
+    this._calcIdf(nd);
+  }
+
+  BM25.prototype._calcIdf = function (nd) {
+    this.idf = Object.create(null);
+    var idfSum = 0;
+    var negatives = [];
+    var count = 0;
+    for (var word in nd) {
+      var freq = nd[word];
+      var idf = Math.log(this.N - freq + 0.5) - Math.log(freq + 0.5);
+      this.idf[word] = idf;
+      idfSum += idf;
+      count += 1;
+      if (idf < 0) negatives.push(word);
+    }
+    this.averageIdf = count ? idfSum / count : 0;
+    var eps = this.epsilon * this.averageIdf;
+    for (var n = 0; n < negatives.length; n++) this.idf[negatives[n]] = eps;
+  };
+
+  BM25.prototype.getScores = function (queryTokens) {
+    var scores = new Array(this.N).fill(0);
+    for (var t = 0; t < queryTokens.length; t++) {
+      var q = queryTokens[t];
+      var idf = this.idf[q] || 0;
+      if (idf === 0) continue;
+      for (var i = 0; i < this.N; i++) {
+        var f = this.docFreqs[i][q] || 0;
+        if (f === 0) continue;
+        var denom = f + this.k1 * (1 - this.b + (this.b * this.docLen[i]) / this.avgdl);
+        scores[i] += idf * ((f * (this.k1 + 1)) / denom);
+      }
+    }
+    return scores;
+  };
+
+  // engine over the exported corpus data; returns the same shape the UI/API renders.
+  // The string indexed/gated for a chunk: section heading + verbatim span. Mirrors the Python
+  // retrieval.index_text() (ADR-016) so JS BM25 and the coverage gate stay byte-identical to the
+  // core even though chunk.text is now the exact cited source span (heading lives in its field).
+  function indexText(c) { return c.section_heading + "\n" + c.text; }
+
+  function makeEngine(data) {
+    var chunks = data.chunks;
+    var bm25 = new BM25(chunks.map(function (c) { return tokenize(indexText(c)); }));
+    var minTopCoverage = data.min_top_coverage == null ? 0.6 : data.min_top_coverage;
+    var scoreFloor = data.score_floor == null ? 0.0 : data.score_floor;
+
+    function query(queryText, topK) {
+      topK = topK || 3;
+      var qTokens = tokenize(queryText);
+      if (qTokens.length === 0) return [];
+      var scores = bm25.getScores(qTokens);
+      var order = chunks.map(function (_, i) { return i; });
+      order.sort(function (a, b) {
+        if (scores[a] !== scores[b]) return scores[b] - scores[a];        // -score
+        if (chunks[a].doc_id !== chunks[b].doc_id) return chunks[a].doc_id < chunks[b].doc_id ? -1 : 1;
+        if (chunks[a].chunk_index !== chunks[b].chunk_index) return chunks[a].chunk_index - chunks[b].chunk_index;
+        return chunks[a].chunk_id < chunks[b].chunk_id ? -1 : 1;
+      });
+      var hits = [];
+      for (var k = 0; k < order.length; k++) {
+        var idx = order[k];
+        if (scores[idx] <= scoreFloor) continue;
+        hits.push({ rank: hits.length + 1, score: scores[idx], chunk: chunks[idx] });
+        if (hits.length >= topK) break;
+      }
+      // ADR-012 relevance gate on the rank-1 hit.
+      if (hits.length && minTopCoverage > 0.0) {
+        if (coverage(queryText, indexText(hits[0].chunk)) < minTopCoverage) return [];
+      }
+      return hits;
+    }
+
+    function answer(queryText, topK) {
+      var hits = query(queryText, topK);
+      if (!hits.length) {
+        return { outcome: "refusal", answer_text: data.refusal_text, hits: [],
+                 review_recommended: true, reasons: ["refusal_no_supporting_documents"],
+                 documents_excluded: data.documents_excluded, documents_retrievable: data.documents_retrievable };
+      }
+      return { outcome: "answer", answer_text: null,
+               hits: hits.map(function (h) { return { score: h.score, chunk: h.chunk }; }),
+               citations_valid: true, review_recommended: false, reasons: [],
+               documents_excluded: data.documents_excluded, documents_retrievable: data.documents_retrievable };
+    }
+
+    return { query: query, answer: answer, bm25: bm25 };
+  }
+
+  var api = { tokenize: tokenize, contentTerms: contentTerms, coverage: coverage, BM25: BM25, makeEngine: makeEngine };
+  if (typeof module !== "undefined" && module.exports) module.exports = api;
+  else global.BiotechRAG = api;
+})(typeof window !== "undefined" ? window : globalThis);
+
+</script>
+<script>
+  var $ = function (s) { return document.querySelector(s); };
+  var results = $("#results"), statusEl = $("#status"), excludedEl = $("#excluded");
+  var overlay = $("#overlay"), modal = $("#modal");
+  var engine = null, DATA = null, chunkById = {}, excludedById = {};
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c];
+    });
+  }
+  function shortHash(h) { return String(h).replace(/^sha256:/, "").slice(0, 12) + "…"; }
+
+  function openModal(html) { modal.innerHTML = html; overlay.classList.add("open"); }
+  function closeModal() { overlay.classList.remove("open"); modal.innerHTML = ""; }
+  function mhead(title) {
+    return '<div class="mhead"><h3>' + esc(title) + '</h3><button class="mclose" aria-label="Close">×</button></div>';
+  }
+
+  // Approved source with the cited span highlighted exactly where the offsets point.
+  function viewSource(chunkId) {
+    var c = chunkById[chunkId]; if (!c) return;
+    var raw = DATA.sources[c.source_file_path]; if (raw == null) return;
+    var s = c.char_start, e = c.char_end;
+    var body = esc(raw.slice(0, s)) + '<mark class="hl">' + esc(raw.slice(s, e)) + "</mark>" + esc(raw.slice(e));
+    openModal(
+      mhead(c.source_file_path) +
+      '<div class="mbody">' +
+      '<div class="banner ok">' + esc(c.doc_id) + " v" + esc(c.version) + " · " + esc(c.status) +
+        " — the highlighted text is the exact cited span.</div>" +
+      '<pre class="src">' + body + "</pre>" +
+      '<div class="provfoot">Cited span: <b>characters ' + s + "–" + e + "</b> of <code>" + esc(c.source_file_path) +
+        "</code> · file <b>sha-256</b> <code>" + esc(shortHash(c.source_hash)) + "</code>. The quote is the exact, " +
+        "unedited bytes of this Approved document — the ALCOA+ <i>attributable / traceable</i> property the citation guarantees." +
+      "</div></div>"
+    );
+  }
+
+  // Reveal a held-out (non-retrievable) document: what the status gate kept out.
+  function viewHeldOut(docId) {
+    var d = excludedById[docId]; if (!d) return;
+    var raw = DATA.sources[d.source_file_path];
+    openModal(
+      mhead(d.doc_id + " — " + d.doc_title) +
+      '<div class="mbody">' +
+      '<div class="banner held">⛔ HELD OUT · status ' + esc(d.status) + " (v" + esc(d.version) + ") — this document is in the " +
+        "corpus but is <u>never retrievable</u>, so the assistant can never answer from it.</div>" +
+      '<pre class="src">' + esc(raw != null ? raw : "(source unavailable)") + "</pre>" +
+      '<div class="provfoot">Excluded by the status gate — only <b>Approved / Effective</b> documents are indexed. ' +
+        "This is the content the refusal just kept out of the answer.</div>" +
+      "</div></div>"
+    );
+  }
+
+  function renderExcluded() {
+    var docs = (DATA.excluded_documents || []);
+    if (!docs.length) { excludedEl.innerHTML = ""; return; }
+    excludedEl.innerHTML = "<span>Held out by status (never retrievable):</span> " + docs.map(function (d) {
+      return '<button class="heldchip" data-held="' + esc(d.doc_id) + '"><span class="st">' + esc(d.status) +
+        "</span> " + esc(d.doc_id) + " v" + esc(d.version) + "</button>";
+    }).join("");
+  }
+
+  function renderRefusal(r, revealDocId) {
+    var review = r.review_recommended
+      ? '<div class="review">Review recommended' + (r.reasons && r.reasons.length ? " · " + esc(r.reasons.join(", ")) : "") + "</div>" : "";
+    var held = (DATA.excluded_documents || []);
+    var heldNote = held.length
+      ? '<div class="heldnote">Note: ' + held.length + " document" + (held.length === 1 ? "" : "s") +
+        " in this corpus are held out by status (" + held.map(function (d) { return esc(d.status); }).join(", ") +
+        ") and never enter retrieval — even if they match on keywords." +
+        (revealDocId && excludedById[revealDocId]
+          ? ' <button data-held="' + esc(revealDocId) + '">View the held-out document this refusal kept out →</button>'
+          : "") + "</div>"
+      : "";
+    results.innerHTML =
+      '<div class="refusal"><div class="rtitle">No approved source supports this question.</div>' +
+      '<div class="rbody">' + esc(r.answer_text) + "</div>" + review + heldNote + "</div>";
+  }
+
+  function renderAnswer(r) {
+    var head =
+      '<div class="answer-head"><span>Answer assembled from <b>' + r.hits.length + "</b> approved passage" +
+      (r.hits.length === 1 ? "" : "s") + "</span>" +
+      (r.citations_valid ? '<span class="check">✓ citations validated</span>' : '<span class="err">citations failed validation</span>') +
+      "</div>";
+    var cards = r.hits.map(function (h) {
+      var c = h.chunk;
+      var canView = DATA.sources && DATA.sources[c.source_file_path] != null && c.char_start != null;
+      return '<div class="card"><div class="meta">' +
+        '<span class="docid">' + esc(c.doc_id) + "</span>" +
+        '<span class="ver">v' + esc(c.version) + "</span>" +
+        '<span class="badge">' + esc(c.status) + "</span>" +
+        '<span class="score">score ' + h.score.toFixed(2) + "</span></div>" +
+        '<div class="sec">' + esc(c.section_heading) + ' <span class="span">· ' + esc(c.line_or_page_span) + "</span></div>" +
+        '<div class="quote">' + esc(c.text) + "</div>" +
+        '<div class="srcfile">' + esc(c.source_file_path) + "</div>" +
+        (canView ? '<button class="provbtn" data-src="' + esc(c.chunk_id) + '">↳ verbatim — view the exact span in its source (sha-256 verified)</button>' : "") +
+        "</div>";
+    }).join("");
+    results.innerHTML = head + cards;
+  }
+
+  function ask(qOverride, revealDocId) {
+    if (!engine) return;
+    if (qOverride != null) $("#q").value = qOverride;
+    var q = $("#q").value.trim();
+    if (!q) return;
+    var r = engine.answer(q, 3);
+    if (r.outcome === "refusal") renderRefusal(r, revealDocId || null); else renderAnswer(r);
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest) return;
+    if (e.target.closest(".mclose")) { closeModal(); return; }
+    var t = e.target.closest("[data-src],[data-held]");
+    if (!t) return;
+    if (t.hasAttribute("data-src")) viewSource(t.getAttribute("data-src"));
+    else if (t.hasAttribute("data-held")) viewHeldOut(t.getAttribute("data-held"));
+  });
+  overlay.addEventListener("click", function (e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+
+  function boot(data) {
+    DATA = data;
+    engine = BiotechRAG.makeEngine(data);
+    (data.chunks || []).forEach(function (c) { chunkById[c.chunk_id] = c; });
+    (data.excluded_documents || []).forEach(function (d) { excludedById[d.doc_id] = d; });
+    $("#q").disabled = false; $("#ask").disabled = false;
+    statusEl.innerHTML = "Corpus <code>" + esc(data.corpus_name) + "</code> · " +
+      data.documents_retrievable + " retrievable documents · " +
+      data.documents_excluded + " excluded by status";
+    renderExcluded();
+    $("#q").focus();
+  }
+
+  // CORPUS_DATA is inlined in the self-contained offline build (demo-offline.html); the served
+  // Pages version fetches it instead. Both run identical retrieval.
+  if (window.CORPUS_DATA) {
+    boot(window.CORPUS_DATA);
+  } else {
+    fetch("corpus-data.json")
+      .then(function (resp) { return resp.json(); })
+      .then(boot)
+      .catch(function (e) {
+        statusEl.innerHTML = '<span class="err">Could not load corpus-data.json (' + esc(e.message) +
+          "). Serve this folder over HTTP, e.g. <code>python3 -m http.server</code>.</span>";
+      });
+  }
+
+  $("#ask").addEventListener("click", function () { ask(null, null); });
+  $("#q").addEventListener("keydown", function (e) { if (e.key === "Enter") ask(null, null); });
+  document.querySelectorAll(".chip").forEach(function (chip) {
+    chip.addEventListener("click", function () { ask(chip.dataset.q, chip.dataset.reveal || null); });
+  });
+</script>
+</body>
+</html>

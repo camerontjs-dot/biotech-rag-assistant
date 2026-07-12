@@ -1,0 +1,74 @@
+records:
+  - source_path: incoming/documents/SOP-QA-001_v1.0_current-release.md
+    doc_title: Environmental monitoring response
+    doc_type: SOP
+    status: Released
+    effective_date: "2026-01-15"
+    department: QA
+    current_version: true
+  - source_path: incoming/documents/POL-DOC-003_v2.0_approved.md
+    doc_title: Document control policy
+    doc_type: POL
+    status: Approved for Use
+    effective_date: "2026-02-01"
+    department: Document Control
+    current_version: true
+  - source_path: incoming/documents/SOP-QA-001_v0.9_superseded.md
+    doc_title: Superseded environmental monitoring response
+    doc_type: SOP
+    status: Superseded
+    effective_date: "2025-01-10"
+    department: QA
+    current_version: false
+  - source_path: incoming/documents/SOP-QA-010_v0.1_draft.md
+    doc_title: Draft cleaning validation wording
+    doc_type: SOP
+    status: Draft
+    effective_date: "2026-03-01"
+    department: QA
+    current_version: false
+  - source_path: incoming/documents/DEV-QA-002_v1.0_conflicting-status.md
+    doc_title: Deviation triage conflict example
+    doc_type: SOP
+    status: Active
+    effective_date: "2026-02-15"
+    department: QA
+    current_version: true
+  - source_path: incoming/documents/SPEC-QC-006_v1.2_missing-effective-date.md
+    doc_title: Water quality specification
+    doc_type: SPEC
+    status: Released
+    department: QC
+    current_version: true
+  - source_path: incoming/documents/SOP-OPS-007_v1.0_current-a.md
+    doc_id: SOP-OPS-007
+    doc_title: Line clearance current candidate A
+    doc_type: SOP
+    status: Released
+    effective_date: "2026-01-20"
+    department: Operations
+    current_version: true
+  - source_path: incoming/documents/SOP-OPS-007_v1.1_current-b.md
+    doc_id: SOP-OPS-007
+    doc_title: Line clearance current candidate B
+    doc_type: SOP
+    status: Released
+    effective_date: "2026-02-20"
+    department: Operations
+    current_version: true
+  - source_path: incoming/documents/NOTE-TS-099_v1.0_unknown-status.md
+    doc_title: Technical services unknown status note
+    doc_type: NOTE
+    status: In use pending QA
+    effective_date: "2026-03-10"
+    department: Technical Services
+    current_version: true
+  - source_path: incoming/documents/empty-placeholder.md
+    doc_id: EMP-QA-000
+    doc_title: Empty placeholder
+    doc_type: NOTE
+    version: "1.0"
+    status: Released
+    effective_date: "2026-04-01"
+    department: QA
+    current_version: true

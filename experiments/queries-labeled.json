@@ -1,0 +1,29 @@
+{
+  "description": "Labeled relevance set for the BM25-vs-semantic comparison. relevant_doc is the doc_id whose chunks answer the query; null = off-topic (should refuse). tier: easy = uses corpus vocabulary (BM25's strength); hard = paraphrase with synonyms, lexically distant from the source (where semantic should help); offtopic = unsupported.",
+  "queries": [
+    {"id": "easy-em-excursion", "tier": "easy", "relevant_doc": "SOP-QA-001", "query": "viable environmental monitoring excursion immediate containment affected product lots"},
+    {"id": "easy-deviation-major", "tier": "easy", "relevant_doc": "SOP-QA-002", "query": "major deviation QA review escalation quality council"},
+    {"id": "easy-current-version", "tier": "easy", "relevant_doc": "POL-DOC-003", "query": "current approved effective version controlled repository"},
+    {"id": "easy-gowning-requal", "tier": "easy", "relevant_doc": "TRN-QA-004", "query": "gowning training requalification controlled suite"},
+    {"id": "easy-balance-daily", "tier": "easy", "relevant_doc": "CAL-ENG-005", "query": "analytical balance daily check traceable weights acceptance range"},
+    {"id": "easy-water-sampling", "tier": "easy", "relevant_doc": "SPEC-QC-006", "query": "purified water sampling points missed sample QA notification"},
+    {"id": "easy-line-clearance", "tier": "easy", "relevant_doc": "SOP-OPS-007", "query": "independent line clearance check product identity lot number"},
+    {"id": "easy-customer-conflict", "tier": "easy", "relevant_doc": "NOTE-TS-008", "query": "customer specific requirement conflict approved procedure route QA regulatory"},
+
+    {"id": "hard-em-excursion", "tier": "hard", "relevant_doc": "SOP-QA-001", "query": "If cleanroom air testing shows microbial growth above the limit, what is the first thing to do?"},
+    {"id": "hard-deviation-escalate", "tier": "hard", "relevant_doc": "SOP-QA-002", "query": "When does a quality problem need to be raised to senior leadership?"},
+    {"id": "hard-outdated-procedure", "tier": "hard", "relevant_doc": "POL-DOC-003", "query": "How can I tell whether the instructions I am reading are out of date?"},
+    {"id": "hard-gowning-reprove", "tier": "hard", "relevant_doc": "TRN-QA-004", "query": "How often must staff re-prove they can dress correctly for the clean area?"},
+    {"id": "hard-scale-fails", "tier": "hard", "relevant_doc": "CAL-ENG-005", "query": "What happens if the weighing scale does not pass its morning verification?"},
+    {"id": "hard-skip-water-check", "tier": "hard", "relevant_doc": "SPEC-QC-006", "query": "Who must be informed if a planned check of the water system is skipped?"},
+    {"id": "hard-area-clear", "tier": "hard", "relevant_doc": "SOP-OPS-007", "query": "Before switching to a different product, who signs that the previous job's materials are gone?"},
+    {"id": "hard-client-demands", "tier": "hard", "relevant_doc": "NOTE-TS-008", "query": "Where are special client demands written down before we agree to fulfil them?"},
+
+    {"id": "off-vacation", "tier": "offtopic", "relevant_doc": null, "query": "What is the company vacation policy and how many paid days off do we get?"},
+    {"id": "off-password", "tier": "offtopic", "relevant_doc": null, "query": "How do I reset my email password on the company laptop?"},
+    {"id": "off-weather", "tier": "offtopic", "relevant_doc": null, "query": "What is the weather forecast for tomorrow afternoon?"},
+    {"id": "off-sales", "tier": "offtopic", "relevant_doc": null, "query": "Can you summarize the latest quarterly sales revenue figures?"},
+    {"id": "off-cafeteria", "tier": "offtopic", "relevant_doc": null, "query": "What time does the cafeteria open for lunch today?"},
+    {"id": "off-meeting-room", "tier": "offtopic", "relevant_doc": null, "query": "How do I book a meeting room for next Tuesday?"}
+  ]
+}

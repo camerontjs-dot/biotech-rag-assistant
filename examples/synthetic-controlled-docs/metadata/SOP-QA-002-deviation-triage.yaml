@@ -1,0 +1,10 @@
+doc_id: SOP-QA-002
+doc_title: Deviation triage and escalation
+doc_type: SOP
+version: "1.1"
+status: Effective
+effective_date: "2026-01-18"
+review_due_date: "2027-01-18"
+department: QA
+source_file_path: documents/SOP-QA-002-deviation-triage.md
+source_hash: sha256:b2b12d22bfe50aed5c5d9f84c155dbb27984e0b72cfd2086e9c6597686827f7c

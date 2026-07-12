@@ -1,0 +1,10 @@
+doc_id: TRN-QA-004
+doc_title: Gowning training note
+doc_type: TrainingNote
+version: "1.0"
+status: Approved
+effective_date: "2026-01-11"
+review_due_date: "2027-01-11"
+department: QA
+source_file_path: documents/TRN-QA-004-gowning-training.md
+source_hash: sha256:1bf23522004cf07f26698e019c98a2ecf8a477e57cbd0d13206b7c86748dacd8

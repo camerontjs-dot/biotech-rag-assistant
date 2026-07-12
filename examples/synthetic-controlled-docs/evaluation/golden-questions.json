@@ -1,0 +1,250 @@
+{
+  "suite_name": "synthetic-controlled-docs-trust-layer",
+  "cases": [
+    {
+      "case_id": "valid-env-containment",
+      "question": "viable excursion affected product lots immediate containment",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-QA-001"],
+      "expected_chunk_ids": ["SOP-QA-001_v1_0_chunk_002"],
+      "answer_fixture": {
+        "answer_text": "QA opens a deviation and places affected product lots on hold until the initial impact assessment is documented. [source: 1]",
+        "citations": [
+          {
+            "chunk_id": "SOP-QA-001_v1_0_chunk_002",
+            "label": "1"
+          }
+        ],
+        "expected_outcome": "answer"
+      },
+      "expected_citation_resolves_to_retrieved_chunk": true,
+      "expected_citation_issue_codes": []
+    },
+    {
+      "case_id": "missing-citation-env-containment",
+      "question": "viable excursion affected product lots immediate containment",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-QA-001"],
+      "answer_fixture": {
+        "answer_text": "QA opens a deviation and places affected product lots on hold.",
+        "citations": [],
+        "expected_outcome": "answer"
+      },
+      "expected_citation_resolves_to_retrieved_chunk": false,
+      "expected_citation_issue_codes": ["missing_answer_citation"]
+    },
+    {
+      "case_id": "hallucinated-citation-env-containment",
+      "question": "viable excursion affected product lots immediate containment",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-QA-001"],
+      "answer_fixture": {
+        "answer_text": "QA opens a deviation and places affected product lots on hold. [source: bad-id]",
+        "citations": [
+          {
+            "chunk_id": "NOT-A-REAL-CHUNK",
+            "label": "bad-id"
+          }
+        ],
+        "expected_outcome": "answer"
+      },
+      "expected_citation_resolves_to_retrieved_chunk": false,
+      "expected_citation_issue_codes": ["unresolved_citation"]
+    },
+    {
+      "case_id": "obsolete-sterility-excluded",
+      "question": "membrane filtration 96 verbal",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "forbidden_doc_ids": ["SOP-QA-009"],
+      "expect_no_hits": true,
+      "answer_fixture": {
+        "answer_text": "The retrieved documents do not contain enough information to answer this question.",
+        "citations": [],
+        "expected_outcome": "refusal"
+      },
+      "expected_citation_resolves_to_retrieved_chunk": true,
+      "expected_citation_issue_codes": []
+    },
+    {
+      "case_id": "draft-cleaning-excluded",
+      "question": "visual only residue campaign changeover",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "forbidden_doc_ids": ["SOP-QA-010"],
+      "expect_no_hits": true,
+      "answer_fixture": {
+        "answer_text": "The retrieved documents do not contain enough information to answer this question.",
+        "citations": [],
+        "expected_outcome": "refusal"
+      },
+      "expected_citation_resolves_to_retrieved_chunk": true,
+      "expected_citation_issue_codes": []
+    },
+    {
+      "case_id": "refusal-with-citation-is-caught",
+      "question": "zzzz qqqq impossible-token",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true,
+      "answer_fixture": {
+        "answer_text": "The retrieved documents do not contain enough information to answer this question. [source: 1]",
+        "citations": [
+          {
+            "chunk_id": "SOP-QA-001_v1_0_chunk_002",
+            "label": "1"
+          }
+        ],
+        "expected_outcome": "refusal"
+      },
+      "expected_citation_resolves_to_retrieved_chunk": false,
+      "expected_citation_issue_codes": ["refusal_has_citation", "unresolved_citation"]
+    },
+    {
+      "case_id": "water-action-limit",
+      "question": "purified water action limit affected use assessment QA disposition",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SPEC-QC-006"],
+      "forbidden_doc_ids": ["SOP-QA-009", "SOP-QA-010"]
+    },
+    {
+      "case_id": "line-clearance-independent-check",
+      "question": "independent line clearance check product identity lot number room readiness",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-OPS-007"],
+      "forbidden_doc_ids": ["SOP-QA-009", "SOP-QA-010"]
+    },
+    {
+      "case_id": "env-investigation-record",
+      "question": "sample location sampling date organism affected room reopening containment action",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-QA-001"],
+      "expected_chunk_ids": ["SOP-QA-001_v1_0_chunk_003"]
+    },
+    {
+      "case_id": "deviation-major-escalation",
+      "question": "major deviations QA review impact assessment escalation quality council repeat events",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-QA-002"],
+      "expected_chunk_ids": ["SOP-QA-002_v1_1_chunk_002"]
+    },
+    {
+      "case_id": "deviation-closure-rule",
+      "question": "deviation close root cause immediate containment corrective preventive action owner",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-QA-002"],
+      "expected_chunk_ids": ["SOP-QA-002_v1_1_chunk_003"]
+    },
+    {
+      "case_id": "document-current-version-rule",
+      "question": "current approved effective version controlled repository printed copies uncontrolled stamp",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["POL-DOC-003"],
+      "expected_chunk_ids": ["POL-DOC-003_v2_0_chunk_001"]
+    },
+    {
+      "case_id": "document-draft-obsolete-rule",
+      "question": "draft obsolete superseded cannot train release product operational procedure questions conflicting copy",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["POL-DOC-003"],
+      "expected_chunk_ids": ["POL-DOC-003_v2_0_chunk_002"],
+      "forbidden_doc_ids": ["SOP-QA-009", "SOP-QA-010"]
+    },
+    {
+      "case_id": "gowning-training-scope",
+      "question": "gowning training controlled suite trainer classroom observed practice qualification attempt",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["TRN-QA-004"],
+      "expected_chunk_ids": ["TRN-QA-004_v1_0_chunk_001"]
+    },
+    {
+      "case_id": "gowning-requalification-trigger",
+      "question": "requalification failed observation long absence procedural revision gowning sequence",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["TRN-QA-004"],
+      "expected_chunk_ids": ["TRN-QA-004_v1_0_chunk_002"]
+    },
+    {
+      "case_id": "balance-daily-check",
+      "question": "balance traceable weights acceptance range stops use labels out of service",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["CAL-ENG-005"],
+      "expected_chunk_ids": ["CAL-ENG-005_v1_0_chunk_001"]
+    },
+    {
+      "case_id": "balance-calibration-failure",
+      "question": "calibration failure QA product impact results since last passing check review",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["CAL-ENG-005"],
+      "expected_chunk_ids": ["CAL-ENG-005_v1_0_chunk_002"]
+    },
+    {
+      "case_id": "customer-requirement-intake",
+      "question": "customer-specific requirement request log batch method label statement certificate language",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["NOTE-TS-008"],
+      "expected_chunk_ids": ["NOTE-TS-008_v1_0_chunk_001"]
+    },
+    {
+      "case_id": "customer-conflict-review",
+      "question": "customer request conflicts approved procedure specification QA regulatory accepting requirement",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["NOTE-TS-008"],
+      "expected_chunk_ids": ["NOTE-TS-008_v1_0_chunk_002"]
+    },
+    {
+      "case_id": "water-sampling-missed-sample",
+      "question": "purified water loop approved points sampling schedule missed samples QA notification rationale",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SPEC-QC-006"],
+      "expected_chunk_ids": ["SPEC-QC-006_v3_0_chunk_001"]
+    },
+    {
+      "case_id": "line-clearance-pre-run",
+      "question": "previous product labels inserts reconciliation sheets removed packaging run starts",
+      "expected_outcome": "answer",
+      "top_k": 3,
+      "expected_source_doc_ids": ["SOP-OPS-007"],
+      "expected_chunk_ids": ["SOP-OPS-007_v1_2_chunk_001"]
+    },
+    {
+      "case_id": "unsupported-lyophilizer-purge",
+      "question": "lyophilizer nitrogen purge vacuum shelf collapse",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    },
+    {
+      "case_id": "unsupported-endotoxin-method",
+      "question": "endotoxin kinetic chromogenic microplate reagent standard curve",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "expect_no_hits": true
+    },
+    {
+      "case_id": "obsolete-and-draft-combined-trap",
+      "question": "membrane filtration verbal visual residue campaign changeover",
+      "expected_outcome": "refusal",
+      "top_k": 3,
+      "forbidden_doc_ids": ["SOP-QA-009", "SOP-QA-010"],
+      "expect_no_hits": true
+    }
+  ]
+}

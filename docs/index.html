@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biotech RAG Assistant — controlled-document demo</title>
+<meta name="description" content="A controlled-document assistant that answers only from approved documents, cites the exact source span, and refuses when nothing supports the answer — the trust layer, built before the model." />
+<meta property="og:title" content="Biotech RAG Assistant — controlled-document demo" />
+<meta property="og:description" content="Answers only from Approved/Effective documents, cites the exact source section, and refuses when the documents don't support an answer." />
+<meta property="og:type" content="website" />
+<style>
+  :root {
+    --bg:#f4f6f8; --panel:#fff; --ink:#1b2733; --muted:#5b6b7a; --line:#d8e0e8;
+    --accent:#0f6e8c; --accent-ink:#fff;
+    --approved-bg:#e6f4ea; --approved-ink:#1d6b3a; --approved-line:#9fd4b1;
+    --refuse-bg:#fff4e2; --refuse-ink:#8a5a12; --refuse-line:#f0cf95;
+    --held-bg:#eef1f4; --held-ink:#5b6b7a; --held-line:#cdd6df; --hl:#fde68a;
+    --shadow:0 1px 2px rgba(16,40,60,.06), 0 6px 20px rgba(16,40,60,.06);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:880px; margin:0 auto; padding:24px 20px 64px; }
+  header.top { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:4px; }
+  header.top h1 { font-size:20px; margin:0; letter-spacing:-0.01em; }
+  .pill { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.04em;
+    padding:3px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:#fff; }
+  .tagline { color:var(--muted); font-size:13.5px; margin:2px 0 18px; }
+  .tagline b { color:var(--ink); font-weight:600; }
+  .askbar { display:flex; gap:8px; }
+  .askbar input { flex:1; padding:12px 14px; font-size:15px; border:1px solid var(--line);
+    border-radius:10px; background:#fff; color:var(--ink); box-shadow:var(--shadow); }
+  .askbar input:focus { outline:2px solid var(--accent); border-color:var(--accent); }
+  .askbar button { padding:0 18px; font-size:15px; font-weight:600; border:0; border-radius:10px;
+    background:var(--accent); color:var(--accent-ink); cursor:pointer; box-shadow:var(--shadow); }
+  .askbar button:disabled { opacity:.55; cursor:default; }
+  .examples { margin:12px 0 0; display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
+  .examples .lbl { font-size:12px; color:var(--muted); margin-right:2px; }
+  .chip { font-size:12.5px; padding:5px 10px; border-radius:999px; cursor:pointer;
+    border:1px solid var(--line); background:#fff; color:var(--accent); }
+  .chip.warn { color:var(--refuse-ink); border-color:var(--refuse-line); background:var(--refuse-bg); }
+  .chip:hover { border-color:var(--accent); }
+  .status { margin:16px 0 6px; font-size:12.5px; color:var(--muted); }
+  .status code { color:#0b3d4d; }
+  .excluded { margin:0 0 4px; font-size:12.5px; color:var(--muted); display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .heldchip { font-size:12px; padding:4px 9px; border-radius:8px; cursor:pointer; border:1px solid var(--held-line);
+    background:var(--held-bg); color:var(--held-ink); display:inline-flex; gap:6px; align-items:center; }
+  .heldchip:hover { border-color:var(--muted); }
+  .heldchip .st { font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.03em; }
+  .answer-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:13.5px; color:var(--muted); margin:14px 2px; }
+  .check { color:var(--approved-ink); font-weight:600; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:0 0 12px; box-shadow:var(--shadow); }
+  .card .meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
+  .docid { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13px; font-weight:600; color:#0b3d4d; }
+  .badge { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:2px 8px; border-radius:6px;
+    background:var(--approved-bg); color:var(--approved-ink); border:1px solid var(--approved-line); }
+  .ver, .score, .span { font-size:12px; color:var(--muted); }
+  .ver { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+  .sec { font-weight:600; font-size:14px; margin:2px 0 6px; }
+  .quote { border-left:3px solid var(--approved-line); padding:4px 0 4px 12px; margin:6px 0 4px; color:#243240; white-space:pre-wrap; }
+  .srcfile { font-size:11.5px; color:var(--muted); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; margin-top:6px; }
+  .provbtn { margin-top:8px; font-size:12px; color:var(--accent); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; }
+  .refusal { background:var(--refuse-bg); border:1px solid var(--refuse-line); border-radius:12px; padding:16px; box-shadow:var(--shadow); }
+  .refusal .rtitle { font-weight:700; color:var(--refuse-ink); margin-bottom:4px; }
+  .refusal .rbody { color:#4a3a1c; }
+  .review { display:inline-block; margin-top:10px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+    padding:3px 9px; border-radius:6px; background:#fde8c8; color:var(--refuse-ink); border:1px solid var(--refuse-line); }
+  .heldnote { margin-top:12px; font-size:12.5px; color:#4a3a1c; border-top:1px dashed var(--refuse-line); padding-top:10px; }
+  .heldnote button { font-size:12.5px; color:var(--refuse-ink); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; font-weight:600; }
+  .err { color:#9a2b2b; font-size:13px; margin-top:10px; }
+  footer.boundary { margin-top:28px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
+  footer.boundary b { color:var(--ink); }
+  .overlay { position:fixed; inset:0; background:rgba(16,30,44,.55); display:none; align-items:flex-start; justify-content:center; padding:5vh 16px; z-index:50; }
+  .overlay.open { display:flex; }
+  .modal { background:#fff; border-radius:12px; max-width:760px; width:100%; max-height:88vh; overflow:auto; box-shadow:0 12px 48px rgba(16,30,44,.3); }
+  .modal .mhead { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:14px 18px; border-bottom:1px solid var(--line); position:sticky; top:0; background:#fff; }
+  .modal .mhead h3 { margin:0; font-size:14.5px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+  .modal .mclose { border:0; background:none; font-size:22px; line-height:1; cursor:pointer; color:var(--muted); }
+  .modal .mbody { padding:16px 18px; }
+  .banner { border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:12px; font-weight:600; }
+  .banner.held { background:var(--refuse-bg); color:var(--refuse-ink); border:1px solid var(--refuse-line); }
+  .banner.ok { background:var(--approved-bg); color:var(--approved-ink); border:1px solid var(--approved-line); }
+  pre.src { white-space:pre-wrap; word-break:break-word; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background:#f7f9fb; border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:0; color:#243240; }
+  mark.hl { background:var(--hl); padding:1px 0; border-radius:2px; }
+  .provfoot { margin-top:12px; font-size:12px; color:var(--muted); border-top:1px solid var(--line); padding-top:10px; }
+  .provfoot code { color:#0b3d4d; word-break:break-all; }
+  .provfoot b { color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Biotech RAG Assistant</h1>
+    <span class="pill" id="corpus-pill">synthetic corpus</span>
+    <span class="pill" title="Retrieval runs entirely in your browser — no server, no data leaves the page.">client-side · no backend</span>
+  </header>
+  <p class="tagline">
+    Answers <b>only from Approved&nbsp;/&nbsp;Effective documents</b>, cites the <b>exact source section</b>,
+    and <b>refuses</b> when the documents don't support an answer.
+  </p>
+
+  <div class="askbar">
+    <input id="q" type="text" autocomplete="off" placeholder="Ask a question about the controlled documents…" disabled />
+    <button id="ask" disabled>Ask</button>
+  </div>
+
+  <div class="examples">
+    <span class="lbl">Try:</span>
+    <span class="chip" data-q="How does QA respond to a viable environmental monitoring excursion?">env excursion response</span>
+    <span class="chip" data-q="How do staff confirm the current approved version of a controlled document?">current approved version</span>
+    <span class="chip" data-q="What is the daily balance calibration check requirement?">balance calibration</span>
+    <span class="chip warn" data-q="What is the membrane filtration hold time for sterility?" data-reveal="SOP-QA-009">obsolete-doc trap → watch it refuse</span>
+    <span class="chip warn" data-q="What is the company vacation policy and paid days off?">off-topic → refuse</span>
+  </div>
+
+  <div class="status" id="status">Loading corpus…</div>
+  <div class="excluded" id="excluded"></div>
+  <div class="results" id="results"></div>
+
+  <footer class="boundary">
+    <b>What this is not.</b> Not a validated GxP / regulated quality system. It does not certify compliance, verify that a
+    document is true, or make batch-release, deviation, or any regulated decision. Retrieval nominates candidate passages;
+    a qualified human decides. Runs on a synthetic corpus only; the retrieval logic here mirrors the Python core (BM25 +
+    relevance gate + status gating), verified at parity.
+  </footer>
+</div>
+
+<div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
+
+<script src="retrieval.js"></script>
+<script>
+  var $ = function (s) { return document.querySelector(s); };
+  var results = $("#results"), statusEl = $("#status"), excludedEl = $("#excluded");
+  var overlay = $("#overlay"), modal = $("#modal");
+  var engine = null, DATA = null, chunkById = {}, excludedById = {};
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c];
+    });
+  }
+  function shortHash(h) { return String(h).replace(/^sha256:/, "").slice(0, 12) + "…"; }
+
+  function openModal(html) { modal.innerHTML = html; overlay.classList.add("open"); }
+  function closeModal() { overlay.classList.remove("open"); modal.innerHTML = ""; }
+  function mhead(title) {
+    return '<div class="mhead"><h3>' + esc(title) + '</h3><button class="mclose" aria-label="Close">×</button></div>';
+  }
+
+  // Approved source with the cited span highlighted exactly where the offsets point.
+  function viewSource(chunkId) {
+    var c = chunkById[chunkId]; if (!c) return;
+    var raw = DATA.sources[c.source_file_path]; if (raw == null) return;
+    var s = c.char_start, e = c.char_end;
+    var body = esc(raw.slice(0, s)) + '<mark class="hl">' + esc(raw.slice(s, e)) + "</mark>" + esc(raw.slice(e));
+    openModal(
+      mhead(c.source_file_path) +
+      '<div class="mbody">' +
+      '<div class="banner ok">' + esc(c.doc_id) + " v" + esc(c.version) + " · " + esc(c.status) +
+        " — the highlighted text is the exact cited span.</div>" +
+      '<pre class="src">' + body + "</pre>" +
+      '<div class="provfoot">Cited span: <b>characters ' + s + "–" + e + "</b> of <code>" + esc(c.source_file_path) +
+        "</code> · file <b>sha-256</b> <code>" + esc(shortHash(c.source_hash)) + "</code>. The quote is the exact, " +
+        "unedited bytes of this Approved document — the ALCOA+ <i>attributable / traceable</i> property the citation guarantees." +
+      "</div></div>"
+    );
+  }
+
+  // Reveal a held-out (non-retrievable) document: what the status gate kept out.
+  function viewHeldOut(docId) {
+    var d = excludedById[docId]; if (!d) return;
+    var raw = DATA.sources[d.source_file_path];
+    openModal(
+      mhead(d.doc_id + " — " + d.doc_title) +
+      '<div class="mbody">' +
+      '<div class="banner held">⛔ HELD OUT · status ' + esc(d.status) + " (v" + esc(d.version) + ") — this document is in the " +
+        "corpus but is <u>never retrievable</u>, so the assistant can never answer from it.</div>" +
+      '<pre class="src">' + esc(raw != null ? raw : "(source unavailable)") + "</pre>" +
+      '<div class="provfoot">Excluded by the status gate — only <b>Approved / Effective</b> documents are indexed. ' +
+        "This is the content the refusal just kept out of the answer.</div>" +
+      "</div></div>"
+    );
+  }
+
+  function renderExcluded() {
+    var docs = (DATA.excluded_documents || []);
+    if (!docs.length) { excludedEl.innerHTML = ""; return; }
+    excludedEl.innerHTML = "<span>Held out by status (never retrievable):</span> " + docs.map(function (d) {
+      return '<button class="heldchip" data-held="' + esc(d.doc_id) + '"><span class="st">' + esc(d.status) +
+        "</span> " + esc(d.doc_id) + " v" + esc(d.version) + "</button>";
+    }).join("");
+  }
+
+  function renderRefusal(r, revealDocId) {
+    var review = r.review_recommended
+      ? '<div class="review">Review recommended' + (r.reasons && r.reasons.length ? " · " + esc(r.reasons.join(", ")) : "") + "</div>" : "";
+    var held = (DATA.excluded_documents || []);
+    var heldNote = held.length
+      ? '<div class="heldnote">Note: ' + held.length + " document" + (held.length === 1 ? "" : "s") +
+        " in this corpus are held out by status (" + held.map(function (d) { return esc(d.status); }).join(", ") +
+        ") and never enter retrieval — even if they match on keywords." +
+        (revealDocId && excludedById[revealDocId]
+          ? ' <button data-held="' + esc(revealDocId) + '">View the held-out document this refusal kept out →</button>'
+          : "") + "</div>"
+      : "";
+    results.innerHTML =
+      '<div class="refusal"><div class="rtitle">No approved source supports this question.</div>' +
+      '<div class="rbody">' + esc(r.answer_text) + "</div>" + review + heldNote + "</div>";
+  }
+
+  function renderAnswer(r) {
+    var head =
+      '<div class="answer-head"><span>Answer assembled from <b>' + r.hits.length + "</b> approved passage" +
+      (r.hits.length === 1 ? "" : "s") + "</span>" +
+      (r.citations_valid ? '<span class="check">✓ citations validated</span>' : '<span class="err">citations failed validation</span>') +
+      "</div>";
+    var cards = r.hits.map(function (h) {
+      var c = h.chunk;
+      var canView = DATA.sources && DATA.sources[c.source_file_path] != null && c.char_start != null;
+      return '<div class="card"><div class="meta">' +
+        '<span class="docid">' + esc(c.doc_id) + "</span>" +
+        '<span class="ver">v' + esc(c.version) + "</span>" +
+        '<span class="badge">' + esc(c.status) + "</span>" +
+        '<span class="score">score ' + h.score.toFixed(2) + "</span></div>" +
+        '<div class="sec">' + esc(c.section_heading) + ' <span class="span">· ' + esc(c.line_or_page_span) + "</span></div>" +
+        '<div class="quote">' + esc(c.text) + "</div>" +
+        '<div class="srcfile">' + esc(c.source_file_path) + "</div>" +
+        (canView ? '<button class="provbtn" data-src="' + esc(c.chunk_id) + '">↳ verbatim — view the exact span in its source (sha-256 verified)</button>' : "") +
+        "</div>";
+    }).join("");
+    results.innerHTML = head + cards;
+  }
+
+  function ask(qOverride, revealDocId) {
+    if (!engine) return;
+    if (qOverride != null) $("#q").value = qOverride;
+    var q = $("#q").value.trim();
+    if (!q) return;
+    var r = engine.answer(q, 3);
+    if (r.outcome === "refusal") renderRefusal(r, revealDocId || null); else renderAnswer(r);
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest) return;
+    if (e.target.closest(".mclose")) { closeModal(); return; }
+    var t = e.target.closest("[data-src],[data-held]");
+    if (!t) return;
+    if (t.hasAttribute("data-src")) viewSource(t.getAttribute("data-src"));
+    else if (t.hasAttribute("data-held")) viewHeldOut(t.getAttribute("data-held"));
+  });
+  overlay.addEventListener("click", function (e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+
+  function boot(data) {
+    DATA = data;
+    engine = BiotechRAG.makeEngine(data);
+    (data.chunks || []).forEach(function (c) { chunkById[c.chunk_id] = c; });
+    (data.excluded_documents || []).forEach(function (d) { excludedById[d.doc_id] = d; });
+    $("#q").disabled = false; $("#ask").disabled = false;
+    statusEl.innerHTML = "Corpus <code>" + esc(data.corpus_name) + "</code> · " +
+      data.documents_retrievable + " retrievable documents · " +
+      data.documents_excluded + " excluded by status";
+    renderExcluded();
+    $("#q").focus();
+  }
+
+  // CORPUS_DATA is inlined in the self-contained offline build (demo-offline.html); the served
+  // Pages version fetches it instead. Both run identical retrieval.
+  if (window.CORPUS_DATA) {
+    boot(window.CORPUS_DATA);
+  } else {
+    fetch("corpus-data.json")
+      .then(function (resp) { return resp.json(); })
+      .then(boot)
+      .catch(function (e) {
+        statusEl.innerHTML = '<span class="err">Could not load corpus-data.json (' + esc(e.message) +
+          "). Serve this folder over HTTP, e.g. <code>python3 -m http.server</code>.</span>";
+      });
+  }
+
+  $("#ask").addEventListener("click", function () { ask(null, null); });
+  $("#q").addEventListener("keydown", function (e) { if (e.key === "Enter") ask(null, null); });
+  document.querySelectorAll(".chip").forEach(function (chip) {
+    chip.addEventListener("click", function () { ask(chip.dataset.q, chip.dataset.reveal || null); });
+  });
+</script>
+</body>
+</html>

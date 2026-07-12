@@ -1,0 +1,20 @@
+{
+  "query": "obsolete sterility verbal confirmation",
+  "retrievable_documents": 8,
+  "hits": [
+    {
+      "rank": 1,
+      "score": 10.0,
+      "chunk_id": "SOP-QA-009_v0_8_chunk_001",
+      "doc_id": "SOP-QA-009",
+      "doc_title": "Obsolete sterility testing procedure",
+      "status": "Obsolete",
+      "version": "0.8",
+      "section_heading": "Obsolete instruction",
+      "source_file_path": "documents/SOP-QA-009-sterility-obsolete.md",
+      "source_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "line_or_page_span": "lines 5-5",
+      "text": "Obsolete instruction\nThis obsolete instruction is a trap fixture."
+    }
+  ]
+}
