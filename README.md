@@ -6,11 +6,11 @@ A controlled-document retrieval pilot for regulated industries (pharma, biotech,
 
 The current slice is deliberately narrow and fully deterministic: it validates document metadata and source hashes (fail-closed), gates retrieval to `Approved`/`Effective` documents, chunks source text with stable IDs and **exact-span provenance** (a citation's quote is byte-identical to `raw_text[char_start:char_end]`), ranks with BM25 behind a lexical refusal gate, and assembles extractive answers whose citations must resolve to retrieved chunks.
 
-**If you're evaluating this:** open the [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) and click the **obsolete-doc trap** — it refuses, then shows you the retired SOP the status gate kept out. Then read [`DECISIONS.md`](DECISIONS.md): 17 architecture decisions, each with the alternatives it rejected. Verified by 97 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
+The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, then shows the retired SOP the status gate kept out. Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (17 ADRs). The Python core is exercised by 97 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
 
 ## What this is and is not
 
-This is a portfolio asset for testing how a document assistant should behave before an LLM is added. The useful question here is whether the system can keep source identity, document status, version, hash, and chunk IDs attached to retrieval results and answer output.
+This tests how a document assistant should behave before an LLM is added. The useful question is whether the system can keep source identity, document status, version, hash, and chunk IDs attached to retrieval results and answer output.
 
 This is not a regulated quality system. It does not certify compliance, verify that a document is true, make batch-release decisions, or replace QA, validation, regulatory, or legal review.
 
