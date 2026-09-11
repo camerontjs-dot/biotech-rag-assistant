@@ -31,8 +31,10 @@ invariant, audit) remain this asset's own. ADR-001's "local controlled-document 
 
 ## Concrete steps (when gates clear)
 
-1. Publish `workbench/` to its own **private GitHub repo** (also the Pages prerequisite — see
-   `docs/DEPLOY.md`). Required before submodules/Dependabot can run (ADR-022 §5).
+1. Confirm the public owner and Pages source. This gate is cleared for
+   `camerontjs-dot/biotech-rag-assistant`: the existing public repository serves `main`/`docs`
+   (see `docs/DEPLOY.md`). Do not create a second repository for this plan. Submodules/Dependabot
+   remain gated separately by ADR-022 §5.
 2. Add the **EB submodule** at `workbench/components/evidence-bundler`, pinned to a release **tag**
    (ADR-022 §3), mirroring `scaffold-claims-study/workbench/components/`.
 3. Make EB importable: `pip install -e components/evidence-bundler` (or add its path), and refactor
