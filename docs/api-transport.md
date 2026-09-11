@@ -1,10 +1,10 @@
 # HTTP transport contract
 
 The transport layer (`biotech_rag_assistant.api`) exposes the existing CLI core over HTTP
-without changing any core logic. Each route calls the same function the matching CLI command
-calls and serializes the same `to_cli_record()` output, so API JSON equals CLI `--json` for the
-same input. This is enforced by parity tests in `tests/test_api.py`, not by inspection. See
-ADR-010 in `DECISIONS.md` for the decision record.
+without changing any core logic. Routes reuse the same core functions and preserve the CLI JSON
+shapes where those commands emit JSON; `/validate-corpus` adds `valid`, and `/answer` adds the
+advisory `review_recommendation` object. This is enforced by parity tests in `tests/test_api.py`,
+not by inspection. See ADR-010 in `DECISIONS.md` for the decision record.
 
 ## Running the service
 
