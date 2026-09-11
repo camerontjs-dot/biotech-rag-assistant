@@ -2,9 +2,9 @@
 
 The HTTP routes call the same core functions as the CLI (``run_retrieval``,
 ``build_extractive_answer``, ``validate_answer_citations``, ``run_evaluation_suite``) and
-serialize the same ``to_cli_record()`` output, so API JSON matches the CLI. No core logic
-lives here. Corpora are loaded and validated once at startup from the configured allowlist;
-requests select a bundle by name, never by path.
+reuse the core record shapes with route-specific additions where needed. No core logic lives
+here. Corpora are loaded and validated once at startup from the configured allowlist; requests
+select a bundle by name, never by path.
 """
 
 from __future__ import annotations

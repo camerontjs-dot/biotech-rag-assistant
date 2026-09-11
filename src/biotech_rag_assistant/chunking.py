@@ -75,7 +75,7 @@ def chunk_document(document: SourceDocument) -> list[DocumentChunk]:
         char_start = line_offsets[paragraph.start_line - 1]
         last_line_text = lines[paragraph.end_line - 1] if paragraph.end_line > 0 else ""
         char_end = line_offsets[paragraph.end_line - 1] + len(last_line_text)
-        # The chunk text is the verbatim source span the citation points at, byte-for-byte:
+        # The chunk text is the verbatim source span the citation points at:
         # text == raw_text[char_start:char_end] (ADR-016). The section heading is combined only
         # at index/scoring time (retrieval.index_text), so it stays matchable for retrieval
         # without making the cited quote disagree with its own offsets.

@@ -1,8 +1,8 @@
 """Request bodies for the transport layer.
 
-Responses reuse the core models' ``to_cli_record()`` output so HTTP JSON matches the CLI
-byte-for-byte. Only request bodies are defined here; the file-path arguments the CLI takes
-become inline JSON payloads.
+Responses reuse the core models' ``to_cli_record()`` output where applicable; routes may add
+fields for transport-specific results. Only request bodies are defined here; the file-path
+arguments the CLI takes become inline JSON payloads.
 """
 
 from __future__ import annotations
