@@ -6,8 +6,8 @@ deterministic tie-break → the ADR-012 coverage relevance gate → extractive a
 the browser, over a status-gated snapshot of the synthetic corpus. Type any question: on-topic
 questions answer with cited Approved/Effective passages; off-topic or unsupported questions refuse.
 
-This exists so the demo can be published on GitHub Pages (static hosting) from a private repo.
-The corpus is synthetic and public-by-design (ADR-003), so nothing sensitive is embedded.
+This public repository publishes the demo on GitHub Pages (static hosting). The corpus is synthetic
+and public-by-design (ADR-003), so nothing sensitive is embedded.
 
 ## Files
 

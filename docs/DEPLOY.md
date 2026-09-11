@@ -1,38 +1,27 @@
-# Deploying the demo on GitHub Pages (private repo)
+# Deploying the demo on GitHub Pages
 
-Goal: keep the repo **private**, publish the static demo (`docs/index.html`) so you can share a
-link, and let a specific person see the code if you choose. Here's how, and the one caveat.
+Goal: publish the static demo (`docs/index.html`) from this public repository. The demo is
+client-side and uses a synthetic corpus; it has no secrets, client data, or backend.
 
-## The access reality (read first)
+## Current access boundary
 
-- On **Free/Pro** plans, a GitHub Pages **site is public** even when its source repo is private.
-  (Access-controlled "private Pages" requires GitHub Enterprise Cloud.)
-- That's fine here: the demo is **100% synthetic** and client-side — no secrets, no client data,
-  no backend. So: **repo private, demo URL public (share it with anyone), code visible only to
-  collaborators.**
-- To let someone see the **code**, add them as a repo collaborator
-  (repo → Settings → Collaborators → Add people). That's the normal way to share a private repo.
+- `camerontjs-dot/biotech-rag-assistant` is public, as is its GitHub Pages site.
+- Pages serves the `docs/` folder, so the other files in that folder are public too. Keep
+  sensitive material out of the repository; the checked-in corpus and documentation are synthetic.
 
-## One-time setup
+## Current Pages configuration
 
-This workbench is already a git repo with the demo committed under `docs/`. Create a private
-GitHub repo and push:
+The repository is already configured to deploy the committed `docs/` folder from `main`:
 
-```bash
-# from the workbench root
-gh repo create biotech-rag-assistant --private --source=. --remote=origin --push
-# (or: create the private repo in the web UI, then)
-#   git remote add origin git@github.com:<you>/biotech-rag-assistant.git && git push -u origin main
-```
+- Source branch: `main`
+- Source folder: `/docs`
+- Site: <https://camerontjs-dot.github.io/biotech-rag-assistant/>
 
-Enable Pages (web UI): repo → **Settings → Pages → Build and deployment → Source: Deploy from a
-branch → Branch: `main`, folder: `/docs` → Save**. After ~1 minute the site is live at:
+For an equivalent setup in another repository, use **Settings → Pages → Build and deployment →
+Source: Deploy from a branch → Branch: `main`, folder: `/docs`**. GitHub then builds the site from
+that branch and folder.
 
-```
-https://<your-username>.github.io/biotech-rag-assistant/
-```
-
-That's the link you share with Sameer. `index.html` is the landing page.
+`index.html` is the landing page.
 
 > Note: serving `/docs` also exposes the other files in this folder (`api-transport.md`, the
 > baseline notes) as public URLs. They're non-sensitive synthetic-system docs, so this is
@@ -49,7 +38,7 @@ git add docs/ && git commit -m "demo: refresh static Pages data" && git push
 
 ## Alternative — publish only the demo (optional, cleaner)
 
-If you'd rather not expose the other `docs/*.md`, deploy via GitHub Actions from a dedicated
+If a future repository should expose only the demo, deploy via GitHub Actions from a dedicated
 folder instead of branch/`docs`: move `index.html`, `retrieval.js`, `corpus-data.json`,
 `.nojekyll` into a `site/` folder and add a workflow that uploads only `site/` with
 `actions/upload-pages-artifact` + `actions/deploy-pages`. Pages source → "GitHub Actions". This
