@@ -1,0 +1,10 @@
+doc_id: SPEC-CC-201
+doc_title: "Change Control supporting record"
+doc_type: TechnicalNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/SPEC-CC-201-change-control-supporting-record.md
+source_hash: sha256:b57dfbfa3132f4a2be689d1dc143d713a8fd46ab16e8add26d3ef74f1999106c

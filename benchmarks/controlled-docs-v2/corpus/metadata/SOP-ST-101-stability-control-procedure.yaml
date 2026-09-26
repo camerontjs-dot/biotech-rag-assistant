@@ -1,0 +1,10 @@
+doc_id: SOP-ST-101
+doc_title: "Stability control procedure"
+doc_type: SOP
+version: "2.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QC
+source_file_path: documents/SOP-ST-101-stability-control-procedure.md
+source_hash: sha256:0b7573436df92e00acd48455340503c28ed6c5364fbc040ffc48da81225573de

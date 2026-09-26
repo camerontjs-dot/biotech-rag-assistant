@@ -1,0 +1,10 @@
+doc_id: TRN-SQ-301
+doc_title: "Supplier Qualification and Incoming Materials training and qualification note"
+doc_type: TrainingNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QC
+source_file_path: documents/TRN-SQ-301-supplier-qualification-and-incoming-materials-tr.md
+source_hash: sha256:48f335269b271bfe8c0704cefa637f3bde44acffaa4c3acb818a5be50ef2e7cd

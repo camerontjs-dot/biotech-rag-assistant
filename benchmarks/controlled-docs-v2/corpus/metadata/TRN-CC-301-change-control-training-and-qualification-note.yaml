@@ -1,0 +1,10 @@
+doc_id: TRN-CC-301
+doc_title: "Change Control training and qualification note"
+doc_type: TrainingNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/TRN-CC-301-change-control-training-and-qualification-note.md
+source_hash: sha256:f044fe92d9f988a955fabc1e7b5f880f451318cc3c3811f7f69ec434dae3a2da

@@ -1,0 +1,10 @@
+doc_id: CAL-DC-201
+doc_title: "Document Control supporting record"
+doc_type: CalibrationNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/CAL-DC-201-document-control-supporting-record.md
+source_hash: sha256:bd05b961fa8b8ec337b9310b610043b1c51622ab460b5c7689193d4a062ad3d8

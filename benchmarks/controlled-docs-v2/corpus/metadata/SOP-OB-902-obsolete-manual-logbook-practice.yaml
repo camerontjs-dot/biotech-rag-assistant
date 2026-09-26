@@ -1,0 +1,10 @@
+doc_id: SOP-OB-902
+doc_title: "Obsolete manual logbook practice"
+doc_type: SOP
+version: "0.8"
+status: Obsolete
+effective_date: "2024-01-01"
+review_due_date: "2024-12-31"
+department: QA
+source_file_path: documents/SOP-OB-902-obsolete-manual-logbook-practice.md
+source_hash: sha256:4c5891f7143829b58ff7feead6920b00c3baaa9276f76aad435d9ecbb21cf0f0

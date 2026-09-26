@@ -1,0 +1,10 @@
+doc_id: SPEC-OB-903
+doc_title: "Obsolete rinse limit memo"
+doc_type: Specification
+version: "0.8"
+status: Obsolete
+effective_date: "2024-01-01"
+review_due_date: "2024-12-31"
+department: Engineering
+source_file_path: documents/SPEC-OB-903-obsolete-rinse-limit-memo.md
+source_hash: sha256:b954381dd40ec54afe822239e019ff2ecc135fee0fa407c91cd335f1a8f70881

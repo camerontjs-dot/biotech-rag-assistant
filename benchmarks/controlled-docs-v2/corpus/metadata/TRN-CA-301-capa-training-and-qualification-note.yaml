@@ -1,0 +1,10 @@
+doc_id: TRN-CA-301
+doc_title: "CAPA training and qualification note"
+doc_type: TrainingNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/TRN-CA-301-capa-training-and-qualification-note.md
+source_hash: sha256:c1b69a06a41ce707be53e52c5fea394bde784e72f961261ea210c924ef9c9d76

@@ -1,0 +1,10 @@
+doc_id: SOP-CC-101
+doc_title: "Change Control control procedure"
+doc_type: SOP
+version: "2.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/SOP-CC-101-change-control-control-procedure.md
+source_hash: sha256:a43d4c1c43797035ff60ad8fda35aa77adc4035d31080fd795c5c7fc923cedb0

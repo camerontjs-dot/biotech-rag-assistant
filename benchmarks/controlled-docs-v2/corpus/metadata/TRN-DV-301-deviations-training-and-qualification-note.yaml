@@ -1,0 +1,10 @@
+doc_id: TRN-DV-301
+doc_title: "Deviations training and qualification note"
+doc_type: TrainingNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/TRN-DV-301-deviations-training-and-qualification-note.md
+source_hash: sha256:cdf99d0f6599e93f6754b70b548f4bc88ddc13abb215f47a01ac5ffe69ceed9f

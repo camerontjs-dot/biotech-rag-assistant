@@ -1,0 +1,1352 @@
+{
+  "C-DEV-0001": {
+    "case_id": "C-DEV-0001",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0002": {
+    "case_id": "C-DEV-0002",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "deviations",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0003": {
+    "case_id": "C-DEV-0003",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0004": {
+    "case_id": "C-DEV-0004",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "deviations",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0005": {
+    "case_id": "C-DEV-0005",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0006": {
+    "case_id": "C-DEV-0006",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "water-systems",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0007": {
+    "case_id": "C-DEV-0007",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-DEV-0008": {
+    "case_id": "C-DEV-0008",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0009": {
+    "case_id": "C-DEV-0009",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "water-systems",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0010": {
+    "case_id": "C-DEV-0010",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0011": {
+    "case_id": "C-DEV-0011",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "water-systems",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0012": {
+    "case_id": "C-DEV-0012",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0013": {
+    "case_id": "C-DEV-0013",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "deviations",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0014": {
+    "case_id": "C-DEV-0014",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-DEV-0015": {
+    "case_id": "C-DEV-0015",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0016": {
+    "case_id": "C-DEV-0016",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "deviations",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0017": {
+    "case_id": "C-DEV-0017",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0018": {
+    "case_id": "C-DEV-0018",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "deviations",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0019": {
+    "case_id": "C-DEV-0019",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0020": {
+    "case_id": "C-DEV-0020",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "water-systems",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0021": {
+    "case_id": "C-DEV-0021",
+    "family": "B07",
+    "family_name": "negation / polarity",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0022": {
+    "case_id": "C-DEV-0022",
+    "family": "B07",
+    "family_name": "negation / polarity",
+    "process_area": "water-systems",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0023": {
+    "case_id": "C-DEV-0023",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "water-systems",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0024": {
+    "case_id": "C-DEV-0024",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0025": {
+    "case_id": "C-DEV-0025",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "deviations",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0026": {
+    "case_id": "C-DEV-0026",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0027": {
+    "case_id": "C-DEV-0027",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "deviations",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0028": {
+    "case_id": "C-DEV-0028",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0029": {
+    "case_id": "C-DEV-0029",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "deviations",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0030": {
+    "case_id": "C-DEV-0030",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0031": {
+    "case_id": "C-DEV-0031",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "water-systems",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0032": {
+    "case_id": "C-DEV-0032",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0033": {
+    "case_id": "C-DEV-0033",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "water-systems",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0034": {
+    "case_id": "C-DEV-0034",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-DEV-0035": {
+    "case_id": "C-DEV-0035",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "water-systems",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0036": {
+    "case_id": "C-DEV-0036",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0037": {
+    "case_id": "C-DEV-0037",
+    "family": "B13",
+    "family_name": "authority conflict",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0038": {
+    "case_id": "C-DEV-0038",
+    "family": "B13",
+    "family_name": "authority conflict",
+    "process_area": "deviations",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-DEV-0039": {
+    "case_id": "C-DEV-0039",
+    "family": "B14",
+    "family_name": "long-document burial",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-DEV-0040": {
+    "case_id": "C-DEV-0040",
+    "family": "B14",
+    "family_name": "long-document burial",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0121": {
+    "case_id": "C-PROSPECTIVE-0121",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "stability",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0122": {
+    "case_id": "C-PROSPECTIVE-0122",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0123": {
+    "case_id": "C-PROSPECTIVE-0123",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0124": {
+    "case_id": "C-PROSPECTIVE-0124",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "complaints-returns",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0125": {
+    "case_id": "C-PROSPECTIVE-0125",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "stability",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-PROSPECTIVE-0126": {
+    "case_id": "C-PROSPECTIVE-0126",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-PROSPECTIVE-0127": {
+    "case_id": "C-PROSPECTIVE-0127",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "complaints-returns",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0128": {
+    "case_id": "C-PROSPECTIVE-0128",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "stability",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0129": {
+    "case_id": "C-PROSPECTIVE-0129",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "stability",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0130": {
+    "case_id": "C-PROSPECTIVE-0130",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0131": {
+    "case_id": "C-PROSPECTIVE-0131",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "complaints-returns",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-PROSPECTIVE-0132": {
+    "case_id": "C-PROSPECTIVE-0132",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "stability",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-PROSPECTIVE-0133": {
+    "case_id": "C-PROSPECTIVE-0133",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0134": {
+    "case_id": "C-PROSPECTIVE-0134",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "complaints-returns",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0135": {
+    "case_id": "C-PROSPECTIVE-0135",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "complaints-returns",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0136": {
+    "case_id": "C-PROSPECTIVE-0136",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "stability",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0137": {
+    "case_id": "C-PROSPECTIVE-0137",
+    "family": "B07",
+    "family_name": "negation / polarity",
+    "process_area": "stability",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0138": {
+    "case_id": "C-PROSPECTIVE-0138",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0139": {
+    "case_id": "C-PROSPECTIVE-0139",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "complaints-returns",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0140": {
+    "case_id": "C-PROSPECTIVE-0140",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "complaints-returns",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0141": {
+    "case_id": "C-PROSPECTIVE-0141",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "stability",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0142": {
+    "case_id": "C-PROSPECTIVE-0142",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "stability",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0143": {
+    "case_id": "C-PROSPECTIVE-0143",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0144": {
+    "case_id": "C-PROSPECTIVE-0144",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "complaints-returns",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-PROSPECTIVE-0145": {
+    "case_id": "C-PROSPECTIVE-0145",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "temp-storage-shipping",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0146": {
+    "case_id": "C-PROSPECTIVE-0146",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "complaints-returns",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0147": {
+    "case_id": "C-PROSPECTIVE-0147",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "complaints-returns",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0148": {
+    "case_id": "C-PROSPECTIVE-0148",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "stability",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-PROSPECTIVE-0149": {
+    "case_id": "C-PROSPECTIVE-0149",
+    "family": "B13",
+    "family_name": "authority conflict",
+    "process_area": "stability",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-PROSPECTIVE-0150": {
+    "case_id": "C-PROSPECTIVE-0150",
+    "family": "B14",
+    "family_name": "long-document burial",
+    "process_area": "stability",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0041": {
+    "case_id": "C-TEST-0041",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "capa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0042": {
+    "case_id": "C-TEST-0042",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "change-control",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0043": {
+    "case_id": "C-TEST-0043",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "document-control",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0044": {
+    "case_id": "C-TEST-0044",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "training-gowning",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0045": {
+    "case_id": "C-TEST-0045",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0046": {
+    "case_id": "C-TEST-0046",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0047": {
+    "case_id": "C-TEST-0047",
+    "family": "B01",
+    "family_name": "lexical direct",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0048": {
+    "case_id": "C-TEST-0048",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "change-control",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0049": {
+    "case_id": "C-TEST-0049",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "document-control",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0050": {
+    "case_id": "C-TEST-0050",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "training-gowning",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0051": {
+    "case_id": "C-TEST-0051",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0052": {
+    "case_id": "C-TEST-0052",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0053": {
+    "case_id": "C-TEST-0053",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0054": {
+    "case_id": "C-TEST-0054",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "capa",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0055": {
+    "case_id": "C-TEST-0055",
+    "family": "B02",
+    "family_name": "paraphrase, low overlap",
+    "process_area": "change-control",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0056": {
+    "case_id": "C-TEST-0056",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "document-control",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0057": {
+    "case_id": "C-TEST-0057",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "training-gowning",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0058": {
+    "case_id": "C-TEST-0058",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0059": {
+    "case_id": "C-TEST-0059",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0060": {
+    "case_id": "C-TEST-0060",
+    "family": "B03",
+    "family_name": "identifier lookup",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0061": {
+    "case_id": "C-TEST-0061",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "training-gowning",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0062": {
+    "case_id": "C-TEST-0062",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0063": {
+    "case_id": "C-TEST-0063",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0064": {
+    "case_id": "C-TEST-0064",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0065": {
+    "case_id": "C-TEST-0065",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "capa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0066": {
+    "case_id": "C-TEST-0066",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "change-control",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0067": {
+    "case_id": "C-TEST-0067",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "document-control",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0068": {
+    "case_id": "C-TEST-0068",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0069": {
+    "case_id": "C-TEST-0069",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0070": {
+    "case_id": "C-TEST-0070",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0071": {
+    "case_id": "C-TEST-0071",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "capa",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0072": {
+    "case_id": "C-TEST-0072",
+    "family": "B05",
+    "family_name": "table cell",
+    "process_area": "change-control",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0073": {
+    "case_id": "C-TEST-0073",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0074": {
+    "case_id": "C-TEST-0074",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0075": {
+    "case_id": "C-TEST-0075",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "capa",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0076": {
+    "case_id": "C-TEST-0076",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "change-control",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0077": {
+    "case_id": "C-TEST-0077",
+    "family": "B06",
+    "family_name": "condition / exception",
+    "process_area": "document-control",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0078": {
+    "case_id": "C-TEST-0078",
+    "family": "B07",
+    "family_name": "negation / polarity",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0079": {
+    "case_id": "C-TEST-0079",
+    "family": "B07",
+    "family_name": "negation / polarity",
+    "process_area": "capa",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0080": {
+    "case_id": "C-TEST-0080",
+    "family": "B07",
+    "family_name": "negation / polarity",
+    "process_area": "change-control",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0081": {
+    "case_id": "C-TEST-0081",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "capa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0082": {
+    "case_id": "C-TEST-0082",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "change-control",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0083": {
+    "case_id": "C-TEST-0083",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "document-control",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0084": {
+    "case_id": "C-TEST-0084",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "training-gowning",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0085": {
+    "case_id": "C-TEST-0085",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0086": {
+    "case_id": "C-TEST-0086",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0087": {
+    "case_id": "C-TEST-0087",
+    "family": "B08",
+    "family_name": "multi-passage",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0088": {
+    "case_id": "C-TEST-0088",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "change-control",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0089": {
+    "case_id": "C-TEST-0089",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "document-control",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0090": {
+    "case_id": "C-TEST-0090",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "training-gowning",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0091": {
+    "case_id": "C-TEST-0091",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0092": {
+    "case_id": "C-TEST-0092",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0093": {
+    "case_id": "C-TEST-0093",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0094": {
+    "case_id": "C-TEST-0094",
+    "family": "B09",
+    "family_name": "supersession / stale value",
+    "process_area": "capa",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0095": {
+    "case_id": "C-TEST-0095",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "document-control",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0096": {
+    "case_id": "C-TEST-0096",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "training-gowning",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0097": {
+    "case_id": "C-TEST-0097",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0098": {
+    "case_id": "C-TEST-0098",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0099": {
+    "case_id": "C-TEST-0099",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0100": {
+    "case_id": "C-TEST-0100",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "capa",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0101": {
+    "case_id": "C-TEST-0101",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "change-control",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0102": {
+    "case_id": "C-TEST-0102",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "document-control",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0103": {
+    "case_id": "C-TEST-0103",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "training-gowning",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0104": {
+    "case_id": "C-TEST-0104",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0105": {
+    "case_id": "C-TEST-0105",
+    "family": "B10",
+    "family_name": "fact not stated",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0106": {
+    "case_id": "C-TEST-0106",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "training-gowning",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0107": {
+    "case_id": "C-TEST-0107",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0108": {
+    "case_id": "C-TEST-0108",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0109": {
+    "case_id": "C-TEST-0109",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0110": {
+    "case_id": "C-TEST-0110",
+    "family": "B11",
+    "family_name": "out of scope",
+    "process_area": "capa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0111": {
+    "case_id": "C-TEST-0111",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0112": {
+    "case_id": "C-TEST-0112",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0113": {
+    "case_id": "C-TEST-0113",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0114": {
+    "case_id": "C-TEST-0114",
+    "family": "B12",
+    "family_name": "hard lexical distractor",
+    "process_area": "capa",
+    "tags": [
+      "auditor"
+    ]
+  },
+  "C-TEST-0115": {
+    "case_id": "C-TEST-0115",
+    "family": "B13",
+    "family_name": "authority conflict",
+    "process_area": "batch-record-qa",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0116": {
+    "case_id": "C-TEST-0116",
+    "family": "B13",
+    "family_name": "authority conflict",
+    "process_area": "supplier-incoming",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0117": {
+    "case_id": "C-TEST-0117",
+    "family": "B13",
+    "family_name": "authority conflict",
+    "process_area": "capa",
+    "tags": [
+      "trainer"
+    ]
+  },
+  "C-TEST-0118": {
+    "case_id": "C-TEST-0118",
+    "family": "B14",
+    "family_name": "long-document burial",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "operator"
+    ]
+  },
+  "C-TEST-0119": {
+    "case_id": "C-TEST-0119",
+    "family": "B14",
+    "family_name": "long-document burial",
+    "process_area": "capa",
+    "tags": [
+      "qa_reviewer"
+    ]
+  },
+  "C-TEST-0120": {
+    "case_id": "C-TEST-0120",
+    "family": "B14",
+    "family_name": "long-document burial",
+    "process_area": "cleaning-line-clearance",
+    "tags": [
+      "trainer"
+    ]
+  }
+}

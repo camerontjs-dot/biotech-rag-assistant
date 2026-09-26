@@ -1,0 +1,10 @@
+doc_id: SPEC-DV-201
+doc_title: "Deviations supporting record"
+doc_type: Specification
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/SPEC-DV-201-deviations-supporting-record.md
+source_hash: sha256:db59197fd89effab1d51c0b328a15aaf2282be4626265d2b79d91e0c2874db53

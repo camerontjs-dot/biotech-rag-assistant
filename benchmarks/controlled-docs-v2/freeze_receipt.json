@@ -1,0 +1,9 @@
+{
+  "as_of": "2026-09-26",
+  "benchmark": "controlled-docs-v2",
+  "file_count": 157,
+  "generator": "controlled-docs-v2-generator 0.1.0-local",
+  "prospective_sha256": "b25eb9b6a5b84e03d4a41a9ad8706a70f2f00d78a59cb77a676cea1f17e3f4e5",
+  "seed": 42,
+  "tree_sha256": "f9cf9e4e829a36094f571d297b7d20e865590735d4c8bf0a7fc5bd479a64e1ae"
+}

@@ -1,0 +1,10 @@
+doc_id: SPEC-EM-201
+doc_title: "Environmental Monitoring supporting record"
+doc_type: Specification
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/SPEC-EM-201-environmental-monitoring-supporting-record.md
+source_hash: sha256:9c1bffa1e35cb2a23f8b64bc2ce67984d148369a6e470c6130b42970e7f8d6f3

@@ -1,0 +1,10 @@
+doc_id: TRA-CA-201
+doc_title: "CAPA supporting record"
+doc_type: TrainingNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/TRA-CA-201-capa-supporting-record.md
+source_hash: sha256:f371b67cedcb7cf9cca6fdfe18ac7f07b5e80989b92783aaf496f62811d45633

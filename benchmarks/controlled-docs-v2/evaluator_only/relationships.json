@@ -1,0 +1,133 @@
+{
+  "lags": [
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-CL-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-DV-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-CA-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-CR-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-SQ-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-EM-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-DC-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-EC-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-WS-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-ST-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-TG-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-CC-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-BR-301"
+    },
+    {
+      "note": "states prior values; governing SOP controls",
+      "training": "TRN-TS-301"
+    }
+  ],
+  "references": [],
+  "supersedes": [
+    {
+      "doc_id": "SOP-ST-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-CR-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-TS-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-EM-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-WS-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-TG-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-SQ-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-CC-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-BR-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-CA-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-DC-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-EC-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-DV-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    },
+    {
+      "doc_id": "SOP-CL-101",
+      "new_version": "2.0",
+      "old_version": "1.0"
+    }
+  ]
+}

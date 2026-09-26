@@ -1,0 +1,10 @@
+doc_id: SOP-EM-101
+doc_title: "Environmental Monitoring control procedure"
+doc_type: SOP
+version: "1.0"
+status: Superseded
+effective_date: "2024-06-01"
+review_due_date: "2025-06-01"
+department: QA
+source_file_path: documents/SOP-EM-101-v1-0-superseded.md
+source_hash: sha256:8396ca2b68a204f1fff8d4d0720cac3fce7dfdec454efd72be8b0bc3089995f6

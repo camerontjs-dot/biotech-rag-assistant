@@ -1,0 +1,10 @@
+doc_id: TRN-DC-301
+doc_title: "Document Control training and qualification note"
+doc_type: TrainingNote
+version: "1.0"
+status: Effective
+effective_date: "2025-11-15"
+review_due_date: "2026-11-15"
+department: QA
+source_file_path: documents/TRN-DC-301-document-control-training-and-qualification-note.md
+source_hash: sha256:20ebd81a061952e642cc34a7c1cc745af444b4b3c273573ec03277e520db39ab
