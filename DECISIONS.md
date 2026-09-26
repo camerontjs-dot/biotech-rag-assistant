@@ -190,6 +190,8 @@ Rejected alternatives: hybrid/RRF (no ranking or thresholding benefit here, adde
 
 Consequences: When promoted, semantic retrieval replaces the coverage gate's refusal-bias while every deterministic trust control (status gating ADR-005, citation validation ADR-007/009, audit ADR-010, current-version invariant ADR-013) stays unchanged around it, and the retrieval-method contract gains `semantic` alongside `bm25` (ADR-009 reserved `method` for this). Promotion is gated on: validating the cosine threshold on a larger and ideally real corpus, and keeping stale-document exclusion, refusal, and citation checks green. The experiment harness is reproducible and re-runnable as the corpus grows.
 
+Amendment (2026-09-26): the harness indexed and embedded `chunk.text`. ADR-016 later made that field the body-only cited span, so from then until this amendment a re-run would not have reproduced the recorded BM25 inputs (2 of 22 coverage values move). The harness now uses the same `index_text` string production indexes, which is byte-identical to what the 2026-06-13 run used, and `tests/test_experiment_harness.py` pins its BM25 arm to the recorded ranks, top scores, and coverage values. The semantic arm has not been re-run since 2026-06-13. `plans/public-generative-rag-v2.md` (§1.8) treats these results as directional, not as promotion evidence.
+
 ## ADR-015: Vendor Evidence Bundler and Claim Audit Lab via git submodules
 
 Status: accepted (direction; not yet wired)

@@ -1,0 +1,540 @@
+{
+  "adr014": {
+    "all_recall_at_1": {
+      "bm25": 0.6875,
+      "hybrid": 0.875,
+      "semantic": 1.0
+    },
+    "bm25_arm_checked_by": "tests/test_experiment_harness.py",
+    "hard_mrr": {
+      "bm25": 0.4878,
+      "hybrid": 0.8333,
+      "semantic": 1.0
+    },
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "n_chunks": 18,
+    "production_coverage_gate": {
+      "offtopic_correctly_refused": 6,
+      "offtopic_total": 6,
+      "ontopic_total": 16,
+      "ontopic_wrongly_refused": 9
+    },
+    "semantic_arm_rerun_after_2026_06_13": false,
+    "semantic_clean_threshold": true
+  },
+  "base_commit": "40de3cdcd98973b0e3a1c91d6ac114bc62857c04",
+  "baseline": "v1",
+  "corpus": {
+    "chunk_count": 18,
+    "chunk_manifest_sha256": "sha256:31b91856f285e6468c9b04e9ad51c2ba723626cda4da9e3a4f93fc8647471dc5",
+    "dir": "examples/synthetic-controlled-docs",
+    "documents": [
+      {
+        "doc_id": "CAL-ENG-005",
+        "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+        "status": "Effective",
+        "version": "1.0"
+      },
+      {
+        "doc_id": "NOTE-TS-008",
+        "source_hash": "sha256:f119013d1b32adfc0eb9ddb016d0a02e35754835e4aad48ce50eed72280035cb",
+        "status": "Approved",
+        "version": "1.0"
+      },
+      {
+        "doc_id": "POL-DOC-003",
+        "source_hash": "sha256:acfe9abe53ae560853b206c7230f50667619117592a7c9a9881363c43b86e85f",
+        "status": "Approved",
+        "version": "2.0"
+      },
+      {
+        "doc_id": "SOP-OPS-007",
+        "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+        "status": "Approved",
+        "version": "1.2"
+      },
+      {
+        "doc_id": "SOP-QA-001",
+        "source_hash": "sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923",
+        "status": "Approved",
+        "version": "1.0"
+      },
+      {
+        "doc_id": "SOP-QA-002",
+        "source_hash": "sha256:b2b12d22bfe50aed5c5d9f84c155dbb27984e0b72cfd2086e9c6597686827f7c",
+        "status": "Effective",
+        "version": "1.1"
+      },
+      {
+        "doc_id": "SOP-QA-009",
+        "source_hash": "sha256:cc66a5a500deb8bd9948472d9b335928eaa69d2127bc8fa5418ec268f29a9582",
+        "status": "Obsolete",
+        "version": "0.8"
+      },
+      {
+        "doc_id": "SOP-QA-010",
+        "source_hash": "sha256:76e75176052e59f0dc641b20ee387b1ac98d7ddae6c23c0fa5805e9c8042efcb",
+        "status": "Draft",
+        "version": "0.1"
+      },
+      {
+        "doc_id": "SPEC-QC-006",
+        "source_hash": "sha256:96890f5c832612ab282098b0780ed95641a09eeaf5e605485d917f3317f8d943",
+        "status": "Approved",
+        "version": "3.0"
+      },
+      {
+        "doc_id": "TRN-QA-004",
+        "source_hash": "sha256:1bf23522004cf07f26698e019c98a2ecf8a477e57cbd0d13206b7c86748dacd8",
+        "status": "Approved",
+        "version": "1.0"
+      }
+    ],
+    "documents_excluded": 2,
+    "documents_retrievable": 8,
+    "documents_valid": 10,
+    "manifest_sha256": "sha256:7b427aefdfcd11b8097298fd6c7c6ff006c5e7647ebcde07c8e22696d46f6f24"
+  },
+  "demo": {
+    "chips": [
+      {
+        "cited_chunk_ids": [
+          "SOP-QA-001_v1_0_chunk_001",
+          "SOP-QA-001_v1_0_chunk_002",
+          "SPEC-QC-006_v3_0_chunk_002"
+        ],
+        "label": "env excursion response",
+        "outcome": "answer",
+        "question": "How does QA respond to a viable environmental monitoring excursion?",
+        "reveal_doc_id": null
+      },
+      {
+        "cited_chunk_ids": [
+          "POL-DOC-003_v2_0_chunk_001",
+          "SOP-QA-001_v1_0_chunk_001",
+          "POL-DOC-003_v2_0_chunk_002"
+        ],
+        "label": "current approved version",
+        "outcome": "answer",
+        "question": "How do staff confirm the current approved version of a controlled document?",
+        "reveal_doc_id": null
+      },
+      {
+        "cited_chunk_ids": [
+          "CAL-ENG-005_v1_0_chunk_001",
+          "CAL-ENG-005_v1_0_chunk_002",
+          "TRN-QA-004_v1_0_chunk_002"
+        ],
+        "label": "balance calibration",
+        "outcome": "answer",
+        "question": "What is the daily balance calibration check requirement?",
+        "reveal_doc_id": null
+      },
+      {
+        "cited_chunk_ids": [],
+        "label": "obsolete-doc trap → watch it refuse",
+        "outcome": "refusal",
+        "question": "What is the membrane filtration hold time for sterility?",
+        "reveal_doc_id": "SOP-QA-009"
+      },
+      {
+        "cited_chunk_ids": [],
+        "label": "off-topic → refuse",
+        "outcome": "refusal",
+        "question": "What is the company vacation policy and paid days off?",
+        "reveal_doc_id": null
+      }
+    ],
+    "top_k": 3
+  },
+  "files": {
+    "baselines/v1/near-miss-probes.json": "sha256:31d5e401ba41219abfafa46a8ac1227b829131f741cc2916b652828b3e593be3",
+    "docs/corpus-data.json": "sha256:a2edf7a4c8aee30b22c8859a6b920ccc6b376c0da96e384874d7780bc5b74d22",
+    "docs/demo-offline.html": "sha256:5a3fe05be4c6c0878644bbe375d094a8fa0ce3a539c5af72355f9a6e42d7fee6",
+    "docs/index.html": "sha256:0e20f429334f978582f7bc24177cf21d24065a286b1ecea4c29337a1a2ea1dff",
+    "docs/retrieval.js": "sha256:a9d58af10edfebf863dc75e9249216853a6fcaa6cea20e50a22d73747a7ec4ca",
+    "examples/synthetic-controlled-docs/evaluation/golden-questions.json": "sha256:f8227db45e918a7ef0ef851b002598cc02428975b54e7d0698b8fa93475d329d",
+    "examples/synthetic-controlled-docs/evaluation/natural-language-queries.json": "sha256:305680ed26874353d9b6e3e5999199d9e72016a12065da2acfa9a817e4471275",
+    "experiments/comparison-results.json": "sha256:57ee69f9855f0aa781e2fdf28f26c6604f14b025f38e9fc71168727881c3bda2",
+    "experiments/queries-labeled.json": "sha256:3cc6128ab57a336bcdbd5f7ff3d3dfa4f2923258f514c92a68962a5152b730ef"
+  },
+  "package": {
+    "name": "biotech-rag-assistant",
+    "source_digest": "sha256:9503578742b11644d11d4c7ae4aa09b7eb3d3d2d9810b269a931da1691d80688",
+    "version": "0.1.0"
+  },
+  "recipes": {
+    "canonical_sha256": "sha256 of json.dumps(value, sort_keys=True, separators=(',', ':'), ensure_ascii=False) encoded as UTF-8",
+    "corpus.chunk_manifest_sha256": "canonical_sha256 of [{chunk_id, char_start, char_end, source_hash}] in index order",
+    "corpus.manifest_sha256": "canonical_sha256 of [{doc_id, version, status, source_hash}] sorted by (doc_id, version)",
+    "package.source_digest": "canonical_sha256 of sorted [relative_path, sha256(file bytes)] pairs for every file under src/biotech_rag_assistant, excluding __pycache__ and hidden files"
+  },
+  "retrieval_config": {
+    "record": {
+      "method": "bm25",
+      "min_top_coverage": 0.6,
+      "score_floor": 0.0,
+      "top_k": 5
+    },
+    "sha256": "sha256:f9e784a81b4d0147e7734e975d19bfd6ff6b531c77db7eebb12325c46f74672c"
+  },
+  "schema_version": 1,
+  "suites": {
+    "natural_language": {
+      "cases": [
+        {
+          "case_id": "nl-answer-env-excursion",
+          "hit_chunk_ids": [
+            "SOP-QA-001_v1_0_chunk_001",
+            "SOP-QA-001_v1_0_chunk_002",
+            "SPEC-QC-006_v3_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "nl-answer-current-version",
+          "hit_chunk_ids": [
+            "POL-DOC-003_v2_0_chunk_001",
+            "SOP-QA-001_v1_0_chunk_001",
+            "POL-DOC-003_v2_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "nl-answer-draft-obsolete",
+          "hit_chunk_ids": [
+            "POL-DOC-003_v2_0_chunk_002",
+            "POL-DOC-003_v2_0_chunk_001",
+            "SOP-QA-002_v1_1_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "nl-answer-balance-daily-check",
+          "hit_chunk_ids": [
+            "CAL-ENG-005_v1_0_chunk_001",
+            "CAL-ENG-005_v1_0_chunk_002",
+            "TRN-QA-004_v1_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "nl-answer-line-clearance",
+          "hit_chunk_ids": [
+            "SOP-OPS-007_v1_2_chunk_002",
+            "SOP-OPS-007_v1_2_chunk_001",
+            "SPEC-QC-006_v3_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "nl-answer-gowning",
+          "hit_chunk_ids": [
+            "TRN-QA-004_v1_0_chunk_001",
+            "TRN-QA-004_v1_0_chunk_002",
+            "SPEC-QC-006_v3_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "nl-answer-water-sampling",
+          "hit_chunk_ids": [
+            "SPEC-QC-006_v3_0_chunk_001",
+            "SOP-QA-002_v1_1_chunk_002",
+            "NOTE-TS-008_v1_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "nl-refuse-vacation-policy",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "nl-refuse-email-password",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "nl-refuse-cafeteria",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "nl-refuse-sales-figures",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "nl-refuse-shipping-procedure",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "nl-refuse-weather",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        }
+      ],
+      "file": "examples/synthetic-controlled-docs/evaluation/natural-language-queries.json",
+      "metrics": {
+        "case_pass_rate": "13/13",
+        "citation_expectation_match_rate": "n/a",
+        "citation_resolves_to_retrieved_chunk_rate": "n/a",
+        "generated_answer_citation_validation_rate": "13/13",
+        "generated_answer_outcome_match_rate": "13/13",
+        "refusal_expectation_match_rate": "6/6",
+        "retrieval_expectation_match_rate": "13/13",
+        "stale_document_exclusion_rate": "13/13"
+      },
+      "passed": "13/13",
+      "suite_name": "synthetic-controlled-docs-natural-language",
+      "trust_layer_status": "pass"
+    },
+    "trust": {
+      "cases": [
+        {
+          "case_id": "valid-env-containment",
+          "hit_chunk_ids": [
+            "SOP-QA-001_v1_0_chunk_002",
+            "SOP-QA-001_v1_0_chunk_003",
+            "SOP-QA-001_v1_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "missing-citation-env-containment",
+          "hit_chunk_ids": [
+            "SOP-QA-001_v1_0_chunk_002",
+            "SOP-QA-001_v1_0_chunk_003",
+            "SOP-QA-001_v1_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "hallucinated-citation-env-containment",
+          "hit_chunk_ids": [
+            "SOP-QA-001_v1_0_chunk_002",
+            "SOP-QA-001_v1_0_chunk_003",
+            "SOP-QA-001_v1_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "obsolete-sterility-excluded",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "draft-cleaning-excluded",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "refusal-with-citation-is-caught",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "water-action-limit",
+          "hit_chunk_ids": [
+            "SPEC-QC-006_v3_0_chunk_002",
+            "SOP-QA-001_v1_0_chunk_002",
+            "SPEC-QC-006_v3_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "line-clearance-independent-check",
+          "hit_chunk_ids": [
+            "SOP-OPS-007_v1_2_chunk_002",
+            "SOP-OPS-007_v1_2_chunk_001",
+            "SOP-QA-001_v1_0_chunk_003"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "env-investigation-record",
+          "hit_chunk_ids": [
+            "SOP-QA-001_v1_0_chunk_003",
+            "SOP-QA-001_v1_0_chunk_002",
+            "SOP-QA-002_v1_1_chunk_003"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "deviation-major-escalation",
+          "hit_chunk_ids": [
+            "SOP-QA-002_v1_1_chunk_002",
+            "SOP-QA-002_v1_1_chunk_001",
+            "SOP-QA-001_v1_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "deviation-closure-rule",
+          "hit_chunk_ids": [
+            "SOP-QA-002_v1_1_chunk_003",
+            "SOP-QA-001_v1_0_chunk_002",
+            "SOP-QA-001_v1_0_chunk_003"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "document-current-version-rule",
+          "hit_chunk_ids": [
+            "POL-DOC-003_v2_0_chunk_001",
+            "SOP-QA-001_v1_0_chunk_001",
+            "SOP-OPS-007_v1_2_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "document-draft-obsolete-rule",
+          "hit_chunk_ids": [
+            "POL-DOC-003_v2_0_chunk_002",
+            "NOTE-TS-008_v1_0_chunk_002",
+            "SOP-OPS-007_v1_2_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "gowning-training-scope",
+          "hit_chunk_ids": [
+            "TRN-QA-004_v1_0_chunk_001",
+            "TRN-QA-004_v1_0_chunk_002",
+            "SOP-QA-001_v1_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "gowning-requalification-trigger",
+          "hit_chunk_ids": [
+            "TRN-QA-004_v1_0_chunk_002",
+            "TRN-QA-004_v1_0_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "balance-daily-check",
+          "hit_chunk_ids": [
+            "CAL-ENG-005_v1_0_chunk_001",
+            "SPEC-QC-006_v3_0_chunk_002",
+            "SOP-OPS-007_v1_2_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "balance-calibration-failure",
+          "hit_chunk_ids": [
+            "CAL-ENG-005_v1_0_chunk_002",
+            "SOP-QA-002_v1_1_chunk_002",
+            "SOP-OPS-007_v1_2_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "customer-requirement-intake",
+          "hit_chunk_ids": [
+            "NOTE-TS-008_v1_0_chunk_001",
+            "NOTE-TS-008_v1_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "customer-conflict-review",
+          "hit_chunk_ids": [
+            "NOTE-TS-008_v1_0_chunk_002",
+            "NOTE-TS-008_v1_0_chunk_001",
+            "POL-DOC-003_v2_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "water-sampling-missed-sample",
+          "hit_chunk_ids": [
+            "SPEC-QC-006_v3_0_chunk_001",
+            "SOP-QA-001_v1_0_chunk_003",
+            "NOTE-TS-008_v1_0_chunk_002"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "line-clearance-pre-run",
+          "hit_chunk_ids": [
+            "SOP-OPS-007_v1_2_chunk_001",
+            "SOP-OPS-007_v1_2_chunk_002",
+            "SOP-QA-002_v1_1_chunk_001"
+          ],
+          "outcome": "answer",
+          "passed": true
+        },
+        {
+          "case_id": "unsupported-lyophilizer-purge",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "unsupported-endotoxin-method",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        },
+        {
+          "case_id": "obsolete-and-draft-combined-trap",
+          "hit_chunk_ids": [],
+          "outcome": "refusal",
+          "passed": true
+        }
+      ],
+      "file": "examples/synthetic-controlled-docs/evaluation/golden-questions.json",
+      "metrics": {
+        "case_pass_rate": "24/24",
+        "citation_expectation_match_rate": "6/6",
+        "citation_resolves_to_retrieved_chunk_rate": "3/6",
+        "generated_answer_citation_validation_rate": "24/24",
+        "generated_answer_outcome_match_rate": "24/24",
+        "refusal_expectation_match_rate": "6/6",
+        "retrieval_expectation_match_rate": "24/24",
+        "stale_document_exclusion_rate": "24/24"
+      },
+      "passed": "24/24",
+      "suite_name": "synthetic-controlled-docs-trust-layer",
+      "trust_layer_status": "pass"
+    }
+  }
+}

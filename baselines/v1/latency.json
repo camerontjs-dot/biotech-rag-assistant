@@ -1,0 +1,28 @@
+{
+  "distinct_questions": 44,
+  "index_build_ms": {
+    "max": 0.673,
+    "p50": 0.517,
+    "p95": 0.673,
+    "samples": 10
+  },
+  "machine": {
+    "machine": "x86_64",
+    "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+    "python": "3.11.15"
+  },
+  "note": "In-process, warm, single-threaded timings in milliseconds on the recording machine. No HTTP transport. Machine-dependent: not an identity and never checked.",
+  "repeats_per_question": 30,
+  "retrieve_and_answer_ms": {
+    "max": 0.986,
+    "p50": 0.111,
+    "p95": 0.168,
+    "samples": 1320
+  },
+  "retrieve_ms": {
+    "max": 0.953,
+    "p50": 0.087,
+    "p95": 0.136,
+    "samples": 1320
+  }
+}

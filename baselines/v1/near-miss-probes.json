@@ -1,0 +1,109 @@
+{
+  "description": "Characterization probes for Baseline V1 (plans/public-generative-rag-v2.md section 1.8). Near-miss questions ask for a fact the corpus does not state, on a topic it does cover. current_* fields record today's behavior, which for near-miss probes is a known gap, not the target. desired_disposition records what the v2 answer layer should produce. tests/test_baseline_v1.py asserts the current behavior so that any change to it is deliberate.",
+  "corpus_dir": "examples/synthetic-controlled-docs",
+  "top_k": 3,
+  "coverage_decimals": 4,
+  "probes": [
+    {
+      "probe_id": "balance-acceptance-range",
+      "kind": "near_miss",
+      "question": "What is the acceptance range for the analytical balance daily check?",
+      "current_outcome": "answer",
+      "ungated_rank1_chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+      "ungated_rank1_coverage": 0.8333,
+      "topic_chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+      "fact_pattern": "\\d|±|%",
+      "desired_disposition": "not_stated"
+    },
+    {
+      "probe_id": "gowning-absence-length",
+      "kind": "near_miss",
+      "question": "How long an absence from the suite triggers gowning requalification?",
+      "current_outcome": "answer",
+      "ungated_rank1_chunk_id": "TRN-QA-004_v1_0_chunk_002",
+      "ungated_rank1_coverage": 0.8333,
+      "topic_chunk_id": "TRN-QA-004_v1_0_chunk_002",
+      "fact_pattern": "\\d|\\b(?:days?|weeks?|months?|years?)\\b",
+      "desired_disposition": "not_stated"
+    },
+    {
+      "probe_id": "printed-copy-use-period",
+      "kind": "near_miss",
+      "question": "What is the defined use period for printed copies stamped by document control?",
+      "current_outcome": "answer",
+      "ungated_rank1_chunk_id": "POL-DOC-003_v2_0_chunk_001",
+      "ungated_rank1_coverage": 0.875,
+      "topic_chunk_id": "POL-DOC-003_v2_0_chunk_001",
+      "fact_pattern": "\\d|\\b(?:days?|weeks?|months?|years?)\\b",
+      "desired_disposition": "not_stated"
+    },
+    {
+      "probe_id": "viable-em-action-limit",
+      "kind": "near_miss",
+      "question": "What is the action limit for viable environmental monitoring?",
+      "current_outcome": "answer",
+      "ungated_rank1_chunk_id": "SOP-QA-001_v1_0_chunk_001",
+      "ungated_rank1_coverage": 0.6,
+      "topic_chunk_id": "SOP-QA-001_v1_0_chunk_002",
+      "fact_pattern": "\\d|CFU",
+      "desired_disposition": "not_stated",
+      "note": "Rank 1 is the SOP's purpose statement; the passage that names the action limit ranks 2."
+    },
+    {
+      "probe_id": "deviation-closure-days",
+      "kind": "near_miss",
+      "question": "How many days does QA have to close a deviation?",
+      "current_outcome": "refusal",
+      "ungated_rank1_chunk_id": "SOP-QA-002_v1_1_chunk_003",
+      "ungated_rank1_coverage": 0.4,
+      "topic_chunk_id": "SOP-QA-002_v1_1_chunk_003",
+      "fact_pattern": "\\d|\\b(?:days?|weeks?|business)\\b",
+      "desired_disposition": "not_stated",
+      "note": "Refused by the coverage gate although the closure rule is the right topic passage."
+    },
+    {
+      "probe_id": "purified-water-action-limit-value",
+      "kind": "near_miss",
+      "question": "What is the action limit value for purified water?",
+      "current_outcome": "refusal",
+      "ungated_rank1_chunk_id": "SPEC-QC-006_v3_0_chunk_001",
+      "ungated_rank1_coverage": 0.4,
+      "topic_chunk_id": "SPEC-QC-006_v3_0_chunk_002",
+      "fact_pattern": "\\d|CFU|ppb",
+      "desired_disposition": "not_stated",
+      "note": "Rank 1 is the Sampling section; the Alert response passage that names the action limit ranks 2."
+    },
+    {
+      "probe_id": "control-traceable-weights",
+      "kind": "supported_control",
+      "question": "How many traceable weights are used for the daily balance check?",
+      "current_outcome": "answer",
+      "ungated_rank1_chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+      "ungated_rank1_coverage": 0.7143,
+      "answer_pattern": "\\btwo traceable weights\\b",
+      "desired_disposition": "answer"
+    },
+    {
+      "probe_id": "control-line-clearance-signers",
+      "kind": "supported_control",
+      "question": "Who must sign the line clearance record before the run starts?",
+      "current_outcome": "answer",
+      "ungated_rank1_chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+      "ungated_rank1_coverage": 0.7143,
+      "answer_pattern": "\\bboth operations and QA sign\\b",
+      "desired_disposition": "answer"
+    },
+    {
+      "probe_id": "demo-obsolete-sterility-hold",
+      "kind": "stale_trap",
+      "question": "What is the membrane filtration hold time for sterility?",
+      "current_outcome": "refusal",
+      "ungated_rank1_chunk_id": "TRN-QA-004_v1_0_chunk_002",
+      "ungated_rank1_coverage": 0.0,
+      "excluded_source_doc_id": "SOP-QA-009",
+      "fact_pattern": "\\b96 hours\\b",
+      "desired_disposition": "refusal",
+      "note": "The public demo's obsolete-document trap. BM25 returns an unrelated passage; the coverage gate refuses it. The only source of the fact is Obsolete."
+    }
+  ]
+}

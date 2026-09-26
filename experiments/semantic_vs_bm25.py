@@ -14,6 +14,11 @@ Metrics: recall@1/3/5 and MRR over on-topic queries (split easy vs hard paraphra
 off-topic separation analysis (can a single refusal threshold reject all off-topic queries
 without rejecting on-topic ones?). Writes comparison-report.md and comparison-results.json.
 
+Every method indexes and embeds `index_text(chunk)` (section heading + verbatim span), the same
+string production indexes. The recorded 2026-06-13 run predates ADR-016 and indexed that exact
+string as `text`. After ADR-016 made `text` body-only, this harness indexed the body alone until
+2026-09-26. tests/test_experiment_harness.py pins the BM25 arm to the recorded results.
+
 Run with any interpreter that has sentence-transformers:
     python experiments/semantic_vs_bm25.py
 """
@@ -24,8 +29,6 @@ import json
 import math
 import re
 from pathlib import Path
-
-from sentence_transformers import SentenceTransformer
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -50,6 +53,11 @@ def tokenize(text: str) -> list[str]:
 
 def content_terms(text: str) -> set[str]:
     return {t for t in tokenize(text) if t not in STOPWORDS and len(t) > 1}
+
+
+def index_text(chunk: dict) -> str:
+    """Section heading + verbatim span; mirrors `biotech_rag_assistant.retrieval.index_text`."""
+    return f"{chunk['section_heading']}\n{chunk['text']}"
 
 
 def coverage(query: str, chunk_text: str) -> float:
@@ -134,15 +142,18 @@ def mrr(ranks):
 
 
 def main():
+    # Imported here so the lexical helpers above stay importable without the embedding stack.
+    from sentence_transformers import SentenceTransformer
+
     data = json.loads(CHUNKS_PATH.read_text())
     chunks = data["chunks"]
+    texts = [index_text(c) for c in chunks]
     qset = json.loads(QUERIES_PATH.read_text())["queries"]
     n = len(chunks)
 
-    bm = BM25Okapi([tokenize(c["text"]) for c in chunks])
+    bm = BM25Okapi([tokenize(t) for t in texts])
     model = SentenceTransformer(MODEL_NAME, device="cpu")
-    chunk_emb = model.encode([c["text"] for c in chunks], normalize_embeddings=True,
-                             show_progress_bar=False)
+    chunk_emb = model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
 
     methods = ["bm25", "semantic", "hybrid"]
     per_query = []
@@ -163,7 +174,7 @@ def main():
             rec["ranks"][name] = first_relevant_rank(order, chunks, q["relevant_doc"])
             rec["top"][name] = {"doc": chunks[order[0]]["doc_id"], "score": float(scores[order[0]])}
         # current production refusal signal (BM25 coverage gate on rank-1)
-        rec["bm25_top_coverage"] = coverage(q["query"], chunks[bm_order[0]]["text"])
+        rec["bm25_top_coverage"] = coverage(q["query"], texts[bm_order[0]])
         per_query.append(rec)
 
     def metrics_for(tier_filter):

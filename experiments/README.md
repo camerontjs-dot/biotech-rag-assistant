@@ -38,3 +38,12 @@ python -m venv .venv-exp && .venv-exp/bin/pip install -r experiments/requirement
 
 Regenerate `docs/corpus-data.json` first (via `scripts/build_pages_demo.py`) if the corpus
 changed, so the experiment runs over the current chunks.
+
+### Reproduction note (2026-09-26)
+
+The harness indexes and embeds `index_text` (section heading + verbatim span), the string
+production indexes. Between ADR-016 and this note it indexed the body-only `text` field instead,
+so a re-run would not have reproduced the recorded BM25 inputs. `tests/test_experiment_harness.py`
+now checks the BM25 arm against `comparison-results.json` in CI. The semantic arm needs the
+embedding model and has not been re-run since 2026-06-13; the headline above is directional (see
+ADR-014's amendment and `plans/public-generative-rag-v2.md` §1.8).
