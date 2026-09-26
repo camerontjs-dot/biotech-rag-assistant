@@ -32,7 +32,7 @@ The first draft had the right boundaries and the wrong first step. It froze a 12
 - **Near-miss questions are a first-class case family.** On the production gate, questions whose topic is covered but whose fact is not stated pass the relevance gate and score higher than supported questions (§1.8). "Not stated in approved documents" becomes an explicit answer disposition.
 - **Deterministic claim gates block from the first generated answer.** Quote containment, quantity grounding, identifier grounding, section role, and disposition consistency are blocking checks (§5.5). Semantic support auditing stays advisory until calibrated.
 - **ADR-014 is directional evidence only.** Its harness no longer matches production after ADR-016, its hard set is one paraphrase per document, and it has no identifier or numeric queries. All retrieval arms now run through the package's retriever interface.
-- **Adjacent evidence is reused.** The benchmark adopts Evidence Bundler's challenge-corpus conventions and its RC1 lesson that a weak lexical control can pass a synthetic benchmark. Retrieval work adopts MindGraph's nomination contract, its bounded graph-admission result, and its non-replicated reranking result.
+- **Adjacent evidence is reused.** The benchmark adopts Evidence Bundler's challenge-corpus conventions and its RC1 lesson that a weak lexical control can pass a synthetic benchmark. Retrieval work adopts MindGraph's nomination contract and bounded graph-admission pattern. Reranking is a first-class Slice 3 arm, built on EB's parent-level reranking design and held to MindGraph's replication protocol; neither project's reranking result is carried over, because both came from other corpora.
 - **Two tracks.** The EvidencePacket separates retrieval from generation, so the generation seam is built in parallel on today's BM25 path (shadow, DEV-only) instead of waiting for retrieval promotion.
 - **Recorded-runs public demo.** Generated answers are produced offline, reviewed, and published as static records with their full identities. There is no standing paid endpoint.
 - **CI without a live model.** Scripted adversarial generators prove each gate fires, recorded outputs cover regression, and live evaluation is a manually triggered, budgeted job.
@@ -88,7 +88,7 @@ ADR-014 found semantic-only retrieval ahead of BM25 and RRF hybrid on the curren
 - preserve BM25 as the deterministic control;
 - qualify semantic retrieval on a larger frozen benchmark that includes identifier and numeric queries;
 - include hybrid (RRF and a score-fusion variant) as challenger arms;
-- keep reranking parked unless a measured ordering failure reopens it (MindGraph's reranking gain did not replicate, §1.9);
+- test cross-encoder reranking of a bounded candidate set as a challenger arm; adjacent reranking results come from other corpora and do not transfer (§1.9);
 - promote only the smallest stack that actually improves the biotech benchmark.
 
 Do not replace local evidence with vendor defaults, and do not treat thin local evidence as settled.
@@ -258,14 +258,16 @@ These are the owner's public repositories. Their results describe their own corp
 
 - **Evidence Bundler challenge corpus** ([`eb-challenge-corpus-v1`](https://github.com/camerontjs-dot/evidence-bundler/tree/main/benchmarks/eb-challenge-corpus-v1)): a fully fictional regulated micro-world with 60 sources, 946 passages, and 148 cases across 12 challenge families (lexical, paraphrase, negation, numeric threshold, temporal supersession, condition/exception, hard distractor, duplicate, long-document burial, multi-passage, no-answer, aperture boundary). Gold is span-based (offsets plus `span_text`) with relevance classes (`decisive_support`, `decisive_qualifier`, `decisive_exception`, `decisive_contradiction`, `material_context`, `hard_negative`), joint groups, and named source subsets ("apertures") that withhold decisive evidence. Runtime inputs and evaluator-only gold live in separate directories. The generator is deterministic from a seed and an as-of date, and the frozen package carries a `SHA256SUMS` freeze receipt.
 - **Evidence Bundler evaluator assurance RC1 and RC2** ([RC1 results](https://github.com/camerontjs-dot/evidence-bundler/blob/main/docs/research/results-07-eb-retrieval-evaluator-assurance-rc1.md), [RC2 results](https://github.com/camerontjs-dot/evidence-bundler/blob/main/docs/research/results-13-eb-retrieval-assurance-rc2.md)): in RC1 a deliberately weak token-overlap retriever reached case hit@K 1.000 and decisive recall 0.966, failing only on joint-group coverage; much of the synthetic benchmark was lexically recoverable. RC2 was rebuilt until three lexical controls failed (decisive recall 0.45; zero qualifier/exception and joint-group success) while the oracle scored 1.0. Gaming controls (return-everything, corrupted provenance, false completeness, false answerability) each fail on the surface they target. Critical failures are non-compensable.
-- **MindGraph vNext retrieval** ([plan](https://github.com/camerontjs-dot/MindGraph/blob/main/docs/VNEXT_RETRIEVAL_PLAN.md), [decisions](https://github.com/camerontjs-dot/MindGraph/blob/main/DECISIONS.md)): a MiniLM cross-encoder improved one held-out case, then produced no ordering benefit on a document/family-disjoint replication (`RERANKING_NOT_REPLICATED`). A graph-only miss turned out to be a consumer cutoff and was fixed by bounded, authored-link-gated graph admission, merged as an opt-in typed sidecar with deterministic `ga1:<sha256>` identities over sorted-key JSON and unchanged defaults. The next planned slice is a canonical typed nomination with progressive expansion (`nomination -> excerpt -> section -> graph neighborhood -> source`). Its failure model separates representation, first-stage recall, ranking, stale admission, authority confusion, and context-budget failures.
+- **Evidence Bundler reranking design** ([DECISIONS.md](https://github.com/camerontjs-dot/evidence-bundler/blob/main/DECISIONS.md), ADR-009 and ADR-010): opt-in cross-encoder reranking of a bounded top-N of parent passages (default 30) after hybrid RRF. Lexical, semantic, and fusion scores stay visible, and ties break deterministically because cross-encoder float ordering drifts across hardware and library versions. ADR-010 records the concern that an MS MARCO relevance reranker can score a negating or limiting passage below a topically similar supporting one. EB's recorded measurements with reranking, a small fixture comparison and an FDA-guidance run focused on counter-candidates, did not justify changing its defaults.
+- **MindGraph vNext retrieval** ([plan](https://github.com/camerontjs-dot/MindGraph/blob/main/docs/VNEXT_RETRIEVAL_PLAN.md), [decisions](https://github.com/camerontjs-dot/MindGraph/blob/main/DECISIONS.md)): on MindGraph's own corpus, a MiniLM cross-encoder improved one held-out case, then produced no ordering benefit on a document/family-disjoint replication (`RERANKING_NOT_REPLICATED`). A graph-only miss turned out to be a consumer cutoff and was fixed by bounded, authored-link-gated graph admission, merged as an opt-in typed sidecar with deterministic `ga1:<sha256>` identities over sorted-key JSON and unchanged defaults. The next planned slice is a canonical typed nomination with progressive expansion (`nomination -> excerpt -> section -> graph neighborhood -> source`). Its failure model separates representation, first-stage recall, ranking, stale admission, authority confusion, and context-budget failures.
 - **Claim Audit Lab v0.5.0** ([README](https://github.com/camerontjs-dot/claim-audit-lab/tree/v0.5.0)): retrieve → NLI → frozen deterministic rules. The project describes itself as "mechanisms verified, accuracy not validated": 27/50 exact agreement with human gold, and numeric-bound comparison and two-hop composition are not yet implemented. Verdicts are `supported`, `partially_supported`, `unsupported`, `contradicted`, and `not_checkable` with named abstention reasons.
 
 ### Inference for this project
 
 - Reuse EB's benchmark conventions rather than inventing new ones: span gold, relevance classes, joint groups, apertures, runtime/evaluator separation, freeze receipts, the control set, and non-compensable critical failures.
 - Treat RC1 as a direct warning: a self-authored synthetic benchmark can be large and carefully labelled and still fail to discriminate. The evaluator must show two-sided discrimination before any arm comparison (§6.3).
-- Adopt MindGraph's nomination shape and progressive expansion for both the EvidencePacket and the public evidence view. Use bounded, authored-link-gated admission for cross-references, with the status gate supplying currentness. Keep reranking parked.
+- Adopt MindGraph's nomination shape and progressive expansion for both the EvidencePacket and the public evidence view. Use bounded, authored-link-gated admission for cross-references, with the status gate supplying currentness.
+- Test reranking on this corpus rather than inheriting a verdict. MindGraph's non-replication came from a personal knowledge corpus, and EB's recorded measurements are too small or too differently aimed to settle the question for controlled SOPs. This corpus gives a cross-encoder specific chances to help: hard lexical distractors, table rows that share vocabulary, and near-miss passages that name a concept without answering it. Borrow the protocols: a bounded top-N, first-stage ranks kept visible, a deterministic tie-break, and replication on a disjoint split. Also carry EB's recorded risk that a relevance reranker can rank a negating or limiting passage below a topically similar supporting one.
 - Align semantic-audit labels with CAL's verdicts. Because CAL does not yet check numeric bounds, quantity grounding has to be this project's own deterministic gate.
 
 ---
@@ -376,6 +378,10 @@ Candidate retrieval -> typed RetrievalNominations
 (BM25 control / semantic / hybrid challengers)
     |
     v
+Optional rerank of a bounded top-N
+(challenger arm; first-stage ranks stay visible)
+    |
+    v
 Bounded admission
 (dedup + diversity + budget + optional section expansion
  + optional authored cross-reference admission; retrievable targets only)
@@ -448,7 +454,7 @@ Minimum fields:
 Added from the MindGraph nomination contract (§1.9):
 
 - `nomination_kind` (`chunk`, `section_expansion`, `cross_reference_admission`);
-- `retrieval_reasons`: which signals nominated it, with per-signal rank;
+- `retrieval_reasons`: which signals nominated it, with per-signal rank, including the rerank rank when reranking is enabled, so reranking never erases why an item was first nominated;
 - `representation_level` (`chunk`, `section`, `document`);
 - `section_role` where the representation supplies it (`normative`, `definitions`, `responsibilities`, `references`, `revision_history`);
 - `authority_class` from a documented `doc_type` precedence table (ADR-018);
@@ -620,6 +626,7 @@ Adopt EB's control set and add controls specific to this project:
 - a naive dense-only retriever;
 - a retriever with the status gate removed, which must fail on stale leakage;
 - the existing BM25 + coverage gate;
+- for the reranking arm, the unreranked first-stage order and a seeded random permutation of the same top-N, so any reranking gain is measured against its own candidate window;
 - for Slice 6, a naive generator given top-K without the claim schema.
 
 Slice 2 gate: the oracle scores at ceiling; every gaming control is rejected on its intended surface; and the benchmark shows **two-sided discrimination**. The token-overlap control must fail the B02 and B10 floors, and the dense-only control must fail the B03 and B04 floors. If either shortcut passes, fix the benchmark before comparing arms.
@@ -738,7 +745,7 @@ Labels in this project come from one annotator, the maintainer. Reports say so. 
 
 ## 6.7 Harness and CI
 
-- Every retrieval arm is a `RetrievalConfig.method` value in the package (`bm25`, `semantic`, `hybrid_rrf`, `hybrid_weighted`), and experiments call package code. Semantic dependencies ship as an optional extra, so default CI stays lean. The ADR-014 script is either rebuilt on package code or kept as a historical record marked non-reproducible.
+- Every retrieval arm is a `RetrievalConfig.method` value in the package (`bm25`, `semantic`, `hybrid_rrf`, `hybrid_weighted`), with reranking as a separate optional stage configured by model and top-N. Experiments call package code. Semantic and reranking dependencies ship as optional extras, so default CI stays lean. The ADR-014 script is either rebuilt on package code or kept as a historical record marked non-reproducible.
 - Generation tests use a `ScriptedGenerator` that replays fixture outputs. One scripted generator per failure mode must be caught by its named gate: out-of-packet citer (G2), quote forger (G3), number fabricator (G4), code fabricator (G5), revision-history quoter (G6), refusal-with-claims and not-stated-with-value (G7), schema breaker (G1), and injection follower. This extends the existing trap-suite approach to the generator.
 - Recorded real-model outputs replay through the gates as regression fixtures.
 - Live-model evaluation is a `workflow_dispatch` job with an explicit budget cap and a repository secret. It never runs on pull requests.
@@ -804,13 +811,14 @@ Gate: two-sided discrimination (§6.3), plus metamorphic checks: source-order pe
 1. Representation, with no model change: fold the document title, section path, and table header into the indexed text at index time while the stored text stays the verbatim span (the ADR-016 pattern); record section roles; test parent/section aggregation as EB does.
 2. Arms, all through package code: BM25; semantic (the MiniLM baseline plus one current-generation small embedder chosen before TEST is run, with truncation counts logged, since MiniLM truncates input beyond 256 word pieces); hybrid RRF; hybrid weighted score fusion.
 3. Bounded cross-reference admission, following MindGraph: depth 1, authored references in approved text only, retrievable targets only, exact-duplicate suppression, typed provenance, a budget cap. Measured on B08.
-4. Reranking stays parked. Reopen it only if first-stage decisive recall is high and ordering is a measured failure, and replicate on a process-area-disjoint split before promotion.
+4. Reranking as a challenger arm, following EB ADR-009's structure. A small local cross-encoder reranks a bounded top-N (start at 30) over BM25 alone and over the best first-stage arm. First-stage ranks stay visible in `retrieval_reasons`, and ties break deterministically. Run at least two reranker sizes, for example EB's default MS MARCO MiniLM cross-encoder and its documented larger upgrade path, and log latency and memory. Before TEST is run, write down where reranking should help (B12 hard distractors, B05 table rows, B02 paraphrase ordering at small K) and where it could hurt (B06 and B07 qualifier and negation passages, EB ADR-010's concern). Compare each reranker against the unreranked order and a random permutation of the same window (§6.3).
+5. Answerability hypothesis. MS MARCO-style cross-encoders are trained to rank passages that answer a query above other retrieved passages, so their scores may separate a near-miss passage from an answer-bearing one better than BM25 coverage or cosine similarity. Test this on the `withhold_decisive` matched pairs by comparing the top rerank score with and without the decisive passage. If the scores separate the pairs, they become a candidate advisory signal for the disposition policy, and the claim gates stay authoritative. If they do not, record the negative result.
 
-Primary decision metric: decisive-span recall@K on TEST, compared per case. Non-compensable: stale leak must be zero.
+Primary decision metric: decisive-span recall@K on TEST at the EvidencePacket budget, meaning the K that actually reaches the generator, compared per case. Reranking changes what falls inside that budget. Non-compensable: stale leak must be zero.
 
-Refusal: measure retrieval-level refusal only on B11 out-of-scope cases. B10 belongs to the answer layer, and no retrieval threshold is tuned to refuse it.
+Refusal: measure retrieval-level refusal only on B11 out-of-scope cases. B10 belongs to the answer layer, and no retrieval threshold is tuned to refuse it. The answerability test in item 5 is measured as an advisory signal only.
 
-Gate: promote an arm only if it beats the control on the primary metric by the predeclared minimum effect, holds the B01, B03, and B04 floors, and keeps stale leakage at zero. Record the result in ADR-020.
+Gate: promote an arm only if it beats the control on the primary metric by the predeclared minimum effect, holds the B01, B03, and B04 floors, and keeps stale leakage at zero. A reranking arm must also hold qualifier and exception recall on B06 and B07, and repeat its gain on PROSPECTIVE, because a single-split reranking gain is exactly what failed to replicate in MindGraph. Record the result in ADR-020.
 
 ## Slice 4 — typed nominations + EvidencePacket v1 (Track G; can start after Slice 0)
 
@@ -931,7 +939,6 @@ Gate: the public page cannot expose credentials, filesystem paths, or non-synthe
 ## Slice 9 — conditional experiments, only on a named trigger
 
 - **Agentic / query decomposition.** Trigger: a persistent class of B08-style questions whose required evidence the simpler pipeline cannot recover. Compare the original query, deterministic decomposition if feasible, LLM query decomposition, and multi-query retrieval + merge; evaluate retrieval gain, cost, latency, duplicated evidence, and new failure modes.
-- **Reranking.** Trigger: an ordering failure with adequate first-stage recall, replicated on a disjoint split.
 - **Live generation endpoint.** Trigger: an explicit budget and abuse-control decision covering rate limits, an origin allowlist, input caps, a per-request budget, and a server-side key.
 - **Multi-turn follow-ups.** Trigger: a decision on how query rewriting, a model step before retrieval, is logged and evaluated.
 
@@ -1059,7 +1066,7 @@ Numbers are provisional if the repository gains ADRs first. These are asset ADRs
 Explicitly deferred unless a measured failure activates them:
 
 - custom biotech embedding fine-tuning;
-- custom reranker training, or integrating a general reranker (MindGraph's gain did not replicate);
+- custom reranker training or fine-tuning (general pretrained rerankers are tested in Slice 3);
 - GraphRAG / knowledge graph as the primary retriever;
 - autonomous quality agents;
 - workflow writes;
