@@ -58,9 +58,11 @@ Each case has one gold row per relevant passage, classed as `decisive_support`, 
 
 ## How it was made
 
-A language model drafted the text: Anthropic `claude-sonnet-5`, in an interactive coding session with no separate API calls. The work went in passes. Fourteen per-area briefs came first. Each document was then written in its own step from its brief. Questions were written from the briefs, personas and titles without the passage text. Gold was adjudicated against the final document bytes. The PROSPECTIVE set was written last, in a separate pass, and sealed.
+A language model drafted the text: Anthropic `claude-sonnet-5`, in an interactive coding session with no separate API calls. The work went in passes. Fourteen per-area briefs came first. The 44 current documents and the 4 obsolete ones were each written in their own step from their brief. Questions were drafted from the briefs, personas and titles, and gold was adjudicated against the documents afterwards. The PROSPECTIVE set was written last, in a separate pass, and sealed.
 
-Deterministic code produced identifiers, sidecars, file names, offsets, hashes, relationships, receipts and checks, and applied the authored edit lists for revisions. It did not generate prose. The prompts and briefs stay outside the repository. `corpus_manifest.json` records the provider, the model ID, a configuration hash, and the SHA-256 of each of the 9 prompt templates. This repository cannot regenerate the tree, and the frozen bytes are the corpus.
+The questions were not kept blind to the documents. After the first drafts, some were reworded to meet the overlap bands and to name something distinctive, and about a third were rewritten as keyword or identifier-led queries, with the documents in view. Ten paragraphs gained a sentence after the gold was adjudicated, each stating a quantity other than the one a question asks for. Their gold rows were re-anchored, and the cases were not adjudicated again. The sealed questions had the same adjustments.
+
+Deterministic code produced identifiers, sidecars, file names, offsets, hashes, relationships, receipts and checks, and applied the authored edit lists for revisions. It did not generate prose. The briefs and prompt templates stay outside the repository. There were no separate model calls, so there are no verbatim prompts: the 9 templates are the written instructions for each kind of step, recorded after most documents were drafted, and `corpus_manifest.json` holds the SHA-256 of each along with the provider, the model ID and a configuration hash. This repository cannot regenerate the tree, and the frozen bytes are the corpus.
 
 ## Verifying the tree
 
@@ -92,7 +94,7 @@ Appendix A of the corpus v2 plan, `plans/public-generative-rag-v2.md`, is the sp
 
 ## What this does not establish
 
-- Performance on real controlled documents. The documents, questions and gold came from one authoring process, so vocabulary in the questions likely lines up with the documents more closely than it would in field data.
-- That the gold is right beyond one adjudication. It was adjudicated once, against the final bytes, and checked mechanically. No second coder reviewed it.
-- That the benchmark separates good systems from poor ones. The acceptance script rules out specific shortcuts. Separating systems needs baselines run against this tree, and that has not been done.
+- Performance on real controlled documents. The documents, questions and gold came from one authoring process, and the questions were adjusted with the documents in view, so their vocabulary likely lines up with the documents more closely than it would in field data.
+- That the gold is right beyond one adjudication. It was adjudicated once and checked mechanically, and no second coder reviewed it. The ten late sentences were checked against the questions in their areas, not adjudicated case by case.
+- That the benchmark separates good systems from poor ones. The acceptance script rules out specific shortcuts, and the tree was corrected against its output, so a pass shows those shortcuts are closed and nothing more. Separating systems needs baselines run against this tree, and that has not been done.
 - Held-out documents. PROSPECTIVE holds out questions and process areas, and its documents are in the same runtime corpus as DEV and TEST.

@@ -598,9 +598,9 @@
   "offset_unit": "python_char",
   "provenance": {
     "interface": "Claude Code interactive session; no separate API calls",
-    "method": "Model-drafted text with deterministic assembly. Each document was drafted in its own writing step from a per-area brief; superseded predecessors and drafts were made by copy-and-edit of the successor with an explicit, scripted edit list; questions, gold and PROSPECTIVE were written in separate passes. Deterministic code produced only identifiers, checks, sidecars, file names, hashes, offsets, relationships, receipts and validation.",
+    "method": "Model-drafted text with deterministic assembly. Each current and obsolete document was drafted in its own writing step from a per-area brief. Superseded predecessors and drafts were made by copy-and-edit of the current version with an authored edit list. Questions were drafted from the briefs, personas and titles, then adjusted with the documents in view: some were reworded to meet the overlap bands and to name something distinctive, and about a third were rewritten as keyword or identifier-led queries. Gold was adjudicated once, with offsets computed from the final bytes; ten paragraphs gained one sentence afterwards, and their gold rows were re-anchored but not adjudicated again. PROSPECTIVE was written last, in a separate pass, and sealed. The tree was corrected against the acceptance script's output. Deterministic code produced identifiers, checks, sidecars, file names, hashes, offsets, relationships, receipts and validation.",
     "model_id": "claude-sonnet-5",
-    "prompt_template_note": "Each template hash is the SHA-256 of the instruction text applied at that kind of writing step. The prompts stay local.",
+    "prompt_template_note": "There were no separate model calls, so there are no verbatim prompts to hash. Each template is the written instruction for one kind of writing step, recorded after most documents were drafted; it describes the rules that step followed and is not a verbatim model input. The hash is the SHA-256 of the template file. The templates stay local.",
     "prompt_templates": [
       {
         "name": "01-area-brief",

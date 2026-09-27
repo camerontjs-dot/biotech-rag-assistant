@@ -7,5 +7,5 @@
   "prospective_sha256": "ab33beee9866e54a16060c595267c95dd7e0db1c48dc2c51ca3857a2d9100d07",
   "seed": 42,
   "tree_hash_recipe": "sha256 over the text of `sha256sum` output for every file under the benchmark root except SHA256SUMS and freeze_receipt.json, one '<hex>  <path>' line per file with paths relative to the root (no leading ./), sorted as `LC_ALL=C sort` sorts them (byte order), each line ending in LF. Equivalent, run from the benchmark root: find . -type f ! -name SHA256SUMS ! -name freeze_receipt.json | sed 's|^./||' | LC_ALL=C sort | xargs sha256sum | sha256sum",
-  "tree_sha256": "69863b327b5130105ba7d7a6497b3d1c6f143a2e7b441773fcf7f95a0b2f8ab7"
+  "tree_sha256": "bbf8410cf9da9c82bc04b31a731241b197d9827b58f31842de5496a12b364670"
 }
