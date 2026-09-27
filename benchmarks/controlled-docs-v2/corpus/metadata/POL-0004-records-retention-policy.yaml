@@ -1,0 +1,10 @@
+doc_id: POL-0004
+doc_title: "Records Retention Policy"
+doc_type: Policy
+version: "2.0"
+status: Effective
+effective_date: "2026-06-01"
+review_due_date: "2029-06-01"
+department: "Quality Assurance"
+source_file_path: documents/POL-0004-records-retention-policy.md
+source_hash: sha256:c17f8729209c32f6eab8e37b4cabfe6e568c0308a5fa94406c0142ae0b310e2b

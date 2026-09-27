@@ -1,0 +1,10 @@
+doc_id: SPC-2252
+doc_title: "Water Quality Specification: PW and WFI"
+doc_type: Specification
+version: "1.0"
+status: Superseded
+effective_date: "2023-08-07"
+review_due_date: "2026-08-07"
+department: "Quality Control Chemistry"
+source_file_path: documents/SPC-2252-v1-0-superseded-water-quality-specification-pw-and-wfi.md
+source_hash: sha256:f0ae30f509b5160240e3d37f73a6463fc6b2dc6ee8cdb48e2cf4bb32c4924cf4

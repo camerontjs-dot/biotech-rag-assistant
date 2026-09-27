@@ -1,902 +1,722 @@
 {
   "C-DEV-0001": {
-    "coverage": 0.714,
-    "decisive_span_text": "action limit of 11 CFU per unit",
-    "family": "B01",
-    "question": "What is the action limit in CFU per unit for environmental monitoring?"
+    "coverage": 0.625,
+    "decisive_span_text": "When the as-found reading is outside tolerance, an impact assessment is opened on FRM-EN-205 within 1 working day of the finding, and it is completed within 10 working days.",
+    "family": "B03",
+    "question": "Which form (FRM-EN-...) records an out-of-tolerance impact assessment?"
   },
   "C-DEV-0002": {
-    "coverage": 1.0,
-    "decisive_span_text": "action limit of 27 CFU per unit",
-    "family": "B01",
-    "question": "What is the action limmit in CFU per unit?"
+    "coverage": 0.7,
+    "decisive_span_text": "Where 3 CAPAs share the same root cause within 12 months, the QA Head reviews the trend and decides whether the cause has been treated at the right level.",
+    "family": "B06",
+    "question": "When does the QA Head step in to review the trend of CAPAs that share one root cause?"
   },
   "C-DEV-0003": {
-    "coverage": 0.625,
-    "decisive_span_text": "action limit of 125 CFU per unit",
-    "family": "B01",
-    "question": "EQ-equipment-182 action limit CFU per unit"
+    "coverage": 0.167,
+    "decisive_span_text": "The 100 g reading must be within plus or minus 0.3 mg of the certified value, and the 1 g reading within plus or minus 0.05 mg.",
+    "family": "B04",
+    "question": "100 g check weight daily balance check tolerence"
   },
   "C-DEV-0004": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 27 CFU per unit",
-    "family": "B02",
-    "question": "FRM-deviations-335 deviations cutoff?"
+    "coverage": 0.667,
+    "decisive_span_text": "Receipt is confirmed to the sender on FRM-WH-410 within 1 working day.",
+    "family": "B09",
+    "question": "FRM-WH-410 receipt confirmation deadline"
   },
   "C-DEV-0005": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 125 CFU per unit",
-    "family": "B02",
-    "question": "FRM-equipment-376 equipment-calibration cutoff?"
+    "coverage": 0.5,
+    "decisive_span_text": "The interval at which the counter itself is recalibrated comes from the counter qualification report QRP-0417.",
+    "family": "B10",
+    "question": "EQ-0417 particle counter recalibration interval"
   },
   "C-DEV-0006": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 147 CFU per unit",
-    "family": "B02",
-    "question": "How much contamination triggers a deviation in water systems?"
+    "coverage": 0.7,
+    "decisive_span_text": "Three consecutive alert-level results at one location within 14 days start a trend investigation, even when no single result reached the action level.",
+    "family": "B09",
+    "question": "What is the current trend rule that starts an investigation from alert-level results at one location?"
   },
   "C-DEV-0007": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 11 CFU per unit",
-    "family": "B02",
-    "question": "environmental-monitoring hold contamination cutoff"
+    "coverage": 0.857,
+    "decisive_span_text": "Shipments leave the dock no later than 14:00 on Monday to Thursday.",
+    "family": "B01",
+    "question": "Shipments must leave the dock no later than what time on Monday to Thursday?"
   },
   "C-DEV-0008": {
-    "coverage": 0.333,
-    "decisive_span_text": "action limit of 125 CFU per unit",
-    "family": "B03",
-    "question": "What is the action limit for equipment EQ-equipment-182 in R-equipment-216?"
+    "coverage": 0.4,
+    "decisive_span_text": "| Conductivity meters | 6 months |",
+    "family": "B05",
+    "question": "calibration interval table conductivity meters"
   },
   "C-DEV-0009": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 147 CFU per unit",
-    "family": "B03",
-    "question": "What is the action limit for equipment EQ-water-114 in R-water-218?"
+    "coverage": 0.2,
+    "decisive_span_text": "The target is 92 percent.\nThe window must be at least 3 consecutive batches or 60 days, whichever is longer.",
+    "family": "B08",
+    "question": "What is the on-time closure target for CAPAs, and how long must the observation window of an effectiveness check run?"
   },
   "C-DEV-0010": {
-    "coverage": 0.2,
-    "decisive_span_text": "action limit of 11 CFU per unit",
+    "coverage": 0.833,
+    "decisive_span_text": "Two probes serve the room: EQ-0910 controls the refrigeration and EQ-0911 is an independent monitoring probe wired to the alarm panel, so that a fault in the controller cannot hide a temperature rise.",
     "family": "B03",
-    "question": "EQ-environmental-155 R-environmental-216 limit"
+    "question": "CR-1 independent monitoring probe alarm panel"
   },
   "C-DEV-0011": {
-    "coverage": 0.667,
-    "decisive_span_text": "at most 48 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for water systems?"
+    "coverage": 0.3,
+    "decisive_span_text": "| C | 45 CFU per m3 | 80 CFU per m3 |",
+    "family": "B05",
+    "question": "viable air limits table Grade C alert level CFU per m3"
   },
   "C-DEV-0012": {
-    "coverage": 0.6,
-    "decisive_span_text": "at most 7 hours (clean hold time)",
-    "family": "B04",
-    "question": "environmental-monitoring clean hold hours"
+    "coverage": 0.667,
+    "decisive_span_text": "RM-301 holds no more than 5 people during filling, and RM-304 no more than 3.",
+    "family": "B14",
+    "question": "RM-301 people allowed while filling"
   },
   "C-DEV-0013": {
-    "coverage": 0.8,
-    "decisive_span_text": "at most 12 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for deviations?"
+    "coverage": 0.2,
+    "decisive_span_text": "A plate that has been read must not be returned to the incubator for further growth.",
+    "family": "B07",
+    "question": "After the final read, is it acceptable to put a plate back for another day of incubation?"
   },
   "C-DEV-0014": {
-    "coverage": 0.667,
-    "decisive_span_text": "at most 44 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for equipment calibration?"
+    "coverage": 0.154,
+    "decisive_span_text": "A second person reviews the completed record within 2 working days of the final plate read, checking location codes, exposure times, plate lots, the incubator used and the arithmetic of any conversions.",
+    "family": "B02",
+    "question": "For the EQ-0412 rounds, how long after the last plate is counted can the record wait before a colleague has to check it?"
   },
   "C-DEV-0015": {
-    "coverage": 0.375,
-    "decisive_span_text": "| Viable action limit | 11 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for environmental monitoring?"
+    "coverage": 1.0,
+    "decisive_span_text": "Class 3 instruments are not entered into the calibration schedule.",
+    "family": "B07",
+    "question": "Do Class 3 instruments have to be entered in the calibration schedule?"
   },
   "C-DEV-0016": {
-    "coverage": 0.429,
-    "decisive_span_text": "| Viable action limit | 27 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limmit listed in the acceptance table for deviations?"
+    "coverage": 0.333,
+    "decisive_span_text": "If the excursion lasts more than 30 minutes, move the stock in CR-1 to CR-2 within 2 hours, with the transfer logged on FRM-WH-405.",
+    "family": "B06",
+    "question": "When does stock have to be moved out of CR-1 into CR-2 after an alarm?"
   },
   "C-DEV-0017": {
-    "coverage": 0.375,
-    "decisive_span_text": "| Viable action limit | 125 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for equipment calibration?"
+    "coverage": 0.6,
+    "decisive_span_text": "Frozen packs MAT-3405 are held at minus 20 degrees C for at least 24 hours.\nFZ-1 operates between minus 25 and minus 15 degrees C with a setpoint of minus 20 degrees C.",
+    "family": "B08",
+    "question": "How long must MAT-3405 frozen packs be conditioned, and what setpoint does freezer FZ-1 run at?"
   },
   "C-DEV-0018": {
-    "coverage": 0.4,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may deviations product remain available without a deviation?"
+    "coverage": 0.2,
+    "decisive_span_text": "| B | 1 CFU per plate | 3 CFU per plate |",
+    "family": "B12",
+    "question": "Grade B settle plate alert level"
   },
   "C-DEV-0019": {
-    "coverage": 0.333,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may equipment calibration product remain available without a deviation?"
+    "coverage": 0.636,
+    "decisive_span_text": "| Check-weight set, external recertification | 24 months |\nDaily balance checks are logged on FRM-QC-141.",
+    "family": "B08",
+    "question": "How often is the check-weight set recertified externally, and on which form are the daily balance checks logged?"
   },
   "C-DEV-0020": {
-    "coverage": 0.333,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
+    "coverage": 0.308,
+    "decisive_span_text": "With QA approval, one filling session may go ahead using settle plates only, and the approval is recorded on FRM-QC-121.",
     "family": "B06",
-    "question": "When may water systems product remain available without a deviation?"
+    "question": "Under what condition can a filling session go ahead when neither air sampler EQ-0412 nor EQ-0413 is serviceable?"
   },
   "C-DEV-0021": {
-    "coverage": 0.75,
-    "decisive_span_text": "Retraining is not required for editorial document changes that do not alter steps or limits.",
-    "family": "B07",
-    "question": "Is retraining required for editorial equipment calibration changes that do not alter steps?"
+    "coverage": 0.5,
+    "decisive_span_text": "Before each filling session the analyst checks the sampler head, wipes the outer casing with sterile 70 percent isopropyl alcohol, and confirms with the flow meter EQ-0850 that the flow is 100 L/min within plus or minus 5 percent.",
+    "family": "B04",
+    "question": "What flow rate should the portable air sampler show, and with what tollerance, before a filling session?"
   },
   "C-DEV-0022": {
-    "coverage": 0.75,
-    "decisive_span_text": "Retraining is not required for editorial document changes that do not alter steps or limits.",
-    "family": "B07",
-    "question": "Is retraining required for editorial water systems changes that do not alter steps?"
+    "coverage": 0.222,
+    "decisive_span_text": "The door should not be held open for more than 2 minutes for any single movement of stock, and a pallet jack is never parked in the doorway.",
+    "family": "B02",
+    "question": "For one stock movement, what is the longest the refrigerated storeroom CR-1 may be left unsealed?"
   },
   "C-DEV-0023": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 147 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for water systems?"
+    "coverage": 0.0,
+    "decisive_span_text": "",
+    "family": "B11",
+    "question": "Which airline has the cheapest flights to Lisbon in March?"
   },
   "C-DEV-0024": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 11 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for environmental monitoring?"
+    "coverage": 0.857,
+    "decisive_span_text": "Isolates from Grade A and Grade B locations are kept at minus 20 degrees C in glycerol stock for 24 months, so that a later recovery can be compared with earlier ones.",
+    "family": "B14",
+    "question": "glycerol stock isolates Grade A and B how many months kept"
   },
   "C-DEV-0025": {
-    "coverage": 0.333,
-    "decisive_span_text": "action limit of 27 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for deviations?"
+    "coverage": 0.375,
+    "decisive_span_text": "The response is written on FRM-QC-121.",
+    "family": "B03",
+    "question": "FRM-QC-121 - what do I write on it during a monitoring alert or action?"
   },
   "C-DEV-0026": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 11 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for environmental monitoring?"
+    "coverage": 0.0,
+    "decisive_span_text": "",
+    "family": "B11",
+    "question": "How do I apply for a staff parking permit for the north car park?"
   },
   "C-DEV-0027": {
-    "coverage": 0.5,
-    "decisive_span_text": "action limit of 27 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for deviations?"
+    "coverage": 0.2,
+    "decisive_span_text": "Every shipper carries a logger of the LGR-2210 to LGR-2260 series recording at intervals of 5 minutes.",
+    "family": "B13",
+    "question": "How often does a shipping logger record a reading?"
   },
   "C-DEV-0028": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 125 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for equipment calibration?"
+    "coverage": 0.5,
+    "decisive_span_text": "A high or low temperature alarm sounds only after the reading has been outside the range for 20 minutes, so that a normal door opening or defrost cycle does not trigger it.",
+    "family": "B04",
+    "question": "CR-1 high temperature alarm delay minuts"
   },
   "C-DEV-0029": {
-    "coverage": 0.833,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in deviations?"
+    "coverage": 0.143,
+    "decisive_span_text": "| Major | 90 calendar days from plan approval | 90 days after the last action closes | QA Manager |",
+    "family": "B05",
+    "question": "In the risk class table, who aproves closure of a Major CAPA?"
   },
   "C-DEV-0030": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in equipment calibration?"
+    "coverage": 0.1,
+    "decisive_span_text": "The board meets every 2 weeks, and a meeting needs at least 3 members to go ahead.",
+    "family": "B02",
+    "question": "How many people need to be present before the CAPA review board can take decisions?"
   },
   "C-DEV-0031": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in water systems?"
+    "coverage": 0.429,
+    "decisive_span_text": "Its probe EQ-0915 is logged every 15 minutes, and the high temperature alarm sounds after 25 minutes outside the range.",
+    "family": "B12",
+    "question": "How long is the high temperature alarm delay for freezer FZ-1?"
   },
   "C-DEV-0032": {
-    "coverage": 0.0,
-    "decisive_span_text": "",
-    "family": "B11",
-    "question": "What are the cafeteria hours?"
+    "coverage": 0.2,
+    "decisive_span_text": "A plate may be exposed for a maximum of 4 hours.",
+    "family": "B13",
+    "question": "How long can I leave a settle plate open?"
   },
   "C-DEV-0033": {
-    "coverage": 0.0,
-    "decisive_span_text": "",
-    "family": "B11",
-    "question": "What does SOP-XX-990 state about water systems?"
+    "coverage": 0.5,
+    "decisive_span_text": "Where a CAPA depends on a supplier, the time allowed for the supplier's part of the work is fixed in the quality agreement with that supplier, as set out in the agreement template QAG-0031, and the site's own actions still keep the due dates above.",
+    "family": "B10",
+    "question": "How long does a supplier have to close its part of a supplier-originated CAPA?"
   },
   "C-DEV-0034": {
     "coverage": 0.0,
     "decisive_span_text": "",
     "family": "B11",
-    "question": "What are the cafeteria hours?"
+    "question": "How many hours of training must a CAPA review board member complete every year?"
   },
   "C-DEV-0035": {
-    "coverage": 0.444,
-    "decisive_span_text": "alert limit of 145 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limmit result of 145 CFU require a deviation for water systems?"
+    "coverage": 0.25,
+    "decisive_span_text": "QA approves the assessment on FRM-EN-205 whenever a release result is affected.",
+    "family": "B02",
+    "question": "Who has to sign off the paperwork on damage to earlier results when a release result could have been affected by a drifted EQ-0801?"
   },
   "C-DEV-0036": {
-    "coverage": 0.375,
-    "decisive_span_text": "alert limit of 9 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limit result of 9 CFU require a deviation for environmental monitoring?"
+    "coverage": 0.125,
+    "decisive_span_text": "| Flow meters | 6 months |",
+    "family": "B09",
+    "question": "What is the calibration interval for the flow meter that checks the portable air sampler?"
   },
   "C-DEV-0037": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 11 CFU per unit",
-    "family": "B13",
-    "question": "What is the current action limit for environmental monitoring?"
+    "coverage": 1.0,
+    "decisive_span_text": "Flow meter EQ-0850: the acceptance tolerance is taken from the manufacturer datasheet MDS-0850, and the value is entered on FRM-EN-201 at each calibration.",
+    "family": "B10",
+    "question": "EQ-0850 flow meter acceptance tolerance"
   },
   "C-DEV-0038": {
-    "coverage": 0.5,
-    "decisive_span_text": "action limit of 27 CFU per unit",
-    "family": "B13",
-    "question": "What is the current action limit for deviations?"
+    "coverage": 0.667,
+    "decisive_span_text": "An action-level result in Grade A or Grade B is reported to the QC supervisor within 2 hours of the plate being read, and a deviation is raised under SOP-QA-101 without waiting for the identification result.",
+    "family": "B01",
+    "question": "Within how long must an action-level result in Grade A or Grade B be reported to the QC supervisor, before identification comes back?"
   },
   "C-DEV-0039": {
-    "coverage": 0.875,
-    "decisive_span_text": "Detail 18: repeat the 7-hour clean hold check and the 11 CFU action limit comparison for subsection 18. Purified water flush volume is 280 L. Sampling frequency is every 4 hours. Record results on for",
-    "family": "B14",
-    "question": "FRM-environmental-303 extended section 18 flush volume?"
+    "coverage": 0.556,
+    "decisive_span_text": "The request is logged within 3 working days of the decision to open it, and the coordinator returns a CAPA number within 1 day.",
+    "family": "B04",
+    "question": "FRM-QA-201 CAPA request logged within how many working days"
   },
   "C-DEV-0040": {
-    "coverage": 0.875,
-    "decisive_span_text": "Detail 18: repeat the 7-hour clean hold check and the 11 CFU action limit comparison for subsection 18. Purified water flush volume is 280 L. Sampling frequency is every 4 hours. Record results on for",
-    "family": "B14",
-    "question": "FRM-environmental-303 extended section 18 flush volume?"
-  },
-  "C-PROSPECTIVE-0121": {
-    "coverage": 0.625,
-    "decisive_span_text": "action limit of 233 CFU per unit",
-    "family": "B01",
-    "question": "EQ-stability-157 action limit CFU per unit"
-  },
-  "C-PROSPECTIVE-0122": {
-    "coverage": 0.625,
-    "decisive_span_text": "action limit of 251 CFU per unit",
-    "family": "B01",
-    "question": "EQ-temp-131 action limit CFU per unit"
-  },
-  "C-PROSPECTIVE-0123": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 251 CFU per unit",
-    "family": "B02",
-    "question": "How long can temp storage shipping items wait before the next step?"
-  },
-  "C-PROSPECTIVE-0124": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 267 CFU per unit",
-    "family": "B02",
-    "question": "When must complaints returns work be paused for a follow-up?"
-  },
-  "C-PROSPECTIVE-0125": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 233 CFU per unit",
-    "family": "B02",
-    "question": "FRM-stability-353 stability cutoff?"
-  },
-  "C-PROSPECTIVE-0126": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 251 CFU per unit",
-    "family": "B02",
-    "question": "FRM-temp-380 temp-storage-shipping cutoff?"
-  },
-  "C-PROSPECTIVE-0127": {
-    "coverage": 0.2,
-    "decisive_span_text": "action limit of 267 CFU per unit",
-    "family": "B03",
-    "question": "EQ-complaints-179 R-complaints-203 limit"
-  },
-  "C-PROSPECTIVE-0128": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 233 CFU per unit",
-    "family": "B03",
-    "question": "What is the action limit for equipment EQ-stability-157 in R-stability-276?"
-  },
-  "C-PROSPECTIVE-0129": {
-    "coverage": 0.75,
-    "decisive_span_text": "at most 73 hours (clean hold time)",
-    "family": "B04",
-    "question": "stability clean hold hours"
-  },
-  "C-PROSPECTIVE-0130": {
-    "coverage": 0.571,
-    "decisive_span_text": "at most 79 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for temp storage shipping?"
-  },
-  "C-PROSPECTIVE-0131": {
     "coverage": 0.667,
-    "decisive_span_text": "at most 86 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for complaints returns?"
-  },
-  "C-PROSPECTIVE-0132": {
-    "coverage": 0.75,
-    "decisive_span_text": "at most 73 hours (clean hold time)",
-    "family": "B04",
-    "question": "stability clean hold hours"
-  },
-  "C-PROSPECTIVE-0133": {
-    "coverage": 0.333,
-    "decisive_span_text": "| Viable action limit | 251 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for temp storage shipping?"
-  },
-  "C-PROSPECTIVE-0134": {
-    "coverage": 0.375,
-    "decisive_span_text": "| Viable action limit | 267 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for complaints returns?"
-  },
-  "C-PROSPECTIVE-0135": {
-    "coverage": 0.333,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may complaints returns product remain available without a deviation?"
-  },
-  "C-PROSPECTIVE-0136": {
-    "coverage": 0.4,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may stability product remain available without a deviation?"
-  },
-  "C-PROSPECTIVE-0137": {
-    "coverage": 0.857,
-    "decisive_span_text": "Retraining is not required for editorial document changes that do not alter steps or limits.",
-    "family": "B07",
-    "question": "Is retraining required for editorial stability changes that do not alter steps?"
-  },
-  "C-PROSPECTIVE-0138": {
-    "coverage": 0.25,
-    "decisive_span_text": "action limit of 251 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for temp storage shipping?"
-  },
-  "C-PROSPECTIVE-0139": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 267 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for complaints returns?"
-  },
-  "C-PROSPECTIVE-0140": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 267 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for complaints returns?"
-  },
-  "C-PROSPECTIVE-0141": {
-    "coverage": 0.5,
-    "decisive_span_text": "action limit of 233 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for stability?"
-  },
-  "C-PROSPECTIVE-0142": {
-    "coverage": 0.833,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in stability?"
-  },
-  "C-PROSPECTIVE-0143": {
-    "coverage": 0.625,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in temp storage shipping?"
-  },
-  "C-PROSPECTIVE-0144": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in complaints returns?"
-  },
-  "C-PROSPECTIVE-0145": {
-    "coverage": 0.0,
-    "decisive_span_text": "",
-    "family": "B11",
-    "question": "What are the cafeteria hours?"
-  },
-  "C-PROSPECTIVE-0146": {
-    "coverage": 0.0,
-    "decisive_span_text": "",
-    "family": "B11",
-    "question": "What does SOP-XX-990 state about complaints returns?"
-  },
-  "C-PROSPECTIVE-0147": {
-    "coverage": 0.444,
-    "decisive_span_text": "alert limit of 265 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limit result of 265 CFU require a deviation for complaints returns?"
-  },
-  "C-PROSPECTIVE-0148": {
-    "coverage": 0.5,
-    "decisive_span_text": "alert limit of 231 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limit result of 231 CFU require a deviation for stability?"
-  },
-  "C-PROSPECTIVE-0149": {
-    "coverage": 0.5,
-    "decisive_span_text": "action limit of 233 CFU per unit",
-    "family": "B13",
-    "question": "What is the current action limit for stability?"
-  },
-  "C-PROSPECTIVE-0150": {
-    "coverage": 0.714,
-    "decisive_span_text": "Detail 18: repeat the 73-hour clean hold check and the 233 CFU action limit comparison for subsection 18. Purified water flush volume is 280 L. Sampling frequency is every 4 hours. Record results on f",
-    "family": "B14",
-    "question": "In extended section 18 for stability, what flush volume is stated?"
+    "decisive_span_text": "An interval for a Class 2 instrument may be lengthened by up to 25 percent when its last 3 calibrations were all within tolerance and the change is approved by QA on FRM-EN-210.",
+    "family": "B01",
+    "question": "Class 2 instrument calibration interval lengthened by how much"
   },
   "C-TEST-0041": {
-    "coverage": 1.0,
-    "decisive_span_text": "action limit of 51 CFU per unit",
+    "coverage": 0.7,
+    "decisive_span_text": "The QA reviewer checks the request and assigns its class within 3 working days of receiving it.",
     "family": "B01",
-    "question": "action limit CFU per unit"
+    "question": "Within how many working days of receiving a change request does the QA reviewer assign its class?"
   },
   "C-TEST-0042": {
     "coverage": 1.0,
-    "decisive_span_text": "action limit of 71 CFU per unit",
+    "decisive_span_text": "The target for the whole cycle, from the completion of the batch to the disposition decision, is 15 working days.",
     "family": "B01",
-    "question": "action limit CFU per unit"
+    "question": "What is the target for the whole cycle from batch completion to the disposition decision?"
   },
   "C-TEST-0043": {
-    "coverage": 1.0,
-    "decisive_span_text": "action limit of 83 CFU per unit",
-    "family": "B01",
-    "question": "What is the action limit in CFU per unit?"
+    "coverage": 0.333,
+    "decisive_span_text": "No more than 6 consecutive batches of one product are made on FL-2 before a full clean, and a full clean is carried out at least every 30 days even if the campaign has not reached its limit or the line has stood idle.",
+    "family": "B09",
+    "question": "What is the longest the line may go between full cleans?"
   },
   "C-TEST-0044": {
-    "coverage": 0.625,
-    "decisive_span_text": "action limit of 105 CFU per unit",
-    "family": "B01",
-    "question": "EQ-training-197 action limit CFU per unit"
+    "coverage": 0.857,
+    "decisive_span_text": "The interval for the integrity test of the vent filters follows the filter maintenance schedule FMS-0006, and a wet or damaged vent filter is replaced at once and the tank sampled afterwards.",
+    "family": "B10",
+    "question": "What interval applies to the integrity test of the tank vent filters?"
   },
   "C-TEST-0045": {
-    "coverage": 1.0,
-    "decisive_span_text": "action limit of 165 CFU per unit",
-    "family": "B01",
-    "question": "action limit CFU per unit"
+    "coverage": 0.857,
+    "decisive_span_text": "The supplier receives the questionnaire FRM-WH-501 and returns it within 30 days of issue.",
+    "family": "B09",
+    "question": "FRM-WH-501 supplier questionnaire return days"
   },
   "C-TEST-0046": {
-    "coverage": 1.0,
-    "decisive_span_text": "action limit of 185 CFU per unit",
-    "family": "B01",
-    "question": "action limit CFU per unit"
+    "coverage": 0.286,
+    "decisive_span_text": "| Class 3 | 90 days | 30 days after go-live |",
+    "family": "B09",
+    "question": "Class 3 change implementation deadline after board approval"
   },
   "C-TEST-0047": {
-    "coverage": 0.625,
-    "decisive_span_text": "action limit of 213 CFU per unit",
-    "family": "B01",
-    "question": "EQ-supplier-190 action limit CFU per unit"
-  },
-  "C-TEST-0048": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 71 CFU per unit",
-    "family": "B02",
-    "question": "How much contamination triggers a deviation in change control?"
-  },
-  "C-TEST-0049": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 83 CFU per unit",
-    "family": "B02",
-    "question": "FRM-document-378 document-control cutoff?"
-  },
-  "C-TEST-0050": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 105 CFU per unit",
-    "family": "B02",
-    "question": "FRM-training-332 training-gowning cutoff?"
-  },
-  "C-TEST-0051": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 165 CFU per unit",
-    "family": "B02",
-    "question": "cleaning-line-clearance hold contamination cutoff"
-  },
-  "C-TEST-0052": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 185 CFU per unit",
-    "family": "B02",
-    "question": "FRM-batch-393 batch-record-qa cutoff?"
-  },
-  "C-TEST-0053": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 213 CFU per unit",
-    "family": "B02",
-    "question": "How long can supplier incoming items wait before the next step?"
-  },
-  "C-TEST-0054": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 51 CFU per unit",
-    "family": "B02",
-    "question": "When must capa work be paused for a follow-up?"
-  },
-  "C-TEST-0055": {
-    "coverage": 0.0,
-    "decisive_span_text": "action limit of 71 CFU per unit",
-    "family": "B02",
-    "question": "FRM-change-327 change-control cutoff?"
-  },
-  "C-TEST-0056": {
-    "coverage": 0.2,
-    "decisive_span_text": "action limit of 83 CFU per unit",
-    "family": "B03",
-    "question": "EQ-document-185 R-document-226 limmit"
-  },
-  "C-TEST-0057": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 105 CFU per unit",
-    "family": "B03",
-    "question": "What is the action limmit for equipment EQ-training-197 in R-training-286?"
-  },
-  "C-TEST-0058": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 165 CFU per unit",
-    "family": "B03",
-    "question": "What is the action limit for equipment EQ-cleaning-193 in R-cleaning-295?"
-  },
-  "C-TEST-0059": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 185 CFU per unit",
-    "family": "B03",
-    "question": "What is the action limit for equipment EQ-batch-121 in R-batch-203?"
-  },
-  "C-TEST-0060": {
-    "coverage": 0.2,
-    "decisive_span_text": "action limit of 213 CFU per unit",
-    "family": "B03",
-    "question": "EQ-supplier-190 R-supplier-203 limit"
-  },
-  "C-TEST-0061": {
-    "coverage": 0.667,
-    "decisive_span_text": "at most 38 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for training gowning?"
-  },
-  "C-TEST-0062": {
-    "coverage": 0.5,
-    "decisive_span_text": "at most 55 hours (clean hold time)",
-    "family": "B04",
-    "question": "cleaning-line-clearance clean hold hours"
-  },
-  "C-TEST-0063": {
-    "coverage": 0.571,
-    "decisive_span_text": "at most 62 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for batch record qa?"
-  },
-  "C-TEST-0064": {
-    "coverage": 0.6,
-    "decisive_span_text": "at most 67 hours (clean hold time)",
-    "family": "B04",
-    "question": "supplier-incoming clean hold hours"
-  },
-  "C-TEST-0065": {
-    "coverage": 0.8,
-    "decisive_span_text": "at most 20 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for capa?"
-  },
-  "C-TEST-0066": {
-    "coverage": 0.667,
-    "decisive_span_text": "at most 24 hours (clean hold time)",
-    "family": "B04",
-    "question": "What is the clean hold time in hours for change control?"
-  },
-  "C-TEST-0067": {
-    "coverage": 0.6,
-    "decisive_span_text": "at most 31 hours (clean hold time)",
-    "family": "B04",
-    "question": "document-control clean hold hours"
-  },
-  "C-TEST-0068": {
-    "coverage": 0.333,
-    "decisive_span_text": "| Viable action limit | 165 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for cleaning line clearance?"
-  },
-  "C-TEST-0069": {
-    "coverage": 0.333,
-    "decisive_span_text": "| Viable action limit | 185 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for batch record qa?"
-  },
-  "C-TEST-0070": {
-    "coverage": 0.375,
-    "decisive_span_text": "| Viable action limit | 213 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for supplier incoming?"
-  },
-  "C-TEST-0071": {
-    "coverage": 0.429,
-    "decisive_span_text": "| Viable action limit | 51 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for capa?"
-  },
-  "C-TEST-0072": {
-    "coverage": 0.375,
-    "decisive_span_text": "| Viable action limit | 71 | CFU per unit |",
-    "family": "B05",
-    "question": "What is the viable action limit listed in the acceptance table for change control?"
-  },
-  "C-TEST-0073": {
-    "coverage": 0.286,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may batch record qa product remain available without a deviation?"
-  },
-  "C-TEST-0074": {
-    "coverage": 0.333,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may supplier incoming product remain available without a deviation?"
-  },
-  "C-TEST-0075": {
-    "coverage": 0.4,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may capa product remain available without a deviation?"
-  },
-  "C-TEST-0076": {
-    "coverage": 0.333,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may change control product remain available without a deviation?"
-  },
-  "C-TEST-0077": {
-    "coverage": 0.333,
-    "decisive_span_text": "Unless an excursion is confirmed, product remains available for further processing.",
-    "family": "B06",
-    "question": "When may document control product remain available without a deviation?"
-  },
-  "C-TEST-0078": {
-    "coverage": 0.75,
-    "decisive_span_text": "Retraining is not required for editorial document changes that do not alter steps or limits.",
-    "family": "B07",
-    "question": "Is retraining required for editorial supplier incoming changes that do not alter steps?"
-  },
-  "C-TEST-0079": {
-    "coverage": 0.857,
-    "decisive_span_text": "Retraining is not required for editorial document changes that do not alter steps or limits.",
-    "family": "B07",
-    "question": "Is retraining required for editorial capa changes that do not alter steps?"
-  },
-  "C-TEST-0080": {
-    "coverage": 0.75,
-    "decisive_span_text": "Retraining is not required for editorial document changes that do not alter steps or limits.",
-    "family": "B07",
-    "question": "Is retraining required for editorial change control changes that do not alter steps?"
-  },
-  "C-TEST-0081": {
-    "coverage": 0.333,
-    "decisive_span_text": "action limit of 51 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limmit and clean hold time for capa?"
-  },
-  "C-TEST-0082": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 71 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for change control?"
-  },
-  "C-TEST-0083": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 83 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for document control?"
-  },
-  "C-TEST-0084": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 105 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for training gowning?"
-  },
-  "C-TEST-0085": {
-    "coverage": 0.25,
-    "decisive_span_text": "action limit of 165 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for cleaning line clearance?"
-  },
-  "C-TEST-0086": {
-    "coverage": 0.25,
-    "decisive_span_text": "action limit of 185 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for batch record qa?"
-  },
-  "C-TEST-0087": {
-    "coverage": 0.286,
-    "decisive_span_text": "action limit of 213 CFU per unit",
-    "family": "B08",
-    "question": "What are the action limit and clean hold time for supplier incoming?"
-  },
-  "C-TEST-0088": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 71 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for change control?"
-  },
-  "C-TEST-0089": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 83 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limmit for document control?"
-  },
-  "C-TEST-0090": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 105 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limmit for training gowning?"
-  },
-  "C-TEST-0091": {
-    "coverage": 0.333,
-    "decisive_span_text": "action limit of 165 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for cleaning line clearance?"
-  },
-  "C-TEST-0092": {
-    "coverage": 0.333,
-    "decisive_span_text": "action limit of 185 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for batch record qa?"
-  },
-  "C-TEST-0093": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 213 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for supplier incoming?"
-  },
-  "C-TEST-0094": {
-    "coverage": 0.5,
-    "decisive_span_text": "action limit of 51 CFU per unit",
-    "family": "B09",
-    "question": "What is the current action limit for capa?"
-  },
-  "C-TEST-0095": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in document control?"
-  },
-  "C-TEST-0096": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in training gowning?"
-  },
-  "C-TEST-0097": {
-    "coverage": 0.625,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in cleaning line clearance?"
-  },
-  "C-TEST-0098": {
-    "coverage": 0.625,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in batch record qa?"
-  },
-  "C-TEST-0099": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in supplier incoming?"
-  },
-  "C-TEST-0100": {
-    "coverage": 0.833,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in capa?"
-  },
-  "C-TEST-0101": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in change control?"
-  },
-  "C-TEST-0102": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in document control?"
-  },
-  "C-TEST-0103": {
-    "coverage": 0.714,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in training gowning?"
-  },
-  "C-TEST-0104": {
-    "coverage": 0.625,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in cleaning line clearance?"
-  },
-  "C-TEST-0105": {
-    "coverage": 0.625,
-    "decisive_span_text": "The acceptance range for the reference standard check is maintained in the site master list, which is not part of this corpus.",
-    "family": "B10",
-    "question": "What is the acceptance range for the reference standard check in batch record qa?"
-  },
-  "C-TEST-0106": {
     "coverage": 0.0,
     "decisive_span_text": "",
     "family": "B11",
-    "question": "What is the weather at the site today?"
+    "question": "How do I fix a flat tyre on my bicycle?"
+  },
+  "C-TEST-0048": {
+    "coverage": 0.5,
+    "decisive_span_text": "| WFI | Endotoxin at PT-21 and PT-28 | Weekly |",
+    "family": "B05",
+    "question": "PT-21 PT-28 endotoxin sampling schedule table frequency"
+  },
+  "C-TEST-0049": {
+    "coverage": 0.875,
+    "decisive_span_text": "The QA Head may grant an exception that allows disposition while a deviation is still open, on FRM-QA-408. An exception is valid for one batch only. It must state why waiting would harm patients or supply, what the open risk is and what will be done to close it. An exception is never granted where the deviation is Critical.",
+    "family": "B06",
+    "question": "When may the QA Head allow disposition of a batch that still has a deviation open?"
+  },
+  "C-TEST-0050": {
+    "coverage": 0.667,
+    "decisive_span_text": "A request that has seen no activity for 180 days is cancelled by the QA reviewer after a warning to the owner.",
+    "family": "B04",
+    "question": "change request cancelled after inactivty days"
+  },
+  "C-TEST-0051": {
+    "coverage": 0.286,
+    "decisive_span_text": "| More than 100 | 14 |",
+    "family": "B05",
+    "question": "sampling plan containers sampled from lot of more than 100"
+  },
+  "C-TEST-0052": {
+    "coverage": 0.429,
+    "decisive_span_text": "The residue limit for the TOC swab is 8 ug per swab.",
+    "family": "B04",
+    "question": "TOC swab residue limt after full clean"
+  },
+  "C-TEST-0053": {
+    "coverage": 0.286,
+    "decisive_span_text": "| Dirty hold | End of processing | 24 hours until cleaning starts |",
+    "family": "B13",
+    "question": "How long can parts sit dirty before I have to start cleaning them?"
+  },
+  "C-TEST-0054": {
+    "coverage": 0.0,
+    "decisive_span_text": "When the operator and the supervisor have completed the twelve points, they request verification by the QA line clearance inspector, who attends within 30 minutes of the request.",
+    "family": "B02",
+    "question": "Once the floor team has ticked off every item on FRM-MF-311, how soon does someone from quality come to verify?"
+  },
+  "C-TEST-0055": {
+    "coverage": 0.75,
+    "decisive_span_text": "In Grades C and D, reusable mop heads are permitted, and each is retired after 30 launderings, counted on the tag that is attached to the mop head.",
+    "family": "B14",
+    "question": "reusable mop heads Grade C D retired after how many launderings"
+  },
+  "C-TEST-0056": {
+    "coverage": 0.8,
+    "decisive_span_text": "The audit frequency for suppliers of reference standards is agreed in the quality agreement QAG-0044, since the material is supplied in small quantities and often by a single source, and this arrangement overrides the frequencies in the table above for those suppliers only.",
+    "family": "B10",
+    "question": "How often are suppliers of reference standards audited?"
+  },
+  "C-TEST-0057": {
+    "coverage": 0.556,
+    "decisive_span_text": "The temperature and humidity are followed for 2 hours after power returns, and the chamber must be back within tolerance in that time.",
+    "family": "B12",
+    "question": "How long does a chamber have to get back within tolerance after the power interruption test?"
+  },
+  "C-TEST-0058": {
+    "coverage": 0.556,
+    "decisive_span_text": "Bags are sealed and removed from the room within 2 hours of the end of the cleaning activity, so that contaminated material does not sit in a classified area.",
+    "family": "B14",
+    "question": "Within how many hours must cleaning waste bags be sealed and taken out of the room?"
+  },
+  "C-TEST-0059": {
+    "coverage": 0.0,
+    "decisive_span_text": "",
+    "family": "B11",
+    "question": "What is on the canteen menu today?"
+  },
+  "C-TEST-0060": {
+    "coverage": 0.889,
+    "decisive_span_text": "The doors of RM-301 stay closed while cleaning is in progress, and no more than 4 operators are in the room at any moment.",
+    "family": "B01",
+    "question": "RM-301 operators at any one moment while cleaning is in progress"
+  },
+  "C-TEST-0061": {
+    "coverage": 0.429,
+    "decisive_span_text": "| Total viable count, 1 mL pour plate on R2A agar | 40 CFU per mL | 80 CFU per mL |",
+    "family": "B09",
+    "question": "purified water total viable count action level"
+  },
+  "C-TEST-0062": {
+    "coverage": 0.5,
+    "decisive_span_text": "Yield is reconciled against the theoretical yield, and the result must be within plus or minus 2.0 percent.",
+    "family": "B04",
+    "question": "yield reconciliation acceptable range against theoretical yield"
+  },
+  "C-TEST-0063": {
+    "coverage": 0.9,
+    "decisive_span_text": "A drop of the WFI return below 75 degrees C for more than 10 minutes is treated as a possible stagnation event, and the loop is inspected before the next sample is taken.",
+    "family": "B01",
+    "question": "What is a fall of the WFI return below 75 degrees C for more than 10 minutes treated as?"
+  },
+  "C-TEST-0064": {
+    "coverage": 0.556,
+    "decisive_span_text": "| Class 2 | 60 days | 14 days after go-live |",
+    "family": "B05",
+    "question": "Class 2 change post-implementation review days after go-live"
+  },
+  "C-TEST-0065": {
+    "coverage": 0.75,
+    "decisive_span_text": "A deviation that has stayed open for more than 60 days is reported to the QA Head every month, and QA reviews the register of open deviations every 7 days.",
+    "family": "B04",
+    "question": "deviation stayed open days QA Head monthly report"
+  },
+  "C-TEST-0066": {
+    "coverage": 0.625,
+    "decisive_span_text": "The recovery factor that converts a swab result to the amount on the surface is taken from the cleaning validation report CVR-0019.",
+    "family": "B10",
+    "question": "What recovery factor is applied to convert a swab result to residue on the surface?"
+  },
+  "C-TEST-0067": {
+    "coverage": 0.5,
+    "decisive_span_text": "Yield limits for a new product come from the master batch record MBR-0210 for that product until the site has enough batches to set its own.",
+    "family": "B10",
+    "question": "What yield limits apply to a newly introduced product?"
+  },
+  "C-TEST-0068": {
+    "coverage": 0.231,
+    "decisive_span_text": "A late entry, made after the event because a step was not recorded at the time, is allowed only if it states the reason and is countersigned by the supervisor within 1 working day.",
+    "family": "B02",
+    "question": "On a batch record reviewed with FRM-QA-401, who has to countersign an entry written up after the event, and how soon?"
+  },
+  "C-TEST-0069": {
+    "coverage": 0.75,
+    "decisive_span_text": "A Minor deviation may be investigated with a 5-Why analysis recorded on FRM-QA-104.",
+    "family": "B03",
+    "question": "What does FRM-QA-104 record?"
+  },
+  "C-TEST-0070": {
+    "coverage": 0.333,
+    "decisive_span_text": "Plates are incubated at 20 to 25 degrees C for 5 days on R2A agar (MAT-5010).",
+    "family": "B13",
+    "question": "After how many days do I read the water plates?"
+  },
+  "C-TEST-0071": {
+    "coverage": 0.75,
+    "decisive_span_text": "The cycle parameters, including the concentration, exposure time and aeration limit, are taken from the vapour decontamination cycle report DCR-0026, and the operator does not alter them.",
+    "family": "B10",
+    "question": "RM-301 vapour decontamination cycle exposure time concentration"
+  },
+  "C-TEST-0072": {
+    "coverage": 0.25,
+    "decisive_span_text": "FRM-MF-311 lists 12 points.",
+    "family": "B03",
+    "question": "Which form (FRM-MF-...) is the twelve-point line clearance checklist?"
+  },
+  "C-TEST-0073": {
+    "coverage": 0.8,
+    "decisive_span_text": "The extrapolation allowed beyond the longest real-time data for a new product follows the stability protocol STP-0311, and the shelf life is never extended beyond what the data support.",
+    "family": "B10",
+    "question": "How far can shelf life be extrapolated beyond the real-time data for a new product?"
+  },
+  "C-TEST-0074": {
+    "coverage": 0.364,
+    "decisive_span_text": "| Total organic carbon | 300 ppb | 400 ppb |\nEach is compared with an offline measurement once a week, as set out in SPC-2252, and the offline TOC check for each analyser is written on the round sheet.",
+    "family": "B08",
+    "question": "What is the WFI TOC alert level, and how often is the in-line analyser checked against an offline measurement?"
+  },
+  "C-TEST-0075": {
+    "coverage": 0.6,
+    "decisive_span_text": "| CH-03 | Accelerated | 40 degrees C and 75 percent RH | Plus or minus 2 degrees C and plus or minus 5 percent RH |",
+    "family": "B05",
+    "question": "CH-03 accelerated chamber setpoint"
+  },
+  "C-TEST-0076": {
+    "coverage": 0.571,
+    "decisive_span_text": "Each pull removes 12 units for a product presented in vials: 10 for testing and 2 held in reserve.",
+    "family": "B09",
+    "question": "How many units does each pull remove for a vialled product?"
+  },
+  "C-TEST-0077": {
+    "coverage": 0.25,
+    "decisive_span_text": "CAPA CP-2519 was opened as Major.\nThe plan is written on FRM-QA-204 and submitted within 10 working days of opening for Critical and Major CAPAs, and within 15 working days for Minor ones.",
+    "family": "B08",
+    "question": "Which CAPA was raised after the cold room excursion in the worked example, and how soon must a plan be submitted for a CAPA of that class?"
+  },
+  "C-TEST-0078": {
+    "coverage": 0.429,
+    "decisive_span_text": "After a sanitization, a loop returns to service only when 2 consecutive daily samples at every point meet the alert levels in SPC-2252 and the in-line TOC reading is below its alert level.",
+    "family": "B06",
+    "question": "Under what condition may a loop go back into service after it has been sanitised?"
+  },
+  "C-TEST-0079": {
+    "coverage": 0.143,
+    "decisive_span_text": "Containment happens in the shift in which the deviation is found, and where product could be affected it is in place within 4 hours of discovery.",
+    "family": "B02",
+    "question": "How soon after a departure is found must stop-gap measures be running, per FRM-QA-101, if what was made could be affected?"
+  },
+  "C-TEST-0080": {
+    "coverage": 0.0,
+    "decisive_span_text": "",
+    "family": "B11",
+    "question": "What is the euro to dollar exchange rate right now?"
+  },
+  "C-TEST-0081": {
+    "coverage": 0.8,
+    "decisive_span_text": "The light exposure, the measurement of the dose and the dark controls are defined by the photostability study PHS-0008.\nPhotostability studies are run in the cabinet PC-1, and the exposure is set by the photostability study PHS-0008.",
+    "family": "B10",
+    "question": "PC-1 photostability samples light dose"
+  },
+  "C-TEST-0082": {
+    "coverage": 0.429,
+    "decisive_span_text": "Conclusions such as human error are not accepted without an account of what made the error possible.",
+    "family": "B07",
+    "question": "Is human error accepted as the rooy cause of a deviation on its own?"
+  },
+  "C-TEST-0083": {
+    "coverage": 0.5,
+    "decisive_span_text": "Conditional release is not permitted.",
+    "family": "B07",
+    "question": "Is conditional release of a batch permited?"
+  },
+  "C-TEST-0084": {
+    "coverage": 0.714,
+    "decisive_span_text": "Where a deviation is caused by a supplier or contract partner, the time allowed for that party's own investigation is set in the quality agreement made with it, for which the site uses the template QAG-0031, and the site's own containment and batch impact assessment follow the times above.",
+    "family": "B10",
+    "question": "How long does a supplier have to finish its own investigation of a deviation it caused?"
+  },
+  "C-TEST-0085": {
+    "coverage": 0.778,
+    "decisive_span_text": "Three consecutive lots must comply with the specification and with all receipt checks before the supplier is fully qualified.",
+    "family": "B01",
+    "question": "How many consecutive trial lots must comply before a supplier is fully qualified?"
+  },
+  "C-TEST-0086": {
+    "coverage": 0.5,
+    "decisive_span_text": "| Total viable count, 100 mL by membrane filtration on R2A agar | 5 CFU per 100 mL | 8 CFU per 100 mL |",
+    "family": "B12",
+    "question": "WFI total viable count alert level"
+  },
+  "C-TEST-0087": {
+    "coverage": 0.571,
+    "decisive_span_text": "A chamber door is not held open for more than 5 minutes for any single operation.",
+    "family": "B04",
+    "question": "longest chamber door open time singel operation"
+  },
+  "C-TEST-0088": {
+    "coverage": 0.8,
+    "decisive_span_text": "QA assesses whether an event must be notified to an outside authority against the regulatory reporting procedure RRP-0002, and the assessment is written on the record.",
+    "family": "B10",
+    "question": "At what point must an event be notified to an outside authority?"
+  },
+  "C-TEST-0089": {
+    "coverage": 1.0,
+    "decisive_span_text": "Implementation must not start before the board has approved the change, except for an emergency change.",
+    "family": "B06",
+    "question": "When may implementation of a change start before the board has approved it?"
+  },
+  "C-TEST-0090": {
+    "coverage": 0.143,
+    "decisive_span_text": "| Grade C | Daily | Every 14 days | Every 3 months |",
+    "family": "B05",
+    "question": "room cleaning table walls Grade C rooms frequency"
+  },
+  "C-TEST-0091": {
+    "coverage": 0.2,
+    "decisive_span_text": "| Major | Secondary packaging, buffer salts, cleaning agents | Every 36 months | 1 day |",
+    "family": "B12",
+    "question": "Major supplier on-site audit frequency"
+  },
+  "C-TEST-0092": {
+    "coverage": 0.6,
+    "decisive_span_text": "The offline and in-line conductivity readings must agree within 0.1 uS/cm, and the offline and in-line TOC readings within 50 ppb; a larger difference makes the in-line reading unusable until the instrument has been checked.",
+    "family": "B04",
+    "question": "in-line TOC offline TOC mesurement agreement"
+  },
+  "C-TEST-0093": {
+    "coverage": 0.615,
+    "decisive_span_text": "For every other Type B changeover the line may be released on visual inspection while the swab results are pending, provided no product is filled until the results are in.",
+    "family": "B06",
+    "question": "Can the line be released after a Type B changeover from PRD-311 to PRD-427 while the swab results are still pending?"
+  },
+  "C-TEST-0094": {
+    "coverage": 0.8,
+    "decisive_span_text": "Chambers have 6 shelves, numbered 1 to 6 from the top.",
+    "family": "B01",
+    "question": "How many shelves do chambers have, numbered from the top?"
+  },
+  "C-TEST-0095": {
+    "coverage": 0.429,
+    "decisive_span_text": "| Critical | Actual or potential risk to the patient, or a lapse that undermines the reliability of released product | 45 calendar days from classification | QA Head |",
+    "family": "B09",
+    "question": "Critical deviation investigation calendar days current procedure"
+  },
+  "C-TEST-0096": {
+    "coverage": 0.0,
+    "decisive_span_text": "| Up to and including 6 months | Plus or minus 7 days |",
+    "family": "B13",
+    "question": "What window applies to the 3-month and 6-month pulls?"
+  },
+  "C-TEST-0097": {
+    "coverage": 0.714,
+    "decisive_span_text": "The timeline for filing a post-approval change follows the regulatory affairs procedure RAP-0008, and Regulatory Affairs is consulted before any Class 3 change is implemented.",
+    "family": "B10",
+    "question": "What is the filing timeline for a post-approval change to a filed product?"
+  },
+  "C-TEST-0098": {
+    "coverage": 0.143,
+    "decisive_span_text": "QA is notified within 2 hours of the result being known, a deviation is raised under SOP-QA-101, and the point is resampled together with the two points nearest to it upstream.",
+    "family": "B02",
+    "question": "How soon must the quality reviewers be told once a tapped point gives a result above its cut-off and the outlet has been tagged?"
+  },
+  "C-TEST-0099": {
+    "coverage": 0.333,
+    "decisive_span_text": "A rejected batch is destroyed within 30 days of the decision, under a witnessed destruction record signed by two people, and its quantity is reconciled against the batch record.",
+    "family": "B09",
+    "question": "How long can rejected material wait before it must be destroyed?"
+  },
+  "C-TEST-0100": {
+    "coverage": 0.333,
+    "decisive_span_text": "The assessment is written on FRM-QC-305 by the stability coordinator and the QC chemistry manager, and reviewed by QA.",
+    "family": "B03",
+    "question": "Which form (FRM-QC-...) is used to write up a chamber excursion assessment?"
+  },
+  "C-TEST-0101": {
+    "coverage": 0.3,
+    "decisive_span_text": "A reviewer who sees no effect states that and gives the reason; a blank entry is never accepted.",
+    "family": "B07",
+    "question": "May a functional reviewer leave their part of FRM-QA-304 blank when they see no effect?"
+  },
+  "C-TEST-0102": {
+    "coverage": 0.222,
+    "decisive_span_text": "Units left in the chamber after the final pull of a study are kept for 12 months and then destroyed under a witnessed record, so that a late question about an early result can still be answered from stored material.",
+    "family": "B02",
+    "question": "For how long do the leftover vials from a finished study stay in storage before they can be destroyed?"
+  },
+  "C-TEST-0103": {
+    "coverage": 0.727,
+    "decisive_span_text": "A summary report is issued for each study year within 30 working days of the final pull of that year.",
+    "family": "B14",
+    "question": "Within how many working days of the last pull of a study year must the stability summary report be issued?"
+  },
+  "C-TEST-0104": {
+    "coverage": 0.667,
+    "decisive_span_text": "| Storage tank | TK-101 | TK-201 |",
+    "family": "B03",
+    "question": "WFI storage tank"
+  },
+  "C-TEST-0105": {
+    "coverage": 0.429,
+    "decisive_span_text": "A clearance is valid for 8 hours from the inspector's signature, provided the line stays idle and closed.",
+    "family": "B12",
+    "question": "What is the validity period of a line clearance signed by the QA inspector?"
+  },
+  "C-TEST-0106": {
+    "coverage": 0.5,
+    "decisive_span_text": "The sampling frequency for endotoxin on the PW loop follows the water system monitoring plan WMP-0011.\nThe frequency of endotoxin testing for PW follows the water system monitoring plan WMP-0011.",
+    "family": "B10",
+    "question": "How often must the purified water loop be tested for endotoxin?"
   },
   "C-TEST-0107": {
     "coverage": 0.0,
     "decisive_span_text": "",
     "family": "B11",
-    "question": "What does SOP-XX-990 state about cleaning line clearance?"
+    "question": "How long must samples of clinical trial batches be retained after the study ends?"
   },
   "C-TEST-0108": {
-    "coverage": 0.0,
-    "decisive_span_text": "",
-    "family": "B11",
-    "question": "How do I reset my workstation password?"
+    "coverage": 0.583,
+    "decisive_span_text": "After a Type B changeover and after every full clean, the QC analyst takes swabs from 3 sites of 25 cm2 each, using the swab kit MAT-3120.\nA clearance is valid for 8 hours from the inspector's signature, provided the line stays idle and closed.",
+    "family": "B08",
+    "question": "After a Type B changeover, how many sites are swabbed, and how long does the QA line clearance stay valid?"
   },
   "C-TEST-0109": {
-    "coverage": 0.0,
-    "decisive_span_text": "",
-    "family": "B11",
-    "question": "What does SOP-XX-990 state about supplier incoming?"
+    "coverage": 0.625,
+    "decisive_span_text": "For glass vials (MAT-4030) and rubber stoppers (MAT-4055), a visual inspection of 125 units per lot is made against the defect list of the specification, in addition to dimensional checks by QC.",
+    "family": "B04",
+    "question": "How many units of glass vials are visualy inspected per lot?"
   },
   "C-TEST-0110": {
+    "coverage": 0.75,
+    "decisive_span_text": "No batch is released while a deviation on that batch is open, unless the QA Head grants an exception recorded on FRM-QA-408 under SOP-QA-133.",
+    "family": "B06",
+    "question": "Under what circumstnaces does an exception recorded on FRM-QA-408 let a batch be released with a deviation still open?"
+  },
+  "C-TEST-0111": {
+    "coverage": 0.0,
+    "decisive_span_text": "Each functional reviewer named by the QA reviewer completes their part of FRM-QA-304 within 10 working days.",
+    "family": "B02",
+    "question": "How much time do department experts get to complete their share of the assessment paperwork for a proposed alteration?"
+  },
+  "C-TEST-0112": {
+    "coverage": 0.455,
+    "decisive_span_text": "| Critical | Sterile components, primary packaging, excipients that enter the product directly | Every 24 months | 2 days |\nThe auditor issues the report on FRM-WH-505 within 20 working days of the end of the audit.",
+    "family": "B08",
+    "question": "Which supplier category is audited on site every 24 months, and how soon must the audit report be issued?"
+  },
+  "C-TEST-0113": {
+    "coverage": 0.125,
+    "decisive_span_text": "| Class 3 | QA Head, Production Head and Engineering Head |\n| Class 3 | 3 consecutive batches | Required |",
+    "family": "B08",
+    "question": "Who must approve a Class 3 change, and how many days does it have to be implemented after approval?"
+  },
+  "C-TEST-0114": {
+    "coverage": 0.3,
+    "decisive_span_text": "The UV lamp of EQ-1110 has its intensity checked every month and is replaced at 8000 hours of operation even when its intensity reading is still acceptable.",
+    "family": "B02",
+    "question": "After how many running hours does the bulb of the ultraviolet unit EQ-1110 have to be exchanged?"
+  },
+  "C-TEST-0115": {
+    "coverage": 0.25,
+    "decisive_span_text": "| CH-04 | Refrigerated | 5 degrees C | Plus or minus 3 degrees C |\n| CH-04 refrigerated | 0, 3, 6, 9, 12, 18, 24, 36 |",
+    "family": "B08",
+    "question": "Which condition does chamber CH-04 hold, and at which months are its samples pulled?"
+  },
+  "C-TEST-0116": {
+    "coverage": 0.571,
+    "decisive_span_text": "A batch is released for supply only if at least 70 percent of its labelled shelf life remains on the day of release.\nRelease is signed by the QA Head or by a designate named in writing by the QA Head.",
+    "family": "B08",
+    "question": "What share of the labelled shelf life must remain at release, and who may sign the release?"
+  },
+  "C-TEST-0117": {
+    "coverage": 1.0,
+    "decisive_span_text": "Where a deviation touches a batch, the batch impact assessment on FRM-QA-108 is completed before the review of that batch under SOP-QA-133 begins.",
+    "family": "B01",
+    "question": "FRM-QA-108 batch impact assessment completed before which review"
+  },
+  "C-TEST-0118": {
     "coverage": 0.0,
     "decisive_span_text": "",
     "family": "B11",
-    "question": "What is the weather at the site today?"
-  },
-  "C-TEST-0111": {
-    "coverage": 0.4,
-    "decisive_span_text": "alert limit of 163 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limit result of 163 CFU require a deviation for cleaning line clearance?"
-  },
-  "C-TEST-0112": {
-    "coverage": 0.4,
-    "decisive_span_text": "alert limit of 183 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limit result of 183 CFU require a deviation for batch record qa?"
-  },
-  "C-TEST-0113": {
-    "coverage": 0.444,
-    "decisive_span_text": "alert limit of 211 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limit result of 211 CFU require a deviation for supplier incoming?"
-  },
-  "C-TEST-0114": {
-    "coverage": 0.5,
-    "decisive_span_text": "alert limit of 49 CFU per unit requires trending only; it is not a rejection limit.",
-    "family": "B12",
-    "question": "Does an alert-limit result of 49 CFU require a deviation for capa?"
-  },
-  "C-TEST-0115": {
-    "coverage": 0.333,
-    "decisive_span_text": "action limit of 185 CFU per unit",
-    "family": "B13",
-    "question": "What is the current action limit for batch record qa?"
-  },
-  "C-TEST-0116": {
-    "coverage": 0.4,
-    "decisive_span_text": "action limit of 213 CFU per unit",
-    "family": "B13",
-    "question": "What is the current action limit for supplier incoming?"
-  },
-  "C-TEST-0117": {
-    "coverage": 0.5,
-    "decisive_span_text": "action limit of 51 CFU per unit",
-    "family": "B13",
-    "question": "What is the current action limmit for capa?"
-  },
-  "C-TEST-0118": {
-    "coverage": 0.778,
-    "decisive_span_text": "Detail 18: repeat the 55-hour clean hold check and the 165 CFU action limit comparison for subsection 18. Purified water flush volume is 280 L. Sampling frequency is every 4 hours. Record results on f",
-    "family": "B14",
-    "question": "In extended section 18 for cleaning line clearance, what flush volume is stated?"
+    "question": "What TOC limit applies to the water used to prepare culture media in the microbiology laboratory?"
   },
   "C-TEST-0119": {
-    "coverage": 0.714,
-    "decisive_span_text": "Detail 18: repeat the 20-hour clean hold check and the 51 CFU action limit comparison for subsection 18. Purified water flush volume is 280 L. Sampling frequency is every 4 hours. Record results on fo",
-    "family": "B14",
-    "question": "In extended section 18 for capa, what flush volume is stated?"
+    "coverage": 0.222,
+    "decisive_span_text": "The supplier answers each finding with a proposed action and a date within 15 working days of receiving the report.",
+    "family": "B02",
+    "question": "How long does a supplier have to answer the findings once it has the FRM-WH-505 report?"
   },
   "C-TEST-0120": {
-    "coverage": 0.778,
-    "decisive_span_text": "Detail 18: repeat the 55-hour clean hold check and the 165 CFU action limit comparison for subsection 18. Purified water flush volume is 280 L. Sampling frequency is every 4 hours. Record results on f",
-    "family": "B14",
-    "question": "In extended section 18 for cleaning line clearance, what flush volume is stated?"
+    "coverage": 0.4,
+    "decisive_span_text": "Samples are taken in the sampling booth RM-334 (Grade C), which has unidirectional airflow and is cleaned at least 15 minutes before every sampling session.",
+    "family": "B03",
+    "question": "sampling booth incoming materials room"
   }
 }

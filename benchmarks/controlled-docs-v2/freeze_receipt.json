@@ -1,9 +1,11 @@
 {
   "as_of": "2026-09-26",
   "benchmark": "controlled-docs-v2",
-  "file_count": 157,
-  "generator": "controlled-docs-v2-generator 0.1.0-local",
-  "prospective_sha256": "b25eb9b6a5b84e03d4a41a9ad8706a70f2f00d78a59cb77a676cea1f17e3f4e5",
+  "file_count": 161,
+  "generator": "controlled-docs-v2-round2 2.0.0",
+  "prospective_hash_recipe": "sha256 over the text of `sha256sum` output for every file in the sealed directory (cases.jsonl, families.json, gold.jsonl), one '<hex>  <name>' line per file with names relative to that directory, sorted as `LC_ALL=C sort` sorts them (byte order), each line ending in LF. Equivalent, run from the sealed directory: ls | LC_ALL=C sort | xargs sha256sum | sha256sum",
+  "prospective_sha256": "ab33beee9866e54a16060c595267c95dd7e0db1c48dc2c51ca3857a2d9100d07",
   "seed": 42,
-  "tree_sha256": "f9cf9e4e829a36094f571d297b7d20e865590735d4c8bf0a7fc5bd479a64e1ae"
+  "tree_hash_recipe": "sha256 over the text of `sha256sum` output for every file under the benchmark root except SHA256SUMS and freeze_receipt.json, one '<hex>  <path>' line per file with paths relative to the root (no leading ./), sorted as `LC_ALL=C sort` sorts them (byte order), each line ending in LF. Equivalent, run from the benchmark root: find . -type f ! -name SHA256SUMS ! -name freeze_receipt.json | sed 's|^./||' | LC_ALL=C sort | xargs sha256sum | sha256sum",
+  "tree_sha256": "69863b327b5130105ba7d7a6497b3d1c6f143a2e7b441773fcf7f95a0b2f8ab7"
 }

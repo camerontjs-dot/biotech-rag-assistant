@@ -1,133 +1,1259 @@
 {
-  "lags": [
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-CL-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-DV-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-CA-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-CR-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-SQ-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-EM-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-DC-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-EC-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-WS-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-ST-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-TG-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-CC-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-BR-301"
-    },
-    {
-      "note": "states prior values; governing SOP controls",
-      "training": "TRN-TS-301"
-    }
-  ],
-  "references": [],
-  "supersedes": [
-    {
-      "doc_id": "SOP-ST-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-CR-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-TS-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-EM-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-WS-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-TG-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-SQ-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-CC-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-BR-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-CA-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-DC-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-EC-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-DV-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    },
-    {
-      "doc_id": "SOP-CL-101",
-      "new_version": "2.0",
-      "old_version": "1.0"
-    }
-  ]
+ "lags": [
+  {
+   "governing": [
+    "SOP-QC-214"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3308"
+  },
+  {
+   "governing": [
+    "SOP-EN-131"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3315"
+  },
+  {
+   "governing": [
+    "SOP-WH-088"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3330"
+  },
+  {
+   "governing": [
+    "SOP-QA-101"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3341"
+  },
+  {
+   "governing": [
+    "SOP-EN-152"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3352"
+  },
+  {
+   "governing": [
+    "SOP-MF-207"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3358"
+  },
+  {
+   "governing": [
+    "SOP-QC-236"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3370"
+  },
+  {
+   "governing": [
+    "SOP-QA-105"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3384"
+  },
+  {
+   "governing": [
+    "SOP-QC-219",
+    "SOP-TR-021"
+   ],
+   "note": "carries earlier values; the governing document controls",
+   "training": "TRN-3391"
+  }
+ ],
+ "proposed_revisions": [
+  {
+   "current_version": "4.0",
+   "doc_id": "SOP-QA-118",
+   "draft_version": "5.0"
+  },
+  {
+   "current_version": "2.0",
+   "doc_id": "SOP-QC-219",
+   "draft_version": "3.0"
+  },
+  {
+   "current_version": "3.0",
+   "doc_id": "SOP-WH-088",
+   "draft_version": "4.0"
+  },
+  {
+   "current_version": "2.0",
+   "doc_id": "SPC-2252",
+   "draft_version": "3.0"
+  }
+ ],
+ "references": [
+  {
+   "from": "CAL-0507",
+   "kind": "absent",
+   "to": "FRM-EN-201"
+  },
+  {
+   "from": "CAL-0507",
+   "kind": "absent",
+   "to": "FRM-QC-141"
+  },
+  {
+   "from": "CAL-0507",
+   "kind": "non_retrievable_only",
+   "to": "SOP-EN-044"
+  },
+  {
+   "from": "CAL-0507",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "DVX-5006",
+   "kind": "absent",
+   "to": "FRM-QA-101"
+  },
+  {
+   "from": "DVX-5006",
+   "kind": "absent",
+   "to": "FRM-QA-104"
+  },
+  {
+   "from": "DVX-5006",
+   "kind": "absent",
+   "to": "FRM-QA-108"
+  },
+  {
+   "from": "DVX-5006",
+   "kind": "absent",
+   "to": "FRM-WH-405"
+  },
+  {
+   "from": "DVX-5006",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "DVX-5006",
+   "kind": "retrievable",
+   "to": "SOP-WH-092"
+  },
+  {
+   "from": "POL-0004",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "POL-0004",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "POL-0004",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "POL-0004",
+   "kind": "retrievable",
+   "to": "SOP-QA-146"
+  },
+  {
+   "from": "POL-0004",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "POL-0012",
+   "kind": "absent",
+   "to": "FRM-QA-405"
+  },
+  {
+   "from": "POL-0012",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "POL-0012",
+   "kind": "retrievable",
+   "to": "SOP-QA-133"
+  },
+  {
+   "from": "POL-0012",
+   "kind": "retrievable",
+   "to": "SOP-QA-146"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "absent",
+   "to": "FRM-EN-201"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "absent",
+   "to": "FRM-EN-205"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "absent",
+   "to": "FRM-EN-210"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "absent",
+   "to": "FRM-QC-141"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "non_retrievable_only",
+   "to": "SOP-EN-044"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "retrievable",
+   "to": "SOP-EN-152"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-EN-131",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "SOP-EN-152",
+   "kind": "absent",
+   "to": "FRM-EN-301"
+  },
+  {
+   "from": "SOP-EN-152",
+   "kind": "absent",
+   "to": "FRM-EN-305"
+  },
+  {
+   "from": "SOP-EN-152",
+   "kind": "absent",
+   "to": "FRM-QC-201"
+  },
+  {
+   "from": "SOP-EN-152",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "SOP-EN-152",
+   "kind": "retrievable",
+   "to": "SOP-EN-158"
+  },
+  {
+   "from": "SOP-EN-152",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-EN-158",
+   "kind": "absent",
+   "to": "FRM-EN-305"
+  },
+  {
+   "from": "SOP-EN-158",
+   "kind": "retrievable",
+   "to": "SOP-EN-152"
+  },
+  {
+   "from": "SOP-EN-158",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "absent",
+   "to": "FRM-MF-301"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "absent",
+   "to": "FRM-MF-305"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "absent",
+   "to": "FRM-MF-311"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "retrievable",
+   "to": "SOP-MF-211"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "SOP-MF-207",
+   "kind": "retrievable",
+   "to": "SOP-TR-021"
+  },
+  {
+   "from": "SOP-MF-211",
+   "kind": "absent",
+   "to": "FRM-MF-305"
+  },
+  {
+   "from": "SOP-MF-211",
+   "kind": "absent",
+   "to": "FRM-MF-311"
+  },
+  {
+   "from": "SOP-MF-211",
+   "kind": "retrievable",
+   "to": "SOP-MF-207"
+  },
+  {
+   "from": "SOP-MF-211",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-MF-211",
+   "kind": "retrievable",
+   "to": "SOP-QA-133"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "absent",
+   "to": "FRM-QA-101"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "absent",
+   "to": "FRM-QA-104"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "absent",
+   "to": "FRM-QA-108"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "absent",
+   "to": "FRM-QA-408"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "retrievable",
+   "to": "SOP-QA-133"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "SOP-QA-101",
+   "kind": "retrievable",
+   "to": "SOP-WH-092"
+  },
+  {
+   "from": "SOP-QA-105",
+   "kind": "absent",
+   "to": "FRM-QA-501"
+  },
+  {
+   "from": "SOP-QA-105",
+   "kind": "absent",
+   "to": "FRM-QA-505"
+  },
+  {
+   "from": "SOP-QA-105",
+   "kind": "absent",
+   "to": "FRM-QA-510"
+  },
+  {
+   "from": "SOP-QA-105",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-QA-105",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "SOP-QA-105",
+   "kind": "retrievable",
+   "to": "SOP-TR-026"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "absent",
+   "to": "FRM-QA-301"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "absent",
+   "to": "FRM-QA-304"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "absent",
+   "to": "FRM-QA-307"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "absent",
+   "to": "FRM-QA-310"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "retrievable",
+   "to": "SOP-MF-207"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "SOP-QA-118",
+   "kind": "retrievable",
+   "to": "SOP-WH-064"
+  },
+  {
+   "from": "SOP-QA-133",
+   "kind": "absent",
+   "to": "FRM-QA-401"
+  },
+  {
+   "from": "SOP-QA-133",
+   "kind": "absent",
+   "to": "FRM-QA-405"
+  },
+  {
+   "from": "SOP-QA-133",
+   "kind": "absent",
+   "to": "FRM-QA-408"
+  },
+  {
+   "from": "SOP-QA-133",
+   "kind": "retrievable",
+   "to": "SOP-MF-211"
+  },
+  {
+   "from": "SOP-QA-133",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-QA-133",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "SOP-QA-133",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "absent",
+   "to": "FRM-QA-601"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "absent",
+   "to": "FRM-QA-604"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "absent",
+   "to": "FRM-QA-610"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "non_retrievable_only",
+   "to": "SOP-QA-058"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "retrievable",
+   "to": "SOP-QA-133"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "retrievable",
+   "to": "SOP-QA-151"
+  },
+  {
+   "from": "SOP-QA-146",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "SOP-QA-151",
+   "kind": "absent",
+   "to": "FRM-QA-607"
+  },
+  {
+   "from": "SOP-QA-151",
+   "kind": "absent",
+   "to": "FRM-QA-610"
+  },
+  {
+   "from": "SOP-QA-151",
+   "kind": "non_retrievable_only",
+   "to": "SOP-QA-058"
+  },
+  {
+   "from": "SOP-QA-151",
+   "kind": "retrievable",
+   "to": "SOP-QA-133"
+  },
+  {
+   "from": "SOP-QA-151",
+   "kind": "retrievable",
+   "to": "SOP-QA-146"
+  },
+  {
+   "from": "SOP-QA-151",
+   "kind": "retrievable",
+   "to": "SOP-WH-088"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "absent",
+   "to": "FRM-QA-201"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "absent",
+   "to": "FRM-QA-204"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "absent",
+   "to": "FRM-QA-207"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "absent",
+   "to": "FRM-QA-210"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "absent",
+   "to": "FRM-QA-214"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-QA-172",
+   "kind": "retrievable",
+   "to": "SOP-QA-146"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "absent",
+   "to": "FRM-QC-117"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "absent",
+   "to": "FRM-QC-121"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "absent",
+   "to": "FRM-QC-126"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "absent",
+   "to": "FRM-QC-131"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "retrievable",
+   "to": "SOP-MF-207"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "retrievable",
+   "to": "SOP-QC-219"
+  },
+  {
+   "from": "SOP-QC-214",
+   "kind": "retrievable",
+   "to": "SOP-TR-021"
+  },
+  {
+   "from": "SOP-QC-219",
+   "kind": "absent",
+   "to": "FRM-QC-121"
+  },
+  {
+   "from": "SOP-QC-219",
+   "kind": "absent",
+   "to": "FRM-QC-126"
+  },
+  {
+   "from": "SOP-QC-219",
+   "kind": "absent",
+   "to": "FRM-TR-101"
+  },
+  {
+   "from": "SOP-QC-219",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-QC-219",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "SOP-QC-219",
+   "kind": "retrievable",
+   "to": "SOP-TR-021"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "absent",
+   "to": "FRM-QC-301"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "absent",
+   "to": "FRM-QC-305"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "absent",
+   "to": "FRM-QC-310"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "retrievable",
+   "to": "SOP-QA-133"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "retrievable",
+   "to": "SOP-WH-088"
+  },
+  {
+   "from": "SOP-QC-236",
+   "kind": "retrievable",
+   "to": "SOP-WH-092"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "absent",
+   "to": "FRM-TR-101"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "absent",
+   "to": "FRM-TR-105"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "absent",
+   "to": "FRM-TR-110"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "retrievable",
+   "to": "SOP-MF-207"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "retrievable",
+   "to": "SOP-QC-219"
+  },
+  {
+   "from": "SOP-TR-021",
+   "kind": "retrievable",
+   "to": "SOP-TR-026"
+  },
+  {
+   "from": "SOP-TR-026",
+   "kind": "absent",
+   "to": "FRM-TR-110"
+  },
+  {
+   "from": "SOP-TR-026",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "SOP-TR-026",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "SOP-TR-026",
+   "kind": "retrievable",
+   "to": "SOP-TR-021"
+  },
+  {
+   "from": "SOP-WH-064",
+   "kind": "absent",
+   "to": "FRM-WH-501"
+  },
+  {
+   "from": "SOP-WH-064",
+   "kind": "absent",
+   "to": "FRM-WH-505"
+  },
+  {
+   "from": "SOP-WH-064",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-WH-064",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-WH-064",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "SOP-WH-064",
+   "kind": "non_retrievable_only",
+   "to": "SOP-WH-019"
+  },
+  {
+   "from": "SOP-WH-064",
+   "kind": "retrievable",
+   "to": "SOP-WH-071"
+  },
+  {
+   "from": "SOP-WH-071",
+   "kind": "absent",
+   "to": "FRM-WH-510"
+  },
+  {
+   "from": "SOP-WH-071",
+   "kind": "absent",
+   "to": "FRM-WH-515"
+  },
+  {
+   "from": "SOP-WH-071",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-WH-071",
+   "kind": "non_retrievable_only",
+   "to": "SOP-WH-019"
+  },
+  {
+   "from": "SOP-WH-071",
+   "kind": "retrievable",
+   "to": "SOP-WH-064"
+  },
+  {
+   "from": "SOP-WH-071",
+   "kind": "retrievable",
+   "to": "SOP-WH-088"
+  },
+  {
+   "from": "SOP-WH-088",
+   "kind": "absent",
+   "to": "FRM-WH-401"
+  },
+  {
+   "from": "SOP-WH-088",
+   "kind": "absent",
+   "to": "FRM-WH-410"
+  },
+  {
+   "from": "SOP-WH-088",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "SOP-WH-088",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-WH-088",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SOP-WH-088",
+   "kind": "retrievable",
+   "to": "SOP-WH-092"
+  },
+  {
+   "from": "SOP-WH-092",
+   "kind": "absent",
+   "to": "FRM-WH-405"
+  },
+  {
+   "from": "SOP-WH-092",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "SOP-WH-092",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SOP-WH-092",
+   "kind": "retrievable",
+   "to": "SOP-WH-088"
+  },
+  {
+   "from": "SPC-2231",
+   "kind": "absent",
+   "to": "FRM-QC-117"
+  },
+  {
+   "from": "SPC-2231",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "SPC-2231",
+   "kind": "retrievable",
+   "to": "SOP-QC-219"
+  },
+  {
+   "from": "SPC-2245",
+   "kind": "absent",
+   "to": "FRM-QA-301"
+  },
+  {
+   "from": "SPC-2245",
+   "kind": "absent",
+   "to": "FRM-QA-304"
+  },
+  {
+   "from": "SPC-2245",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "SPC-2245",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SPC-2245",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "SPC-2245",
+   "kind": "retrievable",
+   "to": "SOP-WH-064"
+  },
+  {
+   "from": "SPC-2252",
+   "kind": "absent",
+   "to": "FRM-EN-301"
+  },
+  {
+   "from": "SPC-2252",
+   "kind": "absent",
+   "to": "FRM-QC-201"
+  },
+  {
+   "from": "SPC-2252",
+   "kind": "retrievable",
+   "to": "SOP-EN-152"
+  },
+  {
+   "from": "SPC-2252",
+   "kind": "retrievable",
+   "to": "SOP-EN-158"
+  },
+  {
+   "from": "SPC-2260",
+   "kind": "absent",
+   "to": "FRM-MF-301"
+  },
+  {
+   "from": "SPC-2260",
+   "kind": "absent",
+   "to": "FRM-MF-305"
+  },
+  {
+   "from": "SPC-2260",
+   "kind": "retrievable",
+   "to": "SOP-MF-207"
+  },
+  {
+   "from": "SPC-2271",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "SPC-2271",
+   "kind": "retrievable",
+   "to": "SOP-QA-118"
+  },
+  {
+   "from": "SPC-2271",
+   "kind": "retrievable",
+   "to": "SOP-QC-236"
+  },
+  {
+   "from": "TCN-4102",
+   "kind": "absent",
+   "to": "FRM-QA-210"
+  },
+  {
+   "from": "TCN-4102",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "TCN-4110",
+   "kind": "absent",
+   "to": "FRM-QC-305"
+  },
+  {
+   "from": "TCN-4110",
+   "kind": "retrievable",
+   "to": "SOP-QC-236"
+  },
+  {
+   "from": "TRN-3308",
+   "kind": "absent",
+   "to": "FRM-QC-117"
+  },
+  {
+   "from": "TRN-3308",
+   "kind": "retrievable",
+   "to": "SOP-QC-214"
+  },
+  {
+   "from": "TRN-3315",
+   "kind": "absent",
+   "to": "FRM-EN-201"
+  },
+  {
+   "from": "TRN-3315",
+   "kind": "absent",
+   "to": "FRM-EN-205"
+  },
+  {
+   "from": "TRN-3315",
+   "kind": "retrievable",
+   "to": "SOP-EN-131"
+  },
+  {
+   "from": "TRN-3322",
+   "kind": "absent",
+   "to": "FRM-QA-204"
+  },
+  {
+   "from": "TRN-3322",
+   "kind": "absent",
+   "to": "FRM-QA-207"
+  },
+  {
+   "from": "TRN-3322",
+   "kind": "absent",
+   "to": "FRM-QA-214"
+  },
+  {
+   "from": "TRN-3322",
+   "kind": "retrievable",
+   "to": "SOP-QA-172"
+  },
+  {
+   "from": "TRN-3330",
+   "kind": "absent",
+   "to": "FRM-WH-401"
+  },
+  {
+   "from": "TRN-3330",
+   "kind": "retrievable",
+   "to": "SOP-WH-088"
+  },
+  {
+   "from": "TRN-3341",
+   "kind": "absent",
+   "to": "FRM-QA-101"
+  },
+  {
+   "from": "TRN-3341",
+   "kind": "absent",
+   "to": "FRM-QA-104"
+  },
+  {
+   "from": "TRN-3341",
+   "kind": "retrievable",
+   "to": "SOP-QA-101"
+  },
+  {
+   "from": "TRN-3352",
+   "kind": "retrievable",
+   "to": "SOP-EN-152"
+  },
+  {
+   "from": "TRN-3358",
+   "kind": "absent",
+   "to": "FRM-MF-301"
+  },
+  {
+   "from": "TRN-3358",
+   "kind": "retrievable",
+   "to": "SOP-MF-207"
+  },
+  {
+   "from": "TRN-3370",
+   "kind": "absent",
+   "to": "FRM-QC-301"
+  },
+  {
+   "from": "TRN-3370",
+   "kind": "absent",
+   "to": "FRM-QC-310"
+  },
+  {
+   "from": "TRN-3370",
+   "kind": "retrievable",
+   "to": "SOP-QC-236"
+  },
+  {
+   "from": "TRN-3376",
+   "kind": "absent",
+   "to": "FRM-WH-510"
+  },
+  {
+   "from": "TRN-3376",
+   "kind": "retrievable",
+   "to": "SOP-WH-064"
+  },
+  {
+   "from": "TRN-3376",
+   "kind": "retrievable",
+   "to": "SOP-WH-071"
+  },
+  {
+   "from": "TRN-3384",
+   "kind": "absent",
+   "to": "FRM-QA-501"
+  },
+  {
+   "from": "TRN-3384",
+   "kind": "absent",
+   "to": "FRM-QA-505"
+  },
+  {
+   "from": "TRN-3384",
+   "kind": "absent",
+   "to": "FRM-QA-510"
+  },
+  {
+   "from": "TRN-3384",
+   "kind": "retrievable",
+   "to": "SOP-QA-105"
+  },
+  {
+   "from": "TRN-3391",
+   "kind": "retrievable",
+   "to": "SOP-QC-219"
+  },
+  {
+   "from": "TRN-3391",
+   "kind": "retrievable",
+   "to": "SOP-TR-021"
+  },
+  {
+   "from": "TRN-3397",
+   "kind": "absent",
+   "to": "FRM-QA-601"
+  },
+  {
+   "from": "TRN-3397",
+   "kind": "retrievable",
+   "to": "SOP-QA-146"
+  },
+  {
+   "from": "TRN-3397",
+   "kind": "retrievable",
+   "to": "SOP-QA-151"
+  }
+ ],
+ "supersedes": [
+  {
+   "doc_id": "SOP-EN-131",
+   "new_version": "4.0",
+   "old_version": "3.0"
+  },
+  {
+   "doc_id": "SOP-QA-101",
+   "new_version": "3.0",
+   "old_version": "2.0"
+  },
+  {
+   "doc_id": "SOP-QA-105",
+   "new_version": "4.0",
+   "old_version": "3.0"
+  },
+  {
+   "doc_id": "SOP-QA-118",
+   "new_version": "4.0",
+   "old_version": "3.0"
+  },
+  {
+   "doc_id": "SOP-QA-133",
+   "new_version": "3.0",
+   "old_version": "2.0"
+  },
+  {
+   "doc_id": "SOP-QA-146",
+   "new_version": "3.0",
+   "old_version": "2.0"
+  },
+  {
+   "doc_id": "SOP-QA-172",
+   "new_version": "2.0",
+   "old_version": "1.0"
+  },
+  {
+   "doc_id": "SOP-WH-064",
+   "new_version": "3.0",
+   "old_version": "2.0"
+  },
+  {
+   "doc_id": "SOP-WH-088",
+   "new_version": "3.0",
+   "old_version": "2.0"
+  },
+  {
+   "doc_id": "SPC-2231",
+   "new_version": "2.0",
+   "old_version": "1.0"
+  },
+  {
+   "doc_id": "SPC-2252",
+   "new_version": "2.0",
+   "old_version": "1.0"
+  },
+  {
+   "doc_id": "SPC-2260",
+   "new_version": "2.0",
+   "old_version": "1.0"
+  },
+  {
+   "doc_id": "SPC-2271",
+   "new_version": "2.0",
+   "old_version": "1.0"
+  }
+ ]
 }
