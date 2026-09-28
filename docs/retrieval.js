@@ -6,7 +6,9 @@
  *
  * Faithful to rank-bm25 BM25Okapi defaults: k1=1.5, b=0.75, epsilon=0.25.
  * The corpus chunks are status-gated (Approved/Effective only) at export time,
- * exactly as Python chunk_documents() does, so Draft/Obsolete never appear here.
+ * exactly as Python chunk_documents() does, so Draft/Obsolete never appear in `chunks`.
+ * `held_out_chunks` (Draft/Obsolete/Superseded) feed only the status-blind index that
+ * explains a refusal (ADR-018); they never become answer evidence.
  */
 (function (global) {
   "use strict";
@@ -107,11 +109,11 @@
   // core even though chunk.text is now the exact cited source span (heading lives in its field).
   function indexText(c) { return c.section_heading + "\n" + c.text; }
 
-  function makeEngine(data) {
-    var chunks = data.chunks;
+  var RETRIEVABLE_STATUSES = new Set(["Approved", "Effective"]);
+
+  // BM25 -> score floor -> deterministic tie-break -> ADR-012 gate over one chunk list.
+  function makeQuery(chunks, minTopCoverage, scoreFloor) {
     var bm25 = new BM25(chunks.map(function (c) { return tokenize(indexText(c)); }));
-    var minTopCoverage = data.min_top_coverage == null ? 0.6 : data.min_top_coverage;
-    var scoreFloor = data.score_floor == null ? 0.0 : data.score_floor;
 
     function query(queryText, topK) {
       topK = topK || 3;
@@ -139,10 +141,30 @@
       return hits;
     }
 
+    query.bm25 = bm25;
+    return query;
+  }
+
+  function makeEngine(data) {
+    var minTopCoverage = data.min_top_coverage == null ? 0.6 : data.min_top_coverage;
+    var scoreFloor = data.score_floor == null ? 0.0 : data.score_floor;
+    var query = makeQuery(data.chunks, minTopCoverage, scoreFloor);
+    // ADR-018: the same query path over every valid document, ignoring status. Mirrors Python
+    // build_status_blind_retriever() + held_out_hits(). Display only: it names what the status
+    // gate kept out of a refusal and never supplies evidence.
+    var statusBlind = makeQuery(data.chunks.concat(data.held_out_chunks || []), minTopCoverage, scoreFloor);
+
+    function heldOut(queryText, topK) {
+      return statusBlind(queryText, topK).filter(function (h) {
+        return !RETRIEVABLE_STATUSES.has(h.chunk.status);
+      });
+    }
+
     function answer(queryText, topK) {
       var hits = query(queryText, topK);
       if (!hits.length) {
         return { outcome: "refusal", answer_text: data.refusal_text, hits: [],
+                 held_out: heldOut(queryText, topK),
                  review_recommended: true, reasons: ["refusal_no_supporting_documents"],
                  documents_excluded: data.documents_excluded, documents_retrievable: data.documents_retrievable };
       }
@@ -152,7 +174,7 @@
                documents_excluded: data.documents_excluded, documents_retrievable: data.documents_retrievable };
     }
 
-    return { query: query, answer: answer, bm25: bm25 };
+    return { query: query, answer: answer, heldOut: heldOut, bm25: query.bm25 };
   }
 
   var api = { tokenize: tokenize, contentTerms: contentTerms, coverage: coverage, BM25: BM25, makeEngine: makeEngine };

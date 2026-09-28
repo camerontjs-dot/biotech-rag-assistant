@@ -178,7 +178,7 @@ function renderAnswer(data) {
   const head = `
     <div class="answer-head">
       <span>Answer assembled from <b>${chunks.length}</b> approved passage${chunks.length === 1 ? "" : "s"}</span>
-      ${valid ? '<span class="check">✓ citations validated</span>' : '<span class="err">citations failed validation</span>'}
+      ${valid ? '<span class="check" title="Structural check: every citation points at a retrieved Approved / Effective passage. It does not check that the passage states the answer.">✓ citations resolve to retrieved passages</span>' : '<span class="err">citations did not resolve</span>'}
     </div>`;
   const cards = chunks.map((c) => `
     <div class="card">

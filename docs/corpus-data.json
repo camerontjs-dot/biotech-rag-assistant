@@ -314,6 +314,76 @@
       "source_hash": "sha256:1bf23522004cf07f26698e019c98a2ecf8a477e57cbd0d13206b7c86748dacd8"
     }
   ],
+  "held_out_chunks": [
+    {
+      "chunk_id": "SOP-QA-009_v0_8_chunk_001",
+      "doc_id": "SOP-QA-009",
+      "doc_title": "Obsolete sterility hold practice",
+      "doc_type": "SOP",
+      "version": "0.8",
+      "status": "Obsolete",
+      "department": "QA",
+      "section_heading": "Obsolete instruction",
+      "source_file_path": "documents/SOP-QA-009-sterility-obsolete.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "This obsolete synthetic procedure says membrane filtration hold time may extend to 96 hours with verbal QA approval.",
+      "char_start": 61,
+      "char_end": 177,
+      "source_hash": "sha256:cc66a5a500deb8bd9948472d9b335928eaa69d2127bc8fa5418ec268f29a9582"
+    },
+    {
+      "chunk_id": "SOP-QA-009_v0_8_chunk_002",
+      "doc_id": "SOP-QA-009",
+      "doc_title": "Obsolete sterility hold practice",
+      "doc_type": "SOP",
+      "version": "0.8",
+      "status": "Obsolete",
+      "department": "QA",
+      "section_heading": "Obsolete status",
+      "source_file_path": "documents/SOP-QA-009-sterility-obsolete.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "This document is included only to test that obsolete documents stay out of retrieval context.",
+      "char_start": 199,
+      "char_end": 292,
+      "source_hash": "sha256:cc66a5a500deb8bd9948472d9b335928eaa69d2127bc8fa5418ec268f29a9582"
+    },
+    {
+      "chunk_id": "SOP-QA-010_v0_1_chunk_001",
+      "doc_id": "SOP-QA-010",
+      "doc_title": "Draft cleaning validation approach",
+      "doc_type": "SOP",
+      "version": "0.1",
+      "status": "Draft",
+      "department": "QA",
+      "section_heading": "Draft instruction",
+      "source_file_path": "documents/SOP-QA-010-draft-cleaning-validation.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "This draft synthetic procedure proposes a visual-only residue check after campaign changeover.",
+      "char_start": 60,
+      "char_end": 154,
+      "source_hash": "sha256:76e75176052e59f0dc641b20ee387b1ac98d7ddae6c23c0fa5805e9c8042efcb"
+    },
+    {
+      "chunk_id": "SOP-QA-010_v0_1_chunk_002",
+      "doc_id": "SOP-QA-010",
+      "doc_title": "Draft cleaning validation approach",
+      "doc_type": "SOP",
+      "version": "0.1",
+      "status": "Draft",
+      "department": "QA",
+      "section_heading": "Draft status",
+      "source_file_path": "documents/SOP-QA-010-draft-cleaning-validation.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "This document is included only to test that draft documents stay out of retrieval context.",
+      "char_start": 173,
+      "char_end": 263,
+      "source_hash": "sha256:76e75176052e59f0dc641b20ee387b1ac98d7ddae6c23c0fa5805e9c8042efcb"
+    }
+  ],
   "excluded_documents": [
     {
       "doc_id": "SOP-QA-009",

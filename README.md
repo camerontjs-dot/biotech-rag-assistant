@@ -6,7 +6,7 @@ A controlled-document retrieval pilot for regulated industries (pharma, biotech,
 
 The current slice is deliberately narrow and fully deterministic: it validates document metadata and source hashes (fail-closed), gates retrieval to `Approved`/`Effective` documents, chunks source text with stable IDs and **exact-span provenance** (a citation's quote is the source text at `raw_text[char_start:char_end]`), ranks with BM25 behind a lexical refusal gate, and assembles extractive answers whose citations must resolve to retrieved chunks.
 
-The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, then shows the retired SOP the status gate kept out. Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (17 ADRs). The Python core is exercised by 97 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
+The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (18 ADRs). The Python core is exercised by 113 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
 
 ## What this is and is not
 
@@ -93,6 +93,7 @@ The current code ships:
 - deterministic paragraph chunking with stable chunk IDs;
 - shared `RetrievalConfig` used by retrieval, evaluation, and answer assembly;
 - BM25 retrieval over approved/effective chunks only, with a lexical relevance gate that refuses off-topic questions instead of copying loosely-related passages (ADR-012);
+- a refusal explanation that names any held-out (Draft/Obsolete/Superseded) passage a status-blind run of the same query would have answered from, display-only and never evidence (ADR-018);
 - CLI surfaces for corpus validation, retrieval, deterministic extractive answers, citation validation, and evaluation, plus a demo chat UI (`biotech-rag demo`) that serves a trust-forward page over the `/answer` contract;
 - a FastAPI pure-transport layer (`biotech-rag serve`) exposing the same five operations plus `/health`, with a server-bound corpus allowlist, optional API-key auth, per-request audit records, and an advisory review-routing signal on `/answer`;
 - structural citation-resolution validation over hand-written answer fixtures;
@@ -106,6 +107,8 @@ Deferred work:
 - semantic citation-support assessment;
 - semantic retrieval and reciprocal-rank fusion;
 - n8n workflow exports.
+
+Known gap: a near-miss question, whose topic the corpus covers but whose fact it never states, passes the relevance gate. "What is the acceptance range for the analytical balance daily check?" returns the passage that mentions the range without giving it. The extractive answer asserts nothing, so the failure is benign today; with a generator it becomes a path to a fabricated value. `tests/test_known_gaps.py` pins the current behavior.
 
 ## Verification
 
