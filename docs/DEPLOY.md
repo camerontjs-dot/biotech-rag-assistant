@@ -32,7 +32,7 @@ that branch and folder.
 The static demo must not drift from the Python core. After any corpus or retrieval change:
 
 ```bash
-python scripts/build_pages_demo.py    # re-exports corpus-data.json + asserts JS==Python (40/40)
+python scripts/build_pages_demo.py    # re-exports corpus-data.json + asserts JS==Python (42/42)
 git add docs/ && git commit -m "demo: refresh static Pages data" && git push
 ```
 

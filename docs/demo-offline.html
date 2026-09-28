@@ -67,6 +67,12 @@
     padding:3px 9px; border-radius:6px; background:#fde8c8; color:var(--refuse-ink); border:1px solid var(--refuse-line); }
   .heldnote { margin-top:12px; font-size:12.5px; color:#4a3a1c; border-top:1px dashed var(--refuse-line); padding-top:10px; }
   .heldnote button { font-size:12.5px; color:var(--refuse-ink); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; font-weight:600; }
+  .heldnote .heldtitle { font-weight:700; color:var(--refuse-ink); margin-bottom:2px; }
+  .heldlist { list-style:none; margin:8px 0; padding:0; display:grid; gap:6px; }
+  .heldlist li { display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px; }
+  .heldlist .st { font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.03em; padding:2px 7px; border-radius:6px;
+    background:var(--held-bg); color:var(--held-ink); border:1px solid var(--held-line); }
+  .heldlist .rank { font-size:11.5px; color:var(--muted); }
   .err { color:#9a2b2b; font-size:13px; margin-top:10px; }
   footer.boundary { margin-top:28px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
   footer.boundary b { color:var(--ink); }
@@ -110,7 +116,7 @@
     <span class="chip" data-q="How does QA respond to a viable environmental monitoring excursion?">env excursion response</span>
     <span class="chip" data-q="How do staff confirm the current approved version of a controlled document?">current approved version</span>
     <span class="chip" data-q="What is the daily balance calibration check requirement?">balance calibration</span>
-    <span class="chip warn" data-q="What is the membrane filtration hold time for sterility?" data-reveal="SOP-QA-009">obsolete-doc trap → watch it refuse</span>
+    <span class="chip warn" data-q="What is the membrane filtration hold time for sterility?">obsolete-doc trap → watch it refuse</span>
     <span class="chip warn" data-q="What is the company vacation policy and paid days off?">off-topic → refuse</span>
   </div>
 
@@ -122,7 +128,7 @@
     <b>What this is not.</b> Not a validated GxP / regulated quality system. It does not certify compliance, verify that a
     document is true, or make batch-release, deviation, or any regulated decision. Retrieval nominates candidate passages;
     a qualified human decides. Runs on a synthetic corpus only; the retrieval logic here mirrors the Python core (BM25 +
-    relevance gate + status gating), verified at parity.
+    relevance gate + status gating, and the held-out check behind a refusal), verified at parity.
   </footer>
 </div>
 
@@ -444,6 +450,76 @@
       "source_hash": "sha256:1bf23522004cf07f26698e019c98a2ecf8a477e57cbd0d13206b7c86748dacd8"
     }
   ],
+  "held_out_chunks": [
+    {
+      "chunk_id": "SOP-QA-009_v0_8_chunk_001",
+      "doc_id": "SOP-QA-009",
+      "doc_title": "Obsolete sterility hold practice",
+      "doc_type": "SOP",
+      "version": "0.8",
+      "status": "Obsolete",
+      "department": "QA",
+      "section_heading": "Obsolete instruction",
+      "source_file_path": "documents/SOP-QA-009-sterility-obsolete.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "This obsolete synthetic procedure says membrane filtration hold time may extend to 96 hours with verbal QA approval.",
+      "char_start": 61,
+      "char_end": 177,
+      "source_hash": "sha256:cc66a5a500deb8bd9948472d9b335928eaa69d2127bc8fa5418ec268f29a9582"
+    },
+    {
+      "chunk_id": "SOP-QA-009_v0_8_chunk_002",
+      "doc_id": "SOP-QA-009",
+      "doc_title": "Obsolete sterility hold practice",
+      "doc_type": "SOP",
+      "version": "0.8",
+      "status": "Obsolete",
+      "department": "QA",
+      "section_heading": "Obsolete status",
+      "source_file_path": "documents/SOP-QA-009-sterility-obsolete.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "This document is included only to test that obsolete documents stay out of retrieval context.",
+      "char_start": 199,
+      "char_end": 292,
+      "source_hash": "sha256:cc66a5a500deb8bd9948472d9b335928eaa69d2127bc8fa5418ec268f29a9582"
+    },
+    {
+      "chunk_id": "SOP-QA-010_v0_1_chunk_001",
+      "doc_id": "SOP-QA-010",
+      "doc_title": "Draft cleaning validation approach",
+      "doc_type": "SOP",
+      "version": "0.1",
+      "status": "Draft",
+      "department": "QA",
+      "section_heading": "Draft instruction",
+      "source_file_path": "documents/SOP-QA-010-draft-cleaning-validation.md",
+      "chunk_index": 1,
+      "line_or_page_span": "lines 5-5",
+      "text": "This draft synthetic procedure proposes a visual-only residue check after campaign changeover.",
+      "char_start": 60,
+      "char_end": 154,
+      "source_hash": "sha256:76e75176052e59f0dc641b20ee387b1ac98d7ddae6c23c0fa5805e9c8042efcb"
+    },
+    {
+      "chunk_id": "SOP-QA-010_v0_1_chunk_002",
+      "doc_id": "SOP-QA-010",
+      "doc_title": "Draft cleaning validation approach",
+      "doc_type": "SOP",
+      "version": "0.1",
+      "status": "Draft",
+      "department": "QA",
+      "section_heading": "Draft status",
+      "source_file_path": "documents/SOP-QA-010-draft-cleaning-validation.md",
+      "chunk_index": 2,
+      "line_or_page_span": "lines 9-9",
+      "text": "This document is included only to test that draft documents stay out of retrieval context.",
+      "char_start": 173,
+      "char_end": 263,
+      "source_hash": "sha256:76e75176052e59f0dc641b20ee387b1ac98d7ddae6c23c0fa5805e9c8042efcb"
+    }
+  ],
   "excluded_documents": [
     {
       "doc_id": "SOP-QA-009",
@@ -486,7 +562,9 @@
  *
  * Faithful to rank-bm25 BM25Okapi defaults: k1=1.5, b=0.75, epsilon=0.25.
  * The corpus chunks are status-gated (Approved/Effective only) at export time,
- * exactly as Python chunk_documents() does, so Draft/Obsolete never appear here.
+ * exactly as Python chunk_documents() does, so Draft/Obsolete never appear in `chunks`.
+ * `held_out_chunks` (Draft/Obsolete/Superseded) feed only the status-blind index that
+ * explains a refusal (ADR-018); they never become answer evidence.
  */
 (function (global) {
   "use strict";
@@ -587,11 +665,11 @@
   // core even though chunk.text is now the exact cited source span (heading lives in its field).
   function indexText(c) { return c.section_heading + "\n" + c.text; }
 
-  function makeEngine(data) {
-    var chunks = data.chunks;
+  var RETRIEVABLE_STATUSES = new Set(["Approved", "Effective"]);
+
+  // BM25 -> score floor -> deterministic tie-break -> ADR-012 gate over one chunk list.
+  function makeQuery(chunks, minTopCoverage, scoreFloor) {
     var bm25 = new BM25(chunks.map(function (c) { return tokenize(indexText(c)); }));
-    var minTopCoverage = data.min_top_coverage == null ? 0.6 : data.min_top_coverage;
-    var scoreFloor = data.score_floor == null ? 0.0 : data.score_floor;
 
     function query(queryText, topK) {
       topK = topK || 3;
@@ -619,10 +697,30 @@
       return hits;
     }
 
+    query.bm25 = bm25;
+    return query;
+  }
+
+  function makeEngine(data) {
+    var minTopCoverage = data.min_top_coverage == null ? 0.6 : data.min_top_coverage;
+    var scoreFloor = data.score_floor == null ? 0.0 : data.score_floor;
+    var query = makeQuery(data.chunks, minTopCoverage, scoreFloor);
+    // ADR-018: the same query path over every valid document, ignoring status. Mirrors Python
+    // build_status_blind_retriever() + held_out_hits(). Display only: it names what the status
+    // gate kept out of a refusal and never supplies evidence.
+    var statusBlind = makeQuery(data.chunks.concat(data.held_out_chunks || []), minTopCoverage, scoreFloor);
+
+    function heldOut(queryText, topK) {
+      return statusBlind(queryText, topK).filter(function (h) {
+        return !RETRIEVABLE_STATUSES.has(h.chunk.status);
+      });
+    }
+
     function answer(queryText, topK) {
       var hits = query(queryText, topK);
       if (!hits.length) {
         return { outcome: "refusal", answer_text: data.refusal_text, hits: [],
+                 held_out: heldOut(queryText, topK),
                  review_recommended: true, reasons: ["refusal_no_supporting_documents"],
                  documents_excluded: data.documents_excluded, documents_retrievable: data.documents_retrievable };
       }
@@ -632,7 +730,7 @@
                documents_excluded: data.documents_excluded, documents_retrievable: data.documents_retrievable };
     }
 
-    return { query: query, answer: answer, bm25: bm25 };
+    return { query: query, answer: answer, heldOut: heldOut, bm25: query.bm25 };
   }
 
   var api = { tokenize: tokenize, contentTerms: contentTerms, coverage: coverage, BM25: BM25, makeEngine: makeEngine };
@@ -645,7 +743,7 @@
   var $ = function (s) { return document.querySelector(s); };
   var results = $("#results"), statusEl = $("#status"), excludedEl = $("#excluded");
   var overlay = $("#overlay"), modal = $("#modal");
-  var engine = null, DATA = null, chunkById = {}, excludedById = {};
+  var engine = null, DATA = null, chunkById = {}, excludedById = {}, heldChunkById = {};
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -679,18 +777,25 @@
     );
   }
 
-  // Reveal a held-out (non-retrievable) document: what the status gate kept out.
-  function viewHeldOut(docId) {
+  // Reveal a held-out (non-retrievable) document: what the status gate kept out. When opened from
+  // a refusal, highlight the passage a status-blind search would have quoted (ADR-018).
+  function viewHeldOut(docId, chunkId) {
     var d = excludedById[docId]; if (!d) return;
     var raw = DATA.sources[d.source_file_path];
+    var c = chunkId ? heldChunkById[chunkId] : null;
+    var body = raw == null ? esc("(source unavailable)")
+      : c ? esc(raw.slice(0, c.char_start)) + '<mark class="hl">' + esc(raw.slice(c.char_start, c.char_end)) +
+            "</mark>" + esc(raw.slice(c.char_end))
+      : esc(raw);
     openModal(
       mhead(d.doc_id + " — " + d.doc_title) +
       '<div class="mbody">' +
       '<div class="banner held">⛔ HELD OUT · status ' + esc(d.status) + " (v" + esc(d.version) + ") — this document is in the " +
         "corpus but is <u>never retrievable</u>, so the assistant can never answer from it.</div>" +
-      '<pre class="src">' + esc(raw != null ? raw : "(source unavailable)") + "</pre>" +
-      '<div class="provfoot">Excluded by the status gate — only <b>Approved / Effective</b> documents are indexed. ' +
-        "This is the content the refusal just kept out of the answer.</div>" +
+      '<pre class="src">' + body + "</pre>" +
+      '<div class="provfoot">Excluded by the status gate — only <b>Approved / Effective</b> documents are indexed, ' +
+        "so no answer can quote this text." +
+        (c ? " The highlighted passage is what the same search would have quoted without the gate." : "") +
       "</div></div>"
     );
   }
@@ -704,17 +809,31 @@
     }).join("");
   }
 
-  function renderRefusal(r, revealDocId) {
+  function renderRefusal(r) {
     var review = r.review_recommended
       ? '<div class="review">Review recommended' + (r.reasons && r.reasons.length ? " · " + esc(r.reasons.join(", ")) : "") + "</div>" : "";
+    // Held-out passages a status-blind run of this same search would have answered from (ADR-018),
+    // one entry per document at its best rank. Computed for every question, not per example.
+    var heldHits = [], seenDoc = {};
+    (r.held_out || []).forEach(function (h) {
+      if (!seenDoc[h.chunk.doc_id]) { seenDoc[h.chunk.doc_id] = true; heldHits.push(h); }
+    });
     var held = (DATA.excluded_documents || []);
-    var heldNote = held.length
+    var heldNote = heldHits.length
+      ? '<div class="heldnote"><div class="heldtitle">Held out by document control</div>' +
+        "Without the status gate, this same search would have answered from:" +
+        '<ul class="heldlist">' + heldHits.map(function (h) {
+          var c = h.chunk;
+          return '<li><span class="st">' + esc(c.status) + "</span>" +
+            '<button data-held="' + esc(c.doc_id) + '" data-chunk="' + esc(c.chunk_id) + '">' +
+            esc(c.doc_id) + " v" + esc(c.version) + " — " + esc(c.doc_title) + " →</button>" +
+            '<span class="rank">rank ' + h.rank + " without the gate</span></li>";
+        }).join("") + "</ul>" +
+        "Only Approved / Effective documents enter retrieval, so none of it could be used as evidence.</div>"
+      : held.length
       ? '<div class="heldnote">Note: ' + held.length + " document" + (held.length === 1 ? "" : "s") +
         " in this corpus are held out by status (" + held.map(function (d) { return esc(d.status); }).join(", ") +
-        ") and never enter retrieval — even if they match on keywords." +
-        (revealDocId && excludedById[revealDocId]
-          ? ' <button data-held="' + esc(revealDocId) + '">View the held-out document this refusal kept out →</button>'
-          : "") + "</div>"
+        ") and never enter retrieval. None of them would have answered this question either.</div>"
       : "";
     results.innerHTML =
       '<div class="refusal"><div class="rtitle">No approved source supports this question.</div>' +
@@ -725,7 +844,10 @@
     var head =
       '<div class="answer-head"><span>Answer assembled from <b>' + r.hits.length + "</b> approved passage" +
       (r.hits.length === 1 ? "" : "s") + "</span>" +
-      (r.citations_valid ? '<span class="check">✓ citations validated</span>' : '<span class="err">citations failed validation</span>') +
+      (r.citations_valid
+        ? '<span class="check" title="Structural check: every citation points at a retrieved Approved / Effective passage. ' +
+          'It does not check that the passage states the answer.">✓ citations resolve to retrieved passages</span>'
+        : '<span class="err">citations did not resolve</span>') +
       "</div>";
     var cards = r.hits.map(function (h) {
       var c = h.chunk;
@@ -744,13 +866,13 @@
     results.innerHTML = head + cards;
   }
 
-  function ask(qOverride, revealDocId) {
+  function ask(qOverride) {
     if (!engine) return;
     if (qOverride != null) $("#q").value = qOverride;
     var q = $("#q").value.trim();
     if (!q) return;
     var r = engine.answer(q, 3);
-    if (r.outcome === "refusal") renderRefusal(r, revealDocId || null); else renderAnswer(r);
+    if (r.outcome === "refusal") renderRefusal(r); else renderAnswer(r);
   }
 
   document.addEventListener("click", function (e) {
@@ -759,7 +881,7 @@
     var t = e.target.closest("[data-src],[data-held]");
     if (!t) return;
     if (t.hasAttribute("data-src")) viewSource(t.getAttribute("data-src"));
-    else if (t.hasAttribute("data-held")) viewHeldOut(t.getAttribute("data-held"));
+    else if (t.hasAttribute("data-held")) viewHeldOut(t.getAttribute("data-held"), t.getAttribute("data-chunk"));
   });
   overlay.addEventListener("click", function (e) { if (e.target === overlay) closeModal(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
@@ -769,12 +891,17 @@
     engine = BiotechRAG.makeEngine(data);
     (data.chunks || []).forEach(function (c) { chunkById[c.chunk_id] = c; });
     (data.excluded_documents || []).forEach(function (d) { excludedById[d.doc_id] = d; });
+    (data.held_out_chunks || []).forEach(function (c) { heldChunkById[c.chunk_id] = c; });
     $("#q").disabled = false; $("#ask").disabled = false;
     statusEl.innerHTML = "Corpus <code>" + esc(data.corpus_name) + "</code> · " +
       data.documents_retrievable + " retrievable documents · " +
       data.documents_excluded + " excluded by status";
     renderExcluded();
-    $("#q").focus();
+    // Deep link: ?q=<question> runs that question on load, so a link can open on a result.
+    var linked = null;
+    try { linked = new URLSearchParams(window.location.search).get("q"); } catch (e) { linked = null; }
+    if (linked && linked.trim()) ask(linked.trim().slice(0, 300));
+    else $("#q").focus();
   }
 
   // CORPUS_DATA is inlined in the self-contained offline build (demo-offline.html); the served
@@ -791,10 +918,10 @@
       });
   }
 
-  $("#ask").addEventListener("click", function () { ask(null, null); });
-  $("#q").addEventListener("keydown", function (e) { if (e.key === "Enter") ask(null, null); });
+  $("#ask").addEventListener("click", function () { ask(null); });
+  $("#q").addEventListener("keydown", function (e) { if (e.key === "Enter") ask(null); });
   document.querySelectorAll(".chip").forEach(function (chip) {
-    chip.addEventListener("click", function () { ask(chip.dataset.q, chip.dataset.reveal || null); });
+    chip.addEventListener("click", function () { ask(chip.dataset.q); });
   });
 </script>
 </body>

@@ -8,8 +8,13 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field
 from rank_bm25 import BM25Okapi
 
-from biotech_rag_assistant.chunking import chunk_documents
-from biotech_rag_assistant.models import DocumentChunk, RetrievalHit, SourceDocument
+from biotech_rag_assistant.chunking import chunk_document, chunk_documents
+from biotech_rag_assistant.models import (
+    RETRIEVABLE_STATUSES,
+    DocumentChunk,
+    RetrievalHit,
+    SourceDocument,
+)
 
 TOKEN_RE = re.compile(r"\w+")
 
@@ -167,3 +172,32 @@ def run_retrieval(
     with ``query_retriever`` rather than paying the chunk + index cost on every call.
     """
     return query_retriever(build_retriever(documents, method=config.method), query_text, config)
+
+
+def build_status_blind_retriever(documents: list[SourceDocument]) -> BM25Retriever:
+    """Index every valid document regardless of status, to explain refusals (ADR-018).
+
+    Retrieval, answer assembly, citation validation, and evaluation never read this index. It
+    answers one question after the fact: which held-out passage would this pipeline have used
+    if the status gate (ADR-005) were removed?
+    """
+    return BM25Retriever([chunk for document in documents for chunk in chunk_document(document)])
+
+
+def held_out_hits(
+    status_blind: BM25Retriever,
+    query_text: str,
+    config: RetrievalConfig,
+) -> list[RetrievalHit]:
+    """Non-retrievable hits that a status-blind run of the production query path returns.
+
+    Same BM25 ranking, score floor, and ADR-012 coverage gate as ``query_retriever``, over the
+    status-blind index; only Draft/Obsolete/Superseded hits are kept, with their status-blind
+    ranks. An empty list means no held-out passage would have reached the answer. Display only:
+    these chunks are never evidence.
+    """
+    return [
+        hit
+        for hit in query_retriever(status_blind, query_text, config)
+        if hit.chunk.status not in RETRIEVABLE_STATUSES
+    ]
