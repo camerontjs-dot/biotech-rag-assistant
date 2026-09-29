@@ -61,6 +61,35 @@ def test_retrieve_matches_cli_json() -> None:
     assert api == cli_out
 
 
+def test_evidence_packet_matches_cli_json() -> None:
+    client = make_client()
+    request = {
+        "query": GREEN_QUERY,
+        "top_k": 1,
+        "max_items": 1,
+        "max_tokens": 2000,
+    }
+    api = client.post("/evidence-packet", json=request).json()
+    cli_out = cli_json(
+        [
+            "inspect-packet",
+            str(DEMO_CORPUS),
+            "--query",
+            GREEN_QUERY,
+            "--top-k",
+            "1",
+            "--max-items",
+            "1",
+            "--max-tokens",
+            "2000",
+        ]
+    )
+    assert api == cli_out
+    assert api["packet_identity"].startswith("ep1:")
+    assert api["evidence_budget"]["used_items"] == 1
+    assert api["admitted"][0]["nomination"]["status"] in RETRIEVABLE_STATUSES
+
+
 def test_answer_minus_review_matches_cli_json() -> None:
     client = make_client()
     api = client.post("/answer", json={"query": GREEN_QUERY, "top_k": 1}).json()
