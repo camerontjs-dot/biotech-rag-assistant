@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ruff: noqa: E501
 """Export packet-only DEV generation bundles with no evaluator labels or gold."""
 from __future__ import annotations
 
