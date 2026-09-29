@@ -239,6 +239,30 @@
     "family": "B01",
     "question": "Class 2 instrument calibration interval lengthened by how much"
   },
+  "C-DEV-0121": {
+    "coverage": 0.14285714285714285,
+    "decisive_span_text": "| C | 12 CFU per plate | 25 CFU per plate |",
+    "family": "B04",
+    "question": "What is the action level for a contact plate taken in a Grade C room?"
+  },
+  "C-DEV-0122": {
+    "coverage": 0.5454545454545454,
+    "decisive_span_text": "Its probe EQ-0915 is logged every 15 minutes, and the high temperature alarm sounds after 25 minutes outside the range.",
+    "family": "B04",
+    "question": "For the freezer, how long can the reading stay outside its range before the high temperature alarm sounds?"
+  },
+  "C-DEV-0123": {
+    "coverage": 0.25,
+    "decisive_span_text": "| Low-mass check | Read the 1 g weight | Within plus or minus 0.1 mg |",
+    "family": "B04",
+    "question": "How closely must a 1 g weight read during a full calibration of an analytical balance?"
+  },
+  "C-DEV-0124": {
+    "coverage": 0.8461538461538461,
+    "decisive_span_text": "An action that is 10 working days past its due date goes on the agenda of the CAPA review board, and the owner attends to explain the delay.",
+    "family": "B04",
+    "question": "How many working days past its due date does an action have to be before it goes on the agenda of the CAPA review board?"
+  },
   "C-TEST-0041": {
     "coverage": 0.7,
     "decisive_span_text": "The QA reviewer checks the request and assigns its class within 3 working days of receiving it.",
@@ -718,5 +742,29 @@
     "decisive_span_text": "Samples are taken in the sampling booth RM-334 (Grade C), which has unidirectional airflow and is cleaned at least 15 minutes before every sampling session.",
     "family": "B03",
     "question": "sampling booth incoming materials room"
+  },
+  "C-TEST-0125": {
+    "coverage": 0.375,
+    "decisive_span_text": "| Total organic carbon | 300 ppb | 400 ppb |",
+    "family": "B04",
+    "question": "What is the action level for total organic carbon in the water for injection loop?"
+  },
+  "C-TEST-0126": {
+    "coverage": 0.5384615384615384,
+    "decisive_span_text": "| Clean hold, washed parts | End of cleaning and drying | 72 hours, stored covered in RM-325 |",
+    "family": "B04",
+    "question": "How long can washed parts stay clean and covered after cleaning and drying before the hold limit is passed?"
+  },
+  "C-TEST-0127": {
+    "coverage": 0.16666666666666666,
+    "decisive_span_text": "| CH-04 | Refrigerated | 5 degrees C | Plus or minus 3 degrees C |",
+    "family": "B04",
+    "question": "What temperature tolerance applies to the refrigerated stability chamber?"
+  },
+  "C-TEST-0128": {
+    "coverage": 0.0,
+    "decisive_span_text": "| 11 to 30 | 6 |",
+    "family": "B04",
+    "question": "How many containers are sampled on receipt from a lot of 20 discrete containers?"
   }
 }
