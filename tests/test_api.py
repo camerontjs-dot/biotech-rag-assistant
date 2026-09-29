@@ -188,6 +188,15 @@ def test_unknown_corpus_name_returns_404() -> None:
     assert response.status_code == 404
 
 
+def test_evidence_packet_filesystem_path_input_is_rejected() -> None:
+    client = make_client()
+    response = client.post(
+        "/evidence-packet",
+        json={"query": GREEN_QUERY, "corpus_dir": "/etc/passwd"},
+    )
+    assert response.status_code == 422
+
+
 def test_filesystem_path_input_is_rejected() -> None:
     client = make_client()
     response = client.post("/retrieve", json={"query": GREEN_QUERY, "corpus_dir": "/etc/passwd"})
@@ -246,6 +255,21 @@ def test_audit_record_appended_as_jsonl(tmp_path: Path) -> None:
     assert record["query"] == GREEN_QUERY
     assert record["status_code"] == 200
     assert record["request_id"] == response.headers["X-Request-ID"]
+
+
+def test_evidence_packet_audit_records_packet_identity(tmp_path: Path) -> None:
+    audit_path = tmp_path / "audit.jsonl"
+    client = make_client(audit_log_path=audit_path)
+    response = client.post(
+        "/evidence-packet",
+        json={"query": GREEN_QUERY, "top_k": 1},
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    record = json.loads(audit_path.read_text("utf-8").strip())
+    assert record["route"] == "/evidence-packet"
+    assert record["packet_identity"] == payload["packet_identity"]
+    assert record["admitted_count"] == payload["evidence_budget"]["used_items"]
 
 
 def test_health_is_not_audited(tmp_path: Path) -> None:
