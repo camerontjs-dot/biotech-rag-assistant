@@ -1,0 +1,34 @@
+name: controlled-docs-v2.1 freeze verification
+
+on:
+  pull_request:
+    paths:
+      - "benchmarks/controlled-docs-v2.1/**"
+      - "research/verify_controlled_docs_v21_freeze.py"
+      - ".github/workflows/research-controlled-docs-v21-freeze.yml"
+  workflow_dispatch:
+
+jobs:
+  verify-freeze:
+    name: verify frozen v2.1 identity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify frozen benchmark identity
+        shell: bash
+        run: |
+          mkdir -p build/research/controlled-docs-v2.1
+          python research/verify_controlled_docs_v21_freeze.py             --benchmark benchmarks/controlled-docs-v2.1             | tee build/research/controlled-docs-v2.1/freeze-verification.json
+
+      - name: Upload freeze receipt verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: controlled-docs-v2.1-freeze-verification
+          path: build/research/controlled-docs-v2.1/freeze-verification.json
+          if-no-files-found: error
