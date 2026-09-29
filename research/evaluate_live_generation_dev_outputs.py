@@ -54,14 +54,32 @@ def load_outputs(path: Path) -> tuple[dict[str, object], list[str]]:
     return outputs, errors
 
 
-def verify_bundle(bundle: Path) -> tuple[dict, str, list[str]]:
+def verify_bundle(
+    bundle: Path,
+    *,
+    wave: str,
+) -> tuple[dict, str, list[str]]:
+    """Verify only authority needed for the selected wave.
+
+    The manifest itself is always read and hashed. For wave A, Wave B is not
+    opened, hashed, parsed, or required to exist. The inverse holds for wave B.
+    """
     errors: list[str] = []
     manifest_path = bundle / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    for name, expected in manifest["files"].items():
+    selected_wave = (
+        "wave-a-probes.jsonl"
+        if wave == "a"
+        else "wave-b-v21-dev.jsonl"
+    )
+    for name in ("prompt.txt", selected_wave):
+        expected = manifest["files"].get(name)
+        if expected is None:
+            errors.append(f"manifest missing selected bundle file: {name}")
+            continue
         path = bundle / name
         if not path.exists():
-            errors.append(f"missing bundle file: {name}")
+            errors.append(f"missing selected bundle file: {name}")
             continue
         observed = sha256(path)
         if observed != expected:
@@ -89,7 +107,10 @@ def main() -> int:
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
 
-    manifest, manifest_hash, errors = verify_bundle(bundle)
+    manifest, manifest_hash, errors = verify_bundle(
+        bundle,
+        wave=args.wave,
+    )
     prompt_text = (bundle / "prompt.txt").read_text(encoding="utf-8")
     prompt_hash = hashlib.sha256(prompt_text.encode("utf-8")).hexdigest()
 
