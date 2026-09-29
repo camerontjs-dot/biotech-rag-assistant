@@ -69,16 +69,29 @@ def main() -> int:
     check_equal_tree(v2 / "corpus", v21 / "corpus", "corpus", errors)
     check_equal_tree(v2 / "adversarial", v21 / "adversarial", "adversarial", errors)
 
-    if (v21 / "freeze_receipt.json").exists():
-        errors.append("freeze_receipt.json must not exist while v2.1 is under construction")
-    if (v21 / "SHA256SUMS").exists():
-        errors.append("SHA256SUMS must not exist while v2.1 is under construction")
-
     manifest = json.loads((v21 / "corpus_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("benchmark") != "controlled-docs-v2.1":
         errors.append("manifest benchmark must be controlled-docs-v2.1")
-    if manifest.get("status") != "construction":
-        errors.append("manifest status must remain construction before freeze")
+
+    status = manifest.get("status")
+    freeze_exists = (v21 / "freeze_receipt.json").exists()
+    sums_exist = (v21 / "SHA256SUMS").exists()
+    if status == "construction":
+        if freeze_exists:
+            errors.append(
+                "freeze_receipt.json must not exist while v2.1 is under construction"
+            )
+        if sums_exist:
+            errors.append(
+                "SHA256SUMS must not exist while v2.1 is under construction"
+            )
+    elif status == "frozen_candidate_for_slice2":
+        if not freeze_exists:
+            errors.append("frozen candidate is missing freeze_receipt.json")
+        if not sums_exist:
+            errors.append("frozen candidate is missing SHA256SUMS")
+    else:
+        errors.append(f"unsupported v2.1 manifest status: {status}")
     predecessor = manifest.get("predecessor", {})
     if predecessor.get("commit") != "379a3e65942e8af7dcf21a4d24077642d45b364d":
         errors.append("manifest predecessor commit drifted")
