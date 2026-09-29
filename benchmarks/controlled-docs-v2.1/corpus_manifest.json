@@ -38,7 +38,7 @@
       "B01": 10,
       "B02": 12,
       "B03": 8,
-      "B04": 11,
+      "B04": 19,
       "B05": 8,
       "B06": 8,
       "B07": 5,
@@ -52,21 +52,21 @@
     },
     "cases_by_process_area_committed": {
       "batch-record-review-and-qa-disposition": 9,
-      "capa": 7,
+      "capa": 8,
       "change-control": 9,
-      "cleaning-and-line-clearance": 15,
+      "cleaning-and-line-clearance": 16,
       "deviations": 10,
-      "environmental-monitoring": 13,
-      "equipment-calibration": 10,
-      "stability": 13,
-      "supplier-qualification-and-incoming-materials": 10,
-      "temperature-controlled-storage-and-shipping": 10,
-      "water-systems": 14
+      "environmental-monitoring": 14,
+      "equipment-calibration": 11,
+      "stability": 14,
+      "supplier-qualification-and-incoming-materials": 11,
+      "temperature-controlled-storage-and-shipping": 11,
+      "water-systems": 15
     },
-    "dev_cases": 40,
+    "dev_cases": 44,
     "documents": 65,
     "retrievable": 44,
-    "test_cases": 80
+    "test_cases": 84
   },
   "documents": [
     {
@@ -652,5 +652,28 @@
     "tree_sha256": "bbf8410cf9da9c82bc04b31a731241b197d9827b58f31842de5496a12b364670",
     "slice2_result": "BLOCK_SLICE3_BENCHMARK_NOT_DISCRIMINATING"
   },
-  "prospective_status": "pending_v2.1_requalification"
+  "prospective_status": "pending_v2.1_requalification",
+  "authoring": {
+    "numeric_collision_repair": {
+      "spec": "research/controlled-docs-v2.1-authoring-spec.md",
+      "cases_added": 8,
+      "dev": [
+        "C-DEV-0121",
+        "C-DEV-0122",
+        "C-DEV-0123",
+        "C-DEV-0124"
+      ],
+      "test": [
+        "C-TEST-0125",
+        "C-TEST-0126",
+        "C-TEST-0127",
+        "C-TEST-0128"
+      ],
+      "method": "Cases and gold authored directly against the unchanged corpus text; offsets computed from source bytes. No retrieval or scoring was run during authoring.",
+      "clean_author_branch": "research/controlled-docs-v2.1-clean-author",
+      "clean_author_start": "3b60298efbe2371f91fda1f50826926d50f1fc23",
+      "clean_author_commit": "02e72c684a2b42048ac2547fa6aa253bd2e9cdf1",
+      "contamination_status": "clean per author receipt; GitHub verified one commit changing exactly seven v2.1 benchmark files"
+    }
+  }
 }
