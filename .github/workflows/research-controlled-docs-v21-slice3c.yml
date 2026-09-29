@@ -1,0 +1,58 @@
+name: controlled-docs-v2.1 Slice 3C TEST retrieval
+
+on:
+  pull_request:
+    paths:
+      - "research/controlled-docs-v2.1-slice3c-test-protocol.md"
+      - "research/controlled_docs_v21_slice3c.py"
+      - ".github/workflows/research-controlled-docs-v21-slice3c.yml"
+  workflow_dispatch:
+
+jobs:
+  test-comparison:
+    name: preregistered TEST retrieval comparison
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify frozen benchmark identity
+        run: |
+          python research/verify_controlled_docs_v21_freeze.py             --benchmark benchmarks/controlled-docs-v2.1
+
+      - name: Install package and pinned retrieval dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+          pip install -r research/controlled-docs-v2.1-slice3a-requirements.txt
+
+      - name: Run preregistered Slice 3C TEST comparison
+        id: experiment
+        shell: bash
+        run: |
+          set +e
+          python research/controlled_docs_v21_slice3c.py             --benchmark benchmarks/controlled-docs-v2.1             --out build/research/controlled-docs-v2.1-slice3c
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Upload TEST report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: controlled-docs-v2.1-slice3c-test
+          path: build/research/controlled-docs-v2.1-slice3c/
+          if-no-files-found: error
+
+      - name: Enforce apparatus completion after preserving report
+        shell: bash
+        run: |
+          test "${{ steps.experiment.outputs.exit_code }}" -eq 0
