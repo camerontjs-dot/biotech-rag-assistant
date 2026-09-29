@@ -8,6 +8,7 @@ from biotech_rag_assistant.evidence import (
     build_evidence_packet,
     classify_section_role,
     corpus_identity,
+    query_identity,
 )
 from biotech_rag_assistant.models import (
     Corpus,
@@ -112,6 +113,10 @@ def test_packet_identity_is_pinned_and_scores_are_not_identity_bearing() -> None
         rescored.admitted[0].nomination.raw_score
         != packet.admitted[0].nomination.raw_score
     )
+
+
+def test_query_identity_normalizes_unicode_case_and_whitespace() -> None:
+    assert query_identity("  CAFÉ\nvalue ") == query_identity("cafe\u0301   VALUE")
 
 
 def test_corpus_identity_ignores_local_filesystem_root() -> None:
