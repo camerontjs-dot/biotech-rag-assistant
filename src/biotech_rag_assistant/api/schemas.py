@@ -42,6 +42,12 @@ class EvidencePacketRequest(BaseModel):
     corpus: str | None = None
 
 
+class SynthesizeRequest(EvidencePacketRequest):
+    """Shadow synthesis request; retrieval/packet controls are inherited unchanged."""
+
+    pass
+
+
 class AnswerRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 

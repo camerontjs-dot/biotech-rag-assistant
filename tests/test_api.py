@@ -90,6 +90,88 @@ def test_evidence_packet_matches_cli_json() -> None:
     assert api["admitted"][0]["nomination"]["status"] in RETRIEVABLE_STATUSES
 
 
+def test_synthesize_empty_packet_refuses_without_generator() -> None:
+    client = make_client()
+    response = client.post(
+        "/synthesize",
+        json={"query": NO_HIT_QUERY, "top_k": 1},
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["outcome"] == "refusal"
+    assert payload["disposition"] == "refusal"
+    assert payload["generator_called"] is False
+    assert payload["generator"] is None
+
+
+def test_synthesize_supported_packet_requires_explicit_generator() -> None:
+    client = make_client()
+    response = client.post(
+        "/synthesize",
+        json={"query": GREEN_QUERY, "top_k": 1},
+    )
+    assert response.status_code == 503
+    assert "shadow generator is not configured" in response.json()["detail"]
+
+
+def test_synthesize_with_injected_scripted_generator_is_shadow_only() -> None:
+    packet_client = make_client()
+    packet = packet_client.post(
+        "/evidence-packet",
+        json={"query": GREEN_QUERY, "top_k": 1},
+    ).json()
+    nomination = packet["admitted"][0]["nomination"]
+    raw = {
+        "disposition": "answered",
+        "claims": [
+            {
+                "claim_id": "C1",
+                "text": nomination["text"],
+                "citations": [
+                    {
+                        "chunk_id": nomination["chunk_id"],
+                        "quote": nomination["text"],
+                    }
+                ],
+                "qualifier": None,
+                "limitation": None,
+            }
+        ],
+        "gaps": [],
+    }
+    generator = ScriptedGenerator(raw)
+    client = make_client(generator=generator)
+    synthesis = client.post(
+        "/synthesize",
+        json={"query": GREEN_QUERY, "top_k": 1},
+    )
+    answer = client.post(
+        "/answer",
+        json={"query": GREEN_QUERY, "top_k": 1},
+    )
+
+    assert synthesis.status_code == 200
+    synthesis_payload = synthesis.json()
+    assert synthesis_payload["disposition"] == "generated"
+    assert synthesis_payload["packet_identity"] == packet["packet_identity"]
+    assert synthesis_payload["generator_called"] is True
+    assert generator.call_count == 1
+
+    # Shadow synthesis does not replace or alter the maintained /answer contract.
+    assert answer.status_code == 200
+    assert answer.json()["outcome"] == "answer"
+    assert "disposition" not in answer.json()
+
+
+def test_synthesize_filesystem_path_input_is_rejected() -> None:
+    client = make_client()
+    response = client.post(
+        "/synthesize",
+        json={"query": GREEN_QUERY, "corpus_dir": "/etc/passwd"},
+    )
+    assert response.status_code == 422
+
+
 def test_answer_minus_review_matches_cli_json() -> None:
     client = make_client()
     api = client.post("/answer", json={"query": GREEN_QUERY, "top_k": 1}).json()
