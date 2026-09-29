@@ -359,6 +359,46 @@
       "calibration_technician"
     ]
   },
+  "C-DEV-0121": {
+    "case_id": "C-DEV-0121",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "environmental-monitoring",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
+    ]
+  },
+  "C-DEV-0122": {
+    "case_id": "C-DEV-0122",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "temperature-controlled-storage-and-shipping",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
+    ]
+  },
+  "C-DEV-0123": {
+    "case_id": "C-DEV-0123",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "equipment-calibration",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
+    ]
+  },
+  "C-DEV-0124": {
+    "case_id": "C-DEV-0124",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "capa",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
+    ]
+  },
   "C-TEST-0041": {
     "case_id": "C-TEST-0041",
     "family": "B01",
@@ -1077,6 +1117,46 @@
     "process_area": "supplier-qualification-and-incoming-materials",
     "tags": [
       "warehouse_sampler"
+    ]
+  },
+  "C-TEST-0125": {
+    "case_id": "C-TEST-0125",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "water-systems",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
+    ]
+  },
+  "C-TEST-0126": {
+    "case_id": "C-TEST-0126",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "cleaning-and-line-clearance",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
+    ]
+  },
+  "C-TEST-0127": {
+    "case_id": "C-TEST-0127",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "stability",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
+    ]
+  },
+  "C-TEST-0128": {
+    "case_id": "C-TEST-0128",
+    "family": "B04",
+    "family_name": "numeric threshold",
+    "process_area": "supplier-qualification-and-incoming-materials",
+    "tags": [
+      "numeric_collision",
+      "post_failure_repair"
     ]
   }
 }
