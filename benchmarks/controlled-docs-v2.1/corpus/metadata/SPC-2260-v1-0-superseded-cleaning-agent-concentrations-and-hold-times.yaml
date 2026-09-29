@@ -1,0 +1,10 @@
+doc_id: SPC-2260
+doc_title: "Cleaning Agent Concentrations and Hold Times"
+doc_type: Specification
+version: "1.0"
+status: Superseded
+effective_date: "2023-10-09"
+review_due_date: "2026-10-09"
+department: "Manufacturing Operations"
+source_file_path: documents/SPC-2260-v1-0-superseded-cleaning-agent-concentrations-and-hold-times.md
+source_hash: sha256:374d544322b92196da32975eb7fa17a7348ccdb07a0c77c714b94ccfcc9b2220
