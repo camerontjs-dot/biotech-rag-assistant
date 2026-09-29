@@ -126,6 +126,34 @@ def test_retrieve_cli_reports_no_hits_without_error() -> None:
     assert "No retrievable chunks matched the query." in result.output
 
 
+def test_inspect_packet_cli_returns_traceable_evidence_boundary() -> None:
+    result = CliRunner().invoke(
+        cli,
+        [
+            "inspect-packet",
+            str(DEMO_CORPUS),
+            "--query",
+            "viable excursion affected product lots immediate containment",
+            "--top-k",
+            "1",
+            "--max-items",
+            "1",
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    payload = json.loads(result.output)
+    assert payload["packet_identity"].startswith("ep1:")
+    assert payload["query_id"].startswith("q1:")
+    assert payload["corpus_identity"].startswith("corpus1:")
+    assert payload["retrieval_config_id"].startswith("rc1:")
+    nomination = payload["admitted"][0]["nomination"]
+    assert nomination["chunk_id"] == "SOP-QA-001_v1_0_chunk_002"
+    assert nomination["status"] == "Approved"
+    assert nomination["nomination_kind"] == "chunk"
+    assert nomination["retrieval_signal"] == "bm25"
+
+
 def test_answer_cli_returns_validated_extractive_answer() -> None:
     result = CliRunner().invoke(
         cli,
