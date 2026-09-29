@@ -109,6 +109,12 @@ Raw provider text may additionally be archived locally but is not required in th
 
 ## Evaluation
 
+Replay aperture rule:
+- the evaluator hashes and reads the manifest, prompt, and selected wave only;
+- Wave A replay must not open, hash, parse, stat as a required input, or otherwise consume Wave B;
+- Wave B replay applies the inverse rule;
+- full-archive identity remains established by the qualified GitHub Actions artifact digest and deterministic export receipt.
+
 The repository evaluator:
 - verifies bundle and prompt hashes;
 - rejects output rows for empty packets;
