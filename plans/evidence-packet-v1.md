@@ -162,14 +162,16 @@ No score threshold is introduced beyond the existing retrieval configuration.
 
 Off by default.
 
-When enabled, after a retrieved chunk is admitted:
+When enabled, first process all retrieval nominations in retrieval order. Then, for each admitted
+retrieval parent:
 - inspect other retrievable chunks with the same `doc_id`, version and section heading;
 - order them by chunk index;
 - suppress duplicates;
 - admit only while item and token budgets allow;
 - set `nomination_kind=section_expansion`;
 - set `parent_context_id` to the parent nomination ID;
-- expansion does not change or erase the retrieval nomination that caused it.
+- expansion does not change or erase the retrieval nomination that caused it;
+- expansion never consumes budget ahead of a retrieved hit.
 
 No cross-reference expansion is implemented in Slice 4.
 
