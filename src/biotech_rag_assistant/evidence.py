@@ -202,7 +202,7 @@ def corpus_identity(corpus: Corpus) -> str:
                     else None
                 ),
                 "department": metadata.department,
-                "source_file_path": str(metadata.source_file_path),
+                "source_file_path": metadata.source_file_path.as_posix(),
                 "source_hash": metadata.source_hash,
             }
         )
@@ -309,7 +309,7 @@ def nomination_from_hit(
         doc_type=chunk.doc_type,
         version=chunk.version,
         status=chunk.status,
-        source_file_path=str(chunk.source_file_path),
+        source_file_path=chunk.source_file_path.as_posix(),
         source_hash=chunk.source_hash,
         char_start=chunk.char_start,
         char_end=chunk.char_end,
@@ -360,7 +360,7 @@ def _expansion_nomination(
         doc_type=chunk.doc_type,
         version=chunk.version,
         status=chunk.status,
-        source_file_path=str(chunk.source_file_path),
+        source_file_path=chunk.source_file_path.as_posix(),
         source_hash=chunk.source_hash,
         char_start=chunk.char_start,
         char_end=chunk.char_end,
@@ -509,6 +509,7 @@ def build_evidence_packet(
         for chunks in section_chunks.values():
             chunks.sort(key=lambda chunk: (chunk.chunk_index, chunk.chunk_id))
 
+    parents_for_expansion: list[RetrievalNomination] = []
     for hit in hits:
         nomination = nomination_from_hit(
             hit,
@@ -516,18 +517,19 @@ def build_evidence_packet(
             corpus_id=cid,
             config_id=config_id,
         )
-        parent_admitted = try_admit(nomination, "retrieval_rank")
+        if try_admit(nomination, "retrieval_rank") and expand_section:
+            parents_for_expansion.append(nomination)
 
-        if not expand_section or not parent_admitted:
-            continue
-
+    # Retrieval nominations always consume budget before optional context expansion. Expansion
+    # can enrich admitted evidence, but it cannot displace a lower-ranked retrieved hit.
+    for parent in parents_for_expansion:
         key = (
-            nomination.doc_id,
-            nomination.version,
-            nomination.section_heading,
+            parent.doc_id,
+            parent.version,
+            parent.section_heading,
         )
         for chunk in section_chunks.get(key, []):
-            expansion = _expansion_nomination(chunk, parent=nomination)
+            expansion = _expansion_nomination(chunk, parent=parent)
             try_admit(expansion, "same_section_expansion")
 
     excluded_summary = dict(sorted(excluded.items()))
