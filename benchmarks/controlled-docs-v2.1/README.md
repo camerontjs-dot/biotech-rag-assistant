@@ -1,10 +1,13 @@
-# controlled-docs-v2
+# controlled-docs-v2.1
 
-controlled-docs-v2 is a synthetic corpus of 65 controlled documents for a fictional aseptic manufacturing site, with 120 committed questions and span-level gold. It is built to test whether a retrieval and answering pipeline finds the passage that governs, reads document status correctly, and declines to answer when the corpus does not say. The text is synthetic, so a result on it says nothing about how a system behaves on real controlled documents.
+
+> **Construction state.** This directory is not frozen and must not be used for benchmark claims yet. It was forked from frozen `controlled-docs-v2` after PR #6 showed that the naive dense control achieved 11/11 B04 decisive-span recall@3. The v2 corpus bytes are retained, while fresh-context numeric-collision cases and a new freeze/prospective identity are still pending. The predecessor remains authoritative at `benchmarks/controlled-docs-v2/`.
+
+controlled-docs-v2.1 is an under-construction successor benchmark based on the frozen controlled-docs-v2 synthetic corpus of 65 controlled documents for a fictional aseptic manufacturing site, with 120 committed questions and span-level gold. It is built to test whether a retrieval and answering pipeline finds the passage that governs, reads document status correctly, and declines to answer when the corpus does not say. The text is synthetic, so a result on it says nothing about how a system behaves on real controlled documents.
 
 No real organizations, products, persons or sites appear. No value is attributed to a real regulation or guidance, and no text comes from private repositories, employer documents or client material. Identifiers such as `EQ-0417`, `RM-289` and `FRM-QA-501` are opaque codes.
 
-This tree replaces the round-1 tree of the same name. The round-1 tree and its PROSPECTIVE commitment are withdrawn.
+This successor does not replace or rewrite frozen controlled-docs-v2. Its purpose is the bounded B04 numeric-collision repair defined in `../../research/controlled-docs-v2.1-b04-hardening-protocol.md`. The inherited checksum and freeze-receipt files are deliberately absent until a new v2.1 candidate is complete.
 
 ## What is in the tree
 
