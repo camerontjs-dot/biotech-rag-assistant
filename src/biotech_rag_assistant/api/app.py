@@ -33,8 +33,8 @@ from biotech_rag_assistant.api.schemas import (
 from biotech_rag_assistant.api.security import require_api_key
 from biotech_rag_assistant.citations import validate_answer_citations
 from biotech_rag_assistant.corpus import CorpusValidationError, load_corpus, validate_corpus
-from biotech_rag_assistant.evidence import build_packet_for_query
 from biotech_rag_assistant.evaluation import run_evaluation_suite
+from biotech_rag_assistant.evidence import build_packet_for_query
 from biotech_rag_assistant.models import Corpus
 from biotech_rag_assistant.retrieval import RetrievalConfig, build_retriever, query_retriever
 
