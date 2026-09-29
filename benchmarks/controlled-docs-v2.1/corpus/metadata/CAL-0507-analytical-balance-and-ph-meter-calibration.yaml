@@ -1,0 +1,10 @@
+doc_id: CAL-0507
+doc_title: "Analytical Balance and pH Meter Calibration Reference"
+doc_type: CalibrationNote
+version: "2.0"
+status: Effective
+effective_date: "2026-01-12"
+review_due_date: "2028-01-12"
+department: "Quality Control Chemistry"
+source_file_path: documents/CAL-0507-analytical-balance-and-ph-meter-calibration.md
+source_hash: sha256:d2b05af8e2ee57afe760f24ef1563617a339fd738bd9ef1eb097820b757e3691
