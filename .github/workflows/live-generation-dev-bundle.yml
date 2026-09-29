@@ -1,0 +1,96 @@
+name: DEV live-generation bundle
+
+on:
+  pull_request:
+    paths:
+      - "src/biotech_rag_assistant/evidence_packet.py"
+      - "research/live-generation-dev-protocol.md"
+      - "research/export_live_generation_dev_bundle.py"
+      - "research/evaluate_live_generation_dev_outputs.py"
+      - ".github/workflows/live-generation-dev-bundle.yml"
+  workflow_dispatch:
+
+jobs:
+  export:
+    name: export deterministic packet-only DEV bundle
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Export twice from exact head
+        env:
+          SOURCE_COMMIT: "${{ github.event.pull_request.head.sha || github.sha }}"
+        run: |
+          mkdir -p build/dev-live-a build/dev-live-b
+          python research/export_live_generation_dev_bundle.py             --out build/dev-live-a             --source-commit "$SOURCE_COMMIT"             | tee build/dev-live-a/export-receipt.json
+          python research/export_live_generation_dev_bundle.py             --out build/dev-live-b             --source-commit "$SOURCE_COMMIT"             | tee build/dev-live-b/export-receipt.json
+
+      - name: Require byte-identical independent exports
+        run: |
+          for file in prompt.txt wave-a-probes.jsonl wave-b-v21-dev.jsonl manifest.json; do
+            cmp "build/dev-live-a/$file" "build/dev-live-b/$file"
+          done
+
+      - name: Check model-facing aperture and corpus identities
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("build/dev-live-a")
+          manifest = json.loads((root / "manifest.json").read_text())
+          assert manifest["schema_version"] == "dev-generation-bundle-v1"
+          assert manifest["wave_a"]["case_count"] == 9
+          assert manifest["wave_b"]["case_count"] == 44
+
+          def rows(name):
+              return [
+                  json.loads(line)
+                  for line in (root / name).read_text().splitlines()
+                  if line.strip()
+              ]
+
+          wave_a = rows("wave-a-probes.jsonl")
+          wave_b = rows("wave-b-v21-dev.jsonl")
+          allowed = {
+              "case_id",
+              "question",
+              "generator_should_be_called",
+              "packet",
+          }
+          assert all(set(row) == allowed for row in wave_a + wave_b)
+
+          a_ids = {row["packet"]["corpus_identity"] for row in wave_a}
+          b_ids = {row["packet"]["corpus_identity"] for row in wave_b}
+          assert len(a_ids) == 1 and next(iter(a_ids)).startswith("cm1:derived:")
+          assert len(b_ids) == 1 and next(iter(b_ids)).startswith("cm1:file:")
+
+          forbidden = {"gold", "family", "expected_disposition", "rationale"}
+          for row in wave_a + wave_b:
+              assert forbidden.isdisjoint(row)
+          print(json.dumps({
+              "wave_a_corpus_identity": sorted(a_ids),
+              "wave_b_corpus_identity": sorted(b_ids),
+              "wave_a_generator_calls": manifest["wave_a"]["generator_call_count"],
+              "wave_b_generator_calls": manifest["wave_b"]["generator_call_count"],
+          }, indent=2))
+          PY
+
+      - name: Upload qualified bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: dev-live-generation-bundle
+          path: build/dev-live-a/
+          if-no-files-found: error
