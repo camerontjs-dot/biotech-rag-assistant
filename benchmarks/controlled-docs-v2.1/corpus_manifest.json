@@ -645,14 +645,14 @@
   "schema_version": "2.0",
   "seed": 42,
   "synthetic_boundary": "Synthetic data only. No real organizations, products, persons, sites, or regulation-attributed values.",
-  "status": "construction",
+  "status": "frozen_candidate_for_slice2",
   "predecessor": {
     "benchmark": "controlled-docs-v2",
     "commit": "379a3e65942e8af7dcf21a4d24077642d45b364d",
     "tree_sha256": "bbf8410cf9da9c82bc04b31a731241b197d9827b58f31842de5496a12b364670",
     "slice2_result": "BLOCK_SLICE3_BENCHMARK_NOT_DISCRIMINATING"
   },
-  "prospective_status": "pending_v2.1_requalification",
+  "prospective_status": "sealed_v2.1_unrun",
   "authoring": {
     "numeric_collision_repair": {
       "spec": "research/controlled-docs-v2.1-authoring-spec.md",
@@ -674,6 +674,75 @@
       "clean_author_start": "3b60298efbe2371f91fda1f50826926d50f1fc23",
       "clean_author_commit": "02e72c684a2b42048ac2547fa6aa253bd2e9cdf1",
       "contamination_status": "clean per author receipt; GitHub verified one commit changing exactly seven v2.1 benchmark files"
+    }
+  },
+  "historical_prospective": {
+    "benchmark": "controlled-docs-v2",
+    "commitment_sha256": "ab33beee9866e54a16060c595267c95dd7e0db1c48dc2c51ca3857a2d9100d07",
+    "qualification": "NEW_V21_PROSPECTIVE_REQUIRED",
+    "note": "Preserved unchanged as historical v2 evidence; not reused as v2.1 prospective evidence."
+  },
+  "prospective": {
+    "schema_version": "2.1",
+    "case_count": 30,
+    "commitment_sha256": "07c7fb385d0792e1fa646ca47bb34aff3854142cb406bc57fc9514ab83f34ef0",
+    "file_sha256": {
+      "cases.jsonl": "9f4b425077f5285aee0e4c01effdfea420b3178256e99c7305627f5978afbceb",
+      "families.json": "2aa7aee82f6c9d23890064fc9da57d49619e2e5dac41c246981e1fc4f29151e3",
+      "gold.jsonl": "0256751e24c48894edf67e832d171aeb6f891c1f7c62c21b66f35342f4e79634"
+    },
+    "family_counts": {
+      "B01": 2,
+      "B02": 4,
+      "B03": 2,
+      "B04": 4,
+      "B05": 2,
+      "B06": 2,
+      "B07": 1,
+      "B08": 2,
+      "B09": 2,
+      "B10": 3,
+      "B11": 2,
+      "B12": 2,
+      "B13": 1,
+      "B14": 1
+    },
+    "process_area_counts": {
+      "complaints-and-returns": 10,
+      "document-control": 10,
+      "training-and-gowning-qualification": 10
+    },
+    "query_style_counts": {
+      "natural": 19,
+      "keyword": 6,
+      "identifier": 5
+    },
+    "b04": {
+      "C-PROS21-0004": {
+        "hard_negative_count": 3,
+        "same_document_hard_negative_count": 2
+      },
+      "C-PROS21-0007": {
+        "hard_negative_count": 3,
+        "same_document_hard_negative_count": 2
+      },
+      "C-PROS21-0016": {
+        "hard_negative_count": 4,
+        "same_document_hard_negative_count": 3
+      },
+      "C-PROS21-0029": {
+        "hard_negative_count": 3,
+        "same_document_hard_negative_count": 3
+      }
+    },
+    "authoring": {
+      "branch": "research/controlled-docs-v2.1-prospective-clean-author",
+      "repository_head": "342d4cdd303a67e2cdeb65422df51d080f8bf718",
+      "spec": "research/controlled-docs-v2.1-prospective-authoring-spec.md",
+      "acceptance": "research/controlled_docs_v21_prospective_acceptance.py",
+      "disposition": "PASS_FOR_V21_PROSPECTIVE_SEAL",
+      "contamination_status": "none reported; no prior sealed set or retrieval/model result inspected",
+      "retrieval_models_run": false
     }
   }
 }
