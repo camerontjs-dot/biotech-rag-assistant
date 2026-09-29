@@ -16,6 +16,7 @@ from biotech_rag_assistant.citations import (
     validate_answer_citations,
 )
 from biotech_rag_assistant.corpus import CorpusValidationError, load_corpus, validate_corpus
+from biotech_rag_assistant.evidence import build_packet_for_query
 from biotech_rag_assistant.evaluation import (
     EvaluationFixtureError,
     load_evaluation_suite,
@@ -33,7 +34,7 @@ from biotech_rag_assistant.onboarding import (
 from biotech_rag_assistant.onboarding import (
     write_markdown_report as write_onboarding_markdown_report,
 )
-from biotech_rag_assistant.retrieval import RetrievalConfig, run_retrieval
+from biotech_rag_assistant.retrieval import RetrievalConfig, build_retriever, run_retrieval
 
 
 @click.group()
@@ -205,6 +206,61 @@ def retrieve_command(
         )
         click.echo(f"   {record['section_heading']} ({record['line_or_page_span']})")
         click.echo(f"   {record['source_file_path']}")
+
+
+@cli.command("inspect-packet")
+@click.argument(
+    "corpus_dir",
+    type=click.Path(exists=True, file_okay=False, dir_okay=True, path_type=Path),
+)
+@click.option("--query", "query_text", required=True, help="Question or search text.")
+@click.option("--top-k", default=3, show_default=True, type=click.IntRange(min=1))
+@click.option(
+    "--max-items",
+    default=None,
+    type=click.IntRange(min=1),
+    help="Maximum admitted evidence items; defaults to top-k.",
+)
+@click.option(
+    "--max-tokens",
+    default=2000,
+    show_default=True,
+    type=click.IntRange(min=1),
+    help="Deterministic estimated-token evidence budget.",
+)
+@click.option(
+    "--expand-section",
+    is_flag=True,
+    help="Explicitly admit same-section context while budget remains.",
+)
+def inspect_packet_command(
+    corpus_dir: Path,
+    query_text: str,
+    top_k: int,
+    max_items: int | None,
+    max_tokens: int,
+    expand_section: bool,
+) -> None:
+    """Inspect the deterministic EvidencePacket built from maintained BM25 retrieval."""
+    try:
+        corpus = load_corpus(corpus_dir)
+    except CorpusValidationError as exc:
+        for issue in exc.report.issues:
+            click.echo(f"- {issue.path}: {issue.message}", err=True)
+        raise click.ClickException("corpus validation failed") from exc
+
+    retrieval_config = RetrievalConfig(top_k=top_k)
+    retriever = build_retriever(corpus.documents)
+    packet = build_packet_for_query(
+        corpus=corpus,
+        retriever=retriever,
+        query=query_text,
+        config=retrieval_config,
+        max_items=max_items,
+        max_tokens=max_tokens,
+        expand_section=expand_section,
+    )
+    click.echo(json.dumps(packet.to_cli_record(), indent=2, sort_keys=True))
 
 
 @cli.command("answer")
