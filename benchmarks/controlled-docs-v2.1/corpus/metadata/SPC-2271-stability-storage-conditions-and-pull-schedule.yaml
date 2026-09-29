@@ -1,0 +1,10 @@
+doc_id: SPC-2271
+doc_title: "Stability Storage Conditions and Pull Schedule"
+doc_type: Specification
+version: "2.0"
+status: Effective
+effective_date: "2026-02-23"
+review_due_date: "2029-02-23"
+department: "Quality Control Chemistry"
+source_file_path: documents/SPC-2271-stability-storage-conditions-and-pull-schedule.md
+source_hash: sha256:bc2e0257eea013413de0afee826c89cf96509dac8bc9285ba559e8f3e50c235c

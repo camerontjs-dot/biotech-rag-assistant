@@ -1,0 +1,10 @@
+doc_id: SOP-QA-118
+doc_title: "Change Control"
+doc_type: SOP
+version: "5.0"
+status: Draft
+effective_date: "2027-02-01"
+review_due_date: "2029-02-01"
+department: "Quality Assurance"
+source_file_path: documents/SOP-QA-118-v5-0-draft-change-control.md
+source_hash: sha256:7b2e85bdab29fdf42902269dfcc146f6fe64e916b0cf5f3184980b9d0ca822af

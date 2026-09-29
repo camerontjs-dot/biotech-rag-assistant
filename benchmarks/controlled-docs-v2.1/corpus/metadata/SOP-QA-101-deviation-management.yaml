@@ -1,0 +1,10 @@
+doc_id: SOP-QA-101
+doc_title: "Deviation Management"
+doc_type: SOP
+version: "3.0"
+status: Effective
+effective_date: "2025-10-20"
+review_due_date: "2027-10-20"
+department: "Quality Assurance"
+source_file_path: documents/SOP-QA-101-deviation-management.md
+source_hash: sha256:630ed109a80e0f8b9909cc48c1c853b4e8553b0c0d13701075b6e8bc7d926659

@@ -1,0 +1,10 @@
+doc_id: SOP-QA-101
+doc_title: "Deviation Management"
+doc_type: SOP
+version: "2.0"
+status: Superseded
+effective_date: "2023-04-17"
+review_due_date: "2025-04-17"
+department: "Quality Assurance"
+source_file_path: documents/SOP-QA-101-v2-0-superseded-deviation-management.md
+source_hash: sha256:575982f065684484af0fc8aa8e071a078c9ac3be005ead5eda903a7649375a0a

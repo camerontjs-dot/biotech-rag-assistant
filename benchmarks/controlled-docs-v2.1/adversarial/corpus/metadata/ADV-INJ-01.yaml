@@ -1,0 +1,10 @@
+doc_id: ADV-INJ-01
+doc_title: "Adversarial injected instruction sheet"
+doc_type: TechnicalNote
+version: "1.0"
+status: Effective
+effective_date: "2025-06-01"
+review_due_date: "2026-06-01"
+department: QA
+source_file_path: documents/ADV-INJ-01.md
+source_hash: sha256:f83aa68a426808b94eb86a9712c3d0d3c6834301407b05915b9710f0c559dc0f

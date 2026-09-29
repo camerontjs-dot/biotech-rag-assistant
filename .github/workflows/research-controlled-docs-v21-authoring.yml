@@ -1,0 +1,39 @@
+name: controlled-docs-v2.1 authoring acceptance
+
+on:
+  pull_request:
+    paths:
+      - "benchmarks/controlled-docs-v2.1/**"
+      - "research/controlled_docs_v21_acceptance.py"
+      - ".github/workflows/research-controlled-docs-v21-authoring.yml"
+  workflow_dispatch:
+
+jobs:
+  accept-authoring:
+    name: v2.1 structural authoring acceptance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run v2.1 acceptance
+        shell: bash
+        run: |
+          mkdir -p build/research/controlled-docs-v2.1
+          python research/controlled_docs_v21_acceptance.py             --v2 benchmarks/controlled-docs-v2             --v21 benchmarks/controlled-docs-v2.1             | tee build/research/controlled-docs-v2.1/acceptance.json
+
+      - name: Upload acceptance receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: controlled-docs-v2.1-authoring-acceptance
+          path: build/research/controlled-docs-v2.1/acceptance.json
+          if-no-files-found: error

@@ -1,0 +1,748 @@
+{
+  "as_of": "2026-09-26",
+  "benchmark": "controlled-docs-v2.1",
+  "configuration_hash": "sha256:3d6ad5cbf9d5cb28093ab2d4ad021fb4a241cebb0d35f7cbf916e2ee0dd28a40",
+  "counts": {
+    "by_doc_type": {
+      "CalibrationNote": 1,
+      "DeviationExample": 1,
+      "Policy": 2,
+      "SOP": 36,
+      "Specification": 10,
+      "TechnicalNote": 3,
+      "TrainingNote": 12
+    },
+    "by_process_area": {
+      "batch-record-review-and-qa-disposition": 3,
+      "capa": 4,
+      "change-control": 4,
+      "cleaning-and-line-clearance": 6,
+      "complaints-and-returns": 5,
+      "deviations": 4,
+      "document-control": 4,
+      "environmental-monitoring": 6,
+      "equipment-calibration": 5,
+      "stability": 5,
+      "supplier-qualification-and-incoming-materials": 5,
+      "temperature-controlled-storage-and-shipping": 5,
+      "training-and-gowning-qualification": 3,
+      "water-systems": 6
+    },
+    "by_status": {
+      "Draft": 4,
+      "Effective": 44,
+      "Obsolete": 4,
+      "Superseded": 13
+    },
+    "cases_by_family_committed": {
+      "B01": 10,
+      "B02": 12,
+      "B03": 8,
+      "B04": 19,
+      "B05": 8,
+      "B06": 8,
+      "B07": 5,
+      "B08": 10,
+      "B09": 10,
+      "B10": 14,
+      "B11": 8,
+      "B12": 6,
+      "B13": 5,
+      "B14": 5
+    },
+    "cases_by_process_area_committed": {
+      "batch-record-review-and-qa-disposition": 9,
+      "capa": 8,
+      "change-control": 9,
+      "cleaning-and-line-clearance": 16,
+      "deviations": 10,
+      "environmental-monitoring": 14,
+      "equipment-calibration": 11,
+      "stability": 14,
+      "supplier-qualification-and-incoming-materials": 11,
+      "temperature-controlled-storage-and-shipping": 11,
+      "water-systems": 15
+    },
+    "dev_cases": 44,
+    "documents": 65,
+    "retrievable": 44,
+    "test_cases": 84
+  },
+  "documents": [
+    {
+      "doc_id": "CAL-0507",
+      "doc_type": "CalibrationNote",
+      "process_area": "equipment-calibration",
+      "source_file_path": "documents/CAL-0507-analytical-balance-and-ph-meter-calibration.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "DVX-5006",
+      "doc_type": "DeviationExample",
+      "process_area": "deviations",
+      "source_file_path": "documents/DVX-5006-worked-example-cold-room-excursion-deviation.md",
+      "status": "Effective",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "POL-0004",
+      "doc_type": "Policy",
+      "process_area": "document-control",
+      "source_file_path": "documents/POL-0004-records-retention-policy.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "POL-0012",
+      "doc_type": "Policy",
+      "process_area": "batch-record-review-and-qa-disposition",
+      "source_file_path": "documents/POL-0012-product-disposition-policy.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-EN-044",
+      "doc_type": "SOP",
+      "process_area": "equipment-calibration",
+      "source_file_path": "documents/SOP-EN-044-v1-0-obsolete-bench-instrument-logbook-practice.md",
+      "status": "Obsolete",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SOP-EN-131",
+      "doc_type": "SOP",
+      "process_area": "equipment-calibration",
+      "source_file_path": "documents/SOP-EN-131-v3-0-superseded-calibration-programme-and-interval-management.md",
+      "status": "Superseded",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-EN-131",
+      "doc_type": "SOP",
+      "process_area": "equipment-calibration",
+      "source_file_path": "documents/SOP-EN-131-calibration-programme-and-interval-management.md",
+      "status": "Effective",
+      "version": "4.0"
+    },
+    {
+      "doc_id": "SOP-EN-152",
+      "doc_type": "SOP",
+      "process_area": "water-systems",
+      "source_file_path": "documents/SOP-EN-152-purified-water-and-wfi-loop-monitoring.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-EN-158",
+      "doc_type": "SOP",
+      "process_area": "water-systems",
+      "source_file_path": "documents/SOP-EN-158-loop-sanitization-and-return-to-service.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-MF-207",
+      "doc_type": "SOP",
+      "process_area": "cleaning-and-line-clearance",
+      "source_file_path": "documents/SOP-MF-207-cleaning-changeover-and-line-clearance.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-MF-211",
+      "doc_type": "SOP",
+      "process_area": "cleaning-and-line-clearance",
+      "source_file_path": "documents/SOP-MF-211-line-clearance-verification-at-batch-changeover.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-QA-058",
+      "doc_type": "SOP",
+      "process_area": "complaints-and-returns",
+      "source_file_path": "documents/SOP-QA-058-v1-0-obsolete-returns-visual-inspection-practice.md",
+      "status": "Obsolete",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SOP-QA-101",
+      "doc_type": "SOP",
+      "process_area": "deviations",
+      "source_file_path": "documents/SOP-QA-101-v2-0-superseded-deviation-management.md",
+      "status": "Superseded",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-QA-101",
+      "doc_type": "SOP",
+      "process_area": "deviations",
+      "source_file_path": "documents/SOP-QA-101-deviation-management.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-QA-105",
+      "doc_type": "SOP",
+      "process_area": "document-control",
+      "source_file_path": "documents/SOP-QA-105-v3-0-superseded-document-control-and-periodic-review.md",
+      "status": "Superseded",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-QA-105",
+      "doc_type": "SOP",
+      "process_area": "document-control",
+      "source_file_path": "documents/SOP-QA-105-document-control-and-periodic-review.md",
+      "status": "Effective",
+      "version": "4.0"
+    },
+    {
+      "doc_id": "SOP-QA-118",
+      "doc_type": "SOP",
+      "process_area": "change-control",
+      "source_file_path": "documents/SOP-QA-118-v3-0-superseded-change-control.md",
+      "status": "Superseded",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-QA-118",
+      "doc_type": "SOP",
+      "process_area": "change-control",
+      "source_file_path": "documents/SOP-QA-118-change-control.md",
+      "status": "Effective",
+      "version": "4.0"
+    },
+    {
+      "doc_id": "SOP-QA-118",
+      "doc_type": "SOP",
+      "process_area": "change-control",
+      "source_file_path": "documents/SOP-QA-118-v5-0-draft-change-control.md",
+      "status": "Draft",
+      "version": "5.0"
+    },
+    {
+      "doc_id": "SOP-QA-133",
+      "doc_type": "SOP",
+      "process_area": "batch-record-review-and-qa-disposition",
+      "source_file_path": "documents/SOP-QA-133-v2-0-superseded-batch-record-review-and-qa-disposition.md",
+      "status": "Superseded",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-QA-133",
+      "doc_type": "SOP",
+      "process_area": "batch-record-review-and-qa-disposition",
+      "source_file_path": "documents/SOP-QA-133-batch-record-review-and-qa-disposition.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-QA-146",
+      "doc_type": "SOP",
+      "process_area": "complaints-and-returns",
+      "source_file_path": "documents/SOP-QA-146-v2-0-superseded-product-complaint-handling.md",
+      "status": "Superseded",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-QA-146",
+      "doc_type": "SOP",
+      "process_area": "complaints-and-returns",
+      "source_file_path": "documents/SOP-QA-146-product-complaint-handling.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-QA-151",
+      "doc_type": "SOP",
+      "process_area": "complaints-and-returns",
+      "source_file_path": "documents/SOP-QA-151-returned-goods-assessment.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-QA-172",
+      "doc_type": "SOP",
+      "process_area": "capa",
+      "source_file_path": "documents/SOP-QA-172-v1-0-superseded-corrective-and-preventive-action-management.md",
+      "status": "Superseded",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SOP-QA-172",
+      "doc_type": "SOP",
+      "process_area": "capa",
+      "source_file_path": "documents/SOP-QA-172-corrective-and-preventive-action-management.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-QC-214",
+      "doc_type": "SOP",
+      "process_area": "environmental-monitoring",
+      "source_file_path": "documents/SOP-QC-214-environmental-monitoring-programme-for-aseptic.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-QC-219",
+      "doc_type": "SOP",
+      "process_area": "environmental-monitoring",
+      "source_file_path": "documents/SOP-QC-219-personnel-monitoring-for-aseptic-operators.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-QC-219",
+      "doc_type": "SOP",
+      "process_area": "environmental-monitoring",
+      "source_file_path": "documents/SOP-QC-219-v3-0-draft-personnel-monitoring-for-aseptic-operators.md",
+      "status": "Draft",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-QC-236",
+      "doc_type": "SOP",
+      "process_area": "stability",
+      "source_file_path": "documents/SOP-QC-236-stability-programme-management.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-TR-021",
+      "doc_type": "SOP",
+      "process_area": "training-and-gowning-qualification",
+      "source_file_path": "documents/SOP-TR-021-aseptic-gowning-qualification-programme.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-TR-026",
+      "doc_type": "SOP",
+      "process_area": "training-and-gowning-qualification",
+      "source_file_path": "documents/SOP-TR-026-training-matrix-and-curriculum-assignment.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-WH-019",
+      "doc_type": "SOP",
+      "process_area": "supplier-qualification-and-incoming-materials",
+      "source_file_path": "documents/SOP-WH-019-v1-0-obsolete-supplier-questionnaire-practice.md",
+      "status": "Obsolete",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SOP-WH-064",
+      "doc_type": "SOP",
+      "process_area": "supplier-qualification-and-incoming-materials",
+      "source_file_path": "documents/SOP-WH-064-v2-0-superseded-supplier-qualification-and-audit-planning.md",
+      "status": "Superseded",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-WH-064",
+      "doc_type": "SOP",
+      "process_area": "supplier-qualification-and-incoming-materials",
+      "source_file_path": "documents/SOP-WH-064-supplier-qualification-and-audit-planning.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-WH-071",
+      "doc_type": "SOP",
+      "process_area": "supplier-qualification-and-incoming-materials",
+      "source_file_path": "documents/SOP-WH-071-incoming-material-sampling-and-release.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-WH-088",
+      "doc_type": "SOP",
+      "process_area": "temperature-controlled-storage-and-shipping",
+      "source_file_path": "documents/SOP-WH-088-v2-0-superseded-cold-chain-shipping-of-refrigerated-and-frozen.md",
+      "status": "Superseded",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SOP-WH-088",
+      "doc_type": "SOP",
+      "process_area": "temperature-controlled-storage-and-shipping",
+      "source_file_path": "documents/SOP-WH-088-cold-chain-shipping-of-refrigerated-and-frozen.md",
+      "status": "Effective",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SOP-WH-088",
+      "doc_type": "SOP",
+      "process_area": "temperature-controlled-storage-and-shipping",
+      "source_file_path": "documents/SOP-WH-088-v4-0-draft-cold-chain-shipping-of-refrigerated-and-frozen.md",
+      "status": "Draft",
+      "version": "4.0"
+    },
+    {
+      "doc_id": "SOP-WH-092",
+      "doc_type": "SOP",
+      "process_area": "temperature-controlled-storage-and-shipping",
+      "source_file_path": "documents/SOP-WH-092-cold-room-and-freezer-operation.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SPC-2231",
+      "doc_type": "Specification",
+      "process_area": "environmental-monitoring",
+      "source_file_path": "documents/SPC-2231-v1-0-superseded-viable-monitoring-limits-and-sampling.md",
+      "status": "Superseded",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SPC-2231",
+      "doc_type": "Specification",
+      "process_area": "environmental-monitoring",
+      "source_file_path": "documents/SPC-2231-viable-monitoring-limits-and-sampling.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SPC-2245",
+      "doc_type": "Specification",
+      "process_area": "change-control",
+      "source_file_path": "documents/SPC-2245-change-classification-and-impact-assessment.md",
+      "status": "Effective",
+      "version": "1.1"
+    },
+    {
+      "doc_id": "SPC-2252",
+      "doc_type": "Specification",
+      "process_area": "water-systems",
+      "source_file_path": "documents/SPC-2252-v1-0-superseded-water-quality-specification-pw-and-wfi.md",
+      "status": "Superseded",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SPC-2252",
+      "doc_type": "Specification",
+      "process_area": "water-systems",
+      "source_file_path": "documents/SPC-2252-water-quality-specification-pw-and-wfi.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SPC-2252",
+      "doc_type": "Specification",
+      "process_area": "water-systems",
+      "source_file_path": "documents/SPC-2252-v3-0-draft-water-quality-specification-pw-and-wfi.md",
+      "status": "Draft",
+      "version": "3.0"
+    },
+    {
+      "doc_id": "SPC-2260",
+      "doc_type": "Specification",
+      "process_area": "cleaning-and-line-clearance",
+      "source_file_path": "documents/SPC-2260-v1-0-superseded-cleaning-agent-concentrations-and-hold-times.md",
+      "status": "Superseded",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SPC-2260",
+      "doc_type": "Specification",
+      "process_area": "cleaning-and-line-clearance",
+      "source_file_path": "documents/SPC-2260-cleaning-agent-concentrations-and-hold-times.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "SPC-2271",
+      "doc_type": "Specification",
+      "process_area": "stability",
+      "source_file_path": "documents/SPC-2271-v1-0-superseded-stability-storage-conditions-and-pull-schedule.md",
+      "status": "Superseded",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "SPC-2271",
+      "doc_type": "Specification",
+      "process_area": "stability",
+      "source_file_path": "documents/SPC-2271-stability-storage-conditions-and-pull-schedule.md",
+      "status": "Effective",
+      "version": "2.0"
+    },
+    {
+      "doc_id": "TCN-4021",
+      "doc_type": "TechnicalNote",
+      "process_area": "cleaning-and-line-clearance",
+      "source_file_path": "documents/TCN-4021-v1-0-obsolete-rinse-sampling-memo.md",
+      "status": "Obsolete",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "TCN-4102",
+      "doc_type": "TechnicalNote",
+      "process_area": "capa",
+      "source_file_path": "documents/TCN-4102-effectiveness-check-design-for-corrective.md",
+      "status": "Effective",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "TCN-4110",
+      "doc_type": "TechnicalNote",
+      "process_area": "stability",
+      "source_file_path": "documents/TCN-4110-chamber-mapping-and-excursion-assessment-note.md",
+      "status": "Effective",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "TRN-3308",
+      "doc_type": "TrainingNote",
+      "process_area": "environmental-monitoring",
+      "source_file_path": "documents/TRN-3308-plate-handling-notes-for-monitoring-analysts.md",
+      "status": "Effective",
+      "version": "1.2"
+    },
+    {
+      "doc_id": "TRN-3315",
+      "doc_type": "TrainingNote",
+      "process_area": "equipment-calibration",
+      "source_file_path": "documents/TRN-3315-calibration-technician-quick-reference.md",
+      "status": "Effective",
+      "version": "1.1"
+    },
+    {
+      "doc_id": "TRN-3322",
+      "doc_type": "TrainingNote",
+      "process_area": "capa",
+      "source_file_path": "documents/TRN-3322-action-owner-briefing.md",
+      "status": "Effective",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "TRN-3330",
+      "doc_type": "TrainingNote",
+      "process_area": "temperature-controlled-storage-and-shipping",
+      "source_file_path": "documents/TRN-3330-data-logger-handling-note.md",
+      "status": "Effective",
+      "version": "1.3"
+    },
+    {
+      "doc_id": "TRN-3341",
+      "doc_type": "TrainingNote",
+      "process_area": "deviations",
+      "source_file_path": "documents/TRN-3341-deviation-triage-for-floor-supervisors.md",
+      "status": "Effective",
+      "version": "1.1"
+    },
+    {
+      "doc_id": "TRN-3352",
+      "doc_type": "TrainingNote",
+      "process_area": "water-systems",
+      "source_file_path": "documents/TRN-3352-water-sampling-technique-note.md",
+      "status": "Effective",
+      "version": "1.2"
+    },
+    {
+      "doc_id": "TRN-3358",
+      "doc_type": "TrainingNote",
+      "process_area": "cleaning-and-line-clearance",
+      "source_file_path": "documents/TRN-3358-operator-card-cleaning-steps-and-holds.md",
+      "status": "Effective",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "TRN-3370",
+      "doc_type": "TrainingNote",
+      "process_area": "stability",
+      "source_file_path": "documents/TRN-3370-stability-sample-handling-note.md",
+      "status": "Effective",
+      "version": "1.1"
+    },
+    {
+      "doc_id": "TRN-3376",
+      "doc_type": "TrainingNote",
+      "process_area": "supplier-qualification-and-incoming-materials",
+      "source_file_path": "documents/TRN-3376-receiving-dock-briefing.md",
+      "status": "Effective",
+      "version": "1.0"
+    },
+    {
+      "doc_id": "TRN-3384",
+      "doc_type": "TrainingNote",
+      "process_area": "document-control",
+      "source_file_path": "documents/TRN-3384-document-author-s-note.md",
+      "status": "Effective",
+      "version": "1.2"
+    },
+    {
+      "doc_id": "TRN-3391",
+      "doc_type": "TrainingNote",
+      "process_area": "training-and-gowning-qualification",
+      "source_file_path": "documents/TRN-3391-gowning-room-card.md",
+      "status": "Effective",
+      "version": "1.1"
+    },
+    {
+      "doc_id": "TRN-3397",
+      "doc_type": "TrainingNote",
+      "process_area": "complaints-and-returns",
+      "source_file_path": "documents/TRN-3397-complaint-intake-note.md",
+      "status": "Effective",
+      "version": "1.0"
+    }
+  ],
+  "generator": {
+    "name": "controlled-docs-v2-round2",
+    "note": "model-drafted text plus a deterministic assembly script for identifiers, sidecars, offsets, hashes and receipts",
+    "version": "2.0.0"
+  },
+  "offset_unit": "python_char",
+  "provenance": {
+    "interface": "Claude Code interactive session; no separate API calls",
+    "method": "Model-drafted text with deterministic assembly. Each current and obsolete document was drafted in its own writing step from a per-area brief. Superseded predecessors and drafts were made by copy-and-edit of the current version with an authored edit list. Questions were drafted from the briefs, personas and titles, then adjusted with the documents in view: some were reworded to meet the overlap bands and to name something distinctive, and about a third were rewritten as keyword or identifier-led queries. Gold was adjudicated once, with offsets computed from the final bytes; ten paragraphs gained one sentence afterwards, and their gold rows were re-anchored but not adjudicated again. PROSPECTIVE was written last, in a separate pass, and sealed. The tree was corrected against the acceptance script's output. Deterministic code produced identifiers, checks, sidecars, file names, hashes, offsets, relationships, receipts and validation.",
+    "model_id": "claude-sonnet-5",
+    "prompt_template_note": "There were no separate model calls, so there are no verbatim prompts to hash. Each template is the written instruction for one kind of writing step, recorded after most documents were drafted; it describes the rules that step followed and is not a verbatim model input. The hash is the SHA-256 of the template file. The templates stay local.",
+    "prompt_templates": [
+      {
+        "name": "01-area-brief",
+        "sha256": "bb87b828594d72e284a582868a55c531273fdfd9ccb5a48904b89f58c210ef62"
+      },
+      {
+        "name": "02-document-regular",
+        "sha256": "94b16d242b0d1d9533db0793f8f5684bfd284268d7bf12f4507e8dea82ddeab6"
+      },
+      {
+        "name": "03-document-long-sop",
+        "sha256": "a00d52867c4ee7d1498754d2ffc125d5d34d110a3bf055413a18ba9608ec9df0"
+      },
+      {
+        "name": "04-document-training-note",
+        "sha256": "7b0a8dcf41365b22dc4013cda6eff50e5fa8bfdee809448b407c6eaa41ce260f"
+      },
+      {
+        "name": "05-document-revision-copy-edit",
+        "sha256": "e80a842c306d26fde66316d36f3b41c093ad6176e35f91154ff131106ce84a71"
+      },
+      {
+        "name": "06-document-obsolete",
+        "sha256": "0107eb2038165a262e80e9ad41ccd8077163346073b9b9372223fdbc2a8a699f"
+      },
+      {
+        "name": "07-questions-from-briefs",
+        "sha256": "242a9dd6ace2618ff0a6cb0f2ca8168440cced23ef18d806575b5f53952a982a"
+      },
+      {
+        "name": "08-gold-adjudication",
+        "sha256": "27b2b177b6d58999a6e410717a3142bf8a882492b757795812ab030764addd5c"
+      },
+      {
+        "name": "09-prospective-pass",
+        "sha256": "13d0f86eaa31bfc4c8bb7540340ef804de7a4c99b897fc2ec015788718d83689"
+      }
+    ],
+    "prompts_committed": false,
+    "provider": "Anthropic"
+  },
+  "schema_version": "2.0",
+  "seed": 42,
+  "synthetic_boundary": "Synthetic data only. No real organizations, products, persons, sites, or regulation-attributed values.",
+  "status": "frozen_candidate_for_slice2",
+  "predecessor": {
+    "benchmark": "controlled-docs-v2",
+    "commit": "379a3e65942e8af7dcf21a4d24077642d45b364d",
+    "tree_sha256": "bbf8410cf9da9c82bc04b31a731241b197d9827b58f31842de5496a12b364670",
+    "slice2_result": "BLOCK_SLICE3_BENCHMARK_NOT_DISCRIMINATING"
+  },
+  "prospective_status": "sealed_v2.1_unrun",
+  "authoring": {
+    "numeric_collision_repair": {
+      "spec": "research/controlled-docs-v2.1-authoring-spec.md",
+      "cases_added": 8,
+      "dev": [
+        "C-DEV-0121",
+        "C-DEV-0122",
+        "C-DEV-0123",
+        "C-DEV-0124"
+      ],
+      "test": [
+        "C-TEST-0125",
+        "C-TEST-0126",
+        "C-TEST-0127",
+        "C-TEST-0128"
+      ],
+      "method": "Cases and gold authored directly against the unchanged corpus text; offsets computed from source bytes. No retrieval or scoring was run during authoring.",
+      "clean_author_branch": "research/controlled-docs-v2.1-clean-author",
+      "clean_author_start": "3b60298efbe2371f91fda1f50826926d50f1fc23",
+      "clean_author_commit": "02e72c684a2b42048ac2547fa6aa253bd2e9cdf1",
+      "contamination_status": "clean per author receipt; GitHub verified one commit changing exactly seven v2.1 benchmark files"
+    }
+  },
+  "historical_prospective": {
+    "benchmark": "controlled-docs-v2",
+    "commitment_sha256": "ab33beee9866e54a16060c595267c95dd7e0db1c48dc2c51ca3857a2d9100d07",
+    "qualification": "NEW_V21_PROSPECTIVE_REQUIRED",
+    "note": "Preserved unchanged as historical v2 evidence; not reused as v2.1 prospective evidence."
+  },
+  "prospective": {
+    "schema_version": "2.1",
+    "case_count": 30,
+    "commitment_sha256": "07c7fb385d0792e1fa646ca47bb34aff3854142cb406bc57fc9514ab83f34ef0",
+    "file_sha256": {
+      "cases.jsonl": "9f4b425077f5285aee0e4c01effdfea420b3178256e99c7305627f5978afbceb",
+      "families.json": "2aa7aee82f6c9d23890064fc9da57d49619e2e5dac41c246981e1fc4f29151e3",
+      "gold.jsonl": "0256751e24c48894edf67e832d171aeb6f891c1f7c62c21b66f35342f4e79634"
+    },
+    "family_counts": {
+      "B01": 2,
+      "B02": 4,
+      "B03": 2,
+      "B04": 4,
+      "B05": 2,
+      "B06": 2,
+      "B07": 1,
+      "B08": 2,
+      "B09": 2,
+      "B10": 3,
+      "B11": 2,
+      "B12": 2,
+      "B13": 1,
+      "B14": 1
+    },
+    "process_area_counts": {
+      "complaints-and-returns": 10,
+      "document-control": 10,
+      "training-and-gowning-qualification": 10
+    },
+    "query_style_counts": {
+      "natural": 19,
+      "keyword": 6,
+      "identifier": 5
+    },
+    "b04": {
+      "C-PROS21-0004": {
+        "hard_negative_count": 3,
+        "same_document_hard_negative_count": 2
+      },
+      "C-PROS21-0007": {
+        "hard_negative_count": 3,
+        "same_document_hard_negative_count": 2
+      },
+      "C-PROS21-0016": {
+        "hard_negative_count": 4,
+        "same_document_hard_negative_count": 3
+      },
+      "C-PROS21-0029": {
+        "hard_negative_count": 3,
+        "same_document_hard_negative_count": 3
+      }
+    },
+    "authoring": {
+      "branch": "research/controlled-docs-v2.1-prospective-clean-author",
+      "repository_head": "342d4cdd303a67e2cdeb65422df51d080f8bf718",
+      "spec": "research/controlled-docs-v2.1-prospective-authoring-spec.md",
+      "acceptance": "research/controlled_docs_v21_prospective_acceptance.py",
+      "disposition": "PASS_FOR_V21_PROSPECTIVE_SEAL",
+      "contamination_status": "none reported; no prior sealed set or retrieval/model result inspected",
+      "retrieval_models_run": false
+    }
+  }
+}
