@@ -27,6 +27,7 @@ from biotech_rag_assistant.api.schemas import (
     CorpusRequest,
     EvaluateRequest,
     EvidencePacketRequest,
+    SynthesizeRequest,
     RetrieveRequest,
     ValidateCitationsRequest,
 )
@@ -35,13 +36,21 @@ from biotech_rag_assistant.citations import validate_answer_citations
 from biotech_rag_assistant.corpus import CorpusValidationError, load_corpus, validate_corpus
 from biotech_rag_assistant.evaluation import run_evaluation_suite
 from biotech_rag_assistant.evidence import build_packet_for_query
+from biotech_rag_assistant.generation import (
+    Generator,
+    GeneratorUnavailableError,
+    run_shadow_synthesis,
+)
 from biotech_rag_assistant.models import Corpus
 from biotech_rag_assistant.retrieval import RetrievalConfig, build_retriever, query_retriever
 
 HEALTH_PATH = "/health"
 
 
-def create_app(config: ApiConfig | None = None) -> FastAPI:
+def create_app(
+    config: ApiConfig | None = None,
+    generator: Generator | None = None,
+) -> FastAPI:
     """Build the transport app, loading and validating every allowlisted corpus at startup."""
     config = config or ApiConfig.from_env()
     corpora: dict[str, Corpus] = {
@@ -55,6 +64,7 @@ def create_app(config: ApiConfig | None = None) -> FastAPI:
     app.state.config = config
     app.state.corpora = corpora
     app.state.retrievers = retrievers
+    app.state.generator = generator
 
     @app.middleware("http")
     async def audit_and_request_id(
@@ -175,6 +185,54 @@ def create_app(config: ApiConfig | None = None) -> FastAPI:
             "admitted_count": packet.evidence_budget.used_items,
         }
         return packet.to_cli_record()
+
+    @app.post("/synthesize", dependencies=[Depends(require_api_key)])
+    async def synthesize_route(
+        request: Request,
+        body: SynthesizeRequest,
+    ) -> dict[str, Any]:
+        cfg: ApiConfig = request.app.state.config
+        name = _resolve_corpus_name(cfg, body.corpus)
+        corpus: Corpus = request.app.state.corpora[name]
+        retriever = request.app.state.retrievers[name]
+        retrieval_config = RetrievalConfig(top_k=body.top_k)
+        packet = build_packet_for_query(
+            corpus=corpus,
+            retriever=retriever,
+            query=body.query,
+            config=retrieval_config,
+            max_items=body.max_items,
+            max_tokens=body.max_tokens,
+            expand_section=body.expand_section,
+        )
+        generator = request.app.state.generator
+        try:
+            result = run_shadow_synthesis(packet, generator)
+        except GeneratorUnavailableError as exc:
+            request.state.audit_summary = {
+                "corpus": name,
+                "query": body.query,
+                "top_k": body.top_k,
+                "packet_identity": packet.packet_identity,
+                "generator_configured": False,
+            }
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail=str(exc),
+            ) from exc
+
+        request.state.audit_summary = {
+            "corpus": name,
+            "query": body.query,
+            "top_k": body.top_k,
+            "packet_identity": packet.packet_identity,
+            "generator_configured": generator is not None,
+            "generator_called": result.generator_called,
+            "synthesis_disposition": result.disposition,
+            "dropped_claim_count": len(result.dropped_claims),
+            "gate_codes": [issue.code for issue in result.gate_issues],
+        }
+        return result.to_cli_record()
 
     @app.post("/answer", dependencies=[Depends(require_api_key)])
     async def answer_route(request: Request, body: AnswerRequest) -> dict[str, Any]:
