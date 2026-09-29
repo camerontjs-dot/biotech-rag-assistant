@@ -16,7 +16,6 @@ from biotech_rag_assistant.citations import (
     validate_answer_citations,
 )
 from biotech_rag_assistant.corpus import CorpusValidationError, load_corpus, validate_corpus
-from biotech_rag_assistant.evidence import build_packet_for_query
 from biotech_rag_assistant.evaluation import (
     EvaluationFixtureError,
     load_evaluation_suite,
@@ -24,6 +23,7 @@ from biotech_rag_assistant.evaluation import (
     write_json_report,
     write_markdown_report,
 )
+from biotech_rag_assistant.evidence import build_packet_for_query
 from biotech_rag_assistant.onboarding import (
     OnboardingError,
     onboard_corpus,
