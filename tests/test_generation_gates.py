@@ -6,8 +6,8 @@ from biotech_rag_assistant.corpus import load_corpus
 from biotech_rag_assistant.evidence_packet import (
     EvidenceBudget,
     EvidencePacket,
-    expected_packet_id,
     build_evidence_packet,
+    expected_packet_id,
 )
 from biotech_rag_assistant.generation import ScriptedGenerator, synthesize_shadow
 from biotech_rag_assistant.retrieval import RetrievalConfig, run_retrieval
