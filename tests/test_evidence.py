@@ -165,6 +165,58 @@ def test_query_config_budget_and_exclusions_are_identity_bearing() -> None:
     assert duplicate.excluded_candidate_summary == {"duplicate_source_span": 1}
 
 
+def test_source_identity_and_admitted_order_are_identity_bearing() -> None:
+    corpus = make_corpus()
+    _document, hits = make_hits()
+    config = RetrievalConfig(top_k=2)
+    normal = build_evidence_packet(
+        corpus=corpus,
+        query="What does the procedure say?",
+        hits=hits,
+        config=config,
+    )
+    reversed_order = build_evidence_packet(
+        corpus=corpus,
+        query="What does the procedure say?",
+        hits=list(reversed(hits)),
+        config=config,
+    )
+
+    changed_chunk = hits[0].chunk.model_copy(
+        update={"source_hash": "sha256:" + ("b" * 64)}
+    )
+    changed_source = build_evidence_packet(
+        corpus=corpus,
+        query="What does the procedure say?",
+        hits=[RetrievalHit(rank=1, score=hits[0].score, chunk=changed_chunk)],
+        config=RetrievalConfig(top_k=1),
+    )
+    original_one = build_evidence_packet(
+        corpus=corpus,
+        query="What does the procedure say?",
+        hits=hits[:1],
+        config=RetrievalConfig(top_k=1),
+    )
+
+    assert reversed_order.packet_identity != normal.packet_identity
+    assert changed_source.packet_identity != original_one.packet_identity
+
+
+def test_non_retrievable_nomination_fails_closed_at_packet_admission() -> None:
+    corpus = make_corpus()
+    _document, hits = make_hits()
+    stale_chunk = hits[0].chunk.model_copy(update={"status": "Obsolete"})
+    packet = build_evidence_packet(
+        corpus=corpus,
+        query="What is alpha?",
+        hits=[RetrievalHit(rank=1, score=5.5, chunk=stale_chunk)],
+        config=RetrievalConfig(top_k=1),
+    )
+
+    assert packet.admitted == []
+    assert packet.excluded_candidate_summary == {"non_retrievable_status": 1}
+
+
 def test_token_budget_exclusion_is_deterministic() -> None:
     corpus = make_corpus()
     _document, hits = make_hits()
@@ -222,6 +274,28 @@ def test_same_section_expansion_is_explicit_and_off_by_default() -> None:
     )
     assert expanded.excluded_candidate_summary == {"duplicate_source_span": 1}
     assert expanded.packet_identity != default.packet_identity
+
+
+def test_retrieval_hits_consume_budget_before_section_expansion() -> None:
+    corpus = make_corpus()
+    _document, hits = make_hits()
+    packet = build_evidence_packet(
+        corpus=corpus,
+        query="What does the procedure say?",
+        hits=hits,
+        config=RetrievalConfig(top_k=2),
+        max_items=2,
+        expand_section=True,
+    )
+
+    assert [item.nomination.nomination_kind for item in packet.admitted] == [
+        "chunk",
+        "chunk",
+    ]
+    assert [item.nomination.chunk_id for item in packet.admitted] == [
+        hits[0].chunk.chunk_id,
+        hits[1].chunk.chunk_id,
+    ]
 
 
 def test_authority_and_section_roles_are_descriptive_mechanics() -> None:
