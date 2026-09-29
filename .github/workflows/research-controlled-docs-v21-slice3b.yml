@@ -1,11 +1,6 @@
 name: controlled-docs-v2.1 Slice 3B DEV challengers
 
 on:
-  pull_request:
-    paths:
-      - "research/controlled-docs-v2.1-slice3b-protocol.md"
-      - "research/controlled_docs_v21_slice3b.py"
-      - ".github/workflows/research-controlled-docs-v21-slice3b.yml"
   workflow_dispatch:
 
 jobs:

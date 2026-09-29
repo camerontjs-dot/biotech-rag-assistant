@@ -11,10 +11,10 @@ import time
 from collections import defaultdict
 from pathlib import Path
 
+import controlled_docs_v21_slice3a as s3a
 import numpy as np
 from sentence_transformers import CrossEncoder, SentenceTransformer
 
-import controlled_docs_v21_slice3a as s3a
 from biotech_rag_assistant.chunking import chunk_documents
 from biotech_rag_assistant.corpus import load_corpus
 
