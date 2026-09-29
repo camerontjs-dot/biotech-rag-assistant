@@ -173,10 +173,14 @@ def retrieval_config_id(config: RetrievalConfig) -> str:
 
 def corpus_identity(corpus: Corpus) -> str:
     """Hash an explicit corpus manifest or a derived legacy manifest."""
-    manifest_path = corpus.corpus_dir / "corpus_manifest.json"
-    if manifest_path.exists():
-        digest = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
-        return f"cm1:file:{digest}"
+    manifest_candidates = (
+        corpus.corpus_dir / "corpus_manifest.json",
+        corpus.corpus_dir.parent / "corpus_manifest.json",
+    )
+    for manifest_path in manifest_candidates:
+        if manifest_path.exists():
+            digest = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+            return f"cm1:file:{digest}"
 
     records = [
         {
