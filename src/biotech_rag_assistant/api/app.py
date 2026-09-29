@@ -26,6 +26,7 @@ from biotech_rag_assistant.api.schemas import (
     AnswerRequest,
     CorpusRequest,
     EvaluateRequest,
+    EvidencePacketRequest,
     RetrieveRequest,
     ValidateCitationsRequest,
 )
@@ -33,6 +34,7 @@ from biotech_rag_assistant.api.security import require_api_key
 from biotech_rag_assistant.citations import validate_answer_citations
 from biotech_rag_assistant.corpus import CorpusValidationError, load_corpus, validate_corpus
 from biotech_rag_assistant.evaluation import run_evaluation_suite
+from biotech_rag_assistant.evidence_packet import EvidenceBudget, build_evidence_packet
 from biotech_rag_assistant.models import Corpus
 from biotech_rag_assistant.retrieval import RetrievalConfig, build_retriever, query_retriever
 
@@ -145,6 +147,41 @@ def create_app(config: ApiConfig | None = None) -> FastAPI:
             "retrievable_documents": corpus.report.documents_retrievable,
             "hits": records,
         }
+
+    @app.post("/evidence-packet", dependencies=[Depends(require_api_key)])
+    async def evidence_packet_route(
+        request: Request,
+        body: EvidencePacketRequest,
+    ) -> dict[str, Any]:
+        cfg: ApiConfig = request.app.state.config
+        name = _resolve_corpus_name(cfg, body.corpus)
+        corpus: Corpus = request.app.state.corpora[name]
+        retriever = request.app.state.retrievers[name]
+        retrieval_config = RetrievalConfig(top_k=body.top_k)
+        hits = query_retriever(retriever, body.query, retrieval_config)
+        packet = build_evidence_packet(
+            corpus,
+            body.query,
+            hits,
+            retrieval_config,
+            aperture_id=body.aperture_id,
+            budget=EvidenceBudget(
+                max_items=body.max_items,
+                max_context_chars=body.max_context_chars,
+                expand_sections=body.expand_sections,
+            ),
+        )
+        request.state.audit_summary = {
+            "corpus": name,
+            "query": body.query,
+            "top_k": body.top_k,
+            "packet_id": packet.packet_id,
+            "admitted_chunk_ids": [
+                nomination.chunk_id
+                for nomination in packet.admitted_nominations
+            ],
+        }
+        return packet.to_record()
 
     @app.post("/answer", dependencies=[Depends(require_api_key)])
     async def answer_route(request: Request, body: AnswerRequest) -> dict[str, Any]:
