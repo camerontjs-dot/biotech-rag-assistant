@@ -10,7 +10,11 @@ from typing import Literal, Protocol
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
-from biotech_rag_assistant.evidence_packet import EvidencePacket, RetrievalNomination
+from biotech_rag_assistant.evidence_packet import (
+    EvidencePacket,
+    RetrievalNomination,
+    packet_identity_valid,
+)
 
 GeneratorDisposition = Literal[
     "answered",
@@ -27,7 +31,9 @@ PublicDisposition = Literal[
 ]
 Outcome = Literal["answer", "refusal"]
 
-IDENTIFIER_RE = re.compile(r"\b[A-Z]{2,}(?:-[A-Z0-9]+)+\b")
+IDENTIFIER_RE = re.compile(
+    r"\b(?=[A-Za-z0-9-]*\d)[A-Za-z]{2,}(?:-[A-Za-z0-9]+)+\b"
+)
 REQUIREMENT_RE = re.compile(
     r"\b(must|shall|required|requires?|limit|within|at least)\b|no more than",
     re.IGNORECASE,
@@ -249,7 +255,10 @@ def quantity_atoms(text: str) -> list[str]:
 
 
 def identifiers(text: str) -> set[str]:
-    return set(IDENTIFIER_RE.findall(normalize_source_text(text)))
+    return {
+        value.upper()
+        for value in IDENTIFIER_RE.findall(normalize_source_text(text))
+    }
 
 
 def _packet_lookup(packet: EvidencePacket) -> dict[str, RetrievalNomination]:
@@ -297,10 +306,10 @@ def _quantity_issues(
     claim: GeneratedClaim,
     accepted_quotes: list[str],
 ) -> list[GateIssue]:
-    quote_text = normalized_for_grounding(" ".join(accepted_quotes))
+    quote_atoms = set(quantity_atoms(" ".join(accepted_quotes)))
     issues = []
     for atom in quantity_atoms(claim.text):
-        if atom not in quote_text:
+        if atom not in quote_atoms:
             issues.append(
                 GateIssue(
                     gate="G4",
@@ -483,6 +492,21 @@ def synthesize_shadow(
     generator: Generator,
 ) -> ShadowSynthesisResult:
     """Run a provider-neutral generator behind blocking structural gates."""
+    if not packet_identity_valid(packet):
+        return ShadowSynthesisResult(
+            outcome="refusal",
+            disposition="refusal",
+            packet_id=packet.packet_id,
+            accepted_claims=[],
+            accepted_gaps=[],
+            claim_gate_results=[],
+            issues=[],
+            generator_model_id=None,
+            prompt_hash=None,
+            generator_called=False,
+            fallback_reason="packet_identity_invalid",
+        )
+
     if not packet.admitted_nominations:
         return ShadowSynthesisResult(
             outcome="refusal",

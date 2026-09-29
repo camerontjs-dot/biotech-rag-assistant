@@ -381,6 +381,24 @@ def _packet_identity_payload(
     }
 
 
+def expected_packet_id(packet: EvidencePacket) -> str:
+    """Recompute ep1 identity from the packet's declared identity-bearing fields."""
+    payload = _packet_identity_payload(
+        query=packet.query,
+        corpus=packet.corpus_identity,
+        retrieval_config=packet.retrieval_config_id,
+        aperture_id=packet.aperture_id,
+        admitted=packet.admitted_nominations,
+        exclusion_summary=packet.exclusion_summary,
+    )
+    return stable_hash("ep1", payload)
+
+
+def packet_identity_valid(packet: EvidencePacket) -> bool:
+    """Return whether the declared packet_id matches the canonical ep1 payload."""
+    return packet.packet_id == expected_packet_id(packet)
+
+
 def build_evidence_packet(
     corpus: Corpus,
     query: str,
