@@ -1,0 +1,49 @@
+name: controlled-docs-v2.1 Slice 3A DEV retrieval
+
+on:
+  pull_request:
+    paths:
+      - "research/controlled-docs-v2.1-slice3a-protocol.md"
+      - "research/controlled_docs_v21_slice3a.py"
+      - "research/controlled-docs-v2.1-slice3a-requirements.txt"
+      - ".github/workflows/research-controlled-docs-v21-slice3a.yml"
+  workflow_dispatch:
+
+jobs:
+  dev-first-stage:
+    name: DEV first-stage retrieval arms
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify frozen benchmark identity
+        run: |
+          python research/verify_controlled_docs_v21_freeze.py             --benchmark benchmarks/controlled-docs-v2.1
+
+      - name: Install package and pinned retrieval dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+          pip install -r research/controlled-docs-v2.1-slice3a-requirements.txt
+
+      - name: Run DEV-only Slice 3A
+        run: |
+          mkdir -p build/research/controlled-docs-v2.1-slice3a
+          python research/controlled_docs_v21_slice3a.py             --benchmark benchmarks/controlled-docs-v2.1             --out build/research/controlled-docs-v2.1-slice3a
+
+      - name: Upload DEV report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: controlled-docs-v2.1-slice3a-dev
+          path: build/research/controlled-docs-v2.1-slice3a/
+          if-no-files-found: error
