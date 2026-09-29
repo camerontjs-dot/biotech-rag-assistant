@@ -241,3 +241,58 @@ Reasoning: The demo's obsolete-document trap revealed the retired SOP through a 
 Rejected alternatives: keeping the per-chip `data-reveal` attribute (true only on the curated path); an index of held-out documents alone (it answers a different question, which held-out documents resemble the query, and so lists documents a status-blind answer would not have included: for "Can QA give verbal approval to extend a hold time?" it adds the draft cleaning SOP to the obsolete sterility SOP); showing held-out hits on answered questions too (in this corpus they are only the fixtures' self-describing "status" paragraphs at lower ranks, so they would add noise; revisit with a corpus that has superseded versions of current documents); adding a `review_recommendation` reason to the API in the same change (a contract change the demo does not need).
 
 Consequences: `corpus-data.json` gains `held_out_chunks`; `chunks` is unchanged, so the experiment harness and every existing parity check read the same data. The parity battery now also covers the demo's example chips (read from `index.html`) and the questions a `?q=` deep link opens, and compares held-out hits alongside outcome, top document, and top chunk. CLI and API output are unchanged.
+
+## ADR-019: EvidencePacket v1 is the deterministic authority boundary before generation
+
+Status: accepted for the Slice 4 candidate
+
+Decision: Any future generator is separated from retrieval by a typed, content-addressed
+`EvidencePacket v1`. Maintained BM25 results are first projected into
+`RetrievalNomination` records that preserve exact source-span identity, document status and
+version, retrieval configuration, retrieval diagnostics, section metadata, and a descriptive
+document authority class. A mechanical admission step then enforces retrievable status,
+source-span deduplication, item/token budgets, and explicit provenance for optional same-section
+expansion. Generation is not part of this decision and the existing `/answer` path is unchanged.
+
+The packet identity is `ep1:<sha256>` over canonical JSON containing the normalized query,
+portable corpus identity, retrieval-config identity, optional aperture, ordered admitted source
+identities, exclusion summary, and evidence budget. Raw scores and ranks remain inspectable
+diagnostics but are excluded from the hash, because they are ranking observations rather than
+evidentiary authority and may vary at insignificant floating-point digits across environments.
+
+The maintained v1 corpus has no committed manifest. For this corpus, the portable
+`corpus1:<sha256>` identity is computed over sorted validated document metadata plus verified
+source hashes, excluding local filesystem roots and timestamps. A future manifest-backed corpus can
+supply its manifest identity without changing the packet schema.
+
+The `authority_class` field is descriptive, not a trust score or universal precedence rule.
+Policy, SOP, specification, technical record, training aid and worked-example classes remain
+visible to downstream policy, but Slice 4 does not reorder or suppress retrieval results by that
+class. Likewise, section roles are deterministic heading labels only. Any semantic
+conflict-resolution policy requires a separate decision.
+
+Optional same-section expansion is off by default. When enabled, all retrieval nominations consume
+budget first; expansion can use only remaining budget and therefore cannot displace a retrieved hit.
+
+Rejected alternatives: passing raw retriever objects or arbitrary context directly to a generator;
+letting a generator call the retriever itself; hashing model scores into packet identity; creating a
+new manifest file solely to satisfy the planned wording and then treating it as existing authority;
+using a scalar authority/trust score without evidence; allowing section expansion to consume budget
+ahead of retrieval; or changing `/answer` in the same slice.
+
+Reasoning: a future generated claim can only be meaningfully audited if the evidence aperture is a
+stable object whose source identities and admission decisions survive transport. Keeping scores
+outside identity separates nomination diagnostics from authority. Keeping the packet builder
+deterministic and provider-neutral makes it independently testable before an LLM is introduced.
+
+Consequences: `biotech-rag inspect-packet` and `POST /evidence-packet` expose the same inspection
+record and are held to parsed-object parity. The packet has no generated content. Existing
+retrieval, extractive answer, citation validation, evaluation and Pages behavior stay in place.
+Python 3.11-3.13 CI pins an exact packet identity and tests score independence, portable corpus
+identity, fail-closed stale admission, deterministic budget exclusions, source/order sensitivity,
+and explicit section expansion. A future shadow generator must consume only this packet boundary
+rather than acquiring retrieval, filesystem or web authority.
+
+Numbering note: the generative-RAG plan used provisional ADR numbers before main gained ADR-018.
+This decision therefore lands as asset ADR-019 rather than the plan's provisional ADR-021.
+
