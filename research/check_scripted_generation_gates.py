@@ -361,7 +361,10 @@ def main() -> int:
         "non_claims": [
             "No live model or provider was called.",
             "This establishes deterministic structural grounding only.",
-            "The injection fixture tests the non-normative section-role boundary, not general prompt-injection security.",
+            (
+                "The injection fixture tests the non-normative section-role boundary, "
+                "not general prompt-injection security."
+            ),
             "Semantic support is not evaluated.",
         ],
     }
