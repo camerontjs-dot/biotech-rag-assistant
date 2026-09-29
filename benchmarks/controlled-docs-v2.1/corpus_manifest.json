@@ -1,6 +1,6 @@
 {
   "as_of": "2026-09-26",
-  "benchmark": "controlled-docs-v2",
+  "benchmark": "controlled-docs-v2.1",
   "configuration_hash": "sha256:3d6ad5cbf9d5cb28093ab2d4ad021fb4a241cebb0d35f7cbf916e2ee0dd28a40",
   "counts": {
     "by_doc_type": {
@@ -644,5 +644,13 @@
   },
   "schema_version": "2.0",
   "seed": 42,
-  "synthetic_boundary": "Synthetic data only. No real organizations, products, persons, sites, or regulation-attributed values."
+  "synthetic_boundary": "Synthetic data only. No real organizations, products, persons, sites, or regulation-attributed values.",
+  "status": "construction",
+  "predecessor": {
+    "benchmark": "controlled-docs-v2",
+    "commit": "379a3e65942e8af7dcf21a4d24077642d45b364d",
+    "tree_sha256": "bbf8410cf9da9c82bc04b31a731241b197d9827b58f31842de5496a12b364670",
+    "slice2_result": "BLOCK_SLICE3_BENCHMARK_NOT_DISCRIMINATING"
+  },
+  "prospective_status": "pending_v2.1_requalification"
 }
