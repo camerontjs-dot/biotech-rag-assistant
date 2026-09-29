@@ -1,10 +1,13 @@
-# controlled-docs-v2
+# controlled-docs-v2.1
 
-controlled-docs-v2 is a synthetic corpus of 65 controlled documents for a fictional aseptic manufacturing site, with 120 committed questions and span-level gold. It is built to test whether a retrieval and answering pipeline finds the passage that governs, reads document status correctly, and declines to answer when the corpus does not say. The text is synthetic, so a result on it says nothing about how a system behaves on real controlled documents.
+
+> **Construction state.** This benchmark is not frozen. The corpus bytes come from the frozen predecessor; new numeric-collision cases are being authored under `../../research/controlled-docs-v2.1-authoring-spec.md`. Final checksums, freeze receipt and prospective identity are intentionally absent until authoring and acceptance finish.
+
+controlled-docs-v2.1 is a construction successor based on the frozen controlled-docs-v2 synthetic corpus of 65 controlled documents for a fictional aseptic manufacturing site, with 120 committed questions and span-level gold. It is built to test whether a retrieval and answering pipeline finds the passage that governs, reads document status correctly, and declines to answer when the corpus does not say. The text is synthetic, so a result on it says nothing about how a system behaves on real controlled documents.
 
 No real organizations, products, persons or sites appear. No value is attributed to a real regulation or guidance, and no text comes from private repositories, employer documents or client material. Identifiers such as `EQ-0417`, `RM-289` and `FRM-QA-501` are opaque codes.
 
-This tree replaces the round-1 tree of the same name. The round-1 tree and its PROSPECTIVE commitment are withdrawn.
+This construction tree does not modify the frozen predecessor. Final v2.1 identity will be created only after the authoring acceptance checks pass.
 
 ## What is in the tree
 
