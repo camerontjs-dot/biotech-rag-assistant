@@ -245,4 +245,4 @@ Return:
 9. post-run repository cleanliness;
 10. explicit contamination status.
 
-Stop after the receipt. Do not run any retrieval experiment and do not modify PR #7.
+Stop after the receipt. Do not run any retrieval experiment or modify supervisor branches/pull requests.
