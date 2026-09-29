@@ -1,20 +1,20 @@
 # controlled-docs-v2.1
 
 
-> **Construction state.** This directory is not frozen and must not be used for benchmark claims yet. It was forked from frozen `controlled-docs-v2` after PR #6 showed that the naive dense control achieved 11/11 B04 decisive-span recall@3. The v2 corpus bytes are retained, while fresh-context numeric-collision cases and a new freeze/prospective identity are still pending. The predecessor remains authoritative at `benchmarks/controlled-docs-v2/`.
+> **Frozen candidate.** This v2.1 successor preserves the frozen v2 corpus bytes, adds eight clean-context B04 numeric-collision cases, and binds a separately authored 30-case sealed PROSPECTIVE object. Its freeze identity is recorded in `freeze_receipt.json`. Retrieval discrimination has not yet been run on this candidate.
 
-controlled-docs-v2.1 is an under-construction successor benchmark based on the frozen controlled-docs-v2 synthetic corpus of 65 controlled documents for a fictional aseptic manufacturing site, with 120 committed questions and span-level gold. It is built to test whether a retrieval and answering pipeline finds the passage that governs, reads document status correctly, and declines to answer when the corpus does not say. The text is synthetic, so a result on it says nothing about how a system behaves on real controlled documents.
+controlled-docs-v2.1 is a frozen-candidate successor benchmark based on the frozen controlled-docs-v2 synthetic corpus of 65 controlled documents for a fictional aseptic manufacturing site, with 128 committed questions and span-level gold. It is built to test whether a retrieval and answering pipeline finds the passage that governs, reads document status correctly, and declines to answer when the corpus does not say. The text is synthetic, so a result on it says nothing about how a system behaves on real controlled documents.
 
 No real organizations, products, persons or sites appear. No value is attributed to a real regulation or guidance, and no text comes from private repositories, employer documents or client material. Identifiers such as `EQ-0417`, `RM-289` and `FRM-QA-501` are opaque codes.
 
-This successor does not replace or rewrite frozen controlled-docs-v2. Its purpose is the bounded B04 numeric-collision repair defined in `../../research/controlled-docs-v2.1-b04-hardening-protocol.md`. The inherited checksum and freeze-receipt files are deliberately absent until a new v2.1 candidate is complete.
+This successor does not replace or rewrite frozen controlled-docs-v2. Its purpose is the bounded B04 numeric-collision repair defined in `../../research/controlled-docs-v2.1-b04-hardening-protocol.md`. The historical v2 prospective commitment is preserved as predecessor evidence; v2.1 uses a separately authored sealed prospective object.
 
 ## What is in the tree
 
 | Path | Contents | Mounted into a runtime |
 | --- | --- | --- |
 | `corpus/documents/`, `corpus/metadata/` | 65 documents and their sidecars | yes |
-| `cases/dev_cases.jsonl`, `cases/test_cases.jsonl` | 40 DEV and 80 TEST questions, runtime fields only | yes |
+| `cases/dev_cases.jsonl`, `cases/test_cases.jsonl` | 44 DEV and 84 TEST questions, runtime fields only | yes |
 | `adversarial/corpus/`, `adversarial/cases.jsonl` | a separate bundle: 9 documents, 3 questions | yes, in its own runtime |
 | `evaluator_only/` | gold spans, case families, relationships, lexical overlap | no |
 | `adversarial/evaluator_only/` | gold for the adversarial questions | no |
@@ -22,7 +22,7 @@ This successor does not replace or rewrite frozen controlled-docs-v2. Its purpos
 
 A runtime case carries `case_id`, `split`, `question`, `query_style`, `aperture_id`, `top_k` and `schema_version`, and nothing else. Family labels, gold, rationales and overlap diagnostics stay under `evaluator_only/` and must not be mounted into the system under test.
 
-The PROSPECTIVE set is not in the repository. It has 30 questions with gold, covering all 14 families, in the three process areas that appear in no committed question. Only its SHA-256 is committed, in `freeze_receipt.json`.
+The v2.1 PROSPECTIVE set is not in the repository. It has 30 questions with gold, covers all 14 families, and uses only complaints-and-returns, document-control, and training-and-gowning-qualification. Its commitment is `07c7fb385d0792e1fa646ca47bb34aff3854142cb406bc57fc9514ab83f34ef0`; the file hashes and commitment recipe are recorded in `freeze_receipt.json`.
 
 ## The corpus
 
@@ -43,7 +43,7 @@ The committed questions are split by process area, so no area appears in more th
 | B01 | lexical direct | 3 | 7 | 10 |
 | B02 | paraphrase, low overlap | 4 | 8 | 12 |
 | B03 | identifier lookup | 3 | 5 | 8 |
-| B04 | numeric threshold | 4 | 7 | 11 |
+| B04 | numeric threshold | 8 | 11 | 19 |
 | B05 | table cell | 3 | 5 | 8 |
 | B06 | condition or exception | 3 | 5 | 8 |
 | B07 | negation or polarity | 2 | 3 | 5 |
@@ -55,13 +55,13 @@ The committed questions are split by process area, so no area appears in more th
 | B13 | authority conflict | 2 | 3 | 5 |
 | B14 | long-document burial | 2 | 3 | 5 |
 
-Committed and sealed questions together meet or exceed the family targets in the plan. Of the 120 committed questions, 98 have an answer, 14 are not stated, and 8 are refusals: 5 off-domain and 3 in-domain but uncovered. By query style, 78 are natural, 18 identifier and 24 keyword. Typos appear in 15 questions (12 committed, 3 sealed), none of them in the lexical-direct or paraphrase families, whose overlap caps a typo would move.
+Committed and sealed questions together meet or exceed the family targets in the plan. Of the 128 committed questions, 106 have an answer, 14 are not stated, and 8 are refusals: 5 off-domain and 3 in-domain but uncovered. By query style, 86 are natural, 18 identifier and 24 keyword. The eight v2.1 repair cases are all answerable B04 numeric-collision cases authored without retrieval feedback.
 
 Each case has one gold row per relevant passage, classed as `decisive_support`, `decisive_exception`, `material_context`, `hard_negative`, `stale_trap` or `distractor`. Offsets are Python character offsets (`offset_unit: python_char`), and `span_text` equals `text[char_start:char_end]` for the document version named in the row. A `required_facts` value is at most 60 characters and appears in its span. A `forbidden_facts` value is an earlier or wrong value that occurs only in non-retrievable documents, revision-history sections or passages labelled as distractors. A refusal has one row with null fields. `evaluator_only/lexical_overlap.json` holds `coverage(question, decisive spans joined by newline)`, or the material-context spans for a not-stated case, computed on the final question text.
 
 ## How it was made
 
-A language model drafted the text: Anthropic `claude-sonnet-5`, in an interactive coding session with no separate API calls. The work went in passes. Fourteen per-area briefs came first. The 44 current documents and the 4 obsolete ones were each written in their own step from their brief. Questions were drafted from the briefs, personas and titles, and gold was adjudicated against the documents afterwards. The PROSPECTIVE set was written last, in a separate pass, and sealed.
+The predecessor corpus text was drafted with Anthropic `claude-sonnet-5` in an interactive coding session with no separate API calls. The v2.1 repair cases and the replacement v2.1 PROSPECTIVE object were authored in separate clean contexts without retrieval-model feedback. The sealed v2.1 prospective bytes remain outside Git; only their commitment and file hashes are recorded.
 
 The questions were not kept blind to the documents. After the first drafts, some were reworded to meet the overlap bands and to name something distinctive, and about a third were rewritten as keyword or identifier-led queries, with the documents in view. Ten paragraphs gained a sentence after the gold was adjudicated, each stating a quantity other than the one a question asks for. Their gold rows were re-anchored, and the cases were not adjudicated again. The sealed questions had the same adjustments.
 
