@@ -1,0 +1,86 @@
+name: EvidencePacket v1 cross-Python identity
+
+on:
+  pull_request:
+    paths:
+      - "src/biotech_rag_assistant/evidence_packet.py"
+      - "research/check_ep1_identity.py"
+      - ".github/workflows/evidence-packet-identity.yml"
+  workflow_dispatch:
+
+jobs:
+  emit:
+    name: ep1 identity py${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "${{ matrix.python }}"
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Emit identity receipt
+        run: |
+          mkdir -p build/ep1
+          python research/check_ep1_identity.py > "build/ep1/identity-${{ matrix.python }}.json"
+          cat "build/ep1/identity-${{ matrix.python }}.json"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ep1-identity-py${{ matrix.python }}
+          path: build/ep1/identity-${{ matrix.python }}.json
+          if-no-files-found: error
+
+  compare:
+    name: compare ep1 identities
+    needs: emit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: ep1-identity-py*
+          path: build/ep1-identities
+          merge-multiple: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Require one identity across Python versions
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          paths = sorted(Path("build/ep1-identities").glob("identity-*.json"))
+          if len(paths) != 3:
+              raise SystemExit(f"expected 3 receipts, found {len(paths)}")
+          rows = [json.loads(path.read_text()) for path in paths]
+          fields = (
+              "packet_id",
+              "query_id",
+              "corpus_identity",
+              "retrieval_config_id",
+              "admitted_chunk_ids",
+              "exclusion_summary",
+          )
+          mismatches = {
+              field: [row[field] for row in rows]
+              for field in fields
+              if len({json.dumps(row[field], sort_keys=True) for row in rows}) != 1
+          }
+          print(json.dumps({"receipts": rows, "mismatches": mismatches}, indent=2))
+          if mismatches:
+              raise SystemExit("EvidencePacket identity drift across Python versions")
+          PY
