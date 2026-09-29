@@ -83,7 +83,7 @@ class RetrievalNomination(BaseModel):
     raw_score: float
     rank: int = Field(ge=1)
     retrieval_config_id: str = Field(pattern=r"^rc1:[a-f0-9]{64}$")
-    corpus_identity: str = Field(pattern=r"^corpus1:[a-f0-9]{64}$")
+    corpus_identity: str = Field(pattern=r"^[a-z][a-z0-9_-]*:[a-f0-9]{64}$")
     parent_context_id: str | None = None
     authorization_scope: str | None = None
     nomination_kind: NominationKind
@@ -135,7 +135,7 @@ class EvidencePacket(BaseModel):
     query: str = Field(min_length=1)
     normalized_query: str = Field(min_length=1)
     query_id: str = Field(pattern=r"^q1:[a-f0-9]{64}$")
-    corpus_identity: str = Field(pattern=r"^corpus1:[a-f0-9]{64}$")
+    corpus_identity: str = Field(pattern=r"^[a-z][a-z0-9_-]*:[a-f0-9]{64}$")
     retrieval_config_id: str = Field(pattern=r"^rc1:[a-f0-9]{64}$")
     aperture_id: str | None = None
     admitted: list[AdmittedEvidence]
