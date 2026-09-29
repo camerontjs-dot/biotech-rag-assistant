@@ -37,6 +37,18 @@ class AnswerRequest(BaseModel):
     corpus: str | None = None
 
 
+class EvidencePacketRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    query: str = Field(min_length=1)
+    top_k: int = Field(default=3, ge=1)
+    max_items: int = Field(default=3, ge=1)
+    max_context_chars: int = Field(default=12_000, ge=1)
+    expand_sections: bool = False
+    aperture_id: str | None = None
+    corpus: str | None = None
+
+
 class ValidateCitationsRequest(BaseModel):
     """The two JSON payloads the CLI reads from files, inline."""
 
