@@ -17,6 +17,7 @@ from fastapi.testclient import TestClient
 from biotech_rag_assistant.api import create_app
 from biotech_rag_assistant.api.config import ApiConfig
 from biotech_rag_assistant.cli import cli
+from biotech_rag_assistant.generation import ScriptedGenerator
 from biotech_rag_assistant.models import RETRIEVABLE_STATUSES
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -263,3 +264,86 @@ def test_evidence_packet_api_rejects_filesystem_corpus_input() -> None:
         json={"query": GREEN_QUERY, "corpus_dir": "/etc/passwd"},
     )
     assert response.status_code == 422
+
+
+def test_synthesize_is_disabled_without_server_side_generator() -> None:
+    client = make_client()
+    response = client.post("/synthesize", json={"query": GREEN_QUERY})
+
+    assert response.status_code == 503
+    assert response.json()["detail"] == "shadow generator is not configured"
+
+
+def test_synthesize_runs_scripted_generator_through_claim_gates() -> None:
+    packet_client = make_client()
+    packet = packet_client.post(
+        "/evidence-packet",
+        json={"query": GREEN_QUERY, "top_k": 3},
+    ).json()
+    item = packet["admitted_nominations"][0]
+    payload = {
+        "disposition": "answered",
+        "claims": [
+            {
+                "claim_id": "c1",
+                "text": item["text"],
+                "citations": [
+                    {
+                        "chunk_id": item["chunk_id"],
+                        "quote": item["text"],
+                    }
+                ],
+            }
+        ],
+        "gaps": [],
+    }
+    generator = ScriptedGenerator(payload)
+    client = TestClient(create_app(make_config(), generator=generator))
+
+    response = client.post(
+        "/synthesize",
+        json={"query": GREEN_QUERY, "top_k": 3},
+    )
+
+    assert response.status_code == 200
+    result = response.json()
+    assert result["outcome"] == "answer"
+    assert result["disposition"] == "generated"
+    assert result["generator_called"] is True
+    assert result["accepted_claims"][0]["claim_id"] == "c1"
+    assert result["issues"] == []
+    assert generator.call_count == 1
+
+
+def test_synthesize_does_not_call_generator_for_empty_packet() -> None:
+    generator = ScriptedGenerator(
+        {
+            "disposition": "answered",
+            "claims": [],
+            "gaps": [],
+        }
+    )
+    client = TestClient(create_app(make_config(), generator=generator))
+
+    response = client.post(
+        "/synthesize",
+        json={"query": NO_HIT_QUERY, "top_k": 3},
+    )
+
+    assert response.status_code == 200
+    result = response.json()
+    assert result["outcome"] == "refusal"
+    assert result["disposition"] == "refusal"
+    assert result["generator_called"] is False
+    assert generator.call_count == 0
+
+
+def test_synthesize_keeps_answer_route_unchanged() -> None:
+    generator = ScriptedGenerator({"unexpected": "schema breaker"})
+    client = TestClient(create_app(make_config(), generator=generator))
+
+    answer = client.post("/answer", json={"query": GREEN_QUERY, "top_k": 1})
+
+    assert answer.status_code == 200
+    assert answer.json()["outcome"] == "answer"
+    assert generator.call_count == 0

@@ -28,6 +28,7 @@ from biotech_rag_assistant.api.schemas import (
     EvaluateRequest,
     EvidencePacketRequest,
     RetrieveRequest,
+    SynthesizeRequest,
     ValidateCitationsRequest,
 )
 from biotech_rag_assistant.api.security import require_api_key
@@ -35,13 +36,18 @@ from biotech_rag_assistant.citations import validate_answer_citations
 from biotech_rag_assistant.corpus import CorpusValidationError, load_corpus, validate_corpus
 from biotech_rag_assistant.evaluation import run_evaluation_suite
 from biotech_rag_assistant.evidence_packet import EvidenceBudget, build_evidence_packet
+from biotech_rag_assistant.generation import Generator, synthesize_shadow
 from biotech_rag_assistant.models import Corpus
 from biotech_rag_assistant.retrieval import RetrievalConfig, build_retriever, query_retriever
 
 HEALTH_PATH = "/health"
 
 
-def create_app(config: ApiConfig | None = None) -> FastAPI:
+def create_app(
+    config: ApiConfig | None = None,
+    *,
+    generator: Generator | None = None,
+) -> FastAPI:
     """Build the transport app, loading and validating every allowlisted corpus at startup."""
     config = config or ApiConfig.from_env()
     corpora: dict[str, Corpus] = {
@@ -55,6 +61,7 @@ def create_app(config: ApiConfig | None = None) -> FastAPI:
     app.state.config = config
     app.state.corpora = corpora
     app.state.retrievers = retrievers
+    app.state.generator = generator
 
     @app.middleware("http")
     async def audit_and_request_id(
@@ -182,6 +189,50 @@ def create_app(config: ApiConfig | None = None) -> FastAPI:
             ],
         }
         return packet.to_record()
+
+    @app.post("/synthesize", dependencies=[Depends(require_api_key)])
+    async def synthesize_route(
+        request: Request,
+        body: SynthesizeRequest,
+    ) -> dict[str, Any]:
+        generator: Generator | None = request.app.state.generator
+        if generator is None:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="shadow generator is not configured",
+            )
+
+        cfg: ApiConfig = request.app.state.config
+        name = _resolve_corpus_name(cfg, body.corpus)
+        corpus: Corpus = request.app.state.corpora[name]
+        retriever = request.app.state.retrievers[name]
+        retrieval_config = RetrievalConfig(top_k=body.top_k)
+        hits = query_retriever(retriever, body.query, retrieval_config)
+        packet = build_evidence_packet(
+            corpus,
+            body.query,
+            hits,
+            retrieval_config,
+            aperture_id=body.aperture_id,
+            budget=EvidenceBudget(
+                max_items=body.max_items,
+                max_context_chars=body.max_context_chars,
+                expand_sections=body.expand_sections,
+            ),
+        )
+        result = synthesize_shadow(packet, generator)
+        request.state.audit_summary = {
+            "corpus": name,
+            "query": body.query,
+            "top_k": body.top_k,
+            "packet_id": packet.packet_id,
+            "generator_called": result.generator_called,
+            "generation_disposition": result.disposition,
+            "generation_issue_gates": sorted(
+                {issue.gate for issue in result.issues}
+            ),
+        }
+        return result.to_record()
 
     @app.post("/answer", dependencies=[Depends(require_api_key)])
     async def answer_route(request: Request, body: AnswerRequest) -> dict[str, Any]:

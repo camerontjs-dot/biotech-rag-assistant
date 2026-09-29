@@ -49,6 +49,10 @@ class EvidencePacketRequest(BaseModel):
     corpus: str | None = None
 
 
+class SynthesizeRequest(EvidencePacketRequest):
+    """Shadow-generation request. Generator configuration stays server-side."""
+
+
 class ValidateCitationsRequest(BaseModel):
     """The two JSON payloads the CLI reads from files, inline."""
 
