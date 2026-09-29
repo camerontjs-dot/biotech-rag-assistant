@@ -6,6 +6,7 @@ from biotech_rag_assistant.corpus import load_corpus
 from biotech_rag_assistant.evidence_packet import (
     EvidenceBudget,
     EvidencePacket,
+    expected_packet_id,
     build_evidence_packet,
 )
 from biotech_rag_assistant.generation import ScriptedGenerator, synthesize_shadow
@@ -27,6 +28,12 @@ def make_packet(query: str = QUERY) -> EvidencePacket:
         hits,
         config,
         budget=EvidenceBudget(max_items=3, max_context_chars=12_000),
+    )
+
+
+def reidentify(packet: EvidencePacket) -> EvidencePacket:
+    return packet.model_copy(
+        update={"packet_id": expected_packet_id(packet)}
     )
 
 
@@ -137,7 +144,9 @@ def test_g4_number_words_are_normalized() -> None:
     item = packet.admitted_nominations[0].model_copy(
         update={"text": "The review is required within 5 days."}
     )
-    synthetic = packet.model_copy(update={"admitted_nominations": [item]})
+    synthetic = reidentify(
+        packet.model_copy(update={"admitted_nominations": [item]})
+    )
     payload = {
         "disposition": "answered",
         "claims": [
