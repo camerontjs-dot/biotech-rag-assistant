@@ -29,6 +29,19 @@ class RetrieveRequest(BaseModel):
     corpus: str | None = None
 
 
+class EvidencePacketRequest(BaseModel):
+    """Request for deterministic packet inspection over an allowlisted corpus."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    query: str = Field(min_length=1)
+    top_k: int = Field(default=3, ge=1)
+    max_items: int | None = Field(default=None, ge=1)
+    max_tokens: int = Field(default=2000, ge=1)
+    expand_section: bool = False
+    corpus: str | None = None
+
+
 class AnswerRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
