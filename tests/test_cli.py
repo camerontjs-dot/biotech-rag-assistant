@@ -224,3 +224,26 @@ def test_evaluate_cli_writes_reports(tmp_path: Path) -> None:
     assert "does not measure semantic support" in markdown_out.read_text(
         encoding="utf-8"
     )
+
+
+def test_evidence_packet_cli_returns_source_only_packet() -> None:
+    result = CliRunner().invoke(
+        cli,
+        [
+            "evidence-packet",
+            str(DEMO_CORPUS),
+            "--query",
+            "viable excursion affected product lots immediate containment",
+            "--top-k",
+            "3",
+            "--json",
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    payload = json.loads(result.output)
+    assert payload["schema_version"] == "ep1"
+    assert payload["packet_id"].startswith("ep1:")
+    assert payload["admitted_nominations"]
+    assert payload["diagnostics"]["scores_excluded_from_identity"] is True
+    assert "answer_text" not in payload

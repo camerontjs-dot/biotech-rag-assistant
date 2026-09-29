@@ -23,6 +23,7 @@ from biotech_rag_assistant.evaluation import (
     write_json_report,
     write_markdown_report,
 )
+from biotech_rag_assistant.evidence_packet import EvidenceBudget, build_evidence_packet
 from biotech_rag_assistant.onboarding import (
     OnboardingError,
     onboard_corpus,
@@ -205,6 +206,80 @@ def retrieve_command(
         )
         click.echo(f"   {record['section_heading']} ({record['line_or_page_span']})")
         click.echo(f"   {record['source_file_path']}")
+
+
+@cli.command("evidence-packet")
+@click.argument(
+    "corpus_dir",
+    type=click.Path(exists=True, file_okay=False, dir_okay=True, path_type=Path),
+)
+@click.option("--query", "query_text", required=True, help="Question or search text.")
+@click.option("--top-k", default=3, show_default=True, type=click.IntRange(min=1))
+@click.option("--max-items", default=3, show_default=True, type=click.IntRange(min=1))
+@click.option(
+    "--max-context-chars",
+    default=12_000,
+    show_default=True,
+    type=click.IntRange(min=1),
+)
+@click.option(
+    "--expand-sections",
+    is_flag=True,
+    help="Admit same-section source spans behind the packet budget.",
+)
+@click.option("--aperture-id", default=None, help="Optional evaluation aperture identifier.")
+@click.option("--json", "json_output", is_flag=True, help="Emit machine-readable JSON.")
+def evidence_packet_command(
+    corpus_dir: Path,
+    query_text: str,
+    top_k: int,
+    max_items: int,
+    max_context_chars: int,
+    expand_sections: bool,
+    aperture_id: str | None,
+    json_output: bool,
+) -> None:
+    """Inspect the deterministic source-only EvidencePacket for one query."""
+    try:
+        corpus = load_corpus(corpus_dir)
+    except CorpusValidationError as exc:
+        for issue in exc.report.issues:
+            click.echo(f"- {issue.path}: {issue.message}", err=True)
+        raise click.ClickException("corpus validation failed") from exc
+
+    retrieval_config = RetrievalConfig(top_k=top_k)
+    hits = run_retrieval(corpus.documents, query_text, retrieval_config)
+    packet = build_evidence_packet(
+        corpus,
+        query_text,
+        hits,
+        retrieval_config,
+        aperture_id=aperture_id,
+        budget=EvidenceBudget(
+            max_items=max_items,
+            max_context_chars=max_context_chars,
+            expand_sections=expand_sections,
+        ),
+    )
+    payload = packet.to_record()
+    if json_output:
+        click.echo(json.dumps(payload, indent=2, sort_keys=True))
+        return
+
+    click.echo(f"Packet: {packet.packet_id}")
+    click.echo(f"Query: {packet.query}")
+    click.echo(f"Corpus: {packet.corpus_identity}")
+    click.echo(
+        f"Admitted: {len(packet.admitted_nominations)} / "
+        f"{packet.diagnostics['nomination_count_before_admission']}"
+    )
+    if packet.exclusion_summary:
+        click.echo(f"Excluded: {packet.exclusion_summary}")
+    for nomination in packet.admitted_nominations:
+        click.echo(
+            f"{nomination.rank}. {nomination.doc_id} {nomination.chunk_id} "
+            f"[{nomination.authority_class}]"
+        )
 
 
 @cli.command("answer")
