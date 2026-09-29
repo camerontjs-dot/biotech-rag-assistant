@@ -224,3 +224,42 @@ def test_health_is_not_audited(tmp_path: Path) -> None:
     client = make_client(audit_log_path=audit_path)
     client.get("/health")
     assert not audit_path.exists()
+
+
+def test_evidence_packet_matches_cli_json() -> None:
+    client = make_client()
+    body = {
+        "query": GREEN_QUERY,
+        "top_k": 3,
+        "max_items": 3,
+        "max_context_chars": 12000,
+        "expand_sections": False,
+    }
+    api = client.post("/evidence-packet", json=body).json()
+    cli_out = cli_json(
+        [
+            "evidence-packet",
+            str(DEMO_CORPUS),
+            "--query",
+            GREEN_QUERY,
+            "--top-k",
+            "3",
+            "--max-items",
+            "3",
+            "--max-context-chars",
+            "12000",
+            "--json",
+        ]
+    )
+    assert api == cli_out
+    assert api["packet_id"].startswith("ep1:")
+    assert api["schema_version"] == "ep1"
+
+
+def test_evidence_packet_api_rejects_filesystem_corpus_input() -> None:
+    client = make_client()
+    response = client.post(
+        "/evidence-packet",
+        json={"query": GREEN_QUERY, "corpus_dir": "/etc/passwd"},
+    )
+    assert response.status_code == 422
