@@ -20,6 +20,7 @@ from biotech_rag_assistant.models import (
     RetrievalHit,
 )
 from biotech_rag_assistant.retrieval import (
+    BM25Retriever,
     RetrievalConfig,
     query_retriever,
 )
@@ -52,7 +53,7 @@ AUTHORITY_CLASS_BY_DOC_TYPE = {
 class RetrievalReason(BaseModel):
     """One inspectable retrieval signal that nominated an item."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", frozen=True)
 
     signal: str = Field(min_length=1)
     rank: int = Field(ge=1)
@@ -62,7 +63,7 @@ class RetrievalReason(BaseModel):
 class RetrievalNomination(BaseModel):
     """Typed nomination that preserves source identity and retrieval provenance."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", frozen=True)
 
     nomination_id: str = Field(pattern=r"^nom1:[a-f0-9]{64}$")
     query_id: str = Field(pattern=r"^q1:[a-f0-9]{64}$")
@@ -97,7 +98,7 @@ class RetrievalNomination(BaseModel):
 class AdmittedEvidence(BaseModel):
     """One nomination admitted to the packet, with mechanical provenance."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", frozen=True)
 
     nomination: RetrievalNomination
     admission_reason: Literal["retrieval_rank", "same_section_expansion"]
@@ -106,7 +107,7 @@ class AdmittedEvidence(BaseModel):
 class EvidenceBudget(BaseModel):
     """Configured and consumed evidence budget."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", frozen=True)
 
     max_items: int = Field(ge=1)
     max_tokens: int = Field(ge=1)
@@ -117,7 +118,7 @@ class EvidenceBudget(BaseModel):
 class PacketDiagnostics(BaseModel):
     """Diagnostics deliberately excluded from the packet identity."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", frozen=True)
 
     nomination_count: int = Field(ge=0)
     admitted_count: int = Field(ge=0)
@@ -571,7 +572,7 @@ def build_evidence_packet(
 def build_packet_for_query(
     *,
     corpus: Corpus,
-    retriever: object,
+    retriever: BM25Retriever,
     query: str,
     config: RetrievalConfig,
     max_items: int | None = None,
