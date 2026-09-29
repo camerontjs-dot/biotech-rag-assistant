@@ -260,26 +260,30 @@ def _generator_metadata(generator: Generator) -> GeneratorMetadata:
     )
 
 
-def _normalize_text(text: str) -> str:
+def _normalize_quote_text(text: str) -> str:
     normalized = unicodedata.normalize("NFC", text)
+    return WHITESPACE_RE.sub(" ", normalized.strip())
+
+
+def _normalize_quantity_text(text: str) -> str:
+    normalized = _normalize_quote_text(text)
     normalized = normalized.replace("%", " percent ")
     normalized = normalized.replace("°", " degrees ")
     normalized = normalized.replace("µ", "u")
-    normalized = WHITESPACE_RE.sub(" ", normalized.strip())
     return normalized.casefold()
 
 
 def _normalize_number_words(text: str) -> str:
-    normalized = _normalize_text(text)
+    normalized = _normalize_quantity_text(text)
     tokens = normalized.split(" ")
     return " ".join(NUMBER_WORDS.get(token, token) for token in tokens)
 
 
 def _quote_is_contained(quote: str, nomination: RetrievalNomination) -> bool:
-    normalized_quote = _normalize_text(quote)
+    normalized_quote = _normalize_quote_text(quote)
     if not normalized_quote:
         return False
-    return normalized_quote in _normalize_text(nomination.text)
+    return normalized_quote in _normalize_quote_text(nomination.text)
 
 
 def _quantity_tokens(text: str) -> set[str]:
