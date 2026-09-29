@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 
 from biotech_rag_assistant.corpus import load_corpus
@@ -56,6 +57,18 @@ def test_legacy_corpus_gets_explicit_derived_identity() -> None:
 
     assert first.startswith("cm1:derived:")
     assert first == second
+
+
+
+
+def test_benchmark_corpus_uses_sibling_manifest_identity() -> None:
+    benchmark_root = ROOT / "benchmarks/controlled-docs-v2.1"
+    corpus = load_corpus(benchmark_root / "corpus")
+    expected = hashlib.sha256(
+        (benchmark_root / "corpus_manifest.json").read_bytes()
+    ).hexdigest()
+
+    assert corpus_identity(corpus) == f"cm1:file:{expected}"
 
 
 def test_identical_inputs_produce_identical_packet_identity() -> None:
