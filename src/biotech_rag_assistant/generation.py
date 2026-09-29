@@ -540,6 +540,26 @@ def synthesize_shadow(
         for issue in result.issues
     ]
     accepted_gaps, gap_issues = _validate_gaps(generated.gaps, packet)
+
+    if (
+        generated.disposition in {"answered", "partially_answered"}
+        and generated.claims
+        and not accepted_claims
+    ):
+        return ShadowSynthesisResult(
+            outcome="answer",
+            disposition="extractive_fallback",
+            packet_id=packet.packet_id,
+            accepted_claims=[],
+            accepted_gaps=accepted_gaps,
+            claim_gate_results=claim_results,
+            issues=claim_issues + gap_issues,
+            generator_model_id=generator.model_id,
+            prompt_hash=generator.prompt_hash,
+            generator_called=True,
+            fallback_reason="all_claims_dropped",
+        )
+
     g7 = _g7_issues(
         generated,
         accepted_claims,
@@ -561,21 +581,6 @@ def synthesize_shadow(
             prompt_hash=generator.prompt_hash,
             generator_called=True,
             fallback_reason="G7",
-        )
-
-    if generated.claims and not accepted_claims:
-        return ShadowSynthesisResult(
-            outcome="answer",
-            disposition="extractive_fallback",
-            packet_id=packet.packet_id,
-            accepted_claims=[],
-            accepted_gaps=accepted_gaps,
-            claim_gate_results=claim_results,
-            issues=all_issues,
-            generator_model_id=generator.model_id,
-            prompt_hash=generator.prompt_hash,
-            generator_called=True,
-            fallback_reason="all_claims_dropped",
         )
 
     if generated.disposition == "not_stated":
