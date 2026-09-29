@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -19,7 +18,11 @@ MIN_PROCESS_AREAS_PER_SPLIT = 3
 
 
 def jsonl(path: Path) -> list[dict]:
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    return [
+        json.loads(line)
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
 
 
 def check_equal_tree(left: Path, right: Path, label: str, errors: list[str]) -> None:
@@ -120,7 +123,8 @@ def main() -> int:
     )
     if len(repair_ids) < MIN_REPAIR_CASES:
         errors.append(
-            f"need at least {MIN_REPAIR_CASES} numeric-collision repair cases; found {len(repair_ids)}"
+            "need at least "
+            f"{MIN_REPAIR_CASES} numeric-collision repair cases; found {len(repair_ids)}"
         )
 
     split_counts = Counter(by_case[cid]["split"] for cid in repair_ids if cid in by_case)
@@ -150,7 +154,9 @@ def main() -> int:
 
         dispositions = {row["expected_disposition"] for row in spans}
         if dispositions != {"answer"}:
-            errors.append(f"{cid}: repair case must have answer disposition, got {sorted(dispositions)}")
+            errors.append(
+                f"{cid}: repair case must have answer disposition, got {sorted(dispositions)}"
+            )
         decisive = [row for row in spans if row["decisive"]]
         hard = [row for row in spans if row["relevance_class"] == "hard_negative"]
         if len(decisive) != 1:
@@ -182,7 +188,10 @@ def main() -> int:
         if not required_values:
             errors.append(f"{cid}: decisive row has no required facts")
         question_numbers = numeric_tokens(case["question"])
-        leaked = set().union(*(numeric_tokens(value) for value in required_values)) & question_numbers
+        leaked = (
+            set().union(*(numeric_tokens(value) for value in required_values))
+            & question_numbers
+        )
         if leaked:
             errors.append(f"{cid}: question contains answer numeric token(s): {sorted(leaked)}")
 
@@ -203,7 +212,11 @@ def main() -> int:
             hard_number_sets.append(nums)
             if key == target_key:
                 same_doc_hard += 1
-            if row["char_start"] < target["char_end"] and target["char_start"] < row["char_end"] and key == target_key:
+            if (
+                row["char_start"] < target["char_end"]
+                and target["char_start"] < row["char_end"]
+                and key == target_key
+            ):
                 errors.append(f"{cid}: hard negative overlaps decisive span in same document")
         if same_doc_hard < 1:
             errors.append(f"{cid}: needs at least one same-document numeric hard negative")
