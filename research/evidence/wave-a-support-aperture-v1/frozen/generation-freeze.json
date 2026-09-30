@@ -1,0 +1,60 @@
+{
+  "generation_artifacts": {
+    "runner.exit-code": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "runner.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runner.stdout": {
+      "bytes": 917,
+      "sha256": "16378bc5aab81f91203c74380d7d536aadfbb78590f708bbf989470bd2615960"
+    },
+    "structured-run/ollama-tags-response.json": {
+      "bytes": 4468,
+      "sha256": "cf8df36d43bb55e1f0fdd7562e729c5b3245a74502a0125194928e8dfd99532f"
+    },
+    "structured-run/outputs.jsonl": {
+      "bytes": 3281,
+      "sha256": "a85b1aac79e92288bf9cfe29d3235aa17ec6ba6a7f51d58fb11d98675718b29b"
+    },
+    "structured-run/raw-manifest.json": {
+      "bytes": 916,
+      "sha256": "e65e48b95dc28416245675bc6611f15cd2443028b5ce8cb03653484615fb9c03"
+    },
+    "structured-run/raw/A01-balance-acceptance-range.json": {
+      "bytes": 915,
+      "sha256": "3244bc304c1cca0d066e0d82188b2d11b04f9455bfd99525da37e4f7ec4954c2"
+    },
+    "structured-run/raw/A02-gowning-absence.json": {
+      "bytes": 720,
+      "sha256": "2573efeec520a3b90d4a65e098e2457da1e4b978f48364aa31c6f122fefa42e4"
+    },
+    "structured-run/raw/A03-controlled-copy-use-period.json": {
+      "bytes": 886,
+      "sha256": "6de888871ddddfc36cd302e5989f91c3b24785a4c2cb6a098b495d4d8d9853b1"
+    },
+    "structured-run/raw/A04-em-action-limit.json": {
+      "bytes": 842,
+      "sha256": "f1249267c4e87c327ddd6e8751aafd6040c430cd063d220009fae7134c70f296"
+    },
+    "structured-run/raw/A07-balance-weight-count.json": {
+      "bytes": 1177,
+      "sha256": "5c498ea264779b6b1fec2110ef60d7c882bd58f493232129ddf3264de12ac660"
+    },
+    "structured-run/raw/A08-line-clearance-signatories.json": {
+      "bytes": 761,
+      "sha256": "56a68e8dff2fa9521239b33af00799c279a7a808fefd9f654af5a66550300427"
+    },
+    "structured-run/run_metadata.json": {
+      "bytes": 1610,
+      "sha256": "1a224f910b2ca81bb78a6da6a56fb4a6ce90cf9f6354dc900b919101b99b0d15"
+    }
+  },
+  "rule": "Frozen before deterministic replay. No output normalization, repair, or content modification.",
+  "runner_exit_code": 0,
+  "schema_version": "generation-freeze/v1",
+  "timestamp_utc": "2026-09-30T00:39:53.888736+00:00"
+}

@@ -1,0 +1,11 @@
+test_changed_provider_bytes_fail (test_wave_a_support_aperture_evidence.EvidenceCustodyTests.test_changed_provider_bytes_fail) ... ok
+test_duplicate_case_identity_is_rejected (test_wave_a_support_aperture_evidence.EvidenceCustodyTests.test_duplicate_case_identity_is_rejected) ... ok
+test_missing_provider_evidence_fails (test_wave_a_support_aperture_evidence.EvidenceCustodyTests.test_missing_provider_evidence_fails) ... ok
+test_original_evidence_binds_without_semantic_grading (test_wave_a_support_aperture_evidence.EvidenceCustodyTests.test_original_evidence_binds_without_semantic_grading) ... ok
+test_rehashed_fabricated_output_still_fails_original_freeze (test_wave_a_support_aperture_evidence.EvidenceCustodyTests.test_rehashed_fabricated_output_still_fails_original_freeze) ... ok
+test_unlisted_payload_is_rejected_before_read (test_wave_a_support_aperture_evidence.EvidenceCustodyTests.test_unlisted_payload_is_rejected_before_read) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.029s
+
+OK

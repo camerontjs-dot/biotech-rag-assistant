@@ -1,0 +1,29 @@
+{
+  "custody_check_sha256": "365cba89c03de2b7a6ec3bdb15d3699e170e6b200a0ad6022f2eec0461eb554f",
+  "evidence_layer": "frozen exploratory DEV/shadow outputs plus qualitative agent judgment",
+  "experiment_id": "wave-a-support-aperture-v1",
+  "gate_replay_reruns": 0,
+  "generation_reruns": 0,
+  "inputs": "evidence-manifest.json",
+  "inputs_sha256": "214aaf9723db10a3ccbcba43ecae0fede5cafa4f3ad5fc25bcbe598340bf8307",
+  "new_model_calls": 0,
+  "parent_generation_candidate": "biotech-ollama-structured-pr15-2bcd4094",
+  "primary_factor": "support aperture Q/N/P, as already preregistered",
+  "primary_measure": "categorical support and terminal authority disposition, not a semantic performance score",
+  "protocol": {
+    "path": "research/wave-a-support-aperture-adjudication-protocol.md",
+    "sha256": "1a3f5b4dbaaee4a0d6468a31d1880eae1fb443b9ace2c989adf95c5f62dda956",
+    "unchanged": true
+  },
+  "question": "Which of Q/N/P supports each exact frozen A07/A08 accepted claim?",
+  "receipt": "adjudication.json",
+  "receipt_sha256": "a131e5573afdb0d9e120fcb208dea28ef11073751dce01c205a0722bbcc2e0c1",
+  "schema_version": "wave-a-support-aperture-experiment/v1",
+  "source_commit": "2b8faf46e80a796b81d79b10a6a0f96d403f8dab",
+  "source_tree": "1d8951ea8a1f01b8961af5f4d1ecba9d4637cfd3",
+  "state": "completed",
+  "study_type": "preregistered retrospective support-aperture adjudication",
+  "terminal_disposition": "APERTURE_AUTHORITY_UNDEFINED",
+  "unit_of_analysis": "two exact accepted claims, three apertures each",
+  "wave_b": "LOCKED"
+}

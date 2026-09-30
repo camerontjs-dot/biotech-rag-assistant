@@ -1,0 +1,37 @@
+{
+  "bundle_manifest_sha256": "80a582477de420bbf4655a8936be6067fd8cad85df2ea21f61fec6efc1945903",
+  "callable_case_count": 6,
+  "fresh_context_policy": "One /api/generate request per callable case, raw=true, stream=false, keep_alive=0, no context reuse, no retries.",
+  "generated_answer_schema_sha256": "b3ab3ef1683830716c0b1750da547ff6eac63dd357b14ded3bf17be8801aa0fa",
+  "isolation_notes": "Runner reads manifest, prompt, and Wave A only. Ollama receives prompt plus one EvidencePacket per request. No tools, retriever, web, or repository handle is supplied.",
+  "model_digest": "f4031aab637d1ffa37b42570452ae0e4fad0314754d17ded67322e4b95836f8a",
+  "model_id": "gemma3:12b",
+  "ollama_base_url": "http://127.0.0.1:11434",
+  "parameters_or_effort": {
+    "min_p": 0.0,
+    "num_ctx": 32768,
+    "num_predict": 4096,
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "temperature": 0.0,
+    "top_k": 40,
+    "top_p": 1.0
+  },
+  "prompt_sha256": "d1cd4cb7c727207b354552d0668a9d922967b87bd8615da5994c88aa0c2c8447",
+  "provider": "ollama",
+  "provider_reported_models": {
+    "A01-balance-acceptance-range": "gemma3:12b",
+    "A02-gowning-absence": "gemma3:12b",
+    "A03-controlled-copy-use-period": "gemma3:12b",
+    "A04-em-action-limit": "gemma3:12b",
+    "A07-balance-weight-count": "gemma3:12b",
+    "A08-line-clearance-signatories": "gemma3:12b"
+  },
+  "python": "3.11.15",
+  "skipped_empty_packet_case_ids": [
+    "A05-deviation-close-days",
+    "A06-purified-water-action-limit",
+    "A09-obsolete-membrane-hold"
+  ],
+  "wave_a_sha256": "6ed0bfbbc070e1953fae643e9ab98b477eff84df832e4f352b4439e946635c50"
+}

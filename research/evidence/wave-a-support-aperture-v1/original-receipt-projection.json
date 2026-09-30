@@ -1,0 +1,103 @@
+{
+  "call_accounting": {
+    "actual_model_calls": 6,
+    "additional_workflow_model_calls": 0,
+    "callable": 6,
+    "deterministic_replays": 1,
+    "generation_passes": 1,
+    "retries": 0,
+    "skipped_empty_packet_cases": [
+      "A05-deviation-close-days",
+      "A06-purified-water-action-limit",
+      "A09-obsolete-membrane-hold"
+    ],
+    "wave_a_total": 9
+  },
+  "disposition_matches": {
+    "matches": 7,
+    "total": 9
+  },
+  "exact_authority": {
+    "bundle_actions_run": 36649822582,
+    "bundle_artifact_digest": "sha256:35ed64b425d2d0e3f218730db63e82e40e6d25a65ab94b30bd8c0d35720cf809",
+    "bundle_artifact_id": 11069909386,
+    "bundle_manifest_sha256": "80a582477de420bbf4655a8936be6067fd8cad85df2ea21f61fec6efc1945903",
+    "generated_answer_schema_sha256": "b3ab3ef1683830716c0b1750da547ff6eac63dd357b14ded3bf17be8801aa0fa",
+    "no_network_adapter_artifact": 11069963136,
+    "no_network_adapter_artifact_digest": "sha256:1126587d035f5b87b76b15635f79cd05ca2dfc1aeb4977098d9a1222457fad6b",
+    "no_network_adapter_qualified_disposition": "PASS_OLLAMA_STRUCTURED_ADAPTER_CONTRACT (operator-supplied); run/head/artifact digest independently verified",
+    "no_network_adapter_run": 36649822507,
+    "ordinary_ci_run": 36649822505,
+    "ordinary_ci_status": "completed/success at exact head",
+    "pr": 15,
+    "pr_state_at_preflight": "open Draft",
+    "pr_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/15",
+    "prompt_sha256": "d1cd4cb7c727207b354552d0668a9d922967b87bd8615da5994c88aa0c2c8447",
+    "repository": "camerontjs-dot/biotech-rag-assistant",
+    "repository_head": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+    "wave_a_sha256": "6ed0bfbbc070e1953fae643e9ab98b477eff84df832e4f352b4439e946635c50"
+  },
+  "execution_disposition": {
+    "meaning": "Execution and replay apparatus completed; expected public dispositions matched in 7/9 cases. This is not universal gate success or semantic qualification.",
+    "replay": "PASS",
+    "replay_disposition": "PASS_DEV_OUTPUT_REPLAY",
+    "replay_exit_code": 0,
+    "runner_disposition": "PASS_OLLAMA_STRUCTURED_WAVE_A_EXECUTION",
+    "runner_exit_code": 0,
+    "structured_runner": "PASS"
+  },
+  "original_quote_review": {
+    "actual_human_adjudication_claimed": false,
+    "claims": [
+      {
+        "case_id": "A07-balance-weight-count",
+        "exact_citation_chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+        "exact_claim_text": "The analyst uses two traceable weights for the daily balance check.",
+        "exact_quote": "The analyst verifies the balance with two traceable weights before use.",
+        "human_support_classification": "OVER_BROAD",
+        "question": "How many traceable weights are used for the daily balance check?",
+        "reason": "The quote directly supports two traceable weights and verification before use. It does not establish the daily-check scope stated in the full claim. The question's daily wording is not independent evidence for that scope."
+      },
+      {
+        "case_id": "A08-line-clearance-signatories",
+        "exact_citation_chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+        "exact_claim_text": "Both operations and QA must sign the clearance record before the run starts.",
+        "exact_quote": "both operations and QA sign the clearance record",
+        "human_support_classification": "OVER_BROAD",
+        "question": "Who must sign the line clearance record before the run starts?",
+        "reason": "The quote supports operations and QA as signatories. This fragment does not establish the claim's mandatory pre-run timing. The question cannot supply the missing evidence."
+      }
+    ],
+    "deterministic_results_modified": false,
+    "evaluator": "agent_llm",
+    "interpretation_limit": "These judgments identify support gaps in the exact supplied quotations; they do not establish that the fuller source contradicts the claims.",
+    "review_scope": "Only accepted claim text, its cited chunk IDs and quotes, and the question. No wider source context, rejected claims, TEST, PROSPECTIVE, or Wave B was inspected for this review.",
+    "schema_version": "accepted-claim-qualitative-review/v1",
+    "semantic_support_rubric_frozen": false
+  },
+  "original_receipt_sha256": "357281576e228299b4ac34371b76743f1d5c4e56e94807e7dc826de667d588bc",
+  "per_case_wave_a_result": [
+    {
+      "accepted_claim_count": 1,
+      "accepted_gap_count": 1,
+      "case_id": "A07-balance-weight-count",
+      "disposition_match": false,
+      "fallback_reason": null,
+      "observed_issue_gates": [],
+      "preregistered_expected_disposition": "generated",
+      "public_disposition": "generated_with_gaps"
+    },
+    {
+      "accepted_claim_count": 1,
+      "accepted_gap_count": 0,
+      "case_id": "A08-line-clearance-signatories",
+      "disposition_match": true,
+      "fallback_reason": null,
+      "observed_issue_gates": [],
+      "preregistered_expected_disposition": "generated",
+      "public_disposition": "generated"
+    }
+  ],
+  "preservation": "selected original JSON values, not an exact-byte copy of receipt.json",
+  "schema_version": "wave-a-original-receipt-projection/v1"
+}

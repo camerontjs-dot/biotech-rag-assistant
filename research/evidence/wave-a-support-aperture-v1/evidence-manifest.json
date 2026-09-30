@@ -1,0 +1,118 @@
+{
+  "boundary": {
+    "cal_integration": false,
+    "frozen_output_repairs": false,
+    "generation_reruns": 0,
+    "merge_or_release": false,
+    "new_model_calls": 0,
+    "prompt_changes": false,
+    "prospective": "NOT_ACCESSED",
+    "public_answer_promotion": false,
+    "replay_reruns": 0,
+    "test": "NOT_ACCESSED",
+    "wave_b": "LOCKED_NOT_READ_NOT_EVALUATED"
+  },
+  "evidence_verification": {
+    "all_13_generation_freeze_entries_match": true,
+    "all_4_replay_freeze_entries_match": true,
+    "bundle_manifest_prompt_wave_a_hashes_match": true,
+    "original_receipt_and_post_run_integrity_hashes_match": true
+  },
+  "files": {
+    "frozen/bundle/manifest.json": {
+      "bytes": 5058,
+      "preservation": "exact_original_bytes",
+      "sha256": "80a582477de420bbf4655a8936be6067fd8cad85df2ea21f61fec6efc1945903"
+    },
+    "frozen/bundle/wave-a-probes.jsonl": {
+      "bytes": 32280,
+      "preservation": "exact_original_bytes",
+      "sha256": "6ed0bfbbc070e1953fae643e9ab98b477eff84df832e4f352b4439e946635c50"
+    },
+    "frozen/generation-freeze.json": {
+      "bytes": 2294,
+      "preservation": "exact_original_bytes",
+      "sha256": "046cc15ecd58b5667599e4b83c4e7331f3bff3ff950a80e8615e0ffc37d81bd5"
+    },
+    "frozen/replay-freeze.json": {
+      "bytes": 726,
+      "preservation": "exact_original_bytes",
+      "sha256": "0ef347bc5d727fd8e06ef3ea8e050279a51cf07fed9bada2f341a9842226a664"
+    },
+    "frozen/structured-replay/wave-a-gated-results.json": {
+      "bytes": 12233,
+      "preservation": "exact_original_bytes",
+      "sha256": "6792435fd914b5aa72b515b3c16e6a56810e387e7d66241780d6fc9c6d55666d"
+    },
+    "frozen/structured-run/outputs.jsonl": {
+      "bytes": 3281,
+      "preservation": "exact_original_bytes",
+      "sha256": "a85b1aac79e92288bf9cfe29d3235aa17ec6ba6a7f51d58fb11d98675718b29b"
+    },
+    "frozen/structured-run/raw-manifest.json": {
+      "bytes": 916,
+      "preservation": "exact_original_bytes",
+      "sha256": "e65e48b95dc28416245675bc6611f15cd2443028b5ce8cb03653484615fb9c03"
+    },
+    "frozen/structured-run/raw/A07-balance-weight-count.json": {
+      "bytes": 1177,
+      "preservation": "exact_original_bytes",
+      "sha256": "5c498ea264779b6b1fec2110ef60d7c882bd58f493232129ddf3264de12ac660"
+    },
+    "frozen/structured-run/raw/A08-line-clearance-signatories.json": {
+      "bytes": 761,
+      "preservation": "exact_original_bytes",
+      "sha256": "56a68e8dff2fa9521239b33af00799c279a7a808fefd9f654af5a66550300427"
+    },
+    "frozen/structured-run/run_metadata.json": {
+      "bytes": 1610,
+      "preservation": "exact_original_bytes",
+      "sha256": "1a224f910b2ca81bb78a6da6a56fb4a6ce90cf9f6354dc900b919101b99b0d15"
+    },
+    "original-receipt-projection.json": {
+      "bytes": 5148,
+      "preservation": "JSON_value_projection",
+      "sha256": "ae3fba389fcac55307f58aa35ca0b8567d9f083dee0b5af7f5be9ec474014bb0"
+    }
+  },
+  "issue": 16,
+  "parent_base_commit": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+  "parent_base_tree": "308de8a25388ab451f87bd98d5ea798b55424d41",
+  "pr": 17,
+  "preregistered_head_commit": "2b8faf46e80a796b81d79b10a6a0f96d403f8dab",
+  "preregistered_head_tree": "1d8951ea8a1f01b8961af5f4d1ecba9d4637cfd3",
+  "preservation_limits": [
+    "Whole Wave A input/output/replay files are retained to preserve directly checkable first-run aggregate hashes; only A07/A08 raw responses are copied.",
+    "Original receipt and post-run integrity contain local execution context; their hashes and selected first-run receipt values are retained instead of publishing their complete bytes.",
+    "No artifact ZIP or Wave B payload is imported. Manifest Wave B identities are metadata only.",
+    "The durable subset reconstructs this A07/A08 adjudication, not all six raw provider responses or the whole original execution environment."
+  ],
+  "protocol": {
+    "path": "research/wave-a-support-aperture-adjudication-protocol.md",
+    "sha256": "1a3f5b4dbaaee4a0d6468a31d1880eae1fb443b9ace2c989adf95c5f62dda956",
+    "unchanged": true
+  },
+  "repository": "camerontjs-dot/biotech-rag-assistant",
+  "repository_authority_sha256": {
+    "DECISIONS.md": "753d10b6f5894ae522e3ad95ef4cee6a05bc4c5dc06614645d4ab618d8ca6b55",
+    "examples/synthetic-controlled-docs/documents/CAL-ENG-005-balance-calibration.md": "68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+    "examples/synthetic-controlled-docs/documents/SOP-OPS-007-line-clearance.md": "ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+    "research/evidence-packet-v1-protocol.md": "8b706d17cb5f8533d4743524757ce639926676135665731a8e81e475b6a64f78",
+    "research/generation-claim-gates-v1-protocol.md": "dcedbb79e1887aeed4203ccbd72dfd50aad099c84cd574c180af81430e76a64c",
+    "research/wave-a-support-aperture-adjudication-protocol.md": "1a3f5b4dbaaee4a0d6468a31d1880eae1fb443b9ace2c989adf95c5f62dda956",
+    "src/biotech_rag_assistant/chunking.py": "83883e5b5c48660f46d863860e924afbab10d71292eefae4b967520dc99d1ef4",
+    "src/biotech_rag_assistant/evidence_packet.py": "275e64878ba4f5ab98967c56a67c2107c9f5b0d4207b1f107556d8856003c5a6",
+    "src/biotech_rag_assistant/generation.py": "9464015b99f6975278d038aef7357c1c6a124cd6460508b4cf85ee1deee6ee29",
+    "src/biotech_rag_assistant/models.py": "fe24635a178976db63d9dfa80d910fbaace8fc9e76c1360c9f7a3dc6802e28c6",
+    "src/biotech_rag_assistant/ollama_generator.py": "28e9b6e22c242594827e02657e88a8b2b97aaa8f5f0ac59db49fb7dea5f3ab7c",
+    "src/biotech_rag_assistant/retrieval.py": "fc125793dfab5d6e34813e17ca5ef4698262acde6e2032f018064aa3df6c1dc0",
+    "tests/test_chunking.py": "f9353ee8e3b245d74d9c7ff4e7f0940eed4df01117989cd44950ec2dcb5c3a33",
+    "tests/test_evidence_packet.py": "458b22316bcded8808649a4db22f754a2940889a3b4a40762103574ed249be18",
+    "tests/test_generation_gates.py": "085f758a57c6b745196d8928b9f83bf4261cc8943ff24c8ee58fa882c483358e"
+  },
+  "schema_version": "wave-a-support-aperture-evidence/v1",
+  "verified_original_records_not_copied": {
+    "post-run-integrity.json": "21fe1d450049d016fc77208c21e42b3b07f5379eccea167ea53de66239f0901a",
+    "receipt.json": "357281576e228299b4ac34371b76743f1d5c4e56e94807e7dc826de667d588bc"
+  }
+}

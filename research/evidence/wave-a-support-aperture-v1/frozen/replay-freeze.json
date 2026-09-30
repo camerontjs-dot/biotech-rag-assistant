@@ -1,0 +1,23 @@
+{
+  "evaluator_exit_code": 0,
+  "replay_artifacts": {
+    "evaluator.exit-code": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "evaluator.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluator.stdout": {
+      "bytes": 564,
+      "sha256": "59d058637b7a3d1deac948a4361dd68850abeff2827513adce317e1e76a2aac6"
+    },
+    "structured-replay/wave-a-gated-results.json": {
+      "bytes": 12233,
+      "sha256": "6792435fd914b5aa72b515b3c16e6a56810e387e7d66241780d6fc9c6d55666d"
+    }
+  },
+  "schema_version": "replay-freeze/v1",
+  "timestamp_utc": "2026-09-30T00:41:05.429008+00:00"
+}

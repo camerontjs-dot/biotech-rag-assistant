@@ -1,0 +1,39 @@
+{
+  "checked_implementation_sha256": {
+    "research/check_wave_a_support_aperture_evidence.py": "76682dc49a7efdfd95d78e758b22d7e608c7c024389c6f35642e752e54706e99",
+    "tests/test_wave_a_support_aperture_evidence.py": "9c9164a25b0389c718cc1e50a305129f8b3fee237145b9d109df75a615830be9"
+  },
+  "custody_check": {
+    "exit_code": 0,
+    "path": "custody-check.json",
+    "sha256": "365cba89c03de2b7a6ec3bdb15d3699e170e6b200a0ad6022f2eec0461eb554f",
+    "status": "PASS_PRESERVED_EVIDENCE_BINDINGS"
+  },
+  "deviations": [
+    "The isolated clone has no tracked hook suite. The existing MainFrame leak guard is installed in clone-local Git hooks, without adding repository-wide hygiene templates.",
+    "An offline uvx lint launch could not initialize its protected cache; lint then used an already-installed Ruff executable with no cache or network."
+  ],
+  "generation_or_gate_replays": 0,
+  "lint": {
+    "command": "ruff check --no-cache research/check_wave_a_support_aperture_evidence.py tests/test_wave_a_support_aperture_evidence.py",
+    "exit_code": 0,
+    "status": "PASS",
+    "version": "ruff 0.16.8"
+  },
+  "new_model_calls": 0,
+  "post_adjudication_original_generation_and_replay_freezes": "ALL_17_ARTIFACTS_UNCHANGED",
+  "publication_content_scan": {
+    "file_count": 18,
+    "scope": "new evidence/helper/test files only; no local absolute paths or known credential patterns found",
+    "status": "PASS"
+  },
+  "schema_version": "wave-a-support-aperture-verification/v1",
+  "software_unit_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m unittest discover -s tests -p test_wave_a_support_aperture_evidence.py -v",
+    "exit_code": 0,
+    "limitations": "Custody only; no semantic scoring and no benchmark split accessed.",
+    "passed": 6,
+    "trace": "custody-tests.txt",
+    "trace_sha256": "295a49c06d11e22664be838a28e4d4a58950980fb172f6204d914a55666543c5"
+  }
+}

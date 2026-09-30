@@ -1,0 +1,15 @@
+{
+  "model_digest": "f4031aab637d1ffa37b42570452ae0e4fad0314754d17ded67322e4b95836f8a",
+  "model_id": "gemma3:12b",
+  "provider": "ollama",
+  "raw_response_sha256": {
+    "A01-balance-acceptance-range": "3244bc304c1cca0d066e0d82188b2d11b04f9455bfd99525da37e4f7ec4954c2",
+    "A02-gowning-absence": "2573efeec520a3b90d4a65e098e2457da1e4b978f48364aa31c6f122fefa42e4",
+    "A03-controlled-copy-use-period": "6de888871ddddfc36cd302e5989f91c3b24785a4c2cb6a098b495d4d8d9853b1",
+    "A04-em-action-limit": "f1249267c4e87c327ddd6e8751aafd6040c430cd063d220009fae7134c70f296",
+    "A07-balance-weight-count": "5c498ea264779b6b1fec2110ef60d7c882bd58f493232129ddf3264de12ac660",
+    "A08-line-clearance-signatories": "56a68e8dff2fa9521239b33af00799c279a7a808fefd9f654af5a66550300427"
+  },
+  "schema_version": "ollama-wave-a-raw-v1",
+  "tags_response_sha256": "cf8df36d43bb55e1f0fdd7562e729c5b3245a74502a0125194928e8dfd99532f"
+}

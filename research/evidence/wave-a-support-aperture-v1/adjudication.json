@@ -1,0 +1,491 @@
+{
+  "actual_human_adjudication_claimed": false,
+  "authority": {
+    "base_commit": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+    "base_tree": "308de8a25388ab451f87bd98d5ea798b55424d41",
+    "evidence_manifest_sha256": "214aaf9723db10a3ccbcba43ecae0fede5cafa4f3ad5fc25bcbe598340bf8307",
+    "issue": 16,
+    "parent_pr": 15,
+    "pr": 17,
+    "preregistered_head_commit": "2b8faf46e80a796b81d79b10a6a0f96d403f8dab",
+    "preregistered_head_tree": "1d8951ea8a1f01b8961af5f4d1ecba9d4637cfd3",
+    "protocol": {
+      "path": "research/wave-a-support-aperture-adjudication-protocol.md",
+      "sha256": "1a3f5b4dbaaee4a0d6468a31d1880eae1fb443b9ace2c989adf95c5f62dda956",
+      "unchanged": true
+    },
+    "repository": "camerontjs-dot/biotech-rag-assistant"
+  },
+  "cases": [
+    {
+      "accepted_claim_count": 1,
+      "accepted_gap_count": 1,
+      "apertures": [
+        {
+          "aperture": "Q",
+          "classification": "OVER_BROAD",
+          "exact_citation": {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "The analyst verifies the balance with two traceable weights before use."
+          },
+          "exact_claim": {
+            "citations": [
+              {
+                "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+                "quote": "The analyst verifies the balance with two traceable weights before use."
+              }
+            ],
+            "claim_id": "c1",
+            "limitation": null,
+            "qualifier": null,
+            "text": "The analyst uses two traceable weights for the daily balance check."
+          },
+          "exact_evidence_used": [
+            {
+              "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+              "exact_text": "The analyst verifies the balance with two traceable weights before use.",
+              "field": "citation.quote",
+              "semantic_authority": "AUTHORIZED_QUOTE"
+            }
+          ],
+          "information_import": {
+            "question_used_as_evidence": false,
+            "required_to_warrant_full_claim": true,
+            "unauthorized_bridge": "The missing scope/condition would have to come from the question or evidence beyond Q."
+          },
+          "minimal_unsupported_or_unresolved_proposition": "The two-weight verification is the daily balance check.",
+          "reason": "The quote supports the analyst, two traceable weights, and verification before use; it does not establish daily-check scope."
+        },
+        {
+          "aperture": "N",
+          "classification": "INCONCLUSIVE",
+          "exact_citation": {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "The analyst verifies the balance with two traceable weights before use."
+          },
+          "exact_claim": {
+            "citations": [
+              {
+                "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+                "quote": "The analyst verifies the balance with two traceable weights before use."
+              }
+            ],
+            "claim_id": "c1",
+            "limitation": null,
+            "qualifier": null,
+            "text": "The analyst uses two traceable weights for the daily balance check."
+          },
+          "exact_evidence_used": [
+            {
+              "char_end": 240,
+              "char_start": 55,
+              "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+              "exact_text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:23e5e6a014cebc9dd430cff63f2cbe9bfaeb41ecd46e83d35c7302ae316f43fb",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4"
+            },
+            {
+              "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+              "exact_text": "Daily check",
+              "field": "admitted_nominations.section_heading",
+              "nomination_id": "nom1:23e5e6a014cebc9dd430cff63f2cbe9bfaeb41ecd46e83d35c7302ae316f43fb",
+              "semantic_authority": "UNRESOLVED_NOT_USED_AS_ESTABLISHED_SUPPORT"
+            }
+          ],
+          "information_import": {
+            "if_heading_is_authorized": "No question evidence or other outside surface is required.",
+            "if_heading_is_excluded": "Daily scope would require the question or a source surface outside the admitted body authority.",
+            "question_used_as_evidence": false,
+            "required_to_warrant_full_claim": "CONDITIONAL_ON_HEADING_AUTHORITY"
+          },
+          "minimal_unsupported_or_unresolved_proposition": "The two-weight verification is the daily balance check.",
+          "reason": "The cited source body does not state daily scope. The source-derived Daily check heading supplies that scope if semantically authorized, but current contracts establish its indexing/display and structural uses without deciding proposition-level semantic support."
+        },
+        {
+          "aperture": "P",
+          "classification": "INCONCLUSIVE",
+          "exact_citation": {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "The analyst verifies the balance with two traceable weights before use."
+          },
+          "exact_claim": {
+            "citations": [
+              {
+                "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+                "quote": "The analyst verifies the balance with two traceable weights before use."
+              }
+            ],
+            "claim_id": "c1",
+            "limitation": null,
+            "qualifier": null,
+            "text": "The analyst uses two traceable weights for the daily balance check."
+          },
+          "exact_evidence_used": [
+            {
+              "char_end": 240,
+              "char_start": 55,
+              "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+              "exact_text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:23e5e6a014cebc9dd430cff63f2cbe9bfaeb41ecd46e83d35c7302ae316f43fb",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4"
+            },
+            {
+              "char_end": 140,
+              "char_start": 47,
+              "chunk_id": "SOP-QA-002_v1_1_chunk_001",
+              "exact_text": "This synthetic SOP defines how quality events are triaged before a full investigation starts.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:44479e506f890251adbe6cf36b487af2fdccb47fb4b6ff8c7705b8a0b24c899d",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:b2b12d22bfe50aed5c5d9f84c155dbb27984e0b72cfd2086e9c6597686827f7c"
+            },
+            {
+              "char_end": 415,
+              "char_start": 213,
+              "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+              "exact_text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:0e40fba7d333bd83db5fcd56f6e22f2aa6676b72c39a5b91d5ea5c6d11e8778c",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735"
+            },
+            {
+              "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+              "exact_text": "Daily check",
+              "field": "admitted_nominations.section_heading",
+              "nomination_id": "nom1:23e5e6a014cebc9dd430cff63f2cbe9bfaeb41ecd46e83d35c7302ae316f43fb",
+              "semantic_authority": "UNRESOLVED_NOT_USED_AS_ESTABLISHED_SUPPORT"
+            }
+          ],
+          "information_import": {
+            "if_heading_is_authorized": "No question evidence or other outside surface is required.",
+            "if_heading_is_excluded": "Daily scope would require the question or a source surface outside the admitted body authority.",
+            "question_used_as_evidence": false,
+            "required_to_warrant_full_claim": "CONDITIONAL_ON_HEADING_AUTHORITY"
+          },
+          "minimal_unsupported_or_unresolved_proposition": "The two-weight verification is the daily balance check.",
+          "reason": "None of the three admitted source bodies establishes daily balance-check scope. P exposes the same source-derived Daily check metadata as N; no extra admitted body resolves its semantic-authority ambiguity."
+        }
+      ],
+      "case_disposition": "APERTURE_AUTHORITY_UNDEFINED",
+      "case_id": "A07-balance-weight-count",
+      "conditional_interpretations": {
+        "heading_authorized": "N/P SUPPORTED; citation-span insufficiency.",
+        "heading_not_authorized": "N/P OVER_BROAD; packet-level daily-scope grounding defect."
+      },
+      "exact_citation": {
+        "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+        "quote": "The analyst verifies the balance with two traceable weights before use."
+      },
+      "exact_claim": {
+        "citations": [
+          {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "The analyst verifies the balance with two traceable weights before use."
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "The analyst uses two traceable weights for the daily balance check."
+      },
+      "first_run_gates_fired": [],
+      "first_run_public_disposition": "generated_with_gaps",
+      "packet_id": "ep1:d593fa9971cf114ba0b3b6b091e5228d0d7a758b6d35be206df1854436264865",
+      "question": "How many traceable weights are used for the daily balance check?"
+    },
+    {
+      "accepted_claim_count": 1,
+      "accepted_gap_count": 0,
+      "apertures": [
+        {
+          "aperture": "Q",
+          "classification": "OVER_BROAD",
+          "exact_citation": {
+            "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+            "quote": "both operations and QA sign the clearance record"
+          },
+          "exact_claim": {
+            "citations": [
+              {
+                "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+                "quote": "both operations and QA sign the clearance record"
+              }
+            ],
+            "claim_id": "c1",
+            "limitation": null,
+            "qualifier": null,
+            "text": "Both operations and QA must sign the clearance record before the run starts."
+          },
+          "exact_evidence_used": [
+            {
+              "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+              "exact_text": "both operations and QA sign the clearance record",
+              "field": "citation.quote",
+              "semantic_authority": "AUTHORIZED_QUOTE"
+            }
+          ],
+          "information_import": {
+            "question_used_as_evidence": false,
+            "required_to_warrant_full_claim": true,
+            "unauthorized_bridge": "The missing scope/condition would have to come from the question or evidence beyond Q."
+          },
+          "minimal_unsupported_or_unresolved_proposition": "Signing by both operations and QA is a precondition to starting the run.",
+          "reason": "The quote names both signatories but omits the cannot-start-until condition that establishes obligatory pre-run signing."
+        },
+        {
+          "aperture": "N",
+          "classification": "SUPPORTED",
+          "exact_citation": {
+            "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+            "quote": "both operations and QA sign the clearance record"
+          },
+          "exact_claim": {
+            "citations": [
+              {
+                "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+                "quote": "both operations and QA sign the clearance record"
+              }
+            ],
+            "claim_id": "c1",
+            "limitation": null,
+            "qualifier": null,
+            "text": "Both operations and QA must sign the clearance record before the run starts."
+          },
+          "exact_evidence_used": [
+            {
+              "char_end": 415,
+              "char_start": 213,
+              "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+              "exact_text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:aa8b3d9a23c371e905e6db6e0a9d769fd83af0901e955f2f76e7dc590a8e0300",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735"
+            }
+          ],
+          "information_import": {
+            "other_unauthorized_surface_used": false,
+            "question_used_as_evidence": false,
+            "required_to_warrant_full_claim": false
+          },
+          "minimal_unsupported_or_unresolved_proposition": null,
+          "reason": "The cited body states: The run cannot start until both operations and QA sign the clearance record. This directly establishes signatories, necessity, and pre-run timing."
+        },
+        {
+          "aperture": "P",
+          "classification": "SUPPORTED",
+          "exact_citation": {
+            "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+            "quote": "both operations and QA sign the clearance record"
+          },
+          "exact_claim": {
+            "citations": [
+              {
+                "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+                "quote": "both operations and QA sign the clearance record"
+              }
+            ],
+            "claim_id": "c1",
+            "limitation": null,
+            "qualifier": null,
+            "text": "Both operations and QA must sign the clearance record before the run starts."
+          },
+          "exact_evidence_used": [
+            {
+              "char_end": 415,
+              "char_start": 213,
+              "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+              "exact_text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:aa8b3d9a23c371e905e6db6e0a9d769fd83af0901e955f2f76e7dc590a8e0300",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735"
+            },
+            {
+              "char_end": 189,
+              "char_start": 50,
+              "chunk_id": "SOP-OPS-007_v1_2_chunk_001",
+              "exact_text": "Operations verifies that the previous product, labels, inserts, and reconciliation sheets are removed before the next packaging run starts.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:37a0dabd8398f44918d3702e49928449a5b52fbf0674597c573bd4f47b49a604",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735"
+            },
+            {
+              "char_end": 690,
+              "char_start": 480,
+              "chunk_id": "SOP-QA-001_v1_0_chunk_003",
+              "exact_text": "The investigation record must identify the sample location, sampling date, organism result if available, affected room, affected product lots, containment action, and the person who approved reopening the room.",
+              "field": "admitted_nominations.text",
+              "nomination_id": "nom1:d9f7dd750894551b791df5d745848f70220a76810f0dba686d23e356ada8c609",
+              "semantic_authority": "AUTHORIZED_SOURCE_TEXT",
+              "source_hash": "sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923"
+            }
+          ],
+          "information_import": {
+            "other_unauthorized_surface_used": false,
+            "question_used_as_evidence": false,
+            "required_to_warrant_full_claim": false
+          },
+          "minimal_unsupported_or_unresolved_proposition": null,
+          "reason": "The full admitted packet includes the cited cannot-start-until sentence. It supports the entire frozen claim without relying on the question, headings, or other metadata."
+        }
+      ],
+      "case_disposition": "CITATION_SPAN_INSUFFICIENCY",
+      "case_id": "A08-line-clearance-signatories",
+      "conditional_interpretations": null,
+      "exact_citation": {
+        "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+        "quote": "both operations and QA sign the clearance record"
+      },
+      "exact_claim": {
+        "citations": [
+          {
+            "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+            "quote": "both operations and QA sign the clearance record"
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "Both operations and QA must sign the clearance record before the run starts."
+      },
+      "first_run_gates_fired": [],
+      "first_run_public_disposition": "generated",
+      "packet_id": "ep1:ea3928728472273819f3c6183683da95690b1bb012d514adfb9b9ce7d4086397",
+      "question": "Who must sign the line clearance record before the run starts?"
+    }
+  ],
+  "created_at_utc": "2026-09-30T01:27:16.912529+00:00",
+  "deviations_and_limits": [
+    "The protocol bytes and first-run values are unchanged. No experimental design, semantic gate, prompt adjustment, or output repair was introduced.",
+    "An evidence-import projection initially expected a list where the original quote-review record is an object. It stopped during projection, after exact copies; the projection was corrected from the verified original record. No missing evidence was reconstructed.",
+    "Whole Wave A input/output/replay files are retained to preserve directly checkable first-run aggregate hashes; only A07/A08 raw responses are copied.",
+    "Original receipt and post-run integrity contain local execution context; their hashes and selected first-run receipt values are retained instead of publishing their complete bytes.",
+    "No artifact ZIP or Wave B payload is imported. Manifest Wave B identities are metadata only.",
+    "The durable subset reconstructs this A07/A08 adjudication, not all six raw provider responses or the whole original execution environment.",
+    "This is qualitative agent adjudication, not independent human review or deterministic semantic entailment. The checker and tests establish custody/bindings only.",
+    "Full source documents were inspected to verify provenance, not admitted as expanded P evidence. P uses only frozen admitted nomination authority."
+  ],
+  "evaluator": "agent_llm",
+  "inference": [
+    "Both selected quotes are insufficient for their complete claims under Q; this preserves rather than reverses the prior quote-only judgments.",
+    "A08 is citation-span insufficiency, not a packet-level grounding defect, under the preregistered N/P authority.",
+    "A07 changes between support and a packet-level scope defect depending on whether its source-derived heading may carry semantic support. Existing authority does not settle that rule.",
+    "The overall terminal disposition is APERTURE_AUTHORITY_UNDEFINED. MIXED would prematurely assume heading exclusion; CITATION_SPAN_INSUFFICIENCY alone would prematurely assume heading inclusion."
+  ],
+  "next_step": {
+    "grounding_successor_execution": "NOT_AUTHORIZED; if heading exclusion later establishes an A07 packet defect, separately freeze a two-case grounding successor before generation.",
+    "model_calls_authorized": 0,
+    "scope": "Define which source-derived RetrievalNomination fields may carry semantic support, especially headings, and how they bind to source provenance. Preserve these results; authorize any re-adjudication separately.",
+    "type": "separate_repository_authority_decision",
+    "wave_b_authorized": false
+  },
+  "observed_evidence": [
+    "Both accepted claims and selected citations are identical across the exact raw provider responses, frozen outputs, and frozen replay.",
+    "A07 cited text and all other admitted source bodies omit daily balance-check scope. Daily check is source-derived heading metadata for the cited chunk, outside its body span.",
+    "A08 cited body contains the run cannot start until both operations and QA sign sentence; its selected quote contains only the signatory fragment.",
+    "First-run A07 remains generated_with_gaps with one claim and one gap; A08 remains generated with one claim and no gaps. No gates fired in either frozen case."
+  ],
+  "packet_level_grounding_defect": "A08 NOT_OBSERVED; A07 UNRESOLVED, not asserted absent or present",
+  "preserved_evidence_location": "research/evidence/wave-a-support-aperture-v1",
+  "protected_boundary": {
+    "cal_integration": false,
+    "frozen_output_repairs": false,
+    "generation_reruns": 0,
+    "merge_or_release": false,
+    "new_model_calls": 0,
+    "prompt_changes": false,
+    "prospective": "NOT_ACCESSED",
+    "public_answer_promotion": false,
+    "replay_reruns": 0,
+    "test": "NOT_ACCESSED",
+    "wave_b": "LOCKED_NOT_READ_NOT_EVALUATED"
+  },
+  "repository_authority_findings": [
+    {
+      "line": 77,
+      "observation": "Citation resolution is structural and explicitly does not establish semantic support.",
+      "section": "ADR-007",
+      "source": "DECISIONS.md"
+    },
+    {
+      "line": 193,
+      "observation": "Semantic support/overstatement/missing-source assessment is a planned answer-grounding seam; it is not currently integrated.",
+      "section": "ADR-015",
+      "source": "DECISIONS.md"
+    },
+    {
+      "line": 207,
+      "observation": "Chunk text is the exact body span. Headings remain separate, are recombined for indexing/scoring, and appear in citation display headers. This decides representation and quote provenance, not general semantic heading authority.",
+      "section": "ADR-016",
+      "source": "DECISIONS.md"
+    },
+    {
+      "line": 71,
+      "observation": "RetrievalNomination carries text, section_heading, structural provenance, retrieval diagnostics, and inferred roles. Presence in this schema does not assign all fields semantic support authority.",
+      "source": "src/biotech_rag_assistant/evidence_packet.py"
+    },
+    {
+      "line": 102,
+      "observation": "ep1 item identity includes source hash and span, but does not include heading, text, authority_class, or section_role directly. Separate frozen-file hashes preserve their observed values.",
+      "source": "src/biotech_rag_assistant/evidence_packet.py"
+    },
+    {
+      "line": 265,
+      "observation": "nomination_from_hit copies text and heading from the chunk. section_role is a deterministic heading heuristic; authority_class is an admission/inspection label, not truth or semantic entailment.",
+      "source": "src/biotech_rag_assistant/evidence_packet.py"
+    },
+    {
+      "line": 290,
+      "observation": "G3 checks quote containment in nomination.text, excluding heading from the quoted source span.",
+      "source": "src/biotech_rag_assistant/generation.py"
+    },
+    {
+      "line": 324,
+      "observation": "G5 allows identifiers from cited metadata including headings. This lexical identifier exception does not authorize heading-derived daily frequency or other propositions.",
+      "source": "src/biotech_rag_assistant/generation.py"
+    },
+    {
+      "line": 356,
+      "observation": "G6 blocks requirements based only on revision-history/references roles. It does not semantically prove requirements or grant other roles support authority.",
+      "source": "src/biotech_rag_assistant/generation.py"
+    },
+    {
+      "line": 25,
+      "observation": "Tests pin source-span equality, heading-plus-text indexing, and the Daily check heading outside the CAL body span.",
+      "source": "tests/test_chunking.py"
+    },
+    {
+      "line": 143,
+      "observation": "Tests pin explicit expansion provenance and source-only schema/status admission; they do not establish proposition-level metadata support.",
+      "source": "tests/test_evidence_packet.py"
+    },
+    {
+      "line": 1,
+      "observation": "Scripted tests cover the named structural failures and surviving shapes; they do not resolve the daily-scope heading question.",
+      "source": "tests/test_generation_gates.py"
+    },
+    {
+      "line": 19,
+      "observation": "The frozen prompt restricts generation to admitted_nominations, requires quotes from chunk text, and excludes guesses/unstated conventions. It does not define which nomination metadata may support a material proposition.",
+      "source": "src/biotech_rag_assistant/ollama_generator.py"
+    }
+  ],
+  "schema_version": "wave-a-support-aperture-adjudication/v1",
+  "semantic_confidence": "moderate; repository inspection and exact frozen synthetic evidence, without independent human adjudication",
+  "status": "completed_needs_audit",
+  "strongest_counterinterpretation": "Daily check is an authentic source heading, is passed to the model, and contextualizes the two-weight paragraph. Authorizing source-derived contextual headings would make A07 N/P supported without question evidence. ADR-016 separates quoted spans rather than explicitly prohibiting semantic context. This is why the record is inconclusive, rather than treating source metadata as fabricated or declaring a packet defect.",
+  "terminal_disposition": "APERTURE_AUTHORITY_UNDEFINED",
+  "wave_b_authorization": {
+    "authorized_by_this_task": false,
+    "exploratory_successor_justified_now": false,
+    "reason": "The no-packet-defect prerequisite cannot be established until A07 heading authority is resolved.",
+    "status": "LOCKED"
+  }
+}

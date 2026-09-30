@@ -1,0 +1,115 @@
+{
+  "evidence_manifest_sha256": "214aaf9723db10a3ccbcba43ecae0fede5cafa4f3ad5fc25bcbe598340bf8307",
+  "generation_or_gate_replays": 0,
+  "new_model_calls": 0,
+  "observations": [
+    {
+      "case_id": "A07-balance-weight-count",
+      "exact_cited_nomination": {
+        "authority_class": "calibration_note",
+        "authorization_scope": null,
+        "char_end": 240,
+        "char_start": 55,
+        "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+        "corpus_identity": "cm1:derived:1cdce1ba4bee1bf97025aa035c2841f8a0f039b8323b773a89f6895529fc889f",
+        "doc_id": "CAL-ENG-005",
+        "expansion_handle": "section:CAL-ENG-005:1.0:Daily check",
+        "nomination_id": "nom1:23e5e6a014cebc9dd430cff63f2cbe9bfaeb41ecd46e83d35c7302ae316f43fb",
+        "nomination_kind": "chunk",
+        "parent_context_id": null,
+        "query_id": "q1:e1846bf86f46dbeb6a7deecd072ec28bc6bafb4293a9f1ce5c715fdf4916e8f2",
+        "rank": 1,
+        "raw_score": 12.666229160055064,
+        "representation_level": "chunk",
+        "retrieval_config_id": "rc1:90ee7f451f97fdb00c11ad0d615a2f7e8d58c5fd8db41fd037547f88ffef7864",
+        "retrieval_reasons": [
+          {
+            "rank": 1,
+            "raw_score": 12.666229160055064,
+            "signal": "bm25"
+          }
+        ],
+        "retrieval_signal": "bm25",
+        "section_heading": "Daily check",
+        "section_role": null,
+        "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+        "status": "Effective",
+        "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service.",
+        "token_estimate": 47,
+        "version": "1.0"
+      },
+      "exact_claim": {
+        "citations": [
+          {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "The analyst verifies the balance with two traceable weights before use."
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "The analyst uses two traceable weights for the daily balance check."
+      },
+      "packet_id": "ep1:d593fa9971cf114ba0b3b6b091e5228d0d7a758b6d35be206df1854436264865",
+      "public_disposition": "generated_with_gaps",
+      "semantic_authority_decided_by_checker": false,
+      "source_text_and_heading_provenance_match": true
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "exact_cited_nomination": {
+        "authority_class": "procedure",
+        "authorization_scope": null,
+        "char_end": 415,
+        "char_start": 213,
+        "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+        "corpus_identity": "cm1:derived:1cdce1ba4bee1bf97025aa035c2841f8a0f039b8323b773a89f6895529fc889f",
+        "doc_id": "SOP-OPS-007",
+        "expansion_handle": "section:SOP-OPS-007:1.2:Independent check",
+        "nomination_id": "nom1:aa8b3d9a23c371e905e6db6e0a9d769fd83af0901e955f2f76e7dc590a8e0300",
+        "nomination_kind": "chunk",
+        "parent_context_id": null,
+        "query_id": "q1:6ee44e9e06741bdcdb9fedbdc1b3a78fd0d6b9d5e0c52ae1a4f90509bae048bd",
+        "rank": 1,
+        "raw_score": 11.36518409330045,
+        "representation_level": "chunk",
+        "retrieval_config_id": "rc1:90ee7f451f97fdb00c11ad0d615a2f7e8d58c5fd8db41fd037547f88ffef7864",
+        "retrieval_reasons": [
+          {
+            "rank": 1,
+            "raw_score": 11.36518409330045,
+            "signal": "bm25"
+          }
+        ],
+        "retrieval_signal": "bm25",
+        "section_heading": "Independent check",
+        "section_role": null,
+        "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+        "status": "Approved",
+        "text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record.",
+        "token_estimate": 51,
+        "version": "1.2"
+      },
+      "exact_claim": {
+        "citations": [
+          {
+            "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+            "quote": "both operations and QA sign the clearance record"
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "Both operations and QA must sign the clearance record before the run starts."
+      },
+      "packet_id": "ep1:ea3928728472273819f3c6183683da95690b1bb012d514adfb9b9ce7d4086397",
+      "public_disposition": "generated",
+      "semantic_authority_decided_by_checker": false,
+      "source_text_and_heading_provenance_match": true
+    }
+  ],
+  "schema_version": "wave-a-support-aperture-custody-check/v1",
+  "semantic_adjudication": "NOT_PERFORMED_BY_CHECKER",
+  "status": "PASS_PRESERVED_EVIDENCE_BINDINGS",
+  "verified_preserved_file_count": 11
+}

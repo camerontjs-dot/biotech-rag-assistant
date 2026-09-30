@@ -1,0 +1,323 @@
+{
+  "apparatus_errors": [],
+  "bundle_manifest_sha256": "80a582477de420bbf4655a8936be6067fd8cad85df2ea21f61fec6efc1945903",
+  "callable_case_count": 6,
+  "case_count": 9,
+  "evaluated_case_count": 9,
+  "fallback_reason_counts": {
+    "G7": 1,
+    "empty_packet": 3
+  },
+  "human_review_queue": [
+    {
+      "case_id": "A07-balance-weight-count",
+      "claims": [
+        {
+          "citations": [
+            {
+              "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+              "quote": "The analyst verifies the balance with two traceable weights before use."
+            }
+          ],
+          "claim_id": "c1",
+          "limitation": null,
+          "qualifier": null,
+          "text": "The analyst uses two traceable weights for the daily balance check."
+        }
+      ],
+      "packet_id": "ep1:d593fa9971cf114ba0b3b6b091e5228d0d7a758b6d35be206df1854436264865",
+      "question": "How many traceable weights are used for the daily balance check?"
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "claims": [
+        {
+          "citations": [
+            {
+              "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+              "quote": "both operations and QA sign the clearance record"
+            }
+          ],
+          "claim_id": "c1",
+          "limitation": null,
+          "qualifier": null,
+          "text": "Both operations and QA must sign the clearance record before the run starts."
+        }
+      ],
+      "packet_id": "ep1:ea3928728472273819f3c6183683da95690b1bb012d514adfb9b9ce7d4086397",
+      "question": "Who must sign the line clearance record before the run starts?"
+    }
+  ],
+  "issue_gate_counts": {
+    "G3": 1,
+    "G7": 1
+  },
+  "model_id": "gemma3:12b",
+  "non_claims": [
+    "This is exploratory DEV-only evidence.",
+    "No semantic-support rubric is frozen here.",
+    "Accepted claims still require human review.",
+    "TEST and PROSPECTIVE are not evaluated."
+  ],
+  "parameters_or_effort": {
+    "min_p": 0.0,
+    "num_ctx": 32768,
+    "num_predict": 4096,
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "temperature": 0.0,
+    "top_k": 40,
+    "top_p": 1.0
+  },
+  "prompt_sha256": "d1cd4cb7c727207b354552d0668a9d922967b87bd8615da5994c88aa0c2c8447",
+  "provider": "ollama",
+  "results": [
+    {
+      "accepted_claim_count": 0,
+      "accepted_claims": [],
+      "accepted_gap_count": 1,
+      "accepted_gaps": [
+        {
+          "asked_about": "the acceptance range for the analytical balance daily check",
+          "statement": "The evidence states that if either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service, but does not state what that range is.",
+          "topic_citation": {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service."
+          }
+        }
+      ],
+      "case_id": "A01-balance-acceptance-range",
+      "disposition_match": true,
+      "fallback_reason": null,
+      "generator_called_by_gate_wrapper": true,
+      "generator_should_be_called": true,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "answer",
+      "packet_id": "ep1:552182a186a0df5489f77d1586189d344209999cc43fa3dda780272722bfc51c",
+      "preregistered_expected_disposition": "not_stated",
+      "public_disposition": "not_stated",
+      "question": "What is the acceptance range for the analytical balance daily check?"
+    },
+    {
+      "accepted_claim_count": 0,
+      "accepted_claims": [],
+      "accepted_gap_count": 0,
+      "accepted_gaps": [],
+      "case_id": "A02-gowning-absence",
+      "disposition_match": false,
+      "fallback_reason": "G7",
+      "generator_called_by_gate_wrapper": true,
+      "generator_should_be_called": true,
+      "issues": [
+        {
+          "claim_id": null,
+          "code": "quote_not_contained",
+          "gap_index": 0,
+          "gate": "G3",
+          "message": "quote is not an exact normalized substring of the admitted chunk"
+        },
+        {
+          "claim_id": null,
+          "code": "invalid_not_stated_shape",
+          "gap_index": null,
+          "gate": "G7",
+          "message": "not_stated requires zero claims and at least one valid topic gap"
+        }
+      ],
+      "observed_issue_gates": [
+        "G3",
+        "G7"
+      ],
+      "outcome": "answer",
+      "packet_id": "ep1:8f0a5bb8886825b1cf2195be0fb7c86ad4379730f9f8a8f6de77e45c0027209d",
+      "preregistered_expected_disposition": "not_stated",
+      "public_disposition": "extractive_fallback",
+      "question": "How long an absence from the suite triggers gowning requalification?"
+    },
+    {
+      "accepted_claim_count": 0,
+      "accepted_claims": [],
+      "accepted_gap_count": 1,
+      "accepted_gaps": [
+        {
+          "asked_about": "the defined use period for printed copies stamped by document control",
+          "statement": "The evidence states that printed copies are uncontrolled unless document control stamps them for a defined use period, but does not state what that period is.",
+          "topic_citation": {
+            "chunk_id": "POL-DOC-003_v2_0_chunk_001",
+            "quote": "Printed copies are uncontrolled unless document control stamps them for a defined use period."
+          }
+        }
+      ],
+      "case_id": "A03-controlled-copy-use-period",
+      "disposition_match": true,
+      "fallback_reason": null,
+      "generator_called_by_gate_wrapper": true,
+      "generator_should_be_called": true,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "answer",
+      "packet_id": "ep1:f6279205771ff80f12a51ce519b5a0e7a705a00d848c16dec51c5ac7ba22f2ac",
+      "preregistered_expected_disposition": "not_stated",
+      "public_disposition": "not_stated",
+      "question": "What is the defined use period for printed copies stamped by document control?"
+    },
+    {
+      "accepted_claim_count": 0,
+      "accepted_claims": [],
+      "accepted_gap_count": 1,
+      "accepted_gaps": [
+        {
+          "asked_about": "the action limit for viable environmental monitoring",
+          "statement": "The SOPs and specification do not state the numerical value of the action limit for viable environmental monitoring.",
+          "topic_citation": {
+            "chunk_id": "SPEC-QC-006_v3_0_chunk_002",
+            "quote": "An alert limit excursion starts a trend review. An action limit excursion requires investigation, affected-use assessment, and documented QA disposition before routine use resumes."
+          }
+        }
+      ],
+      "case_id": "A04-em-action-limit",
+      "disposition_match": true,
+      "fallback_reason": null,
+      "generator_called_by_gate_wrapper": true,
+      "generator_should_be_called": true,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "answer",
+      "packet_id": "ep1:bafc5a97d75ac199a4dfb92cfa4603372f0d5b198f33339e88b0d03f8336794f",
+      "preregistered_expected_disposition": "not_stated",
+      "public_disposition": "not_stated",
+      "question": "What is the action limit for viable environmental monitoring?"
+    },
+    {
+      "accepted_claim_count": 0,
+      "accepted_claims": [],
+      "accepted_gap_count": 0,
+      "accepted_gaps": [],
+      "case_id": "A05-deviation-close-days",
+      "disposition_match": true,
+      "fallback_reason": "empty_packet",
+      "generator_called_by_gate_wrapper": false,
+      "generator_should_be_called": false,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "refusal",
+      "packet_id": "ep1:8e76994bd1f8c091bfa954f97e4c995256ba6546834bb16c345184fee8e4fa85",
+      "preregistered_expected_disposition": "refusal",
+      "public_disposition": "refusal",
+      "question": "How many days does QA have to close a deviation?"
+    },
+    {
+      "accepted_claim_count": 0,
+      "accepted_claims": [],
+      "accepted_gap_count": 0,
+      "accepted_gaps": [],
+      "case_id": "A06-purified-water-action-limit",
+      "disposition_match": true,
+      "fallback_reason": "empty_packet",
+      "generator_called_by_gate_wrapper": false,
+      "generator_should_be_called": false,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "refusal",
+      "packet_id": "ep1:97a11f5a19a0a367d35613fdcaa1cb2f7e021fad7f147818ae17bf320dad8bee",
+      "preregistered_expected_disposition": "refusal",
+      "public_disposition": "refusal",
+      "question": "What is the action limit value for purified water?"
+    },
+    {
+      "accepted_claim_count": 1,
+      "accepted_claims": [
+        {
+          "citations": [
+            {
+              "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+              "quote": "The analyst verifies the balance with two traceable weights before use."
+            }
+          ],
+          "claim_id": "c1",
+          "limitation": null,
+          "qualifier": null,
+          "text": "The analyst uses two traceable weights for the daily balance check."
+        }
+      ],
+      "accepted_gap_count": 1,
+      "accepted_gaps": [
+        {
+          "asked_about": "the process for handling weights outside the acceptance range",
+          "statement": "The evidence states that if either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service, but does not specify the process for handling those weights.",
+          "topic_citation": {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service."
+          }
+        }
+      ],
+      "case_id": "A07-balance-weight-count",
+      "disposition_match": false,
+      "fallback_reason": null,
+      "generator_called_by_gate_wrapper": true,
+      "generator_should_be_called": true,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "answer",
+      "packet_id": "ep1:d593fa9971cf114ba0b3b6b091e5228d0d7a758b6d35be206df1854436264865",
+      "preregistered_expected_disposition": "generated",
+      "public_disposition": "generated_with_gaps",
+      "question": "How many traceable weights are used for the daily balance check?"
+    },
+    {
+      "accepted_claim_count": 1,
+      "accepted_claims": [
+        {
+          "citations": [
+            {
+              "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+              "quote": "both operations and QA sign the clearance record"
+            }
+          ],
+          "claim_id": "c1",
+          "limitation": null,
+          "qualifier": null,
+          "text": "Both operations and QA must sign the clearance record before the run starts."
+        }
+      ],
+      "accepted_gap_count": 0,
+      "accepted_gaps": [],
+      "case_id": "A08-line-clearance-signatories",
+      "disposition_match": true,
+      "fallback_reason": null,
+      "generator_called_by_gate_wrapper": true,
+      "generator_should_be_called": true,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "answer",
+      "packet_id": "ep1:ea3928728472273819f3c6183683da95690b1bb012d514adfb9b9ce7d4086397",
+      "preregistered_expected_disposition": "generated",
+      "public_disposition": "generated",
+      "question": "Who must sign the line clearance record before the run starts?"
+    },
+    {
+      "accepted_claim_count": 0,
+      "accepted_claims": [],
+      "accepted_gap_count": 0,
+      "accepted_gaps": [],
+      "case_id": "A09-obsolete-membrane-hold",
+      "disposition_match": true,
+      "fallback_reason": "empty_packet",
+      "generator_called_by_gate_wrapper": false,
+      "generator_should_be_called": false,
+      "issues": [],
+      "observed_issue_gates": [],
+      "outcome": "refusal",
+      "packet_id": "ep1:664a8f73e002fe6a4d4526a0cb78520f9578c1f3f03dc96121ce3342c3dbbdc4",
+      "preregistered_expected_disposition": "refusal",
+      "public_disposition": "refusal",
+      "question": "What is the membrane filtration hold time for sterility?"
+    }
+  ],
+  "schema_version": "dev-live-generation-eval-v1",
+  "source_commit": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+  "wave": "a",
+  "wave_a_disposition_matches": 7,
+  "wave_a_disposition_total": 9
+}
