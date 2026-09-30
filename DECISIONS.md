@@ -230,11 +230,16 @@ Consequences: `tests/test_onboarding.py` covers refuse-without-force and overwri
 
 ## ADR-018: Source-derived section headings are not proposition-level semantic support authority in EvidencePacket v1
 
-Status: proposed
+Status: accepted (repository authority decision on PR #19; no merge or behavior promotion)
 
 Decision: Under `EvidencePacket v1` (`ep1`), `RetrievalNomination.section_heading` is contextual retrieval/display metadata and may not, by itself, supply a material proposition missing from the cited body span.
 
-A generated claim is not semantically supported merely because its missing qualifier appears in `section_heading`. Under ep1, proposition-level support must come from source authority whose integrity is enforced at the generation boundary, such as the admitted cited body text or another explicitly admitted source span.
+A generated claim is not semantically supported merely because its missing qualifier appears in `section_heading`. Under ep1, proposition-level support comes from explicitly admitted source spans under the existing body/source-span contract. A packet ID alone is not source authentication: `packet_identity_valid()` checks declared identity-bearing fields, not the supplied text against source bytes.
+
+> **Binds:** proposition-level support adjudication of EvidencePacket v1 claims.
+> **Tier:** T0 (authority policy; no new semantic gate is implemented).
+> **Check:** record the authorized source spans used for each support judgment; the focused identity tests pin the underlying ep1 contract, not semantic truth.
+> **Escape:** classify support as INCONCLUSIVE when authorized source evidence is incomplete or its authority is unresolved; do not repair a frozen claim or import question wording as evidence.
 
 This does not say headings are semantically meaningless. It says ep1 does not currently grant them sufficient downstream authority to carry a claim.
 
@@ -249,22 +254,27 @@ Reasoning: PR #17 terminated `APERTURE_AUTHORITY_UNDEFINED` because A07's daily-
 
 Therefore an authentic heading observed in a preserved case is not enough to establish that arbitrary runtime heading metadata is safe semantic authority. Treating it as such would allow a field outside the packet integrity boundary to strengthen a generated claim.
 
-Observed counterexample shape: if an admitted nomination's heading were changed from `Daily check` to a different scope label while its identity-bearing source hash/body span fields remained unchanged, the current ep1 packet identity check would not detect that heading-only mutation. That is sufficient to reject heading-only semantic support under the current contract even though PR #17 separately verified that A07's preserved heading was authentic.
+Observed evidence: the real corpus loader, BM25 retriever, and packet builder reconstructed a one-item packet from `examples/synthetic-controlled-docs` using query `balance traceable weights`. Its ID was `ep1:23700a71daa7e11c63f6ab51e13916ce219bde0a80af2e69cd610cfc8cb9e6b3`. Changing only the admitted nomination's `section_heading` from `Daily check` to `Weekly check` left all eight identity-bearing fields and its body unchanged. Both original and altered packets passed `packet_identity_valid()` with the same declared and recomputed ID. The real adapter's request preparation accepted the altered heading; no transport or generation method was called. Full before/after records and controls are in `research/evidence/ep1-heading-authority-v1/heading-mutation.json`; reproduction: `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python research/check_ep1_heading_identity.py --out heading-mutation.json`.
+
+Controls and limits: changing the query or body-span endpoint invalidated the declared packet. Changing only body text did not. This challenges any stronger reading that ep1 authenticates every model-visible byte or automatically makes body text trustworthy while excluding headings. Body authority instead has an explicit exact-span contract (ADR-016 and G3); the heading field has no corresponding proposition-support grant. This ADR resolves that policy distinction and does not claim to repair the broader integrity limitation.
+
+Counterevidence examined: `load_corpus()` checks whole source hashes and `chunk_document()` derives authentic headings upstream. The qualified Wave A runner also checks the hash of the full frozen Wave A file, which protects its heading bytes. PR #17's offline custody checker independently confirmed A07's source heading after the run. These facts establish construction/custody for that frozen case; they do not authorize arbitrary heading metadata to supply propositions. The shared shadow wrapper and adapter check packet identity but do not re-derive the heading against source before generation. No explicit general heading-support grant was found in ADR-007/009/016, the ep1 protocol, or generation protocols. G5's identifier-membership use and G6's inferred role use remain narrow structural operations.
+
+Inference: the exclusion rule survives the challenge as an ep1 authority policy, with the integrity rationale bounded as above. It is not a universal claim about document headings, nor evidence that the model-visible body is independently authenticated at the generation boundary.
 
 Consequences:
 
 - PR #17 remains historically correct as `APERTURE_AUTHORITY_UNDEFINED`; do not rewrite its terminal result.
 - A07 requires a separately preregistered re-adjudication under this accepted/rejected authority rule before changing its classification.
-- If this proposal is accepted unchanged, A07's `daily` qualifier cannot be supplied by `section_heading` under ep1. Any remaining support must come from admitted body text or another authorized span.
+- A07's `daily` qualifier cannot be supplied by `section_heading` under ep1. Any remaining support must come from admitted body text or another authorized span, assessed only by the separately preregistered successor.
 - A08 is unaffected: its full cited body text already contains the pre-run signing condition.
 - Wave B remains locked until the frozen A07/A08 claims are re-adjudicated under the resulting accepted authority rule.
 - This ADR does not add a new generation gate and does not authorize model calls, prompt changes, output repair, CAL integration, TEST/PROSPECTIVE access, promotion, merge, or release.
 
-A future contract may deliberately authorize source headings as semantic context only if it first binds and verifies the relevant heading provenance and scope strongly enough for that authority. At minimum, such a successor should make the semantic context reconstructable from the pinned source and verify it before downstream generation or adjudication. Whether that requires heading offsets, an explicit section-context object, a new packet identity version, or another representation is a separate engineering question.
+A future contract may deliberately authorize source headings as semantic context only if it explicitly grants that authority, binds the heading and its body-scope relationship to pinned source bytes, and verifies the actual model-visible context before downstream generation or adjudication. It must fail closed when the heading, context, source hash, or scope binding is altered. Heading offsets, an explicit section-context object, a new packet identity version, or a separately verified source projection are possible representations; none is implemented here. Source identity, field custody, and semantic jurisdiction must all be established.
 
 Rejected alternative: immediately treat every source-derived heading as semantic evidence because the heading is authentic in A07. This would conflate provenance with authority and leave heading-only semantic content outside ep1's integrity check.
 
 Rejected alternative: declare headings permanently non-semantic. Headings often do scope their body content; the present decision is about what ep1 safely authorizes, not a universal document-semantics rule.
 
 Reconsideration trigger: revisit this decision when a successor representation binds heading/section context into the authority surface, verifies that binding before generation, and demonstrates that downstream support decisions remain fail-closed under heading/context mutation.
-

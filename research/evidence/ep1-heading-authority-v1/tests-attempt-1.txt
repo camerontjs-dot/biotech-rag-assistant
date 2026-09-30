@@ -1,0 +1,3 @@
+exit_code=1
+No module named pytest
+Launcher resolved the virtual-environment executable symlink to its base interpreter; no tests executed. Local interpreter path omitted.

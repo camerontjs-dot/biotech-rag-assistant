@@ -1,0 +1,30 @@
+{
+  "checked_implementation_sha256": {
+    "research/check_ep1_heading_identity.py": "fcdf97213d90da3743cc36f15c623c2c699f24bdadcc23d94980a7a1357dec1f",
+    "tests/test_ep1_heading_identity.py": "25eabdd1de4771dd2a799d9936da88f503ce73a14b33770dca428227fc9cef1f"
+  },
+  "deviations": [
+    "Repository has no tracked hooks. The existing MainFrame leak guard is installed in clone-local Git hooks without scaffolding templates.",
+    "ADR rationale is narrowed: body-text-only mutation is also ep1-valid, so packet identity is not complete source authentication.",
+    "Existing isolated run runtime is reused for initial identity observation; installed workspace pytest/Ruff are reused for focused checks without dependency installation.",
+    "First captured test launcher resolved the virtual-environment symlink to the base interpreter and exited 1 before test collection (pytest missing there). The launcher path was corrected; tests-attempt-1.txt preserves the diagnostic without a workstation path."
+  ],
+  "execution_source_head": "78fc652d803041b9b15ace2b95ebae591650ffe1",
+  "execution_source_tree": "371e70005a406f89bbe3211c32126e304312fa04",
+  "generation_or_gate_replays": 0,
+  "new_model_calls": 0,
+  "schema_version": "ep1-heading-authority-verification/v1",
+  "test_scope": "Focused heading identity tests plus native demo ep1/chunking tests; benchmark corpus test explicitly deselected. No protected split accessed.",
+  "traces": {
+    "lint": {
+      "exit_code": 0,
+      "trace": "lint.txt",
+      "trace_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "tests": {
+      "exit_code": 0,
+      "trace": "tests.txt",
+      "trace_sha256": "2de437b82d320d023616c2a1f65eb9d85571f783495e48a49d0dee1433ea67c6"
+    }
+  }
+}

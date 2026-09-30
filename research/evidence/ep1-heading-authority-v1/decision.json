@@ -1,0 +1,114 @@
+{
+  "boundary": {
+    "cal": "NOT_INTEGRATED",
+    "frozen_outputs": "UNCHANGED",
+    "merge_release": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "prompt": "UNCHANGED",
+    "public_generation": "NOT_PROMOTED",
+    "test_prospective": "NOT_ACCESSED"
+  },
+  "controls": {
+    "body_span_changed_packet_valid": false,
+    "body_text_only_changed_packet_valid": true,
+    "query_changed_packet_valid": false
+  },
+  "decision": "ADR-018",
+  "disposition": "ACCEPTED_EP1_HEADING_AUTHORITY_EXCLUSION",
+  "exact_observation": {
+    "adapter_generate_call_count": 0,
+    "adapter_request_preparation_accepts_changed_heading": true,
+    "changed_nomination_fields": [
+      "section_heading"
+    ],
+    "declared_packet_id_unchanged": true,
+    "heading_changed_packet_valid": true,
+    "identity_bearing_fields_unchanged": true,
+    "nomination_identity_tuple_unchanged": true,
+    "original_packet_valid": true,
+    "recomputed_packet_id_unchanged": true
+  },
+  "generation_or_gate_replays": 0,
+  "historical_pr_17": "UNCHANGED_APERTURE_AUTHORITY_UNDEFINED",
+  "inference": {
+    "confidence": "moderate",
+    "counterevidence": "Authentic upstream heading derivation, complete source hashes, frozen file hashes, and post-run provenance checks constrain custody for the preserved case. Body text is also outside the direct tuple. Exclusion from the tuple alone is not a complete argument for authority or its absence.",
+    "evaluator": "agent_llm",
+    "independent_human_adjudication": false,
+    "later_heading_authorization_conditions": [
+      "explicit semantic jurisdiction",
+      "source-hash and heading/body scope binding",
+      "verification of actual model-visible context before generation/adjudication",
+      "fail-closed mutation controls"
+    ],
+    "rationale": "The direct tuple and generation validator do not authenticate the supplied heading. Existing source-span authority is explicit for body text; existing heading uses do not grant general proposition-support jurisdiction. The decision resolves that policy gap.",
+    "rule": "section_heading may not supply a material proposition missing from authorized admitted body/source spans under ep1.",
+    "scope": "ep1 authority policy; no universal linguistic claim, semantic gate, or integrity repair."
+  },
+  "new_model_calls": 0,
+  "observed_existing_contracts": {
+    "existing_heading_uses": [
+      "retrieval/indexing",
+      "display/citation header",
+      "G5 identifier membership",
+      "inferred G6 section role"
+    ],
+    "explicit_general_heading_semantic_support_grant": "NONE_FOUND_IN_REVIEWED_AUTHORITIES",
+    "historical_custody_checker": "Verified authentic A07/A08 source headings offline after the frozen run.",
+    "native_cli_api_routes": "Construct their packets from the native builder; no deployment exploit or arbitrary-packet public input is demonstrated.",
+    "qualified_wave_a_runner": "Checks whole frozen Wave A file hash, which binds heading bytes in that particular bundle; does not independently re-derive heading provenance.",
+    "shared_generation_boundary": "Wrapper and adapter recompute ep1 identity without re-deriving heading against source bytes.",
+    "upstream_corpus_loader_and_chunker": "Hash-validated source documents yield authentic body spans and headings in native construction."
+  },
+  "offline_successor": "PENDING_SEPARATE_PREREGISTRATION",
+  "receipt": "heading-mutation.json",
+  "receipt_sha256": "6ad4e1c0642957329d55a68f46d1a23d37f3f5da15564150f4c1fff854535a14",
+  "reviewed_authority_sha256": {
+    "DECISIONS.md": "8d2645c83864cf436d5312d8335843441c5dad8f84ca19e0002b317919383c95",
+    "README.md": "2d6aad723b84da8041b49dfbe3d685fc98a6b1a3feeb0a85097279e2bba432ac",
+    "research/evidence-packet-v1-protocol.md": "8b706d17cb5f8533d4743524757ce639926676135665731a8e81e475b6a64f78",
+    "research/generation-boundary-pressure-test-protocol.md": "179f939fd35095e150caa795cf751d32704cf21f6bd56bddd65bc1f46e41d63b",
+    "research/generation-claim-gates-v1-protocol.md": "dcedbb79e1887aeed4203ccbd72dfd50aad099c84cd574c180af81430e76a64c",
+    "research/live-generation-dev-protocol.md": "ddb67ae8bad64f47ce2e0e3029ca08a0ac6d9a3b6e368221b590d97a9f88dd6e",
+    "research/ollama-structured-wave-a-protocol.md": "2d8879a48d6759f7387060c3a63fbf2ccba44af76f3fd80e42bd7233c0ac2b06",
+    "research/wave-a-support-aperture-adjudication-protocol.md": "1a3f5b4dbaaee4a0d6468a31d1880eae1fb443b9ace2c989adf95c5f62dda956",
+    "src/biotech_rag_assistant/answer.py": "f83c28f8e8a256ea5f4333069ad87bd14af1ff347428ea773ed27c7ddabddc6f",
+    "src/biotech_rag_assistant/api/app.py": "de3caea4eba6c3841cb622c2916d9658c73573adf47cc165c0728268f2b58810",
+    "src/biotech_rag_assistant/chunking.py": "83883e5b5c48660f46d863860e924afbab10d71292eefae4b967520dc99d1ef4",
+    "src/biotech_rag_assistant/citations.py": "2a74ebcdc27a940be3112fb6041514fc8ea29bcdd2960f6b2d34c436403b21d2",
+    "src/biotech_rag_assistant/cli.py": "6fdcdf8b7c63e59a51a78bdadbf9c2f178a4a5f72738eff5ad18727e8b1c7691",
+    "src/biotech_rag_assistant/corpus.py": "9cc8e582b8c3ad661afb5f4c656371115a2c596b3b2cf57694fc36ce4c2a5f92",
+    "src/biotech_rag_assistant/evidence_packet.py": "275e64878ba4f5ab98967c56a67c2107c9f5b0d4207b1f107556d8856003c5a6",
+    "src/biotech_rag_assistant/generation.py": "9464015b99f6975278d038aef7357c1c6a124cd6460508b4cf85ee1deee6ee29",
+    "src/biotech_rag_assistant/models.py": "fe24635a178976db63d9dfa80d910fbaace8fc9e76c1360c9f7a3dc6802e28c6",
+    "src/biotech_rag_assistant/ollama_generator.py": "28e9b6e22c242594827e02657e88a8b2b97aaa8f5f0ac59db49fb7dea5f3ab7c",
+    "src/biotech_rag_assistant/retrieval.py": "fc125793dfab5d6e34813e17ca5ef4698262acde6e2032f018064aa3df6c1dc0",
+    "tests/test_chunking.py": "f9353ee8e3b245d74d9c7ff4e7f0940eed4df01117989cd44950ec2dcb5c3a33",
+    "tests/test_evidence_packet.py": "458b22316bcded8808649a4db22f754a2940889a3b4a40762103574ed249be18",
+    "tests/test_generation_gates.py": "085f758a57c6b745196d8928b9f83bf4261cc8943ff24c8ee58fa882c483358e"
+  },
+  "schema_version": "ep1-heading-authority-decision/v1",
+  "source_references": {
+    "adapter_boundary": "src/biotech_rag_assistant/ollama_generator.py:130",
+    "corpus_source_validation": "src/biotech_rag_assistant/corpus.py:86",
+    "ep1_protocol": "research/evidence-packet-v1-protocol.md:91",
+    "g3_body_authority": "src/biotech_rag_assistant/generation.py:290",
+    "g5_metadata_identifiers": "src/biotech_rag_assistant/generation.py:324",
+    "g6_syntactic_role": "src/biotech_rag_assistant/generation.py:356",
+    "generation_protocol": "research/generation-claim-gates-v1-protocol.md:77",
+    "heading_derivation": "src/biotech_rag_assistant/chunking.py:57",
+    "packet_validation": "src/biotech_rag_assistant/evidence_packet.py:397",
+    "source_identity": "src/biotech_rag_assistant/evidence_packet.py:102",
+    "source_span_decision": "DECISIONS.md:207",
+    "wrapper_boundary": "src/biotech_rag_assistant/generation.py:490"
+  },
+  "starting_base": {
+    "commit": "457be991da5835f642195ffcf289d8f271e5f51b",
+    "tree": "4545e4e464150f5e658390421d7c4c085f8f3940"
+  },
+  "starting_head": {
+    "commit": "78fc652d803041b9b15ace2b95ebae591650ffe1",
+    "tree": "371e70005a406f89bbe3211c32126e304312fa04"
+  },
+  "verification": "verification.json",
+  "wave_b": "LOCKED_NOT_AUTHORIZED_NOT_READ_NOT_EVALUATED"
+}
