@@ -1,0 +1,23 @@
+{
+  "reviewed_at": "2026-09-30T17:20:33.265233+00:00",
+  "source_sha256": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8",
+  "imports": [],
+  "call_targets": [
+    "_aperture",
+    "_ids",
+    "_valid",
+    "all",
+    "any",
+    "assessment_ledger.get",
+    "isinstance",
+    "len",
+    "record.update",
+    "set",
+    "sorted",
+    "witness_ids.append"
+  ],
+  "runtime_forbidden_events": [],
+  "ordinary_probe_action": "REJECT_COMPLETE",
+  "io_absent_in_source_and_probe": true,
+  "scope": "pre-freeze ordinary synthetic probe; no qualification controls"
+}

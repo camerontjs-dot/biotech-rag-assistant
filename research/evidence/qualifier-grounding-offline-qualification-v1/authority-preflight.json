@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-09-30T17:06:33.994034+00:00",
+  "sha256_checks": {
+    "research/qualifier-grounding-policy-v1-protocol.md": {
+      "expected": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+      "observed": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/policy.json": {
+      "expected": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+      "observed": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/interface.json": {
+      "expected": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+      "observed": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/inputs.jsonl": {
+      "expected": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "observed": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/expectations.jsonl": {
+      "expected": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+      "observed": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/freeze.json": {
+      "expected": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+      "observed": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/receipt-freeze.json": {
+      "expected": "94a17c8f21ac7757b322adb7b20a097c19b34f2c4e837a19aeabdb2093645e28",
+      "observed": "94a17c8f21ac7757b322adb7b20a097c19b34f2c4e837a19aeabdb2093645e28",
+      "matches": true
+    }
+  },
+  "experiment_identity_only": {
+    "candidate_id": "NOT_YET_IMPLEMENTED_OR_AUTHORIZED",
+    "experiment_id": "qualifier-grounding-offline-qualification-v1",
+    "model_calls": 0,
+    "schema_version": "experiment/v1",
+    "source_commit": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+    "source_tree": "cfdb88587d317fadd2fd22f097d16c0c7fa07619",
+    "state": "designed"
+  },
+  "all_match": true,
+  "pre_freeze_payload_exposure": false,
+  "hashing_note": "Opaque SHA-256 checks; controls and expectations were not parsed or displayed."
+}

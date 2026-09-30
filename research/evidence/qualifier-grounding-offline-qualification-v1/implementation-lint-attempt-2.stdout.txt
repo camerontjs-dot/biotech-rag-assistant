@@ -1,0 +1,23 @@
+E501 Line too long (105 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:214:101
+    |
+212 |                 finding="FULL_BODY_SUPPORT",
+213 |                 action="KEEP_FULL",
+214 |                 reason="Every material obligation has packet BODY support and sufficient quote support.",
+    |                                                                                                     ^^^^^
+215 |             )
+216 |         else:
+    |
+
+E501 Line too long (101 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:220:101
+    |
+218 |                 finding="CITATION_SPAN_INSUFFICIENCY",
+219 |                 action="HOLD_FOR_CITATION",
+220 |                 reason="Packet BODY supports all conditions; citation support remains insufficient.",
+    |                                                                                                     ^
+221 |             )
+222 |         return record
+    |
+
+Found 2 errors.

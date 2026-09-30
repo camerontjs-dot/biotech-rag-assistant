@@ -1,0 +1,19 @@
+test_ambiguous_body_withholds (__main__.ReducerContractTests.test_ambiguous_body_withholds) ... ok
+test_contradiction_overrides_entailment (__main__.ReducerContractTests.test_contradiction_overrides_entailment) ... ok
+test_core_has_explicit_gap (__main__.ReducerContractTests.test_core_has_explicit_gap) ... ok
+test_disconnected_assessment_stops (__main__.ReducerContractTests.test_disconnected_assessment_stops) ... ok
+test_false_guard_rejects_and_unknown_guard_withholds (__main__.ReducerContractTests.test_false_guard_rejects_and_unknown_guard_withholds) ... ok
+test_full_declared_support (__main__.ReducerContractTests.test_full_declared_support) ... ok
+test_guard_assertion_cannot_replace_body_witness (__main__.ReducerContractTests.test_guard_assertion_cannot_replace_body_witness) ... ok
+test_input_is_unmodified_and_list_order_is_irrelevant (__main__.ReducerContractTests.test_input_is_unmodified_and_list_order_is_irrelevant) ... ok
+test_malformed_reference_stops (__main__.ReducerContractTests.test_malformed_reference_stops) ... ok
+test_opaque_case_identity_is_passthrough (__main__.ReducerContractTests.test_opaque_case_identity_is_passthrough) ... ok
+test_quote_omission_retains_packet_support (__main__.ReducerContractTests.test_quote_omission_retains_packet_support) ... ok
+test_supported_obligation_cannot_be_discarded (__main__.ReducerContractTests.test_supported_obligation_cannot_be_discarded) ... ok
+test_unauthorized_surfaces_do_not_support_packet (__main__.ReducerContractTests.test_unauthorized_surfaces_do_not_support_packet) ... ok
+test_unknown_coverage_or_materiality_withholds (__main__.ReducerContractTests.test_unknown_coverage_or_materiality_withholds) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK

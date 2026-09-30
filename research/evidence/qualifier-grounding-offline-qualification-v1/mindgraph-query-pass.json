@@ -1,0 +1,52 @@
+[
+  {
+    "trust_profile": "durable_knowledge",
+    "retrieval": "lexical_only",
+    "returncode": 0,
+    "results_metadata_only": [
+      {
+        "doc_id": "404ebced5f9f9470",
+        "display_path": "10_knowledge/regulated-systems/index.md",
+        "path": "10_knowledge/regulated-systems/index.md",
+        "rrf_score": 0.016393
+      },
+      {
+        "doc_id": "754822fc351bc283",
+        "display_path": "10_knowledge/knowledge-systems/2026-06-19__source-literature-run__lane-c03-regulated-rag-evaluation.md",
+        "path": "10_knowledge/knowledge-systems/2026-06-19__source-literature-run__lane-c03-regulated-rag-evaluation.md",
+        "rrf_score": 0.016129
+      },
+      {
+        "doc_id": "c8570eaae91e5891",
+        "display_path": "10_knowledge/regulated-systems/2026-06-13__regulated-systems__raw__gxp-pharma-source-catalog.md",
+        "path": "10_knowledge/regulated-systems/2026-06-13__regulated-systems__raw__gxp-pharma-source-catalog.md",
+        "rrf_score": 0.015873
+      }
+    ]
+  },
+  {
+    "trust_profile": "project_status",
+    "retrieval": "lexical_only",
+    "returncode": 0,
+    "results_metadata_only": [
+      {
+        "doc_id": "2810a35df4923cc4",
+        "display_path": "30_projects/biotech-rag-assistant/decisions.md",
+        "path": "30_projects/biotech-rag-assistant/decisions.md",
+        "rrf_score": 0.016393
+      },
+      {
+        "doc_id": "db927d1c770c8bfc",
+        "display_path": "30_projects/biotech-rag-assistant/README.md",
+        "path": "30_projects/biotech-rag-assistant/README.md",
+        "rrf_score": 0.016129
+      },
+      {
+        "doc_id": "cd2645a9d3b7f44d",
+        "display_path": "30_projects/biotech-rag-assistant/plans/apollo-discovery/README.md",
+        "path": "30_projects/biotech-rag-assistant/plans/apollo-discovery/README.md",
+        "rrf_score": 0.015873
+      }
+    ]
+  }
+]

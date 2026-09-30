@@ -1,0 +1,78 @@
+E501 Line too long (111 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:195:101
+    |
+193 |             finding="CONTRADICTED_CLAIM",
+194 |             action="REJECT_COMPLETE",
+195 |             reason="Authorized packet BODY evidence contradicts a material obligation; trimming is forbidden.",
+    |                                                                                                     ^^^^^^^^^^^
+196 |         )
+197 |         return record
+    |
+
+E501 Line too long (119 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:214:101
+    |
+212 |                 finding="FULL_BODY_SUPPORT",
+213 |                 action="KEEP_FULL",
+214 |                 reason="Every declared material obligation has authorized packet BODY support and a sufficient quote.",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^
+215 |             )
+216 |         else:
+    |
+
+E501 Line too long (120 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:220:101
+    |
+218 |                 finding="CITATION_SPAN_INSUFFICIENCY",
+219 |                 action="HOLD_FOR_CITATION",
+220 |                 reason="All material conditions retain packet BODY support; the citation witness remains insufficient.",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+221 |             )
+222 |         return record
+    |
+
+E501 Line too long (115 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:229:101
+    |
+227 |             finding="NO_SUPPORTED_CORE",
+228 |             action="REJECT_COMPLETE",
+229 |             reason="The complete claim lacks packet BODY support and no independently supported core is proposed.",
+    |                                                                                                     ^^^^^^^^^^^^^^^
+230 |         )
+231 |         return record
+    |
+
+E501 Line too long (105 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:237:101
+    |
+235 |             finding="INCONCLUSIVE",
+236 |             action="WITHHOLD",
+237 |             reason="Proposed decomposition safety is unknown; an affirmative core proposal is withheld.",
+    |                                                                                                     ^^^^^
+238 |         )
+239 |         return record
+    |
+
+E501 Line too long (143 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:257:101
+    |
+255 | …
+256 | …
+257 | …ety, authorized BODY support, exhaustive gaps, or retention of supported obligations.",
+    |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+258 | …
+259 | …
+    |
+
+E501 Line too long (186 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/qualifier_grounding_reducer.py:266:101
+    |
+264 | …
+265 | …
+266 | …l supported obligations remain in an independently BODY-supported core with every safety guard affirmative.",
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+267 | …
+268 | …
+    |
+
+Found 7 errors.

@@ -1,0 +1,50 @@
+{
+  "implementation-tests": {
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "243886f92673c9aaacd06117d42e11f115e831547886b6e563d189210f3f65ea"
+  },
+  "implementation-lint": {
+    "exit_code": 0,
+    "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "dependency": {
+    "reviewed_at": "2026-09-30T17:20:33.265233+00:00",
+    "source_sha256": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8",
+    "imports": [],
+    "call_targets": [
+      "_aperture",
+      "_ids",
+      "_valid",
+      "all",
+      "any",
+      "assessment_ledger.get",
+      "isinstance",
+      "len",
+      "record.update",
+      "set",
+      "sorted",
+      "witness_ids.append"
+    ],
+    "runtime_forbidden_events": [],
+    "ordinary_probe_action": "REJECT_COMPLETE",
+    "io_absent_in_source_and_probe": true,
+    "scope": "pre-freeze ordinary synthetic probe; no qualification controls"
+  },
+  "environment": {
+    "python_version": "3.14.4",
+    "platform": "Darwin",
+    "platform_release": "27.0.0",
+    "machine": "arm64",
+    "git_version": "git version 2.54.0 (Apple Git-157)",
+    "ruff_version": "ruff 0.16.8",
+    "reducer_dependencies": "Python builtins only",
+    "project_model_provider_calls": 0
+  },
+  "pre_freeze_failures": [
+    "Two lint attempts found long rationale lines; rationales shortened before freeze. Both failed lint traces retained.",
+    "Initial cached linter could not access cache under sandbox; rerun with approved access.",
+    "Hygiene initializer rejected .git file in worktree; staged-only hook activated per commit."
+  ]
+}
