@@ -1,0 +1,164 @@
+{
+  "authority_sha256": {
+    "examples/synthetic-controlled-docs/documents/CAL-ENG-005-balance-calibration.md": "68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+    "src/biotech_rag_assistant/chunking.py": "83883e5b5c48660f46d863860e924afbab10d71292eefae4b967520dc99d1ef4",
+    "src/biotech_rag_assistant/corpus.py": "9cc8e582b8c3ad661afb5f4c656371115a2c596b3b2cf57694fc36ce4c2a5f92",
+    "src/biotech_rag_assistant/evidence_packet.py": "275e64878ba4f5ab98967c56a67c2107c9f5b0d4207b1f107556d8856003c5a6",
+    "src/biotech_rag_assistant/generation.py": "9464015b99f6975278d038aef7357c1c6a124cd6460508b4cf85ee1deee6ee29",
+    "src/biotech_rag_assistant/ollama_generator.py": "28e9b6e22c242594827e02657e88a8b2b97aaa8f5f0ac59db49fb7dea5f3ab7c",
+    "src/biotech_rag_assistant/retrieval.py": "fc125793dfab5d6e34813e17ca5ef4698262acde6e2032f018064aa3df6c1dc0"
+  },
+  "controls": {
+    "body_span_changed_packet_valid": false,
+    "body_text_only_changed_packet_valid": true,
+    "query_changed_packet_valid": false
+  },
+  "fixture": "examples/synthetic-controlled-docs",
+  "heading_mutated_packet": {
+    "admitted_nominations": [
+      {
+        "authority_class": "calibration_note",
+        "authorization_scope": null,
+        "char_end": 240,
+        "char_start": 55,
+        "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+        "corpus_identity": "cm1:derived:1cdce1ba4bee1bf97025aa035c2841f8a0f039b8323b773a89f6895529fc889f",
+        "doc_id": "CAL-ENG-005",
+        "expansion_handle": "section:CAL-ENG-005:1.0:Daily check",
+        "nomination_id": "nom1:62eb102eda55bc86fed68209f1fe6fec50f48efe071b400a3172699ea5812f3d",
+        "nomination_kind": "chunk",
+        "parent_context_id": null,
+        "query_id": "q1:f61a7c3a561db4cd9fa1b23f946079c5b2640ea8ea2a07dfaf9c97517df100bb",
+        "rank": 1,
+        "raw_score": 7.951863924045066,
+        "representation_level": "chunk",
+        "retrieval_config_id": "rc1:7fbb998312e8f167803b5739856754b529f43a2ceb96ccc0311dd0fd4c7ea6cf",
+        "retrieval_reasons": [
+          {
+            "rank": 1,
+            "raw_score": 7.951863924045066,
+            "signal": "bm25"
+          }
+        ],
+        "retrieval_signal": "bm25",
+        "section_heading": "Weekly check",
+        "section_role": null,
+        "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+        "status": "Effective",
+        "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service.",
+        "token_estimate": 47,
+        "version": "1.0"
+      }
+    ],
+    "aperture_id": null,
+    "corpus_identity": "cm1:derived:1cdce1ba4bee1bf97025aa035c2841f8a0f039b8323b773a89f6895529fc889f",
+    "diagnostics": {
+      "admitted_count": 1,
+      "context_chars": 185,
+      "nomination_count_before_admission": 1,
+      "raw_scores": {
+        "nom1:62eb102eda55bc86fed68209f1fe6fec50f48efe071b400a3172699ea5812f3d": {
+          "rank": 1,
+          "raw_score": 7.951863924045066,
+          "retrieval_signal": "bm25"
+        }
+      },
+      "scores_excluded_from_identity": true
+    },
+    "evidence_budget": {
+      "expand_sections": false,
+      "max_context_chars": 12000,
+      "max_items": 3
+    },
+    "exclusion_summary": {},
+    "packet_id": "ep1:23700a71daa7e11c63f6ab51e13916ce219bde0a80af2e69cd610cfc8cb9e6b3",
+    "query": "balance traceable weights",
+    "query_id": "q1:f61a7c3a561db4cd9fa1b23f946079c5b2640ea8ea2a07dfaf9c97517df100bb",
+    "retrieval_config_id": "rc1:7fbb998312e8f167803b5739856754b529f43a2ceb96ccc0311dd0fd4c7ea6cf",
+    "schema_version": "ep1"
+  },
+  "limitation": "ep1 validates declared source identities, not every model-visible byte; body text also lies outside the direct tuple.",
+  "new_model_calls": 0,
+  "observation": {
+    "adapter_generate_call_count": 0,
+    "adapter_request_preparation_accepts_changed_heading": true,
+    "changed_nomination_fields": [
+      "section_heading"
+    ],
+    "declared_packet_id_unchanged": true,
+    "heading_changed_packet_valid": true,
+    "identity_bearing_fields_unchanged": true,
+    "nomination_identity_tuple_unchanged": true,
+    "original_packet_valid": true,
+    "recomputed_packet_id_unchanged": true
+  },
+  "original_packet": {
+    "admitted_nominations": [
+      {
+        "authority_class": "calibration_note",
+        "authorization_scope": null,
+        "char_end": 240,
+        "char_start": 55,
+        "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+        "corpus_identity": "cm1:derived:1cdce1ba4bee1bf97025aa035c2841f8a0f039b8323b773a89f6895529fc889f",
+        "doc_id": "CAL-ENG-005",
+        "expansion_handle": "section:CAL-ENG-005:1.0:Daily check",
+        "nomination_id": "nom1:62eb102eda55bc86fed68209f1fe6fec50f48efe071b400a3172699ea5812f3d",
+        "nomination_kind": "chunk",
+        "parent_context_id": null,
+        "query_id": "q1:f61a7c3a561db4cd9fa1b23f946079c5b2640ea8ea2a07dfaf9c97517df100bb",
+        "rank": 1,
+        "raw_score": 7.951863924045066,
+        "representation_level": "chunk",
+        "retrieval_config_id": "rc1:7fbb998312e8f167803b5739856754b529f43a2ceb96ccc0311dd0fd4c7ea6cf",
+        "retrieval_reasons": [
+          {
+            "rank": 1,
+            "raw_score": 7.951863924045066,
+            "signal": "bm25"
+          }
+        ],
+        "retrieval_signal": "bm25",
+        "section_heading": "Daily check",
+        "section_role": null,
+        "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+        "status": "Effective",
+        "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service.",
+        "token_estimate": 47,
+        "version": "1.0"
+      }
+    ],
+    "aperture_id": null,
+    "corpus_identity": "cm1:derived:1cdce1ba4bee1bf97025aa035c2841f8a0f039b8323b773a89f6895529fc889f",
+    "diagnostics": {
+      "admitted_count": 1,
+      "context_chars": 185,
+      "nomination_count_before_admission": 1,
+      "raw_scores": {
+        "nom1:62eb102eda55bc86fed68209f1fe6fec50f48efe071b400a3172699ea5812f3d": {
+          "rank": 1,
+          "raw_score": 7.951863924045066,
+          "retrieval_signal": "bm25"
+        }
+      },
+      "scores_excluded_from_identity": true
+    },
+    "evidence_budget": {
+      "expand_sections": false,
+      "max_context_chars": 12000,
+      "max_items": 3
+    },
+    "exclusion_summary": {},
+    "packet_id": "ep1:23700a71daa7e11c63f6ab51e13916ce219bde0a80af2e69cd610cfc8cb9e6b3",
+    "query": "balance traceable weights",
+    "query_id": "q1:f61a7c3a561db4cd9fa1b23f946079c5b2640ea8ea2a07dfaf9c97517df100bb",
+    "retrieval_config_id": "rc1:7fbb998312e8f167803b5739856754b529f43a2ceb96ccc0311dd0fd4c7ea6cf",
+    "schema_version": "ep1"
+  },
+  "prepared_request_sha256": "ec405b9c58b2bf6d167a74c2916e227378de5b6098e80141884f69b318186e0f",
+  "provider_transport_calls": 0,
+  "python_version": "3.11.15",
+  "schema_version": "ep1-heading-identity-observation/v1",
+  "semantic_authority_decided_by_checker": false,
+  "status": "PASS_IDENTITY_CONTRACT_OBSERVATION"
+}

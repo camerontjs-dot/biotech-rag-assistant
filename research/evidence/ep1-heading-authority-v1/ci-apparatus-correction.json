@@ -1,0 +1,39 @@
+{
+  "adr018_rule": "UNCHANGED",
+  "cause": "Historical custody pins were compared to the current, later ADR file. Frozen evidence has not drifted.",
+  "correction": "Explicit archived PR #17 decision bytes are used and checked against the unchanged original manifest hash. No fallback to current decisions on absent/altered authority.",
+  "failed_ci": {
+    "affected_tests": [
+      "test_original_evidence_binds_without_semantic_grading",
+      "test_rehashed_fabricated_output_still_fails_original_freeze"
+    ],
+    "commit": "97beb5d81492b196affda7da03276dbc7b14246d",
+    "job_id": 109719968203,
+    "observed_failure": "2 failed, 150 passed; repository authority drift: DECISIONS.md",
+    "run_id": 36662462169,
+    "tree": "a2734664694a9e760aaf490cd5501c0308f086b8"
+  },
+  "focused_verification": {
+    "coverage": "Historical custody falsifiers plus ep1 identity; no protected split or semantic scoring.",
+    "exit_code": 0,
+    "expected_test_count": 13,
+    "trace": "ci-correction-tests.txt",
+    "trace_sha256": "e9a40502bbab4cd186bd34f41859604522147a6b66ee852c24ddbc945d7e0a5a"
+  },
+  "frozen_evidence": "UNCHANGED",
+  "generation_or_gate_replays": 0,
+  "historical_authority": {
+    "archive": "research/source-authority/wave-a-pr17/DECISIONS.md",
+    "commit": "457be991da5835f642195ffcf289d8f271e5f51b",
+    "path": "DECISIONS.md",
+    "preservation": "exact_git_blob_bytes",
+    "sha256": "753d10b6f5894ae522e3ad95ef4cee6a05bc4c5dc06614645d4ab618d8ca6b55"
+  },
+  "local_apparatus_events": [
+    "Archive import from the filtered clone could not fetch its older DECISIONS blob under sandbox DNS restrictions. Exact bytes were read from the already-verified predecessor Git repository instead.",
+    "A dependent targeted test launch occurred before the missing archive was supplied: 3 failed, 10 passed, on absent historical authority. No model or frozen replay ran."
+  ],
+  "new_model_calls": 0,
+  "schema_version": "historical-authority-apparatus-correction/v1",
+  "test_prospective_wave_b": "NOT_ACCESSED"
+}

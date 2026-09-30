@@ -1,0 +1,49 @@
+{
+  "candidate_id": "pr19-78fc652d-ep1",
+  "disposition": "ACCEPTED_EP1_HEADING_AUTHORITY_EXCLUSION",
+  "evidence_layer": "component_and_repository_contract",
+  "experiment_id": "ep1-heading-authority-v1",
+  "input_sha256": {
+    "examples/synthetic-controlled-docs/documents/CAL-ENG-005-balance-calibration.md": "68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+    "src/biotech_rag_assistant/chunking.py": "83883e5b5c48660f46d863860e924afbab10d71292eefae4b967520dc99d1ef4",
+    "src/biotech_rag_assistant/corpus.py": "9cc8e582b8c3ad661afb5f4c656371115a2c596b3b2cf57694fc36ce4c2a5f92",
+    "src/biotech_rag_assistant/evidence_packet.py": "275e64878ba4f5ab98967c56a67c2107c9f5b0d4207b1f107556d8856003c5a6",
+    "src/biotech_rag_assistant/generation.py": "9464015b99f6975278d038aef7357c1c6a124cd6460508b4cf85ee1deee6ee29",
+    "src/biotech_rag_assistant/ollama_generator.py": "28e9b6e22c242594827e02657e88a8b2b97aaa8f5f0ac59db49fb7dea5f3ab7c",
+    "src/biotech_rag_assistant/retrieval.py": "fc125793dfab5d6e34813e17ca5ef4698262acde6e2032f018064aa3df6c1dc0"
+  },
+  "new_model_calls": 0,
+  "next_step": "Separately preregister frozen A07/A08 offline re-adjudication",
+  "primary_factor": "section_heading only; separate query/span/text controls",
+  "primary_observation": {
+    "adapter_generate_call_count": 0,
+    "adapter_request_preparation_accepts_changed_heading": true,
+    "changed_nomination_fields": [
+      "section_heading"
+    ],
+    "declared_packet_id_unchanged": true,
+    "heading_changed_packet_valid": true,
+    "identity_bearing_fields_unchanged": true,
+    "nomination_identity_tuple_unchanged": true,
+    "original_packet_valid": true,
+    "recomputed_packet_id_unchanged": true
+  },
+  "protocol_reference": "Operator-prescribed heading mutation, provenance-boundary inspection, and explicit-authority challenge on issue #18/PR #19",
+  "question": "Does a heading-only nomination mutation remain ep1-valid, and does an existing contract authorize proposition support from it?",
+  "receipt_sha256": {
+    "decision.json": "f9e68c87529d7129f616efdabe710bcf88a2e6d94a0df6b701645694847ecbc8",
+    "heading-mutation.json": "6ad4e1c0642957329d55a68f46d1a23d37f3f5da15564150f4c1fff854535a14",
+    "lint.txt": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "parent-evidence-check.json": "5edd33ba4e394fa80da0dd933ad1b8b1241c4c7aa2d4e56f6193ae6cdf1e4e2b",
+    "tests-attempt-1.txt": "f03b837eb64afa31b9857eaa00f73c422001fe03584b5fefe6813913f85f470a",
+    "tests.txt": "2de437b82d320d023616c2a1f65eb9d85571f783495e48a49d0dee1433ea67c6",
+    "verification.json": "0cc598c27664c5654696d9820cbc72a3fce3157491cd1c0fd3ed0cc9fee8bcf6"
+  },
+  "schema_version": "experiment/v1",
+  "source_commit": "78fc652d803041b9b15ace2b95ebae591650ffe1",
+  "source_tree": "371e70005a406f89bbe3211c32126e304312fa04",
+  "state": "completed",
+  "study_type": "deterministic_offline_identity_qualification_plus_explicit_authority_decision",
+  "unit_of_analysis": "one repository-native one-item EvidencePacket; policy review of named repository contracts",
+  "wave_b": "LOCKED"
+}
