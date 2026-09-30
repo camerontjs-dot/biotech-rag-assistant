@@ -1,0 +1,8 @@
+{
+  "model_or_gate_calls": 0,
+  "mutation": "Changed only a copied successor claim text and refreshed its declared receipt checksum.",
+  "observed_error": "claim drift: A07-balance-weight-count",
+  "original_files_modified": false,
+  "semantic_support_scored": false,
+  "status": "PASS_REHASHED_CHANGED_CLAIM_REJECTED"
+}

@@ -1,0 +1,15 @@
+{
+  "generation_or_gate_replays": 0,
+  "lint": {
+    "exit_code": 0,
+    "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "trace": "lint.txt"
+  },
+  "new_model_calls": 0,
+  "scope": "13 focused custody and heading identity tests; no protected benchmark split access.",
+  "tests": {
+    "exit_code": 0,
+    "sha256": "bcc18f81f2b868f2d324a8c78ff54b3e1894321e6f39eb5b25238d04e3a3dd37",
+    "trace": "tests.txt"
+  }
+}

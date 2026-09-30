@@ -1,0 +1,62 @@
+{
+  "experiment_id": "wave-a-ep1-authority-readjudication-v1",
+  "files": {
+    "EXPERIMENT.active.json": {
+      "bytes": 3958,
+      "sha256": "d0e8a3efa82da08398ef30b047b0acc8373388ca791935715ed8c07171872daa"
+    },
+    "EXPERIMENT.json": {
+      "bytes": 4586,
+      "sha256": "d23aa45d5637269084f9ff1ff399ee194b20d1cd2319ab0cbbeb777cb507bc53"
+    },
+    "README.md": {
+      "bytes": 7030,
+      "sha256": "6d77fbfe3a5c81f48ed5ff9a09f9a5965bdca33ebc36a8871bee474708e748d8"
+    },
+    "adjudication.json": {
+      "bytes": 17583,
+      "sha256": "6610b9a21ce7cc33cea39a197d4c689f8eacc6035be88caf6ecf6c502b8b6f21"
+    },
+    "checks.json": {
+      "bytes": 448,
+      "sha256": "c4f4f7edcf97a098eb32edc25b050249842689c95753a4d6050d8c8143abdcb1"
+    },
+    "custody-check.json": {
+      "bytes": 5041,
+      "sha256": "9a364d88d9d3a9b3d4546605b882452e1809a88208e92b1225e8de95f0b6f648"
+    },
+    "falsifier-check.json": {
+      "bytes": 321,
+      "sha256": "ba49b99efe002a54be34374ed5ef8d75776ece43bac776912a3490e6f5e62c21"
+    },
+    "lint.txt": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "support-surfaces.json": {
+      "bytes": 6986,
+      "sha256": "40b8df717052b0450f6a0bdddce10322d147994f848f7d7243595bc8b78890f8"
+    },
+    "tests.txt": {
+      "bytes": 99,
+      "sha256": "bcc18f81f2b868f2d324a8c78ff54b3e1894321e6f39eb5b25238d04e3a3dd37"
+    },
+    "verification-attempt-1.json": {
+      "bytes": 364,
+      "sha256": "476889a2bb0f5561159fb623f44faa03d77f322abc80df3ca46285b5dc32e31b"
+    },
+    "verification.json": {
+      "bytes": 1310,
+      "sha256": "7f6b868f99ba4e4d335e588458f30addd528d7aa9d6f863ac725a8ea55c092b6"
+    }
+  },
+  "generation_or_gate_replays": 0,
+  "helper": {
+    "path": "research/check_wave_a_ep1_readjudication.py",
+    "sha256": "fe56ed24001c61da9e89dc924ffcb6f65a330a5cbb57aec6d17b8340f5d64d54"
+  },
+  "new_model_calls": 0,
+  "original_evidence_modified": false,
+  "schema_version": "wave-a-ep1-authority-successor-freeze/v1",
+  "semantic_judgments": "agent_llm_not_deterministic"
+}

@@ -1,0 +1,44 @@
+{
+  "adjudication_sha256": "6610b9a21ce7cc33cea39a197d4c689f8eacc6035be88caf6ecf6c502b8b6f21",
+  "checker_sha256": "fe56ed24001c61da9e89dc924ffcb6f65a330a5cbb57aec6d17b8340f5d64d54",
+  "generation_or_gate_replays": 0,
+  "new_model_calls": 0,
+  "protocol_sha256": "97120d8e6e1fc09036be92a096ec2c0c0d6ef99fd5cd35c345097147db3036b4",
+  "schema_version": "wave-a-ep1-authority-artifact-verification/v1",
+  "semantic_classifications": "NOT_DETERMINED_BY_THIS_CHECK",
+  "status": "PASS_EXACT_OFFLINE_ARTIFACT_BINDINGS",
+  "verified_judgment_bindings": [
+    {
+      "aperture": "N",
+      "case_id": "A07-balance-weight-count",
+      "exact_binding": "PASS"
+    },
+    {
+      "aperture": "P",
+      "case_id": "A07-balance-weight-count",
+      "exact_binding": "PASS"
+    },
+    {
+      "aperture": "Q",
+      "case_id": "A07-balance-weight-count",
+      "exact_binding": "PASS"
+    },
+    {
+      "aperture": "N",
+      "case_id": "A08-line-clearance-signatories",
+      "exact_binding": "PASS"
+    },
+    {
+      "aperture": "P",
+      "case_id": "A08-line-clearance-signatories",
+      "exact_binding": "PASS"
+    },
+    {
+      "aperture": "Q",
+      "case_id": "A08-line-clearance-signatories",
+      "exact_binding": "PASS"
+    }
+  ],
+  "verified_original_file_count": 11,
+  "verified_packet_body_spans": 6
+}

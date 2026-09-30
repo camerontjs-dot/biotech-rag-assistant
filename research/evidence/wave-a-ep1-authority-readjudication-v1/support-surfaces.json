@@ -1,0 +1,154 @@
+{
+  "custody_check_sha256": "9a364d88d9d3a9b3d4546605b882452e1809a88208e92b1225e8de95f0b6f648",
+  "experiment_id": "wave-a-ep1-authority-readjudication-v1",
+  "generation_or_gate_replays": 0,
+  "new_model_calls": 0,
+  "observations": [
+    {
+      "N": [
+        {
+          "char_end": 240,
+          "char_start": 55,
+          "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+          "doc_id": "CAL-ENG-005",
+          "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+          "source_span_verified": true,
+          "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service."
+        }
+      ],
+      "P": [
+        {
+          "char_end": 240,
+          "char_start": 55,
+          "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+          "doc_id": "CAL-ENG-005",
+          "source_hash": "sha256:68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+          "source_span_verified": true,
+          "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service."
+        },
+        {
+          "char_end": 140,
+          "char_start": 47,
+          "chunk_id": "SOP-QA-002_v1_1_chunk_001",
+          "doc_id": "SOP-QA-002",
+          "source_hash": "sha256:b2b12d22bfe50aed5c5d9f84c155dbb27984e0b72cfd2086e9c6597686827f7c",
+          "source_span_verified": true,
+          "text": "This synthetic SOP defines how quality events are triaged before a full investigation starts."
+        },
+        {
+          "char_end": 415,
+          "char_start": 213,
+          "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+          "doc_id": "SOP-OPS-007",
+          "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+          "source_span_verified": true,
+          "text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record."
+        }
+      ],
+      "Q": [
+        {
+          "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+          "text": "The analyst verifies the balance with two traceable weights before use."
+        }
+      ],
+      "case_id": "A07-balance-weight-count",
+      "cited_heading_excluded_from_support": "Daily check",
+      "exact_citation": {
+        "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+        "quote": "The analyst verifies the balance with two traceable weights before use."
+      },
+      "exact_generated_claim": {
+        "citations": [
+          {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "The analyst verifies the balance with two traceable weights before use."
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "The analyst uses two traceable weights for the daily balance check."
+      },
+      "original_gates_fired": [],
+      "original_public_disposition": "generated_with_gaps",
+      "packet_id": "ep1:d593fa9971cf114ba0b3b6b091e5228d0d7a758b6d35be206df1854436264865",
+      "question": "How many traceable weights are used for the daily balance check?",
+      "semantic_classifications": "NOT_ASSIGNED_BY_PROJECTION"
+    },
+    {
+      "N": [
+        {
+          "char_end": 415,
+          "char_start": 213,
+          "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+          "doc_id": "SOP-OPS-007",
+          "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+          "source_span_verified": true,
+          "text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record."
+        }
+      ],
+      "P": [
+        {
+          "char_end": 415,
+          "char_start": 213,
+          "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+          "doc_id": "SOP-OPS-007",
+          "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+          "source_span_verified": true,
+          "text": "QA performs an independent line clearance check for product identity, lot number, printed component code, and room readiness. The run cannot start until both operations and QA sign the clearance record."
+        },
+        {
+          "char_end": 189,
+          "char_start": 50,
+          "chunk_id": "SOP-OPS-007_v1_2_chunk_001",
+          "doc_id": "SOP-OPS-007",
+          "source_hash": "sha256:ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+          "source_span_verified": true,
+          "text": "Operations verifies that the previous product, labels, inserts, and reconciliation sheets are removed before the next packaging run starts."
+        },
+        {
+          "char_end": 690,
+          "char_start": 480,
+          "chunk_id": "SOP-QA-001_v1_0_chunk_003",
+          "doc_id": "SOP-QA-001",
+          "source_hash": "sha256:1f13e332bcdbc9f56f3163ca8d571b8242f9e92bbb7c016ca20c2d63b577e923",
+          "source_span_verified": true,
+          "text": "The investigation record must identify the sample location, sampling date, organism result if available, affected room, affected product lots, containment action, and the person who approved reopening the room."
+        }
+      ],
+      "Q": [
+        {
+          "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+          "text": "both operations and QA sign the clearance record"
+        }
+      ],
+      "case_id": "A08-line-clearance-signatories",
+      "cited_heading_excluded_from_support": "Independent check",
+      "exact_citation": {
+        "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+        "quote": "both operations and QA sign the clearance record"
+      },
+      "exact_generated_claim": {
+        "citations": [
+          {
+            "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+            "quote": "both operations and QA sign the clearance record"
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "Both operations and QA must sign the clearance record before the run starts."
+      },
+      "original_gates_fired": [],
+      "original_public_disposition": "generated",
+      "packet_id": "ep1:ea3928728472273819f3c6183683da95690b1bb012d514adfb9b9ce7d4086397",
+      "question": "Who must sign the line clearance record before the run starts?",
+      "semantic_classifications": "NOT_ASSIGNED_BY_PROJECTION"
+    }
+  ],
+  "protocol_sha256": "97120d8e6e1fc09036be92a096ec2c0c0d6ef99fd5cd35c345097147db3036b4",
+  "schema_version": "wave-a-ep1-authority-surfaces/v1",
+  "semantic_scoring": "NOT_PERFORMED",
+  "status": "EXACT_SOURCE_SURFACES_PROJECTED_WITH_CUSTODY_CHECKS"
+}

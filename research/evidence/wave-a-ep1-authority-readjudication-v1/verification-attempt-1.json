@@ -1,0 +1,8 @@
+{
+  "correction": "Use repository-native SourceDocument.metadata.doc_id, raw_text, and computed_source_hash.",
+  "frozen_input_drift": false,
+  "model_or_gate_calls": 0,
+  "observed_error": "AttributeError: 'SourceDocument' object has no attribute 'doc_id'",
+  "semantic_judgments_changed": false,
+  "status": "FAILED_HELPER_API_ASSUMPTION_BEFORE_RECEIPT_WRITE"
+}

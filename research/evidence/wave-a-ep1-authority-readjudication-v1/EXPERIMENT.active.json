@@ -16,9 +16,6 @@
     "A07-balance-weight-count",
     "A08-line-clearance-signatories"
   ],
-  "citation_span_insufficiency_only_cases": [
-    "A08-line-clearance-signatories"
-  ],
   "evaluator": "agent_llm",
   "evidence_layer": "qualitative_adjudication_of_exact_frozen_provider_outputs",
   "execution_head": "ce831b5898be46175ce10f3d57d232e5db12fcf1",
@@ -42,9 +39,6 @@
   },
   "known_evidence": "Predecessor outputs and findings already known; not a blind experiment.",
   "new_model_calls": 0,
-  "packet_level_grounding_defect_cases": [
-    "A07-balance-weight-count"
-  ],
   "predecessor": {
     "adjudication_sha256": "a131e5573afdb0d9e120fcb208dea28ef11073751dce01c205a0722bbcc2e0c1",
     "commit": "457be991da5835f642195ffcf289d8f271e5f51b",
@@ -61,18 +55,11 @@
     "sha256": "97120d8e6e1fc09036be92a096ec2c0c0d6ef99fd5cd35c345097147db3036b4"
   },
   "question": "Are the exact accepted A07/A08 claims supported at Q/N/P under accepted ADR-018?",
-  "receipt_sha256": {
-    "EXPERIMENT.active.json": "d0e8a3efa82da08398ef30b047b0acc8373388ca791935715ed8c07171872daa",
-    "adjudication.json": "6610b9a21ce7cc33cea39a197d4c689f8eacc6035be88caf6ecf6c502b8b6f21",
-    "custody-check.json": "9a364d88d9d3a9b3d4546605b882452e1809a88208e92b1225e8de95f0b6f648",
-    "support-surfaces.json": "40b8df717052b0450f6a0bdddce10322d147994f848f7d7243595bc8b78890f8"
-  },
   "schema_version": "experiment/v1",
   "source_commit": "97beb5d81492b196affda7da03276dbc7b14246d",
   "source_tree": "a2734664694a9e760aaf490cd5501c0308f086b8",
-  "state": "completed",
+  "state": "active",
   "study_type": "retrospective_offline_policy_successor",
-  "terminal_disposition": "MIXED",
   "unit_of_analysis": "two exact accepted claims x three support apertures",
-  "wave_b": "LOCKED_PACKET_LEVEL_GROUNDING_DEFECT"
+  "wave_b": "LOCKED_NOT_AUTHORIZED"
 }
