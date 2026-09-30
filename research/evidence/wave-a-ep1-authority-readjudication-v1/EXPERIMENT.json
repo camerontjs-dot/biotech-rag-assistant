@@ -1,0 +1,54 @@
+{
+  "authority": {
+    "decision": "ADR-018",
+    "decisions_sha256": "8d2645c83864cf436d5312d8335843441c5dad8f84ca19e0002b317919383c95",
+    "pr": 19
+  },
+  "candidate_id": "pr19-97beb5d8-accepted-ADR018",
+  "case_ids": [
+    "A07-balance-weight-count",
+    "A08-line-clearance-signatories"
+  ],
+  "evaluator": "agent_llm",
+  "evidence_layer": "qualitative_adjudication_of_exact_frozen_provider_outputs",
+  "experiment_id": "wave-a-ep1-authority-readjudication-v1",
+  "generation_or_gate_replays": 0,
+  "independent_human_adjudication": false,
+  "input_evidence_manifest_sha256": "214aaf9723db10a3ccbcba43ecae0fede5cafa4f3ad5fc25bcbe598340bf8307",
+  "input_sha256": {
+    "frozen/bundle/manifest.json": "80a582477de420bbf4655a8936be6067fd8cad85df2ea21f61fec6efc1945903",
+    "frozen/bundle/wave-a-probes.jsonl": "6ed0bfbbc070e1953fae643e9ab98b477eff84df832e4f352b4439e946635c50",
+    "frozen/generation-freeze.json": "046cc15ecd58b5667599e4b83c4e7331f3bff3ff950a80e8615e0ffc37d81bd5",
+    "frozen/replay-freeze.json": "0ef347bc5d727fd8e06ef3ea8e050279a51cf07fed9bada2f341a9842226a664",
+    "frozen/structured-replay/wave-a-gated-results.json": "6792435fd914b5aa72b515b3c16e6a56810e387e7d66241780d6fc9c6d55666d",
+    "frozen/structured-run/outputs.jsonl": "a85b1aac79e92288bf9cfe29d3235aa17ec6ba6a7f51d58fb11d98675718b29b",
+    "frozen/structured-run/raw-manifest.json": "e65e48b95dc28416245675bc6611f15cd2443028b5ce8cb03653484615fb9c03",
+    "frozen/structured-run/raw/A07-balance-weight-count.json": "5c498ea264779b6b1fec2110ef60d7c882bd58f493232129ddf3264de12ac660",
+    "frozen/structured-run/raw/A08-line-clearance-signatories.json": "56a68e8dff2fa9521239b33af00799c279a7a808fefd9f654af5a66550300427",
+    "frozen/structured-run/run_metadata.json": "1a224f910b2ca81bb78a6da6a56fb4a6ce90cf9f6354dc900b919101b99b0d15",
+    "original-receipt-projection.json": "ae3fba389fcac55307f58aa35ca0b8567d9f083dee0b5af7f5be9ec474014bb0"
+  },
+  "known_evidence": "Predecessor outputs and findings already known; not a blind experiment.",
+  "new_model_calls": 0,
+  "predecessor": {
+    "adjudication_sha256": "a131e5573afdb0d9e120fcb208dea28ef11073751dce01c205a0722bbcc2e0c1",
+    "commit": "457be991da5835f642195ffcf289d8f271e5f51b",
+    "disposition": "APERTURE_AUTHORITY_UNDEFINED",
+    "pr": 17,
+    "tree": "4545e4e464150f5e658390421d7c4c085f8f3940"
+  },
+  "primary_factor": "Accepted ep1 authority rule excludes section_heading as proposition support; outputs and packets unchanged.",
+  "primary_outcome": "Q/N/P classification and minimal unsupported proposition",
+  "protocol": {
+    "path": "research/wave-a-ep1-authority-readjudication-protocol.md",
+    "sha256": "97120d8e6e1fc09036be92a096ec2c0c0d6ef99fd5cd35c345097147db3036b4"
+  },
+  "question": "Are the exact accepted A07/A08 claims supported at Q/N/P under accepted ADR-018?",
+  "schema_version": "experiment/v1",
+  "source_commit": "97beb5d81492b196affda7da03276dbc7b14246d",
+  "source_tree": "a2734664694a9e760aaf490cd5501c0308f086b8",
+  "state": "designed",
+  "study_type": "retrospective_offline_policy_successor",
+  "unit_of_analysis": "two exact accepted claims x three support apertures",
+  "wave_b": "LOCKED_NOT_AUTHORIZED"
+}
