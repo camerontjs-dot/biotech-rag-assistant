@@ -1,0 +1,33 @@
+{
+  "author_identity": "fresh_acceptance_v2",
+  "checks_status": "PASS",
+  "contamination_status": "CLEAR_RESTRICTED_APERTURE",
+  "expectation_provenance": {
+    "authority": "Manually authored hypotheses from frozen declared symbolic assessments.",
+    "decision_reason_text": "Short contract-rationale annotations only; no domain claims or answer prose.",
+    "evaluator": "agent_llm",
+    "natural_language_claims_generated": false,
+    "status": "needs-audit"
+  },
+  "files": {
+    "AUTHOR.json": "cee0596999933f99a7bb21a82f3c2928e2c9a45508a1bbc5a962c73293c2fbb0",
+    "build_controls.py": "421bc05030e1232659f627d254512884b9293566cfc64ff5624b7e585573048a",
+    "check_controls.py": "ec6f4ef90beecd173dc2131cc9e594a1ffb3ebc6bf560f1b9294d1e9eccbfc39",
+    "checks.json": "1283ef8e76d6c1003666873082d53d3a302456e97996ead9dfb596bd5205fa40",
+    "controls.json": "09979fb2677e626ae01aba816921738cab79e701c7e61c080b32c98fafa84ca9",
+    "expectations.jsonl": "1fcb5ab6e55d961604078015a711e6dfeecf7c5b048e768b42bb80300c98f226",
+    "freeze_controls.py": "5fb887b6cdf10a3f30414da33d016a0fe81c9a3a21143f61bbcff50865a8b5dd",
+    "inputs.jsonl": "d4afdacc54e87d7d60d3f947512484af76a7d3830283701bcd37527dc3bc56d1",
+    "pairs.json": "18213e6ef725873ebb9d34b1a39a0bd57eefb0d8a8213e4e5a89322ac69d64be"
+  },
+  "freeze_at": "2026-09-30T20:32:02.457041+00:00",
+  "normative_identity": {
+    "commit": "ae754348d4ec8a8c6515d9dd4c67a77b07666428",
+    "identity_provenance": "Supplied delegation identity, not independently verified by repository/history access.",
+    "tree": "99b2c5b6ed7d084e8a73d802684f17a8904eba2c"
+  },
+  "schema_version": "qualifier-grounding-freeze/v2",
+  "self_hash_excluded": true,
+  "set_id": "qg-v2-fresh-acceptance-20260930-v4n8",
+  "unsealed_drafting_artifacts": []
+}

@@ -1,0 +1,21 @@
+{
+  "acceptance_freeze": false,
+  "artifacts": [
+    {
+      "file": "CONTAMINATION.json",
+      "sha256": "8af1229dc0e5f5bafdb32c169744e9b74b16f074e0b626ccb82cbaa33a9a4a3f"
+    },
+    {
+      "file": "failure-custody.json",
+      "sha256": "8907b27a5c0d0874b91d67bca624b6ba3277cc0f8bc9e6773b5994ae57688a25"
+    },
+    {
+      "file": "EXPOSURE-CLASSIFICATION.json",
+      "sha256": "ef85622a7c3d8de22548420911baab98d49c35d1ff77cdea9dfd224ee26d3f4c"
+    }
+  ],
+  "launch_status": "STOPPED",
+  "self_hash_note": "Custody record identity is reported to the parent outside this file.",
+  "timestamp_utc": "2026-09-30T20:15:01.511119+00:00",
+  "unsealed_drafting_files": []
+}

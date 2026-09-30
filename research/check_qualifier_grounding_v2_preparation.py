@@ -1,0 +1,437 @@
+"""Structural/custody validation only; no ledger-to-decision implementation.
+
+Profile: public workbench verification, owned by the v2 preparation package.
+Reads only declared frozen preparation/regression artifacts; produces no
+candidate decisions. Passing this checker does not qualify a reducer or an
+assessor. Frozen expectation semantics remain authored hypotheses, needs-audit.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+
+NORM = Path("research/evidence/qualifier-grounding-policy-v2")
+PREP = Path("research/evidence/qualifier-grounding-offline-qualification-v2")
+FRESH = PREP / "fresh-controls"
+LEGACY = Path("research/evidence/qualifier-grounding-policy-v1")
+REQUIRED_FRESH = {
+    "inputs.jsonl", "expectations.jsonl", "controls.json", "pairs.json", "AUTHOR.json",
+}
+
+
+class PreparationError(ValueError):
+    """A missing or inconsistent preparation artifact; never a semantic label."""
+
+
+def require(condition, message):
+    if not condition:
+        raise PreparationError(message)
+
+
+def safe_path(root, relative):
+    rel = Path(relative)
+    require(not rel.is_absolute() and ".." not in rel.parts, "unsafe artifact reference")
+    target = root / rel
+    require(target.resolve().is_relative_to(root.resolve()), "artifact escapes package root")
+    require(target.is_file(), f"missing artifact: {rel}")
+    return target
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def pairs_object(items):
+    result = {}
+    for key, value in items:
+        require(key not in result, f"duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+
+def load(root, relative):
+    try:
+        return json.loads(safe_path(root, relative).read_text(), object_pairs_hook=pairs_object)
+    except (UnicodeError, json.JSONDecodeError) as exc:
+        raise PreparationError(f"invalid JSON: {relative}") from exc
+
+
+def lines(root, relative):
+    result = []
+    for number, line in enumerate(safe_path(root, relative).read_text().splitlines(), 1):
+        require(bool(line.strip()), f"empty JSONL line: {relative}:{number}")
+        try:
+            result.append(json.loads(line, object_pairs_hook=pairs_object))
+        except json.JSONDecodeError as exc:
+            raise PreparationError(f"invalid JSONL: {relative}:{number}") from exc
+    require(bool(result), f"empty control artifact: {relative}")
+    return result
+
+
+def schema_errors(schema, value, path="$"):
+    """Validate the closed JSON Schema subset used by the frozen interface.
+
+    This is a syntax validator, never a policy reducer. No output fields are
+    constructed from ledger state or copied from expected answers.
+    """
+    allowed = {
+        "$schema", "type", "enum", "anyOf", "properties", "required",
+        "additionalProperties", "items", "uniqueItems", "minItems", "minLength",
+    }
+    require(set(schema) <= allowed, f"unsupported schema keyword at {path}")
+    if "anyOf" in schema:
+        matches = [schema_errors(choice, value, path) for choice in schema["anyOf"]]
+        return [] if any(not errors for errors in matches) else [f"{path}: anyOf"]
+    if "enum" in schema:
+        if not any(type(value) is type(item) and value == item for item in schema["enum"]):
+            return [f"{path}: enum"]
+    types = {
+        "object": dict, "array": list, "string": str, "null": type(None),
+        "boolean": bool, "integer": int, "number": (int, float),
+    }
+    specified = schema.get("type")
+    if specified:
+        names = specified if isinstance(specified, list) else [specified]
+        valid = any(
+            type(value) is types[name] if name != "number"
+            else type(value) in types[name]
+            for name in names
+        )
+        if not valid:
+            return [f"{path}: type"]
+    errors = []
+    if isinstance(value, dict):
+        properties = schema.get("properties", {})
+        for key in schema.get("required", []):
+            if key not in value:
+                errors.append(f"{path}.{key}: required")
+        if schema.get("additionalProperties") is False:
+            errors.extend(
+                f"{path}.{key}: unknown field" for key in value.keys() - properties.keys()
+            )
+        for key in value.keys() & properties.keys():
+            errors.extend(schema_errors(properties[key], value[key], f"{path}.{key}"))
+    if isinstance(value, list):
+        if len(value) < schema.get("minItems", 0):
+            errors.append(f"{path}: minItems")
+        if schema.get("uniqueItems"):
+            encoded = [json.dumps(item, sort_keys=True) for item in value]
+            if len(set(encoded)) != len(encoded):
+                errors.append(f"{path}: duplicate array item")
+        if "items" in schema:
+            for index, item in enumerate(value):
+                errors.extend(schema_errors(schema["items"], item, f"{path}[{index}]"))
+    if isinstance(value, str) and len(value) < schema.get("minLength", 0):
+        errors.append(f"{path}: minLength")
+    return errors
+
+
+def reference_errors(case):
+    """Referential integrity and legal witness apertures, without assessment."""
+    ledger = case["ledger"]
+    obligations = [o["id"] for o in ledger["obligations"]]
+    witnesses = [w["id"] for w in ledger["witnesses"]]
+    errors = []
+    if len(obligations) != len(set(obligations)) or len(witnesses) != len(set(witnesses)):
+        errors.append("duplicate obligation/witness identity")
+    for witness in ledger["witnesses"]:
+        apertures = set(witness["apertures"])
+        legal = (
+            witness["surface"] == "QUOTE" and apertures == {"Q"}
+            or witness["surface"] == "BODY" and apertures in ({"P"}, {"N", "P"})
+            or witness["surface"] in {"QUERY", "HEADING", "METADATA"} and not apertures
+        )
+        if not legal:
+            errors.append("unauthorized witness aperture")
+        for field in ("entails", "contradicts", "ambiguous"):
+            if not set(witness[field]) <= set(obligations):
+                errors.append("unknown obligation reference")
+    proposal = ledger["proposal"]
+    if proposal is not None:
+        if not set(proposal["core_ids"] + proposal["gap_ids"]) <= set(obligations):
+            errors.append("unknown proposal obligation")
+        if not set(proposal["body_witness_ids"]) <= set(witnesses):
+            errors.append("unknown proposal witness")
+    return errors
+
+
+def canonical_arrays(value):
+    if isinstance(value, dict):
+        for child in value.values():
+            canonical_arrays(child)
+    elif isinstance(value, list):
+        require(value == sorted(value), "noncanonical output identifier/source array")
+
+
+def get_field(record, path):
+    current = record
+    for key in path.split("."):
+        require(isinstance(current, dict) and key in current, f"unknown comparison field: {path}")
+        current = current[key]
+    return current
+
+
+def renamed(value, renaming, key=None):
+    """Namespace-aware renaming of authored records, not decision computation."""
+    obligation_fields = {
+        "core_ids", "gap_ids", "missing_packet_ids", "contradicted_packet_ids",
+        "ambiguous_ids", "conflicting_ids",
+    }
+    witness_fields = {"witness_ids", "considered_witness_ids"}
+    if isinstance(value, dict):
+        return {field: renamed(child, renaming, field) for field, child in value.items()}
+    if isinstance(value, list):
+        namespace = (
+            "obligation_ids" if key in obligation_fields
+            else "witness_ids" if key in witness_fields else None
+        )
+        return sorted(renaming[namespace][item] for item in value) if namespace else value
+    if key == "case_id":
+        return renaming["case_ids"][value]
+    return value
+
+
+def schema_leaf_paths(schema, prefix=""):
+    if schema.get("type") == "object":
+        result = set()
+        for field in schema["required"]:
+            path = f"{prefix}.{field}" if prefix else field
+            result.update(schema_leaf_paths(schema["properties"][field], path))
+        return result
+    return {prefix}
+
+
+def check_pairs(pairs, expected, cases, output_schema):
+    required_paths = schema_leaf_paths(output_schema) - {"case_id", "reason"}
+    seen = set()
+    for pair in pairs:
+        require(set(pair) == {
+            "pair_id", "left", "right", "relation", "purpose",
+            "compare_fields", "must_change", "renaming",
+        }, "pair fields differ from encoding guide")
+        require(pair["pair_id"] not in seen, "duplicate pair ID")
+        seen.add(pair["pair_id"])
+        left, right = pair["left"], pair["right"]
+        require(left != right and left in cases and right in cases, "invalid pair endpoints")
+        require(bool(pair["purpose"]), "empty pair purpose")
+        require(len(set(pair["compare_fields"])) == len(pair["compare_fields"]), "duplicate paths")
+        require(len(set(pair["must_change"])) == len(pair["must_change"]), "duplicate paths")
+        require(not set(pair["compare_fields"]) & set(pair["must_change"]), "conflicting paths")
+        require(not {"case_id", "reason"} & set(pair["compare_fields"] + pair["must_change"]),
+                "pair uses case identity or free explanation as semantic comparison")
+        lhs = expected[left]
+        if pair["relation"] in {"INVARIANT", "RENAMED_INVARIANT"}:
+            covered = set()
+            for field in pair["compare_fields"]:
+                covered.update(path for path in required_paths
+                               if path == field or path.startswith(field + "."))
+            require(covered == required_paths, "invariant pair omits required output field")
+            require(not pair["must_change"], "invariant pair declares sensitivity")
+        elif pair["relation"] == "SENSITIVITY":
+            require(bool(pair["must_change"]), "sensitivity pair has no changing field")
+        else:
+            raise PreparationError("unknown pair relation")
+        if pair["relation"] == "RENAMED_INVARIANT":
+            maps = pair["renaming"]
+            require(set(maps) == {"case_ids", "obligation_ids", "witness_ids"}, "rename namespaces")
+            namespaces = [("obligation_ids", "obligations"), ("witness_ids", "witnesses")]
+            for namespace, field in namespaces:
+                lhs_ids = {item["id"] for item in cases[left]["ledger"][field]}
+                rhs_ids = {item["id"] for item in cases[right]["ledger"][field]}
+                require(set(maps[namespace]) == lhs_ids, "incomplete rename domain")
+                require(set(maps[namespace].values()) == rhs_ids, "incomplete rename codomain")
+                require(len(set(maps[namespace].values())) == len(maps[namespace]), "non-bijection")
+            require(maps["case_ids"] == {left: right}, "case rename mismatch")
+            lhs = renamed(lhs, maps)
+        else:
+            require(pair["renaming"] == {}, "unexpected rename map")
+        for field in pair["compare_fields"]:
+            require(get_field(lhs, field) == get_field(expected[right], field),
+                    f"authored pair equality fails: {pair['pair_id']} {field}")
+        for field in pair["must_change"]:
+            require(get_field(lhs, field) != get_field(expected[right], field),
+                    f"authored pair sensitivity fails: {pair['pair_id']} {field}")
+
+
+def check_hashes(root, base, files):
+    require(isinstance(files, dict) and bool(files), "empty custody map")
+    for name, digest in files.items():
+        require(bool(re.fullmatch(r"[0-9a-f]{64}", digest)), "invalid SHA-256")
+        require(sha(safe_path(root, base / name)) == digest, f"hash mismatch: {base / name}")
+
+
+def check_package(root):
+    normative = load(root, NORM / "freeze.json")
+    policy = load(root, NORM / "policy.json")
+    interface = load(root, NORM / "interface.json")
+    require(policy["policy_id"] == "qualifier-grounding-policy-v2", "wrong policy identity")
+    require(interface["interface_id"] == "qualifier-grounding-interface-v2", "wrong interface")
+    require(normative["checkout_clean_at_freeze"] is True, "normative freeze not clean")
+    require(normative["fresh_controls_authored_before_freeze"] is False, "control chronology")
+    require(bool(re.fullmatch(r"[0-9a-f]{40}", normative["source_commit"])), "missing commit")
+    require(bool(re.fullmatch(r"[0-9a-f]{40}", normative["source_tree"])), "missing tree")
+    check_hashes(root, NORM, normative["normative_hashes"])
+    frozen = load(root, FRESH / "freeze.json")
+    require(REQUIRED_FRESH <= set(frozen["files"]), "fresh custody missing required files")
+    require(
+        datetime.fromisoformat(frozen["freeze_at"]) >
+        datetime.fromisoformat(normative["freeze_at"]),
+        "fresh freeze precedes normative freeze",
+    )
+    check_hashes(root, FRESH, frozen["files"])
+    author = load(root, FRESH / "AUTHOR.json")
+    require(author["context_creation"]["fork_turns"] == "none" and
+            author["context_creation"]["parent_conversation_supplied"] is False,
+            "fresh author inherited parent qualification context")
+    exposure = author["forbidden_exposure"]
+    require(exposure["status"] == "NO_FORBIDDEN_QUALIFICATION_EXPOSURE_OBSERVED" and
+            exposure["active_existing_content_reads_outside_allowlist"] == [],
+            "control-author aperture contaminated")
+    require(author["startup_context_exposure"]["predecessor_assessment_ledger_material_observed"]
+            is False, "startup exposed predecessor qualification material")
+    for field in ("project_model_provider_calls", "reducer_calls", "reducer_implementations",
+                  "repository_history_reads", "memory_retrievals", "mindgraph_calls"):
+        require(exposure[field] == 0, f"control author crossed boundary: {field}")
+    allowed_sources = {"policy.json", "interface.json", "SCHEMA.md"}
+    require({row["source_name"] for row in author["actual_reads"]} == allowed_sources,
+            "control-author actual read inventory differs")
+    for row in author["actual_reads"]:
+        require(row["sha256"] == normative["normative_hashes"][row["source_name"]],
+                "control author read unfrozen normative source")
+        if row["read_at_utc"] is not None:
+            require(datetime.fromisoformat(row["read_at_utc"]) >
+                    datetime.fromisoformat(normative["freeze_at"]), "author read before freeze")
+    inputs = lines(root, FRESH / "inputs.jsonl")
+    outputs = lines(root, FRESH / "expectations.jsonl")
+    controls = load(root, FRESH / "controls.json")
+    pairs = load(root, FRESH / "pairs.json")
+    require(controls["schema_version"] == "qualifier-grounding-controls/v2", "controls schema")
+    require(pairs["schema_version"] == "qualifier-grounding-pairs/v2", "pairs schema")
+    require(controls["set_id"] == pairs["set_id"] == frozen["set_id"], "set identity mismatch")
+    ids = [row.get("case_id") for row in inputs]
+    expected_ids = [row.get("case_id") for row in outputs]
+    require(all(isinstance(item, str) and item for item in ids), "invalid input case ID")
+    require(len(set(ids)) == len(ids), "duplicate input case ID")
+    require(len(set(expected_ids)) == len(expected_ids), "duplicate expected case ID")
+    require(set(ids) == set(expected_ids), "missing/extra expectation")
+    metadata = {row["case_id"]: row for row in controls["controls"]}
+    require(len(metadata) == len(controls["controls"]) and set(metadata) == set(ids),
+            "control metadata identity mismatch")
+    expected = {row["case_id"]: row for row in outputs}
+    cases = {row["case_id"]: row for row in inputs}
+    for case_id, case in cases.items():
+        declared_invalid = metadata[case_id]["invalid_input"]
+        require(type(declared_invalid) is bool, "invalid_input marker type")
+        errors = schema_errors(interface["input_schema"], case)
+        if not errors:
+            errors = reference_errors(case)
+        require(bool(errors) == declared_invalid, "invalid input not honestly classified")
+        record = expected[case_id]
+        require(not schema_errors(interface["output_schema"], record), "invalid expectation schema")
+        canonical_arrays(record)
+        action = record["action"]
+        status = record["assessment_status"]
+        require((action == "WITHHOLD") == (status == "INCONCLUSIVE"),
+                "withhold/status mismatch")
+        require((action == "STOP") == (status == "APPARATUS_FAILURE"),
+                "stop/status mismatch")
+        if record["action"] in {"REJECT_COMPLETE", "WITHHOLD", "STOP"}:
+            require(not any(record[field] for field in ("core_ids", "gap_ids", "witness_ids")),
+                    "diagnostics presented as retained output")
+        if record["assessment_status"] == "INCONCLUSIVE":
+            require(set(record["apertures"].values()) == {"INCONCLUSIVE"},
+                    "global uncertainty leaks local aperture authority")
+            require(record["grounding"] == record["citation"] == "INCONCLUSIVE",
+                    "global uncertainty leaks grounding/citation authority")
+        if action == "STOP":
+            require(set(record["apertures"].values()) == {"NOT_ASSESSED"} and
+                    record["grounding"] == record["citation"] == "NOT_ASSESSED",
+                    "apparatus failure presented as semantics")
+            diagnostic = record["diagnostics"]
+            require(set(diagnostic["local_apertures"].values()) == {"NOT_ASSESSED"} and
+                    diagnostic["proposal_status"] == "NOT_ASSESSED" and
+                    diagnostic["apparatus_code"] != "NONE", "untrusted apparatus diagnostics")
+            require(not any(value for value in diagnostic.values() if isinstance(value, list)),
+                    "apparatus failure retains semantic diagnostic IDs")
+        if not declared_invalid and action != "STOP":
+            obligation_ids = {item["id"] for item in case["ledger"]["obligations"]}
+            body_ids = {item["id"] for item in case["ledger"]["witnesses"]
+                        if item["surface"] == "BODY" and "P" in item["apertures"]}
+            require(set(record["core_ids"] + record["gap_ids"]) <= obligation_ids,
+                    "output retains unknown obligation")
+            require(set(record["witness_ids"]) <= body_ids, "unauthorized output witness")
+            if action in {"KEEP_FULL", "HOLD_FOR_CITATION"}:
+                require(set(record["core_ids"]) == obligation_ids and not record["gap_ids"],
+                        "complete content not exhaustively retained")
+                require(bool(record["witness_ids"]), "retained content lacks BODY witness")
+            if action == "PROPOSE_CORE_WITH_GAP":
+                require(bool(record["core_ids"]) and bool(record["gap_ids"]) and
+                        not set(record["core_ids"]) & set(record["gap_ids"]) and
+                        set(record["core_ids"] + record["gap_ids"]) == obligation_ids,
+                        "projection lacks exhaustive disjoint core/gap partition")
+            if action in {"KEEP_FULL", "HOLD_FOR_CITATION"}:
+                require(record["grounding"] == "FULL_BODY_SUPPORT", "retention/grounding mismatch")
+                require((action == "KEEP_FULL") == (record["citation"] == "SUFFICIENT"),
+                        "retention/citation mismatch")
+        if declared_invalid:
+            require(
+                record["action"] == "STOP" and record["assessment_status"] == "APPARATUS_FAILURE",
+                "invalid input lacks apparatus expectation",
+            )
+    require(set(row["action"] for row in outputs) == set(policy["retained_fields"]["action_table"]),
+            "fresh set omits an action discriminator")
+    require(bool(pairs["pairs"]), "fresh pair set empty")
+    check_pairs(pairs["pairs"], expected, cases, interface["output_schema"])
+    regression = load(root, PREP / "regression.json")
+    require(regression["role"] == "KNOWN_REGRESSION_CONTROLS", "regression misclassified")
+    require(regression["native_v2_acceptance_key"] is False, "legacy key misrepresented")
+    check_hashes(root, Path(), regression["files"])
+    legacy_inputs = lines(root, LEGACY / "inputs.jsonl")
+    legacy_expected = lines(root, LEGACY / "expectations.jsonl")
+    require(len(legacy_inputs) == len(legacy_expected) == regression["control_count"],
+            "regression census differs")
+    prior = load(root, PREP / "predecessor-custody.json")
+    check_hashes(root, Path(), prior["files"])
+    experiment = load(root, PREP / "EXPERIMENT.json")
+    require(experiment["state"] == "designed" and experiment["execution"] == "NOT_RUN",
+            "preparation implies execution")
+    require(experiment["candidate"]["source_commit"] is None and
+            experiment["candidate"]["source_tree"] is None and
+            experiment["candidate"]["implementation"] == "NOT_IMPLEMENTED", "candidate substituted")
+    require(experiment["project_model_provider_calls"] == experiment["decide_calls"] == 0,
+            "preparation crosses execution boundary")
+    require(experiment["fresh_controls"]["set_id"] == frozen["set_id"], "manifest fresh binding")
+    require(experiment["wave_b"] == "LOCKED", "protected boundary weakened")
+    check_hashes(root, Path(), experiment["artifacts"])
+    return {
+        "schema_version": "qualifier-grounding-preparation-check/v2",
+        "status": "PASS_PREPARATION_ONLY", "fresh_set_id": frozen["set_id"],
+        "fresh_controls": len(inputs), "fresh_pairs": len(pairs["pairs"]),
+        "known_regression_controls": len(legacy_inputs),
+        "v2_reducer": "NOT_IMPLEMENTED", "v2_decisive_execution": "NOT_RUN",
+        "project_model_provider_calls": 0,
+        "limits": "Syntax/custody/authored pair consistency only; no decision derivation, "
+                  "candidate qualification or independent semantic truth.",
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    args = parser.parse_args()
+    try:
+        receipt = check_package(args.root)
+    except (ValueError, KeyError, TypeError, OSError) as exc:
+        print(json.dumps({"status": "APPARATUS_INVALID", "error": str(exc)}))
+        return 1
+    print(json.dumps(receipt, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

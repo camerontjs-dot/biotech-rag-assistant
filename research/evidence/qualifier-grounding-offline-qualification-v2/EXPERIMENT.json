@@ -1,0 +1,113 @@
+{
+  "schema_version": "qualifier-grounding-experiment/v2",
+  "experiment_id": "qualifier-grounding-offline-qualification-v2",
+  "state": "designed",
+  "execution": "NOT_RUN",
+  "designed_at": "2026-09-30T20:37:12.292765+00:00",
+  "study_type": "offline deterministic reducer qualification; preregistered future execution",
+  "evidence_layer": "assessment-ledger contract only",
+  "question": "Does one frozen pure reducer implement the tested frozen v2 ledger contract without an oracle dependency?",
+  "decision": "Strict fresh control/pair correctness plus source/runtime independence; no average safety substitution.",
+  "candidate": {
+    "candidate_id": "qualifier-grounding-reducer-v2-UNFROZEN",
+    "implementation": "NOT_IMPLEMENTED",
+    "source_commit": null,
+    "source_tree": null,
+    "freeze_before_reveal": true
+  },
+  "normative": {
+    "policy_id": "qualifier-grounding-policy-v2",
+    "interface_id": "qualifier-grounding-interface-v2",
+    "package_id": "qualifier-grounding-normative-v2",
+    "source_commit": "ae754348d4ec8a8c6515d9dd4c67a77b07666428",
+    "source_tree": "99b2c5b6ed7d084e8a73d802684f17a8904eba2c"
+  },
+  "fresh_controls": {
+    "set_id": "qg-v2-fresh-acceptance-20260930-v4n8",
+    "role": "FRESH_ACCEPTANCE_CONTROLS",
+    "control_count": 69,
+    "pair_count": 33,
+    "author": "fresh_acceptance_v2",
+    "author_aperture": "fork_turns=none; actively read only frozen policy/interface/minimal schema copies; inventoried generic startup context",
+    "contamination_status": "NO_FORBIDDEN_QUALIFICATION_CONTENT_EXPOSURE_OBSERVED",
+    "expectations": "agent_llm authored hypotheses; needs-audit, no semantic assessor evidence"
+  },
+  "known_regression_controls": {
+    "set_id": "qualifier-grounding-policy-v1-original-controls",
+    "role": "KNOWN_REGRESSION_CONTROLS",
+    "control_count": 28,
+    "pair_count": 9,
+    "separate_scoring": true,
+    "native_v2_acceptance_key": false,
+    "execution": "NOT_RUN",
+    "result_role": "optional separately reported legacy compatibility; original keys remain v1"
+  },
+  "candidate_implementation_aperture": [
+    "filtered objective/boundaries without per-case evidence",
+    "frozen policy.json",
+    "frozen interface.json",
+    "minimal candidate identity/state",
+    "ordinary engineering conventions"
+  ],
+  "post_freeze_reveal": [
+    "fresh inputs/expectations/pairs",
+    "preregistration/apparatus",
+    "known regression controls only after candidate freeze"
+  ],
+  "primary_factor": "one frozen pure reducer implementation",
+  "primary_metric": "every fresh control and every pair exact; source/oracle review must be clear",
+  "unit_of_analysis": "individual assessment ledger -> decision record, with supplementary endpoint relations",
+  "acceptance_rule": "Valid complete execution, every fresh expected required field exact except reason text, all 33 relations with two exact endpoints, canonical output schema, no v2 safety failure on any observed input, and no prohibited oracle dependency.",
+  "falsification_rule": "Any valid contractual mismatch/failed relation/unsafe authorization or detected implementation shortcut; no average override. Legacy version disagreement is reported separately, not silently converted into a native v2 failure.",
+  "contamination_stop": "Forbidden evidence in an implementation/control-author aperture before its freeze -> CONTAMINATED and no independence claim.",
+  "single_decisive_run": "One frozen candidate call per fresh ledger once; exclusive run-start receipt; persist decisions before scoring; no pair re-calls; partial execution -> APPARATUS_INVALID, no quiet retry.",
+  "no_repair_after_reveal": "Preserve candidate and failures; terminate and separately freeze a successor for material repair.",
+  "source_oracle_review": [
+    "case-ID branches/lookups",
+    "expectation/fixture/runtime file reads",
+    "historical/source-text access",
+    "hidden checker/scorer dependencies",
+    "environment/path answer injection",
+    "order/renaming dependence",
+    "output copied from scorer",
+    "runtime model/network/process access"
+  ],
+  "terminal_vocabulary": [
+    "SUPPORTED_FOR_LEDGER_CONTRACT",
+    "FALSIFIED",
+    "INCONCLUSIVE",
+    "CONTAMINATED",
+    "APPARATUS_INVALID"
+  ],
+  "artifacts": {
+    "research/evidence/qualifier-grounding-policy-v2/policy.json": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+    "research/evidence/qualifier-grounding-policy-v2/interface.json": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+    "research/evidence/qualifier-grounding-policy-v2/freeze.json": "1e198b84e93ef66e53720bb1ac7af641dcb3037c84284768aaea2bcc7befe3c4",
+    "research/qualifier-grounding-offline-qualification-v2-protocol.md": "1c947e4a9f43befef979c86d537cf0d67ad5d522031a775df617ac9ac72b0e51",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/regression.json": "1016b0cbbce041c62aec6bcb4baf5026e0259b11846d6ad53d3e7974da5c2071",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze.json": "955c5d076c40fc9ad526df018f9cc38cd463253ca58b5a19033c14a84a289508",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/AUTHOR.json": "cee0596999933f99a7bb21a82f3c2928e2c9a45508a1bbc5a962c73293c2fbb0",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py": "421bc05030e1232659f627d254512884b9293566cfc64ff5624b7e585573048a",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py": "ec6f4ef90beecd173dc2131cc9e594a1ffb3ebc6bf560f1b9294d1e9eccbfc39",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/checks.json": "1283ef8e76d6c1003666873082d53d3a302456e97996ead9dfb596bd5205fa40",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/controls.json": "09979fb2677e626ae01aba816921738cab79e701c7e61c080b32c98fafa84ca9",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/expectations.jsonl": "1fcb5ab6e55d961604078015a711e6dfeecf7c5b048e768b42bb80300c98f226",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py": "5fb887b6cdf10a3f30414da33d016a0fe81c9a3a21143f61bbcff50865a8b5dd",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/inputs.jsonl": "d4afdacc54e87d7d60d3f947512484af76a7d3830283701bcd37527dc3bc56d1",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/pairs.json": "18213e6ef725873ebb9d34b1a39a0bd57eefb0d8a8213e4e5a89322ac69d64be"
+  },
+  "project_model_provider_calls": 0,
+  "decide_calls": 0,
+  "wave_b": "LOCKED",
+  "non_claims": [
+    "Preparation only; no v2 reducer implemented or run.",
+    "No natural-language materiality, coverage, support, contradiction or decomposition-safety assessor qualified.",
+    "No arbitrary-prose/production grounding or maintained-generation promotion.",
+    "No generation/G1-G7/Wave B/TEST/PROSPECTIVE access, CAL, ADR-018 edits, v1 repair/rerun, merge or release."
+  ],
+  "lineage": {
+    "issue": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/25",
+    "terminal_predecessor": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/24",
+    "frozen_policy_predecessor": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/22"
+  }
+}

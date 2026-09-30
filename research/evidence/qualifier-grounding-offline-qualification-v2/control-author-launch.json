@@ -1,0 +1,15 @@
+{
+  "schema_version": "qualifier-grounding-control-author-launch/v2",
+  "created_at": "2026-09-30T20:11:21.327343+00:00",
+  "context_mode": "collaboration.spawn_agent fork_turns=none",
+  "normative_commit": "ae754348d4ec8a8c6515d9dd4c67a77b07666428",
+  "normative_tree": "99b2c5b6ed7d084e8a73d802684f17a8904eba2c",
+  "allowed_input_sha256": {
+    "policy.json": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+    "interface.json": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+    "SCHEMA.md": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d"
+  },
+  "source_isolation": "Allowlist copies in a non-Git directory; no inherited conversation turns. Broad owner does not author controls. Source package includes predecessor but is not supplied to author. Read restrictions are contractual, not an OS sandbox; author must preserve actual read inventory and limitations.",
+  "forbidden": "predecessor controls/expectations/pairs/reducer/results/history; historical anchor cases; source repository or memory retrieval; models/providers; reducer implementation/execution",
+  "project_model_provider_calls": 0
+}

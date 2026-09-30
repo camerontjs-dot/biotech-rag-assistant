@@ -1,0 +1,194 @@
+{
+  "actual_reads": [
+    {
+      "bytes": 17085,
+      "operation": "read_bytes and complete UTF-8 content display",
+      "output_recovery": "Combined tool result truncated part of interface.json; policy.json and SCHEMA.md were complete in displayed content.",
+      "read_at_utc": "2026-09-30T20:16:05.297240+00:00",
+      "sha256": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+      "source_name": "policy.json"
+    },
+    {
+      "bytes": 17085,
+      "operation": "draft artifact hash recheck only",
+      "read_at_utc": "2026-09-30T20:30:30.025327+00:00",
+      "sha256": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+      "source_name": "policy.json"
+    },
+    {
+      "bytes": 17008,
+      "operation": "read_bytes and complete UTF-8 content display",
+      "output_recovery": "Combined tool result truncated part of interface.json; policy.json and SCHEMA.md were complete in displayed content.",
+      "read_at_utc": "2026-09-30T20:16:05.297521+00:00",
+      "sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+      "source_name": "interface.json"
+    },
+    {
+      "bytes": 17008,
+      "operation": "complete separate cat content display to recover truncation",
+      "read_at_utc": null,
+      "sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+      "source_name": "interface.json",
+      "timestamp_limit": "Occurred after the timestamped combined read and before build_controls.py creation; tool did not return a wall-clock timestamp for that recovery."
+    },
+    {
+      "bytes": 17008,
+      "operation": "draft artifact hash recheck only",
+      "read_at_utc": "2026-09-30T20:30:30.025623+00:00",
+      "sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+      "source_name": "interface.json"
+    },
+    {
+      "bytes": 3537,
+      "operation": "read_bytes and complete UTF-8 content display",
+      "output_recovery": "Combined tool result truncated part of interface.json; policy.json and SCHEMA.md were complete in displayed content.",
+      "read_at_utc": "2026-09-30T20:16:05.297669+00:00",
+      "sha256": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d",
+      "source_name": "SCHEMA.md"
+    },
+    {
+      "bytes": 3537,
+      "operation": "draft artifact hash recheck only",
+      "read_at_utc": "2026-09-30T20:30:30.025854+00:00",
+      "sha256": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d",
+      "source_name": "SCHEMA.md"
+    },
+    {
+      "bytes": 17008,
+      "operation": "structural checker reads exact input/output schemas and referential constraints",
+      "read_at_utc": "2026-09-30T20:30:33.802001+00:00",
+      "sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+      "source_name": "interface.json"
+    }
+  ],
+  "artifact_source_names": [
+    "inputs.jsonl",
+    "expectations.jsonl",
+    "controls.json",
+    "pairs.json",
+    "AUTHOR.json",
+    "build_controls.py",
+    "check_controls.py",
+    "checks.json",
+    "freeze_controls.py",
+    "freeze.json"
+  ],
+  "author_identity": "fresh_acceptance_v2",
+  "authored_artifact_counts": {
+    "controls": 69,
+    "expectations": 69,
+    "inputs": 69,
+    "pairs": 33
+  },
+  "checks": {
+    "checks_run": 1224,
+    "material_failures": [],
+    "pair_expected_relations_passed": 33,
+    "receipt": "checks.json",
+    "semantic_qualification": "NOT_RUN",
+    "status": "PASS"
+  },
+  "context_creation": {
+    "delegation": "Human explicitly authorized context-free fresh author delegation.",
+    "fork_turns": "none",
+    "parent_conversation_supplied": false,
+    "task_directive": "Author symbolic acceptance controls from the three clean frozen normative allowlist copies only."
+  },
+  "created_at_utc": "2026-09-30T20:30:30.025979+00:00",
+  "deviations": [
+    "The task destination acceptance-controls/ overrides SCHEMA.md's suggested new-directory name fresh-controls/; encoding is unchanged."
+  ],
+  "expectation_provenance": {
+    "authority": "Manually authored hypotheses from frozen declared symbolic assessments.",
+    "decision_reason_text": "Short contract-rationale annotations only; no domain claims or answer prose.",
+    "evaluator": "agent_llm",
+    "natural_language_claims_generated": false,
+    "status": "needs-audit"
+  },
+  "forbidden_exposure": {
+    "active_existing_content_reads_outside_allowlist": [],
+    "contamination_status": "CLEAR_RESTRICTED_APERTURE",
+    "external_service_calls": 0,
+    "memory_retrievals": 0,
+    "mindgraph_calls": 0,
+    "prohibited_classes": [
+      "predecessor ledger controls",
+      "predecessor expectations or pair relations",
+      "reducer source",
+      "per-case predecessor decisions/results/terminal labels",
+      "historical anchor material",
+      "exact predecessor case IDs or answer patterns"
+    ],
+    "project_model_provider_calls": 0,
+    "reducer_calls": 0,
+    "reducer_implementations": 0,
+    "repository_history_reads": 0,
+    "session_open_calls": 0,
+    "status": "NO_FORBIDDEN_QUALIFICATION_EXPOSURE_OBSERVED"
+  },
+  "input_allowlist": [
+    {
+      "bytes": 17085,
+      "sha256": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+      "source_name": "policy.json"
+    },
+    {
+      "bytes": 17008,
+      "sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+      "source_name": "interface.json"
+    },
+    {
+      "bytes": 3537,
+      "sha256": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d",
+      "source_name": "SCHEMA.md"
+    }
+  ],
+  "last_structural_check_at_utc": "2026-09-30T20:30:33.828377+00:00",
+  "limitations": [
+    "Finite symbolic controls do not establish real-world truth, semantic assessor competence, or correctness for all possible ledgers.",
+    "Expected decisions remain needs-audit hypotheses; schema and pair checks are structural, not independent semantic qualification.",
+    "No predecessor comparison was performed; originality is authored without access to predecessor material, not asserted from a fixture-diff proof.",
+    "Isolation evidence covers supplied context inventory and deliberate tool content reads, not an OS-enforced content sandbox or a claim about model-training history.",
+    "Installed jsonschema and Python standard-library imports are ordinary runtime machinery; no additional API documentation or project content was consulted.",
+    "Clean normative commit/tree identities were supplied; only allowlist byte hashes were locally verified.",
+    "The complete cat recovery was not separately wall-clock timestamped by the tool."
+  ],
+  "material_contract_ambiguities": [],
+  "method": [
+    "Read the complete normative contract and exact schemas through the three-file aperture; recover interface truncation.",
+    "Design original opaque symbolic structures, then explicitly author each expected enum, array and diagnostic field.",
+    "Encode manual rows with object constructors and canonical sorting; copy manually asserted invariants, or perform explicit namespace renaming, without evaluating ledger policy in code.",
+    "State complete invariants and precise sensitivity equal/different field partitions.",
+    "Validate schemas and referential structure plus canonical outputs, provenance metadata and expected pair relations only; never invoke a reducer.",
+    "Seal authored outputs, drafting helper, structural checker and check receipt before reporting."
+  ],
+  "normative_identity": {
+    "commit": "ae754348d4ec8a8c6515d9dd4c67a77b07666428",
+    "identity_provenance": "Supplied delegation identity, not independently verified by repository/history access.",
+    "tree": "99b2c5b6ed7d084e8a73d802684f17a8904eba2c"
+  },
+  "schema_version": "qualifier-grounding-author/v2",
+  "set_id": "qg-v2-fresh-acceptance-20260930-v4n8",
+  "startup_context_exposure": {
+    "generic_instruction_classes": [
+      "system/developer agent and tool conventions",
+      "MainFrame global operating contract",
+      "skill catalog without skill content reads",
+      "workspace paths, date, permissions, and multi-agent role conventions"
+    ],
+    "incidental_memory_subject_classes": [
+      "MainFrame operations and Supervisor Desk",
+      "Conduit",
+      "MindGraph",
+      "ERS and CAL Pipeline",
+      "biotech evaluation",
+      "decision authority qualification",
+      "Evidence Room governance",
+      "Conduit lifecycle lineage",
+      "Brain research and gate experiment"
+    ],
+    "incidental_memory_use": "Inventory only; unrelated project facts were not used as normative authority, not retrieved, and not incorporated into cases.",
+    "predecessor_assessment_ledger_material_observed": false
+  },
+  "unsealed_drafting_artifacts": []
+}

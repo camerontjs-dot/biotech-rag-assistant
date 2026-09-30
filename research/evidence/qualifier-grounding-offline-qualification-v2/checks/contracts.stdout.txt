@@ -1,0 +1,4 @@
+  OK      /private/tmp/biotech-qualifier-offline-v2-20260930/research/qualifier-grounding-offline-qualification-v2-protocol.md  (adopted)
+  OK      /private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/implementation-aperture/README.md  (adopted)
+  2 file(s) checked, no findings.
+

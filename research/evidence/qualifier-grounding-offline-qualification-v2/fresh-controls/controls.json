@@ -1,0 +1,964 @@
+{
+  "controls": [
+    {
+      "case_id": "k7r3",
+      "invalid_input": false,
+      "negative_strategies": [
+        "always_reject",
+        "always_inconclusive",
+        "minimal_witness_selection",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "Partial authorized witnesses unite to cover the complete obligation set; every contributing BODY witness is retained.",
+      "tags": [
+        "full-retention",
+        "union",
+        "silent-witness",
+        "redundancy"
+      ]
+    },
+    {
+      "case_id": "p9x2",
+      "invalid_input": false,
+      "negative_strategies": [
+        "unauthorized_surface_import"
+      ],
+      "purpose": "All three unauthorized surfaces remain excluded despite their declared support, contradiction and ambiguity.",
+      "tags": [
+        "unauthorized-surfaces",
+        "invariance"
+      ]
+    },
+    {
+      "case_id": "n0v6",
+      "invalid_input": false,
+      "negative_strategies": [
+        "input_order_dependence",
+        "noncanonical_output"
+      ],
+      "purpose": "Reverse obligation, witness, aperture and assessment array orders without changing identity or authority.",
+      "tags": [
+        "ordering",
+        "invariance"
+      ]
+    },
+    {
+      "case_id": "t8a4",
+      "invalid_input": false,
+      "negative_strategies": [
+        "identifier_lookup",
+        "noncanonical_output"
+      ],
+      "purpose": "Complete namespace bijections also change Unicode sort order while preserving every decision field after mapping.",
+      "tags": [
+        "opaque-identifiers",
+        "renaming"
+      ]
+    },
+    {
+      "case_id": "g2m9",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_guard_uncertainty",
+        "blanket_qualifier_trimming"
+      ],
+      "purpose": "A proposal with unknown and false guards and unsuitable support is not applicable to full packet support.",
+      "tags": [
+        "proposal-applicability",
+        "full-retention"
+      ]
+    },
+    {
+      "case_id": "j4w1",
+      "invalid_input": false,
+      "negative_strategies": [
+        "citation_grounding_conflation",
+        "blanket_qualifier_trimming"
+      ],
+      "purpose": "The nominated BODY remains complete when both selected quotes are silent; retain all content and hold for citation.",
+      "tags": [
+        "quote-insufficiency",
+        "retained-identifiers"
+      ]
+    },
+    {
+      "case_id": "b6q0",
+      "invalid_input": false,
+      "negative_strategies": [
+        "citation_grounding_conflation",
+        "always_support"
+      ],
+      "purpose": "Other packet BODY witnesses complete a claim that the nominated BODY only partially supports.",
+      "tags": [
+        "nomination-insufficiency",
+        "quote-full",
+        "packet-full"
+      ]
+    },
+    {
+      "case_id": "s2c5",
+      "invalid_input": false,
+      "negative_strategies": [
+        "quote_first_citation"
+      ],
+      "purpose": "A deficient nomination takes precedence whether the quote is full or partial.",
+      "tags": [
+        "citation-precedence"
+      ]
+    },
+    {
+      "case_id": "v1k8",
+      "invalid_input": false,
+      "negative_strategies": [
+        "full_quote_import_into_body",
+        "always_reject"
+      ],
+      "purpose": "Singleton packet support and absent nomination.",
+      "tags": [
+        "singleton",
+        "nomination-absent"
+      ]
+    },
+    {
+      "case_id": "h9d3",
+      "invalid_input": false,
+      "negative_strategies": [
+        "cross_aperture_conflict_invention",
+        "quote_body_conflation"
+      ],
+      "purpose": "Pure QUOTE contradiction disagrees with BODY across apertures but introduces no overlap within an authorized aperture.",
+      "tags": [
+        "cross-aperture",
+        "pure-quote-contradiction"
+      ]
+    },
+    {
+      "case_id": "v4n8",
+      "invalid_input": false,
+      "negative_strategies": [
+        "always_support",
+        "always_reject",
+        "always_inconclusive",
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "The exact packet-supported core is proposed with its explicit unsupported companion and declared safe guards.",
+      "tags": [
+        "safe-projection",
+        "material-qualifier",
+        "diagnostic-retained-separation"
+      ]
+    },
+    {
+      "case_id": "q0s6",
+      "invalid_input": false,
+      "negative_strategies": [
+        "unauthorized_surface_import",
+        "citation_grounding_conflation"
+      ],
+      "purpose": "QUOTE support for the missing packet obligation changes Q only; the complete claim remains packet-deficient.",
+      "tags": [
+        "quote-body-separation",
+        "safe-projection"
+      ]
+    },
+    {
+      "case_id": "y7f2",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "A projection may not discard the supported material obligation h7.",
+      "tags": [
+        "unsafe-decomposition",
+        "supported-content-discard"
+      ]
+    },
+    {
+      "case_id": "c9a5",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "Overlapping proposed core and gap are unsafe despite all declared guards.",
+      "tags": [
+        "unsafe-decomposition",
+        "overlapping-partition"
+      ]
+    },
+    {
+      "case_id": "m1u7",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "An omitted gap companion cannot authorize removal of unsupported material content.",
+      "tags": [
+        "unsafe-decomposition",
+        "nonexhaustive-partition"
+      ]
+    },
+    {
+      "case_id": "l6e4",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "Partial packet support with no proposal does not authorize a smaller claim.",
+      "tags": [
+        "proposal-absent",
+        "diagnostic-retained-separation"
+      ]
+    },
+    {
+      "case_id": "r8t0",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "The declared guard core_independently_supported is false, so no core is retained.",
+      "tags": [
+        "unsafe-decomposition",
+        "false-guard",
+        "core_independently_supported"
+      ]
+    },
+    {
+      "case_id": "p3g9",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "The declared guard bindings_preserved is false, so no core is retained.",
+      "tags": [
+        "unsafe-decomposition",
+        "false-guard",
+        "bindings_preserved"
+      ]
+    },
+    {
+      "case_id": "w5b1",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "The declared guard required_context_retained is false, so no core is retained.",
+      "tags": [
+        "unsafe-decomposition",
+        "false-guard",
+        "required_context_retained"
+      ]
+    },
+    {
+      "case_id": "a6z2",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "The declared guard removal_independent is false, so no core is retained.",
+      "tags": [
+        "unsafe-decomposition",
+        "false-guard",
+        "removal_independent"
+      ]
+    },
+    {
+      "case_id": "e0h8",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "The declared guard no_missing_presupposition is false, so no core is retained.",
+      "tags": [
+        "unsafe-decomposition",
+        "false-guard",
+        "no_missing_presupposition"
+      ]
+    },
+    {
+      "case_id": "d4j7",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "The declared guard gap_explicit is false, so no core is retained.",
+      "tags": [
+        "unsafe-decomposition",
+        "false-guard",
+        "gap_explicit"
+      ]
+    },
+    {
+      "case_id": "f2w9",
+      "invalid_input": false,
+      "negative_strategies": [
+        "false_before_unknown",
+        "local_support_leak",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "An applicable null guard precedes a false guard or an otherwise safe structure; local diagnostics retain no authority.",
+      "tags": [
+        "unknown-guard",
+        "uncertainty-precedence"
+      ]
+    },
+    {
+      "case_id": "u5r0",
+      "invalid_input": false,
+      "negative_strategies": [
+        "false_before_unknown",
+        "local_support_leak",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "An applicable null guard precedes a false guard or an otherwise safe structure; local diagnostics retain no authority.",
+      "tags": [
+        "unknown-guard",
+        "uncertainty-precedence"
+      ]
+    },
+    {
+      "case_id": "z3m8",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "Proposed support witnesses omit the BODY contributor needed for b1.",
+      "tags": [
+        "unsafe-decomposition",
+        "incomplete-core-witness-coverage"
+      ]
+    },
+    {
+      "case_id": "k0q4",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "Including a QUOTE as proposal BODY support is a valid reference but unsafe witness selection.",
+      "tags": [
+        "unsafe-decomposition",
+        "unauthorized-proposal-witness"
+      ]
+    },
+    {
+      "case_id": "n7s1",
+      "invalid_input": false,
+      "negative_strategies": [
+        "unused_witness_admission",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "A listed silent BODY witness entails no core ID and fails proposal suitability.",
+      "tags": [
+        "unsafe-decomposition",
+        "silent-proposal-witness"
+      ]
+    },
+    {
+      "case_id": "t6v3",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "An empty proposal support list cannot authorize the core.",
+      "tags": [
+        "unsafe-decomposition",
+        "empty-core-witness-set"
+      ]
+    },
+    {
+      "case_id": "x2a8",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "An empty core is an unsafe partition, not an input apparatus error.",
+      "tags": [
+        "unsafe-decomposition",
+        "empty-core"
+      ]
+    },
+    {
+      "case_id": "b5l0",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "Adding the unsupported obligation s6 to the core cannot produce a safe projection.",
+      "tags": [
+        "unsafe-decomposition",
+        "unsupported-core-content"
+      ]
+    },
+    {
+      "case_id": "j8p6",
+      "invalid_input": false,
+      "negative_strategies": [
+        "input_order_dependence",
+        "noncanonical_output"
+      ],
+      "purpose": "Reverse proposal partition/support and all ledger array orders on a safely projected record.",
+      "tags": [
+        "ordering",
+        "safe-projection"
+      ]
+    },
+    {
+      "case_id": "h4c7",
+      "invalid_input": false,
+      "negative_strategies": [
+        "identifier_lookup",
+        "noncanonical_output"
+      ],
+      "purpose": "Rename an accepted projection including core, gap, proposal support and diagnostic namespaces.",
+      "tags": [
+        "opaque-identifiers",
+        "renaming"
+      ]
+    },
+    {
+      "case_id": "p8e2",
+      "invalid_input": false,
+      "negative_strategies": [
+        "quote_body_conflation",
+        "unauthorized_surface_import",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "Full selected quote and metadata support provide no authorized BODY-supported core.",
+      "tags": [
+        "zero-packet-support",
+        "full-quote",
+        "metadata"
+      ]
+    },
+    {
+      "case_id": "g9x5",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_guard_uncertainty",
+        "quote_body_conflation"
+      ],
+      "purpose": "A null-guard proposal is not applicable where no packet obligation is supported.",
+      "tags": [
+        "proposal-applicability",
+        "zero-support"
+      ]
+    },
+    {
+      "case_id": "a2t7",
+      "invalid_input": false,
+      "negative_strategies": [
+        "always_support",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "No witnesses means no supported core, with the original obligation present only in diagnostic missing IDs.",
+      "tags": [
+        "empty-witnesses",
+        "singleton",
+        "diagnostic-retained-separation"
+      ]
+    },
+    {
+      "case_id": "s0k6",
+      "invalid_input": false,
+      "negative_strategies": [
+        "unauthorized_surface_import",
+        "unauthorized_ambiguity_import"
+      ],
+      "purpose": "Unauthorized surfaces remain irrelevant even when all assessment sets overlap.",
+      "tags": [
+        "unauthorized-surfaces",
+        "invariance"
+      ]
+    },
+    {
+      "case_id": "d3v9",
+      "invalid_input": false,
+      "negative_strategies": [
+        "contradiction_as_gap",
+        "blanket_qualifier_trimming",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "Pure packet contradiction rejects the complete claim and makes even a structurally safe trimming proposal irrelevant.",
+      "tags": [
+        "pure-contradiction",
+        "proposal-precedence",
+        "diagnostic-retained-separation"
+      ]
+    },
+    {
+      "case_id": "w8j1",
+      "invalid_input": false,
+      "negative_strategies": [
+        "blanket_guard_uncertainty",
+        "false_before_unknown"
+      ],
+      "purpose": "Contradiction precedence makes unknown or false proposal guards inapplicable.",
+      "tags": [
+        "proposal-applicability",
+        "contradiction"
+      ]
+    },
+    {
+      "case_id": "n6q4",
+      "invalid_input": false,
+      "negative_strategies": [
+        "no_core_before_contradiction",
+        "quote_body_conflation"
+      ],
+      "purpose": "Contradiction over zero packet entailment with ignored unknown proposal.",
+      "tags": [
+        "pure-contradiction",
+        "zero-support",
+        "precedence"
+      ]
+    },
+    {
+      "case_id": "m0b7",
+      "invalid_input": false,
+      "negative_strategies": [
+        "local_support_leak",
+        "diagnostic_as_retained",
+        "always_support"
+      ],
+      "purpose": "Unknown coverage withholds despite locally complete Q/N/P support; diagnostic IDs do not authorize retained content.",
+      "tags": [
+        "coverage-unknown",
+        "global-uncertainty",
+        "local-supported"
+      ]
+    },
+    {
+      "case_id": "q5z3",
+      "invalid_input": false,
+      "negative_strategies": [
+        "local_support_leak",
+        "unknown_materiality_as_nonmaterial"
+      ],
+      "purpose": "Unknown materiality preserves local support calculations but requires global withholding.",
+      "tags": [
+        "materiality-unknown",
+        "local-supported"
+      ]
+    },
+    {
+      "case_id": "r1h6",
+      "invalid_input": false,
+      "negative_strategies": [
+        "inapplicable_guard_import",
+        "local_support_leak"
+      ],
+      "purpose": "Base uncertainty precedence over an otherwise applicable null guard.",
+      "tags": [
+        "base-uncertainty",
+        "proposal-not-assessed",
+        "multiple-sources"
+      ]
+    },
+    {
+      "case_id": "v9c0",
+      "invalid_input": false,
+      "negative_strategies": [
+        "contradiction_preempts_conflict",
+        "local_support_leak",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "Conflicting authorized BODY witnesses.",
+      "tags": [
+        "body-disagreement",
+        "global-uncertainty",
+        "local-supported"
+      ]
+    },
+    {
+      "case_id": "e4s8",
+      "invalid_input": false,
+      "negative_strategies": [
+        "overlap_as_apparatus",
+        "contradiction_preempts_conflict"
+      ],
+      "purpose": "Within-witness entailment/contradiction overlap.",
+      "tags": [
+        "authorized-conflict",
+        "within-witness",
+        "schema-valid-overlap"
+      ]
+    },
+    {
+      "case_id": "f7a2",
+      "invalid_input": false,
+      "negative_strategies": [
+        "quote_uncertainty_ignored",
+        "local_support_leak"
+      ],
+      "purpose": "Q-only conflict propagates globally.",
+      "tags": [
+        "quote-conflict",
+        "global-uncertainty",
+        "local-supported"
+      ]
+    },
+    {
+      "case_id": "k3u5",
+      "invalid_input": false,
+      "negative_strategies": [
+        "quote_uncertainty_ignored",
+        "local_support_leak"
+      ],
+      "purpose": "Q ambiguity cannot be ignored just because packet support is complete.",
+      "tags": [
+        "authorized-ambiguity",
+        "quote",
+        "global-uncertainty"
+      ]
+    },
+    {
+      "case_id": "t0n9",
+      "invalid_input": false,
+      "negative_strategies": [
+        "ambiguity_without_missing_support_ignored",
+        "local_support_leak"
+      ],
+      "purpose": "P-only authorized ambiguity with complete nominated and quote diagnostics.",
+      "tags": [
+        "authorized-ambiguity",
+        "body",
+        "global-uncertainty"
+      ]
+    },
+    {
+      "case_id": "b7p4",
+      "invalid_input": false,
+      "negative_strategies": [
+        "first_uncertainty_only",
+        "inapplicable_guard_import",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "Combined base uncertainty sources with canonically sorted diagnostics.",
+      "tags": [
+        "multiple-sources",
+        "global-uncertainty",
+        "precedence"
+      ]
+    },
+    {
+      "case_id": "x9g1",
+      "invalid_input": false,
+      "negative_strategies": [
+        "integrity_as_semantic_uncertainty",
+        "diagnostic_as_retained"
+      ],
+      "purpose": "Unknown integrity precedes complete local support and stops assessment.",
+      "tags": [
+        "integrity-unknown",
+        "apparatus-precedence"
+      ]
+    },
+    {
+      "case_id": "a0m6",
+      "invalid_input": false,
+      "negative_strategies": [
+        "uncertainty_before_apparatus",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Invalid custody precedes unknown coverage/materiality and a null applicable-looking proposal.",
+      "tags": [
+        "custody-invalid",
+        "apparatus-precedence"
+      ]
+    },
+    {
+      "case_id": "c5r8",
+      "invalid_input": false,
+      "negative_strategies": [
+        "simulated_semantic_completeness",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Unavailable assessor stops rather than producing an ordinary semantic decision.",
+      "tags": [
+        "assessor-unavailable",
+        "apparatus"
+      ]
+    },
+    {
+      "case_id": "s6d2",
+      "invalid_input": false,
+      "negative_strategies": [
+        "contradiction_before_apparatus",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Execution failure stops before a ledger contradiction can become a semantic finding.",
+      "tags": [
+        "execution-failure",
+        "apparatus-precedence"
+      ]
+    },
+    {
+      "case_id": "p1w7",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "An unknown ledger field is rejected before semantic assessment.",
+      "tags": [
+        "invalid-input",
+        "unknown-field"
+      ]
+    },
+    {
+      "case_id": "m8t2",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "BODY is never authorized in Q; illegal aperture assignment is apparatus invalid.",
+      "tags": [
+        "invalid-input",
+        "illegal-body-aperture"
+      ]
+    },
+    {
+      "case_id": "g4a0",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "An undeclared obligation assessment is an input-reference failure.",
+      "tags": [
+        "invalid-input",
+        "unknown-assessment-reference"
+      ]
+    },
+    {
+      "case_id": "u7n5",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Duplicate obligation IDs violate referential identity even when records match.",
+      "tags": [
+        "invalid-input",
+        "duplicate-obligation-id"
+      ]
+    },
+    {
+      "case_id": "e2q9",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Duplicate witness IDs violate referential identity.",
+      "tags": [
+        "invalid-input",
+        "duplicate-witness-id"
+      ]
+    },
+    {
+      "case_id": "z6b3",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Invalid coverage enum takes precedence over unknown integrity.",
+      "tags": [
+        "invalid-input",
+        "invalid-enum",
+        "apparatus-code-precedence"
+      ]
+    },
+    {
+      "case_id": "k5r0",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "A duplicate assessment ID violates the unique-array schema.",
+      "tags": [
+        "invalid-input",
+        "duplicate-assessment-id"
+      ]
+    },
+    {
+      "case_id": "b9c4",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Missing guard declaration is invalid input; no guard default is allowed.",
+      "tags": [
+        "invalid-input",
+        "missing-guard"
+      ]
+    },
+    {
+      "case_id": "r2v8",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Unknown proposal witness ID is apparatus invalid, unlike a known but unsuitable QUOTE witness.",
+      "tags": [
+        "invalid-input",
+        "unknown-proposal-reference"
+      ]
+    },
+    {
+      "case_id": "n3s7",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "QUERY cannot acquire authority by declaring a packet aperture.",
+      "tags": [
+        "invalid-input",
+        "illegal-query-aperture"
+      ]
+    },
+    {
+      "case_id": "w0h5",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "QUOTE cannot import nominated or packet BODY authority by listing those apertures.",
+      "tags": [
+        "invalid-input",
+        "illegal-quote-aperture"
+      ]
+    },
+    {
+      "case_id": "d7p1",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "The integer 1 is not the boolean true guard declaration.",
+      "tags": [
+        "invalid-input",
+        "guard-type"
+      ]
+    },
+    {
+      "case_id": "f8m2",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Unknown proposed obligation IDs are input-reference errors.",
+      "tags": [
+        "invalid-input",
+        "unknown-proposal-obligation"
+      ]
+    },
+    {
+      "case_id": "q4j6",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "The obligation set must be nonempty.",
+      "tags": [
+        "invalid-input",
+        "empty-obligations"
+      ]
+    },
+    {
+      "case_id": "a7z9",
+      "invalid_input": true,
+      "negative_strategies": [
+        "silent_malformed_discard",
+        "malformed_as_semantic",
+        "untrusted_diagnostics_leak"
+      ],
+      "purpose": "Coverage must be explicitly declared; there is no COMPLETE default.",
+      "tags": [
+        "invalid-input",
+        "missing-coverage"
+      ]
+    },
+    {
+      "case_id": "r4n2",
+      "invalid_input": false,
+      "negative_strategies": [
+        "global_id_uniqueness",
+        "identifier_lookup"
+      ],
+      "purpose": "Legal cross-namespace identifier overlap.",
+      "tags": [
+        "namespace-overlap",
+        "opaque-identifiers"
+      ]
+    },
+    {
+      "case_id": "m5",
+      "invalid_input": false,
+      "negative_strategies": [
+        "identifier_lookup",
+        "noncanonical_output"
+      ],
+      "purpose": "Complete renaming maps are namespace-specific even where their source strings overlap.",
+      "tags": [
+        "opaque-identifiers",
+        "renaming"
+      ]
+    }
+  ],
+  "schema_version": "qualifier-grounding-controls/v2",
+  "set_id": "qg-v2-fresh-acceptance-20260930-v4n8"
+}

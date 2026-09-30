@@ -1,0 +1,6553 @@
+{
+  "check_scope": [
+    "exact interface input/output JSON schemas",
+    "encoding schemas for controls and pairs",
+    "input validity annotations including deliberate malformed controls",
+    "referential identity and surface/aperture constraints",
+    "canonical expected output arrays",
+    "output structural consistency without input-policy inference",
+    "complete expected invariant comparisons",
+    "complete bijections and renamed input/output comparisons",
+    "sensitivity equality/difference assertions",
+    "author provenance and stated aperture"
+  ],
+  "checks": [
+    {
+      "detail": "",
+      "name": "controls.schema",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pairs.schema",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "set_identity.consistent",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "inputs.unique_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "expectations.unique_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "controls.unique_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "case_sets.exactly_equal",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "inputs.outer_case_id_valid",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.k7r3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.k7r3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.k7r3",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.p9x2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.p9x2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.p9x2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.n0v6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.n0v6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.n0v6",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.t8a4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.t8a4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.t8a4",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.g2m9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.g2m9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.g2m9",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.j4w1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.j4w1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.j4w1",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.b6q0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.b6q0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.b6q0",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.s2c5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.s2c5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.s2c5",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.v1k8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.v1k8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.v1k8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.h9d3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.h9d3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.h9d3",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.v4n8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.v4n8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.v4n8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.q0s6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.q0s6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.q0s6",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.y7f2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.y7f2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.y7f2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.c9a5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.c9a5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.c9a5",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.m1u7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.m1u7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.m1u7",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.l6e4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.l6e4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.l6e4",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.r8t0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.r8t0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.r8t0",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.p3g9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.p3g9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.p3g9",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.w5b1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.w5b1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.w5b1",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.a6z2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.a6z2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.a6z2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.e0h8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.e0h8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.e0h8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.d4j7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.d4j7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.d4j7",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.f2w9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.f2w9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.f2w9",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.u5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.u5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.u5r0",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.z3m8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.z3m8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.z3m8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.k0q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.k0q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.k0q4",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.n7s1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.n7s1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.n7s1",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.t6v3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.t6v3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.t6v3",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.x2a8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.x2a8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.x2a8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.b5l0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.b5l0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.b5l0",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.j8p6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.j8p6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.j8p6",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.h4c7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.h4c7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.h4c7",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.p8e2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.p8e2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.p8e2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.g9x5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.g9x5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.g9x5",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.a2t7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.a2t7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.a2t7",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.s0k6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.s0k6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.s0k6",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.d3v9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.d3v9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.d3v9",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.w8j1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.w8j1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.w8j1",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.n6q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.n6q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.n6q4",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.m0b7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.m0b7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.m0b7",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.q5z3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.q5z3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.q5z3",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.r1h6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.r1h6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.r1h6",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.v9c0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.v9c0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.v9c0",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.e4s8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.e4s8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.e4s8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.f7a2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.f7a2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.f7a2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.k3u5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.k3u5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.k3u5",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.t0n9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.t0n9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.t0n9",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.b7p4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.b7p4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.b7p4",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.x9g1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.x9g1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.x9g1",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.a0m6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.a0m6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.a0m6",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.c5r8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.c5r8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.c5r8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.s6d2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.s6d2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.s6d2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[\"Additional properties are not allowed ('extra' was unexpected)\"]; refs=[]",
+      "name": "input.validity_annotation.p1w7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.p1w7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.p1w7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.p1w7",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['illegal surface/aperture assignment']",
+      "name": "input.validity_annotation.m8t2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.m8t2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.m8t2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.m8t2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['unknown witness obligation reference']",
+      "name": "input.validity_annotation.g4a0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.g4a0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.g4a0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.g4a0",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['duplicate obligation IDs']",
+      "name": "input.validity_annotation.u7n5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.u7n5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.u7n5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.u7n5",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['duplicate witness IDs']",
+      "name": "input.validity_annotation.e2q9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.e2q9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.e2q9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.e2q9",
+      "passed": true
+    },
+    {
+      "detail": "schema=[\"'PARTIAL' is not one of ['COMPLETE', 'UNKNOWN']\"]; refs=[]",
+      "name": "input.validity_annotation.z6b3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.z6b3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.z6b3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.z6b3",
+      "passed": true
+    },
+    {
+      "detail": "schema=[\"['u8', 'c2', 'u8'] has non-unique elements\"]; refs=[]",
+      "name": "input.validity_annotation.k5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.k5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.k5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.k5r0",
+      "passed": true
+    },
+    {
+      "detail": "schema=[\"{'body_witness_ids': ['p8', 'c4'], 'core_ids': ['d2', 'h7', 'b1'], 'gap_ids': ['s6'], 'guards': {'bindings_preserved': True, 'core_independently_supported': True, 'no_missing_presupposition': True, 'removal_independent': True, 'required_context_retained': True}} is not valid under any of the given schemas\"]; refs=[]",
+      "name": "input.validity_annotation.b9c4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.b9c4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.b9c4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.b9c4",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['unknown proposal witness reference']",
+      "name": "input.validity_annotation.r2v8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.r2v8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.r2v8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.r2v8",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['illegal surface/aperture assignment']",
+      "name": "input.validity_annotation.n3s7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.n3s7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.n3s7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.n3s7",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['illegal surface/aperture assignment']",
+      "name": "input.validity_annotation.w0h5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.w0h5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.w0h5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.w0h5",
+      "passed": true
+    },
+    {
+      "detail": "schema=[\"{'body_witness_ids': ['p8', 'c4'], 'core_ids': ['d2', 'h7', 'b1'], 'gap_ids': ['s6'], 'guards': {'bindings_preserved': 1, 'core_independently_supported': True, 'gap_explicit': True, 'no_missing_presupposition': True, 'removal_independent': True, 'required_context_retained': True}} is not valid under any of the given schemas\"]; refs=[]",
+      "name": "input.validity_annotation.d7p1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.d7p1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.d7p1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.d7p1",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=['unknown proposal obligation reference']",
+      "name": "input.validity_annotation.f8m2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.f8m2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.f8m2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.f8m2",
+      "passed": true
+    },
+    {
+      "detail": "schema=['[] should be non-empty']; refs=['unknown witness obligation reference']",
+      "name": "input.validity_annotation.q4j6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.q4j6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.q4j6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.q4j6",
+      "passed": true
+    },
+    {
+      "detail": "schema=[\"'coverage' is a required property\"]; refs=[]",
+      "name": "input.validity_annotation.a7z9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "input.invalid_expected_stop.a7z9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.a7z9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.a7z9",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.r4n2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.r4n2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.r4n2",
+      "passed": true
+    },
+    {
+      "detail": "schema=[]; refs=[]",
+      "name": "input.validity_annotation.m5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.schema.m5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.case_id.m5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k7r3.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.k7r3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p9x2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.p9x2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n0v6.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.n0v6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t8a4.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.t8a4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g2m9.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.g2m9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j4w1.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.j4w1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b6q0.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.b6q0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s2c5.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.s2c5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v1k8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.v1k8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h9d3.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.h9d3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v4n8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.v4n8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q0s6.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.q0s6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.y7f2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.y7f2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.y7f2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c9a5.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.c9a5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.c9a5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m1u7.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.m1u7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.m1u7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.l6e4.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.l6e4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.l6e4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r8t0.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.r8t0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.r8t0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p3g9.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.p3g9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.p3g9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w5b1.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.w5b1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.w5b1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a6z2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.a6z2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.a6z2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e0h8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.e0h8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.e0h8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d4j7.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.d4j7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.d4j7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f2w9.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.f2w9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.f2w9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.f2w9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u5r0.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.u5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.u5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.u5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z3m8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.z3m8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.z3m8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k0q4.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.k0q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.k0q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n7s1.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.n7s1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.n7s1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t6v3.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.t6v3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.t6v3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x2a8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.x2a8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.x2a8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b5l0.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.b5l0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.b5l0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.j8p6.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.j8p6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.h4c7.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.h4c7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p8e2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.p8e2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.p8e2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g9x5.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.g9x5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.g9x5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a2t7.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.a2t7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.a2t7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s0k6.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.s0k6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.s0k6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d3v9.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.d3v9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.d3v9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w8j1.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.w8j1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.w8j1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n6q4.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.n6q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.n6q4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m0b7.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.m0b7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.m0b7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.m0b7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q5z3.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.q5z3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.q5z3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.q5z3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r1h6.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.r1h6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.r1h6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.r1h6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.v9c0.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.v9c0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.v9c0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.v9c0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e4s8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.e4s8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.e4s8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.e4s8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f7a2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.f7a2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.f7a2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.f7a2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k3u5.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.k3u5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.k3u5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.k3u5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.t0n9.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.t0n9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.t0n9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.t0n9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b7p4.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.b7p4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.authority_collapsed.b7p4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.b7p4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.x9g1.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.x9g1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.x9g1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.x9g1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a0m6.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.a0m6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.a0m6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.a0m6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.c5r8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.c5r8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.c5r8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.c5r8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.s6d2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.s6d2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.s6d2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.s6d2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.p1w7.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.p1w7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.p1w7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m8t2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.m8t2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.m8t2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.g4a0.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.g4a0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.g4a0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.u7n5.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.u7n5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.u7n5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.e2q9.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.e2q9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.e2q9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.z6b3.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.z6b3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.z6b3",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.k5r0.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.k5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.k5r0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.b9c4.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.b9c4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.b9c4",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r2v8.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.r2v8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.r2v8",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.n3s7.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.n3s7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.n3s7",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.w0h5.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.w0h5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.w0h5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.d7p1.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.d7p1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.d7p1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.f8m2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.f8m2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.f8m2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.q4j6.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.q4j6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.q4j6",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.a7z9.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.nonretaining_lists_empty.a7z9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.stopped_diagnostics_clear.a7z9",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.r4n2.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.r4n2",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.core_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.gap_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.diagnostics.missing_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.diagnostics.contradicted_packet_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.diagnostics.ambiguous_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.diagnostics.conflicting_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.diagnostics.considered_witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.canonical.m5.diagnostics.uncertainty_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "output.declared_references.m5",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pairs.unique_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i001",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i001",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i001",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i001",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i001",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i001",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i002",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i002",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i002",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i002",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i002",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i002",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.r003",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.r003",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.r003",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.r003",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.renaming_namespaces.r003",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r003.case_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r003.obligation_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r003.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.input_alpha_equivalence.r003",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.renamed_case_id.r003",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.r003",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i004",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i004",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i004",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i004",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i004",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i004",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s005",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s005",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s005",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s005",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s005",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s005",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s005",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s006",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s006",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s006",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s006",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s006",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s006",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s006",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s007",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s007",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s007",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s007",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s007",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s007",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s007",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s008",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s008",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s008",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s008",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s008",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s008",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s008",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s009",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s009",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s009",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s009",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s009",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s009",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s009",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s010",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s010",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s010",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s010",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s010",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s010",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s010",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s011",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s011",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s011",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s011",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s011",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s011",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s011",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s012",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s012",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s012",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s012",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s012",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s012",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s012",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s013",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s013",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s013",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s013",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s013",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s013",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s013",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i014",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i014",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i014",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i014",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i014",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i014",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s015",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s015",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s015",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s015",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s015",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s015",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s015",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i016",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i016",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i016",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i016",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i016",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i016",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.r017",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.r017",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.r017",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.r017",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.renaming_namespaces.r017",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r017.case_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r017.obligation_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r017.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.input_alpha_equivalence.r017",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.renamed_case_id.r017",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.r017",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s018",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s018",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s018",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s018",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s018",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s018",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s018",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s019",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s019",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s019",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s019",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s019",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s019",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s019",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i020",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i020",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i020",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i020",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i020",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i020",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i021",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i021",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i021",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i021",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i021",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i021",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i022",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i022",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i022",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i022",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i022",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i022",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s023",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s023",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s023",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s023",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s023",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s023",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s023",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s024",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s024",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s024",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s024",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s024",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s024",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s024",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s025",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s025",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s025",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s025",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s025",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s025",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s025",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i026",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i026",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i026",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i026",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i026",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i026",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i027",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i027",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i027",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i027",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i027",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i027",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s028",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s028",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s028",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s028",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s028",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s028",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s028",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i029",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i029",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i029",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i029",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i029",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i029",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.i030",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.i030",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.i030",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.i030",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.i030",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.i030",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s031",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s031",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s031",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s031",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s031",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s031",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s031",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.s032",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.s032",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.s032",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.empty_renaming.s032",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.nonempty_sensitivity.s032",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_sensitivity_partition.s032",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.s032",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.endpoints.r033",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.paths.r033",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.disjoint_paths.r033",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_invariant_fields.r033",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.renaming_namespaces.r033",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r033.case_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r033.obligation_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.complete_bijection.r033.witness_ids",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.input_alpha_equivalence.r033",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "pair.renamed_case_id.r033",
+      "passed": true
+    },
+    {
+      "detail": "unexpected differences=[]; expected changes absent=[]",
+      "name": "pair.expected_relation.r033",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "author.expectation_provenance",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "author.fresh_context_flag",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "author.no_reducer",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "author.allowlist_reads_only",
+      "passed": true
+    }
+  ],
+  "checks_run": 1224,
+  "completed_at_utc": "2026-09-30T20:30:33.828377+00:00",
+  "counts": {
+    "controls": 69,
+    "deliberately_invalid_inputs": 15,
+    "expectations": 69,
+    "expected_actions": {
+      "HOLD_FOR_CITATION": 5,
+      "KEEP_FULL": 7,
+      "PROPOSE_CORE_WITH_GAP": 4,
+      "REJECT_COMPLETE": 23,
+      "STOP": 19,
+      "WITHHOLD": 11
+    },
+    "inputs": 69,
+    "pair_relations": {
+      "INVARIANT": 12,
+      "RENAMED_INVARIANT": 3,
+      "SENSITIVITY": 18
+    },
+    "pairs": 33
+  },
+  "expectation_status": "needs-audit",
+  "failures": [],
+  "invalid_input_observations": [
+    {
+      "case_id": "p1w7",
+      "referential_errors": [],
+      "schema_errors": [
+        {
+          "message": "Additional properties are not allowed ('extra' was unexpected)",
+          "path": [
+            "ledger"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "m8t2",
+      "referential_errors": [
+        "illegal surface/aperture assignment"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "g4a0",
+      "referential_errors": [
+        "unknown witness obligation reference"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "u7n5",
+      "referential_errors": [
+        "duplicate obligation IDs"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "e2q9",
+      "referential_errors": [
+        "duplicate witness IDs"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "z6b3",
+      "referential_errors": [],
+      "schema_errors": [
+        {
+          "message": "'PARTIAL' is not one of ['COMPLETE', 'UNKNOWN']",
+          "path": [
+            "ledger",
+            "coverage"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "k5r0",
+      "referential_errors": [],
+      "schema_errors": [
+        {
+          "message": "['u8', 'c2', 'u8'] has non-unique elements",
+          "path": [
+            "ledger",
+            "witnesses",
+            0,
+            "entails"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "b9c4",
+      "referential_errors": [],
+      "schema_errors": [
+        {
+          "message": "{'body_witness_ids': ['p8', 'c4'], 'core_ids': ['d2', 'h7', 'b1'], 'gap_ids': ['s6'], 'guards': {'bindings_preserved': True, 'core_independently_supported': True, 'no_missing_presupposition': True, 'removal_independent': True, 'required_context_retained': True}} is not valid under any of the given schemas",
+          "path": [
+            "ledger",
+            "proposal"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "r2v8",
+      "referential_errors": [
+        "unknown proposal witness reference"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "n3s7",
+      "referential_errors": [
+        "illegal surface/aperture assignment"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "w0h5",
+      "referential_errors": [
+        "illegal surface/aperture assignment"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "d7p1",
+      "referential_errors": [],
+      "schema_errors": [
+        {
+          "message": "{'body_witness_ids': ['p8', 'c4'], 'core_ids': ['d2', 'h7', 'b1'], 'gap_ids': ['s6'], 'guards': {'bindings_preserved': 1, 'core_independently_supported': True, 'gap_explicit': True, 'no_missing_presupposition': True, 'removal_independent': True, 'required_context_retained': True}} is not valid under any of the given schemas",
+          "path": [
+            "ledger",
+            "proposal"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "f8m2",
+      "referential_errors": [
+        "unknown proposal obligation reference"
+      ],
+      "schema_errors": []
+    },
+    {
+      "case_id": "q4j6",
+      "referential_errors": [
+        "unknown witness obligation reference"
+      ],
+      "schema_errors": [
+        {
+          "message": "[] should be non-empty",
+          "path": [
+            "ledger",
+            "obligations"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "a7z9",
+      "referential_errors": [],
+      "schema_errors": [
+        {
+          "message": "'coverage' is a required property",
+          "path": [
+            "ledger"
+          ]
+        }
+      ]
+    }
+  ],
+  "no_policy_to_decision_function": true,
+  "no_reducer_implemented": true,
+  "no_reducer_invoked": true,
+  "pair_results": [
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i001",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i002",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "r003",
+      "passed": true,
+      "relation": "RENAMED_INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i004",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s005",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s006",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s007",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s008",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s009",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s010",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s011",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s012",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s013",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i014",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s015",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i016",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "r017",
+      "passed": true,
+      "relation": "RENAMED_INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s018",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s019",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i020",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i021",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i022",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s023",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s024",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s025",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i026",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i027",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s028",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i029",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "i030",
+      "passed": true,
+      "relation": "INVARIANT",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s031",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "s032",
+      "passed": true,
+      "relation": "SENSITIVITY",
+      "unexpected_differences": []
+    },
+    {
+      "expected_changes_absent": [],
+      "pair_id": "r033",
+      "passed": true,
+      "relation": "RENAMED_INVARIANT",
+      "unexpected_differences": []
+    }
+  ],
+  "schema_version": "qualifier-grounding-structural-checks/v2",
+  "semantic_qualification": "NOT_RUN",
+  "set_id": "qg-v2-fresh-acceptance-20260930-v4n8",
+  "started_at_utc": "2026-09-30T20:30:33.802001+00:00",
+  "status": "PASS",
+  "validation_engine": "installed jsonschema.Draft202012Validator; reference/canonical/pair checks authored locally"
+}

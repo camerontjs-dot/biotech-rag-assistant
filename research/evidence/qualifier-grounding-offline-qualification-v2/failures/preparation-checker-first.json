@@ -1,0 +1,11 @@
+{
+  "schema_version": "qualifier-grounding-preparation-failure/v2",
+  "observed_at": "2026-09-30T20:38:40.628738+00:00",
+  "exit_code": 1,
+  "failure": "invariant pair omits required output field",
+  "source_sha256": "7ca6ef20a2c4817f10e79ce311f9e1a8311bf222934acbc01cb588c561e2ccbc",
+  "preserved_source": "preparation-checker-first.py.txt",
+  "diagnostic": "preparation-checker-first.txt",
+  "interpretation": "Checker falsely required whole-object paths. Frozen pairs use complete leaf field paths, explicitly permitted by SCHEMA.md. Fix the unfrozen preparation checker to expand both representations; do not modify frozen contract, controls or expectations.",
+  "reducer_calls": 0
+}

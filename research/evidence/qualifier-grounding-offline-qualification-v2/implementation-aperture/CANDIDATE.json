@@ -1,0 +1,24 @@
+{
+  "schema_version": "qualifier-grounding-candidate-plan/v2",
+  "candidate_id": "qualifier-grounding-reducer-v2-UNFROZEN",
+  "experiment_id": "qualifier-grounding-offline-qualification-v2",
+  "state": "designed",
+  "implementation": "NOT_IMPLEMENTED",
+  "execution": "NOT_RUN",
+  "source_commit": null,
+  "source_tree": null,
+  "normative_source_commit": "ae754348d4ec8a8c6515d9dd4c67a77b07666428",
+  "normative_source_tree": "99b2c5b6ed7d084e8a73d802684f17a8904eba2c",
+  "allowed_normative_files": {
+    "policy.json": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+    "interface.json": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387"
+  },
+  "scope": "assessment_ledger -> decision_record only",
+  "freeze_before_reveal": true,
+  "fresh_controls": "WITHHELD_UNTIL_CANDIDATE_FREEZE",
+  "project_model_provider_calls": 0,
+  "wave_b": "LOCKED",
+  "non_claims": [
+    "No semantic assessor, prose grounding, generation behavior, production promotion, merge or release."
+  ]
+}

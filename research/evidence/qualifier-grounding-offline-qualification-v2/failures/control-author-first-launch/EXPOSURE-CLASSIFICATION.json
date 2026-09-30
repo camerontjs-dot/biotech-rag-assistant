@@ -1,0 +1,27 @@
+{
+  "acceptance_authoring_performed": false,
+  "actual_existing_file_reads": [],
+  "author_identity": "fresh_controls_v2",
+  "exposure_classification": "STRICTER_LAUNCH_APERTURE_BREACH_ONLY",
+  "historical_memory_classes": [
+    "other project summaries",
+    "earlier generation experiment aggregate outcome"
+  ],
+  "historical_memory_exposed": true,
+  "launch_status": "STOPPED",
+  "ordinary_operating_conventions_exposed": true,
+  "prior_failure_record_preserved": true,
+  "prior_failure_record_sha256": "8af1229dc0e5f5bafdb32c169744e9b74b16f074e0b626ccb82cbaa33a9a4a3f",
+  "prohibited_ledger_qualification_evidence_observed": {
+    "exact_predecessor_case_ids_or_answer_patterns": false,
+    "historical_anchor_cases": false,
+    "per_case_decisions_or_results": false,
+    "predecessor_expectations": false,
+    "predecessor_inputs": false,
+    "predecessor_pairs": false,
+    "reducer_source": false
+  },
+  "qualification_evidence_limitation": "Classification applies only to visible startup context; no additional files or histories were inspected.",
+  "rationale": "The parent clarified that ordinary startup operating conventions are allowed by the human boundary. No prohibited ledger qualification material was observed, but the original stricter launch allowlist breach remains recorded and this launch remains stopped.",
+  "timestamp_utc": "2026-09-30T20:15:01.511119+00:00"
+}

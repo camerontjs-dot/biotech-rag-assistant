@@ -1,0 +1,39 @@
+{
+  "schema_version": "qualifier-grounding-preparation-source-review/v2",
+  "reviewed_at": "2026-09-30T20:46:26.180272+00:00",
+  "reviewed_source_sha256": "e69dbbdbc215956ea35cc0b2364f6a98abc6f60888c73b48d7a3b26d683e4f40",
+  "functions": [
+    "canonical_arrays",
+    "check_hashes",
+    "check_package",
+    "check_pairs",
+    "get_field",
+    "lines",
+    "load",
+    "main",
+    "pairs_object",
+    "reference_errors",
+    "renamed",
+    "require",
+    "safe_path",
+    "schema_errors",
+    "schema_leaf_paths",
+    "sha"
+  ],
+  "imports": [
+    "from __future__ import annotations",
+    "import argparse",
+    "import hashlib",
+    "import json",
+    "import re",
+    "from datetime import datetime",
+    "from pathlib import Path"
+  ],
+  "candidate_reducer_function_present": false,
+  "candidate_or_predecessor_reducer_import_present": false,
+  "candidate_calls": 0,
+  "purpose": "Generic schema, custody, provenance and authored expectation-pair consistency; no input-policy-to-decision function. Authoritative output assertions do not generate candidate decisions.",
+  "compile_scope": "new preparation checker/test and three unchanged frozen author tools; syntax compilation PASS without importing or executing their bodies",
+  "evaluator": "deterministic AST/hash inventory plus agent_llm scope review, needs-audit",
+  "limits": "Preparation-source inspection is not a future reducer dependency review."
+}

@@ -1,0 +1,2 @@
+{"status": "APPARATUS_INVALID", "error": "invariant pair omits required output field"}
+

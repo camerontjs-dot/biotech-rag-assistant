@@ -1,0 +1,123 @@
+{
+  "schema_version": "qualifier-grounding-preparation-authority/v2",
+  "observed_at": "2026-09-30 20:29:26 UTC",
+  "repository": "camerontjs-dot/biotech-rag-assistant",
+  "issue": {
+    "issue": {
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/25",
+      "title": "research: preregister qualifier grounding offline qualification v2",
+      "issue_number": 25,
+      "body": "The v1 offline reducer qualification is terminal **FALSIFIED** in PR #24.\n\n## Decision\n\nDefine and freeze `qualifier-grounding-offline-qualification-v2` before any v2 reducer implementation or decisive run.\n\nThe successor must resolve the policy/interface ambiguities exposed by v1 without rewriting v1 evidence or treating repair-after-reveal as another pass of the same experiment.\n\n## Frozen predecessor\n\n- v1 candidate commit: `10d17b3c56f54fca828c25c49de948051933733e`\n- v1 candidate tree: `48a1592a5f3b2e5d784115f8c834f34e879e5d2b`\n- v1 publication head: `20a9f39f4368fac5b84621688aa6a334678de306`\n- v1 terminal disposition: `FALSIFIED`\n- exact controls matched: 5/28\n- disagreements: 23/28\n- pair relations: 9/9 hold, with 0 pairs having two exact endpoints\n- unsafe aperture-support case: L27\n- body-supported retention failures: L01, L03, L15, L17, L21, L22\n- citation-status disagreements: 16 controls\n- global uncertainty failures include L11, L26, L27\n- source/runtime review found no forbidden oracle dependency\n\nPR #24 and issue #23 preserve the complete receipts. Do not rewrite them.\n\n## v2 normative questions to resolve before implementation\n\nFreeze explicit rules for at least:\n\n1. **Retained IDs**\n   - When a complete supported claim uses `KEEP_FULL` or `HOLD_FOR_CITATION`, what must `core_ids`, `gap_ids`, and `witness_ids` contain?\n   - Which fields must be empty on `REJECT_COMPLETE`, `WITHHOLD`, and `STOP`?\n\n2. **Citation status**\n   - Define precedence and meaning for `SUFFICIENT`, `QUOTE_INSUFFICIENT`, `NOMINATION_INSUFFICIENT`, `INCONCLUSIVE`, and `NOT_ASSESSED`.\n   - Keep citation sufficiency distinct from packet grounding.\n\n3. **Global uncertainty propagation**\n   - Define when unknown materiality, unknown coverage, conflicting authorized BODY assessments, ambiguous support, or uncertain decomposition must make the whole decision `INCONCLUSIVE`.\n   - Prevent one aperture from remaining `SUPPORTED` when the decision-level authority is globally unresolved, unless the contract explicitly and defensibly permits that partial state.\n\n4. **Rejection/withholding semantics**\n   - Define whether rejected or withheld decisions retain diagnostic gap/witness IDs or clear them, and why.\n   - Distinguish diagnostic evidence from authoritative retained output.\n\nAny clarification that changes the v1 policy/interface meaning must receive a new package/interface identity. Do not silently patch v1.\n\n## Acceptance-control independence\n\nThe v1 owner has seen all original 28 controls and expectations. Reusing them is regression evidence only.\n\nFor v2 qualification, freeze a **fresh acceptance-control set** or obtain an independently authored/accepted control set.\n\nPreferred method:\n\n1. Freeze the v2 normative contract first.\n2. In a fresh context that has not seen v1 controls, expectations, reducer source, or case results, author new discriminating controls from the frozen v2 contract.\n3. Preserve the information aperture and contamination status.\n4. Bind the resulting controls and expectations before any v2 reducer implementation sees them.\n\nThe preparation task may use v1 controls as evidence for what semantics were ambiguous, but must not relabel adapted v1 answer keys as fresh independent qualification.\n\n## Required preparation result\n\nA complete preparation package should include:\n\n- v2 policy/interface identity;\n- explicit normative semantics above;\n- acceptance and falsification conditions;\n- fresh/independently accepted control identity and provenance;\n- regression role for the original v1 controls;\n- clean separation between regression evidence and fresh qualification evidence;\n- freeze hashes and custody;\n- designed v2 experiment state `NOT_RUN`;\n- exact information apertures for future reducer implementation and reveal;\n- terminal receipt on this issue and one Draft preparation PR.\n\nDo not implement or run the v2 reducer in this preparation task unless a later separately authorized execution explicitly permits it.\n\n## Protected boundary\n\nZero project model/provider calls. No new generated claims. No generation/G1-G7 replay, Wave B/TEST/PROSPECTIVE access, prompt tuning, CAL integration, ADR-018 changes, production promotion, merge, or release.\n\n**Wave B remains LOCKED.**",
+      "state": "open",
+      "user": {
+        "login": "camerontjs-dot",
+        "name": "camerontjs-dot",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/264499564?v=4",
+        "id": 264499564
+      },
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": 1,
+      "created_at": "2026-09-30T18:29:28Z",
+      "updated_at": "2026-09-30T18:29:32Z",
+      "closed_at": null,
+      "display_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/25",
+      "display_title": "research: preregister qualifier grounding offline qualification v2"
+    },
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/25",
+    "title": "research: preregister qualifier grounding offline qualification v2",
+    "display_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/25",
+    "display_title": "research: preregister qualifier grounding offline qualification v2"
+  },
+  "pr24": {
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/24",
+    "number": 24,
+    "state": "closed",
+    "merged": false,
+    "mergeable": true,
+    "draft": true,
+    "body": "This frozen reducer is **FALSIFIED** for the assessment-ledger contract: 5 of 28 controls match exactly and 23 disagree. The single decisive run and failed candidate are preserved.\n\n## Context & Purpose\n\nIssue #23 is the durable successor to Draft PR #22. This PR implements one pure offline reducer from the frozen policy/interface, commits it before control/expectation reveal, and records the bounded qualification. It targets `codex/material-qualifier-grounding-v1`.\n\nFrozen implementation: commit `10d17b3c56f54fca828c25c49de948051933733e`, tree `48a1592a5f3b2e5d784115f8c834f34e879e5d2b`. Publication head `20a9f39f4368fac5b84621688aa6a334678de306` contains evidence and a publication-receipt correction; the frozen reducer and its local tests are unchanged.\n\n## Proposed Changes\n\n- Add the pure assessment-ledger reducer and policy/interface-derived local tests.\n- Preserve clean freeze at 2026-09-30 17:21:22 UTC and first reveal at 17:22:32 UTC, exact hashes, environment, aperture, all 28 decisions, all nine pair results, source review, historical consistency, and failures/deviations.\n- Close this experiment FALSIFIED. Define a separately identified successor boundary; no repaired candidate or successor run occurs here.\n\n## Verification & Test Receipts\n\n[Full report with every control and pair](https://github.com/camerontjs-dot/biotech-rag-assistant/blob/20a9f39f4368fac5b84621688aa6a334678de306/research/evidence/qualifier-grounding-offline-qualification-v1/README.md), [terminal machine receipt](https://github.com/camerontjs-dot/biotech-rag-assistant/blob/20a9f39f4368fac5b84621688aa6a334678de306/research/evidence/qualifier-grounding-offline-qualification-v1/TERMINAL.json), [all decisions](https://github.com/camerontjs-dot/biotech-rag-assistant/blob/20a9f39f4368fac5b84621688aa6a334678de306/research/evidence/qualifier-grounding-offline-qualification-v1/decisions.json), [paired results](https://github.com/camerontjs-dot/biotech-rag-assistant/blob/20a9f39f4368fac5b84621688aa6a334678de306/research/evidence/qualifier-grounding-offline-qualification-v1/pair-results.json), [source review](https://github.com/camerontjs-dot/biotech-rag-assistant/blob/20a9f39f4368fac5b84621688aa6a334678de306/research/evidence/qualifier-grounding-offline-qualification-v1/source-dependency-review.json), [deviations](https://github.com/camerontjs-dot/biotech-rag-assistant/blob/20a9f39f4368fac5b84621688aa6a334678de306/research/evidence/qualifier-grounding-offline-qualification-v1/deviations.json).\n\n- 14 implementation-local tests and targeted reducer/local-test lint pass before freeze.\n- Frozen preregistration/custody checks and 16 apparatus selftests pass; an initial import-path collection failure is preserved.\n- Exactly 28 reducer calls in one decisive run. Zero reducer runtime file/network/process access events.\n- Nine pair relations hold; zero pairs have two exact endpoint decisions. Relations do not override the 23 control failures.\n- Six supported controls omit required retained IDs. Citation differs in 16 controls. L11/L26/L27 do not propagate uncertainty correctly; L27 leaves N SUPPORTED under a conflicting packet assessment and is flagged unsafe_support.\n- No case/fixture/expectation/history lookup, hidden checker dependency, or environment/path answer injection detected. Independence is limited to the recorded implementation aperture and reducer runtime; this is not independent semantic assessment.\n- Final runner lint has three style findings. [PUBLICATION-CORRECTION.json](https://github.com/camerontjs-dot/biotech-rag-assistant/blob/20a9f39f4368fac5b84621688aa6a334678de306/research/evidence/qualifier-grounding-offline-qualification-v1/PUBLICATION-CORRECTION.json) supersedes the erroneous PASS label in one publication receipt. Exact executed runner and diagnostics are preserved.\n\nReceipt freeze SHA-256: `1b4a9d4014b6dd61bf4008569e2a3db1d31fcf6e72e24479b2964a05f7ea2ec2`; correction supplement SHA-256: `e81766e525755ff29c6d1d19af61a246e4a154c6c852ad933050c32f7a8f5082`. Decisions SHA-256: `00f0b0f37003ba450f25aff0bb8ed265935100beac59d8a6671ef09c5e60dbd7`.\n\n## Security & Leak Prevention Checklist\n\n- [x] All commits ran the staged-only leak guard; new source contains no authoring-machine paths or live credentials.\n- [x] Local runtime paths in the apparatus collection-error diagnostic were sanitized; original diagnostics remain preserved locally by hash.\n- [x] Zero project model/provider calls, generation or G1-G7 replay, protected payload access, CAL integration, ADR-018 edits, production promotion, merge, release, or evidence-branch deletion.\n\nA07 remains Q/N/P OVER_BROAD; its core/decomposition safety remains NOT_ADJUDICATED. A08 remains Q OVER_BROAD, N/P SUPPORTED with its body-supported pre-run condition preserved in the historical record.\n\nThis qualification covers only `assessment_ledger -> decision_record`. It establishes no reliable arbitrary-prose materiality, semantic support, decomposition safety, or production grounding. **Wave B remains LOCKED.**\n\nCloses #23 with a terminal FALSIFIED disposition. Lineage: #22.",
+    "title": "research: preserve falsified offline qualifier ledger qualification",
+    "base": "codex/material-qualifier-grounding-v1",
+    "base_sha": "356e0da4aeb486d89b35f57e35b1b17e4587628c",
+    "head": "research/qualifier-grounding-offline-qualification-v1",
+    "head_sha": "20a9f39f4368fac5b84621688aa6a334678de306",
+    "head_repo_id": 1268660593,
+    "head_repo_full_name": "camerontjs-dot/biotech-rag-assistant",
+    "merge_commit_sha": "98e5a1e8c66252fa391a3e34924bbbffe3be9215",
+    "user": {
+      "login": "camerontjs-dot",
+      "name": "camerontjs-dot",
+      "email": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/264499564?v=4",
+      "id": 264499564
+    },
+    "requested_reviewers": null,
+    "requested_team_reviewers": null,
+    "diff": null,
+    "comments": null,
+    "created_at": "2026-09-30T17:47:11Z",
+    "updated_at": "2026-09-30T18:29:25Z",
+    "closed_at": "2026-09-30T18:29:25Z",
+    "merged_at": null,
+    "commits": 3,
+    "changed_files": 49,
+    "additions": 3918,
+    "deletions": 0,
+    "display_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/24",
+    "display_title": "research: preserve falsified offline qualifier ledger qualification"
+  },
+  "pr22": {
+    "number": 22,
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/22",
+    "state": "open",
+    "merged": false,
+    "head_sha": "356e0da4aeb486d89b35f57e35b1b17e4587628c"
+  },
+  "issue_comments": [
+    {
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/25#issuecomment-5917279073",
+      "body": "Prepared execution branch `research/qualifier-grounding-offline-qualification-v2` at exact v1 publication head `20a9f39f4368fac5b84621688aa6a334678de306`. No v2 policy files, controls, reducer implementation, or qualification run have been created yet.",
+      "user": {
+        "login": "camerontjs-dot",
+        "name": "camerontjs-dot",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/264499564?v=4",
+        "id": 264499564
+      },
+      "id": 5917279073,
+      "pull_request_review_id": null,
+      "in_reply_to_id": null,
+      "created_at": null,
+      "updated_at": null,
+      "review": null,
+      "side": null,
+      "line": null,
+      "start_line": null,
+      "path": null,
+      "body_html": "<p dir=\"auto\">Prepared execution branch <code class=\"notranslate\">research/qualifier-grounding-offline-qualification-v2</code> at exact v1 publication head <code class=\"notranslate\">20a9f39f4368fac5b84621688aa6a334678de306</code>. No v2 policy files, controls, reducer implementation, or qualification run have been created yet.</p>"
+    }
+  ],
+  "verified_local": {
+    "prepared_branch": "research/qualifier-grounding-offline-qualification-v2",
+    "start_commit": "20a9f39f4368fac5b84621688aa6a334678de306",
+    "start_tree": "3f5125d3996fb6aea6bb187fc5c745c5021a7eea",
+    "candidate_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+    "candidate_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+    "primary_dirty": [
+      "DECISIONS.md"
+    ],
+    "primary_branch": "main",
+    "primary_head": "20f56cc2d8321b824f3de2a45ec64c9b4c9c0f3d",
+    "prepared_worktree": "isolated v2 worktree; clean at normative freeze"
+  },
+  "navigation": {
+    "knowledge": "durable_knowledge; lexical-only leads, not authority",
+    "projects": "project_status; lexical-only leads, not authority",
+    "degraded": "Unrelated website-outreach-engine lifecycle state missing; direct project/repository authority used, no index publication or unrelated repair."
+  },
+  "scope": "Preparation only; source identity/custody verified. No project provider/model or reducer execution."
+}

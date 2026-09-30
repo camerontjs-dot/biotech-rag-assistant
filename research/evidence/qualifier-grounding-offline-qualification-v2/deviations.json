@@ -1,0 +1,82 @@
+{
+  "schema_version": "qualifier-grounding-preparation-deviations/v2",
+  "observed_at": "2026-09-30T20:49:29.745308+00:00",
+  "items": [
+    {
+      "kind": "navigation_degraded",
+      "observation": "An unrelated website-outreach-engine lifecycle state is missing. Direct project files and live repository state were used; no unrelated source repair or complete-index claim."
+    },
+    {
+      "kind": "concurrent_dirty_state",
+      "observation": "Primary workbench main has unrelated DECISIONS.md changes and is behind origin/main; broad outer checkout is dirty. Isolated v2 worktree was created from the verified prepared ref. No dirty work was absorbed, repaired, rebased or discarded."
+    },
+    {
+      "kind": "stopped_author_launch",
+      "observation": "First fork_turns=none launch stopped without normative reads or controls because its launch allowlist excluded automatic generic instructions/memory. Classification establishes no forbidden predecessor qualification evidence observed. All failure and reclassification receipts preserved. A separate fresh launch clarified ordinary operating conventions versus forbidden case evidence."
+    },
+    {
+      "kind": "incidental_startup_context",
+      "observation": "Second author inventoried generic conventions and unrelated injected memory classes. It actively read only policy/interface/SCHEMA, retrieved no memory/context/history, and observed no forbidden ledger-qualification evidence. Independence is from the recorded prohibited material, not an OS sandbox, human review or model-training-history claim."
+    },
+    {
+      "kind": "truncation_recovery",
+      "observation": "Author recovered complete interface separately. Owner recovered the large check receipt by asserting all 1,224 entries and reading summary fields, recovered truncated control review excerpts, and recovered all 265 author-tool lint diagnostics into full JSON. Raw partial output remains labelled truncated."
+    },
+    {
+      "kind": "normative_contract_lint_advisories",
+      "observation": "SCHEMA.md and CHANGES.md were not adopted Markdown contracts according to the linter and produced advisory mechanism/rule-block notes at exit 0. Normative JSON has explicit Binds/Tier/Check/Escape profile; semantic enforcement remains T0/NOT_RUN. Frozen normative bytes were not altered. The adopted preregistration and implementation-aperture contracts pass without findings."
+    },
+    {
+      "kind": "unfrozen_preparation_lint",
+      "observation": "Initial maintained-checker lint had five E501 findings. Diagnostics are preserved; unfrozen preparation code formatting was corrected before package freeze. No contract/control/expectation or reducer changed."
+    },
+    {
+      "kind": "preparation_checker_failure",
+      "observation": "Initial owner checker falsely rejected complete leaf-field invariant comparisons, requiring whole-object names. Exact failing source and diagnostics preserved. The unfrozen checker was corrected to expand complete leaf coverage; 19 tests now pass. Frozen normative and author files remain unchanged."
+    },
+    {
+      "kind": "frozen_author_tool_lint",
+      "observation": "Raw frozen authoring helpers have 265 Ruff findings (I001, E501, UP017, B905, E741, E702, E701). Preserved unchanged with complete diagnostics. Maintained preparation source/test lint passes. Package readiness is for normative/control/preregistration validity, not all repository lint green or merge readiness."
+    },
+    {
+      "kind": "author_directory_name",
+      "observation": "Delegation used acceptance-controls in its sanitized author directory; byte-identical sealed files were copied into the repository fresh-controls directory. Encoding/set identity unchanged; both author and owner receipts record this."
+    },
+    {
+      "kind": "unscored_reason_annotations",
+      "case_ids": [
+        "y7f2",
+        "c9a5",
+        "m1u7",
+        "r8t0",
+        "p3g9",
+        "w5b1",
+        "a6z2",
+        "e0h8",
+        "d4j7",
+        "z3m8",
+        "k0q4",
+        "n7s1",
+        "t6v3",
+        "x2a8",
+        "b5l0"
+      ],
+      "observation": "Some frozen unsafe variants retain a copied safe-proposal rationale in reason. controls.json purpose and authoritative expected fields describe the rejected state. This is a known annotation limitation, not an exact acceptance key: the frozen interface/protocol compare every required field except reason contents, requiring only a nonempty explanation. No annotation or frozen answer was rewritten. Expected hypotheses remain needs-audit; future candidates must supply their own rationale."
+    },
+    {
+      "kind": "regression_interface_change",
+      "observation": "Original v1 controls/keys/pairs preserved unchanged. Because v2 changes citation semantics and adds diagnostics, original exact keys are historical compatibility evidence, not native v2 correctness labels. Regression scoring and fresh acceptance remain separate; known safety failures cannot be averaged away."
+    },
+    {
+      "kind": "inherited_publication_ci",
+      "observation": "V1 hosted CI lint failure and its original receipt/correction remain preserved, without repairing v1. No all-repository CI PASS is claimed by this preparation."
+    }
+  ],
+  "material_contract_changes_after_normative_freeze": false,
+  "fresh_control_changes_after_author_freeze": false,
+  "v1_changes": false,
+  "v1_reducer_reruns": 0,
+  "v2_reducer_implemented": false,
+  "v2_decide_calls": 0,
+  "project_model_provider_calls": 0
+}

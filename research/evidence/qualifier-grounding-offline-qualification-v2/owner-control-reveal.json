@@ -1,0 +1,8 @@
+{
+  "schema_version": "qualifier-grounding-owner-control-reveal/v2",
+  "first_owner_read_at": "2026-09-30T20:33:21.634405+00:00",
+  "author_freeze_at": "2026-09-30T20:32:02.457041+00:00",
+  "author_freeze_sha256": "955c5d076c40fc9ad526df018f9cc38cd463253ca58b5a19033c14a84a289508",
+  "copied_without_modification": true,
+  "purpose": "Preparation custody and hypothesis review only; broad owner authors no acceptance control or expectation. This is not candidate reveal; reducer is NOT_IMPLEMENTED and decisive run NOT_RUN."
+}

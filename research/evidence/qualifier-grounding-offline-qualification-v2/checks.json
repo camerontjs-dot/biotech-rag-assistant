@@ -1,0 +1,40 @@
+{
+  "schema_version": "qualifier-grounding-preparation-check-summary/v2",
+  "observed_at": "2026-09-30T20:49:29.745585+00:00",
+  "preparation_status": "PASS_PREPARATION_ONLY",
+  "preregistration": "PASS",
+  "selftests": {
+    "passed": 19,
+    "failed": 0,
+    "receipt": "checks/selftests.stdout.txt"
+  },
+  "maintained_preparation_lint": "PASS",
+  "frozen_author_tools_lint": {
+    "status": "FAIL",
+    "findings": 265,
+    "receipt": "checks/archived-author-lint-full.json"
+  },
+  "adopted_contract_lint": "PASS",
+  "normative_markdown_lint": "ADVISORY_NOTES_EXIT_0",
+  "syntax_compilation": "PASS; maintained checker/test and three frozen author helpers, no script bodies executed",
+  "author_structural_checks": {
+    "passed": 1224,
+    "failed": 0,
+    "receipt": "fresh-controls/checks.json"
+  },
+  "predecessor_custody": {
+    "files_unchanged": 84,
+    "receipt": "predecessor-custody.json"
+  },
+  "fresh_custody": "all nine authored files unchanged after author freeze",
+  "implementation": "NOT_IMPLEMENTED",
+  "decisive_execution": "NOT_RUN",
+  "reducer_calls": 0,
+  "project_model_provider_calls": 0,
+  "not_claimed": [
+    "all repository lint green",
+    "v2 candidate pass",
+    "semantic assessor reliability",
+    "merge/release readiness"
+  ]
+}

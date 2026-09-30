@@ -1,0 +1,21 @@
+{
+  "schema_version": "qualifier-grounding-regression-identity/v2",
+  "set_id": "qualifier-grounding-policy-v1-original-controls",
+  "role": "KNOWN_REGRESSION_CONTROLS",
+  "control_count": 28,
+  "pair_count": 9,
+  "source_commit": "356e0da4aeb486d89b35f57e35b1b17e4587628c",
+  "publication_commit": "20a9f39f4368fac5b84621688aa6a334678de306",
+  "files": {
+    "research/evidence/qualifier-grounding-policy-v1/inputs.jsonl": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+    "research/evidence/qualifier-grounding-policy-v1/expectations.jsonl": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+    "research/evidence/qualifier-grounding-policy-v1/pairs.json": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+    "research/evidence/qualifier-grounding-policy-v1/policy.json": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+    "research/evidence/qualifier-grounding-policy-v1/interface.json": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489"
+  },
+  "native_v2_acceptance_key": false,
+  "execution": "NOT_RUN",
+  "scoring": "If separately run after v2 candidate freeze: compare original overlapping v1 fields against original unchanged expectations, excluding reason; report legacy exact matches/disagreements and original pair relations separately from fresh v2 exact correctness. Required v2 diagnostics remain separately visible. No averages across versions. Any observed v2 safety failure still falsifies; explicit changed v1 citation semantics are not silently relabelled as v2 failures.",
+  "independence": "Original answers are known to v1 owner and v2 broad-context design owner; never fresh independent qualification.",
+  "unchanged": true
+}

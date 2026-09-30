@@ -1,0 +1,54 @@
+E501 Line too long (101 > 100)
+  --> /private/tmp/biotech-qualifier-offline-v2-20260930/research/check_qualifier_grounding_v2_preparation.py:22:101
+   |
+20 | FRESH = PREP / "fresh-controls"
+21 | LEGACY = Path("research/evidence/qualifier-grounding-policy-v1")
+22 | REQUIRED_FRESH = {"inputs.jsonl", "expectations.jsonl", "controls.json", "pairs.json", "AUTHOR.json"}
+   |                                                                                                     ^
+
+E501 Line too long (101 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v2-20260930/research/check_qualifier_grounding_v2_preparation.py:112:101
+    |
+110 |                 errors.append(f"{path}.{key}: required")
+111 |         if schema.get("additionalProperties") is False:
+112 |             errors.extend(f"{path}.{key}: unknown field" for key in value.keys() - properties.keys())
+    |                                                                                                     ^
+113 |         for key in value.keys() & properties.keys():
+114 |             errors.extend(schema_errors(properties[key], value[key], f"{path}.{key}"))
+    |
+
+E501 Line too long (102 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v2-20260930/research/check_qualifier_grounding_v2_preparation.py:224:101
+    |
+222 |             maps = pair["renaming"]
+223 |             require(set(maps) == {"case_ids", "obligation_ids", "witness_ids"}, "rename namespaces")
+224 |             for namespace, field in [("obligation_ids", "obligations"), ("witness_ids", "witnesses")]:
+    |                                                                                                     ^^
+225 |                 lhs_ids = {item["id"] for item in cases[left]["ledger"][field]}
+226 |                 rhs_ids = {item["id"] for item in cases[right]["ledger"][field]}
+    |
+
+E501 Line too long (101 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v2-20260930/research/check_qualifier_grounding_v2_preparation.py:263:101
+    |
+261 |     require(REQUIRED_FRESH <= set(frozen["files"]), "fresh custody missing required files")
+262 |     require(datetime.fromisoformat(frozen["freeze_at"]) >
+263 |             datetime.fromisoformat(normative["freeze_at"]), "fresh freeze precedes normative freeze")
+    |                                                                                                     ^
+264 |     check_hashes(root, FRESH, frozen["files"])
+265 |     inputs = lines(root, FRESH / "inputs.jsonl")
+    |
+
+E501 Line too long (102 > 100)
+   --> /private/tmp/biotech-qualifier-offline-v2-20260930/research/check_qualifier_grounding_v2_preparation.py:338:101
+    |
+336 |                         "retention/citation mismatch")
+337 |         if declared_invalid:
+338 |             require(record["action"] == "STOP" and record["assessment_status"] == "APPARATUS_FAILURE",
+    |                                                                                                     ^^
+339 |                     "invalid input lacks apparatus expectation")
+340 |     require(set(row["action"] for row in outputs) == set(policy["retained_fields"]["action_table"]),
+    |
+
+Found 5 errors.
+

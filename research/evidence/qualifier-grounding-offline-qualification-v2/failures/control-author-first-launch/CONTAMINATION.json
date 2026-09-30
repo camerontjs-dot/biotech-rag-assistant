@@ -1,0 +1,36 @@
+{
+  "actual_existing_file_reads": [],
+  "allowed_contract_source_hashes": null,
+  "author_identity": "fresh_controls_v2",
+  "context_mode": "fork_turns=none",
+  "counts": {
+    "controls": 0,
+    "expectations": 0,
+    "inputs": 0,
+    "pairs": 0
+  },
+  "deviations": [
+    "Requested acceptance artifact preparation terminated before authoring."
+  ],
+  "exposures": [
+    {
+      "category": "injected_memory",
+      "source": "MEMORY_SUMMARY in startup developer context"
+    },
+    {
+      "category": "workspace_operating_contract",
+      "source": "MainFrame AGENTS.md instructions in startup user context"
+    }
+  ],
+  "independent_acceptance_set_created": false,
+  "limitations": [
+    "No contract reading, acceptance authoring, schema validation, reducer execution, or project calls occurred.",
+    "These files record a failed context aperture and do not constitute SCHEMA.md acceptance artifacts."
+  ],
+  "rationale": "The task requires stopping if forbidden content has already been exposed. Both sources are outside the explicit three-file aperture.",
+  "set_id": null,
+  "source_hash_limitation": "Permitted contract files were not read after detecting contamination.",
+  "status": "CONTAMINATED",
+  "timestamp_utc": "2026-09-30T20:14:09.379217+00:00",
+  "unsealed_drafting_files": []
+}

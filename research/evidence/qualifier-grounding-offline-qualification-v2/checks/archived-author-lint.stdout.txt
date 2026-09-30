@@ -1,0 +1,109 @@
+Warning: truncated output (original token count: 12726)
+Total output lines: 267
+
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:6:1: I001 [*] Import block is un-sorted or un-formatted
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:15:101: E501 Line too long (160 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:16:101: E501 Line too long (525 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:21:25: UP017 [*] Use `datetime.UTC` alias
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:24:101: E501 Line too long (146 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:27:101: E501 Line too long (189 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:30:101: B905 `zip()` without an explicit `strict=` parameter
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:30:101: E501 Line too long (121 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:33:17: B905 `zip()` without an explicit `strict=` parameter
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:43:101: E501 Line too long (111 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:44:101: E501 Line too long (112 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:45:101: E501 Line too long (102 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:54:101: E501 Line too long (121 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:101:101: E501 Line too long (104 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:105:101: E501 Line too long (101 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:107:101: E501 Line too long (128 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:109:101: E501 Line too long (121 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:125:4: E741 Ambiguous variable name: `O`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:125:10: E741 Ambiguous variable name: `I`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:130:101: E501 Line too long (250 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:131:101: E501 Line too long (349 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:132:101: E501 Line too long (229 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:133:1: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:134:101: E501 Line too long (172 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:135:101: E501 Line too long (203 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:136:101: E501 Line too long (105 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:137:1: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:138:101: E501 Line too long (221 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:140:101: E501 Line too long (293 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:141:101: E501 Line too long (323 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:143:1: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:147:101: E501 Line too long (233 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:149:101: E501 Line too long (243 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:150:101: E501 Line too long (254 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:153:101: E501 Line too long (335 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:155:1: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:157:23: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:158:101: E501 Line too long (144 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:159:101: E501 Line too long (162 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:161:101: E501 Line too long (440 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:163:101: E501 Line too long (322 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:169:101: E501 Line too long (362 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:171:1: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:173:23: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:174:101: E501 Line too long (234 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:175:101: E501 Line too long (142 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:177:101: E501 Line too long (171 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:180:5: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:180:18: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:181:101: E501 Line too long (148 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:182:101: E501 Line too long (154 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:183:101: E501 Line too long (162 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py:184:101: E501 Line …7726 tokens truncated…/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:90:101: E501 Line too long (219 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:97:35: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:99:54: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:99:101: E501 Line too long (118 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:105:54: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:105:101: E501 Line too long (113 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:112:32: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:118:101: E501 Line too long (104 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:122:101: E501 Line too long (177 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:125:101: E501 Line too long (340 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:131:101: E501 Line too long (128 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:136:101: E501 Line too long (168 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:137:16: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:138:29: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:141:16: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:142:29: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:149:5: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:150:30: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:153:57: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:153:101: E501 Line too long (107 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:155:42: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:155:101: E501 Line too long (116 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:156:101: E501 Line too long (109 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:160:22: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:160:23: E741 Ambiguous variable name: `l`
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:161:48: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:163:69: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:165:61: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:172:24: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:172:42: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:174:36: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:177:16: E702 Multiple statements on one line (semicolon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:183:101: E501 Line too long (296 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:185:101: E501 Line too long (162 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:189:9: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:196:101: E501 Line too long (129 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:199:101: E501 Line too long (159 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:201:101: E501 Line too long (138 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:202:101: E501 Line too long (120 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:203:20: UP017 [*] Use `datetime.UTC` alias
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:204:101: E501 Line too long (226 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:205:101: E501 Line too long (125 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:206:101: E501 Line too long (307 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:207:101: E501 Line too long (522 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py:210:101: E501 Line too long (222 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py:2:1: I001 [*] Import block is un-sorted or un-formatted
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py:10:28: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py:11:85: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py:11:101: E501 Line too long (154 > 100)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py:14:14: E701 Multiple statements on one line (colon)
+/private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py:16:107: UP017 [*] Use `datetime.UTC` alias
+Found 265 errors.
+[*] 7 fixable with the `--fix` option (2 hidden fixes can be enabled with the `--unsafe-fixes` option).
+

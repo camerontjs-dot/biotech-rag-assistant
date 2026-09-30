@@ -1,0 +1,47 @@
+{
+  "schema_version": "qualifier-grounding-check-commands/v2",
+  "checks": [
+    {
+      "name": "preregistration",
+      "command": "python3 /private/tmp/biotech-qualifier-offline-v2-20260930/research/check_qualifier_grounding_v2_preparation.py --root /private/tmp/biotech-qualifier-offline-v2-20260930",
+      "exit_code": 0,
+      "wall_time_seconds": 0.000006541,
+      "stdout_artifact": "checks/preregistration.stdout.txt",
+      "reported_status": "PASS"
+    },
+    {
+      "name": "selftests",
+      "command": "env PYTHONDONTWRITEBYTECODE=1 uvx --offline --with pytest pytest /private/tmp/biotech-qualifier-offline-v2-20260930/tests/test_qualifier_grounding_v2_preparation.py --rootdir=/private/tmp/biotech-qualifier-offline-v2-20260930 -p no:cacheprovider",
+      "exit_code": 0,
+      "wall_time_seconds": 0.613550208,
+      "stdout_artifact": "checks/selftests.stdout.txt",
+      "reported_status": "PASS"
+    },
+    {
+      "name": "maintained-lint",
+      "command": "uvx --offline ruff check /private/tmp/biotech-qualifier-offline-v2-20260930/research/check_qualifier_grounding_v2_preparation.py /private/tmp/biotech-qualifier-offline-v2-20260930/tests/test_qualifier_grounding_v2_preparation.py",
+      "exit_code": 0,
+      "wall_time_seconds": 0.000011917,
+      "stdout_artifact": "checks/maintained-lint.stdout.txt",
+      "reported_status": "PASS"
+    },
+    {
+      "name": "archived-author-lint",
+      "command": "uvx --offline ruff check --output-format concise /private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py /private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py /private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+      "exit_code": 1,
+      "wall_time_seconds": 0.017908709,
+      "stdout_artifact": "checks/archived-author-lint.stdout.txt",
+      "reported_status": "FAIL"
+    },
+    {
+      "name": "contracts",
+      "command": "bin/contract-lint --file /private/tmp/biotech-qualifier-offline-v2-20260930/research/qualifier-grounding-offline-qualification-v2-protocol.md --file /private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/implementation-aperture/README.md",
+      "exit_code": 0,
+      "wall_time_seconds": 0.000007125,
+      "stdout_artifact": "checks/contracts.stdout.txt",
+      "reported_status": "PASS"
+    }
+  ],
+  "preparation_only": true,
+  "reducer_calls": 0
+}
