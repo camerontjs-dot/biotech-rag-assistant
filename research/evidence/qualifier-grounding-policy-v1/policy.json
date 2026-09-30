@@ -1,0 +1,22 @@
+{
+  "authority": "ep1 body spans under unchanged ADR-018",
+  "contradiction": "reject complete claim; do not hide contradiction by trimming",
+  "fully_supported_requires": "every material assertion, presupposition and attachment relation supported by authorized P evidence",
+  "missing_qualifier": "full claim non-supported; safe independently body-supported core proposal plus explicit gap, otherwise reject or withhold",
+  "new_answer_text_emitted": false,
+  "policy_id": "qualifier-grounding-policy-v1",
+  "production_behavior_changed": false,
+  "quote_omission_with_body_support": "hold for citation witness; retain supported conditions; not a packet defect",
+  "safe_core_requires": [
+    "core_independently_supported",
+    "bindings_preserved",
+    "required_context_retained",
+    "removal_independent",
+    "no_missing_presupposition",
+    "gap_explicit"
+  ],
+  "schema_version": "qualifier-grounding-policy/v1",
+  "scope": "offline assessment-ledger policy, conditional on independently qualified semantic assessments",
+  "semantic_assessor": "NOT_IMPLEMENTED_OR_QUALIFIED",
+  "uncertainty": "INCONCLUSIVE, no emission"
+}

@@ -1,0 +1,15 @@
+{
+  "checker_sha256": "e495d93fcd9b8e84609bc414fca364c5b2d7611395dacc216a085c866af90453",
+  "controls": 28,
+  "custody_files": 37,
+  "freeze_sha256": "3599b78dbce28db98baa8f5c1f2aa48bc344a20f609d2cb26a7377ee388d511a",
+  "generation_or_gate_replays": 0,
+  "historical_anchors": 2,
+  "model_calls": 0,
+  "pairs": 9,
+  "qualification": "NOT_RUN",
+  "schema_version": "qualifier-grounding-preparation-check/v1",
+  "semantic_assessor": "NOT_IMPLEMENTED",
+  "status": "PASS_PREREGISTRATION_CONTRACT_ONLY",
+  "wave_b": "LOCKED"
+}

@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "effect": "No evidence drift, protected payload materialization, provider call, or reconstruction.",
+      "observation": "Shared clone of a filtered repository reported two missing unrelated workflow blobs during initial sparse setup. The final branch switch succeeded at the exact authorized head/tree; every explicitly allowed evidence and authority file was present and hash-verified.",
+      "phase": "isolated_checkout_setup",
+      "resolution": "Used explicit sparse allowlist and verified final objects/custody before design."
+    },
+    {
+      "diagnostic_sanitization": "Only local checkout prefixes replaced in public diagnostic logs; exact original logs retained locally.",
+      "effect": "Preparation apparatus weakness; no policy candidate or semantic assessor ran. The first 15-test pass was not a qualification result.",
+      "observation": "The first checker enforced that SUPPORTED requires declared evidence but did not enforce the reverse mapping: an oracle could mislabel fully witnessed body coverage UNSUPPORTED. A new adversarial contract test failed because no rejection occurred.",
+      "phase": "pre-publication_checker_falsification",
+      "preserved_checker": "checker-preparation-attempt-1.txt",
+      "preserved_checker_sha256": "600215346c260c0ba75323a95fe78e245b8b7eed553a5cbc21480d9f0aab95fc",
+      "preserved_failure": "tests-apparatus-falsifier.txt",
+      "preserved_freeze": "freeze-preparation-attempt-1.json",
+      "resolution": "Check all declared aperture classes in both directions before publishing the final freeze; policy, 28 inputs, expectations, historical evidence and six guards unchanged."
+    },
+    {
+      "diagnostic": "commit-attempt-1.txt",
+      "failed_head": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+      "failed_tree": "cfdb88587d317fadd2fd22f097d16c0c7fa07619",
+      "observation": "First commit exited 1 before creating a commit: the shared clone of a promisor repository lacked one workflow blob and promisor-remote configuration.",
+      "phase": "preparation_publication",
+      "policy_evidence_or_expectation_changed": false,
+      "restoration": "Fetched the exact workflow blob from GitHub, independently verified Git SHA-1 before writing it only into the isolated object store; configured the clone as blob-filtered promisor. No protected payload was fetched or materialized.",
+      "restored_git_blob_sha1": "451d4988efa2a8262cf60e326775b352923a6060",
+      "restored_path": ".github/workflows/evidence-packet-identity.yml"
+    }
+  ],
+  "qualification_ran": false,
+  "schema_version": "preparation-deviations/v1"
+}

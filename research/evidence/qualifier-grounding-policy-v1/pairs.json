@@ -1,0 +1,68 @@
+{
+  "pairs": [
+    {
+      "expect": "packet defect becomes full body support; Q omission remains",
+      "from": "L02",
+      "kind": "BODY_SUPPORT_ADDITION",
+      "to": "L15"
+    },
+    {
+      "expect": "full support becomes packet defect",
+      "from": "L01",
+      "kind": "BODY_SUPPORT_REMOVAL",
+      "to": "L16"
+    },
+    {
+      "expect": "Q insufficiency resolved; N/P unchanged",
+      "from": "L03",
+      "kind": "QUOTE_WIDENING",
+      "to": "L17"
+    },
+    {
+      "expect": "safe core/gap becomes unsafe rejection",
+      "from": "L02",
+      "kind": "DEPENDENCY_SENSITIVITY",
+      "to": "L04"
+    },
+    {
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "QUERY_INVARIANCE",
+      "to": "L18"
+    },
+    {
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "HEADING_INVARIANCE",
+      "to": "L19"
+    },
+    {
+      "expect": "same decision modulo declared ID bijection",
+      "from": "L02",
+      "kind": "BIJECTIVE_RENAMING",
+      "rename": {
+        "b0": "body-y",
+        "q0": "quote-x",
+        "u0": "context-z",
+        "u1": "context-w",
+        "v0": "rho",
+        "v1": "sigma",
+        "v2": "tau"
+      },
+      "to": "L20"
+    },
+    {
+      "expect": "same decision",
+      "from": "L01",
+      "kind": "WITNESS_ORDER_INVARIANCE",
+      "to": "L21"
+    },
+    {
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "METADATA_INVARIANCE",
+      "to": "L28"
+    }
+  ],
+  "schema_version": "qualifier-grounding-pairs/v1"
+}

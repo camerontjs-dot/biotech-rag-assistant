@@ -1,0 +1,2 @@
+  OK      [isolated-checkout]/research/qualifier-grounding-policy-v1-protocol.md  (adopted)
+  1 file(s) checked, no findings.

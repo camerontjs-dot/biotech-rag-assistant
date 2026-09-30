@@ -1,0 +1,137 @@
+{
+  "diagnostic_sanitization": "Only local checkout prefixes replaced in public test/lint logs; original diagnostics remain outside the public package.",
+  "files": {
+    "CANDIDATE.json": {
+      "bytes": 1043,
+      "sha256": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315"
+    },
+    "EXPERIMENT.json": {
+      "bytes": 1422,
+      "sha256": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1"
+    },
+    "README.md": {
+      "bytes": 8768,
+      "sha256": "c10b0557166b6e191b14fceb6f50a2675300367cada2c4d249ea0ed01f698b3f"
+    },
+    "checker-preparation-attempt-1.txt": {
+      "bytes": 17326,
+      "sha256": "600215346c260c0ba75323a95fe78e245b8b7eed553a5cbc21480d9f0aab95fc"
+    },
+    "checker.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "checker.stdout.txt": {
+      "bytes": 35,
+      "sha256": "97b70d5504f56e93fb45276ac879d83a13351fd5d8343e0abd4c4c0a5aaa08d7"
+    },
+    "checks.json": {
+      "bytes": 1578,
+      "sha256": "72758bd0a14fce6207f5df331f2fbe0082bf52cd1d5ed4f55afd9051025e56e4"
+    },
+    "commit-attempt-1.txt": {
+      "bytes": 274,
+      "sha256": "e4e08c24620038184f3f8011094717ffb0e82157e1e2f0f59190db11c55f1808"
+    },
+    "contract-lint.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "contract-lint.txt": {
+      "bytes": 126,
+      "sha256": "7552fb11eadaa63925069844833412875f9d0ee051af19f4c6b8f9403f5fd82e"
+    },
+    "custody.json": {
+      "bytes": 6000,
+      "sha256": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad"
+    },
+    "deviations.json": {
+      "bytes": 2628,
+      "sha256": "7515ea2cc447ccfdf7cecc4af5ced66d2aa4eaa1642b345a3fd22d7eb91dec50"
+    },
+    "expectations.jsonl": {
+      "bytes": 16515,
+      "sha256": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47"
+    },
+    "freeze-preparation-attempt-1.json": {
+      "bytes": 2661,
+      "sha256": "9b5c462d2077acce1fcb34f95d96190ce116806b6063f65a3678f784b7cd2f91"
+    },
+    "freeze.json": {
+      "bytes": 2661,
+      "sha256": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d"
+    },
+    "historical.json": {
+      "bytes": 3869,
+      "sha256": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c"
+    },
+    "inputs.jsonl": {
+      "bytes": 22129,
+      "sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f"
+    },
+    "interface.json": {
+      "bytes": 2968,
+      "sha256": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489"
+    },
+    "lint-preparation-attempt-1.txt": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "lint.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "lint.txt": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "pairs.json": {
+      "bytes": 1512,
+      "sha256": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3"
+    },
+    "policy.json": {
+      "bytes": 1132,
+      "sha256": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f"
+    },
+    "preparation-check-attempt-1.json": {
+      "bytes": 523,
+      "sha256": "3c1d8b7ff4ff975ff3b01f71c481f789c452086b5fffc93bfdcc338c58cc8a68"
+    },
+    "preparation-check.json": {
+      "bytes": 523,
+      "sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5"
+    },
+    "reconciliation.json": {
+      "bytes": 2177,
+      "sha256": "ec960178e003cd44155d084d25ad13ce30a8bf6f9fa8cc27ba20e7e74f31326c"
+    },
+    "tests-apparatus-falsifier.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tests-apparatus-falsifier.txt": {
+      "bytes": 1141,
+      "sha256": "eddefbe4a64ee144b7b703af28f7c135280e34ad5e121609c2822449eab0038e"
+    },
+    "tests-preparation-attempt-1.txt": {
+      "bytes": 99,
+      "sha256": "1bcc44011bf78a58bc505eb612ef283786f7b4e7ea8747b915963e5b06958e4c"
+    },
+    "tests.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tests.txt": {
+      "bytes": 99,
+      "sha256": "590dbc4f5c123295cd127dfad099b8f0f74b5daff9de9099967616ab6655a2b8"
+    }
+  },
+  "generation_or_gate_replays": 0,
+  "model_provider_calls": 0,
+  "normative_freeze_sha256": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+  "package_id": "qualifier-grounding-policy-v1",
+  "qualification": "NOT_RUN",
+  "schema_version": "qualifier-grounding-preparation-receipt-freeze/v1",
+  "semantic_assessor": "NOT_IMPLEMENTED",
+  "wave_b": "LOCKED"
+}

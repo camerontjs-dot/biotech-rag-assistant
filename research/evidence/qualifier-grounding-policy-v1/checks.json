@@ -1,0 +1,49 @@
+{
+  "candidate_qualification": "NOT_RUN",
+  "checks": [
+    {
+      "exit_code": 0,
+      "name": "frozen preregistration checker",
+      "receipt": "preparation-check.json",
+      "sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5"
+    },
+    {
+      "exit_code": 0,
+      "name": "native pytest contract selftests",
+      "passed": 16,
+      "receipt": "tests.txt",
+      "sha256": "590dbc4f5c123295cd127dfad099b8f0f74b5daff9de9099967616ab6655a2b8"
+    },
+    {
+      "exit_code": 0,
+      "name": "native Ruff, no cache",
+      "receipt": "lint.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "exit_code": 0,
+      "findings": 0,
+      "name": "MainFrame contract lint",
+      "receipt": "contract-lint.txt",
+      "sha256": "7552fb11eadaa63925069844833412875f9d0ee051af19f4c6b8f9403f5fd82e"
+    }
+  ],
+  "generation_or_gate_replays": 0,
+  "model_provider_calls": 0,
+  "precommit_leak_guard": "will run during commit; result recorded in GitHub receipt",
+  "preparation_only": true,
+  "preserved_failure": {
+    "deselected": 15,
+    "exit_code": 1,
+    "failed": 1,
+    "receipt": "tests-apparatus-falsifier.txt",
+    "sha256": "eddefbe4a64ee144b7b703af28f7c135280e34ad5e121609c2822449eab0038e",
+    "test": "fully witnessed body mislabeled unsupported in gold"
+  },
+  "protected_predecessor_bytes_modified": false,
+  "python": "3.11.15",
+  "ruff": "0.15.16",
+  "schema_version": "qualifier-grounding-preparation-checks/v1",
+  "semantic_assessment": "NOT_PERFORMED",
+  "wave_b": "LOCKED"
+}

@@ -1,0 +1,140 @@
+{
+  "action_values": [
+    "KEEP_FULL",
+    "HOLD_FOR_CITATION",
+    "PROPOSE_CORE_WITH_GAP",
+    "REJECT_COMPLETE",
+    "WITHHOLD",
+    "STOP"
+  ],
+  "aperture_values": [
+    "SUPPORTED",
+    "OVER_BROAD",
+    "UNSUPPORTED",
+    "INCONCLUSIVE",
+    "NOT_ASSESSED"
+  ],
+  "assessment_status_values": [
+    "COMPLETE",
+    "INCONCLUSIVE",
+    "APPARATUS_FAILURE"
+  ],
+  "authority_note": "entails/contradicts/ambiguous are supplied reviewed assessments, not semantics inferred by this checker; query/metadata witnesses never authorize support",
+  "authorized_surface_by_aperture": {
+    "N": [
+      "BODY"
+    ],
+    "P": [
+      "BODY"
+    ],
+    "Q": [
+      "QUOTE"
+    ]
+  },
+  "candidate_entrypoint": "decide(assessment_ledger) -> decision_record",
+  "citation_values": [
+    "SUFFICIENT",
+    "QUOTE_INSUFFICIENT",
+    "NOMINATION_INSUFFICIENT",
+    "INCONCLUSIVE",
+    "NOT_ASSESSED"
+  ],
+  "coverage_values": [
+    "COMPLETE",
+    "UNKNOWN"
+  ],
+  "empty_submission": "APPARATUS_FAILURE",
+  "extra_missing_or_duplicate_case": "APPARATUS_FAILURE",
+  "finding_values": [
+    "FULL_BODY_SUPPORT",
+    "UNSUPPORTED_MATERIAL_QUALIFIER",
+    "CITATION_SPAN_INSUFFICIENCY",
+    "UNSAFE_DECOMPOSITION",
+    "NO_SUPPORTED_CORE",
+    "CONTRADICTED_CLAIM",
+    "INCONCLUSIVE",
+    "APPARATUS_FAILURE"
+  ],
+  "grounding_values": [
+    "FULL_BODY_SUPPORT",
+    "PACKET_LEVEL_GROUNDING_DEFECT",
+    "INCONCLUSIVE",
+    "NOT_ASSESSED"
+  ],
+  "guard_fields": [
+    "core_independently_supported",
+    "bindings_preserved",
+    "required_context_retained",
+    "removal_independent",
+    "no_missing_presupposition",
+    "gap_explicit"
+  ],
+  "guard_values": [
+    true,
+    false,
+    null
+  ],
+  "input_fields": [
+    "case_id",
+    "ledger"
+  ],
+  "integrity_values": [
+    "VALID",
+    "CUSTODY_INVALID",
+    "ASSESSOR_UNAVAILABLE",
+    "EXECUTION_FAILURE"
+  ],
+  "ledger_fields": [
+    "coverage",
+    "integrity",
+    "obligations",
+    "witnesses",
+    "proposal"
+  ],
+  "materiality_values": [
+    "MATERIAL",
+    "UNKNOWN"
+  ],
+  "obligation_fields": [
+    "id",
+    "materiality"
+  ],
+  "output_fields": [
+    "case_id",
+    "assessment_status",
+    "apertures",
+    "grounding",
+    "citation",
+    "finding",
+    "action",
+    "core_ids",
+    "gap_ids",
+    "witness_ids",
+    "reason"
+  ],
+  "proposal_fields": [
+    "core_ids",
+    "gap_ids",
+    "body_witness_ids",
+    "guards"
+  ],
+  "schema_version": "qualifier-grounding-interface/v1",
+  "semantic_reason_note": "a nonempty rationale is required; this checker cannot establish its truth",
+  "submission_format": "JSON object with schema_version=qualifier-grounding-submission/v1 and decisions list; no answer text or provider response",
+  "unknown_output_fields": "APPARATUS_FAILURE",
+  "witness_fields": [
+    "id",
+    "surface",
+    "apertures",
+    "entails",
+    "contradicts",
+    "ambiguous"
+  ],
+  "witness_surface_values": [
+    "BODY",
+    "QUOTE",
+    "QUERY",
+    "HEADING",
+    "METADATA"
+  ]
+}

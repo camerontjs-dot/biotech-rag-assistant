@@ -1,0 +1,91 @@
+{
+  "epistemic_status": "needs-audit",
+  "historical_disposition": "MIXED",
+  "new_judgments": false,
+  "observations": [
+    {
+      "case_id": "A07-balance-weight-count",
+      "exact_citation": {
+        "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+        "quote": "The analyst verifies the balance with two traceable weights before use."
+      },
+      "exact_generated_claim": {
+        "citations": [
+          {
+            "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+            "quote": "The analyst verifies the balance with two traceable weights before use."
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "The analyst uses two traceable weights for the daily balance check."
+      },
+      "inherited_apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "original_gates_fired": [],
+      "original_public_disposition": "generated_with_gaps",
+      "packet_id": "ep1:d593fa9971cf114ba0b3b6b091e5228d0d7a758b6d35be206df1854436264865",
+      "preparation_expectation": {
+        "core_safety": "NOT_ADJUDICATED",
+        "finding": "PACKET_LEVEL_GROUNDING_DEFECT",
+        "full_claim_must_not_be_supported": true,
+        "missing_proposition": "The two-weight balance verification is the daily balance check.",
+        "requirement": "review the event/scope binding and all safety guards before any core proposal; INCONCLUSIVE remains valid; no repaired text is produced",
+        "source_core_candidate_reference": "first sentence of cited N body, exactly preserved"
+      },
+      "question": "How many traceable weights are used for the daily balance check?",
+      "surfaces_reference": {
+        "case_id": "A07-balance-weight-count",
+        "path": "research/evidence/wave-a-ep1-authority-readjudication-v1/support-surfaces.json"
+      }
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "exact_citation": {
+        "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+        "quote": "both operations and QA sign the clearance record"
+      },
+      "exact_generated_claim": {
+        "citations": [
+          {
+            "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+            "quote": "both operations and QA sign the clearance record"
+          }
+        ],
+        "claim_id": "c1",
+        "limitation": null,
+        "qualifier": null,
+        "text": "Both operations and QA must sign the clearance record before the run starts."
+      },
+      "inherited_apertures": {
+        "N": "SUPPORTED",
+        "P": "SUPPORTED",
+        "Q": "OVER_BROAD"
+      },
+      "original_gates_fired": [],
+      "original_public_disposition": "generated",
+      "packet_id": "ep1:ea3928728472273819f3c6183683da95690b1bb012d514adfb9b9ce7d4086397",
+      "preparation_expectation": {
+        "action": "HOLD_FOR_CITATION",
+        "core_safety": "NO_REMOVAL_NEEDED",
+        "finding": "CITATION_SPAN_INSUFFICIENCY",
+        "requirement": "Q omission does not invalidate the authorized body condition; no citation repair performed",
+        "supported_condition_must_be_retained": "both signatures are a precondition to starting the run"
+      },
+      "question": "Who must sign the line clearance record before the run starts?",
+      "surfaces_reference": {
+        "case_id": "A08-line-clearance-signatories",
+        "path": "research/evidence/wave-a-ep1-authority-readjudication-v1/support-surfaces.json"
+      }
+    }
+  ],
+  "schema_version": "qualifier-grounding-historical/v1",
+  "semantic_evaluator": "agent_llm",
+  "source_adjudication_sha256": "6610b9a21ce7cc33cea39a197d4c689f8eacc6035be88caf6ecf6c502b8b6f21",
+  "source_surfaces": "research/evidence/wave-a-ep1-authority-readjudication-v1/support-surfaces.json",
+  "source_surfaces_sha256": "40b8df717052b0450f6a0bdddce10322d147994f848f7d7243595bc8b78890f8"
+}

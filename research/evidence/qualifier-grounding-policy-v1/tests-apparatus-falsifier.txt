@@ -1,0 +1,16 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_fully_witnessed_body_cannot_be_labeled_unsupported_in_gold ________
+
+    def test_fully_witnessed_body_cannot_be_labeled_unsupported_in_gold() -> None:
+        _, inputs, expectations = contracts()
+        ledger = next(row["ledger"] for row in inputs if row["case_id"] == "L03")
+        decision = deepcopy(next(row["expected"] for row in expectations if row["case_id"] == "L03"))
+        decision["apertures"]["P"] = "UNSUPPORTED"
+>       with pytest.raises(ContractError, match="declared aperture coverage"):
+E       Failed: DID NOT RAISE <class 'research.check_qualifier_grounding_preregistration.ContractError'>
+
+[isolated-checkout]/tests/test_qualifier_grounding_preregistration.py:112: Failed
+=========================== short test summary info ============================
+FAILED ../../../..[isolated-checkout]/tests/test_qualifier_grounding_preregistration.py::test_fully_witnessed_body_cannot_be_labeled_unsupported_in_gold
+1 failed, 15 deselected in 0.02s

@@ -1,0 +1,27 @@
+{
+  "advancement_readiness": "NOT_QUALIFIED",
+  "blockers": [
+    "semantic assessment validity and safe natural-language projection remain unqualified"
+  ],
+  "candidate_id": "qualifier-grounding-policy-v1-preparation",
+  "component_evidence": "preparation checks only",
+  "discriminator_implementation": "NOT_IMPLEMENTED",
+  "excluded_scope": [
+    "semantic assessor implementation",
+    "generation path",
+    "answer rewriting",
+    "protected experiments",
+    "public integration"
+  ],
+  "freeze": "research/evidence/qualifier-grounding-policy-v1/freeze.json",
+  "fresh_or_independent_acceptance": "NOT_RUN",
+  "included_scope": "policy/interface/declared ledger controls/fixed expectations/custody/checker selftests",
+  "lifecycle_state": "frozen_preparation",
+  "non_claims": [
+    "protocol/checker existence does not solve grounding"
+  ],
+  "replay_evidence": "NOT_RUN",
+  "schema_version": "candidate/v1",
+  "source_commit": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+  "source_tree": "cfdb88587d317fadd2fd22f097d16c0c7fa07619"
+}

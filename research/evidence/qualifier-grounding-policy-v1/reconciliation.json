@@ -1,0 +1,60 @@
+{
+  "schema_version": "qualifier-grounding-start-reconciliation/v1",
+  "repository": "camerontjs-dot/biotech-rag-assistant",
+  "pr_surfaces": [
+    {
+      "pr": 17,
+      "head": "457be991da5835f642195ffcf289d8f271e5f51b",
+      "base": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+      "branch": "research/wave-a-support-aperture-adjudication",
+      "base_branch": "research/controlled-docs-v2.1-slice5d-ollama-structured",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "title": "research: adjudicate Wave A claim-support aperture"
+    },
+    {
+      "pr": 19,
+      "head": "7724695c21882afb45a512fbf6ee07717da5120f",
+      "base": "457be991da5835f642195ffcf289d8f271e5f51b",
+      "branch": "decision/heading-semantic-authority",
+      "base_branch": "research/wave-a-support-aperture-adjudication",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "title": "decision: bound section-heading semantic authority in ep1"
+    },
+    {
+      "pr": 20,
+      "head": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+      "base": "97beb5d81492b196affda7da03276dbc7b14246d",
+      "branch": "codex/wave-a-ep1-authority-readjudication",
+      "base_branch": "decision/heading-semantic-authority",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "title": "research: re-adjudicate frozen Wave A under accepted ep1 authority"
+    }
+  ],
+  "issue21": {
+    "state": "open",
+    "title": "research: freeze a material-qualifier grounding discriminator"
+  },
+  "source_commit": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+  "source_tree": "cfdb88587d317fadd2fd22f097d16c0c7fa07619",
+  "predecessors_preserved": true,
+  "local_workbench": {
+    "head": "20f56cc2d8321b824f3de2a45ec64c9b4c9c0f3d",
+    "branch": "main",
+    "dirty": [
+      "DECISIONS.md"
+    ],
+    "touched": false
+  },
+  "outer_workspace": "pre-existing dirty/diverged state preserved",
+  "mindgraph": {
+    "knowledge": "durable_knowledge nominations only; no semantic authority imported",
+    "projects": "project_status nominations only; stale coordination did not override GitHub"
+  },
+  "new_branch": "codex/material-qualifier-grounding-v1"
+}
