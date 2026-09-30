@@ -1,0 +1,10 @@
+doc_id: ADV-FQ-05
+doc_title: "Adversarial fake quotes memo"
+doc_type: TechnicalNote
+version: "1.0"
+status: Effective
+effective_date: "2025-06-01"
+review_due_date: "2026-06-01"
+department: QA
+source_file_path: documents/ADV-FQ-05.md
+source_hash: sha256:f025caf08c14daab1e0287ada6a9e724b98a10764f2a419214932c9f384bc91d

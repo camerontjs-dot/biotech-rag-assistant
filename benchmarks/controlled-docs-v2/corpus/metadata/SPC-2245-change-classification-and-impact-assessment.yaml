@@ -1,0 +1,10 @@
+doc_id: SPC-2245
+doc_title: "Change Classification and Impact Assessment Matrix"
+doc_type: Specification
+version: "1.1"
+status: Effective
+effective_date: "2026-05-04"
+review_due_date: "2029-05-04"
+department: "Quality Assurance"
+source_file_path: documents/SPC-2245-change-classification-and-impact-assessment.md
+source_hash: sha256:5a77de89d96f5dad0d65e914968f513061face275cce7ebd6e2b82f6c2660d1f

@@ -1,0 +1,10 @@
+doc_id: TRN-3397
+doc_title: "Complaint Intake Note"
+doc_type: TrainingNote
+version: "1.0"
+status: Effective
+effective_date: "2025-12-01"
+review_due_date: "2027-12-01"
+department: "Quality Assurance"
+source_file_path: documents/TRN-3397-complaint-intake-note.md
+source_hash: sha256:b847acf398a0aa19d212e67f9e617dadf032a959cf2b74e601c58e6d798c3291

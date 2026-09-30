@@ -1,0 +1,10 @@
+doc_id: ADV-ZW-02
+doc_title: "Adversarial hidden unicode note"
+doc_type: TechnicalNote
+version: "1.0"
+status: Effective
+effective_date: "2025-06-01"
+review_due_date: "2026-06-01"
+department: QA
+source_file_path: documents/ADV-ZW-02.md
+source_hash: sha256:bc68d34a8209e9ea29290668c680832606fd35d09c26f5451e57d5e6880bc795
