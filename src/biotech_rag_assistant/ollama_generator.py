@@ -1,3 +1,4 @@
+# ruff: noqa: E501
 """Schema-constrained Ollama shadow generator for local qualification."""
 
 from __future__ import annotations
