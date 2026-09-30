@@ -1,0 +1,8 @@
+{
+  "exit_code": 2,
+  "stdout_sha256": "9c2e77b2b6470c9716cb74b7806521e401b3b829e9d62e35aa8a89db161fb4b7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidate_invocations": 0,
+  "test_scope": "frozen preparation/scorer selftests only",
+  "publication_sanitization": "Local checkout and runtime prefixes replaced in public diagnostics; raw originals preserved locally by original hashes."
+}

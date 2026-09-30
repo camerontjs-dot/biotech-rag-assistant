@@ -1,0 +1,48 @@
+{
+  "schema_version": "qualification-deviations/v1",
+  "candidate_repaired_after_reveal": false,
+  "fixed_controls_rerun": false,
+  "policy_interface_or_expectations_modified": false,
+  "items": [
+    {
+      "phase": "pre-freeze",
+      "item": "MainFrame README/log/decision reads deferred until after reveal; operating rules and identity reconstruction completed first.",
+      "impact": "Protected information aperture preserved; full session receipt completed post-freeze."
+    },
+    {
+      "phase": "pre-freeze",
+      "item": "Opaque hashing of forbidden artifact bytes for the explicitly required SHA-256 reconciliation.",
+      "impact": "No control, expectation, historical, or checker payload parsed/displayed before freeze."
+    },
+    {
+      "phase": "pre-freeze",
+      "item": "Hygiene initializer rejects .git file in worktree. Existing staged-only hook activated per commit through core.hooksPath.",
+      "impact": "No hook bypass; no configuration change to unrelated checkout."
+    },
+    {
+      "phase": "pre-freeze",
+      "item": "Initial cached linter was blocked by sandbox cache permissions; run under approved access. Two targeted lint attempts found long rationale lines.",
+      "impact": "Rationales shortened and lint passed before candidate freeze; failures retained."
+    },
+    {
+      "phase": "post-freeze apparatus",
+      "item": "Optional apparatus selftests initially failed collection because research was not on the import path. Required direct preregistration/custody/hash checks had already passed.",
+      "impact": "Explicit repository import root fixed test collection; 16 frozen selftests passed with zero reducer invocations. Single decisive 28-call run was not repeated. Original collection diagnostics preserved locally; sanitized public copies retain original hashes."
+    },
+    {
+      "phase": "post-freeze scoring",
+      "item": "Frozen pairs specify prose relations, not an executable candidate pair scorer. Post-reveal runner operationalizes those relations explicitly.",
+      "impact": "Nine relation checks hold. Supplemental strict_pair_pass also requires exact endpoint controls; zero of nine satisfy that conjunction. It does not replace or weaken frozen per-case scoring."
+    },
+    {
+      "phase": "post-freeze protocol review",
+      "item": "Protocol prose names inputs.json/expectations.json; frozen files and interface authority resolve inputs.jsonl/expectations.jsonl.",
+      "impact": "Frozen allowlist filenames used; protocol untouched."
+    },
+    {
+      "phase": "implementation interpretation",
+      "item": "Pre-freeze implementation treated core_ids as accepted core-proposal IDs. Revealed scorer/expectations require all retained obligation IDs for full-support decisions.",
+      "impact": "Observed retention mismatch in six controls; treated as falsification, not repaired or dismissed."
+    }
+  ]
+}

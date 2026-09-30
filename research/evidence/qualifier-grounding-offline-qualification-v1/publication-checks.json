@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-09-30T17:42:07.612658+00:00",
+  "checks": {
+    "research/qualifier_grounding_reducer.py": true,
+    "research/test_qualifier_grounding_reducer.py": true,
+    "run_count_28": true,
+    "runtime_forbidden_accesses_empty": true,
+    "runner_hash_unchanged": true,
+    "original_normative_and_receipt_files_unchanged": true,
+    "decisions_hash_unchanged": true,
+    "apparatus_selftests_pass": true
+  },
+  "all_pass": true,
+  "candidate_reexecution": false,
+  "targeted_final_lint": "PASS",
+  "protected_files_changed": false
+}

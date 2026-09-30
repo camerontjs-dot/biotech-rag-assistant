@@ -1,0 +1,99 @@
+{
+  "schema_version": "qualifier-grounding-historical-review/v1",
+  "reviewed_after_candidate_freeze": true,
+  "source_surfaces_sha256": "40b8df717052b0450f6a0bdddce10322d147994f848f7d7243595bc8b78890f8",
+  "source_surfaces_hash_matches": true,
+  "span_checks": [
+    {
+      "case_id": "A07-balance-weight-count",
+      "aperture": "N",
+      "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+      "source": "examples/synthetic-controlled-docs/documents/CAL-ENG-005-balance-calibration.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    },
+    {
+      "case_id": "A07-balance-weight-count",
+      "aperture": "P",
+      "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+      "source": "examples/synthetic-controlled-docs/documents/CAL-ENG-005-balance-calibration.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    },
+    {
+      "case_id": "A07-balance-weight-count",
+      "aperture": "P",
+      "chunk_id": "SOP-QA-002_v1_1_chunk_001",
+      "source": "examples/synthetic-controlled-docs/documents/SOP-QA-002-deviation-triage.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    },
+    {
+      "case_id": "A07-balance-weight-count",
+      "aperture": "P",
+      "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+      "source": "examples/synthetic-controlled-docs/documents/SOP-OPS-007-line-clearance.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "aperture": "N",
+      "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+      "source": "examples/synthetic-controlled-docs/documents/SOP-OPS-007-line-clearance.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "aperture": "P",
+      "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+      "source": "examples/synthetic-controlled-docs/documents/SOP-OPS-007-line-clearance.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "aperture": "P",
+      "chunk_id": "SOP-OPS-007_v1_2_chunk_001",
+      "source": "examples/synthetic-controlled-docs/documents/SOP-OPS-007-line-clearance.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "aperture": "P",
+      "chunk_id": "SOP-QA-001_v1_0_chunk_003",
+      "source": "examples/synthetic-controlled-docs/documents/SOP-QA-001-environmental-monitoring.md",
+      "source_hash_matches": true,
+      "exact_span_matches": true
+    }
+  ],
+  "anchors": [
+    {
+      "case_id": "A07-balance-weight-count",
+      "inherited_apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "core_safety": "NOT_ADJUDICATED"
+    },
+    {
+      "case_id": "A08-line-clearance-signatories",
+      "inherited_apertures": {
+        "N": "SUPPORTED",
+        "P": "SUPPORTED",
+        "Q": "OVER_BROAD"
+      },
+      "core_safety": "NO_REMOVAL_NEEDED"
+    }
+  ],
+  "A07_core_safety": "NOT_ADJUDICATED; neither PR #22 nor this run establishes safe event/scope decomposition. No core projection or newly generated claim.",
+  "A08_supported_pre_run_condition": "Both operations and QA signatures are a precondition to starting the run; exact admitted BODY span verified. Q omission remains citation insufficiency.",
+  "new_historical_reducer_calls": 0,
+  "historical_outputs_modified": false,
+  "new_semantic_adjudication": false,
+  "semantic_evaluator_of_inherited_labels": "agent_llm; needs-audit",
+  "ledger_run_limitation": "Full-support ledger controls omitted required retained IDs. Historical labels are preserved, not reclassified through a newly authored historical ledger."
+}

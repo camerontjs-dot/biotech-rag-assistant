@@ -1,0 +1,17 @@
+{
+  "schema_version": "qualifier-grounding-decisive-run/v1",
+  "started_at": "2026-09-30T17:29:40.889439+00:00",
+  "candidate_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+  "candidate_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+  "source_sha256": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8",
+  "input_sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+  "runner_sha256": "4fdd7f96d317423dd8d6522123fbc16a0f760c9ac39b053a556de8193f9488b6",
+  "planned_decide_calls": 28,
+  "decide_calls": 0,
+  "runtime_forbidden_accesses": [],
+  "project_model_provider_calls": 0,
+  "generation_or_gate_replays": 0,
+  "wave_b": "LOCKED",
+  "expectations_exposed_to_reducer": false,
+  "source_load": "exact Git object; source extraction occurs outside reducer execution"
+}

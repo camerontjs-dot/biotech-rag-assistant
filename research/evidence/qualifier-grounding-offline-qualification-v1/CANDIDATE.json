@@ -1,0 +1,52 @@
+{
+  "schema_version": "candidate/v1",
+  "candidate_id": "qualifier-ledger-reducer-v1-10d17b3c56f5",
+  "product_line": "biotech-rag-assistant",
+  "branch": "research/qualifier-grounding-offline-qualification-v1",
+  "source_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+  "source_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+  "starting_commit": "356e0da4aeb486d89b35f57e35b1b17e4587628c",
+  "starting_tree": "68cce98e40228884d46a8c1cc162d6c0d44f931c",
+  "lifecycle_state": "frozen",
+  "advancement_readiness": "NOT_QUALIFIED",
+  "frozen_at": "2026-09-30T17:21:22.036284+00:00",
+  "checkout_clean_at_freeze": true,
+  "contamination_status": "NO_FORBIDDEN_CONTENT_EXPOSURE_OBSERVED",
+  "contamination_basis": "Implementation owner declaration plus recorded pre-freeze tool aperture; no external independent human attestation. Hash-only reconciliation did not parse/display controls or expectations.",
+  "implementation_files": {
+    "research/qualifier_grounding_reducer.py": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8",
+    "research/test_qualifier_grounding_reducer.py": "4117f950271b2bdceab2fad24fb255c894dabe3d64d8aecde92a4e02f3ee4783"
+  },
+  "environment": {
+    "python_version": "3.14.4",
+    "platform": "Darwin",
+    "platform_release": "27.0.0",
+    "machine": "arm64",
+    "git_version": "git version 2.54.0 (Apple Git-157)",
+    "ruff_version": "ruff 0.16.8",
+    "reducer_dependencies": "Python builtins only",
+    "project_model_provider_calls": 0
+  },
+  "included_scope": "assessment_ledger -> decision_record",
+  "excluded_scope": [
+    "natural-language assessment",
+    "generation",
+    "gate replay",
+    "Wave B",
+    "TEST/PROSPECTIVE",
+    "CAL",
+    "ADR-018 change",
+    "merge/release"
+  ],
+  "component_evidence": "14 policy/interface-derived local tests pass; targeted lint pass; no reducer imports or runtime forbidden events in ordinary probe",
+  "replay_evidence": "NOT_RUN",
+  "fresh_or_independent_acceptance": "NOT_RUN",
+  "blockers": [
+    "Decisive qualification not yet run",
+    "Semantic assessor remains NOT_IMPLEMENTED_OR_QUALIFIED"
+  ],
+  "non_claims": [
+    "Local tests are not decisive qualification",
+    "No arbitrary-prose semantic-grounding claim"
+  ]
+}

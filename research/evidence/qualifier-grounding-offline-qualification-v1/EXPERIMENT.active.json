@@ -1,0 +1,43 @@
+{
+  "schema_version": "experiment/v1",
+  "experiment_id": "qualifier-grounding-offline-qualification-v1",
+  "state": "active",
+  "execution_status": "NOT_RUN",
+  "candidate_id": "qualifier-ledger-reducer-v1-10d17b3c56f5",
+  "source_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+  "source_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+  "protocol": "research/qualifier-grounding-policy-v1-protocol.md",
+  "protocol_sha256": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+  "primary_factor": "independently implemented pure assessment-ledger reducer",
+  "evidence_layer": "offline assessment-ledger contract controls",
+  "study_type": "confirmatory",
+  "unit_of_analysis": "fixed ledger decision and preregistered pair relation",
+  "reveal": {
+    "schema_version": "qualification-reveal/v1",
+    "revealed_at": "2026-09-30T17:22:32.360199+00:00",
+    "candidate_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+    "candidate_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+    "candidate_freeze_sha256": "96dff815367c1639360702ac3151242606da58634ac2828f1e8858d409dad2f8",
+    "pre_reveal_checkout_was_clean": true,
+    "contamination_status_at_reveal": "NO_FORBIDDEN_CONTENT_EXPOSURE_OBSERVED",
+    "newly_opened_aperture": [
+      "frozen protocol",
+      "inputs.jsonl",
+      "expectations.jsonl",
+      "pairs.json",
+      "historical anchors",
+      "normative freeze and receipt freeze",
+      "preparation checker and tests solely for apparatus review/scoring"
+    ],
+    "protected_aperture_still_closed": [
+      "Wave B",
+      "TEST",
+      "PROSPECTIVE",
+      "unrelated generation payloads"
+    ],
+    "reducer_mutation_after_reveal": "FORBIDDEN"
+  },
+  "model_calls": 0,
+  "generation_or_gate_replays": 0,
+  "wave_b": "LOCKED"
+}

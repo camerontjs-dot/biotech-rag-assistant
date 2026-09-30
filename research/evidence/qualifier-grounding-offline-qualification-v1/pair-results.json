@@ -1,0 +1,133 @@
+{
+  "pair_count": 9,
+  "relation_passes": 9,
+  "results": [
+    {
+      "checks": {
+        "known_gap_resolved": true,
+        "packet_aperture_becomes_supported": true,
+        "packet_defect_to_body_support": true,
+        "quote_omission_remains": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "packet defect becomes full body support; Q omission remains",
+      "from": "L02",
+      "kind": "BODY_SUPPORT_ADDITION",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L15"
+    },
+    {
+      "checks": {
+        "body_support_to_packet_defect": true,
+        "packet_support_removed": true,
+        "safe_core_and_explicit_gap": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "full support becomes packet defect",
+      "from": "L01",
+      "kind": "BODY_SUPPORT_REMOVAL",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L16"
+    },
+    {
+      "checks": {
+        "body_apertures_unchanged": true,
+        "packet_support_and_retained_ids_unchanged": true,
+        "quote_insufficiency_resolved": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "Q insufficiency resolved; N/P unchanged",
+      "from": "L03",
+      "kind": "QUOTE_WIDENING",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L17"
+    },
+    {
+      "checks": {
+        "safe_core_to_unsafe_rejection": true,
+        "support_assessments_unchanged": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "safe core/gap becomes unsafe rejection",
+      "from": "L02",
+      "kind": "DEPENDENCY_SENSITIVITY",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L04"
+    },
+    {
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "QUERY_INVARIANCE",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L18"
+    },
+    {
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "HEADING_INVARIANCE",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L19"
+    },
+    {
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "same decision modulo declared ID bijection",
+      "from": "L02",
+      "kind": "BIJECTIVE_RENAMING",
+      "relation_pass": true,
+      "rename": {
+        "b0": "body-y",
+        "q0": "quote-x",
+        "u0": "context-z",
+        "u1": "context-w",
+        "v0": "rho",
+        "v1": "sigma",
+        "v2": "tau"
+      },
+      "strict_pair_pass": false,
+      "to": "L20"
+    },
+    {
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "same decision",
+      "from": "L01",
+      "kind": "WITNESS_ORDER_INVARIANCE",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L21"
+    },
+    {
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "endpoints_match_contract": false,
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "METADATA_INVARIANCE",
+      "relation_pass": true,
+      "strict_pair_pass": false,
+      "to": "L28"
+    }
+  ],
+  "strict_definition": "relation holds AND both endpoint controls match",
+  "strict_pair_passes": 0
+}

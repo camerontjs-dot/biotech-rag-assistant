@@ -1,0 +1,312 @@
+{
+  "all_match": true,
+  "checks": {
+    "freeze.json": {
+      "research/check_qualifier_grounding_preregistration.py": {
+        "expected": "e495d93fcd9b8e84609bc414fca364c5b2d7611395dacc216a085c866af90453",
+        "observed": "e495d93fcd9b8e84609bc414fca364c5b2d7611395dacc216a085c866af90453",
+        "matches": true,
+        "bytes": 17435,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/CANDIDATE.json": {
+        "expected": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315",
+        "observed": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315",
+        "matches": true,
+        "bytes": 1043,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/EXPERIMENT.json": {
+        "expected": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1",
+        "observed": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1",
+        "matches": true,
+        "bytes": 1422,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/custody.json": {
+        "expected": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad",
+        "observed": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad",
+        "matches": true,
+        "bytes": 6000,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/expectations.jsonl": {
+        "expected": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+        "observed": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+        "matches": true,
+        "bytes": 16515,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/historical.json": {
+        "expected": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c",
+        "observed": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c",
+        "matches": true,
+        "bytes": 3869,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/inputs.jsonl": {
+        "expected": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+        "observed": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+        "matches": true,
+        "bytes": 22129,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/interface.json": {
+        "expected": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+        "observed": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+        "matches": true,
+        "bytes": 2968,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/pairs.json": {
+        "expected": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+        "observed": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+        "matches": true,
+        "bytes": 1512,
+        "bytes_match": true
+      },
+      "research/evidence/qualifier-grounding-policy-v1/policy.json": {
+        "expected": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+        "observed": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+        "matches": true,
+        "bytes": 1132,
+        "bytes_match": true
+      },
+      "research/qualifier-grounding-policy-v1-protocol.md": {
+        "expected": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+        "observed": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+        "matches": true,
+        "bytes": 14126,
+        "bytes_match": true
+      },
+      "tests/test_qualifier_grounding_preregistration.py": {
+        "expected": "6308172ae0b72e5b1ed9162da07f1cf9e7ec0206f2df2c0e4855856f52eaa615",
+        "observed": "6308172ae0b72e5b1ed9162da07f1cf9e7ec0206f2df2c0e4855856f52eaa615",
+        "matches": true,
+        "bytes": 7532,
+        "bytes_match": true
+      }
+    },
+    "receipt-freeze.json": {
+      "CANDIDATE.json": {
+        "expected": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315",
+        "observed": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315",
+        "matches": true,
+        "bytes": 1043,
+        "bytes_match": true
+      },
+      "EXPERIMENT.json": {
+        "expected": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1",
+        "observed": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1",
+        "matches": true,
+        "bytes": 1422,
+        "bytes_match": true
+      },
+      "README.md": {
+        "expected": "c10b0557166b6e191b14fceb6f50a2675300367cada2c4d249ea0ed01f698b3f",
+        "observed": "c10b0557166b6e191b14fceb6f50a2675300367cada2c4d249ea0ed01f698b3f",
+        "matches": true,
+        "bytes": 8768,
+        "bytes_match": true
+      },
+      "checker-preparation-attempt-1.txt": {
+        "expected": "600215346c260c0ba75323a95fe78e245b8b7eed553a5cbc21480d9f0aab95fc",
+        "observed": "600215346c260c0ba75323a95fe78e245b8b7eed553a5cbc21480d9f0aab95fc",
+        "matches": true,
+        "bytes": 17326,
+        "bytes_match": true
+      },
+      "checker.stderr.txt": {
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "observed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true,
+        "bytes": 0,
+        "bytes_match": true
+      },
+      "checker.stdout.txt": {
+        "expected": "97b70d5504f56e93fb45276ac879d83a13351fd5d8343e0abd4c4c0a5aaa08d7",
+        "observed": "97b70d5504f56e93fb45276ac879d83a13351fd5d8343e0abd4c4c0a5aaa08d7",
+        "matches": true,
+        "bytes": 35,
+        "bytes_match": true
+      },
+      "checks.json": {
+        "expected": "72758bd0a14fce6207f5df331f2fbe0082bf52cd1d5ed4f55afd9051025e56e4",
+        "observed": "72758bd0a14fce6207f5df331f2fbe0082bf52cd1d5ed4f55afd9051025e56e4",
+        "matches": true,
+        "bytes": 1578,
+        "bytes_match": true
+      },
+      "commit-attempt-1.txt": {
+        "expected": "e4e08c24620038184f3f8011094717ffb0e82157e1e2f0f59190db11c55f1808",
+        "observed": "e4e08c24620038184f3f8011094717ffb0e82157e1e2f0f59190db11c55f1808",
+        "matches": true,
+        "bytes": 274,
+        "bytes_match": true
+      },
+      "contract-lint.stderr.txt": {
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "observed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true,
+        "bytes": 0,
+        "bytes_match": true
+      },
+      "contract-lint.txt": {
+        "expected": "7552fb11eadaa63925069844833412875f9d0ee051af19f4c6b8f9403f5fd82e",
+        "observed": "7552fb11eadaa63925069844833412875f9d0ee051af19f4c6b8f9403f5fd82e",
+        "matches": true,
+        "bytes": 126,
+        "bytes_match": true
+      },
+      "custody.json": {
+        "expected": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad",
+        "observed": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad",
+        "matches": true,
+        "bytes": 6000,
+        "bytes_match": true
+      },
+      "deviations.json": {
+        "expected": "7515ea2cc447ccfdf7cecc4af5ced66d2aa4eaa1642b345a3fd22d7eb91dec50",
+        "observed": "7515ea2cc447ccfdf7cecc4af5ced66d2aa4eaa1642b345a3fd22d7eb91dec50",
+        "matches": true,
+        "bytes": 2628,
+        "bytes_match": true
+      },
+      "expectations.jsonl": {
+        "expected": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+        "observed": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+        "matches": true,
+        "bytes": 16515,
+        "bytes_match": true
+      },
+      "freeze-preparation-attempt-1.json": {
+        "expected": "9b5c462d2077acce1fcb34f95d96190ce116806b6063f65a3678f784b7cd2f91",
+        "observed": "9b5c462d2077acce1fcb34f95d96190ce116806b6063f65a3678f784b7cd2f91",
+        "matches": true,
+        "bytes": 2661,
+        "bytes_match": true
+      },
+      "freeze.json": {
+        "expected": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+        "observed": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+        "matches": true,
+        "bytes": 2661,
+        "bytes_match": true
+      },
+      "historical.json": {
+        "expected": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c",
+        "observed": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c",
+        "matches": true,
+        "bytes": 3869,
+        "bytes_match": true
+      },
+      "inputs.jsonl": {
+        "expected": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+        "observed": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+        "matches": true,
+        "bytes": 22129,
+        "bytes_match": true
+      },
+      "interface.json": {
+        "expected": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+        "observed": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+        "matches": true,
+        "bytes": 2968,
+        "bytes_match": true
+      },
+      "lint-preparation-attempt-1.txt": {
+        "expected": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "observed": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "matches": true,
+        "bytes": 19,
+        "bytes_match": true
+      },
+      "lint.stderr.txt": {
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "observed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true,
+        "bytes": 0,
+        "bytes_match": true
+      },
+      "lint.txt": {
+        "expected": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "observed": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "matches": true,
+        "bytes": 19,
+        "bytes_match": true
+      },
+      "pairs.json": {
+        "expected": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+        "observed": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+        "matches": true,
+        "bytes": 1512,
+        "bytes_match": true
+      },
+      "policy.json": {
+        "expected": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+        "observed": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+        "matches": true,
+        "bytes": 1132,
+        "bytes_match": true
+      },
+      "preparation-check-attempt-1.json": {
+        "expected": "3c1d8b7ff4ff975ff3b01f71c481f789c452086b5fffc93bfdcc338c58cc8a68",
+        "observed": "3c1d8b7ff4ff975ff3b01f71c481f789c452086b5fffc93bfdcc338c58cc8a68",
+        "matches": true,
+        "bytes": 523,
+        "bytes_match": true
+      },
+      "preparation-check.json": {
+        "expected": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5",
+        "observed": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5",
+        "matches": true,
+        "bytes": 523,
+        "bytes_match": true
+      },
+      "reconciliation.json": {
+        "expected": "ec960178e003cd44155d084d25ad13ce30a8bf6f9fa8cc27ba20e7e74f31326c",
+        "observed": "ec960178e003cd44155d084d25ad13ce30a8bf6f9fa8cc27ba20e7e74f31326c",
+        "matches": true,
+        "bytes": 2177,
+        "bytes_match": true
+      },
+      "tests-apparatus-falsifier.stderr.txt": {
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "observed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true,
+        "bytes": 0,
+        "bytes_match": true
+      },
+      "tests-apparatus-falsifier.txt": {
+        "expected": "eddefbe4a64ee144b7b703af28f7c135280e34ad5e121609c2822449eab0038e",
+        "observed": "eddefbe4a64ee144b7b703af28f7c135280e34ad5e121609c2822449eab0038e",
+        "matches": true,
+        "bytes": 1141,
+        "bytes_match": true
+      },
+      "tests-preparation-attempt-1.txt": {
+        "expected": "1bcc44011bf78a58bc505eb612ef283786f7b4e7ea8747b915963e5b06958e4c",
+        "observed": "1bcc44011bf78a58bc505eb612ef283786f7b4e7ea8747b915963e5b06958e4c",
+        "matches": true,
+        "bytes": 99,
+        "bytes_match": true
+      },
+      "tests.stderr.txt": {
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "observed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true,
+        "bytes": 0,
+        "bytes_match": true
+      },
+      "tests.txt": {
+        "expected": "590dbc4f5c123295cd127dfad099b8f0f74b5daff9de9099967616ab6655a2b8",
+        "observed": "590dbc4f5c123295cd127dfad099b8f0f74b5daff9de9099967616ab6655a2b8",
+        "matches": true,
+        "bytes": 99,
+        "bytes_match": true
+      }
+    }
+  },
+  "protected_payloads_read": false,
+  "read_method": "opaque hashing of only frozen allowlisted package files"
+}

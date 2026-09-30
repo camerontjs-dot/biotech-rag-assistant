@@ -1,0 +1,48 @@
+{
+  "schema_version": "qualifier-grounding-source-review/v1",
+  "reviewed_at": "2026-09-30T17:34:30.286980+00:00",
+  "candidate_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+  "candidate_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+  "source_sha256": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8",
+  "source_unchanged_from_freeze": true,
+  "implementation_local_tests_unchanged": true,
+  "imports": [],
+  "call_targets": [
+    "_aperture",
+    "_ids",
+    "_valid",
+    "all",
+    "any",
+    "assessment_ledger.get",
+    "isinstance",
+    "len",
+    "record.update",
+    "set",
+    "sorted",
+    "witness_ids.append"
+  ],
+  "forbidden_calls_detected": [],
+  "forbidden_names_detected": [],
+  "case_anchor_fixture_or_oracle_literals_detected": [],
+  "module_data": [
+    "_GUARDS = ('core_independently_supported', 'bindings_preserved', 'required_context_retained', 'removal_independent', 'no_missing_presupposition', 'gap_explicit')",
+    "_SURFACES = {'BODY', 'QUOTE', 'QUERY', 'HEADING', 'METADATA'}",
+    "_APERTURES = {'Q', 'N', 'P'}"
+  ],
+  "case_id_use": "Passthrough, type/presence validation only; no known-ID comparison or lookup table.",
+  "literal_decision_use": "Interface enum constants and fail-closed record skeleton; no case-keyed expected-decision objects.",
+  "runtime_decide_calls": 28,
+  "runtime_forbidden_accesses": [],
+  "scorer_dependency": "No import/call/runtime dependency. Source commit predates first scorer read. Scorer imported by qualification runner only after decisions persisted.",
+  "environment_or_path_answer_injection": "No environment, path, dynamic import, dynamic execution, or file-access expression in frozen reducer.",
+  "order_dependency": "Preregistered witness-order relation holds; arrays are normalized by sorting.",
+  "independence_achieved": "Information aperture kept qualification controls/expectations/checker/history out of the implementation context until clean candidate freeze. Reducer has no runtime repository dependency. This is independence from qualification answers within the recorded aperture, not independent semantic assessment.",
+  "limits": [
+    "Implementation and review performed by same qualification owner; no separate independent human review.",
+    "Authored public ledgers contain declared oracle-like semantic assessments; their natural-language validity is not established.",
+    "Finite controls plus source/runtime review do not prove correctness on every possible ledger.",
+    "The source-dependency review does not turn FALSIFIED control outcomes into a pass."
+  ],
+  "reviewer": "implementation_and_qualification_owner; qualitative conclusions evaluator=agent_llm, needs-audit",
+  "no_forbidden_dependency_detected": true
+}

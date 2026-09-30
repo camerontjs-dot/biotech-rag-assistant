@@ -1,0 +1,99 @@
+{
+  "schema_version": "experiment/v1",
+  "experiment_id": "qualifier-grounding-offline-qualification-v1",
+  "state": "completed",
+  "execution_status": "EXECUTED_ONCE",
+  "candidate_id": "qualifier-ledger-reducer-v1-10d17b3c56f5",
+  "source_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+  "source_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+  "protocol": "research/qualifier-grounding-policy-v1-protocol.md",
+  "protocol_sha256": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+  "primary_factor": "independently implemented pure assessment-ledger reducer",
+  "evidence_layer": "offline assessment-ledger contract controls",
+  "study_type": "confirmatory",
+  "unit_of_analysis": "fixed ledger decision and preregistered pair relation",
+  "reveal": {
+    "schema_version": "qualification-reveal/v1",
+    "revealed_at": "2026-09-30T17:22:32.360199+00:00",
+    "candidate_commit": "10d17b3c56f54fca828c25c49de948051933733e",
+    "candidate_tree": "48a1592a5f3b2e5d784115f8c834f34e879e5d2b",
+    "candidate_freeze_sha256": "96dff815367c1639360702ac3151242606da58634ac2828f1e8858d409dad2f8",
+    "pre_reveal_checkout_was_clean": true,
+    "contamination_status_at_reveal": "NO_FORBIDDEN_CONTENT_EXPOSURE_OBSERVED",
+    "newly_opened_aperture": [
+      "frozen protocol",
+      "inputs.jsonl",
+      "expectations.jsonl",
+      "pairs.json",
+      "historical anchors",
+      "normative freeze and receipt freeze",
+      "preparation checker and tests solely for apparatus review/scoring"
+    ],
+    "protected_aperture_still_closed": [
+      "Wave B",
+      "TEST",
+      "PROSPECTIVE",
+      "unrelated generation payloads"
+    ],
+    "reducer_mutation_after_reveal": "FORBIDDEN"
+  },
+  "model_calls": 0,
+  "generation_or_gate_replays": 0,
+  "wave_b": "LOCKED",
+  "disposition": "FALSIFIED",
+  "completed_at": "2026-09-30T17:40:10.366807+00:00",
+  "decision_sentence": "Do not qualify this frozen candidate: every control is required and 23 controls disagree.",
+  "question": "Does a pure independently implemented reducer realize the frozen assessment-ledger contract without hidden oracle dependencies?",
+  "input_pins": {
+    "research/qualifier-grounding-policy-v1-protocol.md": {
+      "expected": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+      "observed": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/policy.json": {
+      "expected": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+      "observed": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/interface.json": {
+      "expected": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+      "observed": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/inputs.jsonl": {
+      "expected": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "observed": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/expectations.jsonl": {
+      "expected": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+      "observed": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/freeze.json": {
+      "expected": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+      "observed": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+      "matches": true
+    },
+    "research/evidence/qualifier-grounding-policy-v1/receipt-freeze.json": {
+      "expected": "94a17c8f21ac7757b322adb7b20a097c19b34f2c4e837a19aeabdb2093645e28",
+      "observed": "94a17c8f21ac7757b322adb7b20a097c19b34f2c4e837a19aeabdb2093645e28",
+      "matches": true
+    }
+  },
+  "result_receipts": {
+    "decisive-run.json": "40bc936915f22d80eff51ae131d02632f5a995be0d5d304c15ccb7d22c82c38a",
+    "decisions.json": "00f0b0f37003ba450f25aff0bb8ed265935100beac59d8a6671ef09c5e60dbd7",
+    "decisions.jsonl": "306ab8c7182983f9a02c359f17eeccd73cee0faf263107f6b9999c785cb7147b",
+    "frozen-scorer.json": "1251a9755139cbe10c6ee861a3c2abc05ecd581726e4d4665680bd5204dd68a5",
+    "case-results.json": "2b0c10bf225f176f7219ac68d411d4fae59e250e291ec17137fde801fff9d2b7",
+    "pair-results.json": "5b02ad7e8b0da2fc259a2dbd06dd58cc93cffac11bddf65823f6ed9e8a8d9b89",
+    "source-dependency-review.json": "8377df267ea9bfe808c8dc5f18a0ab79ce2280f2bbb0186c2e15935078fea615",
+    "historical-review.json": "b9f4d81fbd75cccf161c370020055bf23204416a4564f2fb758ff93f381cc251",
+    "safety-results.json": "d80ac8ce000de9f6ad3e41a94c3d3cef281bc7251f19d55108346140540642bc",
+    "deviations.json": "6b2d19161714880749267deb6dd1203ddbd32328af21ae3b7e5754545c166589",
+    "TERMINAL.json": "75b4b766978a6292258412c13b3623080a0d05b7dc6ad43e061ba4de32f5108c"
+  },
+  "terminal_receipt": "TERMINAL.json",
+  "next_experiment": "qualifier-grounding-offline-qualification-v2; NOT_RUN"
+}

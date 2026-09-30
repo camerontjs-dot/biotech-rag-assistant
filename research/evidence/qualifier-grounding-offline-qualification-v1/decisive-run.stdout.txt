@@ -1,0 +1,1 @@
+{"candidate_decide_calls": 28, "controls": 28, "exact_matches": 5, "frozen_scorer_outcome": "FALSIFIED", "pair_relations_hold": 9, "strict_pair_passes": 0}

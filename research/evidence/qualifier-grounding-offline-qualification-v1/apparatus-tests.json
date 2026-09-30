@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "stdout_sha256": "93f912eb887c1b526d5e1b81e0425ff99c6e6632f55a7b37394189a1b7adc02f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidate_invocations": 0,
+  "test_scope": "frozen preparation/scorer selftests only",
+  "environment_repair": "explicit repository import root; no source, policy, fixture or expectation repair",
+  "initial_collection_failure_preserved": true
+}

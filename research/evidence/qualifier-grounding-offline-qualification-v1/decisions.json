@@ -1,0 +1,577 @@
+{
+  "decisions": [
+    {
+      "action": "KEEP_FULL",
+      "apertures": {
+        "N": "SUPPORTED",
+        "P": "SUPPORTED",
+        "Q": "SUPPORTED"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L01",
+      "citation": "SUFFICIENT",
+      "core_ids": [],
+      "finding": "FULL_BODY_SUPPORT",
+      "gap_ids": [],
+      "grounding": "FULL_BODY_SUPPORT",
+      "reason": "All material obligations have packet BODY and sufficient quote support.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "PROPOSE_CORE_WITH_GAP",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L02",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [
+        "v0",
+        "v1"
+      ],
+      "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core retains BODY-supported obligations; all guards hold and gaps are explicit.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "HOLD_FOR_CITATION",
+      "apertures": {
+        "N": "SUPPORTED",
+        "P": "SUPPORTED",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L03",
+      "citation": "QUOTE_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "CITATION_SPAN_INSUFFICIENCY",
+      "gap_ids": [],
+      "grounding": "FULL_BODY_SUPPORT",
+      "reason": "Packet BODY supports all conditions; the citation is insufficient.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L04",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "UNSAFE_DECOMPOSITION",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core fails safety, BODY support, gap coverage, or supported-content retention.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L05",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "UNSAFE_DECOMPOSITION",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core fails safety, BODY support, gap coverage, or supported-content retention.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L06",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "UNSAFE_DECOMPOSITION",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core fails safety, BODY support, gap coverage, or supported-content retention.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "UNSUPPORTED",
+        "P": "UNSUPPORTED",
+        "Q": "UNSUPPORTED"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L07",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "NO_SUPPORTED_CORE",
+      "gap_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Packet support is incomplete and no supported core is proposed.",
+      "witness_ids": []
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "UNSUPPORTED",
+        "P": "UNSUPPORTED",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L08",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "CONTRADICTED_CLAIM",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Packet BODY contradicts a material obligation; no trimming is permitted.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "WITHHOLD",
+      "apertures": {
+        "N": "INCONCLUSIVE",
+        "P": "INCONCLUSIVE",
+        "Q": "INCONCLUSIVE"
+      },
+      "assessment_status": "INCONCLUSIVE",
+      "case_id": "L09",
+      "citation": "INCONCLUSIVE",
+      "core_ids": [],
+      "finding": "INCONCLUSIVE",
+      "gap_ids": [],
+      "grounding": "INCONCLUSIVE",
+      "reason": "Coverage or materiality is unknown; no affirmative support is established.",
+      "witness_ids": []
+    },
+    {
+      "action": "WITHHOLD",
+      "apertures": {
+        "N": "INCONCLUSIVE",
+        "P": "INCONCLUSIVE",
+        "Q": "INCONCLUSIVE"
+      },
+      "assessment_status": "INCONCLUSIVE",
+      "case_id": "L10",
+      "citation": "INCONCLUSIVE",
+      "core_ids": [],
+      "finding": "INCONCLUSIVE",
+      "gap_ids": [],
+      "grounding": "INCONCLUSIVE",
+      "reason": "Coverage or materiality is unknown; no affirmative support is established.",
+      "witness_ids": []
+    },
+    {
+      "action": "WITHHOLD",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "INCONCLUSIVE",
+      "case_id": "L11",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "INCONCLUSIVE",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Decomposition safety is unknown; withhold the proposed core.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "STOP",
+      "apertures": {
+        "N": "NOT_ASSESSED",
+        "P": "NOT_ASSESSED",
+        "Q": "NOT_ASSESSED"
+      },
+      "assessment_status": "APPARATUS_FAILURE",
+      "case_id": "L12",
+      "citation": "NOT_ASSESSED",
+      "core_ids": [],
+      "finding": "APPARATUS_FAILURE",
+      "gap_ids": [],
+      "grounding": "NOT_ASSESSED",
+      "reason": "Ledger structure or assessment integrity does not permit reduction.",
+      "witness_ids": []
+    },
+    {
+      "action": "STOP",
+      "apertures": {
+        "N": "NOT_ASSESSED",
+        "P": "NOT_ASSESSED",
+        "Q": "NOT_ASSESSED"
+      },
+      "assessment_status": "APPARATUS_FAILURE",
+      "case_id": "L13",
+      "citation": "NOT_ASSESSED",
+      "core_ids": [],
+      "finding": "APPARATUS_FAILURE",
+      "gap_ids": [],
+      "grounding": "NOT_ASSESSED",
+      "reason": "Ledger structure or assessment integrity does not permit reduction.",
+      "witness_ids": []
+    },
+    {
+      "action": "STOP",
+      "apertures": {
+        "N": "NOT_ASSESSED",
+        "P": "NOT_ASSESSED",
+        "Q": "NOT_ASSESSED"
+      },
+      "assessment_status": "APPARATUS_FAILURE",
+      "case_id": "L14",
+      "citation": "NOT_ASSESSED",
+      "core_ids": [],
+      "finding": "APPARATUS_FAILURE",
+      "gap_ids": [],
+      "grounding": "NOT_ASSESSED",
+      "reason": "Ledger structure or assessment integrity does not permit reduction.",
+      "witness_ids": []
+    },
+    {
+      "action": "HOLD_FOR_CITATION",
+      "apertures": {
+        "N": "SUPPORTED",
+        "P": "SUPPORTED",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L15",
+      "citation": "QUOTE_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "CITATION_SPAN_INSUFFICIENCY",
+      "gap_ids": [],
+      "grounding": "FULL_BODY_SUPPORT",
+      "reason": "Packet BODY supports all conditions; the citation is insufficient.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "PROPOSE_CORE_WITH_GAP",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L16",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [
+        "v0",
+        "v1"
+      ],
+      "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core retains BODY-supported obligations; all guards hold and gaps are explicit.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "KEEP_FULL",
+      "apertures": {
+        "N": "SUPPORTED",
+        "P": "SUPPORTED",
+        "Q": "SUPPORTED"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L17",
+      "citation": "SUFFICIENT",
+      "core_ids": [],
+      "finding": "FULL_BODY_SUPPORT",
+      "gap_ids": [],
+      "grounding": "FULL_BODY_SUPPORT",
+      "reason": "All material obligations have packet BODY and sufficient quote support.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "PROPOSE_CORE_WITH_GAP",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L18",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [
+        "v0",
+        "v1"
+      ],
+      "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core retains BODY-supported obligations; all guards hold and gaps are explicit.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "PROPOSE_CORE_WITH_GAP",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L19",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [
+        "v0",
+        "v1"
+      ],
+      "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core retains BODY-supported obligations; all guards hold and gaps are explicit.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "PROPOSE_CORE_WITH_GAP",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L20",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [
+        "rho",
+        "sigma"
+      ],
+      "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+      "gap_ids": [
+        "tau"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core retains BODY-supported obligations; all guards hold and gaps are explicit.",
+      "witness_ids": [
+        "body-y"
+      ]
+    },
+    {
+      "action": "KEEP_FULL",
+      "apertures": {
+        "N": "SUPPORTED",
+        "P": "SUPPORTED",
+        "Q": "SUPPORTED"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L21",
+      "citation": "SUFFICIENT",
+      "core_ids": [],
+      "finding": "FULL_BODY_SUPPORT",
+      "gap_ids": [],
+      "grounding": "FULL_BODY_SUPPORT",
+      "reason": "All material obligations have packet BODY and sufficient quote support.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "HOLD_FOR_CITATION",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "SUPPORTED",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L22",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "CITATION_SPAN_INSUFFICIENCY",
+      "gap_ids": [],
+      "grounding": "FULL_BODY_SUPPORT",
+      "reason": "Packet BODY supports all conditions; the citation is insufficient.",
+      "witness_ids": [
+        "b0",
+        "b1"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L23",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "UNSAFE_DECOMPOSITION",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core fails safety, BODY support, gap coverage, or supported-content retention.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L24",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "UNSAFE_DECOMPOSITION",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core fails safety, BODY support, gap coverage, or supported-content retention.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L25",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "UNSAFE_DECOMPOSITION",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core fails safety, BODY support, gap coverage, or supported-content retention.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "WITHHOLD",
+      "apertures": {
+        "N": "INCONCLUSIVE",
+        "P": "INCONCLUSIVE",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "INCONCLUSIVE",
+      "case_id": "L26",
+      "citation": "INCONCLUSIVE",
+      "core_ids": [],
+      "finding": "INCONCLUSIVE",
+      "gap_ids": [],
+      "grounding": "INCONCLUSIVE",
+      "reason": "An authorized packet BODY assessment is ambiguous; no claim is emitted.",
+      "witness_ids": [
+        "b0"
+      ]
+    },
+    {
+      "action": "REJECT_COMPLETE",
+      "apertures": {
+        "N": "SUPPORTED",
+        "P": "UNSUPPORTED",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L27",
+      "citation": "QUOTE_INSUFFICIENT",
+      "core_ids": [],
+      "finding": "CONTRADICTED_CLAIM",
+      "gap_ids": [],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Packet BODY contradicts a material obligation; no trimming is permitted.",
+      "witness_ids": [
+        "b0",
+        "b1"
+      ]
+    },
+    {
+      "action": "PROPOSE_CORE_WITH_GAP",
+      "apertures": {
+        "N": "OVER_BROAD",
+        "P": "OVER_BROAD",
+        "Q": "OVER_BROAD"
+      },
+      "assessment_status": "COMPLETE",
+      "case_id": "L28",
+      "citation": "NOMINATION_INSUFFICIENT",
+      "core_ids": [
+        "v0",
+        "v1"
+      ],
+      "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+      "gap_ids": [
+        "v2"
+      ],
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "reason": "Core retains BODY-supported obligations; all guards hold and gaps are explicit.",
+      "witness_ids": [
+        "b0"
+      ]
+    }
+  ],
+  "schema_version": "qualifier-grounding-submission/v1"
+}

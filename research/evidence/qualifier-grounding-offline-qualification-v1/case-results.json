@@ -1,0 +1,478 @@
+{
+  "L01": {
+    "action": "KEEP_FULL",
+    "differences": {
+      "core_ids": {
+        "actual": [],
+        "expected": [
+          "v0",
+          "v1",
+          "v2"
+        ]
+      }
+    },
+    "finding": "FULL_BODY_SUPPORT",
+    "match": false
+  },
+  "L02": {
+    "action": "PROPOSE_CORE_WITH_GAP",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      }
+    },
+    "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+    "match": false
+  },
+  "L03": {
+    "action": "HOLD_FOR_CITATION",
+    "differences": {
+      "core_ids": {
+        "actual": [],
+        "expected": [
+          "v0",
+          "v1",
+          "v2"
+        ]
+      }
+    },
+    "finding": "CITATION_SPAN_INSUFFICIENCY",
+    "match": false
+  },
+  "L04": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "UNSAFE_DECOMPOSITION",
+    "match": false
+  },
+  "L05": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "UNSAFE_DECOMPOSITION",
+    "match": false
+  },
+  "L06": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "UNSAFE_DECOMPOSITION",
+    "match": false
+  },
+  "L07": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "NO_SUPPORTED_CORE",
+    "match": false
+  },
+  "L08": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "CONTRADICTED_CLAIM",
+    "match": false
+  },
+  "L09": {
+    "action": "WITHHOLD",
+    "differences": {},
+    "finding": "INCONCLUSIVE",
+    "match": true
+  },
+  "L10": {
+    "action": "WITHHOLD",
+    "differences": {},
+    "finding": "INCONCLUSIVE",
+    "match": true
+  },
+  "L11": {
+    "action": "WITHHOLD",
+    "differences": {
+      "apertures": {
+        "actual": {
+          "N": "OVER_BROAD",
+          "P": "OVER_BROAD",
+          "Q": "OVER_BROAD"
+        },
+        "expected": {
+          "N": "INCONCLUSIVE",
+          "P": "INCONCLUSIVE",
+          "Q": "INCONCLUSIVE"
+        }
+      },
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "INCONCLUSIVE"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "grounding": {
+        "actual": "PACKET_LEVEL_GROUNDING_DEFECT",
+        "expected": "INCONCLUSIVE"
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "INCONCLUSIVE",
+    "match": false
+  },
+  "L12": {
+    "action": "STOP",
+    "differences": {},
+    "finding": "APPARATUS_FAILURE",
+    "match": true
+  },
+  "L13": {
+    "action": "STOP",
+    "differences": {},
+    "finding": "APPARATUS_FAILURE",
+    "match": true
+  },
+  "L14": {
+    "action": "STOP",
+    "differences": {},
+    "finding": "APPARATUS_FAILURE",
+    "match": true
+  },
+  "L15": {
+    "action": "HOLD_FOR_CITATION",
+    "differences": {
+      "core_ids": {
+        "actual": [],
+        "expected": [
+          "v0",
+          "v1",
+          "v2"
+        ]
+      }
+    },
+    "finding": "CITATION_SPAN_INSUFFICIENCY",
+    "match": false
+  },
+  "L16": {
+    "action": "PROPOSE_CORE_WITH_GAP",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      }
+    },
+    "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+    "match": false
+  },
+  "L17": {
+    "action": "KEEP_FULL",
+    "differences": {
+      "core_ids": {
+        "actual": [],
+        "expected": [
+          "v0",
+          "v1",
+          "v2"
+        ]
+      }
+    },
+    "finding": "FULL_BODY_SUPPORT",
+    "match": false
+  },
+  "L18": {
+    "action": "PROPOSE_CORE_WITH_GAP",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      }
+    },
+    "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+    "match": false
+  },
+  "L19": {
+    "action": "PROPOSE_CORE_WITH_GAP",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      }
+    },
+    "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+    "match": false
+  },
+  "L20": {
+    "action": "PROPOSE_CORE_WITH_GAP",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      }
+    },
+    "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+    "match": false
+  },
+  "L21": {
+    "action": "KEEP_FULL",
+    "differences": {
+      "core_ids": {
+        "actual": [],
+        "expected": [
+          "v0",
+          "v1",
+          "v2"
+        ]
+      }
+    },
+    "finding": "FULL_BODY_SUPPORT",
+    "match": false
+  },
+  "L22": {
+    "action": "HOLD_FOR_CITATION",
+    "differences": {
+      "core_ids": {
+        "actual": [],
+        "expected": [
+          "v0",
+          "v1",
+          "v2"
+        ]
+      }
+    },
+    "finding": "CITATION_SPAN_INSUFFICIENCY",
+    "match": false
+  },
+  "L23": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "UNSAFE_DECOMPOSITION",
+    "match": false
+  },
+  "L24": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "UNSAFE_DECOMPOSITION",
+    "match": false
+  },
+  "L25": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      },
+      "gap_ids": {
+        "actual": [
+          "v2"
+        ],
+        "expected": []
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "UNSAFE_DECOMPOSITION",
+    "match": false
+  },
+  "L26": {
+    "action": "WITHHOLD",
+    "differences": {
+      "apertures": {
+        "actual": {
+          "N": "INCONCLUSIVE",
+          "P": "INCONCLUSIVE",
+          "Q": "OVER_BROAD"
+        },
+        "expected": {
+          "N": "INCONCLUSIVE",
+          "P": "INCONCLUSIVE",
+          "Q": "INCONCLUSIVE"
+        }
+      },
+      "witness_ids": {
+        "actual": [
+          "b0"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "INCONCLUSIVE",
+    "match": false
+  },
+  "L27": {
+    "action": "REJECT_COMPLETE",
+    "differences": {
+      "action": {
+        "actual": "REJECT_COMPLETE",
+        "expected": "WITHHOLD"
+      },
+      "apertures": {
+        "actual": {
+          "N": "SUPPORTED",
+          "P": "UNSUPPORTED",
+          "Q": "OVER_BROAD"
+        },
+        "expected": {
+          "N": "INCONCLUSIVE",
+          "P": "INCONCLUSIVE",
+          "Q": "INCONCLUSIVE"
+        }
+      },
+      "assessment_status": {
+        "actual": "COMPLETE",
+        "expected": "INCONCLUSIVE"
+      },
+      "citation": {
+        "actual": "QUOTE_INSUFFICIENT",
+        "expected": "INCONCLUSIVE"
+      },
+      "finding": {
+        "actual": "CONTRADICTED_CLAIM",
+        "expected": "INCONCLUSIVE"
+      },
+      "grounding": {
+        "actual": "PACKET_LEVEL_GROUNDING_DEFECT",
+        "expected": "INCONCLUSIVE"
+      },
+      "witness_ids": {
+        "actual": [
+          "b0",
+          "b1"
+        ],
+        "expected": []
+      }
+    },
+    "finding": "CONTRADICTED_CLAIM",
+    "match": false
+  },
+  "L28": {
+    "action": "PROPOSE_CORE_WITH_GAP",
+    "differences": {
+      "citation": {
+        "actual": "NOMINATION_INSUFFICIENT",
+        "expected": "QUOTE_INSUFFICIENT"
+      }
+    },
+    "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+    "match": false
+  }
+}

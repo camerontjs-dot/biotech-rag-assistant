@@ -1,0 +1,217 @@
+{
+  "candidate_source_review": "REQUIRED_SEPARATELY",
+  "findings": [
+    {
+      "candidate_action": "KEEP_FULL",
+      "case_id": "L01",
+      "different_fields": [
+        "core_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "PROPOSE_CORE_WITH_GAP",
+      "case_id": "L02",
+      "different_fields": [
+        "citation"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "HOLD_FOR_CITATION",
+      "case_id": "L03",
+      "different_fields": [
+        "core_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L04",
+      "different_fields": [
+        "citation",
+        "gap_ids",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L05",
+      "different_fields": [
+        "citation",
+        "gap_ids",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L06",
+      "different_fields": [
+        "citation",
+        "gap_ids",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L07",
+      "different_fields": [
+        "citation",
+        "gap_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L08",
+      "different_fields": [
+        "citation",
+        "gap_ids",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "WITHHOLD",
+      "case_id": "L11",
+      "different_fields": [
+        "apertures",
+        "citation",
+        "gap_ids",
+        "grounding",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "HOLD_FOR_CITATION",
+      "case_id": "L15",
+      "different_fields": [
+        "core_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "PROPOSE_CORE_WITH_GAP",
+      "case_id": "L16",
+      "different_fields": [
+        "citation"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "KEEP_FULL",
+      "case_id": "L17",
+      "different_fields": [
+        "core_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "PROPOSE_CORE_WITH_GAP",
+      "case_id": "L18",
+      "different_fields": [
+        "citation"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "PROPOSE_CORE_WITH_GAP",
+      "case_id": "L19",
+      "different_fields": [
+        "citation"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "PROPOSE_CORE_WITH_GAP",
+      "case_id": "L20",
+      "different_fields": [
+        "citation"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "KEEP_FULL",
+      "case_id": "L21",
+      "different_fields": [
+        "core_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "HOLD_FOR_CITATION",
+      "case_id": "L22",
+      "different_fields": [
+        "core_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L23",
+      "different_fields": [
+        "citation",
+        "gap_ids",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L24",
+      "different_fields": [
+        "citation",
+        "gap_ids",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L25",
+      "different_fields": [
+        "citation",
+        "gap_ids",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "WITHHOLD",
+      "case_id": "L26",
+      "different_fields": [
+        "apertures",
+        "witness_ids"
+      ],
+      "unsafe_support": false
+    },
+    {
+      "candidate_action": "REJECT_COMPLETE",
+      "case_id": "L27",
+      "different_fields": [
+        "action",
+        "apertures",
+        "assessment_status",
+        "citation",
+        "finding",
+        "grounding",
+        "witness_ids"
+      ],
+      "unsafe_support": true
+    },
+    {
+      "candidate_action": "PROPOSE_CORE_WITH_GAP",
+      "case_id": "L28",
+      "different_fields": [
+        "citation"
+      ],
+      "unsafe_support": false
+    }
+  ],
+  "outcome": "FALSIFIED",
+  "semantic_input_validity": "NOT_DETERMINED_BY_THIS_SCORER"
+}
