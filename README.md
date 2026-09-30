@@ -158,7 +158,4 @@ Regenerate and parity-check the static demo (requires Node):
 
 ## License
 
-Copyright © 2026 Cameron Sanderson. **All rights reserved — source-available, not open-source.**
-The repository is public so the synthetic demo can be shared; no license to reuse, copy, or
-modify the code is granted. The committed corpus is synthetic and contains no real, client, or
-regulated records. See [`LICENSE`](LICENSE).
+MIT — see `LICENSE`. The committed corpus is synthetic and contains no real, client, or regulated records.
