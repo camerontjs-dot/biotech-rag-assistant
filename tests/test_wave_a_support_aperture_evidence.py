@@ -65,6 +65,17 @@ class EvidenceCustodyTests(unittest.TestCase):
         with self.assertRaisesRegex(checker.EvidenceError, "duplicate case identity"):
             checker.unique_rows([{"case_id": "A07"}, {"case_id": "A07"}])
 
+    def test_missing_historical_decision_authority_fails_without_current_fallback(self) -> None:
+        missing = Path(self.temporary.name) / "missing-decisions.md"
+        with self.assertRaises(FileNotFoundError):
+            checker.check_evidence(self.evidence, historical_decisions=missing)
+
+    def test_current_decisions_cannot_replace_pinned_historical_authority(self) -> None:
+        changed = Path(self.temporary.name) / "changed-decisions.md"
+        changed.write_bytes(checker.HISTORICAL_DECISIONS.read_bytes() + b"\nChanged ADR.\n")
+        with self.assertRaisesRegex(checker.EvidenceError, "repository authority drift: DECISIONS"):
+            checker.check_evidence(self.evidence, historical_decisions=changed)
+
 
 if __name__ == "__main__":
     unittest.main()

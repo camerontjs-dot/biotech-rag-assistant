@@ -16,6 +16,7 @@ from biotech_rag_assistant.evidence_packet import EvidencePacket, packet_identit
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_EVIDENCE = ROOT / "research/evidence/wave-a-support-aperture-v1"
+HISTORICAL_DECISIONS = ROOT / "research/source-authority/wave-a-pr17/DECISIONS.md"
 CASE_IDS = ("A07-balance-weight-count", "A08-line-clearance-signatories")
 FROZEN_FILES = {
     "generation-freeze.json",
@@ -76,7 +77,11 @@ def unique_rows(rows: list[dict]) -> dict[str, dict]:
     return keyed
 
 
-def check_evidence(evidence: Path, repository: Path = ROOT) -> dict:
+def check_evidence(
+    evidence: Path,
+    repository: Path = ROOT,
+    historical_decisions: Path = HISTORICAL_DECISIONS,
+) -> dict:
     manifest_bytes = (evidence / "evidence-manifest.json").read_bytes()
     manifest = json.loads(manifest_bytes)
     require(set(manifest["files"]) == ALLOWED_FILES, "evidence file allowlist mismatch")
@@ -95,7 +100,12 @@ def check_evidence(evidence: Path, repository: Path = ROOT) -> dict:
             require(digest == ANCHOR_HASHES[name], f"first-run anchor mismatch: {name}")
         blobs[name] = data
     for name, pin in manifest["repository_authority_sha256"].items():
-        require(sha256((repository / name).read_bytes()) == pin,
+        # DECISIONS.md is temporal authority: this receipt pins PR #17's
+        # decision bytes, rather than later accepted ADRs in the working tree.
+        # No fallback to the current file is allowed if the archive is absent.
+        source = historical_decisions if name == "DECISIONS.md" else repository / name
+        require(not source.is_symlink(), f"symlink repository authority: {name}")
+        require(sha256(source.read_bytes()) == pin,
                 f"repository authority drift: {name}")
 
     def record(name: str) -> dict:
@@ -178,6 +188,7 @@ def check_evidence(evidence: Path, repository: Path = ROOT) -> dict:
         "status": "PASS_PRESERVED_EVIDENCE_BINDINGS",
         "evidence_manifest_sha256": sha256(manifest_bytes),
         "verified_preserved_file_count": len(blobs),
+        "historical_decisions_sha256": manifest["repository_authority_sha256"]["DECISIONS.md"],
         "new_model_calls": 0, "generation_or_gate_replays": 0,
         "semantic_adjudication": "NOT_PERFORMED_BY_CHECKER",
         "observations": observations,
