@@ -2,8 +2,9 @@
 
 The transport layer (`biotech_rag_assistant.api`) exposes the existing CLI core over HTTP
 without changing any core logic. Routes reuse the same core functions and preserve the CLI JSON
-shapes where those commands emit JSON; `/validate-corpus` adds `valid`, and `/answer` adds the
-advisory `review_recommendation` object. This is enforced by parity tests in `tests/test_api.py`,
+shapes where those commands emit JSON; `/validate-corpus` adds `valid`, `/answer` adds the
+advisory `review_recommendation` object, and `/evidence-packet` mirrors the deterministic
+`inspect-packet` authority-boundary record. This is enforced by parity tests in `tests/test_api.py`,
 not by inspection. See ADR-010 in `DECISIONS.md` for the decision record.
 
 ## Running the service
@@ -31,8 +32,8 @@ default corpus allowlist is `synthetic=examples/synthetic-controlled-docs`.
 
 Every non-health request receives a uuid4 request id, returned as the `X-Request-ID` response
 header and written to one structured audit record: timestamp, request id, route, method, corpus
-name, query, a result summary (hit chunk ids, outcome, citation validity, review recommendation),
-and status code. Records go to Python logging and, when `BIOTECH_RAG_AUDIT_LOG` is set, are
+name, query, a result summary (hit chunk ids, packet identity, outcome, citation validity, review
+recommendation), and status code. Records go to Python logging and, when `BIOTECH_RAG_AUDIT_LOG` is set, are
 appended as JSON lines to that path.
 
 ## Configuration (environment variables)
@@ -57,6 +58,7 @@ route that takes it and defaults to `BIOTECH_RAG_DEFAULT_CORPUS`.
 | `GET /health` | — | — | `{status, version, corpora:[names], default_corpus}` | — |
 | `POST /validate-corpus` | `validate-corpus` | `{corpus?}` | `IngestReport` fields + `valid` (200 even when `valid:false`) | 401, 404 |
 | `POST /retrieve` | `retrieve --json` | `{query, top_k=5, corpus?}` | `{query, retrievable_documents, hits:[…]}` | 401, 404, 422 |
+| `POST /evidence-packet` | `inspect-packet` | `{query, top_k=3, max_items?, max_tokens=2000, expand_section=false, corpus?}` | deterministic EvidencePacket v1 record | 401, 404, 422 |
 | `POST /answer` | `answer` | `{query, top_k=3, corpus?}` | answer record **plus** `review_recommendation` | 401, 404, 422, 500 |
 | `POST /validate-citations` | `validate-citations --json` | `{retrieved_results, answer_fixture}` | citation result (200 even when invalid) | 401, 422 |
 | `POST /evaluate` | `evaluate --json` | `{suite, corpus?}` | trust-layer report | 401, 404, 422 |
@@ -66,13 +68,17 @@ Notes:
 1. `/validate-corpus` builds its response dict explicitly (`IngestReport` has no `to_cli_record()`
    and `valid` is a property). It reports the result and returns 200 even when `valid` is false,
    mirroring the CLI (which reports, then exits nonzero).
-2. `/answer` returns the answer record from `to_cli_record()` plus a sibling
+2. `/evidence-packet` runs the same maintained BM25 retrieval and packet builder as the CLI. Its
+   `ep1:` identity excludes raw scores and ranks, but includes source identities, normalized query,
+   retrieval configuration, exclusions and evidence budget. It is inspection only; no generation
+   occurs.
+3. `/answer` returns the answer record from `to_cli_record()` plus a sibling
    `review_recommendation` object (below). Parity tests compare the response **minus that key**
    against the CLI `answer` output.
-3. `/validate-citations` parses the two JSON payloads the CLI reads from files
+4. `/validate-citations` parses the two JSON payloads the CLI reads from files
    (`RetrievedResultsPayload`, `AnswerFixture`) inline and calls the same validator. It returns the
    failure result with 200 for a bad fixture; it does not 500.
-4. `/evaluate` parses the request `suite` into the existing `EvaluationSuite` and passes the
+5. `/evaluate` parses the request `suite` into the existing `EvaluationSuite` and passes the
    server-bound corpus path into `run_evaluation_suite`. No server-side report files are written.
 
 ## Review-routing mini-spec

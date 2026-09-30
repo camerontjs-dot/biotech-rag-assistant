@@ -4,9 +4,9 @@
 
 A controlled-document retrieval pilot for regulated industries (pharma, biotech, CRO, cosmetics/OTC) that **builds the trust layer before the model**. Most RAG demos generate first and bolt citations on afterward; this inverts the order — status gating, provenance, refusal, an audit log, and an evaluation harness all come first, and any LLM stays *behind* that boundary.
 
-The current slice is deliberately narrow and fully deterministic: it validates document metadata and source hashes (fail-closed), gates retrieval to `Approved`/`Effective` documents, chunks source text with stable IDs and **exact-span provenance** (a citation's quote is the source text at `raw_text[char_start:char_end]`), ranks with BM25 behind a lexical refusal gate, and assembles extractive answers whose citations must resolve to retrieved chunks.
+The current slice is deliberately narrow and fully deterministic: it validates document metadata and source hashes (fail-closed), gates retrieval to `Approved`/`Effective` documents, chunks source text with stable IDs and **exact-span provenance** (a citation's quote is the source text at `raw_text[char_start:char_end]`), ranks with BM25 behind a lexical refusal gate, assembles a content-addressed `EvidencePacket` before any future generation boundary, and keeps the existing answer path extractive with citations that must resolve to retrieved chunks.
 
-The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (18 ADRs). The Python core is exercised by 113 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
+The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (19 ADRs). The Python core is exercised by 127 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
 
 ## What this is and is not
 
@@ -35,6 +35,9 @@ python3.11 -m venv .venv
   --query "viable excursion affected product lots immediate containment" \
   --top-k 3 \
   --json
+.venv/bin/biotech-rag inspect-packet examples/synthetic-controlled-docs \
+  --query "viable excursion affected product lots immediate containment" \
+  --top-k 3
 .venv/bin/biotech-rag answer examples/synthetic-controlled-docs \
   --query "viable excursion affected product lots immediate containment" \
   --top-k 2
@@ -56,7 +59,8 @@ Expected behavior:
 - the public synthetic corpus validates cleanly;
 - approved and effective documents enter retrieval;
 - draft and obsolete documents are excluded from retrieval context;
-- JSON output includes `chunk_id`, `doc_id`, `source_hash`, status, version, and source span.
+- JSON retrieval output includes `chunk_id`, `doc_id`, `source_hash`, status, version, and source span;
+- `inspect-packet` emits the deterministic `ep1:` evidence boundary, with admitted source identities, mechanical exclusions, evidence budget, and retrieval diagnostics kept separate from the identity;
 - answer output includes `outcome`, copied retrieved spans, structured citations, retrieved chunk metadata, and citation-validation results;
 - citation checks report `citation_resolves_to_retrieved_chunk`, which means only that a cited `chunk_id` appeared in retrieved results;
 - the trust-layer evaluation suite reports `trust_layer_status: pass` and `case_pass_rate: 24/24`.
@@ -73,6 +77,8 @@ full contract, security posture, and environment variables, and ADR-010 for the 
 # in another shell:
 curl -s localhost:8000/health
 curl -s localhost:8000/retrieve -H 'content-type: application/json' \
+  -d '{"query": "viable excursion affected product lots immediate containment", "top_k": 1}'
+curl -s localhost:8000/evidence-packet -H 'content-type: application/json' \
   -d '{"query": "viable excursion affected product lots immediate containment", "top_k": 1}'
 curl -s localhost:8000/answer -H 'content-type: application/json' \
   -d '{"query": "viable excursion affected product lots immediate containment", "top_k": 1}'
@@ -91,15 +97,15 @@ The current code ships:
 - client-corpus onboarding CLI that writes a normalized corpus plus JSON and Markdown coverage reports;
 - fail-closed metadata and source-hash validation, including a one-retrievable-version-per-`doc_id` invariant (ADR-013);
 - deterministic paragraph chunking with stable chunk IDs;
-- shared `RetrievalConfig` used by retrieval, evaluation, and answer assembly;
+- shared `RetrievalConfig` used by retrieval, evaluation, packet assembly, and answer assembly;
 - BM25 retrieval over approved/effective chunks only, with a lexical relevance gate that refuses off-topic questions instead of copying loosely-related passages (ADR-012);
 - a refusal explanation that names any held-out (Draft/Obsolete/Superseded) passage a status-blind run of the same query would have answered from, display-only and never evidence (ADR-018);
-- CLI surfaces for corpus validation, retrieval, deterministic extractive answers, citation validation, and evaluation, plus a demo chat UI (`biotech-rag demo`) that serves a trust-forward page over the `/answer` contract;
-- a FastAPI pure-transport layer (`biotech-rag serve`) exposing the same five operations plus `/health`, with a server-bound corpus allowlist, optional API-key auth, per-request audit records, and an advisory review-routing signal on `/answer`;
+- CLI surfaces for corpus validation, retrieval, deterministic `EvidencePacket` inspection, deterministic extractive answers, citation validation, and evaluation, plus a demo chat UI (`biotech-rag demo`) that serves a trust-forward page over the `/answer` contract;
+- a FastAPI pure-transport layer (`biotech-rag serve`) exposing the maintained operations plus `/health`, including `/evidence-packet` parity with the CLI, a server-bound corpus allowlist, optional API-key auth, per-request audit records, and an advisory review-routing signal on `/answer`;
 - structural citation-resolution validation over hand-written answer fixtures;
 - a 24-case trust-layer evaluation suite (supported retrieval, refusal, stale-document, current-version, and citation traps), plus a separate 13-case natural-language query suite (on-topic answer, off-topic refusal);
 - Markdown and JSON trust-layer reports with corpus/config metadata, metrics, a case table, and explicit limits;
-- tests for status filtering, malformed metadata, deterministic ranking, unsupported queries, extractive answers, citation resolution, report writing, and JSON output.
+- tests for status filtering, malformed metadata, deterministic ranking, packet identity/admission, CLI/API packet parity, unsupported queries, extractive answers, citation resolution, report writing, and JSON output.
 
 Deferred work:
 
@@ -127,6 +133,10 @@ Known gap: a near-miss question, whose topic the corpus covers but whose fact it
   --query "viable excursion affected product lots immediate containment" \
   --top-k 1 \
   --json
+.venv/bin/biotech-rag inspect-packet \
+  examples/synthetic-controlled-docs \
+  --query "viable excursion affected product lots immediate containment" \
+  --top-k 1
 .venv/bin/biotech-rag answer \
   examples/synthetic-controlled-docs \
   --query "viable excursion affected product lots immediate containment" \
