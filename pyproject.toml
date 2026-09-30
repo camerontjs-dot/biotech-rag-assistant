@@ -12,7 +12,7 @@ keywords = ["retrieval", "rag", "provenance", "controlled-documents", "traceabil
 authors = [
     { name = "Cameron Sanderson" },
 ]
-license = "LicenseRef-Proprietary"
+license = "MIT"
 license-files = ["LICENSE"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
