@@ -1,0 +1,37 @@
+{
+  "schema_version": "qualifier-grounding-preparation-candidate/v2",
+  "candidate_id": "qualifier-grounding-offline-qualification-v2-preparation",
+  "product_line": "biotech-rag-assistant/offline-ledger-research",
+  "candidate_kind": "PREPARATION_PACKAGE; not a reducer",
+  "source_branch": "research/qualifier-grounding-offline-qualification-v2",
+  "source_commit": "1fc2b13ea6cd50bb2264e1347583c8322e7dcd2e",
+  "source_tree": "cd9a0acfd45f7ba2eb4607ee0031b69239b82c8a",
+  "lifecycle_state": "frozen",
+  "advancement_readiness": "TERMINAL_PREPARATION_READY_FOR_SEPARATELY_AUTHORIZED_EXECUTION",
+  "included_scope": [
+    "frozen v2 normative contract",
+    "fresh independent-aperture authored acceptance artifacts",
+    "unchanged known regression binding",
+    "designed NOT_RUN experiment and minimal future implementation aperture",
+    "preparation checks/deviations/custody"
+  ],
+  "excluded_scope": [
+    "v2 reducer implementation/run",
+    "semantic assessor or generated claims",
+    "protected payloads and generation gates",
+    "CAL/ADR-018/production promotion/merge/release"
+  ],
+  "component_evidence": "Preparation schema/structure/custody only; checks.json",
+  "replay_evidence": "NOT_RUN",
+  "fresh_acceptance_execution": "NOT_RUN",
+  "external_inputs": [
+    "declared symbolic agent-authored assessments/expected hypotheses, needs-audit"
+  ],
+  "blockers": [
+    "No v2 reducer candidate exists; separate execution authorization and clean implementation context required."
+  ],
+  "non_claims": [
+    "No reducer qualification or arbitrary-prose semantic grounding.",
+    "No all-repository lint/CI PASS; raw frozen author tools retain style findings."
+  ]
+}
