@@ -46,7 +46,7 @@ Record the minimal unsupported proposition for every non-supported classificatio
 
 The successor must distinguish:
 
-- `CITATION_SPAN_INSUFFICICIENCY`: authorized nomination/packet evidence supports the claim, but the selected quote does not;
+- `CITATION_SPAN_INSUFFICIENCY`: authorized nomination/packet evidence supports the claim, but the selected quote does not;
 - `PACKET_LEVEL_GROUNDING_DEFECT`: material claim content is absent from authorized packet evidence;
 - `MIXED`: the two cases exhibit different material failure types;
 - `APERTURE_AUTHORITY_UNDEFINED`: the result turns on an authority question not established by current repository contracts.
