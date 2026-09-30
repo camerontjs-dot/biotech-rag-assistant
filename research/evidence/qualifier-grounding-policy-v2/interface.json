@@ -1,0 +1,549 @@
+{
+  "schema_version": "qualifier-grounding-interface/v2",
+  "interface_id": "qualifier-grounding-interface-v2",
+  "policy_id": "qualifier-grounding-policy-v2",
+  "package_id": "qualifier-grounding-normative-v2",
+  "profile": {
+    "structural_type": "local-contract",
+    "lifecycle_scope": "workbench",
+    "owner_surface": "qualifier-grounding-policy-v2",
+    "authority": "operating-policy",
+    "privacy": "public-safe",
+    "volatility": "stable",
+    "source_of_truth": true,
+    "update_rule": "immutable after normative freeze; changed meaning requires new identity",
+    "binds": "future reducers and acceptance controls using qualifier-grounding-policy-v2",
+    "tier": "T0",
+    "check": "Preparation checks validate syntax/custody; reducer qualification is NOT_RUN. No semantic assessor is enforced.",
+    "escape": "Stop with APPARATUS_INVALID or a separately identified successor; never change frozen normative bytes to fit a candidate."
+  },
+  "candidate_entrypoint": "decide(assessment_ledger) -> decision_record; assessment_ledger is the case_id/ledger input object, no runtime repository dependency",
+  "input_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "ledger": {
+        "type": "object",
+        "properties": {
+          "coverage": {
+            "enum": [
+              "COMPLETE",
+              "UNKNOWN"
+            ]
+          },
+          "integrity": {
+            "enum": [
+              "VALID",
+              "UNKNOWN",
+              "CUSTODY_INVALID",
+              "ASSESSOR_UNAVAILABLE",
+              "EXECUTION_FAILURE"
+            ]
+          },
+          "obligations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "materiality": {
+                  "enum": [
+                    "MATERIAL",
+                    "UNKNOWN"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "materiality"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "witnesses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "surface": {
+                  "enum": [
+                    "BODY",
+                    "QUOTE",
+                    "QUERY",
+                    "HEADING",
+                    "METADATA"
+                  ]
+                },
+                "apertures": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "Q",
+                      "N",
+                      "P"
+                    ]
+                  },
+                  "uniqueItems": true
+                },
+                "entails": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "uniqueItems": true,
+                  "minItems": 0
+                },
+                "contradicts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "uniqueItems": true,
+                  "minItems": 0
+                },
+                "ambiguous": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "uniqueItems": true,
+                  "minItems": 0
+                }
+              },
+              "required": [
+                "id",
+                "surface",
+                "apertures",
+                "entails",
+                "contradicts",
+                "ambiguous"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "proposal": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "core_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "uniqueItems": true,
+                    "minItems": 0
+                  },
+                  "gap_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "uniqueItems": true,
+                    "minItems": 0
+                  },
+                  "body_witness_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "uniqueItems": true,
+                    "minItems": 0
+                  },
+                  "guards": {
+                    "type": "object",
+                    "properties": {
+                      "core_independently_supported": {
+                        "enum": [
+                          true,
+                          false,
+                          null
+                        ]
+                      },
+                      "bindings_preserved": {
+                        "enum": [
+                          true,
+                          false,
+                          null
+                        ]
+                      },
+                      "required_context_retained": {
+                        "enum": [
+                          true,
+                          false,
+                          null
+                        ]
+                      },
+                      "removal_independent": {
+                        "enum": [
+                          true,
+                          false,
+                          null
+                        ]
+                      },
+                      "no_missing_presupposition": {
+                        "enum": [
+                          true,
+                          false,
+                          null
+                        ]
+                      },
+                      "gap_explicit": {
+                        "enum": [
+                          true,
+                          false,
+                          null
+                        ]
+                      }
+                    },
+                    "required": [
+                      "core_independently_supported",
+                      "bindings_preserved",
+                      "required_context_retained",
+                      "removal_independent",
+                      "no_missing_presupposition",
+                      "gap_explicit"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "core_ids",
+                  "gap_ids",
+                  "body_witness_ids",
+                  "guards"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "required": [
+          "coverage",
+          "integrity",
+          "obligations",
+          "witnesses",
+          "proposal"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "case_id",
+      "ledger"
+    ],
+    "additionalProperties": false
+  },
+  "output_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "case_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "assessment_status": {
+        "enum": [
+          "COMPLETE",
+          "INCONCLUSIVE",
+          "APPARATUS_FAILURE"
+        ]
+      },
+      "apertures": {
+        "type": "object",
+        "properties": {
+          "Q": {
+            "enum": [
+              "SUPPORTED",
+              "OVER_BROAD",
+              "UNSUPPORTED",
+              "INCONCLUSIVE",
+              "NOT_ASSESSED"
+            ]
+          },
+          "N": {
+            "enum": [
+              "SUPPORTED",
+              "OVER_BROAD",
+              "UNSUPPORTED",
+              "INCONCLUSIVE",
+              "NOT_ASSESSED"
+            ]
+          },
+          "P": {
+            "enum": [
+              "SUPPORTED",
+              "OVER_BROAD",
+              "UNSUPPORTED",
+              "INCONCLUSIVE",
+              "NOT_ASSESSED"
+            ]
+          }
+        },
+        "required": [
+          "Q",
+          "N",
+          "P"
+        ],
+        "additionalProperties": false
+      },
+      "grounding": {
+        "enum": [
+          "FULL_BODY_SUPPORT",
+          "PACKET_LEVEL_GROUNDING_DEFECT",
+          "INCONCLUSIVE",
+          "NOT_ASSESSED"
+        ]
+      },
+      "citation": {
+        "enum": [
+          "SUFFICIENT",
+          "QUOTE_INSUFFICIENT",
+          "NOMINATION_INSUFFICIENT",
+          "INCONCLUSIVE",
+          "NOT_ASSESSED"
+        ]
+      },
+      "finding": {
+        "enum": [
+          "FULL_BODY_SUPPORT",
+          "UNSUPPORTED_MATERIAL_QUALIFIER",
+          "CITATION_SPAN_INSUFFICIENCY",
+          "UNSAFE_DECOMPOSITION",
+          "NO_SUPPORTED_CORE",
+          "CONTRADICTED_CLAIM",
+          "INCONCLUSIVE",
+          "APPARATUS_FAILURE"
+        ]
+      },
+      "action": {
+        "enum": [
+          "KEEP_FULL",
+          "HOLD_FOR_CITATION",
+          "PROPOSE_CORE_WITH_GAP",
+          "REJECT_COMPLETE",
+          "WITHHOLD",
+          "STOP"
+        ]
+      },
+      "core_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true,
+        "minItems": 0
+      },
+      "gap_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true,
+        "minItems": 0
+      },
+      "witness_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true,
+        "minItems": 0
+      },
+      "diagnostics": {
+        "type": "object",
+        "properties": {
+          "local_apertures": {
+            "type": "object",
+            "properties": {
+              "Q": {
+                "enum": [
+                  "SUPPORTED",
+                  "OVER_BROAD",
+                  "UNSUPPORTED",
+                  "INCONCLUSIVE",
+                  "NOT_ASSESSED"
+                ]
+              },
+              "N": {
+                "enum": [
+                  "SUPPORTED",
+                  "OVER_BROAD",
+                  "UNSUPPORTED",
+                  "INCONCLUSIVE",
+                  "NOT_ASSESSED"
+                ]
+              },
+              "P": {
+                "enum": [
+                  "SUPPORTED",
+                  "OVER_BROAD",
+                  "UNSUPPORTED",
+                  "INCONCLUSIVE",
+                  "NOT_ASSESSED"
+                ]
+              }
+            },
+            "required": [
+              "Q",
+              "N",
+              "P"
+            ],
+            "additionalProperties": false
+          },
+          "missing_packet_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 0
+          },
+          "contradicted_packet_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 0
+          },
+          "ambiguous_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 0
+          },
+          "conflicting_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 0
+          },
+          "considered_witness_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 0
+          },
+          "uncertainty_sources": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "COVERAGE_UNKNOWN",
+                "MATERIALITY_UNKNOWN",
+                "AUTHORIZED_AMBIGUITY",
+                "AUTHORIZED_CONFLICT",
+                "DECOMPOSITION_UNKNOWN"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "proposal_status": {
+            "enum": [
+              "NOT_ASSESSED",
+              "NOT_REQUIRED",
+              "ABSENT",
+              "SAFE",
+              "UNSAFE",
+              "UNKNOWN"
+            ]
+          },
+          "apparatus_code": {
+            "enum": [
+              "NONE",
+              "INVALID_INPUT",
+              "INTEGRITY_UNKNOWN",
+              "INTEGRITY_NOT_VALID"
+            ]
+          }
+        },
+        "required": [
+          "local_apertures",
+          "missing_packet_ids",
+          "contradicted_packet_ids",
+          "ambiguous_ids",
+          "conflicting_ids",
+          "considered_witness_ids",
+          "uncertainty_sources",
+          "proposal_status",
+          "apparatus_code"
+        ],
+        "additionalProperties": false
+      },
+      "reason": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "case_id",
+      "assessment_status",
+      "apertures",
+      "grounding",
+      "citation",
+      "finding",
+      "action",
+      "core_ids",
+      "gap_ids",
+      "witness_ids",
+      "diagnostics",
+      "reason"
+    ],
+    "additionalProperties": false
+  },
+  "referential_constraints": [
+    "Obligation IDs unique within obligations; witness IDs unique within witnesses. The two namespaces may overlap; case_id is a separate namespace.",
+    "All witness assessment IDs and proposal core/gap IDs refer to declared obligation IDs; proposal body_witness_ids refer to declared witness IDs. Arrays contain no duplicate IDs.",
+    "QUOTE apertures is exactly [Q]; BODY apertures is exactly [P] or [N,P] in either order. QUERY/HEADING/METADATA apertures is empty. A BODY witness cannot authorize Q, and a quote cannot authorize N/P.",
+    "Overlapping entails/contradicts/ambiguous sets are permitted to represent declared uncertainty/conflict; they are not automatically schema errors.",
+    "Malformed input must produce STOP/APPARATUS_FAILURE, never raise a semantic decision or silently discard malformed content. Recover case_id when it is a nonempty string; otherwise output case_id is null.",
+    "No unknown input/output/diagnostic fields, prose claim payloads, provider response, answer text or paths. No implicit coverage or guard defaults."
+  ],
+  "output_constraints": [
+    "All output ID and uncertainty-source arrays are sorted, duplicate-free. diagnostics identifiers follow policy; reason is a nonempty explanation but is not an exact-match field.",
+    "On schema-valid input, output case_id exactly equals input case_id. Only INVALID_INPUT may use null case_id when none is safely recoverable.",
+    "All listed fields are required; no optional authority-bearing output fields.",
+    "KEEP_FULL/HOLD_FOR_CITATION core_ids is exhaustive; PROPOSE_CORE_WITH_GAP uses exact safe partition and declared proposal support; REJECT_COMPLETE/WITHHOLD/STOP have all authoritative ID lists empty.",
+    "Global INCONCLUSIVE collapses all authoritative apertures/grounding/citation; locally descriptive findings may occur only in diagnostics.local_apertures."
+  ],
+  "submission_format": "JSON object with schema_version qualifier-grounding-submission/v2 and decisions list. Exact one decision per control; missing/duplicate/extra decisions or invalid decision schema is APPARATUS_INVALID.",
+  "scoring": "Compare every required decision field including diagnostics exactly, except reason contents. Output arrays must be canonical, so unsorted arrays are interface failures rather than hidden normalization. Report per-case failures and pair results separately; no average overrides a failure.",
+  "assessment_truth": "All entails/contradicts/ambiguous/materiality/coverage/guards are declared oracle-like assessments; preparation and reducer checks do not independently establish their semantics."
+}

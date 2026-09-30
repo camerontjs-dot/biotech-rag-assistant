@@ -1,0 +1,33 @@
+{
+  "schema_version": "qualifier-grounding-preparation-check/v2",
+  "phase": "NORMATIVE_BEFORE_CONTROL_AUTHOR",
+  "observed_at": "2026-09-30T20:09:56.891604+00:00",
+  "status": "PASS_STRUCTURAL_AND_SCHEMA_ONLY",
+  "checks": [
+    "policy/interface JSON parses",
+    "Draft 2020-12 input/output schema self-validation",
+    "eight consecutive precedence rows",
+    "all six action classes specified",
+    "six guards retained",
+    "uncertainty enums agree",
+    "nomination before quote deficiency explicit",
+    "diagnostics required"
+  ],
+  "normative_files": {
+    "research/evidence/qualifier-grounding-policy-v2/policy.json": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+    "research/evidence/qualifier-grounding-policy-v2/SCHEMA.md": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d",
+    "research/evidence/qualifier-grounding-policy-v2/CHANGES.md": "882785877c77fb9d599e6634ee87b348c03fec094d83904e40bc039fb97d62d4",
+    "research/evidence/qualifier-grounding-policy-v2/interface.json": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387"
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Darwin arm64"
+  },
+  "semantic_assessor": "NOT_IMPLEMENTED_OR_QUALIFIED",
+  "reducer_v2": "NOT_IMPLEMENTED",
+  "decisive_qualification": "NOT_RUN",
+  "fresh_controls": "NOT_AUTHORED_YET",
+  "project_model_provider_calls": 0,
+  "evaluator": "agent_llm design review plus deterministic schema checks",
+  "limits": "Preparation checks do not derive decisions, prove semantic truth, or qualify a reducer."
+}

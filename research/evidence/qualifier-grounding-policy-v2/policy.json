@@ -1,0 +1,282 @@
+{
+  "schema_version": "qualifier-grounding-policy/v2",
+  "policy_id": "qualifier-grounding-policy-v2",
+  "package_id": "qualifier-grounding-normative-v2",
+  "profile": {
+    "structural_type": "local-contract",
+    "lifecycle_scope": "workbench",
+    "owner_surface": "qualifier-grounding-policy-v2",
+    "authority": "operating-policy",
+    "privacy": "public-safe",
+    "volatility": "stable",
+    "source_of_truth": true,
+    "update_rule": "immutable after normative freeze; changed meaning requires new identity",
+    "binds": "future reducers and acceptance controls using qualifier-grounding-policy-v2",
+    "tier": "T0",
+    "check": "Preparation checks validate syntax/custody; reducer qualification is NOT_RUN. No semantic assessor is enforced.",
+    "escape": "Stop with APPARATUS_INVALID or a separately identified successor; never change frozen normative bytes to fit a candidate."
+  },
+  "scope": "Pure assessment_ledger -> decision_record; all semantic assessments are declared inputs. No answer text is authorized or emitted.",
+  "authority": "Only declared QUOTE witnesses for Q and declared BODY witnesses for N/P. Assessment declarations do not establish real-world semantic truth.",
+  "definitions": {
+    "M": "The set of all declared obligation IDs. On a COMPLETE determinate decision every obligation must have materiality MATERIAL. The interface deliberately has no nonmaterial obligation category.",
+    "Q": "Selected quote aperture. Authorized witnesses have surface QUOTE and include Q in apertures.",
+    "N": "Nominated citation BODY aperture. Authorized witnesses have surface BODY and include N in apertures; the same witnesses must also include P.",
+    "P": "Entire authorized packet BODY aperture. Authorized witnesses have surface BODY and include P in apertures.",
+    "E_a": "Union of entails IDs across authorized witnesses in aperture a.",
+    "C_a": "Union of contradicts IDs across authorized witnesses in aperture a.",
+    "A_a": "Union of ambiguous IDs across authorized witnesses in aperture a.",
+    "conflict_a": "E_a intersect C_a. Entailment and contradiction for the same obligation in the same authorized aperture is unresolved disagreement, within or across witnesses.",
+    "S": "E_P, the packet-supported obligation set, used for authorization only after all global uncertainty and packet contradictions have been excluded.",
+    "D": "M minus E_P. Diagnostic missing_packet_ids includes contradictions or ambiguity lacking entailment; it is not a safe removable set until a determinate safe projection is accepted.",
+    "opaque_identifiers": "Case, obligation and witness identifiers are opaque strings. Renaming by a bijection changes only echoed identifiers. Their wording, sorting position and record order have no semantic force.",
+    "absence": "A witness that does not mention an obligation is silent, not a contradictory assessment. Partial witnesses may combine by union.",
+    "cross_aperture": "Q may disagree with N/P without becoming BODY authority. Global uncertainty arises from ambiguity or entailment/contradiction overlap within an authorized aperture; mere missing Q/N support does not create uncertainty."
+  },
+  "local_aperture_aggregation": [
+    {
+      "priority": 1,
+      "condition": "A_a is nonempty or conflict_a is nonempty",
+      "value": "INCONCLUSIVE"
+    },
+    {
+      "priority": 2,
+      "condition": "C_a is nonempty",
+      "value": "UNSUPPORTED"
+    },
+    {
+      "priority": 3,
+      "condition": "E_a equals M",
+      "value": "SUPPORTED"
+    },
+    {
+      "priority": 4,
+      "condition": "E_a is nonempty",
+      "value": "OVER_BROAD"
+    },
+    {
+      "priority": 5,
+      "condition": "otherwise",
+      "value": "UNSUPPORTED"
+    }
+  ],
+  "local_aperture_note": "Local findings use the declared IDs even if materiality/coverage is unknown. They are provisional descriptive diagnostics only. Unauthorized witnesses never enter E/C/A or considered_witness_ids. M is nonempty by schema.",
+  "global_uncertainty": {
+    "sources": {
+      "COVERAGE_UNKNOWN": "coverage UNKNOWN",
+      "MATERIALITY_UNKNOWN": "any obligation has materiality UNKNOWN",
+      "AUTHORIZED_AMBIGUITY": "A_Q, A_N or A_P is nonempty",
+      "AUTHORIZED_CONFLICT": "conflict_Q, conflict_N or conflict_P is nonempty",
+      "DECOMPOSITION_UNKNOWN": "at least one null guard in an applicable proposal"
+    },
+    "body_disagreement": "A material authorized BODY witness entails an obligation and another contradicts it in a shared authorized aperture: AUTHORIZED_CONFLICT. Two partial non-conflicting witnesses do not create disagreement. Witness silence is not a negative assertion.",
+    "pure_contradiction": "C_P without any uncertainty or entailment/contradiction overlap is a determinate contradiction and rejects the complete claim. A claim cannot be rescued by trimming a contradicted obligation.",
+    "propagation": "Any source makes assessment_status INCONCLUSIVE, action WITHHOLD, finding INCONCLUSIVE; all three authoritative apertures, grounding and citation become INCONCLUSIVE; core_ids, gap_ids and witness_ids are empty.",
+    "diagnostic_exception": "diagnostics.local_apertures may retain SUPPORTED/OVER_BROAD/UNSUPPORTED locally descriptive findings. These are never authority to keep or emit a claim. No authoritative aperture may remain SUPPORTED on an INCONCLUSIVE decision.",
+    "integrity_uncertainty": "integrity UNKNOWN is apparatus uncertainty, precedes all semantic uncertainty, and requires STOP/APPARATUS_FAILURE with NOT_ASSESSED fields and cleared diagnostics except apparatus_code. It is never an ordinary WITHHOLD semantic decision."
+  },
+  "citation": {
+    "target": "Coverage of the original complete claim M, never coverage of a proposed smaller core.",
+    "precedence": [
+      {
+        "priority": 1,
+        "condition": "apparatus failure",
+        "value": "NOT_ASSESSED"
+      },
+      {
+        "priority": 2,
+        "condition": "global semantic uncertainty",
+        "value": "INCONCLUSIVE"
+      },
+      {
+        "priority": 3,
+        "condition": "local N is not SUPPORTED",
+        "value": "NOMINATION_INSUFFICIENT"
+      },
+      {
+        "priority": 4,
+        "condition": "local N is SUPPORTED and local Q is not SUPPORTED",
+        "value": "QUOTE_INSUFFICIENT"
+      },
+      {
+        "priority": 5,
+        "condition": "local N and local Q are SUPPORTED",
+        "value": "SUFFICIENT"
+      }
+    ],
+    "SUFFICIENT": "Both selected quote Q and nominated BODY N cover every obligation without ambiguity or contradiction. It says nothing independently about semantic truth.",
+    "QUOTE_INSUFFICIENT": "Nominated BODY N supports the complete claim, but selected quote Q does not. N implies P by schema; packet can remain FULL_BODY_SUPPORT.",
+    "NOMINATION_INSUFFICIENT": "Nominated BODY N does not support the complete claim. This takes precedence even if Q is full or both Q and N are incomplete. P may still fully support the claim using other BODY witnesses.",
+    "INCONCLUSIVE": "The decision is globally semantically unresolved. Raw Q/N states are diagnostics only.",
+    "NOT_ASSESSED": "Input/integrity apparatus failure prevented authoritative assessment.",
+    "separation": "P grounding never directly selects a citation enum. A packet defect may coexist with NOMINATION_INSUFFICIENT because N is independently deficient; citation is chosen from Q/N after the global gates, not from packet labels."
+  },
+  "proposal": {
+    "applicable": "Only after valid integrity and no base uncertainty, C_P empty, and 0 < size(E_P) < size(M). At this stage a non-null proposal is applicable; null proposal is absent. Proposals on full packet support, packet contradiction or zero supported packet obligations are NOT_REQUIRED, including their guard values.",
+    "unknown_precedence": "For an applicable proposal any null guard causes DECOMPOSITION_UNKNOWN before testing false guards or structural safety. Unknown does not become support merely because a different guard is false.",
+    "safe_requires": [
+      "All six guards are exactly true.",
+      "core_ids equals E_P and gap_ids equals M minus E_P, both nonempty, disjoint and exhaustive. Every supported material condition is retained; no unsupported content is silently discarded.",
+      "body_witness_ids is nonempty; every listed ID is an authorized P BODY witness and entails at least one core ID; union of their entails covers every core ID."
+    ],
+    "guard_fields": [
+      "core_independently_supported",
+      "bindings_preserved",
+      "required_context_retained",
+      "removal_independent",
+      "no_missing_presupposition",
+      "gap_explicit"
+    ],
+    "guards_are_declarations": "No reducer establishes bindings, presuppositions, independent removal or semantic safety; it verifies declared guards and structural coverage only.",
+    "unsafe": "An applicable proposal with no null guard but any false guard or failed safe requirement is UNSAFE. An absent proposal cannot authorize a projection.",
+    "schema_vs_safety": "Unknown references, duplicate identifiers, malformed enums/fields or illegal witness aperture assignments are input apparatus errors. Validly encoded but non-exhaustive, overlapping, empty, unsupported or unsuitable proposal partitions/witness sets are unsafe decomposition, not apparatus errors."
+  },
+  "decision_precedence": [
+    {
+      "priority": 1,
+      "condition": "input violates interface, integrity is UNKNOWN or integrity is other than VALID",
+      "status": "APPARATUS_FAILURE",
+      "action": "STOP",
+      "finding": "APPARATUS_FAILURE",
+      "grounding": "NOT_ASSESSED",
+      "citation": "NOT_ASSESSED",
+      "apertures": "all NOT_ASSESSED"
+    },
+    {
+      "priority": 2,
+      "condition": "any base uncertainty (coverage/materiality/authorized ambiguity/authorized conflict), or DECOMPOSITION_UNKNOWN in applicable proposal",
+      "status": "INCONCLUSIVE",
+      "action": "WITHHOLD",
+      "finding": "INCONCLUSIVE",
+      "grounding": "INCONCLUSIVE",
+      "citation": "INCONCLUSIVE",
+      "apertures": "all INCONCLUSIVE"
+    },
+    {
+      "priority": 3,
+      "condition": "C_P nonempty",
+      "status": "COMPLETE",
+      "action": "REJECT_COMPLETE",
+      "finding": "CONTRADICTED_CLAIM",
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "citation": "Q/N citation table",
+      "apertures": "local findings"
+    },
+    {
+      "priority": 4,
+      "condition": "E_P equals M and citation is SUFFICIENT",
+      "status": "COMPLETE",
+      "action": "KEEP_FULL",
+      "finding": "FULL_BODY_SUPPORT",
+      "grounding": "FULL_BODY_SUPPORT",
+      "citation": "SUFFICIENT",
+      "apertures": "local findings"
+    },
+    {
+      "priority": 5,
+      "condition": "E_P equals M and citation is deficient",
+      "status": "COMPLETE",
+      "action": "HOLD_FOR_CITATION",
+      "finding": "CITATION_SPAN_INSUFFICIENCY",
+      "grounding": "FULL_BODY_SUPPORT",
+      "citation": "Q/N citation table",
+      "apertures": "local findings"
+    },
+    {
+      "priority": 6,
+      "condition": "E_P empty",
+      "status": "COMPLETE",
+      "action": "REJECT_COMPLETE",
+      "finding": "NO_SUPPORTED_CORE",
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "citation": "Q/N citation table",
+      "apertures": "local findings"
+    },
+    {
+      "priority": 7,
+      "condition": "partial packet support and applicable SAFE proposal",
+      "status": "COMPLETE",
+      "action": "PROPOSE_CORE_WITH_GAP",
+      "finding": "UNSUPPORTED_MATERIAL_QUALIFIER",
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "citation": "Q/N citation table",
+      "apertures": "local findings"
+    },
+    {
+      "priority": 8,
+      "condition": "partial packet support and UNSAFE or absent proposal",
+      "status": "COMPLETE",
+      "action": "REJECT_COMPLETE",
+      "finding": "UNSAFE_DECOMPOSITION",
+      "grounding": "PACKET_LEVEL_GROUNDING_DEFECT",
+      "citation": "Q/N citation table",
+      "apertures": "local findings"
+    }
+  ],
+  "retained_fields": {
+    "core_ids": "All material obligation IDs retained in the authorized content. KEEP_FULL/HOLD_FOR_CITATION retain all M; PROPOSE_CORE_WITH_GAP retains exactly S. This field is not reserved for decomposed projections.",
+    "gap_ids": "Only PROPOSE_CORE_WITH_GAP records the explicit missing-content companion D attached to an accepted safe projection. Gap IDs are visible omissions, not assertions of their truth and not safe omissions on other actions.",
+    "witness_ids": "Only BODY P witnesses used as support for retained core_ids. For KEEP_FULL/HOLD_FOR_CITATION include every authorized P BODY witness whose entails intersects M. For PROPOSE_CORE_WITH_GAP include exactly the accepted proposal body_witness_ids. No QUOTE/QUERY/HEADING/METADATA ID appears here.",
+    "order": "All output identifier arrays are unique and sorted in lexicographic Unicode code-point order; input arrays are unordered. No minimal witness set is selected.",
+    "action_table": {
+      "KEEP_FULL": {
+        "core_ids": "all M",
+        "gap_ids": "empty",
+        "witness_ids": "all contributing authorized P BODY witnesses",
+        "output_authority": "complete content retained; selected citation sufficient"
+      },
+      "HOLD_FOR_CITATION": {
+        "core_ids": "all M",
+        "gap_ids": "empty",
+        "witness_ids": "all contributing authorized P BODY witnesses",
+        "output_authority": "complete BODY-supported content retained; publication/emission remains held for citation repair; no content trimmed"
+      },
+      "PROPOSE_CORE_WITH_GAP": {
+        "core_ids": "S",
+        "gap_ids": "D",
+        "witness_ids": "accepted proposal body_witness_ids",
+        "output_authority": "safe smaller proposal with mandatory explicit gap, original complete claim remains non-supported; no prose emitted"
+      },
+      "REJECT_COMPLETE": {
+        "core_ids": "empty",
+        "gap_ids": "empty",
+        "witness_ids": "empty",
+        "output_authority": "no complete claim or smaller projection authorized"
+      },
+      "WITHHOLD": {
+        "core_ids": "empty",
+        "gap_ids": "empty",
+        "witness_ids": "empty",
+        "output_authority": "no content authorized under global uncertainty"
+      },
+      "STOP": {
+        "core_ids": "empty",
+        "gap_ids": "empty",
+        "witness_ids": "empty",
+        "output_authority": "no semantic output assessed or authorized"
+      }
+    }
+  },
+  "diagnostics": {
+    "authority": "Every diagnostics field is descriptive and has zero retained-content authority. Diagnostics never override the action or authoritative aperture fields.",
+    "local_apertures": "Q/N/P local aggregation using M on valid-integrity ledgers, even when global uncertainty collapses authoritative fields.",
+    "missing_packet_ids": "sorted D (M minus E_P), on valid-integrity ledgers; missing entailment only, not a judgment of safe removability.",
+    "contradicted_packet_ids": "sorted C_P",
+    "ambiguous_ids": "sorted union of A_Q, A_N, A_P",
+    "conflicting_ids": "sorted union of conflict_Q, conflict_N, conflict_P",
+    "considered_witness_ids": "all authorized Q/N/P witnesses with at least one entails/contradicts/ambiguous assessment; unauthorized-surface and empty-assessment witnesses excluded",
+    "uncertainty_sources": "sorted names of all base sources plus DECOMPOSITION_UNKNOWN if applicable; empty on determinate decisions",
+    "proposal_status": "NOT_ASSESSED if apparatus failure or base uncertainty; NOT_REQUIRED if full support/packet contradiction/no supported core; ABSENT if applicable stage and proposal null; UNKNOWN if applicable and any null guard; SAFE or UNSAFE otherwise",
+    "apparatus_code": "NONE on valid-integrity schema-valid ledgers; INVALID_INPUT takes precedence over INTEGRITY_UNKNOWN, which takes precedence over INTEGRITY_NOT_VALID.",
+    "reject": "Preserve local findings, citation status, missing/contradicted/considered IDs and proposal status in diagnostics. Authoritative core/gap/witness lists remain empty.",
+    "withhold": "Preserve diagnostic local findings and all computable diagnostic IDs; authoritative aperture/grounding/citation fields are INCONCLUSIVE, retained lists empty.",
+    "stop": "Every diagnostic ID/source list empty, local_apertures all NOT_ASSESSED, proposal_status NOT_ASSESSED; apparatus_code records the failure. Do not turn untrusted ledger content into semantic diagnostics."
+  },
+  "non_claims": [
+    "No semantic assessor implementation or qualification; natural-language materiality, support, contradiction, bindings and decomposition safety remain unestablished.",
+    "No arbitrary-prose grounding, production grounding or maintained generation behavior promoted.",
+    "No new answer text, project model/provider calls, generation or gate replay, protected payload access, CAL integration, ADR-018 change, merge or release.",
+    "Finite future controls can qualify only this frozen tested ledger contract; correctness on all possible ledgers is not proven."
+  ],
+  "wave_b": "LOCKED"
+}
