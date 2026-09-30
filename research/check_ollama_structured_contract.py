@@ -14,8 +14,8 @@ from biotech_rag_assistant.evidence_packet import (
 )
 from biotech_rag_assistant.generation import synthesize_shadow
 from biotech_rag_assistant.ollama_generator import (
-    OllamaGenerator,
     SHADOW_GENERATION_PROMPT_SHA256,
+    OllamaGenerator,
 )
 from biotech_rag_assistant.retrieval import RetrievalConfig, run_retrieval
 
