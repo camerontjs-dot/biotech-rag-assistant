@@ -1,0 +1,54 @@
+{
+  "schema_version": "qualifier-grounding-publication-formatting/v2",
+  "initial_staged_diff_check_exit_code": 2,
+  "initial_findings": "seven diagnostic artifacts had extra trailing blank lines",
+  "checkpoint_committed_before_whitespace_result_was_gated": true,
+  "normalization": "Remove trailing blank lines only; keep one final newline. No diagnostic content, frozen policy, controls, expectations, author receipts or code altered. Original diagnostic bytes remain in exact committed checkpoint.",
+  "changes": [
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/archived-author-lint.stdout.txt",
+      "original_sha256": "c62e406eb7b7138020f3f73e6bc86525ed9469c62c74408b5a97c1d4e1971bc8",
+      "formatted_sha256": "9e3a9c5134da639f9648f6b9fd4e780a717f95a2ec720505ef558866c727277c",
+      "preserved_original_commit": "9d2703cc3092f82607f58edf4f057bf5b0225604"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/preregistration.stdout.txt",
+      "original_sha256": "2509eea4d2e2302e5e7c99ab5c5f7e7899d9fbad8bee5917a6e535a67ec43ec4",
+      "formatted_sha256": "797a22f13bcb5647980d53f1758755cd7867eb9e8c47db3bab0c05f1a48fe288",
+      "preserved_original_commit": "9d2703cc3092f82607f58edf4f057bf5b0225604"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/contracts.stdout.txt",
+      "original_sha256": "1b651b004bf28a9d1e4b2e71d28af4f22eea3a010deeb7c65f1f0cbf3d8e0d73",
+      "formatted_sha256": "2459f64c36a4bf98375809992139388bf55bf5fc70ed8a5b336fa08aa647411c",
+      "preserved_original_commit": "9d2703cc3092f82607f58edf4f057bf5b0225604"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/selftests.stdout.txt",
+      "original_sha256": "29b08767292f4afd0a6d9135884f985f5298f552f225379c29705678c6da5ef2",
+      "formatted_sha256": "c46a0dbc98f145c5390631610b4039fdaa64e4ed8b2ece83cd102c537f9a12a7",
+      "preserved_original_commit": "9d2703cc3092f82607f58edf4f057bf5b0225604"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/maintained-lint.stdout.txt",
+      "original_sha256": "98733c3446b52dc3e6b6943142b19a142025d9727521f6abc3783a20e4b6d3c6",
+      "formatted_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "preserved_original_commit": "9d2703cc3092f82607f58edf4f057bf5b0225604"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.txt",
+      "original_sha256": "14dc0b3583b6dee18cbdcda1a536ba77741caa340fae46f83cfeb3a718642e8e",
+      "formatted_sha256": "507ab1af30aa88e7da38d1811e71c5652656f0f74af6c8cbc3a79202a094ec9b",
+      "preserved_original_commit": "9d2703cc3092f82607f58edf4f057bf5b0225604"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-lint-first.txt",
+      "original_sha256": "fc1d159289c01ce50ac632fc374b5b7373c8d6564601bf1379a9e018f15c45fb",
+      "formatted_sha256": "5a2f1dcab23b8dd802428b98998c7ea3f2ab5b72985336bc1969fe0fd638ba09",
+      "preserved_original_commit": "9d2703cc3092f82607f58edf4f057bf5b0225604"
+    }
+  ],
+  "fresh_author_files_unchanged": true,
+  "normative_files_unchanged": true,
+  "reducer_calls": 0
+}

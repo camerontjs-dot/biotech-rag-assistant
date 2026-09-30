@@ -70,6 +70,10 @@
     {
       "kind": "inherited_publication_ci",
       "observation": "V1 hosted CI lint failure and its original receipt/correction remain preserved, without repairing v1. No all-repository CI PASS is claimed by this preparation."
+    },
+    {
+      "kind": "diagnostic_whitespace",
+      "observation": "Staged diff check exited 2 for seven extra EOF blank lines in diagnostic artifacts. The checkpoint was committed before that result was gated. Original bytes remain at 9d2703cc3092f82607f58edf4f057bf5b0225604; final unfrozen publication logs normalize terminal newlines only. No frozen or source-code bytes changed. See failures/diagnostic-formatting.json."
     }
   ],
   "material_contract_changes_after_normative_freeze": false,

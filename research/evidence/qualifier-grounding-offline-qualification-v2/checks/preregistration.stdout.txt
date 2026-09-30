@@ -10,4 +10,3 @@
   "project_model_provider_calls": 0,
   "limits": "Syntax/custody/authored pair consistency only; no decision derivation, candidate qualification or independent semantic truth."
 }
-

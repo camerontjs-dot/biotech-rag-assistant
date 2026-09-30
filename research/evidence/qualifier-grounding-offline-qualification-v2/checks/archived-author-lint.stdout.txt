@@ -106,4 +106,3 @@ Total output lines: 267
 /private/tmp/biotech-qualifier-offline-v2-20260930/research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py:16:107: UP017 [*] Use `datetime.UTC` alias
 Found 265 errors.
 [*] 7 fixable with the `--fix` option (2 hidden fixes can be enabled with the `--unsafe-fixes` option).
-
