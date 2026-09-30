@@ -227,3 +227,44 @@ Reasoning: The previous behavior unconditionally `shutil.rmtree`'d the output di
 Rejected alternatives: keep clobbering silently (the footgun); prompt interactively (breaks non-interactive and orchestrated use); write into the existing directory without clearing it (mixes stale and fresh sidecars, which the current-version and hash gates would then have to disentangle).
 
 Consequences: `tests/test_onboarding.py` covers refuse-without-force and overwrite-with-force; the shared `build/onboarded-synthetic-corpus` test and CLI paths pass `force=True` because they intentionally regenerate. No change to the report shape or the onboarding states.
+
+## ADR-018: Source-derived section headings are not proposition-level semantic support authority in EvidencePacket v1
+
+Status: proposed
+
+Decision: Under `EvidencePacket v1` (`ep1`), `RetrievalNomination.section_heading` is contextual retrieval/display metadata and may not, by itself, supply a material proposition missing from the cited body span.
+
+A generated claim is not semantically supported merely because its missing qualifier appears in `section_heading`. Under ep1, proposition-level support must come from source authority whose integrity is enforced at the generation boundary, such as the admitted cited body text or another explicitly admitted source span.
+
+This does not say headings are semantically meaningless. It says ep1 does not currently grant them sufficient downstream authority to carry a claim.
+
+Reasoning: PR #17 terminated `APERTURE_AUTHORITY_UNDEFINED` because A07's daily-check scope appears only in the source-derived heading `Daily check`. The current representation does not provide the integrity guarantees required to promote that field into semantic evidence:
+
+- ADR-016 deliberately keeps `DocumentChunk.text` equal to the exact body source span and uses `section_heading` for indexing/display context.
+- `RetrievalNomination.identity_tuple()` excludes `section_heading`.
+- `packet_id` therefore does not change when only the heading field changes.
+- `packet_identity_valid()` recomputes only the ep1 identity-bearing payload and does not re-derive or verify the heading against the pinned source before generation.
+- G5 gives nomination metadata a narrow identifier-membership role; it does not establish proposition-level support authority.
+- The generation-gate protocol explicitly describes G6 as syntactic until a semantic authority layer exists.
+
+Therefore an authentic heading observed in a preserved case is not enough to establish that arbitrary runtime heading metadata is safe semantic authority. Treating it as such would allow a field outside the packet integrity boundary to strengthen a generated claim.
+
+Observed counterexample shape: if an admitted nomination's heading were changed from `Daily check` to a different scope label while its identity-bearing source hash/body span fields remained unchanged, the current ep1 packet identity check would not detect that heading-only mutation. That is sufficient to reject heading-only semantic support under the current contract even though PR #17 separately verified that A07's preserved heading was authentic.
+
+Consequences:
+
+- PR #17 remains historically correct as `APERTURE_AUTHORITY_UNDEFINED`; do not rewrite its terminal result.
+- A07 requires a separately preregistered re-adjudication under this accepted/rejected authority rule before changing its classification.
+- If this proposal is accepted unchanged, A07's `daily` qualifier cannot be supplied by `section_heading` under ep1. Any remaining support must come from admitted body text or another authorized span.
+- A08 is unaffected: its full cited body text already contains the pre-run signing condition.
+- Wave B remains locked until the frozen A07/A08 claims are re-adjudicated under the resulting accepted authority rule.
+- This ADR does not add a new generation gate and does not authorize model calls, prompt changes, output repair, CAL integration, TEST/PROSPECTIVE access, promotion, merge, or release.
+
+A future contract may deliberately authorize source headings as semantic context only if it first binds and verifies the relevant heading provenance and scope strongly enough for that authority. At minimum, such a successor should make the semantic context reconstructable from the pinned source and verify it before downstream generation or adjudication. Whether that requires heading offsets, an explicit section-context object, a new packet identity version, or another representation is a separate engineering question.
+
+Rejected alternative: immediately treat every source-derived heading as semantic evidence because the heading is authentic in A07. This would conflate provenance with authority and leave heading-only semantic content outside ep1's integrity check.
+
+Rejected alternative: declare headings permanently non-semantic. Headings often do scope their body content; the present decision is about what ep1 safely authorizes, not a universal document-semantics rule.
+
+Reconsideration trigger: revisit this decision when a successor representation binds heading/section context into the authority surface, verifies that binding before generation, and demonstrates that downstream support decisions remain fail-closed under heading/context mutation.
+
