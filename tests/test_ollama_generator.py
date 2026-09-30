@@ -124,7 +124,11 @@ def test_generate_with_receipt_preserves_raw_provider_body_and_parses_json() -> 
 
 def test_non_json_model_text_is_preserved_for_g1_instead_of_repaired() -> None:
     packet = make_packet()
-    provider_text = "\`\`\`json\n{\\"disposition\\":\\"answered\\"}\n\`\`\`"
+    provider_text = (
+        chr(96) * 3
+        + 'json\n{"disposition":"answered"}\n'
+        + chr(96) * 3
+    )
     raw = json.dumps(
         {
             "model": "gemma3:12b",
