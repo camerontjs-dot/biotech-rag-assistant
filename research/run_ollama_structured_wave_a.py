@@ -71,6 +71,7 @@ def main() -> int:
         "--expected-prompt-sha256",
         default=SHADOW_GENERATION_PROMPT_SHA256,
     )
+    parser.add_argument("--expected-schema-sha256", required=True)
     parser.add_argument(
         "--base-url",
         default="http://127.0.0.1:11434",
@@ -100,6 +101,7 @@ def main() -> int:
             f"{observed_prompt} != {args.expected_prompt_sha256}"
         )
 
+    prompt_text = prompt_path.read_text(encoding="utf-8")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     expected_wave_a = manifest["files"]["wave-a-probes.jsonl"]
     observed_wave_a = sha256(wave_a_path)
@@ -122,10 +124,25 @@ def main() -> int:
             f"{observed_digest!r} != {args.expected_model_digest!r}"
         )
 
+    schema_hash = hashlib.sha256(
+        json.dumps(
+            OllamaGenerator.output_schema(),
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+    ).hexdigest()
+    if schema_hash != args.expected_schema_sha256:
+        raise SystemExit(
+            "GeneratedAnswer schema hash mismatch: "
+            f"{schema_hash} != {args.expected_schema_sha256}"
+        )
+
     options = OllamaOptions()
     generator = OllamaGenerator(
         model_id=args.model,
         base_url=base_url,
+        prompt_text=prompt_text,
         options=options,
         timeout_seconds=args.timeout_seconds,
     )
@@ -153,6 +170,14 @@ def main() -> int:
         provider_models[case_id] = (
             model_value if isinstance(model_value, str) else None
         )
+        if model_value != args.model:
+            raise SystemExit(
+                f"provider model mismatch for {case_id}: {model_value!r}"
+            )
+        if receipt.envelope.get("done") is not True:
+            raise SystemExit(
+                f"provider response was not terminal for {case_id}"
+            )
 
         outputs.append(
             {
@@ -192,14 +217,7 @@ def main() -> int:
         "prompt_sha256": observed_prompt,
         "bundle_manifest_sha256": observed_manifest,
         "wave_a_sha256": observed_wave_a,
-        "generated_answer_schema_sha256": hashlib.sha256(
-            json.dumps(
-                OllamaGenerator.output_schema(),
-                ensure_ascii=False,
-                sort_keys=True,
-                separators=(",", ":"),
-            ).encode("utf-8")
-        ).hexdigest(),
+        "generated_answer_schema_sha256": schema_hash,
         "isolation_notes": (
             "Runner reads manifest, prompt, and Wave A only. "
             "Ollama receives prompt plus one EvidencePacket per request. "
