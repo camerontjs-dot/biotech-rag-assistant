@@ -12,9 +12,9 @@ from urllib import request
 
 from biotech_rag_assistant.evidence_packet import EvidencePacket
 from biotech_rag_assistant.ollama_generator import (
+    SHADOW_GENERATION_PROMPT_SHA256,
     OllamaGenerator,
     OllamaOptions,
-    SHADOW_GENERATION_PROMPT_SHA256,
 )
 
 
