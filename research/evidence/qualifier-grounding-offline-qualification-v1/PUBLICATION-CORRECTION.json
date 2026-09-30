@@ -1,0 +1,18 @@
+{
+  "schema_version": "qualification-publication-correction/v1",
+  "supersedes": "publication-checks.json#targeted_final_lint",
+  "incorrect_recorded_value": "PASS",
+  "correct_value": "RUNNER_LINT_FINDINGS; frozen reducer/local tests previously passed targeted lint",
+  "runner_lint_exit_code": 1,
+  "runner_lint_findings": [
+    "I001 import formatting",
+    "UP017 datetime.UTC alias at run start",
+    "UP017 datetime.UTC alias at run completion"
+  ],
+  "runner_source_changed": false,
+  "reducer_source_changed": false,
+  "decisive_run_repeated": false,
+  "scientific_disposition_changed": false,
+  "scientific_disposition": "FALSIFIED",
+  "note": "A publication script hardcoded a PASS label after a failed linter call. This correction supersedes that label; all actual identity/run/hash checks remain true. Exact executed runner is preserved rather than reformatted after the run."
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "qualification-publication-supplement-freeze/v1",
+  "parent_receipt_freeze_sha256": "1b4a9d4014b6dd61bf4008569e2a3db1d31fcf6e72e24479b2964a05f7ea2ec2",
+  "scientific_disposition": "FALSIFIED",
+  "files": {
+    "PUBLICATION-CORRECTION.json": {
+      "bytes": 891,
+      "sha256": "001764a9a43385b6d69153932361f136ef93311064541dd6d101618b429997a7"
+    },
+    "runner-lint.stdout.txt": {
+      "bytes": 2185,
+      "sha256": "65a1eb9cd08de928ec0212147ea4337f94346ce332d4e9164e2caccdf72a3659"
+    }
+  }
+}

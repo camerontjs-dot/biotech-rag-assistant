@@ -1,0 +1,58 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/run_qualifier_offline_qualification.py:8:1
+   |
+ 6 |   """
+ 7 |
+ 8 | / import datetime
+ 9 | | import hashlib
+10 | | import importlib.util
+11 | | import json
+12 | | import subprocess
+13 | | import sys
+14 | | from pathlib import Path
+   | |________________________^
+help: Organize imports
+   |
+15 |
+   -
+16 | ROOT = Path(__file__).resolve().parents[1]
+   |
+
+UP017 [*] Use `datetime.UTC` alias
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/run_qualifier_offline_qualification.py:139:45
+    |
+137 |     run = {
+138 |         "schema_version": "qualifier-grounding-decisive-run/v1",
+139 |         "started_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    |                                             ^^^^^^^^^^^^^^^^^^^^^
+140 |         "candidate_commit": candidate["source_commit"],
+141 |         "candidate_tree": candidate["source_tree"],
+    |
+help: Convert to `datetime.UTC` alias
+    |
+138 |         "schema_version": "qualifier-grounding-decisive-run/v1",
+    -         "started_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+139 +         "started_at": datetime.datetime.now(datetime.UTC).isoformat(),
+140 |         "candidate_commit": candidate["source_commit"],
+    |
+
+UP017 [*] Use `datetime.UTC` alias
+   --> /private/tmp/biotech-qualifier-offline-v1-20260930/research/run_qualifier_offline_qualification.py:197:44
+    |
+195 |     run.update(
+196 |         status="EXECUTED",
+197 |         completed_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    |                                            ^^^^^^^^^^^^^^^^^^^^^
+198 |         decision_count=len(decisions),
+199 |         decision_sha256=sha((OUTPUT / "decisions.json").read_bytes()),
+    |
+help: Convert to `datetime.UTC` alias
+    |
+196 |         status="EXECUTED",
+    -         completed_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+197 +         completed_at=datetime.datetime.now(datetime.UTC).isoformat(),
+198 |         decision_count=len(decisions),
+    |
+
+Found 3 errors.
+[*] 3 fixable with the `--fix` option.
