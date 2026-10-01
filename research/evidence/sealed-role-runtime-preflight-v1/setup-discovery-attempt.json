@@ -1,0 +1,19 @@
+{
+  "candidate_identity": "NOT_YET_FROZEN; unqualified default CLI invocation",
+  "classification": "probe-construction/discovery error; not a valid file isolation observation",
+  "combined_tool_output": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\nsandbox-exec: sandbox_apply: Operation not permitted\n",
+  "command": [
+    "<INSTALLED_CODEX_CLI>",
+    "sandbox",
+    "macos",
+    "--help"
+  ],
+  "correction": "Used codex sandbox --help, which shows this installed version has no macos subcommand. Decisive launcher uses the documented generic sandbox command.",
+  "deviation": "Separate stream capture was unavailable for this setup discovery. All decisive streams are fully preserved.",
+  "exit_code": 71,
+  "fixture_paths_supplied": false,
+  "kind": "PRE_CANDIDATE_CLI_DISCOVERY",
+  "model_calls": 0,
+  "stderr": "UNKNOWN; original execution tool returned combined stream",
+  "stdout": "UNKNOWN; original execution tool returned combined stream"
+}

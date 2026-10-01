@@ -1,0 +1,85 @@
+{
+  "initialization_sufficient_for_clean_role_claim": false,
+  "inventory": {
+    "MindGraph_RAG_context": {
+      "scope": "No retrieval content supplied to child; supervisor planning used four local embedding-backed queries separately",
+      "status": "ABSENT"
+    },
+    "base_user_configuration": {
+      "explicit_profile_requested": "sealed_preflight_v1",
+      "material_legacy_setting": "sandbox_mode=danger-full-access",
+      "status": "PRESENT"
+    },
+    "connected_tools": {
+      "reason": "Model tools never initialized; /bin/sh, /bin/cat and /usr/bin/env physically executed",
+      "status": "UNKNOWN"
+    },
+    "copied_parent_conversation": {
+      "scope": "No supplied conversation, prompt or stdin in child invocation; future model input UNKNOWN",
+      "status": "ABSENT"
+    },
+    "current_working_directory": {
+      "match": "EXACT",
+      "status": "PRESENT",
+      "value": "fixture/role"
+    },
+    "environment_variables": {
+      "augmentation_observed": true,
+      "observed_names": [
+        "CODEX_SANDBOX_NETWORK_DISABLED",
+        "__CF_USER_TEXT_ENCODING",
+        "PATH",
+        "CODEX_SANDBOX",
+        "PWD",
+        "LANG",
+        "SHLVL",
+        "NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S",
+        "_"
+      ],
+      "private_values_preserved_by_raw_hash": true,
+      "status": "PRESENT",
+      "supplied": [
+        "PATH",
+        "LANG"
+      ]
+    },
+    "filesystem_roots": {
+      "effective": "outside-file denial failed; exact effective policy UNKNOWN",
+      "intended": "minimal runtime paths plus role root; deny rest and exact sibling",
+      "status": "PRESENT"
+    },
+    "full_model_initialization": {
+      "reason": "No model/canary invocation authorized or performed",
+      "status": "UNKNOWN"
+    },
+    "inherited_shell_state": {
+      "scope": "Direct non-login sh -c with explicit minimal launcher environment; runtime/shell-added variables recorded",
+      "status": "ABSENT"
+    },
+    "memory_retrieval": {
+      "reason": "No initialized role/tool inventory; zero candidate retrieval-engine invocations",
+      "status": "UNKNOWN"
+    },
+    "network_tools": {
+      "reason": "No network/tool-availability probe; disabled-network marker is not network isolation evidence",
+      "status": "UNKNOWN"
+    },
+    "project_instructions": {
+      "reason": "No model-visible input inventory produced; shell-only evidence cannot establish future client context",
+      "status": "UNKNOWN"
+    },
+    "skill_plugin_catalogue": {
+      "reason": "Not observable from this sandbox-only child",
+      "status": "UNKNOWN"
+    },
+    "workspace_repository_paths": {
+      "scope": "No owner repository in observed child cwd/argv/env; this does not imply denial of repository file access",
+      "status": "ABSENT"
+    }
+  },
+  "model_calls": 0,
+  "research_role_calls": 0,
+  "schema_version": "sealed-runtime-initialization-inventory/v1",
+  "scope": "actual deterministic sandbox child; no research role or model request initialized",
+  "source": "probes/P7.json; exact private raw argv/env and installed CLI help"
+}

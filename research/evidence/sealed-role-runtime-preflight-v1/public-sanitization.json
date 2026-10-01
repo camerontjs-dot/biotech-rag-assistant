@@ -1,0 +1,11 @@
+{
+  "at_utc": "2026-10-01T21:27:30.275816+00:00",
+  "affected_artifact": "probes/P7.json",
+  "reason": "CLI injected local path and operator/runtime metadata into the child environment inventory. Public values substituted before any push/terminal evidence freeze.",
+  "raw_preserved": true,
+  "raw_stdout_sha256": "b382e71dc2f916d3d782fb31cadce1f9a5c5d1884e9c0658a4ed54515d842de3",
+  "original_receipt_sha256": "41297c577660479de55fea8a81e68c1c955dfdc07ef176ff22ebcd80c03beb4c",
+  "candidate_source_or_policy_changed": false,
+  "probe_repeated": false,
+  "private_custody": "private supervisor directory; original receipt and raw stdout preserved"
+}

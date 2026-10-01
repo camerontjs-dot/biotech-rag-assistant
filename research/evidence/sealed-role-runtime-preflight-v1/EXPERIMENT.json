@@ -1,0 +1,33 @@
+{
+  "candidate_id": "codex-0154-native-named-profile-v1",
+  "candidate_manifest_sha256": "f326029b53b4a3e0a411980258fe0583ad4eb714f4c09b5d602d5f4fe1ef7e5d",
+  "completed_calls": 3,
+  "completion_at_utc": "2026-10-01T21:37:17.609390+00:00",
+  "decision_sentence": "Keep semantic roles stopped when explicit outside-file denial fails.",
+  "evidence_layer": "actual local deterministic runtime process",
+  "experiment_id": "sealed-role-runtime-preflight-v1",
+  "fixture_manifest_sha256": "c6eb9e0804f286d3b097e015db4a6adcf26641d84bf23fe10b739be913bfcc07",
+  "primary_factor": "declared file access rule for a controlled random object; mutation factor never reached",
+  "primary_metric": "required access properties with hard denied-read veto",
+  "protocol_ref": "PROTOCOL.json",
+  "protocol_sha256": "0374cf42b9b245b05d7e1b5105f19071a0ded61ab2ac7247223390d72d1c320c",
+  "qualification_model_requests": 0,
+  "question": "Can the pinned runtime enforce an auditable restricted initialization/file aperture?",
+  "receipt_sha256": {
+    "TERMINAL.json": "ed31d83ef4f4ad38830914554943c0b7ef3a0f2c4cfc21469d9fed6244b06e03",
+    "custody-check-after-run.json": "7005c3bbaa74979c8b73b5e9a273c224ff97f2c77708ce4e69f50065afc6db35",
+    "probe-run.json": "4c018efb86b099331046fb62fd1b9d082dc04b6454bc43835d1bc4934584779f",
+    "probes/P1.json": "c1d6f3bb504bdc1bd6639cfe41dc1a10109bd9bf79aa9e106a6d1cc6b24d87fd",
+    "probes/P2.json": "a76477a30ff31b51c85c784de8a1716a62ee239a1e3a4c4f26d62651a0c32e81",
+    "probes/P7.json": "9137ed4bd85bdaba0b6156dddb8f5bcb4f96015831659b9e1a3f43759fa1cdad"
+  },
+  "schema_version": "experiment/v1",
+  "semantic_research": "NOT_RUN",
+  "source_commit": "511d016c9840ce77fc8be284d9c4f5202b910820",
+  "source_tree": "b3a1f315da48e686b5475f35285b418f476a7d7b",
+  "state": "completed",
+  "study_type": "confirmatory",
+  "terminal_disposition": "FALSIFIED",
+  "unit_of_analysis": "one frozen deterministic sandbox process",
+  "work_class": "Research Infrastructure / Apparatus Qualification"
+}

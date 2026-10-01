@@ -1,0 +1,21 @@
+{
+  "P6": "observable child inventory preserved; hidden model initialization UNKNOWN",
+  "P8": "static review completed; no enforced-denial support",
+  "absolute_route": {
+    "receipt": "probes/P2.json",
+    "status": "FALSIFIED"
+  },
+  "alternate_routes": {
+    "Finder_alias": "NOT_APPLICABLE",
+    "parent_traversal": "NOT_RUN",
+    "sibling_dot_path": "NOT_RUN",
+    "symlink": "NOT_RUN",
+    "tmp_alias": "NOT_RUN"
+  },
+  "model_initialization_canary": "NOT_RUN",
+  "mutation_control": "NOT_RUN",
+  "opaque_name_invariance": "NOT_RUN",
+  "reason": "First required isolation failure is terminal; no further candidate probes or model calls.",
+  "stop_after": "P2",
+  "stop_rule_applied": true
+}

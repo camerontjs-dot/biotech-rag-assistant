@@ -1,0 +1,16 @@
+{
+  "all_four_fixture_hashes_unchanged": true,
+  "apparatus_defect_observed": false,
+  "at_utc": "2026-10-01T21:32:49.831325+00:00",
+  "candidate_freeze_commit": "511d016c9840ce77fc8be284d9c4f5202b910820",
+  "candidate_freeze_tree": "b3a1f315da48e686b5475f35285b418f476a7d7b",
+  "candidate_source_retries_or_repairs": 0,
+  "denied_output_exact_fixture_bytes": true,
+  "denied_output_sha256": "ade99ce766cf90c6147f66ed6b56c515f6cdb4ed399f778befc9973d1e05cefd",
+  "frozen_files_verified": 15,
+  "loaded_base_config_unchanged": true,
+  "physical_check_result": "PASS",
+  "predecessor_files_verified": 36,
+  "runtime_binary_unchanged": true,
+  "runtime_property_result": "FALSIFIED"
+}

@@ -1,0 +1,145 @@
+{
+  "adapter_sha256": "13c0de5977dff8577b2eb8bbe95bf3b8cbbb96d49a53ddbcacd9d835dd472019",
+  "artifact_sha256": {
+    "CANDIDATE.json": "f326029b53b4a3e0a411980258fe0583ad4eb714f4c09b5d602d5f4fe1ef7e5d",
+    "PROTOCOL.json": "0374cf42b9b245b05d7e1b5105f19071a0ded61ab2ac7247223390d72d1c320c",
+    "README.md": "5b0c72d9d7e9bf6aff02f802f13ccba076ba6c05136803896002a7e90f625e6d",
+    "RESULTS.md": "d92c5c0064b2225667dae5317e408825bcab84f039e5bd3f033c92e9ea61494d",
+    "adapter.py": "13c0de5977dff8577b2eb8bbe95bf3b8cbbb96d49a53ddbcacd9d835dd472019",
+    "authority.json": "9020bbf8d808514ea9c67beae92f7097b1cdb48939b8773939fb02a4224b720d",
+    "configuration.json": "2c4b69f382c88a7c4218b123a2befdeb42f41c1fe9f874395cb72b4472ad6a96",
+    "construction-checks.json": "cabc4d3a8be1956bfe8ba7243202cc352121daa8eb2cc4227ca61d4345237394",
+    "custody-check-after-run.json": "7005c3bbaa74979c8b73b5e9a273c224ff97f2c77708ce4e69f50065afc6db35",
+    "deviations-before-freeze.json": "47acd45896cff9621ab30e6eef802bbef90f5f4bb3130d58f620c4732bc64e28",
+    "enforcement-review.json": "48681a0fa6f6ed3903297a9008e4cf6782de491d9a404d07c719d004e5d10705",
+    "environment.json": "478a9ecdacae37f250278d7a83ab0ebd560d84cd35ed444f325985d5f455d1e9",
+    "fixtures.json": "c6eb9e0804f286d3b097e015db4a6adcf26641d84bf23fe10b739be913bfcc07",
+    "freeze.json": "79bd90c1af8cf1f887e249b3aa0153e82eaef69ac782e0f476813a8eb6c6f7ac",
+    "initialization-inventory.json": "1e1280019f4c26d9c5bee4d590d0ef0bfbcf63b44ab77909449df57a121d8f23",
+    "issue33-live.json": "320cd81521d2a8e8046cbcfd47b2f7d1cd96845aa9d3cd07fde1297adf1f1821",
+    "pr32-live.json": "de4902fe77a02442f9a581b85a7c5fb9a64763832f45df281d49f9046305bbab",
+    "private-custody-index.json": "6d0e7a4c4f49206ad94e4a83e1af817c4eaefdf3a5e590c8290fec087ed601af",
+    "probe-run.json": "4c018efb86b099331046fb62fd1b9d082dc04b6454bc43835d1bc4934584779f",
+    "probes/P1.json": "c1d6f3bb504bdc1bd6639cfe41dc1a10109bd9bf79aa9e106a6d1cc6b24d87fd",
+    "probes/P2.json": "a76477a30ff31b51c85c784de8a1716a62ee239a1e3a4c4f26d62651a0c32e81",
+    "probes/P7.json": "9137ed4bd85bdaba0b6156dddb8f5bcb4f96015831659b9e1a3f43759fa1cdad",
+    "public-sanitization.json": "53752c5e0a36dce4027a597d2659143564adbcc1ae7660b195c0bad05170e21a",
+    "run_probes.py": "4952e1a9fb5fb8525499686c87c61948f861afd137de4ae796841acfd867729b",
+    "setup-discovery-attempt.json": "f97c503f51380c71c1f4841d786979d71ac64f502e1bf46a648bf29312748aab",
+    "source-review-before-freeze.json": "1bceee36915bb96719c43718179357b0ab5e7813a914adbbc81ebe9ea7ed642d",
+    "test_adapter.py": "80fc7f11841e94397bc9fc4b2ca499f89ad6e077e77e29f327ee85b71d5e5523",
+    "unrun-probes.json": "0118a5487f04fdf6274031c8ee6b7197930c07b06873fff1607685783b574343"
+  },
+  "branch": "research/sealed-role-runtime-preflight-v1",
+  "candidate_commit": "511d016c9840ce77fc8be284d9c4f5202b910820",
+  "candidate_id": "codex-0154-native-named-profile-v1",
+  "candidate_sha256": "f326029b53b4a3e0a411980258fe0583ad4eb714f4c09b5d602d5f4fe1ef7e5d",
+  "candidate_tree": "b3a1f315da48e686b5475f35285b418f476a7d7b",
+  "ci_classification_at_terminal_freeze": "NOT_YET_OBSERVED for this successor; hosted observations will be append-only and cannot override the runtime result",
+  "configuration_sha256": "2c4b69f382c88a7c4218b123a2befdeb42f41c1fe9f874395cb72b4472ad6a96",
+  "counts": {
+    "adjudicator_A": 0,
+    "adjudicator_B": 0,
+    "adjudicator_C": 0,
+    "candidate_model_provider_requests": 0,
+    "case_author": 0,
+    "initialization_canary": 0,
+    "ledger_reducer": 0,
+    "owner_planning_embedding_backed_MindGraph_queries": 4,
+    "project_generation": 0,
+    "semantic_assessor": 0
+  },
+  "custody_check": "PASS; frozen 15 files and predecessor 36 files verified; runtime/base configuration and all four fixtures unchanged",
+  "deviations": [
+    "Pre-freeze discovery option shape corrected; initial setup combined streams not separable",
+    "One automatic branch-fetch review timeout retried before execution",
+    "Restricted network/cache access handled without unrelated repository changes",
+    "Two source style findings repaired before freeze",
+    "P7 paths/operator/runtime metadata sanitized before public terminal freeze; original preserved",
+    "Dependent probes stopped exactly at P2 failure"
+  ],
+  "direct_observation": "The exact outside sentinel was returned by the actual installed runtime subprocess despite an explicit deny. Required artifacts/configuration and fixture identities remain valid.",
+  "exact_policy_sha256": "178a9b33f6e3d6be5d4c77ecbb5f06b9b457e384081c08a3b9998c7d746cad40",
+  "execution": {
+    "allowed_read": "PASS; exact frozen bytes/hash",
+    "alternate_paths": "NOT_RUN; absolute path covered by P2",
+    "candidate_or_configuration_repairs_after_freeze": 0,
+    "decisive_sandbox_processes": 3,
+    "explicit_denied_read": "FALSIFIED; exit 0; empty stderr; stdout exactly denied fixture",
+    "first_decisive_at_utc": "2026-10-01T21:25:19.393239+00:00",
+    "initialization": "child environment recorded; full model context UNKNOWN",
+    "last_decisive_at_utc": "2026-10-01T21:25:19.486123+00:00",
+    "mutation": "NOT_RUN",
+    "network_enforcement": "NOT_TESTED",
+    "opaque_name_invariance": "NOT_RUN",
+    "role_root": "PASS; exact isolated working root",
+    "setup_discovery_is_decisive": false,
+    "setup_discovery_sandbox_application_attempts": 1,
+    "source_qualification": "standard-library no-model runner; no prompt read prohibition; raw outputs persisted before classification",
+    "technical_enforcement": "explicit runtime profile attempted; required file denial failed",
+    "valid_probe_retries": 0
+  },
+  "fixtures": {
+    "allowed": {
+      "expected": "READ_SUCCEEDS",
+      "mode": "0444",
+      "path": "role/k4a9.dat",
+      "sha256": "aa2d6e24dd7584f5d0cea82a2bc4ca7fa624b4411b195eef3eac25af2716a3d9",
+      "size": 65
+    },
+    "allowed_renamed": {
+      "expected": "READ_SUCCEEDS",
+      "mode": "0444",
+      "path": "role/u8w1.dat",
+      "sha256": "e9658f4dfa336bbe644e5d25d20cb9a65df7ba45f0a5287a64608b270e75daf5",
+      "size": 65
+    },
+    "denied": {
+      "expected": "READ_DENIED",
+      "mode": "0444",
+      "path": "sibling/n7q2.dat",
+      "sha256": "ade99ce766cf90c6147f66ed6b56c515f6cdb4ed399f778befc9973d1e05cefd",
+      "size": 65
+    },
+    "denied_renamed": {
+      "expected": "READ_DENIED",
+      "mode": "0444",
+      "path": "sibling/t3c6.dat",
+      "sha256": "0dd93a2d006ee007662cb43d58f602f878867924d7f9538422d144ded0fcca8a",
+      "size": 65
+    },
+    "symlink": {
+      "expected": "READ_DENIED",
+      "path": "role/v5r0.link",
+      "target": "sibling/n7q2.dat"
+    }
+  },
+  "inference": {
+    "disposition": "FALSIFIED for the entire pinned mechanism/configuration; causal component UNKNOWN; cannot qualify for sealed roles.",
+    "evaluator": "agent_llm applying frozen acceptance rule"
+  },
+  "initialization_independence": "No fresh research role/context launched or qualified; actual model initialization never observed. Broad-context supervisor only.",
+  "non_claims": [
+    "semantic or training-history independence",
+    "clean real-model initialization",
+    "network isolation",
+    "OS-wide sandbox security",
+    "production suitability",
+    "all alternative runtime mechanisms fail"
+  ],
+  "protected_boundary": {
+    "Wave_B": "LOCKED",
+    "merge_release_promotion": 0,
+    "predecessor_modification": 0,
+    "protected_payload_access": 0,
+    "rubric_or_reducer_modification": 0
+  },
+  "runner_sha256": "4952e1a9fb5fb8525499686c87c61948f861afd137de4ae796841acfd867729b",
+  "runtime": "codex-cli 0.154.0; macOS 27.0 build 26A428 arm64",
+  "schema_version": "sealed-runtime-preflight-terminal/v1",
+  "smallest_next_step": "Separately identify/freeze a runtime candidate with auditable effective configuration and resolved legacy-setting precedence, then fresh deterministic sentinel preflight; no case author until that qualifies.",
+  "terminal_at_utc": "2026-10-01T21:35:54.801887+00:00",
+  "terminal_commit_tree_binding": "Append-only publication receipt records the commit/tree containing this immutable terminal file.",
+  "terminal_disposition": "FALSIFIED",
+  "work_class": "Research Infrastructure / Apparatus Qualification"
+}

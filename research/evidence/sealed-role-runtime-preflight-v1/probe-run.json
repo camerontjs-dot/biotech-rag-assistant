@@ -1,0 +1,17 @@
+{
+  "candidate_id": "codex-0154-native-named-profile-v1",
+  "completed_probes": [
+    "P7",
+    "P1",
+    "P2"
+  ],
+  "ended_at_utc": "2026-10-01T21:25:19.486376+00:00",
+  "freeze_commit": "511d016c9840ce77fc8be284d9c4f5202b910820",
+  "initialization_limit": "No model initialization audit; cannot accept sealed-role claim.",
+  "model_calls": 0,
+  "no_model_or_role_request": true,
+  "probe_count": 3,
+  "research_role_calls": 0,
+  "started_at_utc": "2026-10-01T21:25:19.393239+00:00",
+  "stop_disposition": "FALSIFIED"
+}
