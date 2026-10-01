@@ -1,0 +1,12 @@
+{
+  "schema_version": "semantic-rubric-freeze/v1",
+  "rubric_id": "semantic-annotation-rubric-v1",
+  "commit": "e68ea36403c4c17c5b111e88ae1e5ca9031c1ca5",
+  "tree": "6edf340e5e5a1201d911502292c79663faa592f7",
+  "rubric_sha256": "11092f20ec28a1124b208f4eb09d43258c125fe4e57b94692613fa8ad009359d",
+  "committed_at": "2026-10-01T09:24:33-04:00",
+  "before_case_design": true,
+  "case_author_or_adjudicator_launched": false,
+  "contract_lint": "PASS; one adopted contract, zero findings",
+  "material_changes_after_freeze": 0
+}

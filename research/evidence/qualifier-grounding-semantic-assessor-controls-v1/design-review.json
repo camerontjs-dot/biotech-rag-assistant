@@ -1,0 +1,28 @@
+{
+  "schema_version": "semantic-preparation-agent-review/v1",
+  "evaluator": "agent_llm",
+  "claim_type": "hypothesis",
+  "status": "needs-audit",
+  "assessment": "No known material ambiguity requires changing the frozen rubric at preparation; semantic adequacy remains an adjudication-apparatus question, NOT_RUN.",
+  "rubric_sha256": "11092f20ec28a1124b208f4eb09d43258c125fe4e57b94692613fa8ad009359d",
+  "checks": [
+    "All required materiality facets explicitly enumerated and scoped.",
+    "BODY entailment/contradiction/silence/ambiguity separate; conflicting witnesses preserved.",
+    "Coverage is representation completeness, not support.",
+    "Six tri-state guards require evidence/rationale only for an applicable partial projection.",
+    "All 21 required semantic categories plus three authority controls and four uncertainty/guard anchors.",
+    "A/B raw outputs freeze before comparison; C is blind before explicit open adjudication.",
+    "Accepted labels require raw agreement thresholds, independent evidence review and seed/family checks.",
+    "Future assessor sees no corpus/labels/families before candidate freeze; outputs persist before scoring.",
+    "Every safety veto and unresolved denominator blocks supported disposition."
+  ],
+  "counterevidence_and_limits": [
+    "Rubric is authored by one agent; no independent rubric validation yet.",
+    "One anchor per category and correlated variants cannot estimate natural-domain reliability.",
+    "Annotation boundary conventions may still generate systematic disagreement; preserve INCONCLUSIVE rather than revise labels.",
+    "Agreement can hide shared error; seed and evidence checks are separate requirements.",
+    "Future semantic equivalence matching is an explicitly declared evaluator judgment dependency."
+  ],
+  "independent_human_review": "NOT_RUN",
+  "semantic_annotation_examples_created": 0
+}

@@ -1,0 +1,353 @@
+{
+  "schema_version": "semantic-control-design/v1",
+  "corpus_id": "semantic-assessor-controls-v1-future-corpus",
+  "corpus_state": "FUTURE_NOT_AUTHORED",
+  "accepted_labels_state": "FUTURE_NOT_ADJUDICATED",
+  "packet_count": 44,
+  "anchor_count": 28,
+  "invariance_count": 8,
+  "mutation_count": 8,
+  "corpus_sha256": null,
+  "relations_sha256": null,
+  "anchors": [
+    {
+      "slot": "anchor_01",
+      "category": "full_body_support",
+      "construction_requirement": "Explicit single-span assertion with all bindings/scopes supplied.",
+      "seed_kind": "positive",
+      "guard_opportunity": "all"
+    },
+    {
+      "slot": "anchor_02",
+      "category": "unsupported_temporal",
+      "construction_requirement": "BODY asserts the event but omits a materially claimed time.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_03",
+      "category": "unsupported_population",
+      "construction_requirement": "BODY asserts a narrower or unspecified domain; broader claim is unestablished.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_04",
+      "category": "unsupported_quantity",
+      "construction_requirement": "BODY leaves the claimed amount/comparator unestablished without denying it.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_05",
+      "category": "actor_misbinding",
+      "construction_requirement": "Same vocabulary but a different actor; include a partial-support projection with changed actor.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "bindings_preserved"
+    },
+    {
+      "slot": "anchor_06",
+      "category": "object_misbinding",
+      "construction_requirement": "Same action/actor but a different object; no implied exclusivity unless overt.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "bindings_preserved"
+    },
+    {
+      "slot": "anchor_07",
+      "category": "event_misbinding",
+      "construction_requirement": "Different explicitly identified event; shared participants cannot fuse events.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "bindings_preserved"
+    },
+    {
+      "slot": "anchor_08",
+      "category": "polarity_reversal",
+      "construction_requirement": "An explicit negation with identical actor/object/event/time conflicts with the claim.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_09",
+      "category": "obligation_vs_action",
+      "construction_requirement": "BODY states a requirement, claim reports execution; no execution report.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_10",
+      "category": "antecedent_loss",
+      "construction_requirement": "An overt conditional is shortened to an unconditional core; retain a separately supported assertion to make partial support determinate.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "required_context_retained"
+    },
+    {
+      "slot": "anchor_11",
+      "category": "exception_loss",
+      "construction_requirement": "A necessary explicit exception is dropped from a partial-support projection.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "required_context_retained"
+    },
+    {
+      "slot": "anchor_12",
+      "category": "safe_smaller_core",
+      "construction_requirement": "Separate independently asserted propositions: supported core, silent material remainder, exhaustive explicit gap.",
+      "seed_kind": "positive",
+      "guard_opportunity": "all"
+    },
+    {
+      "slot": "anchor_13",
+      "category": "unsafe_decomposition",
+      "construction_requirement": "Partial support with dependent removal and a required prior-event/identity presupposition lost by the proposed core.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "removal_independent,no_missing_presupposition"
+    },
+    {
+      "slot": "anchor_14",
+      "category": "body_contradiction",
+      "construction_requirement": "Same bindings/scope with an overt incompatible assertion.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_15",
+      "category": "agreeing_witnesses",
+      "construction_requirement": "Two independent admitted spans support the same scoped proposition without conflict.",
+      "seed_kind": "positive",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_16",
+      "category": "conflicting_witnesses",
+      "construction_requirement": "One BODY entails and another explicitly denies the same proposition; neither is privileged.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_17",
+      "category": "witness_silence",
+      "construction_requirement": "Relevant topic but no assertion or denial of the material obligation.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_18",
+      "category": "genuine_body_ambiguity",
+      "construction_requirement": "Specific competing BODY referent/scope readings yield different relations.",
+      "seed_kind": "uncertain",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_19",
+      "category": "lexical_false_friend",
+      "construction_requirement": "High word overlap with a materially different semantic relation.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_20",
+      "category": "irrelevant_body",
+      "construction_requirement": "BODY unrelated to the claim; no contradiction inferred.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_21",
+      "category": "distributed_support",
+      "construction_requirement": "Complete support requires an explicit identity-linked conjunction across at least two admitted BODY spans.",
+      "seed_kind": "positive",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_22",
+      "category": "query_non_authority",
+      "construction_requirement": "Only QUERY contains the claimed support; BODY is silent.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_23",
+      "category": "heading_non_authority",
+      "construction_requirement": "Only HEADING contains the claimed support; BODY is silent.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_24",
+      "category": "metadata_non_authority",
+      "construction_requirement": "Only METADATA contains the claimed support; BODY is silent.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "none"
+    },
+    {
+      "slot": "anchor_25",
+      "category": "unsupported_proposed_core",
+      "construction_requirement": "Original claim is determinately partial; proposed core includes an unestablished original proposition.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "core_independently_supported"
+    },
+    {
+      "slot": "anchor_26",
+      "category": "incomplete_gap",
+      "construction_requirement": "Safe supported core with at least two omitted material obligations, but gap acknowledges only one.",
+      "seed_kind": "explicit",
+      "guard_opportunity": "gap_explicit"
+    },
+    {
+      "slot": "anchor_27",
+      "category": "unknown_projection_guard",
+      "construction_requirement": "Original support is determinate partial; proposed wording has a genuine unresolved reading affecting a guard.",
+      "seed_kind": "uncertain",
+      "guard_opportunity": "UNKNOWN"
+    },
+    {
+      "slot": "anchor_28",
+      "category": "unknown_claim_coverage",
+      "construction_requirement": "Unresolved claim binding/scope prevents a justified complete material inventory.",
+      "seed_kind": "uncertain",
+      "guard_opportunity": "none"
+    }
+  ],
+  "invariance": [
+    {
+      "slot": "invariant_1",
+      "family": "entity_rename",
+      "anchor_category": "full_body_support",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    },
+    {
+      "slot": "invariant_2",
+      "family": "entity_rename",
+      "anchor_category": "safe_smaller_core",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    },
+    {
+      "slot": "invariant_3",
+      "family": "sentence_or_witness_order",
+      "anchor_category": "agreeing_witnesses",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    },
+    {
+      "slot": "invariant_4",
+      "family": "sentence_or_witness_order",
+      "anchor_category": "conflicting_witnesses",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    },
+    {
+      "slot": "invariant_5",
+      "family": "harmless_paraphrase",
+      "anchor_category": "obligation_vs_action",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    },
+    {
+      "slot": "invariant_6",
+      "family": "harmless_paraphrase",
+      "anchor_category": "distributed_support",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    },
+    {
+      "slot": "invariant_7",
+      "family": "exact_duplicate",
+      "anchor_category": "unsupported_temporal",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    },
+    {
+      "slot": "invariant_8",
+      "family": "exact_duplicate",
+      "anchor_category": "genuine_body_ambiguity",
+      "mode": "INVARIANT",
+      "change": "Preserve all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map."
+    }
+  ],
+  "mutations": [
+    {
+      "slot": "mutation_1",
+      "family": "add_material_qualifier",
+      "anchor_category": "full_body_support",
+      "mode": "SENSITIVE",
+      "change": "Add an unestablished temporal/domain qualifier to claim only; material inventory expands and complete support is lost."
+    },
+    {
+      "slot": "mutation_2",
+      "family": "remove_material_qualifier",
+      "anchor_category": "unsupported_temporal",
+      "mode": "SENSITIVE",
+      "change": "Remove the independently additive unestablished temporal facet; preserve bindings and BODY; remaining full support must be judged independently."
+    },
+    {
+      "slot": "mutation_3",
+      "family": "negation",
+      "anchor_category": "full_body_support",
+      "mode": "SENSITIVE",
+      "change": "Reverse claim polarity only while keeping overt BODY positive and identical bindings/scope."
+    },
+    {
+      "slot": "mutation_4",
+      "family": "actor_swap",
+      "anchor_category": "full_body_support",
+      "mode": "SENSITIVE",
+      "change": "Swap claim actor only to a separately named entity not asserted in BODY; do not invent exclusivity."
+    },
+    {
+      "slot": "mutation_5",
+      "family": "timing",
+      "anchor_category": "full_body_support",
+      "mode": "SENSITIVE",
+      "change": "Change claim time only to an explicitly incompatible same-event time; BODY fixes an exclusive time."
+    },
+    {
+      "slot": "mutation_6",
+      "family": "numeric",
+      "anchor_category": "full_body_support",
+      "mode": "SENSITIVE",
+      "change": "Change claim exact amount only; BODY fixes the same event/measure/time with an exclusive exact amount."
+    },
+    {
+      "slot": "mutation_7",
+      "family": "condition_removal",
+      "anchor_category": "antecedent_loss",
+      "mode": "SENSITIVE",
+      "change": "Remove the governing claim antecedent only; no BODY assertion of the unconditional consequent."
+    },
+    {
+      "slot": "mutation_8",
+      "family": "exception_removal",
+      "anchor_category": "exception_loss",
+      "mode": "SENSITIVE",
+      "change": "Remove the governing claim exception only; BODY explicitly retains it."
+    }
+  ],
+  "guard_fields": [
+    "core_independently_supported",
+    "bindings_preserved",
+    "required_context_retained",
+    "removal_independent",
+    "no_missing_presupposition",
+    "gap_explicit"
+  ],
+  "required_relation_classes": [
+    "ENTAILED",
+    "CONTRADICTED",
+    "SILENT",
+    "AMBIGUOUS"
+  ],
+  "required_coverage": [
+    "COMPLETE",
+    "UNKNOWN"
+  ],
+  "required_guard_opportunities": {
+    "every_guard": [
+      "TRUE",
+      "FALSE"
+    ],
+    "at_least_one_guard": "UNKNOWN"
+  },
+  "historical_copy_forbidden": true,
+  "case_author_launched": false
+}

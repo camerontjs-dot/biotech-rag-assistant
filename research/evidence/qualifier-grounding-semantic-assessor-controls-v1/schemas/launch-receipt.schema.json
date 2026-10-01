@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clean-context launch receipt v1",
+  "type": "object",
+  "properties": {
+    "stage": {
+      "enum": [
+        "CASE_AUTHOR",
+        "ADJUDICATOR_A",
+        "ADJUDICATOR_B",
+        "ADJUDICATOR_C",
+        "RECONCILIATION",
+        "ASSESSOR_IMPLEMENTATION",
+        "QUALIFICATION"
+      ]
+    },
+    "context_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "initialization_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "started_at_utc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "finished_at_utc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowed_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "reference",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "exposed_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "reference",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "forbidden_exposures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "reference",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "output_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "reference",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "contamination_status": {
+      "enum": [
+        "CLEAN",
+        "CONTAMINATED",
+        "UNKNOWN"
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "properties": {
+        "actor_kind": {
+          "enum": [
+            "AGENT",
+            "HUMAN"
+          ]
+        },
+        "model_provider": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "shared_system_context": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "actor_kind",
+        "model_provider",
+        "model_version",
+        "tools",
+        "shared_system_context"
+      ],
+      "additionalProperties": false
+    },
+    "independence": {
+      "type": "object",
+      "properties": {
+        "context": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "ACHIEVED",
+                "LIMITED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "basis"
+          ],
+          "additionalProperties": false
+        },
+        "implementation": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "ACHIEVED",
+                "LIMITED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "basis"
+          ],
+          "additionalProperties": false
+        },
+        "model_tool": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "ACHIEVED",
+                "LIMITED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "basis"
+          ],
+          "additionalProperties": false
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "ACHIEVED",
+                "LIMITED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "basis"
+          ],
+          "additionalProperties": false
+        },
+        "human": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "ACHIEVED",
+                "LIMITED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "basis"
+          ],
+          "additionalProperties": false
+        },
+        "training_history": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "ACHIEVED",
+                "LIMITED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "basis"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "context",
+        "implementation",
+        "model_tool",
+        "data",
+        "human",
+        "training_history"
+      ],
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "case_author_launches": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "adjudicator_launches": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "adjudicated_cases": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "semantic_assessor_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reducer_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "project_generation_calls": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "case_author_launches",
+        "adjudicator_launches",
+        "adjudicated_cases",
+        "semantic_assessor_calls",
+        "reducer_calls",
+        "project_generation_calls"
+      ],
+      "additionalProperties": false
+    },
+    "deviations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "stage",
+    "context_id",
+    "initialization_sha256",
+    "started_at_utc",
+    "finished_at_utc",
+    "allowed_artifacts",
+    "exposed_artifacts",
+    "forbidden_exposures",
+    "output_artifacts",
+    "contamination_status",
+    "identity",
+    "independence",
+    "counts",
+    "deviations"
+  ],
+  "additionalProperties": false
+}

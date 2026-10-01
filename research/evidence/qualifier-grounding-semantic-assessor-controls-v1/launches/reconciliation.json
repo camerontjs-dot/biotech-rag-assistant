@@ -1,0 +1,102 @@
+{
+  "schema_version": "semantic-launch/v1",
+  "preparation_only": true,
+  "launch_authorized_by_this_task": false,
+  "fresh_context_required": true,
+  "materialization": "Copy only allowlisted files into a plain isolated directory without Git, repository, memory, retrieval tools or sibling artifacts. Resolve each future slot to an exact hash before launch; missing slots stop. Do not pass this repository as working context.",
+  "common_forbidden": [
+    "repository checkout or history",
+    "workspace/MindGraph/memory retrieval",
+    "A07/A08 or other historical payloads",
+    "Wave B",
+    "TEST/PROSPECTIVE payloads",
+    "project generation/G1-G7 replay",
+    "CAL",
+    "other roles' conversations",
+    "unlisted files or network retrieval"
+  ],
+  "contamination_stop": "Preserve exact exposure/hash/time and stop CONTAMINATED before dependent work. Unknown initialization/exposure prevents a CLEAN claim.",
+  "receipt_schema": "schemas/launch-receipt.schema.json",
+  "required_receipt": [
+    "stage/context/initialization identity",
+    "actual allowed and exposed artifact hashes",
+    "all forbidden exposure identities and timestamps in append-only trace",
+    "raw output and transcript hashes before downstream reads",
+    "role/model/tool/human identity and each independence dimension",
+    "call counts, failures and deviations"
+  ],
+  "freeze_rule": "No mutation of the frozen rubric, corpus, raw role outputs or accepted expectations; successor identity required for material repair.",
+  "future_slots": [
+    {
+      "name": "FROZEN_INPUT_ONLY_CASES",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "START"
+    },
+    {
+      "name": "A_RAW_STRUCTURED_AND_RECEIPT",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "START"
+    },
+    {
+      "name": "B_RAW_STRUCTURED_AND_RECEIPT",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "START"
+    },
+    {
+      "name": "BLIND_C_RAW_STRUCTURED_AND_RECEIPT",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "OPTIONAL_OPEN_ADJUDICATION"
+    },
+    {
+      "name": "SEALED_AUTHOR_DESIGN_AND_RELATIONS",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "OPEN_ASSURANCE"
+    }
+  ],
+  "role": "RECONCILIATION",
+  "allowed_files": [
+    "rubric.md",
+    "adjudication.md",
+    "schemas/case.schema.json",
+    "schemas/annotation.schema.json",
+    "schemas/disagreements.schema.json",
+    "schemas/launch-receipt.schema.json"
+  ],
+  "forbidden_files": [
+    "assessor implementation/output",
+    "prior experiment results",
+    "accepted final decision targets",
+    "author hypotheses before OPEN_ASSURANCE"
+  ],
+  "freeze_point": "Freeze raw disagreement/agreements before any resolution; freeze every adjudication resolution before OPEN_ASSURANCE reveals author hypotheses; freeze assurance and all expectation/alignment artifacts before any assessor implementation.",
+  "neutral_instructions": "After separate authorization, preserve every A/B disagreement and dimension denominator. Normalize references only where mechanically justified. Request a separately authorized blind C or attributed operator judgment for semantic disputes; never majority-vote. Enter OPEN_ADJUDICATION explicitly before reading C or resolving with A/B reasoning. Only after these judgments freeze may OPEN_ASSURANCE reveal author hypotheses for seed/family checks. Preserve unresolved dimensions; do not manufacture labels.",
+  "blind_c_aperture": {
+    "allowed_files": [
+      "rubric.md",
+      "schemas/case.schema.json",
+      "schemas/annotation.schema.json",
+      "schemas/launch-receipt.schema.json"
+    ],
+    "future_slots": [
+      {
+        "name": "SELECTED_FROZEN_INPUT_ONLY_CASES",
+        "sha256": null,
+        "state": "NOT_MATERIALIZED",
+        "available_phase": "START"
+      }
+    ],
+    "forbidden": [
+      "A/B reasoning and judgments",
+      "author hypotheses",
+      "relations",
+      "desired outcome",
+      "assessor source/output"
+    ],
+    "instruction": "Use the identical neutral annotation instruction from adjudicator-a.json with receipt role ADJUDICATOR_C; do not change semantic instructions. Persist C before any open adjudication."
+  }
+}

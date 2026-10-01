@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sealed author design index v1",
+  "type": "object",
+  "properties": {
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "case_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "category": {
+            "enum": [
+              "full_body_support",
+              "unsupported_temporal",
+              "unsupported_population",
+              "unsupported_quantity",
+              "actor_misbinding",
+              "object_misbinding",
+              "event_misbinding",
+              "polarity_reversal",
+              "obligation_vs_action",
+              "antecedent_loss",
+              "exception_loss",
+              "safe_smaller_core",
+              "unsafe_decomposition",
+              "body_contradiction",
+              "agreeing_witnesses",
+              "conflicting_witnesses",
+              "witness_silence",
+              "genuine_body_ambiguity",
+              "lexical_false_friend",
+              "irrelevant_body",
+              "distributed_support",
+              "query_non_authority",
+              "heading_non_authority",
+              "metadata_non_authority",
+              "unsupported_proposed_core",
+              "incomplete_gap",
+              "unknown_projection_guard",
+              "unknown_claim_coverage"
+            ]
+          },
+          "role": {
+            "enum": [
+              "ANCHOR",
+              "INVARIANT",
+              "MUTATION"
+            ]
+          },
+          "seed_kind": {
+            "enum": [
+              "positive",
+              "explicit",
+              "uncertain"
+            ]
+          },
+          "guard_opportunities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "guard": {
+                  "enum": [
+                    "core_independently_supported",
+                    "bindings_preserved",
+                    "required_context_retained",
+                    "removal_independent",
+                    "no_missing_presupposition",
+                    "gap_explicit"
+                  ]
+                },
+                "value": {
+                  "enum": [
+                    "TRUE",
+                    "FALSE",
+                    "UNKNOWN"
+                  ]
+                }
+              },
+              "required": [
+                "guard",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "author_hypothesis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contrast_anchors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "start",
+                "end",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "slot",
+          "case_id",
+          "category",
+          "role",
+          "seed_kind",
+          "guard_opportunities",
+          "author_hypothesis",
+          "contrast_anchors"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 44,
+      "maxItems": 44
+    }
+  },
+  "required": [
+    "corpus_id",
+    "entries"
+  ],
+  "additionalProperties": false
+}

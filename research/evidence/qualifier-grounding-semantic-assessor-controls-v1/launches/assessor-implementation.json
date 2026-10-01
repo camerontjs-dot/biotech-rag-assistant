@@ -1,0 +1,50 @@
+{
+  "schema_version": "semantic-launch/v1",
+  "preparation_only": true,
+  "launch_authorized_by_this_task": false,
+  "fresh_context_required": true,
+  "materialization": "Copy only allowlisted files into a plain isolated directory without Git, repository, memory, retrieval tools or sibling artifacts. Resolve each future slot to an exact hash before launch; missing slots stop. Do not pass this repository as working context.",
+  "common_forbidden": [
+    "repository checkout or history",
+    "workspace/MindGraph/memory retrieval",
+    "A07/A08 or other historical payloads",
+    "Wave B",
+    "TEST/PROSPECTIVE payloads",
+    "project generation/G1-G7 replay",
+    "CAL",
+    "other roles' conversations",
+    "unlisted files or network retrieval"
+  ],
+  "contamination_stop": "Preserve exact exposure/hash/time and stop CONTAMINATED before dependent work. Unknown initialization/exposure prevents a CLEAN claim.",
+  "receipt_schema": "schemas/launch-receipt.schema.json",
+  "required_receipt": [
+    "stage/context/initialization identity",
+    "actual allowed and exposed artifact hashes",
+    "all forbidden exposure identities and timestamps in append-only trace",
+    "raw output and transcript hashes before downstream reads",
+    "role/model/tool/human identity and each independence dimension",
+    "call counts, failures and deviations"
+  ],
+  "freeze_rule": "No mutation of the frozen rubric, corpus, raw role outputs or accepted expectations; successor identity required for material repair.",
+  "future_slots": [],
+  "role": "ASSESSOR_IMPLEMENTATION",
+  "allowed_files": [
+    "rubric.md",
+    "ledger-projection.md",
+    "schemas/case.schema.json",
+    "schemas/annotation.schema.json",
+    "schemas/launch-receipt.schema.json"
+  ],
+  "forbidden_files": [
+    "actual corpus or adjudicated annotations",
+    "case-design.json",
+    "case-construction.md",
+    "relations.json",
+    "author hypotheses",
+    "adjudication/assurance results",
+    "qualification scorer/checker source",
+    "predecessor reducers, controls, outputs or histories"
+  ],
+  "freeze_point": "Freeze source/prompt/dependencies/provider-model/decoding/configuration/environment, all implementation-local checks and access review, complete exposure list, commit/tree and source hashes before seeing any actual case, label, relation or qualification scorer.",
+  "neutral_instructions": "After separate authorization, implement a claim-plus-admitted-BODY to declared-semantic-annotation assessor from the rubric and schemas only. Use development-local examples and record them. Do not inspect actual control packets or reconstruct hidden controls. Freeze a minimal candidate and review every runtime dependency before requesting qualification reveal. No project generation or qualification execution is authorized by this launch alone."
+}

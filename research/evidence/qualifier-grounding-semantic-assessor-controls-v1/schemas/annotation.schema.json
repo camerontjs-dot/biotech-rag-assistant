@@ -1,0 +1,904 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Semantic annotation v1",
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "input_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "ASSERTION",
+              "ACTOR",
+              "OBJECT",
+              "EVENT",
+              "TIME",
+              "DOMAIN",
+              "QUANTITY",
+              "DEGREE",
+              "POLARITY",
+              "MODALITY",
+              "ANTECEDENT",
+              "CONDITION",
+              "EXCEPTION",
+              "REQUIRED_ACTION",
+              "PRESUPPOSITION",
+              "RELATION"
+            ]
+          },
+          "claim_anchors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "start",
+                "end",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "scope_anchors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "start",
+                "end",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "parent_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scope_dependency_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1
+          },
+          "materiality": {
+            "enum": [
+              "MATERIAL",
+              "UNKNOWN"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "claim_anchors",
+          "scope_anchors",
+          "parent_id",
+          "scope_dependency_ids",
+          "meaning",
+          "materiality"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "obligation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "witness_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "relation": {
+            "enum": [
+              "ENTAILED",
+              "CONTRADICTED",
+              "SILENT",
+              "AMBIGUOUS"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "witness_id": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+                },
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "witness_id",
+                "start",
+                "end",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "obligation_id",
+          "witness_ids",
+          "relation",
+          "evidence",
+          "rationale",
+          "alternatives"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "coverage": {
+      "enum": [
+        "COMPLETE",
+        "UNKNOWN"
+      ]
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_anchors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "start",
+                "end",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "claim_anchors",
+          "rationale"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "decomposition": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "applicability": {
+              "enum": [
+                "REQUIRED",
+                "NOT_REQUIRED",
+                "UNKNOWN"
+              ]
+            },
+            "core_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "gap_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "body_witness_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "guard_justifications": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "core_independently_supported": {
+                  "type": "object",
+                  "properties": {
+                    "claim_anchors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "witness_id": {
+                            "type": "string"
+                          },
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "witness_id",
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "claim_anchors",
+                    "evidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                "bindings_preserved": {
+                  "type": "object",
+                  "properties": {
+                    "claim_anchors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "witness_id": {
+                            "type": "string"
+                          },
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "witness_id",
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "claim_anchors",
+                    "evidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                "required_context_retained": {
+                  "type": "object",
+                  "properties": {
+                    "claim_anchors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "witness_id": {
+                            "type": "string"
+                          },
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "witness_id",
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "claim_anchors",
+                    "evidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                "removal_independent": {
+                  "type": "object",
+                  "properties": {
+                    "claim_anchors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "witness_id": {
+                            "type": "string"
+                          },
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "witness_id",
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "claim_anchors",
+                    "evidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                "no_missing_presupposition": {
+                  "type": "object",
+                  "properties": {
+                    "claim_anchors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "witness_id": {
+                            "type": "string"
+                          },
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "witness_id",
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "claim_anchors",
+                    "evidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                "gap_explicit": {
+                  "type": "object",
+                  "properties": {
+                    "claim_anchors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "witness_id": {
+                            "type": "string"
+                          },
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "witness_id",
+                          "start",
+                          "end",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "claim_anchors",
+                    "evidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "core_independently_supported",
+                "bindings_preserved",
+                "required_context_retained",
+                "removal_independent",
+                "no_missing_presupposition",
+                "gap_explicit"
+              ],
+              "additionalProperties": false
+            },
+            "guards": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "core_independently_supported": {
+                      "enum": [
+                        "TRUE",
+                        "FALSE",
+                        "UNKNOWN"
+                      ]
+                    },
+                    "bindings_preserved": {
+                      "enum": [
+                        "TRUE",
+                        "FALSE",
+                        "UNKNOWN"
+                      ]
+                    },
+                    "required_context_retained": {
+                      "enum": [
+                        "TRUE",
+                        "FALSE",
+                        "UNKNOWN"
+                      ]
+                    },
+                    "removal_independent": {
+                      "enum": [
+                        "TRUE",
+                        "FALSE",
+                        "UNKNOWN"
+                      ]
+                    },
+                    "no_missing_presupposition": {
+                      "enum": [
+                        "TRUE",
+                        "FALSE",
+                        "UNKNOWN"
+                      ]
+                    },
+                    "gap_explicit": {
+                      "enum": [
+                        "TRUE",
+                        "FALSE",
+                        "UNKNOWN"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "core_independently_supported",
+                    "bindings_preserved",
+                    "required_context_retained",
+                    "removal_independent",
+                    "no_missing_presupposition",
+                    "gap_explicit"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "required": [
+            "applicability",
+            "core_ids",
+            "gap_ids",
+            "body_witness_ids",
+            "guards",
+            "guard_justifications"
+          ],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "applicability": {
+                    "const": "REQUIRED"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "guards": {
+                    "type": "object"
+                  },
+                  "guard_justifications": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "applicability": {
+                    "enum": [
+                      "NOT_REQUIRED",
+                      "UNKNOWN"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "guards": {
+                    "type": "null"
+                  },
+                  "guard_justifications": {
+                    "type": "null"
+                  },
+                  "core_ids": {
+                    "maxItems": 0
+                  },
+                  "gap_ids": {
+                    "maxItems": 0
+                  },
+                  "body_witness_ids": {
+                    "maxItems": 0
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "case_id",
+    "input_sha256",
+    "obligations",
+    "relations",
+    "coverage",
+    "exclusions",
+    "uncertainties",
+    "decomposition"
+  ],
+  "additionalProperties": false
+}

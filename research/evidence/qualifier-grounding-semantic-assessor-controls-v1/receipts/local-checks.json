@@ -1,0 +1,26 @@
+{
+  "schema_version": "semantic-preparation-local-checks/v1",
+  "checks": {
+    "tests-final": {
+      "exit_code": 0,
+      "stdout_stderr_sha256": "ee6030ab57266b9bb59dead7274cf71d59d30531bd03899ef9f35f14c71ce081",
+      "tool": "tests-final",
+      "started_or_finished_at_utc": "2026-10-01T13:59:47.375693+00:00"
+    },
+    "lint-final": {
+      "exit_code": 0,
+      "stdout_stderr_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "tool": "lint-final",
+      "started_or_finished_at_utc": "2026-10-01T13:59:47.413406+00:00"
+    },
+    "contracts-final": {
+      "exit_code": 0,
+      "stdout_stderr_sha256": "13158c7e6101e8bb7d803504968a2c7777dde6b712df2fe23232381df1aca1d8",
+      "tool": "contracts-final",
+      "started_or_finished_at_utc": "2026-10-01T13:59:47.462195+00:00"
+    }
+  },
+  "tests_count": 25,
+  "semantic_assessor_or_adjudicator_calls": 0,
+  "scope": "new structural/custody source and operational contracts only; no semantic correctness result"
+}

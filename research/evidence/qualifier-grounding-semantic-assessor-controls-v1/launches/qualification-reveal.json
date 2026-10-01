@@ -1,0 +1,88 @@
+{
+  "schema_version": "semantic-launch/v1",
+  "preparation_only": true,
+  "launch_authorized_by_this_task": false,
+  "fresh_context_required": true,
+  "materialization": "Copy only allowlisted files into a plain isolated directory without Git, repository, memory, retrieval tools or sibling artifacts. Resolve each future slot to an exact hash before launch; missing slots stop. Do not pass this repository as working context.",
+  "common_forbidden": [
+    "repository checkout or history",
+    "workspace/MindGraph/memory retrieval",
+    "A07/A08 or other historical payloads",
+    "Wave B",
+    "TEST/PROSPECTIVE payloads",
+    "project generation/G1-G7 replay",
+    "CAL",
+    "other roles' conversations",
+    "unlisted files or network retrieval"
+  ],
+  "contamination_stop": "Preserve exact exposure/hash/time and stop CONTAMINATED before dependent work. Unknown initialization/exposure prevents a CLEAN claim.",
+  "receipt_schema": "schemas/launch-receipt.schema.json",
+  "required_receipt": [
+    "stage/context/initialization identity",
+    "actual allowed and exposed artifact hashes",
+    "all forbidden exposure identities and timestamps in append-only trace",
+    "raw output and transcript hashes before downstream reads",
+    "role/model/tool/human identity and each independence dimension",
+    "call counts, failures and deviations"
+  ],
+  "freeze_rule": "No mutation of the frozen rubric, corpus, raw role outputs or accepted expectations; successor identity required for material repair.",
+  "future_slots": [
+    {
+      "name": "VERIFIED_PREPARATION_AND_APPARATUS_FREEZES",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "PREFLIGHT"
+    },
+    {
+      "name": "CANDIDATE_FREEZE_AND_APERTURE_RECEIPT",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "PREFLIGHT"
+    },
+    {
+      "name": "FROZEN_INPUT_ONLY_CASES",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "AFTER_CANDIDATE_FREEZE"
+    },
+    {
+      "name": "ACCEPTED_EXPECTATIONS_AND_RAW_ADJUDICATION",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "AFTER_CANDIDATE_FREEZE"
+    },
+    {
+      "name": "FROZEN_RELATIONS_AND_ALIGNMENT_MAPS",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "AFTER_CANDIDATE_FREEZE"
+    },
+    {
+      "name": "FROZEN_RUNNER_SCORER_AND_SELFCHECKS",
+      "sha256": null,
+      "state": "NOT_MATERIALIZED",
+      "available_phase": "BEFORE_CALLS"
+    }
+  ],
+  "role": "QUALIFICATION",
+  "allowed_files": [
+    "rubric.md",
+    "ledger-projection.md",
+    "adjudication.md",
+    "qualification.md",
+    "case-design.json",
+    "schemas/case.schema.json",
+    "schemas/annotation.schema.json",
+    "schemas/launch-receipt.schema.json"
+  ],
+  "forbidden_files": [
+    "protected Wave B/TEST/PROSPECTIVE payloads",
+    "project generation",
+    "unfrozen expectation edits",
+    "candidate repair/retry after reveal",
+    "labels/scorer in assessor runtime",
+    "historical natural-language/model outputs"
+  ],
+  "freeze_point": "Verify candidate freeze before first reveal; record reveal time/identities. Freeze scorer, runner and alignment method before 44 calls; persist all outputs before scoring; use endpoint outputs for relations.",
+  "neutral_instructions": "After separate authorization, verify identities, apertures and acceptable apparatus. Reveal only after clean candidate freeze. Run one candidate assessment per case and preserve every raw/parsed output or failure before scoring. Never resend, repair, tune or call an assessor for relation scoring. Score dimensions and vetoes using sufficiently adjudicated expectations; preserve unevaluable cases and terminal evidence."
+}

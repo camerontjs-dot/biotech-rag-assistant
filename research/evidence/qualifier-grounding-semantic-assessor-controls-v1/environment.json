@@ -1,0 +1,13 @@
+{
+  "observed_at_utc": "2026-10-01T13:49:46.661129+00:00",
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": {
+    "system": "Darwin",
+    "release": "27.0.0",
+    "machine": "arm64"
+  },
+  "jsonschema": "4.25.1",
+  "referencing": "0.37.0",
+  "semantic_runtime": "NOT_IMPLEMENTED",
+  "project_model_provider_calls": 0
+}

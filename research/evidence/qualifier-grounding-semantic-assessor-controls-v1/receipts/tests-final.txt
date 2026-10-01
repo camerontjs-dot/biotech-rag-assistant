@@ -1,0 +1,30 @@
+test_ambiguous_requires_alternatives (test_semantic_assessor_preparation.StructureTests.test_ambiguous_requires_alternatives) ... ok
+test_backend_accepts_only_structural_tokens (test_semantic_assessor_preparation.StructureTests.test_backend_accepts_only_structural_tokens) ... ok
+test_body_hash_drift (test_semantic_assessor_preparation.StructureTests.test_body_hash_drift) ... ok
+test_claim_hash_drift (test_semantic_assessor_preparation.StructureTests.test_claim_hash_drift) ... ok
+test_clean_receipt_cannot_hide_forbidden_exposure (test_semantic_assessor_preparation.StructureTests.test_clean_receipt_cannot_hide_forbidden_exposure) ... ok
+test_complete_cannot_hide_unknown_materiality (test_semantic_assessor_preparation.StructureTests.test_complete_cannot_hide_unknown_materiality) ... ok
+test_corpus_slot_and_endpoint_checks_use_tokens_only (test_semantic_assessor_preparation.StructureTests.test_corpus_slot_and_endpoint_checks_use_tokens_only) ... ok
+test_cyclic_scope_dependency_rejected (test_semantic_assessor_preparation.StructureTests.test_cyclic_scope_dependency_rejected) ... ok
+test_evidence_text_must_match (test_semantic_assessor_preparation.StructureTests.test_evidence_text_must_match) ... ok
+test_external_schema_cannot_trigger_network_resolution (test_semantic_assessor_preparation.StructureTests.test_external_schema_cannot_trigger_network_resolution) ... ok
+test_identifier_encodes_category_rejected (test_semantic_assessor_preparation.StructureTests.test_identifier_encodes_category_rejected) ... ok
+test_malformed_schema_is_a_finding (test_semantic_assessor_preparation.StructureTests.test_malformed_schema_is_a_finding) ... ok
+test_missing_atomic_matrix_cell (test_semantic_assessor_preparation.StructureTests.test_missing_atomic_matrix_cell) ... ok
+test_missing_backend_is_physically_not_a_pass (test_semantic_assessor_preparation.StructureTests.test_missing_backend_is_physically_not_a_pass) ... ok
+test_missing_guard_justification_and_unjudged_guards (test_semantic_assessor_preparation.StructureTests.test_missing_guard_justification_and_unjudged_guards) ... ok
+test_missing_input_retains_failure_receipt (test_semantic_assessor_preparation.StructureTests.test_missing_input_retains_failure_receipt) ... ok
+test_no_expected_answer_field_in_packet (test_semantic_assessor_preparation.StructureTests.test_no_expected_answer_field_in_packet) ... ok
+test_nonauthoritative_witness_rejected (test_semantic_assessor_preparation.StructureTests.test_nonauthoritative_witness_rejected) ... ok
+test_path_traversal_and_symlink_rejected (test_semantic_assessor_preparation.StructureTests.test_path_traversal_and_symlink_rejected) ... ok
+test_preparation_hash_custody_and_missing_predecessor (test_semantic_assessor_preparation.StructureTests.test_preparation_hash_custody_and_missing_predecessor) ... ok
+test_projection_cannot_disappear (test_semantic_assessor_preparation.StructureTests.test_projection_cannot_disappear) ... ok
+test_source_span_drift (test_semantic_assessor_preparation.StructureTests.test_source_span_drift) ... ok
+test_strict_json_rejects_duplicate_and_nan (test_semantic_assessor_preparation.StructureTests.test_strict_json_rejects_duplicate_and_nan) ... ok
+test_unicode_offsets_are_codepoints (test_semantic_assessor_preparation.StructureTests.test_unicode_offsets_are_codepoints) ... ok
+test_unknown_obligation_and_duplicate_row (test_semantic_assessor_preparation.StructureTests.test_unknown_obligation_and_duplicate_row) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.825s
+
+OK

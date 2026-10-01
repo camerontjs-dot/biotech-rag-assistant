@@ -1,0 +1,54 @@
+{
+  "schema_version": "semantic-preparation-tool-review/v1",
+  "evaluator": "static_ast_and_direct_test_observation",
+  "imports": {
+    "research/check_semantic_assessor_preparation.py": [
+      "__future__",
+      "argparse",
+      "datetime",
+      "hashlib",
+      "json",
+      "jsonschema",
+      "jsonschema.exceptions",
+      "pathlib",
+      "sys"
+    ],
+    "research/test_semantic_assessor_preparation.py": [
+      "__future__",
+      "check_semantic_assessor_preparation",
+      "copy",
+      "json",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "sys",
+      "tempfile",
+      "unittest",
+      "uuid"
+    ]
+  },
+  "validator_runtime": "Explicit file reads/writes, hashing, JSON parsing and actual JSON Schema validation. No subprocess/model/network/provider/reducer invocation. External schema refs rejected before resolution.",
+  "test_runtime": "Temporary mechanical-token fixtures and two physical Python subprocesses for missing backend/input; no semantic annotation or project generation.",
+  "semantic_validation": "NOT_IMPLEMENTED",
+  "independence_achieved_this_task": "No independent semantic judgment claimed; single preparation-owner context.",
+  "workspace_queries": {
+    "knowledge": {
+      "trust": "durable_knowledge nominations only",
+      "hits": [
+        "CAL annotation design note (unverified)",
+        "INCEpTION raw note (unverified)"
+      ],
+      "evidence_used": false
+    },
+    "projects": {
+      "trust": "project_status nominations only",
+      "hits": [
+        "historical biotech log",
+        "historical meeting note"
+      ],
+      "evidence_used": false
+    }
+  },
+  "source_or_oracle_data_access": "Four named predecessor hashes checked for custody; no fresh cases, labels or historical payloads read by validator.",
+  "project_semantic_assessor_calls": 0
+}

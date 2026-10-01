@@ -1,0 +1,39 @@
+{
+  "schema_version": "semantic-lineage-observation/v1",
+  "authority": "live GitHub plus local Git/files; memory only as leads",
+  "execution_issue": 29,
+  "issue_initial_state": "open",
+  "predecessor_pr": 28,
+  "predecessor_pr_state": "closed",
+  "predecessor_merged": false,
+  "branch": "research/qualifier-grounding-semantic-assessor-controls-v1",
+  "live_branch_start": "b09c2966676a44d506df27f6c1565416451fa67d",
+  "local_base_commit": "b09c2966676a44d506df27f6c1565416451fa67d",
+  "base_tree": "c2c704e93b4792898805491eb606cd7e918d4bd4",
+  "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+  "candidate_tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+  "qualified_disposition": "SUPPORTED_FOR_LEDGER_CONTRACT",
+  "predecessor_identity_hashes": {
+    "research/qualifier_grounding_reducer_v2/reducer.py": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+    "research/evidence/qualifier-grounding-policy-v2/policy.json": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+    "research/evidence/qualifier-grounding-policy-v2/interface.json": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+    "research/evidence/qualifier-grounding-offline-qualification-v2/execution/TERMINAL.json": "47cca465586234642eed737ff51b680c7e1373fe95a2025ebc5e667ddec172de"
+  },
+  "original_workbench": {
+    "head": "20f56cc2d8321b824f3de2a45ec64c9b4c9c0f3d",
+    "branch": "main",
+    "dirty": [
+      "DECISIONS.md"
+    ],
+    "cached_upstream_behind": 7,
+    "mutated_by_this_task": false
+  },
+  "registered_prior_worktrees": {
+    "v1_head": "20a9f39f4368fac5b84621688aa6a334678de306",
+    "v2_head": "7cd75251bdc9782e6e347b0fabd190b964296507",
+    "controlled_docs_v2": "prunable metadata; not cleaned"
+  },
+  "isolation": "separate non-hardlinked clone; original checkouts and dirty work preserved",
+  "outer_coordination": "paused README points to old v2 preparation; stale lead, not authority",
+  "reducer_retest_calls": 0
+}

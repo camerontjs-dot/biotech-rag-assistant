@@ -1,0 +1,42 @@
+E501 Line too long (103 > 100)
+   --> $CHECKOUT/research/check_semantic_assessor_preparation.py:235:101
+    |
+233 |     require(all((guard, value) in opportunities for guard in GUARDS for value in ("TRUE", "FALSE")),
+234 |             "missing declared guard opportunity")
+235 |     require(any(value == "UNKNOWN" for _, value in opportunities), "missing UNKNOWN guard opportunity")
+    |                                                                                                     ^^^
+
+E501 Line too long (103 > 100)
+   --> $CHECKOUT/research/check_semantic_assessor_preparation.py:268:101
+    |
+266 |         require(sha(inside(root, reference).read_bytes()) == digest, f"drift: {reference}")
+267 |     for reference, digest in DOWNSTREAM.items():
+268 |         require(sha(inside(root, reference).read_bytes()) == digest, f"predecessor drift: {reference}")
+    |                                                                                                     ^^^
+269 |     rubric = read_json(package / "rubric-freeze.json")
+270 |     require(sha((package / "rubric.md").read_bytes()) == rubric["rubric_sha256"], "rubric drift")
+    |
+
+E501 Line too long (104 > 100)
+   --> $CHECKOUT/research/check_semantic_assessor_preparation.py:329:101
+    |
+327 |     parser = argparse.ArgumentParser(description=__doc__)
+328 |     parser.add_argument("--root", type=Path, required=True)
+329 |     parser.add_argument("--check", action="store_true", help="check preparation, no semantic execution")
+    |                                                                                                     ^^^^
+330 |     parser.add_argument("--require-freeze", action="store_true")
+331 |     parser.add_argument("--kind", choices=SCHEMA_NAMES)
+    |
+
+E501 Line too long (101 > 100)
+   --> $CHECKOUT/research/test_semantic_assessor_preparation.py:222:101
+    |
+220 |             receipt = temporary / "receipt.json"
+221 |             result = subprocess.run(
+222 |                 [sys.executable, "-S", str(ROOT / "research/check_semantic_assessor_preparation.py"),
+    |                                                                                                     ^
+223 |                  "--root", str(ROOT), "--kind", "case", "--input", str(input_path),
+224 |                  "--receipt", str(receipt)], capture_output=True, text=True, check=False)
+    |
+
+Found 4 errors.

@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Preserved adjudication disagreement ledger v1",
+  "type": "object",
+  "properties": {
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "a_output_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "b_output_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "dimension": {
+            "enum": [
+              "EXTRACTION",
+              "MATERIALITY",
+              "BINDING",
+              "SCOPE",
+              "SUPPORT_RELATION",
+              "COVERAGE",
+              "APPLICABILITY",
+              "EVIDENCE",
+              "ALIGNMENT",
+              "core_independently_supported",
+              "bindings_preserved",
+              "required_context_retained",
+              "removal_independent",
+              "no_missing_presupposition",
+              "gap_explicit"
+            ]
+          },
+          "a": {
+            "type": "object",
+            "properties": {
+              "annotation_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "json_pointer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {},
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "witness_id": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+                    },
+                    "start": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "witness_id",
+                    "start",
+                    "end",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "annotation_sha256",
+              "json_pointer",
+              "value",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "b": {
+            "type": "object",
+            "properties": {
+              "annotation_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "json_pointer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {},
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "witness_id": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+                    },
+                    "start": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "witness_id",
+                    "start",
+                    "end",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "annotation_sha256",
+              "json_pointer",
+              "value",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "rubric_clause": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mechanically_resolvable": {
+            "type": "boolean"
+          },
+          "resolution": {
+            "enum": [
+              "UNRESOLVED",
+              "REFERENCE_NORMALIZED",
+              "OPEN_ADJUDICATION_ACCEPTED"
+            ]
+          },
+          "resolution_rationale": {
+            "type": "string"
+          },
+          "third_or_operator_required": {
+            "type": "boolean"
+          },
+          "additional_judgment_sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "case_id",
+          "dimension",
+          "a",
+          "b",
+          "rubric_clause",
+          "mechanically_resolvable",
+          "resolution",
+          "resolution_rationale",
+          "third_or_operator_required",
+          "additional_judgment_sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "corpus_id",
+    "a_output_sha256",
+    "b_output_sha256",
+    "rows"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "semantic-preparation-deviations/v1",
+  "items": [
+    {
+      "kind": "setup_cli_failure",
+      "detail": "Initial session batch calls combined incompatible --read-batch and --receipt-check flags; corrected before content-dependent work."
+    },
+    {
+      "kind": "workspace_receipt_race",
+      "detail": "Parallel required batch reads lost receipt updates; missing batches were served again sequentially and both route receipt checks then passed."
+    },
+    {
+      "kind": "network_environment",
+      "detail": "Sandbox GitHub DNS failed; approved read-only escalated GitHub access verified live authority."
+    },
+    {
+      "kind": "template_lookup",
+      "detail": "local-contract.md template does not exist; available workflow.template.md and structural profile used instead."
+    },
+    {
+      "kind": "output_truncation",
+      "detail": "Oversized convention/interface listings were recovered in bounded reads before reliance; no protected payloads were read."
+    },
+    {
+      "kind": "design_refinement_before_package_freeze",
+      "detail": "Initial 40-packet estimate expanded to 44: unsupported proposed core, incomplete gap, uncertain guard and unknown claim coverage receive distinct anchor opportunities."
+    },
+    {
+      "kind": "source_lint_before_freeze",
+      "detail": "Four initial E501 findings and one subsequent E501 in an added receipt test corrected before package freeze; frozen rubric unchanged."
+    },
+    {
+      "kind": "isolation",
+      "detail": "Separate non-hardlinked clone rather than disturbing existing dirty/stale/prior worktrees. Local-only pre-commit leak hook active; no bypass."
+    },
+    {
+      "kind": "coordination_degraded",
+      "detail": "Lifecycle index invalid due unrelated missing project lifecycle source, stale focus and project README; direct authority used. No unrelated repair."
+    }
+  ],
+  "material_rubric_changes_after_freeze": 0,
+  "protected_payload_access": false,
+  "cases_or_labels_authored": false,
+  "case_author_launches": 0,
+  "adjudicator_launches": 0,
+  "semantic_assessor_calls": 0,
+  "reducer_calls": 0,
+  "project_generation_calls": 0
+}

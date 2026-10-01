@@ -1,0 +1,7 @@
+  OK      $CHECKOUT/research/evidence/qualifier-grounding-semantic-assessor-controls-v1/rubric.md  (adopted)
+  OK      $CHECKOUT/research/evidence/qualifier-grounding-semantic-assessor-controls-v1/case-construction.md  (adopted)
+  OK      $CHECKOUT/research/evidence/qualifier-grounding-semantic-assessor-controls-v1/adjudication.md  (adopted)
+  OK      $CHECKOUT/research/evidence/qualifier-grounding-semantic-assessor-controls-v1/qualification.md  (adopted)
+  OK      $CHECKOUT/research/evidence/qualifier-grounding-semantic-assessor-controls-v1/ledger-projection.md  (adopted)
+  OK      $CHECKOUT/research/evidence/qualifier-grounding-semantic-assessor-controls-v1/SCHEMAS.md  (adopted)
+  6 file(s) checked, no findings.

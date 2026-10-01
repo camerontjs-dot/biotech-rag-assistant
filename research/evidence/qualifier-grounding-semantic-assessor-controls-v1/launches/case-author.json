@@ -1,0 +1,48 @@
+{
+  "schema_version": "semantic-launch/v1",
+  "preparation_only": true,
+  "launch_authorized_by_this_task": false,
+  "fresh_context_required": true,
+  "materialization": "Copy only allowlisted files into a plain isolated directory without Git, repository, memory, retrieval tools or sibling artifacts. Resolve each future slot to an exact hash before launch; missing slots stop. Do not pass this repository as working context.",
+  "common_forbidden": [
+    "repository checkout or history",
+    "workspace/MindGraph/memory retrieval",
+    "A07/A08 or other historical payloads",
+    "Wave B",
+    "TEST/PROSPECTIVE payloads",
+    "project generation/G1-G7 replay",
+    "CAL",
+    "other roles' conversations",
+    "unlisted files or network retrieval"
+  ],
+  "contamination_stop": "Preserve exact exposure/hash/time and stop CONTAMINATED before dependent work. Unknown initialization/exposure prevents a CLEAN claim.",
+  "receipt_schema": "schemas/launch-receipt.schema.json",
+  "required_receipt": [
+    "stage/context/initialization identity",
+    "actual allowed and exposed artifact hashes",
+    "all forbidden exposure identities and timestamps in append-only trace",
+    "raw output and transcript hashes before downstream reads",
+    "role/model/tool/human identity and each independence dimension",
+    "call counts, failures and deviations"
+  ],
+  "freeze_rule": "No mutation of the frozen rubric, corpus, raw role outputs or accepted expectations; successor identity required for material repair.",
+  "future_slots": [],
+  "role": "CASE_AUTHOR",
+  "allowed_files": [
+    "rubric.md",
+    "case-construction.md",
+    "case-design.json",
+    "schemas/case.schema.json",
+    "schemas/author-design.schema.json",
+    "schemas/relations.schema.json",
+    "schemas/launch-receipt.schema.json"
+  ],
+  "forbidden_files": [
+    "assessor implementation or outputs",
+    "adjudicator/reconciliation outputs",
+    "qualification.md",
+    "predecessor controls/expectations/scorers/reducer outcomes"
+  ],
+  "freeze_point": "Freeze the exact input-only corpus, sealed design/hypotheses, all 16 relations and author/aperture receipt before any adjudicator sees a case.",
+  "neutral_instructions": "After separate authorization, author the 44 synthetic packets specified by the frozen construction protocol. Place packets alone in cases.jsonl; keep design hypotheses and endpoint relations separate and sealed. Supply no accepted labels or final decisions. Run only mechanical validation. Record actual exposure and custody, then stop; do not launch adjudicators."
+}

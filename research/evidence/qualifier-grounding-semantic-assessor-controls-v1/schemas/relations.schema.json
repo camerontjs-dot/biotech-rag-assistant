@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sealed corpus relations v1",
+  "type": "object",
+  "properties": {
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "family": {
+            "enum": [
+              "entity_rename",
+              "sentence_or_witness_order",
+              "harmless_paraphrase",
+              "exact_duplicate",
+              "add_material_qualifier",
+              "remove_material_qualifier",
+              "negation",
+              "actor_swap",
+              "timing",
+              "numeric",
+              "condition_removal",
+              "exception_removal"
+            ]
+          },
+          "left_case_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "right_case_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "mode": {
+            "enum": [
+              "INVARIANT",
+              "SENSITIVE"
+            ]
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "anchor_map": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "left": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "start",
+                    "end",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "right": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "start",
+                    "end",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "kind": {
+                  "enum": [
+                    "ASSERTION",
+                    "ACTOR",
+                    "OBJECT",
+                    "EVENT",
+                    "TIME",
+                    "DOMAIN",
+                    "QUANTITY",
+                    "DEGREE",
+                    "POLARITY",
+                    "MODALITY",
+                    "ANTECEDENT",
+                    "CONDITION",
+                    "EXCEPTION",
+                    "REQUIRED_ACTION",
+                    "PRESUPPOSITION",
+                    "RELATION"
+                  ]
+                }
+              },
+              "required": [
+                "left",
+                "right",
+                "kind"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "changed_ranges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "surface": {
+                  "enum": [
+                    "CLAIM",
+                    "BODY",
+                    "CORE",
+                    "GAP"
+                  ]
+                },
+                "before": {
+                  "type": "string"
+                },
+                "after": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "surface",
+                "before",
+                "after"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "hypothesis": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "family",
+          "left_case_id",
+          "right_case_id",
+          "mode",
+          "dimensions",
+          "anchor_map",
+          "changed_ranges",
+          "hypothesis"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 16,
+      "maxItems": 16
+    }
+  },
+  "required": [
+    "corpus_id",
+    "relations"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,33 @@
+name: Semantic assessor preparation structure
+
+on:
+  pull_request:
+    paths:
+      - 'research/evidence/qualifier-grounding-semantic-assessor-controls-v1/**'
+      - 'research/check_semantic_assessor_preparation.py'
+      - 'research/test_semantic_assessor_preparation.py'
+      - 'research/semantic-assessor-preparation-requirements.txt'
+      - '.github/workflows/semantic-assessor-preparation.yml'
+
+jobs:
+  preparation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install structural validator only
+        run: pip install -r research/semantic-assessor-preparation-requirements.txt ruff==0.16.5
+      - name: New source lint
+        run: ruff check research/check_semantic_assessor_preparation.py research/test_semantic_assessor_preparation.py
+      - name: Structural and custody falsifiers
+        run: python -m unittest discover -s research -p test_semantic_assessor_preparation.py -v
+      - name: Frozen preparation check
+        run: python research/check_semantic_assessor_preparation.py --root . --check --require-freeze --receipt hosted-preparation-check.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: semantic-preparation-structure-receipt
+          path: hosted-preparation-check.json
+          if-no-files-found: warn

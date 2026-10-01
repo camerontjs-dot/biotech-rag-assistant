@@ -1,0 +1,67 @@
+{
+  "schema_version": "semantic-assessor-experiment/v1",
+  "experiment_id": "qualifier-grounding-semantic-assessor-controls-v1",
+  "work_class": "Research Infrastructure / Research Preparation",
+  "state": "designed",
+  "execution_status": "NOT_RUN",
+  "preparation_state": "TERMINAL_PREPARATION_READY",
+  "question": "Can a semantic assessor transform a natural-language claim and authorized BODY evidence into the declared semantic assessments required by the frozen v2 ledger contract on the preregistered synthetic controls?",
+  "primary_factor": "semantic assessor implementation, to be separately frozen after accepted adjudication",
+  "unit_of_analysis": "one natural-language packet; semantic dimensions and family endpoints retained separately",
+  "candidate": {
+    "state": "NOT_IMPLEMENTED",
+    "commit": null,
+    "tree": null,
+    "source_sha256": null
+  },
+  "downstream_reducer": {
+    "disposition": "SUPPORTED_FOR_LEDGER_CONTRACT",
+    "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+    "candidate_tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+    "source_sha256": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+    "qualification_publication": "b09c2966676a44d506df27f6c1565416451fa67d",
+    "retest_authorized": false
+  },
+  "protocol": "qualification.md",
+  "protocol_sha256": "5c6e4688737626a8a9d8bcde67a7b7e725d9e23c7de4204286c8d8c9c73522b1",
+  "future_data": {
+    "corpus_state": "FUTURE_NOT_AUTHORED",
+    "corpus_sha256": null,
+    "relations_sha256": null,
+    "adjudication_state": "FUTURE_NOT_ADJUDICATED",
+    "expectations_sha256": null,
+    "assurance_state": "NOT_RUN"
+  },
+  "stages": {
+    "case_author": "NOT_RUN",
+    "adjudicator_a": "NOT_RUN",
+    "adjudicator_b": "NOT_RUN",
+    "blind_c": "NOT_RUN",
+    "reconciliation": "NOT_RUN",
+    "apparatus_assurance": "NOT_RUN",
+    "assessor_implementation": "NOT_RUN",
+    "semantic_qualification": "NOT_RUN"
+  },
+  "counts": {
+    "case_author_launches": 0,
+    "adjudicator_launches": 0,
+    "semantic_assessor_calls": 0,
+    "reducer_calls": 0,
+    "project_generation_calls": 0
+  },
+  "planned_packets": 44,
+  "planned_relations": 16,
+  "semantic_assessor_disposition": "NOT_RUN",
+  "adjudication_apparatus_disposition": "NOT_RUN",
+  "non_claims": [
+    "No semantic assessor or independently validated labels exist.",
+    "Structural/custody checks do not establish semantic validity.",
+    "No retest of qualified v2 ledger contract.",
+    "No natural-domain reliability, generation quality or production readiness.",
+    "No independent human or training-history independence established."
+  ],
+  "wave_b": "LOCKED",
+  "protected_actions_executed": [],
+  "issue": 29,
+  "predecessor_pr": 28
+}
