@@ -1,0 +1,46 @@
+{
+  "schema_version": "semantic-adjudication-publication/v1",
+  "at_utc": "2026-10-01T15:28:12.884159+00:00",
+  "terminal_commit": "8f62c8206abdedf439df1095012f57ddbc510098",
+  "terminal_tree": "016692f0dbc8f557b2adc1c99447b3730c107303",
+  "terminal_sha256": "626020f0a9454b88b3dd6c36701ccef3bc611c7c6b01462a41b67d49ca2fc199",
+  "terminal_state": "APPARATUS_INVALID",
+  "pr": 32,
+  "pr_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/32",
+  "pr_state": "OPEN_DRAFT_UNMERGED",
+  "base": "research/qualifier-grounding-semantic-assessor-controls-v1",
+  "base_verified_head": "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+  "issue": 31,
+  "issue_state": "CLOSED",
+  "issue_closed_at_utc": "2026-10-01T15:25:39Z",
+  "terminal_comments": [
+    {
+      "id": 5934555340,
+      "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/32#issuecomment-5934555340",
+      "body_sha256": "dce342e7eb2b4558f64ee85fe01b15199d075e5a94be79aab5675e10a5db6d4c"
+    },
+    {
+      "id": 5934555637,
+      "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/31#issuecomment-5934555637",
+      "body_sha256": "dce342e7eb2b4558f64ee85fe01b15199d075e5a94be79aab5675e10a5db6d4c"
+    }
+  ],
+  "tested_ci_head": "8f62c8206abdedf439df1095012f57ddbc510098",
+  "ci": "Physical CI run; 298 inherited lint findings/job, 3 jobs; downstream tests/compile/corpus smoke skipped; static parity PASS",
+  "publication_artifacts": {
+    "freeze.json": "9ebd402725804a384fc8022a66aa51f154f5acadecfd62fa02a3150ffd183402",
+    "receipts/github-terminal-reconciliation.json": "4e9b340e795bfa2179848fd181c087dabe1a1db3279c6dc07cc27886fd3b8466",
+    "receipts/hosted-ci-classification.json": "9043cbb2c8587f66857fd165b3b7798f77cf3affe534cd1e6b1ac7f25a429ddb",
+    "receipts/hosted-ci-jobs.json": "700cc2658acd18698892cbf7ab114c2ad93a7fae1f8a9158f118e64454f1eb89"
+  },
+  "frozen_terminal_artifact_rechecks": 29,
+  "all_predecessor_bytes_preserved": true,
+  "calls": "Zero research role, assessor, reducer, project-generation calls",
+  "accepted_expectations": "NOT_FROZEN; SHA-256 null",
+  "record_deviations_after_terminal_freeze": [],
+  "pre_terminal_document_deviation": "Initial record profile lint was nonblocking/not adopted. T0 profile block added before terminal freeze; original draft and first check preserved, final binding rechecked.",
+  "privacy": "No credentials, user-home paths or payloads in new public evidence. Original supervisor diagnostic initialization/settings retained in private custody.",
+  "source_changes": "NONE; only evidence records added",
+  "smallest_next_step": "Separately identified adapter preflight that establishes auditable clean initialization and leaf-file isolation with an outside-sentinel denial; then a new execution attempt of the unchanged sealed sequence. Stop before assessor implementation.",
+  "wave_b": "LOCKED"
+}

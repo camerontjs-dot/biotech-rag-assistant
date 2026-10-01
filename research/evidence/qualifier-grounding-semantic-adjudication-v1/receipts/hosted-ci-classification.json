@@ -1,0 +1,39 @@
+{
+  "schema_version": "semantic-adjudication-ci-classification/v1",
+  "at_utc": "2026-10-01T15:22:10.876154+00:00",
+  "run_id": 36883168224,
+  "tested_head": "8f62c8206abdedf439df1095012f57ddbc510098",
+  "run_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36883168224",
+  "reported_error_totals_by_job": {
+    "ruff + pytest (py3.11)": 298,
+    "ruff + pytest (py3.12)": 298,
+    "ruff + pytest (py3.13)": 298
+  },
+  "primary_diagnostic_locations_by_job": {
+    "ruff + pytest (py3.11)": 298,
+    "ruff + pytest (py3.12)": 298,
+    "ruff + pytest (py3.13)": 298
+  },
+  "diagnostic_locations_by_file_across_jobs": {
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py": 582,
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py": 195,
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py": 18,
+    "research/qualifier_grounding_reducer_v2/reducer.py": 6,
+    "research/qualifier_grounding_reducer_v2/test_reducer.py": 15,
+    "research/review_qualifier_grounding_v2_persisted.py": 33,
+    "research/run_qualifier_grounding_v2_once.py": 15,
+    "research/run_qualifier_offline_qualification.py": 9,
+    "research/score_qualifier_grounding_v2_persisted.py": 21
+  },
+  "all_diagnostic_files_unchanged_from_predecessor": true,
+  "new_candidate_source": "NONE; no executable source changed",
+  "candidate_source_failure": "NOT_APPLICABLE",
+  "apparatus_failure": "FAILED_ISOLATION_PREFLIGHT; independent of hosted lint",
+  "inherited_frozen_evidence_lint": "FAIL in all three Python jobs; all findings in unchanged predecessor files",
+  "repository_regression": "Tests, compile and corpus smoke SKIPPED after lint; broader regression NOT_TESTED",
+  "static_demo_parity": "PASS on nonzero physical runner",
+  "dedicated_preparation_workflow": "NOT_TRIGGERED: PR diff outside its frozen path filter",
+  "semantic_role_calls_in_this_execution": 0,
+  "log_sha256": "92c064879be2b6e6620459fbc912621fea4fdc604bdd8da1d44da0ce162e0ea3",
+  "raw_log": "Private downloaded native failed-job log; safe parsed location/count observations here"
+}

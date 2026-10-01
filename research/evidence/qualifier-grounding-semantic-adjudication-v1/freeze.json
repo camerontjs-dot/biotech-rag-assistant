@@ -1,0 +1,15 @@
+{
+  "schema_version": "semantic-adjudication-stop-freeze/v1",
+  "frozen_at_utc": "2026-10-01T15:19:40.397748+00:00",
+  "branch": "research/qualifier-grounding-semantic-adjudication-v1",
+  "terminal_commit": "8f62c8206abdedf439df1095012f57ddbc510098",
+  "terminal_tree": "016692f0dbc8f557b2adc1c99447b3730c107303",
+  "terminal_sha256": "626020f0a9454b88b3dd6c36701ccef3bc611c7c6b01462a41b67d49ca2fc199",
+  "terminal_state": "APPARATUS_INVALID",
+  "clean_checkout_at_terminal_freeze": true,
+  "aperture_research_files_materialized": 7,
+  "aperture_research_files_read_only_after_stop": true,
+  "research_roles_launched": 0,
+  "fresh_expectation_freeze": "NOT_RUN",
+  "publication_rule": "Append-only public CI/GitHub/freeze observations; preserved terminal and predecessor records never rewritten."
+}

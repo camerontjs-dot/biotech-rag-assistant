@@ -1,0 +1,35 @@
+{
+  "schema_version": "semantic-adjudication-github-reconciliation/v1",
+  "at_utc": "2026-10-01T15:25:40.948086+00:00",
+  "pr": {
+    "number": 32,
+    "state": "open",
+    "draft": true,
+    "merged_at": null,
+    "head": "8f62c8206abdedf439df1095012f57ddbc510098",
+    "base": "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+    "base_ref": "research/qualifier-grounding-semantic-assessor-controls-v1",
+    "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/32"
+  },
+  "issue": {
+    "number": 31,
+    "state": "closed",
+    "state_reason": "completed",
+    "closed_at": "2026-10-01T15:25:39Z",
+    "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/31"
+  },
+  "terminal_comments": [
+    {
+      "id": 5934555340,
+      "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/32#issuecomment-5934555340",
+      "body_sha256": "dce342e7eb2b4558f64ee85fe01b15199d075e5a94be79aab5675e10a5db6d4c"
+    },
+    {
+      "id": 5934555637,
+      "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/31#issuecomment-5934555637",
+      "body_sha256": "dce342e7eb2b4558f64ee85fe01b15199d075e5a94be79aab5675e10a5db6d4c"
+    }
+  ],
+  "closure_order": "Both terminal comments verified persisted byte-identically before issue closure.",
+  "meaning": "Issue closed for terminal APPARATUS_INVALID attempt; expectation acceptance remains NOT_RUN."
+}
