@@ -1,0 +1,19 @@
+{
+  "runner_sha256": "72d88cad5d622fa2cc70decced828dbe7fc8a36e3cc9523f7e544d244370d6f6",
+  "candidate_sha256": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+  "expectations_present": false,
+  "candidate_imports": [],
+  "audithook_policy": "Fail on any audit event during decide, collect event names/types only",
+  "runner_review": "One syntactic decide(case) call in the fresh input loop; no scorer/checker/provider/history imports; persistent exclusive start and per-call outputs",
+  "lint": "PASS",
+  "syntax": "PASS",
+  "pre_run_runner_lint_failure": {
+    "findings": [
+      "S102 on normal loader implemented with exec",
+      "BLE001 on broad failure capture"
+    ],
+    "resolution": "Use importlib loader; explicitly document broad capture required to preserve partial-run failure records",
+    "candidate_source_changed": false,
+    "decide_calls": 0
+  }
+}

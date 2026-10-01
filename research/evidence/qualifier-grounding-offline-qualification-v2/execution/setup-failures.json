@@ -1,0 +1,22 @@
+{
+  "phase": "pre_decisive_apparatus_setup",
+  "decide_calls": 0,
+  "failures": [
+    {
+      "step": "narrow extraction allowlist",
+      "observation": "AssertionError on two predecessor custody source paths",
+      "resolution": "Explicitly permit exact predecessor custody paths for raw hash verification only"
+    },
+    {
+      "step": "preparation check on incomplete local copy",
+      "observation": {
+        "status": "APPARATUS_INVALID",
+        "error": "missing artifact: research/evidence/qualifier-grounding-policy-v2/freeze.json"
+      },
+      "interpretation": "Incomplete local materialization, not evidence of drift or a defect in frozen artifacts",
+      "resolution": "Materialize exact Git objects and verify all manifest hashes before rechecking"
+    }
+  ],
+  "candidate_source_changed": false,
+  "decisive_run_started": false
+}

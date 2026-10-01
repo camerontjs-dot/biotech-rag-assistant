@@ -1,0 +1,266 @@
+{
+  "schema_version": "qualifier-grounding-reveal/v2",
+  "experiment_id": "qualifier-grounding-offline-qualification-v2",
+  "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+  "candidate_tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+  "first_reveal_at_utc": "2026-10-01T03:36:46.870144+00:00",
+  "publication_head": "7cd75251bdc9782e6e347b0fabd190b964296507",
+  "pre_reveal_checkout_clean": true,
+  "candidate_hashes_reverified": true,
+  "newly_visible_artifacts": [
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/CANDIDATE.json",
+      "git_blob": "dc62cd09e47bb8a46fbdbc25ca5e0b84e6f2e784",
+      "sha256": "f3343c695f285bc14950f0a384c4108929afedececfe0f9f3a22fe39b84f3c34",
+      "bytes": 1681
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/EXPERIMENT.json",
+      "git_blob": "fc31b2c352e25f560d4597cde7c86c5474642f89",
+      "sha256": "39787a8197508b655e1da9ef7faa0ee8e60fcd59a9f10135d992f814e29bc592",
+      "bytes": 7410
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/PACKAGE-FREEZE.json",
+      "git_blob": "bb36c0d6196b83f2ce9c67d1abbc6b55c9193e3c",
+      "sha256": "2872e9aa085381e8effd9baa60b116e5c6c7d2c14325ba3decc7f13fdc526181",
+      "bytes": 9330
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/README.md",
+      "git_blob": "f27c0ab7b4647d688269d16d3d1b16d2c544d0d6",
+      "sha256": "5b491d1dd6664a7b25719e1d372cdbe4f220d9204a19585cab0591e2d5d9bb41",
+      "bytes": 8650
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/TERMINAL.json",
+      "git_blob": "6ff3112b7a89309fc77b3884bffdfce6e78f2524",
+      "sha256": "dba7c3474a36e6a266d7d5514ed928d5f42953d4f7ee331c11e00c51077ac2d3",
+      "bytes": 3184
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/authority-preflight.json",
+      "git_blob": "9e4c89e19706e9ebeabf9176dd6752077e4a857b",
+      "sha256": "4864910f19d773d65737aabf38d4bd3adc9613ea094957a2d03719728e95e3c2",
+      "bytes": 14796
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks.json",
+      "git_blob": "37e74b3865a2ce4bb9f5d2ac723c5dacd115a559",
+      "sha256": "15c51a6d11ed0d247fdb58ee1b4c0d48a72a7c6cee592caf1c98deed024e0c93",
+      "bytes": 1266
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/archived-author-lint-full.json",
+      "git_blob": "0f421f59a527471cec720f0563382e2325494f01",
+      "sha256": "63d8b62c0bfb6a729f794935851e91bd15b6478eb66600f4d9695b5b11f1cef5",
+      "bytes": 153210
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/archived-author-lint.stdout.txt",
+      "git_blob": "5e3e19311bfd40f34e68083efda941e7f8c91139",
+      "sha256": "9e3a9c5134da639f9648f6b9fd4e780a717f95a2ec720505ef558866c727277c",
+      "bytes": 20108
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/commands.json",
+      "git_blob": "695aba0ebaf68b42172beb50f4b26989e542aba6",
+      "sha256": "1365e762c1490bd986be62d9897dc76fec89606bcebc5805468a5db5bb98b3b1",
+      "bytes": 2661
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/contracts.stdout.txt",
+      "git_blob": "5d1a2b5a6cfb91587b577ab7e8d15dea800cf49c",
+      "sha256": "2459f64c36a4bf98375809992139388bf55bf5fc70ed8a5b336fa08aa647411c",
+      "bytes": 341
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/maintained-lint.stdout.txt",
+      "git_blob": "1f5f344d054fae10f39140fb7199c99321d9190a",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/preregistration.stdout.txt",
+      "git_blob": "2442432f893e14b77587650aa1c7a0f88be03033",
+      "sha256": "797a22f13bcb5647980d53f1758755cd7867eb9e8c47db3bab0c05f1a48fe288",
+      "bytes": 493
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/selftests.stdout.txt",
+      "git_blob": "4854fbb90a90186676783193798f4297ea1949a4",
+      "sha256": "c46a0dbc98f145c5390631610b4039fdaa64e4ed8b2ece83cd102c537f9a12a7",
+      "bytes": 532
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/control-author-launch.json",
+      "git_blob": "f9398ebe1ec28ad72b494648857dc9125d8f04f5",
+      "sha256": "fb941448f6bcd5707561d01f5eb5815edbfe2b05cad0a1473e73d4f971e49e1e",
+      "bytes": 1163
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/control-author-relaunch.json",
+      "git_blob": "6c4cd362b543e038f50b8c343503c3b108dc95d3",
+      "sha256": "0972502770ce1b23a68d771a5d2bacb579254cbd09895d1cbe28a5c22c333509",
+      "bytes": 1020
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/deviations.json",
+      "git_blob": "7fae98af95fdc08d9243b0cab41e5c59730c9112",
+      "sha256": "b8986a86dd1ca43946115cd4dd8ba2ec35fb624294238561cc157116a8161a38",
+      "bytes": 5964
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/CONTAMINATION.json",
+      "git_blob": "e179e4f54ae1f4694f71a993b0211cb5f2e0ee18",
+      "sha256": "8af1229dc0e5f5bafdb32c169744e9b74b16f074e0b626ccb82cbaa33a9a4a3f",
+      "bytes": 1301
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/EXPOSURE-CLASSIFICATION.json",
+      "git_blob": "79a542b4724fbc16d3c428c1b8927f5b764880e9",
+      "sha256": "ef85622a7c3d8de22548420911baab98d49c35d1ff77cdea9dfd224ee26d3f4c",
+      "bytes": 1390
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/classification-custody.json",
+      "git_blob": "8a1abb24376077f94b62d466d17462ccdfa36a23",
+      "sha256": "645516b2c0d9bd51cf0178b337de496b97b065d23f596d6fab45d1b35d501857",
+      "bytes": 672
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/failure-custody.json",
+      "git_blob": "a363eda14963042ffcbaf074506ba7860ece34d8",
+      "sha256": "8907b27a5c0d0874b91d67bca624b6ba3277cc0f8bc9e6773b5994ae57688a25",
+      "bytes": 432
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/diagnostic-formatting.json",
+      "git_blob": "412e5b842d6f627289eb38c45ec71299190c31a8",
+      "sha256": "9941a8015486b8d045f15b8483255b639dc9bd1b6bc52626f0dd22d580deadc9",
+      "bytes": 3367
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.json",
+      "git_blob": "0fe8469923e754e646f1e8869ab612d40c668036",
+      "sha256": "927f217c3ea87800d30927b54dedee5eab51428b25a0188918e496da030eb74a",
+      "bytes": 688
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.py.txt",
+      "git_blob": "d22717a8db91622665809ff9d499d4d6d15150ba",
+      "sha256": "7ca6ef20a2c4817f10e79ce311f9e1a8311bf222934acbc01cb588c561e2ccbc",
+      "bytes": 21834
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.txt",
+      "git_blob": "2b37d54ddb2f0759b385f9ab11ead6a602d484d1",
+      "sha256": "507ab1af30aa88e7da38d1811e71c5652656f0f74af6c8cbc3a79202a094ec9b",
+      "bytes": 87
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-lint-first.txt",
+      "git_blob": "4a537ebde69627ad3ef54a71b989e22d71767d90",
+      "sha256": "5a2f1dcab23b8dd802428b98998c7ea3f2ab5b72985336bc1969fe0fd638ba09",
+      "bytes": 3154
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-control-review.json",
+      "git_blob": "3e01accdd131882cb86e3c0722196dec0bd7940b",
+      "sha256": "f525d8edc96cbed32b20b2e54983dfefea84c95cad97285d9efa6dcbbe1179cc",
+      "bytes": 8816
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/AUTHOR.json",
+      "git_blob": "a06c699d21ac9396b0615521bbe438a26712cba4",
+      "sha256": "cee0596999933f99a7bb21a82f3c2928e2c9a45508a1bbc5a962c73293c2fbb0",
+      "bytes": 8749
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py",
+      "git_blob": "1b09046e526410cd96caaa1466436edfc339d019",
+      "sha256": "421bc05030e1232659f627d254512884b9293566cfc64ff5624b7e585573048a",
+      "bytes": 41767
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py",
+      "git_blob": "5a75065713b7c965bc87cc1070513da20c329c3e",
+      "sha256": "ec6f4ef90beecd173dc2131cc9e594a1ffb3ebc6bf560f1b9294d1e9eccbfc39",
+      "bytes": 15436
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/checks.json",
+      "git_blob": "42d574c8b4442d7b717c23da1ba011645e23cd77",
+      "sha256": "1283ef8e76d6c1003666873082d53d3a302456e97996ead9dfb596bd5205fa40",
+      "bytes": 146955
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/controls.json",
+      "git_blob": "930107b8f438f0908aff6e5d9fb1da61c9e64441",
+      "sha256": "09979fb2677e626ae01aba816921738cab79e701c7e61c080b32c98fafa84ca9",
+      "bytes": 26743
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/expectations.jsonl",
+      "git_blob": "dfecfcab6776a78777cebcdc324e80ec7f61be26",
+      "sha256": "1fcb5ab6e55d961604078015a711e6dfeecf7c5b048e768b42bb80300c98f226",
+      "bytes": 49432
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze.json",
+      "git_blob": "fb41b6d5e81cdc87a2c577c7288402b13431df0b",
+      "sha256": "955c5d076c40fc9ad526df018f9cc38cd463253ca58b5a19033c14a84a289508",
+      "bytes": 1782
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+      "git_blob": "0d09051f3119bb329fd6fcf075c4fb123be5c396",
+      "sha256": "5fb887b6cdf10a3f30414da33d016a0fe81c9a3a21143f61bbcff50865a8b5dd",
+      "bytes": 1673
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/inputs.jsonl",
+      "git_blob": "5c37a98e2ec8989de73c760b16f5d188b591efee",
+      "sha256": "d4afdacc54e87d7d60d3f947512484af76a7d3830283701bcd37527dc3bc56d1",
+      "bytes": 51657
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/pairs.json",
+      "git_blob": "109185634af95f8d03f4868b422f358470a6d124",
+      "sha256": "18213e6ef725873ebb9d34b1a39a0bd57eefb0d8a8213e4e5a89322ac69d64be",
+      "bytes": 33889
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/normative-checks.json",
+      "git_blob": "5940f1ab58eaf8b6942cbed7665374c27da1f29e",
+      "sha256": "5644f6bc472d027c7edd5186359ea12f2245ae7dc25e759020cb47806c0faf31",
+      "bytes": 1572
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/owner-control-reveal.json",
+      "git_blob": "2ea85cf66f928f1905c4ff56591e64a646677a07",
+      "sha256": "eecc542f14b272a60dae5f028b0283ab79ac5d76bf628a9955dcef37eff8c992",
+      "bytes": 527
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/predecessor-custody.json",
+      "git_blob": "4b3eb91ad1857b97fe792501cdeda05a23f0bc47",
+      "sha256": "699741df07bd7cb62e963381baddb08a85aa8d826b9163c98b1ffeba6c0f983d",
+      "bytes": 13372
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/preparation-source-review.json",
+      "git_blob": "1f1b5202c4ec1d72d46bc956a1938a582857d009",
+      "sha256": "bcddcca7415bd0d35fdd425c8320ddea1b5916e2a433d05ce8d60ee447537bd2",
+      "bytes": 1415
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/regression.json",
+      "git_blob": "a5e9b24f2acd34bb0537d9f291533b3a463d452f",
+      "sha256": "1016b0cbbce041c62aec6bcb4baf5026e0259b11846d6ad53d3e7974da5c2071",
+      "bytes": 1748
+    }
+  ],
+  "exposure_mode": "Exact publication objects extracted to separate apparatus directory after freeze; no protected payload paths selected",
+  "pre_freeze_contamination_status": "CLEAN"
+}

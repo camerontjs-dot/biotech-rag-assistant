@@ -1,0 +1,24 @@
+{
+  "revealed_at_utc": "2026-10-01T03:37:21.067627+00:00",
+  "publication_head": "7cd75251bdc9782e6e347b0fabd190b964296507",
+  "artifacts": [
+    {
+      "path": "research/qualifier-grounding-offline-qualification-v2-protocol.md",
+      "sha256": "1c947e4a9f43befef979c86d537cf0d67ad5d522031a775df617ac9ac72b0e51",
+      "bytes": 13468,
+      "git_blob": "9cf00b28a26c0d4e6b4fc57a4de781754e133736"
+    },
+    {
+      "path": "research/check_qualifier_grounding_v2_preparation.py",
+      "sha256": "e69dbbdbc215956ea35cc0b2364f6a98abc6f60888c73b48d7a3b26d683e4f40",
+      "bytes": 22382,
+      "git_blob": "7dc42e3b600443ffca808aca807b83259cb3fa2d"
+    },
+    {
+      "path": "tests/test_qualifier_grounding_v2_preparation.py",
+      "sha256": "d5b59915d7945df564d4ce884412b1131223c478fda1739d960ae054fd99ad0e",
+      "bytes": 7952,
+      "git_blob": "4e73c35fa544563d07f1a694da92c775eb3357b2"
+    }
+  ]
+}

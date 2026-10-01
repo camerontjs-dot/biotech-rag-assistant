@@ -1,0 +1,12 @@
+{
+  "schema_version": "qualifier-grounding-preparation-check/v2",
+  "status": "PASS_PREPARATION_ONLY",
+  "fresh_set_id": "qg-v2-fresh-acceptance-20260930-v4n8",
+  "fresh_controls": 69,
+  "fresh_pairs": 33,
+  "known_regression_controls": 28,
+  "v2_reducer": "NOT_IMPLEMENTED",
+  "v2_decisive_execution": "NOT_RUN",
+  "project_model_provider_calls": 0,
+  "limits": "Syntax/custody/authored pair consistency only; no decision derivation, candidate qualification or independent semantic truth."
+}

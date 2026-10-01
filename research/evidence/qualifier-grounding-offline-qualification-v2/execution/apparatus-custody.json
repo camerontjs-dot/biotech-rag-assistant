@@ -1,0 +1,1370 @@
+{
+  "recorded_at_utc": "2026-10-01T03:39:48.326416+00:00",
+  "publication_head": "7cd75251bdc9782e6e347b0fabd190b964296507",
+  "package_source_commit": "1fc2b13ea6cd50bb2264e1347583c8322e7dcd2e",
+  "package_source_tree": "cd9a0acfd45f7ba2eb4607ee0031b69239b82c8a",
+  "package_file_count": 49,
+  "hash_checks": [
+    {
+      "path": "research/check_qualifier_grounding_v2_preparation.py",
+      "expected_sha256": "e69dbbdbc215956ea35cc0b2364f6a98abc6f60888c73b48d7a3b26d683e4f40",
+      "actual_sha256": "e69dbbdbc215956ea35cc0b2364f6a98abc6f60888c73b48d7a3b26d683e4f40"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/EXPERIMENT.json",
+      "expected_sha256": "39787a8197508b655e1da9ef7faa0ee8e60fcd59a9f10135d992f814e29bc592",
+      "actual_sha256": "39787a8197508b655e1da9ef7faa0ee8e60fcd59a9f10135d992f814e29bc592"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/README.md",
+      "expected_sha256": "5b491d1dd6664a7b25719e1d372cdbe4f220d9204a19585cab0591e2d5d9bb41",
+      "actual_sha256": "5b491d1dd6664a7b25719e1d372cdbe4f220d9204a19585cab0591e2d5d9bb41"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/authority-preflight.json",
+      "expected_sha256": "4864910f19d773d65737aabf38d4bd3adc9613ea094957a2d03719728e95e3c2",
+      "actual_sha256": "4864910f19d773d65737aabf38d4bd3adc9613ea094957a2d03719728e95e3c2"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks.json",
+      "expected_sha256": "15c51a6d11ed0d247fdb58ee1b4c0d48a72a7c6cee592caf1c98deed024e0c93",
+      "actual_sha256": "15c51a6d11ed0d247fdb58ee1b4c0d48a72a7c6cee592caf1c98deed024e0c93"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/archived-author-lint-full.json",
+      "expected_sha256": "63d8b62c0bfb6a729f794935851e91bd15b6478eb66600f4d9695b5b11f1cef5",
+      "actual_sha256": "63d8b62c0bfb6a729f794935851e91bd15b6478eb66600f4d9695b5b11f1cef5"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/archived-author-lint.stdout.txt",
+      "expected_sha256": "9e3a9c5134da639f9648f6b9fd4e780a717f95a2ec720505ef558866c727277c",
+      "actual_sha256": "9e3a9c5134da639f9648f6b9fd4e780a717f95a2ec720505ef558866c727277c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/commands.json",
+      "expected_sha256": "1365e762c1490bd986be62d9897dc76fec89606bcebc5805468a5db5bb98b3b1",
+      "actual_sha256": "1365e762c1490bd986be62d9897dc76fec89606bcebc5805468a5db5bb98b3b1"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/contracts.stdout.txt",
+      "expected_sha256": "2459f64c36a4bf98375809992139388bf55bf5fc70ed8a5b336fa08aa647411c",
+      "actual_sha256": "2459f64c36a4bf98375809992139388bf55bf5fc70ed8a5b336fa08aa647411c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/maintained-lint.stdout.txt",
+      "expected_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "actual_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/preregistration.stdout.txt",
+      "expected_sha256": "797a22f13bcb5647980d53f1758755cd7867eb9e8c47db3bab0c05f1a48fe288",
+      "actual_sha256": "797a22f13bcb5647980d53f1758755cd7867eb9e8c47db3bab0c05f1a48fe288"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/selftests.stdout.txt",
+      "expected_sha256": "c46a0dbc98f145c5390631610b4039fdaa64e4ed8b2ece83cd102c537f9a12a7",
+      "actual_sha256": "c46a0dbc98f145c5390631610b4039fdaa64e4ed8b2ece83cd102c537f9a12a7"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/control-author-launch.json",
+      "expected_sha256": "fb941448f6bcd5707561d01f5eb5815edbfe2b05cad0a1473e73d4f971e49e1e",
+      "actual_sha256": "fb941448f6bcd5707561d01f5eb5815edbfe2b05cad0a1473e73d4f971e49e1e"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/control-author-relaunch.json",
+      "expected_sha256": "0972502770ce1b23a68d771a5d2bacb579254cbd09895d1cbe28a5c22c333509",
+      "actual_sha256": "0972502770ce1b23a68d771a5d2bacb579254cbd09895d1cbe28a5c22c333509"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/deviations.json",
+      "expected_sha256": "b8986a86dd1ca43946115cd4dd8ba2ec35fb624294238561cc157116a8161a38",
+      "actual_sha256": "b8986a86dd1ca43946115cd4dd8ba2ec35fb624294238561cc157116a8161a38"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/CONTAMINATION.json",
+      "expected_sha256": "8af1229dc0e5f5bafdb32c169744e9b74b16f074e0b626ccb82cbaa33a9a4a3f",
+      "actual_sha256": "8af1229dc0e5f5bafdb32c169744e9b74b16f074e0b626ccb82cbaa33a9a4a3f"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/EXPOSURE-CLASSIFICATION.json",
+      "expected_sha256": "ef85622a7c3d8de22548420911baab98d49c35d1ff77cdea9dfd224ee26d3f4c",
+      "actual_sha256": "ef85622a7c3d8de22548420911baab98d49c35d1ff77cdea9dfd224ee26d3f4c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/classification-custody.json",
+      "expected_sha256": "645516b2c0d9bd51cf0178b337de496b97b065d23f596d6fab45d1b35d501857",
+      "actual_sha256": "645516b2c0d9bd51cf0178b337de496b97b065d23f596d6fab45d1b35d501857"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/failure-custody.json",
+      "expected_sha256": "8907b27a5c0d0874b91d67bca624b6ba3277cc0f8bc9e6773b5994ae57688a25",
+      "actual_sha256": "8907b27a5c0d0874b91d67bca624b6ba3277cc0f8bc9e6773b5994ae57688a25"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/diagnostic-formatting.json",
+      "expected_sha256": "9941a8015486b8d045f15b8483255b639dc9bd1b6bc52626f0dd22d580deadc9",
+      "actual_sha256": "9941a8015486b8d045f15b8483255b639dc9bd1b6bc52626f0dd22d580deadc9"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.json",
+      "expected_sha256": "927f217c3ea87800d30927b54dedee5eab51428b25a0188918e496da030eb74a",
+      "actual_sha256": "927f217c3ea87800d30927b54dedee5eab51428b25a0188918e496da030eb74a"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.py.txt",
+      "expected_sha256": "7ca6ef20a2c4817f10e79ce311f9e1a8311bf222934acbc01cb588c561e2ccbc",
+      "actual_sha256": "7ca6ef20a2c4817f10e79ce311f9e1a8311bf222934acbc01cb588c561e2ccbc"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.txt",
+      "expected_sha256": "507ab1af30aa88e7da38d1811e71c5652656f0f74af6c8cbc3a79202a094ec9b",
+      "actual_sha256": "507ab1af30aa88e7da38d1811e71c5652656f0f74af6c8cbc3a79202a094ec9b"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-lint-first.txt",
+      "expected_sha256": "5a2f1dcab23b8dd802428b98998c7ea3f2ab5b72985336bc1969fe0fd638ba09",
+      "actual_sha256": "5a2f1dcab23b8dd802428b98998c7ea3f2ab5b72985336bc1969fe0fd638ba09"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-control-review.json",
+      "expected_sha256": "f525d8edc96cbed32b20b2e54983dfefea84c95cad97285d9efa6dcbbe1179cc",
+      "actual_sha256": "f525d8edc96cbed32b20b2e54983dfefea84c95cad97285d9efa6dcbbe1179cc"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/AUTHOR.json",
+      "expected_sha256": "cee0596999933f99a7bb21a82f3c2928e2c9a45508a1bbc5a962c73293c2fbb0",
+      "actual_sha256": "cee0596999933f99a7bb21a82f3c2928e2c9a45508a1bbc5a962c73293c2fbb0"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py",
+      "expected_sha256": "421bc05030e1232659f627d254512884b9293566cfc64ff5624b7e585573048a",
+      "actual_sha256": "421bc05030e1232659f627d254512884b9293566cfc64ff5624b7e585573048a"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py",
+      "expected_sha256": "ec6f4ef90beecd173dc2131cc9e594a1ffb3ebc6bf560f1b9294d1e9eccbfc39",
+      "actual_sha256": "ec6f4ef90beecd173dc2131cc9e594a1ffb3ebc6bf560f1b9294d1e9eccbfc39"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/checks.json",
+      "expected_sha256": "1283ef8e76d6c1003666873082d53d3a302456e97996ead9dfb596bd5205fa40",
+      "actual_sha256": "1283ef8e76d6c1003666873082d53d3a302456e97996ead9dfb596bd5205fa40"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/controls.json",
+      "expected_sha256": "09979fb2677e626ae01aba816921738cab79e701c7e61c080b32c98fafa84ca9",
+      "actual_sha256": "09979fb2677e626ae01aba816921738cab79e701c7e61c080b32c98fafa84ca9"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/expectations.jsonl",
+      "expected_sha256": "1fcb5ab6e55d961604078015a711e6dfeecf7c5b048e768b42bb80300c98f226",
+      "actual_sha256": "1fcb5ab6e55d961604078015a711e6dfeecf7c5b048e768b42bb80300c98f226"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze.json",
+      "expected_sha256": "955c5d076c40fc9ad526df018f9cc38cd463253ca58b5a19033c14a84a289508",
+      "actual_sha256": "955c5d076c40fc9ad526df018f9cc38cd463253ca58b5a19033c14a84a289508"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+      "expected_sha256": "5fb887b6cdf10a3f30414da33d016a0fe81c9a3a21143f61bbcff50865a8b5dd",
+      "actual_sha256": "5fb887b6cdf10a3f30414da33d016a0fe81c9a3a21143f61bbcff50865a8b5dd"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/inputs.jsonl",
+      "expected_sha256": "d4afdacc54e87d7d60d3f947512484af76a7d3830283701bcd37527dc3bc56d1",
+      "actual_sha256": "d4afdacc54e87d7d60d3f947512484af76a7d3830283701bcd37527dc3bc56d1"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/pairs.json",
+      "expected_sha256": "18213e6ef725873ebb9d34b1a39a0bd57eefb0d8a8213e4e5a89322ac69d64be",
+      "actual_sha256": "18213e6ef725873ebb9d34b1a39a0bd57eefb0d8a8213e4e5a89322ac69d64be"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/implementation-aperture/CANDIDATE.json",
+      "expected_sha256": "df2da1d8f90aa81c375f2e03cd12938fc2d315ebfd453368dad47cbcefc82455",
+      "actual_sha256": "df2da1d8f90aa81c375f2e03cd12938fc2d315ebfd453368dad47cbcefc82455"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/implementation-aperture/README.md",
+      "expected_sha256": "3bd2be2b19da62d0852e0f5fb914125d07396f4e8a5117b3626090ddc7e13d93",
+      "actual_sha256": "3bd2be2b19da62d0852e0f5fb914125d07396f4e8a5117b3626090ddc7e13d93"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/normative-checks.json",
+      "expected_sha256": "5644f6bc472d027c7edd5186359ea12f2245ae7dc25e759020cb47806c0faf31",
+      "actual_sha256": "5644f6bc472d027c7edd5186359ea12f2245ae7dc25e759020cb47806c0faf31"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/owner-control-reveal.json",
+      "expected_sha256": "eecc542f14b272a60dae5f028b0283ab79ac5d76bf628a9955dcef37eff8c992",
+      "actual_sha256": "eecc542f14b272a60dae5f028b0283ab79ac5d76bf628a9955dcef37eff8c992"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/predecessor-custody.json",
+      "expected_sha256": "699741df07bd7cb62e963381baddb08a85aa8d826b9163c98b1ffeba6c0f983d",
+      "actual_sha256": "699741df07bd7cb62e963381baddb08a85aa8d826b9163c98b1ffeba6c0f983d"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/preparation-source-review.json",
+      "expected_sha256": "bcddcca7415bd0d35fdd425c8320ddea1b5916e2a433d05ce8d60ee447537bd2",
+      "actual_sha256": "bcddcca7415bd0d35fdd425c8320ddea1b5916e2a433d05ce8d60ee447537bd2"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/regression.json",
+      "expected_sha256": "1016b0cbbce041c62aec6bcb4baf5026e0259b11846d6ad53d3e7974da5c2071",
+      "actual_sha256": "1016b0cbbce041c62aec6bcb4baf5026e0259b11846d6ad53d3e7974da5c2071"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/CHANGES.md",
+      "expected_sha256": "882785877c77fb9d599e6634ee87b348c03fec094d83904e40bc039fb97d62d4",
+      "actual_sha256": "882785877c77fb9d599e6634ee87b348c03fec094d83904e40bc039fb97d62d4"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/SCHEMA.md",
+      "expected_sha256": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d",
+      "actual_sha256": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/freeze.json",
+      "expected_sha256": "1e198b84e93ef66e53720bb1ac7af641dcb3037c84284768aaea2bcc7befe3c4",
+      "actual_sha256": "1e198b84e93ef66e53720bb1ac7af641dcb3037c84284768aaea2bcc7befe3c4"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/interface.json",
+      "expected_sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+      "actual_sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/policy.json",
+      "expected_sha256": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+      "actual_sha256": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14"
+    },
+    {
+      "path": "research/qualifier-grounding-offline-qualification-v2-protocol.md",
+      "expected_sha256": "1c947e4a9f43befef979c86d537cf0d67ad5d522031a775df617ac9ac72b0e51",
+      "actual_sha256": "1c947e4a9f43befef979c86d537cf0d67ad5d522031a775df617ac9ac72b0e51"
+    },
+    {
+      "path": "tests/test_qualifier_grounding_v2_preparation.py",
+      "expected_sha256": "d5b59915d7945df564d4ce884412b1131223c478fda1739d960ae054fd99ad0e",
+      "actual_sha256": "d5b59915d7945df564d4ce884412b1131223c478fda1739d960ae054fd99ad0e"
+    },
+    {
+      "path": "research/check_qualifier_grounding_preregistration.py",
+      "expected_sha256": "e495d93fcd9b8e84609bc414fca364c5b2d7611395dacc216a085c866af90453",
+      "actual_sha256": "e495d93fcd9b8e84609bc414fca364c5b2d7611395dacc216a085c866af90453"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/CANDIDATE.json",
+      "expected_sha256": "96dff815367c1639360702ac3151242606da58634ac2828f1e8858d409dad2f8",
+      "actual_sha256": "96dff815367c1639360702ac3151242606da58634ac2828f1e8858d409dad2f8"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/EXPERIMENT.active.json",
+      "expected_sha256": "4209db1543e8e60321edd663ba855719b7103b991d7e3d6329176d1530184331",
+      "actual_sha256": "4209db1543e8e60321edd663ba855719b7103b991d7e3d6329176d1530184331"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/EXPERIMENT.json",
+      "expected_sha256": "b39bd44589265eab53ff8b98aa92424a284076bb1ad5d724cace2c37702f1c4e",
+      "actual_sha256": "b39bd44589265eab53ff8b98aa92424a284076bb1ad5d724cace2c37702f1c4e"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/IMPLEMENTATION.md",
+      "expected_sha256": "5641486f6916c275926a83e7f1bce7bba318fc9bbd870a2138ebb39060d63e8c",
+      "actual_sha256": "5641486f6916c275926a83e7f1bce7bba318fc9bbd870a2138ebb39060d63e8c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/PUBLICATION-CORRECTION.json",
+      "expected_sha256": "001764a9a43385b6d69153932361f136ef93311064541dd6d101618b429997a7",
+      "actual_sha256": "001764a9a43385b6d69153932361f136ef93311064541dd6d101618b429997a7"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/README.md",
+      "expected_sha256": "81e7eab21329567f6202da8731992f2136ccbfc5b81723ec08f8ba210dcb4283",
+      "actual_sha256": "81e7eab21329567f6202da8731992f2136ccbfc5b81723ec08f8ba210dcb4283"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/REVEAL.json",
+      "expected_sha256": "781b76f7ed465d86a7aa2d8c25e8f7ef7946f343eb977539da25f1e7b6a5cb94",
+      "actual_sha256": "781b76f7ed465d86a7aa2d8c25e8f7ef7946f343eb977539da25f1e7b6a5cb94"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/SUCCESSOR.md",
+      "expected_sha256": "1a2014909caa7f1ce07b19d8db92412e95f8f57f256aedb423ca38b05faecab9",
+      "actual_sha256": "1a2014909caa7f1ce07b19d8db92412e95f8f57f256aedb423ca38b05faecab9"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/TERMINAL.json",
+      "expected_sha256": "75b4b766978a6292258412c13b3623080a0d05b7dc6ad43e061ba4de32f5108c",
+      "actual_sha256": "75b4b766978a6292258412c13b3623080a0d05b7dc6ad43e061ba4de32f5108c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-check.json",
+      "expected_sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5",
+      "actual_sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests-attempt-1.json",
+      "expected_sha256": "0883eae41921806c93131f03f499f3e8e77f9645736123b1a4cefffe94c6b928",
+      "actual_sha256": "0883eae41921806c93131f03f499f3e8e77f9645736123b1a4cefffe94c6b928"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests-attempt-1.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests-attempt-1.stdout.txt",
+      "expected_sha256": "62527afd2c79c3ed09de3956f62855448fec63ca5df9f126db108f2dab159028",
+      "actual_sha256": "62527afd2c79c3ed09de3956f62855448fec63ca5df9f126db108f2dab159028"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests.json",
+      "expected_sha256": "cd405295a4943ce7ecb839f72dfffd2852b4f536a8a10e553636d97e133a5ce4",
+      "actual_sha256": "cd405295a4943ce7ecb839f72dfffd2852b4f536a8a10e553636d97e133a5ce4"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests.stdout.txt",
+      "expected_sha256": "93f912eb887c1b526d5e1b81e0425ff99c6e6632f55a7b37394189a1b7adc02f",
+      "actual_sha256": "93f912eb887c1b526d5e1b81e0425ff99c6e6632f55a7b37394189a1b7adc02f"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/authority-preflight.json",
+      "expected_sha256": "24ebe95d2f849ac5be8cb188b5c59a687135aa6e80c5c43b2a85111107b84167",
+      "actual_sha256": "24ebe95d2f849ac5be8cb188b5c59a687135aa6e80c5c43b2a85111107b84167"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/case-results.json",
+      "expected_sha256": "2b0c10bf225f176f7219ac68d411d4fae59e250e291ec17137fde801fff9d2b7",
+      "actual_sha256": "2b0c10bf225f176f7219ac68d411d4fae59e250e291ec17137fde801fff9d2b7"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisions.json",
+      "expected_sha256": "00f0b0f37003ba450f25aff0bb8ed265935100beac59d8a6671ef09c5e60dbd7",
+      "actual_sha256": "00f0b0f37003ba450f25aff0bb8ed265935100beac59d8a6671ef09c5e60dbd7"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisions.jsonl",
+      "expected_sha256": "306ab8c7182983f9a02c359f17eeccd73cee0faf263107f6b9999c785cb7147b",
+      "actual_sha256": "306ab8c7182983f9a02c359f17eeccd73cee0faf263107f6b9999c785cb7147b"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisive-run.json",
+      "expected_sha256": "40bc936915f22d80eff51ae131d02632f5a995be0d5d304c15ccb7d22c82c38a",
+      "actual_sha256": "40bc936915f22d80eff51ae131d02632f5a995be0d5d304c15ccb7d22c82c38a"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisive-run.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisive-run.stdout.txt",
+      "expected_sha256": "b2f74de899a235e0ea4db5940a96bf620a96c1b4a266e3b3c8c6402df3874fd9",
+      "actual_sha256": "b2f74de899a235e0ea4db5940a96bf620a96c1b4a266e3b3c8c6402df3874fd9"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/deviations.json",
+      "expected_sha256": "6b2d19161714880749267deb6dd1203ddbd32328af21ae3b7e5754545c166589",
+      "actual_sha256": "6b2d19161714880749267deb6dd1203ddbd32328af21ae3b7e5754545c166589"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/frozen-scorer.json",
+      "expected_sha256": "1251a9755139cbe10c6ee861a3c2abc05ecd581726e4d4665680bd5204dd68a5",
+      "actual_sha256": "1251a9755139cbe10c6ee861a3c2abc05ecd581726e4d4665680bd5204dd68a5"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/full-freeze-check.json",
+      "expected_sha256": "564d8faa0ed75e00b5804f417633a3736b6d4be9fbb28a102d12a13d407d5be4",
+      "actual_sha256": "564d8faa0ed75e00b5804f417633a3736b6d4be9fbb28a102d12a13d407d5be4"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/historical-review.json",
+      "expected_sha256": "b9f4d81fbd75cccf161c370020055bf23204416a4564f2fb758ff93f381cc251",
+      "actual_sha256": "b9f4d81fbd75cccf161c370020055bf23204416a4564f2fb758ff93f381cc251"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-checks.json",
+      "expected_sha256": "8bce3bcb2eaf831337b30fb97557e34df53bc5b89e249306f4fe6fca6933f32d",
+      "actual_sha256": "8bce3bcb2eaf831337b30fb97557e34df53bc5b89e249306f4fe6fca6933f32d"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-1.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-1.stdout.txt",
+      "expected_sha256": "9c433e929102c1a4b8273346860b0488c6bfb455348e61c7b0613e1b2796a88d",
+      "actual_sha256": "9c433e929102c1a4b8273346860b0488c6bfb455348e61c7b0613e1b2796a88d"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-2.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-2.stdout.txt",
+      "expected_sha256": "8242800f2433c1b0075688a480cbd966470595ee8a6adee94e289324a63972c1",
+      "actual_sha256": "8242800f2433c1b0075688a480cbd966470595ee8a6adee94e289324a63972c1"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint.stdout.txt",
+      "expected_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "actual_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-tests.stderr.txt",
+      "expected_sha256": "243886f92673c9aaacd06117d42e11f115e831547886b6e563d189210f3f65ea",
+      "actual_sha256": "243886f92673c9aaacd06117d42e11f115e831547886b6e563d189210f3f65ea"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-tests.stdout.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/mindgraph-query-pass.json",
+      "expected_sha256": "7b78c84160483cb8f37fbc34c06a33a5bb238e747cde967027205106d6cfcdc3",
+      "actual_sha256": "7b78c84160483cb8f37fbc34c06a33a5bb238e747cde967027205106d6cfcdc3"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/pair-results.json",
+      "expected_sha256": "5b02ad7e8b0da2fc259a2dbd06dd58cc93cffac11bddf65823f6ed9e8a8d9b89",
+      "actual_sha256": "5b02ad7e8b0da2fc259a2dbd06dd58cc93cffac11bddf65823f6ed9e8a8d9b89"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/pre-freeze-dependency.json",
+      "expected_sha256": "5432a38e2d1e7c229b7819c2533eb04c222e77688b5140bac36d3444ee5bb8a9",
+      "actual_sha256": "5432a38e2d1e7c229b7819c2533eb04c222e77688b5140bac36d3444ee5bb8a9"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/publication-checks.json",
+      "expected_sha256": "de85a09f9f802c5a1b01ec25731d082b2d5755e0d6c18aaa23930f9d897e0665",
+      "actual_sha256": "de85a09f9f802c5a1b01ec25731d082b2d5755e0d6c18aaa23930f9d897e0665"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/publication-supplement-freeze.json",
+      "expected_sha256": "e81766e525755ff29c6d1d19af61a246e4a154c6c852ad933050c32f7a8f5082",
+      "actual_sha256": "e81766e525755ff29c6d1d19af61a246e4a154c6c852ad933050c32f7a8f5082"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/receipt-freeze.json",
+      "expected_sha256": "1b4a9d4014b6dd61bf4008569e2a3db1d31fcf6e72e24479b2964a05f7ea2ec2",
+      "actual_sha256": "1b4a9d4014b6dd61bf4008569e2a3db1d31fcf6e72e24479b2964a05f7ea2ec2"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/run-started.json",
+      "expected_sha256": "243caf86f3a97aabf8de28206d8a490134335a5471643cfb8f8f17ca5563ebd0",
+      "actual_sha256": "243caf86f3a97aabf8de28206d8a490134335a5471643cfb8f8f17ca5563ebd0"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/runner-lint.stdout.txt",
+      "expected_sha256": "65a1eb9cd08de928ec0212147ea4337f94346ce332d4e9164e2caccdf72a3659",
+      "actual_sha256": "65a1eb9cd08de928ec0212147ea4337f94346ce332d4e9164e2caccdf72a3659"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/safety-results.json",
+      "expected_sha256": "d80ac8ce000de9f6ad3e41a94c3d3cef281bc7251f19d55108346140540642bc",
+      "actual_sha256": "d80ac8ce000de9f6ad3e41a94c3d3cef281bc7251f19d55108346140540642bc"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/source-dependency-review.json",
+      "expected_sha256": "8377df267ea9bfe808c8dc5f18a0ab79ce2280f2bbb0186c2e15935078fea615",
+      "actual_sha256": "8377df267ea9bfe808c8dc5f18a0ab79ce2280f2bbb0186c2e15935078fea615"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/CANDIDATE.json",
+      "expected_sha256": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315",
+      "actual_sha256": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/EXPERIMENT.json",
+      "expected_sha256": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1",
+      "actual_sha256": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/README.md",
+      "expected_sha256": "c10b0557166b6e191b14fceb6f50a2675300367cada2c4d249ea0ed01f698b3f",
+      "actual_sha256": "c10b0557166b6e191b14fceb6f50a2675300367cada2c4d249ea0ed01f698b3f"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checker-preparation-attempt-1.txt",
+      "expected_sha256": "600215346c260c0ba75323a95fe78e245b8b7eed553a5cbc21480d9f0aab95fc",
+      "actual_sha256": "600215346c260c0ba75323a95fe78e245b8b7eed553a5cbc21480d9f0aab95fc"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checker.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checker.stdout.txt",
+      "expected_sha256": "97b70d5504f56e93fb45276ac879d83a13351fd5d8343e0abd4c4c0a5aaa08d7",
+      "actual_sha256": "97b70d5504f56e93fb45276ac879d83a13351fd5d8343e0abd4c4c0a5aaa08d7"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checks.json",
+      "expected_sha256": "72758bd0a14fce6207f5df331f2fbe0082bf52cd1d5ed4f55afd9051025e56e4",
+      "actual_sha256": "72758bd0a14fce6207f5df331f2fbe0082bf52cd1d5ed4f55afd9051025e56e4"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/commit-attempt-1.txt",
+      "expected_sha256": "e4e08c24620038184f3f8011094717ffb0e82157e1e2f0f59190db11c55f1808",
+      "actual_sha256": "e4e08c24620038184f3f8011094717ffb0e82157e1e2f0f59190db11c55f1808"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/contract-lint.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/contract-lint.txt",
+      "expected_sha256": "7552fb11eadaa63925069844833412875f9d0ee051af19f4c6b8f9403f5fd82e",
+      "actual_sha256": "7552fb11eadaa63925069844833412875f9d0ee051af19f4c6b8f9403f5fd82e"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/custody.json",
+      "expected_sha256": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad",
+      "actual_sha256": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/deviations.json",
+      "expected_sha256": "7515ea2cc447ccfdf7cecc4af5ced66d2aa4eaa1642b345a3fd22d7eb91dec50",
+      "actual_sha256": "7515ea2cc447ccfdf7cecc4af5ced66d2aa4eaa1642b345a3fd22d7eb91dec50"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/expectations.jsonl",
+      "expected_sha256": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+      "actual_sha256": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/freeze-preparation-attempt-1.json",
+      "expected_sha256": "9b5c462d2077acce1fcb34f95d96190ce116806b6063f65a3678f784b7cd2f91",
+      "actual_sha256": "9b5c462d2077acce1fcb34f95d96190ce116806b6063f65a3678f784b7cd2f91"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/freeze.json",
+      "expected_sha256": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+      "actual_sha256": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/historical.json",
+      "expected_sha256": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c",
+      "actual_sha256": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/inputs.jsonl",
+      "expected_sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "actual_sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/interface.json",
+      "expected_sha256": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+      "actual_sha256": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/lint-preparation-attempt-1.txt",
+      "expected_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "actual_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/lint.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/lint.txt",
+      "expected_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "actual_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/pairs.json",
+      "expected_sha256": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+      "actual_sha256": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/policy.json",
+      "expected_sha256": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+      "actual_sha256": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/preparation-check-attempt-1.json",
+      "expected_sha256": "3c1d8b7ff4ff975ff3b01f71c481f789c452086b5fffc93bfdcc338c58cc8a68",
+      "actual_sha256": "3c1d8b7ff4ff975ff3b01f71c481f789c452086b5fffc93bfdcc338c58cc8a68"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/preparation-check.json",
+      "expected_sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5",
+      "actual_sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/receipt-freeze.json",
+      "expected_sha256": "94a17c8f21ac7757b322adb7b20a097c19b34f2c4e837a19aeabdb2093645e28",
+      "actual_sha256": "94a17c8f21ac7757b322adb7b20a097c19b34f2c4e837a19aeabdb2093645e28"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/reconciliation.json",
+      "expected_sha256": "ec960178e003cd44155d084d25ad13ce30a8bf6f9fa8cc27ba20e7e74f31326c",
+      "actual_sha256": "ec960178e003cd44155d084d25ad13ce30a8bf6f9fa8cc27ba20e7e74f31326c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests-apparatus-falsifier.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests-apparatus-falsifier.txt",
+      "expected_sha256": "eddefbe4a64ee144b7b703af28f7c135280e34ad5e121609c2822449eab0038e",
+      "actual_sha256": "eddefbe4a64ee144b7b703af28f7c135280e34ad5e121609c2822449eab0038e"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests-preparation-attempt-1.txt",
+      "expected_sha256": "1bcc44011bf78a58bc505eb612ef283786f7b4e7ea8747b915963e5b06958e4c",
+      "actual_sha256": "1bcc44011bf78a58bc505eb612ef283786f7b4e7ea8747b915963e5b06958e4c"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests.stderr.txt",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests.txt",
+      "expected_sha256": "590dbc4f5c123295cd127dfad099b8f0f74b5daff9de9099967616ab6655a2b8",
+      "actual_sha256": "590dbc4f5c123295cd127dfad099b8f0f74b5daff9de9099967616ab6655a2b8"
+    },
+    {
+      "path": "research/qualifier-grounding-policy-v1-protocol.md",
+      "expected_sha256": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+      "actual_sha256": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc"
+    },
+    {
+      "path": "research/qualifier_grounding_reducer.py",
+      "expected_sha256": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8",
+      "actual_sha256": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8"
+    },
+    {
+      "path": "research/run_qualifier_offline_qualification.py",
+      "expected_sha256": "4fdd7f96d317423dd8d6522123fbc16a0f760c9ac39b053a556de8193f9488b6",
+      "actual_sha256": "4fdd7f96d317423dd8d6522123fbc16a0f760c9ac39b053a556de8193f9488b6"
+    },
+    {
+      "path": "research/test_qualifier_grounding_reducer.py",
+      "expected_sha256": "4117f950271b2bdceab2fad24fb255c894dabe3d64d8aecde92a4e02f3ee4783",
+      "actual_sha256": "4117f950271b2bdceab2fad24fb255c894dabe3d64d8aecde92a4e02f3ee4783"
+    },
+    {
+      "path": "tests/test_qualifier_grounding_preregistration.py",
+      "expected_sha256": "6308172ae0b72e5b1ed9162da07f1cf9e7ec0206f2df2c0e4855856f52eaa615",
+      "actual_sha256": "6308172ae0b72e5b1ed9162da07f1cf9e7ec0206f2df2c0e4855856f52eaa615"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/inputs.jsonl",
+      "expected_sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "actual_sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/expectations.jsonl",
+      "expected_sha256": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+      "actual_sha256": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/pairs.json",
+      "expected_sha256": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+      "actual_sha256": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/policy.json",
+      "expected_sha256": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+      "actual_sha256": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f"
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/interface.json",
+      "expected_sha256": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+      "actual_sha256": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489"
+    }
+  ],
+  "additional_artifact_identities": [
+    {
+      "path": "research/check_qualifier_grounding_preregistration.py",
+      "sha256": "e495d93fcd9b8e84609bc414fca364c5b2d7611395dacc216a085c866af90453",
+      "bytes": 17435
+    },
+    {
+      "path": "research/check_qualifier_grounding_v2_preparation.py",
+      "sha256": "e69dbbdbc215956ea35cc0b2364f6a98abc6f60888c73b48d7a3b26d683e4f40",
+      "bytes": 22382
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/CANDIDATE.json",
+      "sha256": "96dff815367c1639360702ac3151242606da58634ac2828f1e8858d409dad2f8",
+      "bytes": 2236
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/EXPERIMENT.active.json",
+      "sha256": "4209db1543e8e60321edd663ba855719b7103b991d7e3d6329176d1530184331",
+      "bytes": 1784
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/EXPERIMENT.json",
+      "sha256": "b39bd44589265eab53ff8b98aa92424a284076bb1ad5d724cace2c37702f1c4e",
+      "bytes": 5236
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/IMPLEMENTATION.md",
+      "sha256": "5641486f6916c275926a83e7f1bce7bba318fc9bbd870a2138ebb39060d63e8c",
+      "bytes": 3288
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/PUBLICATION-CORRECTION.json",
+      "sha256": "001764a9a43385b6d69153932361f136ef93311064541dd6d101618b429997a7",
+      "bytes": 891
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/README.md",
+      "sha256": "81e7eab21329567f6202da8731992f2136ccbfc5b81723ec08f8ba210dcb4283",
+      "bytes": 11553
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/REVEAL.json",
+      "sha256": "781b76f7ed465d86a7aa2d8c25e8f7ef7946f343eb977539da25f1e7b6a5cb94",
+      "bytes": 884
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/SUCCESSOR.md",
+      "sha256": "1a2014909caa7f1ce07b19d8db92412e95f8f57f256aedb423ca38b05faecab9",
+      "bytes": 1968
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/TERMINAL.json",
+      "sha256": "75b4b766978a6292258412c13b3623080a0d05b7dc6ad43e061ba4de32f5108c",
+      "bytes": 3357
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-check.json",
+      "sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5",
+      "bytes": 523
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests-attempt-1.json",
+      "sha256": "0883eae41921806c93131f03f499f3e8e77f9645736123b1a4cefffe94c6b928",
+      "bytes": 438
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests-attempt-1.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests-attempt-1.stdout.txt",
+      "sha256": "62527afd2c79c3ed09de3956f62855448fec63ca5df9f126db108f2dab159028",
+      "bytes": 932
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests.json",
+      "sha256": "cd405295a4943ce7ecb839f72dfffd2852b4f536a8a10e553636d97e133a5ce4",
+      "bytes": 442
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/apparatus-tests.stdout.txt",
+      "sha256": "93f912eb887c1b526d5e1b81e0425ff99c6e6632f55a7b37394189a1b7adc02f",
+      "bytes": 99
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/authority-preflight.json",
+      "sha256": "24ebe95d2f849ac5be8cb188b5c59a687135aa6e80c5c43b2a85111107b84167",
+      "bytes": 2518
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/case-results.json",
+      "sha256": "2b0c10bf225f176f7219ac68d411d4fae59e250e291ec17137fde801fff9d2b7",
+      "bytes": 9601
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisions.json",
+      "sha256": "00f0b0f37003ba450f25aff0bb8ed265935100beac59d8a6671ef09c5e60dbd7",
+      "bytes": 15379
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisions.jsonl",
+      "sha256": "306ab8c7182983f9a02c359f17eeccd73cee0faf263107f6b9999c785cb7147b",
+      "bytes": 11478
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisive-run.json",
+      "sha256": "40bc936915f22d80eff51ae131d02632f5a995be0d5d304c15ccb7d22c82c38a",
+      "bytes": 1010
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisive-run.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/decisive-run.stdout.txt",
+      "sha256": "b2f74de899a235e0ea4db5940a96bf620a96c1b4a266e3b3c8c6402df3874fd9",
+      "bytes": 156
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/deviations.json",
+      "sha256": "6b2d19161714880749267deb6dd1203ddbd32328af21ae3b7e5754545c166589",
+      "bytes": 2893
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/frozen-scorer.json",
+      "sha256": "1251a9755139cbe10c6ee861a3c2abc05ecd581726e4d4665680bd5204dd68a5",
+      "bytes": 4588
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/full-freeze-check.json",
+      "sha256": "564d8faa0ed75e00b5804f417633a3736b6d4be9fbb28a102d12a13d407d5be4",
+      "bytes": 13215
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/historical-review.json",
+      "sha256": "b9f4d81fbd75cccf161c370020055bf23204416a4564f2fb758ff93f381cc251",
+      "bytes": 3817
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-checks.json",
+      "sha256": "8bce3bcb2eaf831337b30fb97557e34df53bc5b89e249306f4fe6fca6933f32d",
+      "bytes": 1769
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-1.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-1.stdout.txt",
+      "sha256": "9c433e929102c1a4b8273346860b0488c6bfb455348e61c7b0613e1b2796a88d",
+      "bytes": 3470
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-2.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint-attempt-2.stdout.txt",
+      "sha256": "8242800f2433c1b0075688a480cbd966470595ee8a6adee94e289324a63972c1",
+      "bytes": 1048
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-lint.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-tests.stderr.txt",
+      "sha256": "243886f92673c9aaacd06117d42e11f115e831547886b6e563d189210f3f65ea",
+      "bytes": 1789
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/implementation-tests.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/mindgraph-query-pass.json",
+      "sha256": "7b78c84160483cb8f37fbc34c06a33a5bb238e747cde967027205106d6cfcdc3",
+      "bytes": 1862
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/pair-results.json",
+      "sha256": "5b02ad7e8b0da2fc259a2dbd06dd58cc93cffac11bddf65823f6ed9e8a8d9b89",
+      "bytes": 3628
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/pre-freeze-dependency.json",
+      "sha256": "5432a38e2d1e7c229b7819c2533eb04c222e77688b5140bac36d3444ee5bb8a9",
+      "bytes": 577
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/publication-checks.json",
+      "sha256": "de85a09f9f802c5a1b01ec25731d082b2d5755e0d6c18aaa23930f9d897e0665",
+      "bytes": 551
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/publication-supplement-freeze.json",
+      "sha256": "e81766e525755ff29c6d1d19af61a246e4a154c6c852ad933050c32f7a8f5082",
+      "bytes": 523
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/receipt-freeze.json",
+      "sha256": "1b4a9d4014b6dd61bf4008569e2a3db1d31fcf6e72e24479b2964a05f7ea2ec2",
+      "bytes": 9255
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/run-started.json",
+      "sha256": "243caf86f3a97aabf8de28206d8a490134335a5471643cfb8f8f17ca5563ebd0",
+      "bytes": 818
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/runner-lint.stdout.txt",
+      "sha256": "65a1eb9cd08de928ec0212147ea4337f94346ce332d4e9164e2caccdf72a3659",
+      "bytes": 2185
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/safety-results.json",
+      "sha256": "d80ac8ce000de9f6ad3e41a94c3d3cef281bc7251f19d55108346140540642bc",
+      "bytes": 1074
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v1/source-dependency-review.json",
+      "sha256": "8377df267ea9bfe808c8dc5f18a0ab79ce2280f2bbb0186c2e15935078fea615",
+      "bytes": 2746
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/EXPERIMENT.json",
+      "sha256": "39787a8197508b655e1da9ef7faa0ee8e60fcd59a9f10135d992f814e29bc592",
+      "bytes": 7410
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/README.md",
+      "sha256": "5b491d1dd6664a7b25719e1d372cdbe4f220d9204a19585cab0591e2d5d9bb41",
+      "bytes": 8650
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/authority-preflight.json",
+      "sha256": "4864910f19d773d65737aabf38d4bd3adc9613ea094957a2d03719728e95e3c2",
+      "bytes": 14796
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks.json",
+      "sha256": "15c51a6d11ed0d247fdb58ee1b4c0d48a72a7c6cee592caf1c98deed024e0c93",
+      "bytes": 1266
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/archived-author-lint-full.json",
+      "sha256": "63d8b62c0bfb6a729f794935851e91bd15b6478eb66600f4d9695b5b11f1cef5",
+      "bytes": 153210
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/archived-author-lint.stdout.txt",
+      "sha256": "9e3a9c5134da639f9648f6b9fd4e780a717f95a2ec720505ef558866c727277c",
+      "bytes": 20108
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/commands.json",
+      "sha256": "1365e762c1490bd986be62d9897dc76fec89606bcebc5805468a5db5bb98b3b1",
+      "bytes": 2661
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/contracts.stdout.txt",
+      "sha256": "2459f64c36a4bf98375809992139388bf55bf5fc70ed8a5b336fa08aa647411c",
+      "bytes": 341
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/maintained-lint.stdout.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/preregistration.stdout.txt",
+      "sha256": "797a22f13bcb5647980d53f1758755cd7867eb9e8c47db3bab0c05f1a48fe288",
+      "bytes": 493
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/checks/selftests.stdout.txt",
+      "sha256": "c46a0dbc98f145c5390631610b4039fdaa64e4ed8b2ece83cd102c537f9a12a7",
+      "bytes": 532
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/control-author-launch.json",
+      "sha256": "fb941448f6bcd5707561d01f5eb5815edbfe2b05cad0a1473e73d4f971e49e1e",
+      "bytes": 1163
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/control-author-relaunch.json",
+      "sha256": "0972502770ce1b23a68d771a5d2bacb579254cbd09895d1cbe28a5c22c333509",
+      "bytes": 1020
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/deviations.json",
+      "sha256": "b8986a86dd1ca43946115cd4dd8ba2ec35fb624294238561cc157116a8161a38",
+      "bytes": 5964
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/CONTAMINATION.json",
+      "sha256": "8af1229dc0e5f5bafdb32c169744e9b74b16f074e0b626ccb82cbaa33a9a4a3f",
+      "bytes": 1301
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/EXPOSURE-CLASSIFICATION.json",
+      "sha256": "ef85622a7c3d8de22548420911baab98d49c35d1ff77cdea9dfd224ee26d3f4c",
+      "bytes": 1390
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/classification-custody.json",
+      "sha256": "645516b2c0d9bd51cf0178b337de496b97b065d23f596d6fab45d1b35d501857",
+      "bytes": 672
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/control-author-first-launch/failure-custody.json",
+      "sha256": "8907b27a5c0d0874b91d67bca624b6ba3277cc0f8bc9e6773b5994ae57688a25",
+      "bytes": 432
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/diagnostic-formatting.json",
+      "sha256": "9941a8015486b8d045f15b8483255b639dc9bd1b6bc52626f0dd22d580deadc9",
+      "bytes": 3367
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.json",
+      "sha256": "927f217c3ea87800d30927b54dedee5eab51428b25a0188918e496da030eb74a",
+      "bytes": 688
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.py.txt",
+      "sha256": "7ca6ef20a2c4817f10e79ce311f9e1a8311bf222934acbc01cb588c561e2ccbc",
+      "bytes": 21834
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-checker-first.txt",
+      "sha256": "507ab1af30aa88e7da38d1811e71c5652656f0f74af6c8cbc3a79202a094ec9b",
+      "bytes": 87
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/failures/preparation-lint-first.txt",
+      "sha256": "5a2f1dcab23b8dd802428b98998c7ea3f2ab5b72985336bc1969fe0fd638ba09",
+      "bytes": 3154
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-control-review.json",
+      "sha256": "f525d8edc96cbed32b20b2e54983dfefea84c95cad97285d9efa6dcbbe1179cc",
+      "bytes": 8816
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/AUTHOR.json",
+      "sha256": "cee0596999933f99a7bb21a82f3c2928e2c9a45508a1bbc5a962c73293c2fbb0",
+      "bytes": 8749
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py",
+      "sha256": "421bc05030e1232659f627d254512884b9293566cfc64ff5624b7e585573048a",
+      "bytes": 41767
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py",
+      "sha256": "ec6f4ef90beecd173dc2131cc9e594a1ffb3ebc6bf560f1b9294d1e9eccbfc39",
+      "bytes": 15436
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/checks.json",
+      "sha256": "1283ef8e76d6c1003666873082d53d3a302456e97996ead9dfb596bd5205fa40",
+      "bytes": 146955
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/controls.json",
+      "sha256": "09979fb2677e626ae01aba816921738cab79e701c7e61c080b32c98fafa84ca9",
+      "bytes": 26743
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/expectations.jsonl",
+      "sha256": "1fcb5ab6e55d961604078015a711e6dfeecf7c5b048e768b42bb80300c98f226",
+      "bytes": 49432
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze.json",
+      "sha256": "955c5d076c40fc9ad526df018f9cc38cd463253ca58b5a19033c14a84a289508",
+      "bytes": 1782
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+      "sha256": "5fb887b6cdf10a3f30414da33d016a0fe81c9a3a21143f61bbcff50865a8b5dd",
+      "bytes": 1673
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/inputs.jsonl",
+      "sha256": "d4afdacc54e87d7d60d3f947512484af76a7d3830283701bcd37527dc3bc56d1",
+      "bytes": 51657
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/pairs.json",
+      "sha256": "18213e6ef725873ebb9d34b1a39a0bd57eefb0d8a8213e4e5a89322ac69d64be",
+      "bytes": 33889
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/implementation-aperture/CANDIDATE.json",
+      "sha256": "df2da1d8f90aa81c375f2e03cd12938fc2d315ebfd453368dad47cbcefc82455",
+      "bytes": 1015
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/implementation-aperture/README.md",
+      "sha256": "3bd2be2b19da62d0852e0f5fb914125d07396f4e8a5117b3626090ddc7e13d93",
+      "bytes": 2419
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/normative-checks.json",
+      "sha256": "5644f6bc472d027c7edd5186359ea12f2245ae7dc25e759020cb47806c0faf31",
+      "bytes": 1572
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/owner-control-reveal.json",
+      "sha256": "eecc542f14b272a60dae5f028b0283ab79ac5d76bf628a9955dcef37eff8c992",
+      "bytes": 527
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/predecessor-custody.json",
+      "sha256": "699741df07bd7cb62e963381baddb08a85aa8d826b9163c98b1ffeba6c0f983d",
+      "bytes": 13372
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/preparation-source-review.json",
+      "sha256": "bcddcca7415bd0d35fdd425c8320ddea1b5916e2a433d05ce8d60ee447537bd2",
+      "bytes": 1415
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-offline-qualification-v2/regression.json",
+      "sha256": "1016b0cbbce041c62aec6bcb4baf5026e0259b11846d6ad53d3e7974da5c2071",
+      "bytes": 1748
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/CANDIDATE.json",
+      "sha256": "59fd24a1321cd027189819085c87fa03412e4096bfb051e50d03c521f0fd6315",
+      "bytes": 1043
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/EXPERIMENT.json",
+      "sha256": "c67ced49a5737dbf444c3945d4659dae426015e9ae92b847b248d85b3a145fc1",
+      "bytes": 1422
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/README.md",
+      "sha256": "c10b0557166b6e191b14fceb6f50a2675300367cada2c4d249ea0ed01f698b3f",
+      "bytes": 8768
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checker-preparation-attempt-1.txt",
+      "sha256": "600215346c260c0ba75323a95fe78e245b8b7eed553a5cbc21480d9f0aab95fc",
+      "bytes": 17326
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checker.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checker.stdout.txt",
+      "sha256": "97b70d5504f56e93fb45276ac879d83a13351fd5d8343e0abd4c4c0a5aaa08d7",
+      "bytes": 35
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/checks.json",
+      "sha256": "72758bd0a14fce6207f5df331f2fbe0082bf52cd1d5ed4f55afd9051025e56e4",
+      "bytes": 1578
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/commit-attempt-1.txt",
+      "sha256": "e4e08c24620038184f3f8011094717ffb0e82157e1e2f0f59190db11c55f1808",
+      "bytes": 274
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/contract-lint.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/contract-lint.txt",
+      "sha256": "7552fb11eadaa63925069844833412875f9d0ee051af19f4c6b8f9403f5fd82e",
+      "bytes": 126
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/custody.json",
+      "sha256": "543da241766c7c275bca38486ff22ca45fa7fe917351408ec44b642872a4fbad",
+      "bytes": 6000
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/deviations.json",
+      "sha256": "7515ea2cc447ccfdf7cecc4af5ced66d2aa4eaa1642b345a3fd22d7eb91dec50",
+      "bytes": 2628
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/expectations.jsonl",
+      "sha256": "28c17fa63641a227710fa74b12dda6b9a51b4c3ce56d805ec447579197c74f47",
+      "bytes": 16515
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/freeze-preparation-attempt-1.json",
+      "sha256": "9b5c462d2077acce1fcb34f95d96190ce116806b6063f65a3678f784b7cd2f91",
+      "bytes": 2661
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/freeze.json",
+      "sha256": "b327af7fc2db7bec3ef1f868027c88d30a2c7f7778fde55765c249c18d1f898d",
+      "bytes": 2661
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/historical.json",
+      "sha256": "dbdc3c34a42558579a270ee2e772bfd37e32d41a0a925ba8a0131d22423f032c",
+      "bytes": 3869
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/inputs.jsonl",
+      "sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "bytes": 22129
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/interface.json",
+      "sha256": "70759527cea4aaf8213edcfdb3fc191486cc4bf53ee9a8196ca10fd51b87d489",
+      "bytes": 2968
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/lint-preparation-attempt-1.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/lint.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/lint.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/pairs.json",
+      "sha256": "f62b24d3f3cbfd867bd2278ec8f19ab6168ba7656d807fffadf76dd808bbebb3",
+      "bytes": 1512
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/policy.json",
+      "sha256": "40691a83cdc901df9f2af903bc7a48a936e6602a622926460286bb25eeec869f",
+      "bytes": 1132
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/preparation-check-attempt-1.json",
+      "sha256": "3c1d8b7ff4ff975ff3b01f71c481f789c452086b5fffc93bfdcc338c58cc8a68",
+      "bytes": 523
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/preparation-check.json",
+      "sha256": "b563dd0e9889148938804447ed8c28989e520fd23807304e15f8ac9fd62facc5",
+      "bytes": 523
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/receipt-freeze.json",
+      "sha256": "94a17c8f21ac7757b322adb7b20a097c19b34f2c4e837a19aeabdb2093645e28",
+      "bytes": 4851
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/reconciliation.json",
+      "sha256": "ec960178e003cd44155d084d25ad13ce30a8bf6f9fa8cc27ba20e7e74f31326c",
+      "bytes": 2177
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests-apparatus-falsifier.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests-apparatus-falsifier.txt",
+      "sha256": "eddefbe4a64ee144b7b703af28f7c135280e34ad5e121609c2822449eab0038e",
+      "bytes": 1141
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests-preparation-attempt-1.txt",
+      "sha256": "1bcc44011bf78a58bc505eb612ef283786f7b4e7ea8747b915963e5b06958e4c",
+      "bytes": 99
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v1/tests.txt",
+      "sha256": "590dbc4f5c123295cd127dfad099b8f0f74b5daff9de9099967616ab6655a2b8",
+      "bytes": 99
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/CHANGES.md",
+      "sha256": "882785877c77fb9d599e6634ee87b348c03fec094d83904e40bc039fb97d62d4",
+      "bytes": 4728
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/SCHEMA.md",
+      "sha256": "e46a99a1676d2b1499093dbef1b5a0521fe4b5ed57c921000d2d507149b1801d",
+      "bytes": 3537
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/freeze.json",
+      "sha256": "1e198b84e93ef66e53720bb1ac7af641dcb3037c84284768aaea2bcc7befe3c4",
+      "bytes": 1331
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/interface.json",
+      "sha256": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387",
+      "bytes": 17008
+    },
+    {
+      "path": "research/evidence/qualifier-grounding-policy-v2/policy.json",
+      "sha256": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+      "bytes": 17085
+    },
+    {
+      "path": "research/qualifier-grounding-offline-qualification-v2-protocol.md",
+      "sha256": "1c947e4a9f43befef979c86d537cf0d67ad5d522031a775df617ac9ac72b0e51",
+      "bytes": 13468
+    },
+    {
+      "path": "research/qualifier-grounding-policy-v1-protocol.md",
+      "sha256": "85ba07c4183dd2413d7c796f9a4f164f692012f93367c49fbda75378c867b8dc",
+      "bytes": 14126
+    },
+    {
+      "path": "research/qualifier_grounding_reducer.py",
+      "sha256": "a90221d3ad85ebd647e904ab40c5773b0495855c6ca8a654c0a4c4d5ceac9ab8",
+      "bytes": 9797
+    },
+    {
+      "path": "research/run_qualifier_offline_qualification.py",
+      "sha256": "4fdd7f96d317423dd8d6522123fbc16a0f760c9ac39b053a556de8193f9488b6",
+      "bytes": 10460
+    },
+    {
+      "path": "research/test_qualifier_grounding_reducer.py",
+      "sha256": "4117f950271b2bdceab2fad24fb255c894dabe3d64d8aecde92a4e02f3ee4783",
+      "bytes": 5870
+    },
+    {
+      "path": "tests/test_qualifier_grounding_preregistration.py",
+      "sha256": "6308172ae0b72e5b1ed9162da07f1cf9e7ec0206f2df2c0e4855856f52eaa615",
+      "bytes": 7532
+    },
+    {
+      "path": "tests/test_qualifier_grounding_v2_preparation.py",
+      "sha256": "d5b59915d7945df564d4ce884412b1131223c478fda1739d960ae054fd99ad0e",
+      "bytes": 7952
+    }
+  ],
+  "status": "PASS_CUSTODY_ONLY",
+  "legacy_files_materialized_for_preparation_check": true,
+  "legacy_decide_calls": 0,
+  "prior_content_read_method": "Raw bytes/hashes only for predecessor custody; predecessor source was not used in implementation or reducer runtime."
+}
