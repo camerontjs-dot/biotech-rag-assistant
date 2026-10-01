@@ -1,0 +1,37 @@
+{
+  "Wave_B": "LOCKED",
+  "at_utc": "2026-10-01T22:54:58.671313+00:00",
+  "branch": "research/sealed-role-runtime-preflight-v1",
+  "candidate_commit": "511d016c9840ce77fc8be284d9c4f5202b910820",
+  "candidate_tree": "b3a1f315da48e686b5475f35285b418f476a7d7b",
+  "comment_body_sha256": "bc96eebe2b911f7d9946a5c85229f4db265d3b89803a980525de131e53e6c76f",
+  "draft_pr": {
+    "base": "research/qualifier-grounding-semantic-adjudication-v1",
+    "base_sha": "8f09e9529fdcfdafe09513e990f8809c7bb4cb25",
+    "draft": true,
+    "head": "c117e03b81cdd69cbfb8fa202b518fe87377606e",
+    "head_ref": "research/sealed-role-runtime-preflight-v1",
+    "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/34",
+    "merged_at": null,
+    "number": 34,
+    "state": "open"
+  },
+  "issue": {
+    "closed_at": "2026-10-01T22:52:11Z",
+    "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/33",
+    "number": 33,
+    "state": "closed",
+    "state_reason": "completed"
+  },
+  "issue_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/33#issuecomment-5942237476",
+  "model_and_research_role_requests": 0,
+  "next_step": "new separately frozen runtime/configuration preflight, no semantic role launch",
+  "pr_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/34#issuecomment-5942236728",
+  "publication_content": "append-only delivery/CI reconciliation; no candidate or scientific terminal edits",
+  "retained_resources": "scientific branch and isolated checkout retained; private config/stream/fixture custody retained; concurrent checkouts/processes untouched",
+  "schema_version": "sealed-runtime-preflight-publication/v1",
+  "terminal_disposition": "FALSIFIED",
+  "terminal_evidence_commit": "c117e03b81cdd69cbfb8fa202b518fe87377606e",
+  "terminal_evidence_tree": "1fde30f270d3ca0cc63a385e160b5e9f6e414b7e",
+  "terminal_sha256": "ed31d83ef4f4ad38830914554943c0b7ef3a0f2c4cfc21469d9fed6244b06e03"
+}

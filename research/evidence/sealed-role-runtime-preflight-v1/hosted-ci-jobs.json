@@ -1,0 +1,277 @@
+{
+  "at_utc": "2026-10-01T22:54:58.671018+00:00",
+  "run_id": 36937337023,
+  "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36937337023",
+  "head_sha": "c117e03b81cdd69cbfb8fa202b518fe87377606e",
+  "jobs": [
+    {
+      "id": 110620571996,
+      "name": "static demo JS==Python parity",
+      "status": "completed",
+      "conclusion": "success",
+      "runner_id": 1000008586,
+      "runner_group_id": 0,
+      "started_at": "2026-10-01T22:51:37Z",
+      "completed_at": "2026-10-01T22:51:56Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build + verify static demo",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 110620572307,
+      "name": "ruff + pytest (py3.12)",
+      "status": "completed",
+      "conclusion": "failure",
+      "runner_id": 1000008587,
+      "runner_group_id": 0,
+      "started_at": "2026-10-01T22:49:28Z",
+      "completed_at": "2026-10-01T22:49:45Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 110620572383,
+      "name": "ruff + pytest (py3.13)",
+      "status": "completed",
+      "conclusion": "failure",
+      "runner_id": 1000008588,
+      "runner_group_id": 0,
+      "started_at": "2026-10-01T22:49:27Z",
+      "completed_at": "2026-10-01T22:49:43Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 110620572416,
+      "name": "ruff + pytest (py3.11)",
+      "status": "completed",
+      "conclusion": "failure",
+      "runner_id": 1000008589,
+      "runner_group_id": 0,
+      "started_at": "2026-10-01T22:49:28Z",
+      "completed_at": "2026-10-01T22:49:49Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "raw_metadata_sha256": "93ed0a2601847e33116c26fa2ba52e43848a40b767e09230c5f024df7bd42480",
+  "candidate_source": "zero new-source hosted Ruff diagnostic locations; six local construction checks and candidate-only lint passed",
+  "inherited_frozen_evidence_lint": "298 per Python job; unchanged predecessor Git blobs verified",
+  "runtime_preflight": "FALSIFIED",
+  "semantic_research": "NOT_RUN",
+  "unrelated_repository_regression": "full tests/compile/corpus smoke skipped; parity status is reported per job, not inferred"
+}

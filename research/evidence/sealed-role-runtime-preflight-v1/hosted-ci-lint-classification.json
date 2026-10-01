@@ -1,0 +1,75 @@
+{
+  "at_utc": "2026-10-01T22:53:57.436498+00:00",
+  "run_id": 36937337023,
+  "head_sha": "c117e03b81cdd69cbfb8fa202b518fe87377606e",
+  "raw_logs_private": true,
+  "observations": [
+    {
+      "python": "py311",
+      "raw_log_sha256": "f15a136401d96f6052f0ed021f6cf94353c830124fe32436071e6c943528b671",
+      "raw_log_bytes": 402638,
+      "ruff_error_summary": [
+        "298"
+      ],
+      "inherited_unchanged_paths": [
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py",
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py",
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+        "research/qualifier_grounding_reducer_v2/reducer.py",
+        "research/qualifier_grounding_reducer_v2/test_reducer.py",
+        "research/review_qualifier_grounding_v2_persisted.py",
+        "research/run_qualifier_grounding_v2_once.py",
+        "research/run_qualifier_offline_qualification.py",
+        "research/score_qualifier_grounding_v2_persisted.py"
+      ],
+      "new_or_changed_diagnostic_paths": [],
+      "observed_diagnostic_location_count": 298
+    },
+    {
+      "python": "py312",
+      "raw_log_sha256": "05db1d5b2c639c861fb17fc0715db245aae32dcb980d35ff21bdf907edc86546",
+      "raw_log_bytes": 402638,
+      "ruff_error_summary": [
+        "298"
+      ],
+      "inherited_unchanged_paths": [
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py",
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py",
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+        "research/qualifier_grounding_reducer_v2/reducer.py",
+        "research/qualifier_grounding_reducer_v2/test_reducer.py",
+        "research/review_qualifier_grounding_v2_persisted.py",
+        "research/run_qualifier_grounding_v2_once.py",
+        "research/run_qualifier_offline_qualification.py",
+        "research/score_qualifier_grounding_v2_persisted.py"
+      ],
+      "new_or_changed_diagnostic_paths": [],
+      "observed_diagnostic_location_count": 298
+    },
+    {
+      "python": "py313",
+      "raw_log_sha256": "bb1266aea1f92d4d46c5e96049a21b9942e8399e37fe00101d6eb9aed21dc339",
+      "raw_log_bytes": 402638,
+      "ruff_error_summary": [
+        "298"
+      ],
+      "inherited_unchanged_paths": [
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py",
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py",
+        "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+        "research/qualifier_grounding_reducer_v2/reducer.py",
+        "research/qualifier_grounding_reducer_v2/test_reducer.py",
+        "research/review_qualifier_grounding_v2_persisted.py",
+        "research/run_qualifier_grounding_v2_once.py",
+        "research/run_qualifier_offline_qualification.py",
+        "research/score_qualifier_grounding_v2_persisted.py"
+      ],
+      "new_or_changed_diagnostic_paths": [],
+      "observed_diagnostic_location_count": 298
+    }
+  ],
+  "runtime_preflight": "FALSIFIED independently of hosted CI",
+  "semantic_research": "NOT_RUN",
+  "scope": "Only completed lint-job logs; parity status captured separately",
+  "preparation_workflow": "NOT_TRIGGERED; new evidence path is outside frozen filter"
+}

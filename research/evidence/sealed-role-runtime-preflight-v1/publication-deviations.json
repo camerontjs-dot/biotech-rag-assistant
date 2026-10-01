@@ -1,0 +1,8 @@
+{
+  "at_utc": "2026-10-01T22:54:58.671408+00:00",
+  "local_lab_report": "Initial public-result-style section headings did not satisfy the private notebook validator; local headings conformed afterward without changing evidence, labels, candidate or public terminal. Minimum check passed with two advisory wording/table warnings.",
+  "hosted_ci": "Inherited source lint confirmed from completed raw job logs; no frozen artifact modified. Job state preserved at observation.",
+  "scientific_source_changes_after_freeze": 0,
+  "scientific_repeats_after_failure": 0,
+  "permissions_reviewer": "One pre-execution branch-fetch review timeout; one authorized retry succeeded. No unsafe-action rejection or remaining blocker."
+}
