@@ -1,0 +1,20 @@
+test_citation_precedence_and_retention (test_reducer.PolicyTests.test_citation_precedence_and_retention) ... ok
+test_cross_aperture_contradiction_is_not_body_conflict (test_reducer.PolicyTests.test_cross_aperture_contradiction_is_not_body_conflict) ... ok
+test_each_guard_false_and_null (test_reducer.PolicyTests.test_each_guard_false_and_null) ... ok
+test_every_base_uncertainty (test_reducer.PolicyTests.test_every_base_uncertainty) ... ok
+test_full_retention (test_reducer.PolicyTests.test_full_retention) ... ok
+test_integrity_and_invalid_input_precedence (test_reducer.PolicyTests.test_integrity_and_invalid_input_precedence) ... ok
+test_interface_rejections_and_case_recovery (test_reducer.PolicyTests.test_interface_rejections_and_case_recovery) ... ok
+test_namespace_overlap_and_opaque_names (test_reducer.PolicyTests.test_namespace_overlap_and_opaque_names) ... ok
+test_null_precedes_false_and_inapplicable_guard (test_reducer.PolicyTests.test_null_precedes_false_and_inapplicable_guard) ... ok
+test_order_and_repetition (test_reducer.PolicyTests.test_order_and_repetition) ... ok
+test_partial_projection (test_reducer.PolicyTests.test_partial_projection) ... ok
+test_partial_witness_union_and_silence (test_reducer.PolicyTests.test_partial_witness_union_and_silence) ... ok
+test_proposal_safety_and_absence (test_reducer.PolicyTests.test_proposal_safety_and_absence) ... ok
+test_pure_contradiction_and_zero_support (test_reducer.PolicyTests.test_pure_contradiction_and_zero_support) ... ok
+test_unauthorized_surfaces_are_silent (test_reducer.PolicyTests.test_unauthorized_surfaces_are_silent) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK

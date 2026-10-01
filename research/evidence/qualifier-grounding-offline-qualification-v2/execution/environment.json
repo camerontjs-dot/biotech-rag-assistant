@@ -1,0 +1,9 @@
+{
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "implementation": "CPython",
+  "os": "Darwin",
+  "os_release": "27.0.0",
+  "machine": "arm64",
+  "ruff": "ruff 0.16.5",
+  "candidate_runtime_dependencies": []
+}

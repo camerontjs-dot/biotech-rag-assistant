@@ -1,0 +1,83 @@
+{
+  "schema_version": "qualifier-grounding-implementation-aperture/v2",
+  "experiment_id": "qualifier-grounding-offline-qualification-v2",
+  "recorded_at_utc": "2026-10-01T03:36:03.755179+00:00",
+  "branch": "research/qualifier-grounding-offline-qualification-v2-execution",
+  "expected_and_verified_live_start": "7cd75251bdc9782e6e347b0fabd190b964296507",
+  "live_base_and_pr26_head": "7cd75251bdc9782e6e347b0fabd190b964296507",
+  "normative_commit": "ae754348d4ec8a8c6515d9dd4c67a77b07666428",
+  "normative_tree": "99b2c5b6ed7d084e8a73d802684f17a8904eba2c",
+  "allowed_input_files_exposed": {
+    "research/evidence/qualifier-grounding-offline-qualification-v2/implementation-aperture/CANDIDATE.json": "df2da1d8f90aa81c375f2e03cd12938fc2d315ebfd453368dad47cbcefc82455",
+    "research/evidence/qualifier-grounding-policy-v2/policy.json": "96fcb4cb34378d768a4870f284e0d61c7f40a9f73a923170454fc9994c481f14",
+    "research/evidence/qualifier-grounding-policy-v2/interface.json": "1ab5683435afd17976f4f093e1a07740f540fc6700e9f615b1d5fbb2e773b387"
+  },
+  "engineering_conventions_read": [
+    ".agents/skills/git-workflow-discipline/SKILL.md",
+    ".agents/skills/mainframe-tools/SKILL.md"
+  ],
+  "other_context_exposed": [
+    "Current user task and global AGENTS instructions",
+    "System/developer tool and sandbox documentation; general MainFrame memory summary supplied in prompt, no biotech qualification material in that summary",
+    "session-open resume/act listings: route metadata, unrelated focus/brain notices; no content batches read",
+    "Directory entry names at project root; Git branch/object/worktree/dirty/remote identities only",
+    "Issue 27 number/state/URL metadata only",
+    "Locally authored reducer, contract-derived tests, audit/lint outputs and safe leak-check hook"
+  ],
+  "not_exposed_before_freeze": [
+    "Fresh inputs, expectations, controls, pairs or author artifacts",
+    "Full protocol, preparation checker or scorer",
+    "PR 26 narrative",
+    "V1 reducer, inputs, expectations, pairs, outcomes or traces",
+    "A07/A08 material",
+    "Project coordination/history contents",
+    "Wave B, TEST or PROSPECTIVE payloads"
+  ],
+  "isolation": {
+    "implementation": "Plain directory containing only three allowed copies plus locally authored source/tests and generated test/review records",
+    "commit_checkout": "Separate non-hardlinked clone; sparse working files restricted to allowed three, new candidate and new execution records",
+    "history": "Git objects copied mechanically for ancestry; no historical file contents inspected"
+  },
+  "source_hashes": {
+    "research/qualifier_grounding_reducer_v2/reducer.py": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+    "research/qualifier_grounding_reducer_v2/test_reducer.py": "da3d4616e8420c249aeda2495847a2219b03aa035dbf5dbb25930fc5dbec8f8b"
+  },
+  "candidate_source_imports": [],
+  "runtime_dependencies": [],
+  "local_tests": {
+    "test_methods": 15,
+    "passed": true,
+    "instrumented_contract_test_calls": 64
+  },
+  "lint": {
+    "tool": "ruff 0.16.5",
+    "rules": "E4,E7,E9,F",
+    "isolated_config": true,
+    "passed": true
+  },
+  "source_runtime_review": {
+    "imports": 0,
+    "prohibited_builtin_calls": 0,
+    "audit_events_during_corrected_instrumentation": 0
+  },
+  "contamination_status": "CLEAN",
+  "project_model_provider_calls": 0,
+  "wave_b": "LOCKED",
+  "deviations": [
+    "Broader project resume/act content batches, MindGraph and memory retrieval deferred to protect the explicitly required clean aperture; route incomplete status is not claimed complete",
+    "Separate sparse clone and own pre-commit leak hook used because project hook/config reads were outside clean aperture; no existing checkout or hook changed",
+    "Initial profile-based runtime review produced instrumentation attribute-read noise; preserved compressed observation and performed corrected wrapper-based audit with unchanged source"
+  ],
+  "environment_observations": [
+    "Default-sandbox GitHub DNS unavailable; approved read-only network retry succeeded",
+    "Local execution branch name absent; exact start commit present and live execution ref verified",
+    "Default uv cache write denied; existing cached ruff executable used directly without cache or network"
+  ],
+  "concurrent_state_preserved": {
+    "main_head": "20f56cc2d8321b824f3de2a45ec64c9b4c9c0f3d",
+    "dirty_paths": [
+      "DECISIONS.md"
+    ],
+    "registered_worktrees_touched": false
+  }
+}

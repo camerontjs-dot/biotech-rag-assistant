@@ -1,0 +1,18 @@
+{
+  "review_phase": "pre_freeze",
+  "source_sha256": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+  "imports": [],
+  "forbidden_builtin_calls": [],
+  "observed_reducer_calls": 64,
+  "runtime_audit_events_within_decide": {},
+  "test_methods": 15,
+  "tests_passed": true,
+  "original_instrumentation_observation": {
+    "archive_sha256": "f2f1e59f48eef08bae7e02c71f0968cd67675146884deb12597f3b8fdf6a8ed3",
+    "audit_event_counts": {
+      "object.__getattr__": 17428
+    },
+    "interpretation": "Profile callback frame/function attribute reads caused object.__getattr__ audit noise. Corrected wrapper activates audit collection only during the reducer call; source unchanged."
+  },
+  "limits": "Audit hooks do not cover every possible native access; no imports, dynamic execution, file/network/process/model/environment primitives exist in this source."
+}
