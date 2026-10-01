@@ -1,0 +1,23 @@
+{
+  "schema_version": "semantic-hosted-ci-lint-diagnostics/v1",
+  "run_id": 36874264026,
+  "head_sha": "6f6e90b75f160370116a22c1c342231d9d14008d",
+  "raw_private_log_sha256": "42b3c341823260055b69796879d0950f0ee2437ce9678be219d21e67fc395fe9",
+  "record_count": 894,
+  "new_preparation_source_findings": [],
+  "classification_basis": "Paths/code/positions from physical hosted lint; all other Python paths are unchanged in additions-only preparation diff. No source excerpts published.",
+  "counts_by_path": {
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py": 582,
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py": 195,
+    "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py": 18,
+    "research/qualifier_grounding_reducer_v2/reducer.py": 6,
+    "research/qualifier_grounding_reducer_v2/test_reducer.py": 15,
+    "research/review_qualifier_grounding_v2_persisted.py": 33,
+    "research/run_qualifier_grounding_v2_once.py": 15,
+    "research/run_qualifier_offline_qualification.py": 9,
+    "research/score_qualifier_grounding_v2_persisted.py": 21
+  },
+  "per_matrix_job": 298,
+  "matrix_job_count": 3,
+  "all_diagnostic_paths_unchanged_in_base_diff": true
+}

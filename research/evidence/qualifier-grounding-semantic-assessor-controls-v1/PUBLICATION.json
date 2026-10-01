@@ -1,0 +1,52 @@
+{
+  "schema_version": "semantic-preparation-publication/v1",
+  "observed_at_utc": "2026-10-01T14:25:31.530075+00:00",
+  "terminal_state": "TERMINAL_PREPARATION_READY",
+  "resolves_pending_fields_in": "TERMINAL.json without rewriting it",
+  "frozen_package_commit": "b817ef0b3c964a8f9e89170107d7b69fa90dd7a3",
+  "frozen_package_tree": "c109b41dd1b4708ca14dd474616f649583e1a22a",
+  "frozen_manifest_sha256": "9b20079779895255ee27fe9dda2899f0e0bda4d55792925a4bf9db322be8e4c9",
+  "terminal_sha256": "202463c69abdc4dc514134202aa0f1c7ac09d21bfdb6a71ec0424e11e44f6f3a",
+  "initial_receipt_publication_commit": "6f6e90b75f160370116a22c1c342231d9d14008d",
+  "initial_receipt_publication_tree": "1712308bfa46fcf8bf014a2fd4b4c160b8c2fe6a",
+  "github": {
+    "draft_pr": 30,
+    "pr_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/30",
+    "pr_state": "OPEN",
+    "draft": true,
+    "merged": false,
+    "base_branch": "research/qualifier-grounding-offline-qualification-v2-execution",
+    "base_sha": "b09c2966676a44d506df27f6c1565416451fa67d",
+    "pr_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/30#issuecomment-5933423884",
+    "issue": 29,
+    "issue_state": "CLOSED",
+    "state_reason": "completed",
+    "issue_closed_at_utc": "2026-10-01T14:22:19Z",
+    "issue_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/29#issuecomment-5933425330",
+    "predecessor_pr_28": "closed unmerged; not mutated"
+  },
+  "ci": {
+    "tested_head": "6f6e90b75f160370116a22c1c342231d9d14008d",
+    "dedicated_preparation": "PASS on nonzero physical runner with executed steps",
+    "repository_python_ci": "Lint failed: 298 inherited findings/job; new preparation source has zero findings; tests/compile/corpus smoke skipped",
+    "static_demo_parity": "PASS",
+    "unrelated_repository_regression": "UNKNOWN (not tested)",
+    "scientific_semantic_assessor_disposition": "NOT_RUN"
+  },
+  "checks_and_failures": {
+    "receipts/hosted-ci-lint-classification.json": "825d056d488587e59b2a33e64ac53396ec8c3cd7c5f7baf52e9c35661f38a919",
+    "receipts/hosted-ci-observation.json": "39318983579d77e25214ce8948ec899d1421326a96c4e7a465bee59ff1b9dd9c",
+    "receipts/hosted-preparation-check.json": "da8d18f19760b01a9ac59b7b409fb654021e79d96509835f6b5fed00c36b3a5d"
+  },
+  "source_byte_changes_after_freeze": 0,
+  "calls": {
+    "case_author_launches": 0,
+    "adjudicator_launches": 0,
+    "semantic_assessor_calls": 0,
+    "reducer_calls": 0,
+    "project_generation_calls": 0
+  },
+  "wave_b": "LOCKED",
+  "cleanup": "Original dirty/concurrent and prior worktrees preserved; isolated preparation clone and receipts retained for review. No broad cleanup.",
+  "next_step": "Separately authorize sealed case authoring, A/B, reconciliation and apparatus assurance. No assessor execution in this task."
+}

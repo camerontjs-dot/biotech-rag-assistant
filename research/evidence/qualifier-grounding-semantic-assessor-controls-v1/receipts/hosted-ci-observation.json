@@ -1,0 +1,355 @@
+{
+  "schema_version": "semantic-preparation-hosted-ci-observation/v1",
+  "tested_head": "6f6e90b75f160370116a22c1c342231d9d14008d",
+  "new_preparation_run": {
+    "id": 36874264286,
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36874264286",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36874264286/job/110409534524",
+        "id": 110409534524,
+        "name": "preparation",
+        "runner_id": 1000008449,
+        "runner_name": "GitHub Actions 1000008449",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install structural validator only",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "New source lint",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Structural and custody falsifiers",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Frozen preparation check",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "status": "completed"
+          }
+        ]
+      }
+    ],
+    "total_count": 1
+  },
+  "repository_ci_run": {
+    "id": 36874264026,
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36874264026",
+    "jobs": [
+      {
+        "conclusion": "failure",
+        "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36874264026/job/110409533887",
+        "id": 110409533887,
+        "name": "ruff + pytest (py3.12)",
+        "runner_id": 1000008445,
+        "runner_name": "GitHub Actions 1000008445",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install",
+            "status": "completed"
+          },
+          {
+            "conclusion": "failure",
+            "name": "Lint",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Tests",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Compile",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Corpus smoke",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "status": "completed"
+          }
+        ]
+      },
+      {
+        "conclusion": "failure",
+        "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36874264026/job/110409534330",
+        "id": 110409534330,
+        "name": "ruff + pytest (py3.11)",
+        "runner_id": 1000008447,
+        "runner_name": "GitHub Actions 1000008447",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install",
+            "status": "completed"
+          },
+          {
+            "conclusion": "failure",
+            "name": "Lint",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Tests",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Compile",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Corpus smoke",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "status": "completed"
+          }
+        ]
+      },
+      {
+        "conclusion": "failure",
+        "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36874264026/job/110409534478",
+        "id": 110409534478,
+        "name": "ruff + pytest (py3.13)",
+        "runner_id": 1000008448,
+        "runner_name": "GitHub Actions 1000008448",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install",
+            "status": "completed"
+          },
+          {
+            "conclusion": "failure",
+            "name": "Lint",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Tests",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Compile",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Corpus smoke",
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "status": "completed"
+          }
+        ]
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36874264026/job/110409534493",
+        "id": 110409534493,
+        "name": "static demo JS==Python parity",
+        "runner_id": 1000008446,
+        "runner_name": "GitHub Actions 1000008446",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-node@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build + verify static demo",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "status": "completed"
+          }
+        ]
+      }
+    ],
+    "total_count": 4
+  },
+  "classification": {
+    "new_preparation_source": "PASS; physical dedicated source lint, structural tests and frozen hash check",
+    "preparation_apparatus": "PASS_STRUCTURE_ONLY; semantic validity NOT_RUN",
+    "inherited_frozen_evidence_lint": "298 unchanged inherited findings per Python matrix job; zero new preparation source findings",
+    "unrelated_repository_regression": "UNKNOWN; full tests/compile/corpus smoke skipped",
+    "static_demo_parity": "PASS"
+  },
+  "notes": [
+    "No inherited frozen artifacts repaired.",
+    "No hosted or local semantic assessor/adjudicator invocation.",
+    "Receipt-only publication commits preserve every frozen package source byte."
+  ]
+}
