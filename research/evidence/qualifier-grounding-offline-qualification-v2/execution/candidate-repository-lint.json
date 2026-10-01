@@ -1,0 +1,159 @@
+{
+  "scope": "Exact frozen candidate source and local tests under frozen repository Ruff config",
+  "returncode": 1,
+  "findings": [
+    {
+      "cell": null,
+      "code": "E501",
+      "end_location": {
+        "column": 103,
+        "row": 76
+      },
+      "filename": "research/qualifier_grounding_reducer_v2/reducer.py",
+      "fix": null,
+      "location": {
+        "column": 101,
+        "row": 76
+      },
+      "message": "Line too long (102 > 100)",
+      "name": "line-too-long",
+      "noqa_row": 76,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+    },
+    {
+      "cell": null,
+      "code": "E501",
+      "end_location": {
+        "column": 107,
+        "row": 202
+      },
+      "filename": "research/qualifier_grounding_reducer_v2/reducer.py",
+      "fix": null,
+      "location": {
+        "column": 101,
+        "row": 202
+      },
+      "message": "Line too long (106 > 100)",
+      "name": "line-too-long",
+      "noqa_row": 202,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+    },
+    {
+      "cell": null,
+      "code": "I001",
+      "end_location": {
+        "column": 27,
+        "row": 6
+      },
+      "filename": "research/qualifier_grounding_reducer_v2/test_reducer.py",
+      "fix": {
+        "applicability": "safe",
+        "edits": [
+          {
+            "content": "import copy\nimport unittest\n\nfrom reducer import decide\n\n",
+            "end_location": {
+              "column": 1,
+              "row": 9
+            },
+            "location": {
+              "column": 1,
+              "row": 3
+            }
+          }
+        ],
+        "message": "Organize imports"
+      },
+      "location": {
+        "column": 1,
+        "row": 3
+      },
+      "message": "Import block is un-sorted or un-formatted",
+      "name": "unsorted-imports",
+      "noqa_row": 3,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+    },
+    {
+      "cell": null,
+      "code": "E501",
+      "end_location": {
+        "column": 104,
+        "row": 145
+      },
+      "filename": "research/qualifier_grounding_reducer_v2/test_reducer.py",
+      "fix": null,
+      "location": {
+        "column": 101,
+        "row": 145
+      },
+      "message": "Line too long (103 > 100)",
+      "name": "line-too-long",
+      "noqa_row": 145,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+    },
+    {
+      "cell": null,
+      "code": "E501",
+      "end_location": {
+        "column": 102,
+        "row": 164
+      },
+      "filename": "research/qualifier_grounding_reducer_v2/test_reducer.py",
+      "fix": null,
+      "location": {
+        "column": 101,
+        "row": 164
+      },
+      "message": "Line too long (101 > 100)",
+      "name": "line-too-long",
+      "noqa_row": 164,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+    },
+    {
+      "cell": null,
+      "code": "E501",
+      "end_location": {
+        "column": 105,
+        "row": 169
+      },
+      "filename": "research/qualifier_grounding_reducer_v2/test_reducer.py",
+      "fix": null,
+      "location": {
+        "column": 101,
+        "row": 169
+      },
+      "message": "Line too long (104 > 100)",
+      "name": "line-too-long",
+      "noqa_row": 169,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+    },
+    {
+      "cell": null,
+      "code": "E501",
+      "end_location": {
+        "column": 102,
+        "row": 181
+      },
+      "filename": "research/qualifier_grounding_reducer_v2/test_reducer.py",
+      "fix": null,
+      "location": {
+        "column": 101,
+        "row": 181
+      },
+      "message": "Line too long (101 > 100)",
+      "name": "line-too-long",
+      "noqa_row": 181,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+    }
+  ],
+  "classification": "CANDIDATE_SOURCE_STYLE_LINT",
+  "source_changed": false,
+  "scientific_disposition_impact": "No reducer-contract result changed; findings preserved, frozen source not repaired",
+  "first_lint_invocation": "External config required basename pyproject.toml; initial invocation produced no lint results. Corrected config placement, no source changes."
+}

@@ -1,0 +1,236 @@
+{
+  "recorded_at_utc": "2026-10-01T03:53:00.482381+00:00",
+  "score_receipt_sha256": "90e650b226857677c8598314fee3342d9b5d78248d2d247f3294e3d9795312bf",
+  "legacy_exact_matches": 14,
+  "legacy_disagreements": 14,
+  "explained_frozen_v2_changes": 14,
+  "unexplained_disagreements": 0,
+  "legacy_relations_held": 9,
+  "legacy_strict_pairs": 2,
+  "classification": "LEGACY_COMPATIBILITY_ONLY",
+  "native_v2_acceptance_key": false,
+  "v2_safety_violation_observed": false,
+  "explanations": [
+    {
+      "case_id": "L02",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L04",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L05",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L06",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L07",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L08",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L16",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L18",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L19",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L20",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "rho",
+        "sigma"
+      ],
+      "original_claim_ids": [
+        "rho",
+        "sigma",
+        "tau"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L23",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L24",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L25",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    },
+    {
+      "case_id": "L28",
+      "classification": "INTENTIONAL_FROZEN_V2_SEMANTIC_CHANGE",
+      "field": "citation",
+      "basis": "policy.json citation priority 3: local N not SUPPORTED -> NOMINATION_INSUFFICIENT, before quote deficiency",
+      "nomination_entails_ids": [
+        "v0",
+        "v1"
+      ],
+      "original_claim_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "v2_safety_violation_observed": false
+    }
+  ]
+}

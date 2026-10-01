@@ -1,0 +1,51 @@
+{
+  "schema_version": "qualifier-grounding-execution-tool-identities/v2",
+  "files": {
+    "research/run_qualifier_grounding_v2_once.py": {
+      "sha256": "72d88cad5d622fa2cc70decced828dbe7fc8a36e3cc9523f7e544d244370d6f6",
+      "imports": [
+        "import hashlib",
+        "import importlib.util",
+        "import json",
+        "import os",
+        "import sys",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path"
+      ]
+    },
+    "research/score_qualifier_grounding_v2_persisted.py": {
+      "sha256": "8ead917482c6ec465960029307d5297bc63547fe37dcfaa9a1fb7c7ab3b71b9a",
+      "imports": [
+        "import argparse",
+        "import hashlib",
+        "import importlib.util",
+        "import json",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path"
+      ]
+    },
+    "research/review_qualifier_grounding_v2_persisted.py": {
+      "sha256": "f2b9ca128aa7af0785ac1dbfe459fbeb43ee8c896f4e74520f8b41097805df9f",
+      "imports": [
+        "import ast",
+        "import hashlib",
+        "import importlib.util",
+        "import json",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "import sys"
+      ]
+    }
+  },
+  "scorer_selfchecks": {
+    "cases": 4,
+    "passed": 4,
+    "checks": [
+      "reason text excluded only",
+      "changed identifier list detected",
+      "bool/integer distinction detected",
+      "missing nested field detected"
+    ],
+    "reducer_calls": 0
+  }
+}

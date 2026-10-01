@@ -1,0 +1,64 @@
+{
+  "schema_version": "qualifier-grounding-execution-state/v2",
+  "experiment_id": "qualifier-grounding-offline-qualification-v2",
+  "state": "terminal",
+  "execution": "COMPLETE",
+  "disposition": "SUPPORTED_FOR_LEDGER_CONTRACT",
+  "candidate": {
+    "schema_version": "qualifier-grounding-candidate-freeze/v2",
+    "candidate_id": "qualifier-grounding-reducer-v2-independent-01",
+    "experiment_id": "qualifier-grounding-offline-qualification-v2",
+    "frozen_at_utc": "2026-10-01T03:36:04.060508+00:00",
+    "branch": "research/qualifier-grounding-offline-qualification-v2-execution",
+    "commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+    "tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+    "parent": "7cd75251bdc9782e6e347b0fabd190b964296507",
+    "source_hashes": {
+      "research/qualifier_grounding_reducer_v2/reducer.py": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+      "research/qualifier_grounding_reducer_v2/test_reducer.py": "da3d4616e8420c249aeda2495847a2219b03aa035dbf5dbb25930fc5dbec8f8b"
+    },
+    "normative_commit": "ae754348d4ec8a8c6515d9dd4c67a77b07666428",
+    "normative_tree": "99b2c5b6ed7d084e8a73d802684f17a8904eba2c",
+    "aperture_receipt_sha256": "21c3a9c4df6d0c5d9c6edd6a0e07dc765c1089c6aa85a65d5c4f77cd6e9a712a",
+    "environment": {
+      "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+      "implementation": "CPython",
+      "os": "Darwin",
+      "os_release": "27.0.0",
+      "machine": "arm64",
+      "ruff": "ruff 0.16.5",
+      "candidate_runtime_dependencies": []
+    },
+    "contamination_status": "CLEAN",
+    "checkout_clean_at_freeze": true,
+    "qualification_revealed": false,
+    "project_model_provider_calls": 0,
+    "wave_b": "LOCKED"
+  },
+  "preparation_pr": 26,
+  "execution_issue": 27,
+  "fresh_set_id": "qg-v2-fresh-acceptance-20260930-v4n8",
+  "first_reveal_at_utc": "2026-10-01T03:36:46.870144+00:00",
+  "fresh": {
+    "call_count": 69,
+    "exact_decisions": 69,
+    "pair_count": 33,
+    "relation_passes": 33,
+    "strict_pair_passes": 33,
+    "safety_vetoes": 0
+  },
+  "regression": {
+    "call_count": 28,
+    "legacy_exact_matches": 14,
+    "legacy_disagreements": 14,
+    "explained_semantic_changes": 14,
+    "legacy_relation_passes": 9,
+    "legacy_strict_pair_passes": 2,
+    "v2_safety_violation_observed": false,
+    "native_v2_acceptance_key": false
+  },
+  "source_oracle_review": "NO_PROHIBITED_DEPENDENCY_OR_SAFETY_VIOLATION_OBSERVED",
+  "project_model_provider_calls": 0,
+  "wave_b": "LOCKED",
+  "preparation_records": "Retained unchanged as designed/NOT_RUN historical preparation; execution state exists only in this new successor directory."
+}

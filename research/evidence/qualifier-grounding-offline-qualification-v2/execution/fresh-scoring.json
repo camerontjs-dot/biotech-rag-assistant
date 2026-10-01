@@ -1,0 +1,4601 @@
+{
+  "schema_version": "qualifier-grounding-fresh-scoring/v2",
+  "scored_at_utc": "2026-10-01T03:45:39.929925+00:00",
+  "apparatus_status": "VALID",
+  "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+  "candidate_tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+  "fresh_set_id": "qg-v2-fresh-acceptance-20260930-v4n8",
+  "decision_count": 69,
+  "exact_decisions": 69,
+  "mismatched_decisions": 0,
+  "pair_count": 33,
+  "relation_passes": 33,
+  "strict_pair_passes": 33,
+  "schema_failures": 0,
+  "reducer_calls_during_scoring": 0,
+  "decisions_persisted_before_scoring": true,
+  "call_counts": {
+    "k7r3": 1,
+    "p9x2": 1,
+    "n0v6": 1,
+    "t8a4": 1,
+    "g2m9": 1,
+    "j4w1": 1,
+    "b6q0": 1,
+    "s2c5": 1,
+    "v1k8": 1,
+    "h9d3": 1,
+    "v4n8": 1,
+    "q0s6": 1,
+    "y7f2": 1,
+    "c9a5": 1,
+    "m1u7": 1,
+    "l6e4": 1,
+    "r8t0": 1,
+    "p3g9": 1,
+    "w5b1": 1,
+    "a6z2": 1,
+    "e0h8": 1,
+    "d4j7": 1,
+    "f2w9": 1,
+    "u5r0": 1,
+    "z3m8": 1,
+    "k0q4": 1,
+    "n7s1": 1,
+    "t6v3": 1,
+    "x2a8": 1,
+    "b5l0": 1,
+    "j8p6": 1,
+    "h4c7": 1,
+    "p8e2": 1,
+    "g9x5": 1,
+    "a2t7": 1,
+    "s0k6": 1,
+    "d3v9": 1,
+    "w8j1": 1,
+    "n6q4": 1,
+    "m0b7": 1,
+    "q5z3": 1,
+    "r1h6": 1,
+    "v9c0": 1,
+    "e4s8": 1,
+    "f7a2": 1,
+    "k3u5": 1,
+    "t0n9": 1,
+    "b7p4": 1,
+    "x9g1": 1,
+    "a0m6": 1,
+    "c5r8": 1,
+    "s6d2": 1,
+    "p1w7": 1,
+    "m8t2": 1,
+    "g4a0": 1,
+    "u7n5": 1,
+    "e2q9": 1,
+    "z6b3": 1,
+    "k5r0": 1,
+    "b9c4": 1,
+    "r2v8": 1,
+    "n3s7": 1,
+    "w0h5": 1,
+    "d7p1": 1,
+    "f8m2": 1,
+    "q4j6": 1,
+    "a7z9": 1,
+    "r4n2": 1,
+    "m5": 1
+  },
+  "case_results": [
+    {
+      "case_id": "k7r3",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "p9x2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "n0v6",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "t8a4",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "g2m9",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "j4w1",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "b6q0",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "s2c5",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "v1k8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "h9d3",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "v4n8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "q0s6",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "y7f2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "c9a5",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "m1u7",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "l6e4",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "r8t0",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "p3g9",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "w5b1",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "a6z2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "e0h8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "d4j7",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "f2w9",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "u5r0",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "z3m8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "k0q4",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "n7s1",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "t6v3",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "x2a8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "b5l0",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "j8p6",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "h4c7",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "p8e2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "g9x5",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "a2t7",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "s0k6",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "d3v9",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "w8j1",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "n6q4",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "m0b7",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "q5z3",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "r1h6",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "v9c0",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "e4s8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "f7a2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "k3u5",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "t0n9",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "b7p4",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "x9g1",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "a0m6",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "c5r8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "s6d2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "p1w7",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "m8t2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "g4a0",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "u7n5",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "e2q9",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "z6b3",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "k5r0",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "b9c4",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "r2v8",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "n3s7",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "w0h5",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "d7p1",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "f8m2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "q4j6",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "a7z9",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "r4n2",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "m5",
+      "schema_valid": true,
+      "exact_except_reason": true,
+      "mismatches": []
+    }
+  ],
+  "pair_results": [
+    {
+      "pair_id": "i001",
+      "relation": "INVARIANT",
+      "left": "k7r3",
+      "right": "p9x2",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i002",
+      "relation": "INVARIANT",
+      "left": "k7r3",
+      "right": "n0v6",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "r003",
+      "relation": "RENAMED_INVARIANT",
+      "left": "k7r3",
+      "right": "t8a4",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i004",
+      "relation": "INVARIANT",
+      "left": "k7r3",
+      "right": "g2m9",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s005",
+      "relation": "SENSITIVITY",
+      "left": "k7r3",
+      "right": "j4w1",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s006",
+      "relation": "SENSITIVITY",
+      "left": "b6q0",
+      "right": "s2c5",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s007",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "q0s6",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s008",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "r8t0",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s009",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "p3g9",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s010",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "w5b1",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s011",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "a6z2",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s012",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "e0h8",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s013",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "d4j7",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i014",
+      "relation": "INVARIANT",
+      "left": "f2w9",
+      "right": "u5r0",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s015",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "u5r0",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "assessment_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i016",
+      "relation": "INVARIANT",
+      "left": "v4n8",
+      "right": "j8p6",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "r017",
+      "relation": "RENAMED_INVARIANT",
+      "left": "v4n8",
+      "right": "h4c7",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s018",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "y7f2",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s019",
+      "relation": "SENSITIVITY",
+      "left": "v4n8",
+      "right": "l6e4",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i020",
+      "relation": "INVARIANT",
+      "left": "p8e2",
+      "right": "g9x5",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i021",
+      "relation": "INVARIANT",
+      "left": "a2t7",
+      "right": "s0k6",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i022",
+      "relation": "INVARIANT",
+      "left": "d3v9",
+      "right": "w8j1",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s023",
+      "relation": "SENSITIVITY",
+      "left": "k7r3",
+      "right": "m0b7",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "assessment_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s024",
+      "relation": "SENSITIVITY",
+      "left": "m0b7",
+      "right": "q5z3",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s025",
+      "relation": "SENSITIVITY",
+      "left": "h9d3",
+      "right": "f7a2",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "assessment_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i026",
+      "relation": "INVARIANT",
+      "left": "a0m6",
+      "right": "c5r8",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i027",
+      "relation": "INVARIANT",
+      "left": "a0m6",
+      "right": "s6d2",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s028",
+      "relation": "SENSITIVITY",
+      "left": "x9g1",
+      "right": "c5r8",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i029",
+      "relation": "INVARIANT",
+      "left": "p1w7",
+      "right": "z6b3",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "i030",
+      "relation": "INVARIANT",
+      "left": "m8t2",
+      "right": "w0h5",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s031",
+      "relation": "SENSITIVITY",
+      "left": "x9g1",
+      "right": "z6b3",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "s032",
+      "relation": "SENSITIVITY",
+      "left": "k0q4",
+      "right": "r2v8",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "assessment_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "DIFFERENT",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "DIFFERENT",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    },
+    {
+      "pair_id": "r033",
+      "relation": "RENAMED_INVARIANT",
+      "left": "r4n2",
+      "right": "m5",
+      "relation_pass": true,
+      "left_exact": true,
+      "right_exact": true,
+      "both_endpoints_exact": true,
+      "strict_pair_pass": true,
+      "field_results": [
+        {
+          "field": "assessment_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "grounding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "citation",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "finding",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "action",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "core_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "gap_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.Q",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.N",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.local_apertures.P",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.missing_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.contradicted_packet_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.ambiguous_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.conflicting_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.considered_witness_ids",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.uncertainty_sources",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.proposal_status",
+          "requirement": "EQUAL",
+          "passed": true
+        },
+        {
+          "field": "diagnostics.apparatus_code",
+          "requirement": "EQUAL",
+          "passed": true
+        }
+      ],
+      "relation_error": null
+    }
+  ],
+  "control_disposition": "PASS_STRICT_FRESH_GATES",
+  "source_oracle_review_required_separately": true,
+  "expectation_limits": "Frozen agent-authored symbolic hypotheses, needs-audit; no semantic-assessor truth."
+}

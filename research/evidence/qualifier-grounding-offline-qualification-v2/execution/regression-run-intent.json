@@ -1,0 +1,8 @@
+{
+  "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+  "phase": "known_v1_regression",
+  "intent_at_utc": "2026-10-01T03:46:24.888457+00:00",
+  "call_budget": 28,
+  "retries_permitted": 0,
+  "native_v2_acceptance_key": false
+}

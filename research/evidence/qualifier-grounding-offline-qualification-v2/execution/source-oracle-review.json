@@ -1,0 +1,2658 @@
+{
+  "schema_version": "qualifier-grounding-source-oracle-review/v2",
+  "reviewed_at_utc": "2026-10-01T03:51:19.788650+00:00",
+  "source_sha256": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+  "imports": [],
+  "ast_call_targets": [
+    "_fields",
+    "_identifier",
+    "_ids",
+    "_valid",
+    "aggregate.items",
+    "aggregate[aperture][kind].update",
+    "all",
+    "ambiguous.update",
+    "any",
+    "assessment_ledger.get",
+    "bool",
+    "conflicting.update",
+    "considered.add",
+    "covered.update",
+    "diagnostics.update",
+    "empty_apertures.copy",
+    "len",
+    "local.copy",
+    "packet_witnesses.items",
+    "proposal['guards'].values",
+    "result.update",
+    "set",
+    "sorted",
+    "sources.add",
+    "type"
+  ],
+  "fresh_case_id_literals_in_source": [],
+  "case_id_use": "Echo and nonempty-string validation only; no semantic branch/table.",
+  "answer_literals": "Field names, policy/interface enums and generic reason text only.",
+  "source_findings": {
+    "case_id_oracle": false,
+    "expected_answer_lookup": false,
+    "fixture_reads": false,
+    "scorer_checker_imports": false,
+    "predecessor_reducer_reuse": false,
+    "history_or_source_prose_access": false,
+    "environment_path_injection": false,
+    "dynamic_execution": false,
+    "file_network_process_model_access": false,
+    "identifier_order_dependence_contrary_to_contract": false
+  },
+  "runtime": {
+    "fresh": {
+      "calls_attempted": 69,
+      "calls_completed": 69,
+      "calls_per_input": 1,
+      "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+      "candidate_source_sha256": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+      "candidate_tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+      "decisions_sha256": "0b7bb7f98b58dbbbdbbb4e5069d9563b4895282aeba9aec245b22e389439ae8d",
+      "execution_status": "COMPLETE",
+      "failure": null,
+      "finished_at_utc": "2026-10-01T03:43:51.498535+00:00",
+      "input_mutation_observed": false,
+      "input_sha256": "d4afdacc54e87d7d60d3f947512484af76a7d3830283701bcd37527dc3bc56d1",
+      "journal_sha256": "b85ac7fcbb28ae9848170bf75240c7f7e08a562630fa8b466f4baf872367f018",
+      "phase": "fresh",
+      "project_model_provider_calls": 0,
+      "publication_head": "7cd75251bdc9782e6e347b0fabd190b964296507",
+      "required_input_count": 69,
+      "runner_commit": "637428622fe19a98d55fafb8604e7dca9554dfcd",
+      "runner_sha256": "72d88cad5d622fa2cc70decced828dbe7fc8a36e3cc9523f7e544d244370d6f6",
+      "runtime_audit_events": [],
+      "wave_b": "LOCKED"
+    },
+    "regression": {
+      "calls_attempted": 28,
+      "calls_completed": 28,
+      "calls_per_input": 1,
+      "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+      "candidate_source_sha256": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7",
+      "candidate_tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+      "decisions_sha256": "d3b68fc03bca8bc37837dcf0d40084f9985756af3fed48e3844fdad1cf561a69",
+      "execution_status": "COMPLETE",
+      "failure": null,
+      "finished_at_utc": "2026-10-01T03:46:24.916609+00:00",
+      "input_mutation_observed": false,
+      "input_sha256": "8667dd6fa1718f16c9a0ba445380f15c9c31befffee18a72b2c1f843d132228f",
+      "journal_sha256": "c645f2f84a91d57bc79be014d969c8e092ad532d372e5fba2070f32e953996e7",
+      "phase": "known_v1_regression",
+      "project_model_provider_calls": 0,
+      "publication_head": "7cd75251bdc9782e6e347b0fabd190b964296507",
+      "required_input_count": 28,
+      "runner_commit": "637428622fe19a98d55fafb8604e7dca9554dfcd",
+      "runner_sha256": "72d88cad5d622fa2cc70decced828dbe7fc8a36e3cc9523f7e544d244370d6f6",
+      "runtime_audit_events": [],
+      "wave_b": "LOCKED"
+    }
+  },
+  "declared_safety_review": {
+    "input_count": 97,
+    "violations": [],
+    "case_results": [
+      {
+        "phase": "fresh",
+        "case_id": "k7r3",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "p9x2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "n0v6",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "t8a4",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "g2m9",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "j4w1",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "b6q0",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "s2c5",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "v1k8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "h9d3",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "v4n8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "q0s6",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "y7f2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "c9a5",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "m1u7",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "l6e4",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "r8t0",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "p3g9",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "w5b1",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "a6z2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "e0h8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "d4j7",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "f2w9",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "u5r0",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "z3m8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "k0q4",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "n7s1",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "t6v3",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "x2a8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "b5l0",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "j8p6",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "h4c7",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "p8e2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "g9x5",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "a2t7",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "s0k6",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "d3v9",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "contradiction_cannot_be_trimmed",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "w8j1",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "contradiction_cannot_be_trimmed",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "n6q4",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "contradiction_cannot_be_trimmed",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "m0b7",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "q5z3",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "r1h6",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "v9c0",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "e4s8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "f7a2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "k3u5",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "t0n9",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "b7p4",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "x9g1",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "a0m6",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "c5r8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "s6d2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "p1w7",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "m8t2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "g4a0",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "u7n5",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "e2q9",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "z6b3",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "k5r0",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "b9c4",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "r2v8",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "n3s7",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "w0h5",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "d7p1",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "f8m2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "q4j6",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "a7z9",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "r4n2",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "fresh",
+        "case_id": "m5",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L01",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L02",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L03",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L04",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L05",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L06",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L07",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L08",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "contradiction_cannot_be_trimmed",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L09",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L10",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L11",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L12",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L13",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L14",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "input_integrity_stop",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "apparatus_not_semantics",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L15",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L16",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L17",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L18",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L19",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L20",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L21",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L22",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "complete_exhaustive_retention",
+            "passed": true
+          },
+          {
+            "check": "all_contributing_body_witnesses",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L23",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L24",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L25",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L26",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L27",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "no_retained_authority",
+            "passed": true
+          },
+          {
+            "check": "required_uncertainty_withholds",
+            "passed": true
+          },
+          {
+            "check": "uncertainty_collapses_authority",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "phase": "regression",
+        "case_id": "L28",
+        "checks": [
+          {
+            "check": "decision_schema",
+            "passed": true
+          },
+          {
+            "check": "citation_uses_original_N_Q_only",
+            "passed": true
+          },
+          {
+            "check": "authorized_body_witnesses_only",
+            "passed": true
+          },
+          {
+            "check": "no_unknown_or_lost_supported_condition",
+            "passed": true
+          },
+          {
+            "check": "no_uncertain_or_contradicted_retention",
+            "passed": true
+          },
+          {
+            "check": "declared_safe_projection",
+            "passed": true
+          },
+          {
+            "check": "exact_supported_core_and_explicit_gap",
+            "passed": true
+          },
+          {
+            "check": "proposal_witnesses_exact",
+            "passed": true
+          },
+          {
+            "check": "projection_witness_coverage",
+            "passed": true
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "independence_achieved": [
+    "Restricted pre-freeze information aperture, exact allowed normative copies.",
+    "New implementation before qualification/control/scorer/predecessor reveal.",
+    "No candidate runtime imports, history, fixture, expectation or external service dependency.",
+    "Plain runtime directory excludes scorer/expectations/history; isolated Python process with empty environment.",
+    "Per-call audit hook rejects accesses; persisted decisions scored later in another process.",
+    "Identifier/order properties exercised by frozen fresh pairs and pre-freeze local tests."
+  ],
+  "independence_not_achieved": [
+    "Implementation and scoring/review performed by the same agent owner; no independent human review.",
+    "Frozen expectations remain agent-authored hypotheses; semantic assessment truth not tested.",
+    "No claim of OS-level confinement to the runtime directory or exhaustive audit-hook syscall coverage.",
+    "Model training exposure to public material cannot be established from these receipts.",
+    "Finite controls do not prove correctness on every possible ledger."
+  ],
+  "reducer_calls_during_review": 0,
+  "review_disposition": "NO_PROHIBITED_DEPENDENCY_OR_SAFETY_VIOLATION_OBSERVED"
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "qualifier-grounding-execution-deviations/v2",
+  "material_candidate_repairs_after_reveal": 0,
+  "candidate_retries": 0,
+  "fresh_extra_calls": 0,
+  "qualification_identity_substitutions": 0,
+  "protected_payload_access": 0,
+  "deviations": [
+    {
+      "kind": "INFORMATION_APERTURE_PRIORITY",
+      "observation": "Broader MainFrame memory, MindGraph and coordination routes deferred; only shared engineering conventions plus task/three allowed files were read before freeze",
+      "effect": "Clean qualification aperture preserved; broader workspace route not claimed complete"
+    },
+    {
+      "kind": "ISOLATED_GIT_CONTEXT",
+      "observation": "Separate non-hardlinked sparse clone with own active pre-commit leak hook; original main checkout and registered worktrees preserved",
+      "effect": "No historical content read before freeze; source ancestry preserved"
+    },
+    {
+      "kind": "INSTRUMENTATION_SETUP",
+      "observation": "Initial pre-freeze profiling emitted object attribute audit noise; raw observation archived; corrected audit wrapper observed zero events",
+      "effect": "No source repair; still before freeze"
+    },
+    {
+      "kind": "APPARATUS_MATERIALIZATION_SETUP",
+      "observation": "First local preparation invocation lacked exact files due a narrow copy allowlist",
+      "effect": "No reducer calls; exact frozen objects copied and 138 hashes plus preparation checker passed before decisive run",
+      "receipt": "setup-failures.json"
+    },
+    {
+      "kind": "EXECUTION_TOOL_DEVELOPMENT_LINT",
+      "observation": "Pre-run harness lint identified normal exec loader and broad failure capture",
+      "effect": "Harness loader/capture revised before first decisive call; candidate unchanged",
+      "receipt": "runner-review.json"
+    },
+    {
+      "kind": "REPOSITORY_STYLE_LINT",
+      "observation": "Candidate-local correctness lint passed before freeze; later repository config reports 7 style findings in frozen candidate/tests and 23 in execution tools",
+      "effect": "Preserved, no candidate rewrite; publication/CI limitation separate from strict reducer gates",
+      "receipts": [
+        "candidate-repository-lint.json",
+        "execution-tools-repository-lint.json"
+      ]
+    },
+    {
+      "kind": "ENVIRONMENT_SETUP",
+      "observation": "Default sandbox GitHub DNS and uv cache writes unavailable; approved GitHub access and read-only cached Ruff binary used",
+      "effect": "No model/provider calls; source environment preserved"
+    }
+  ]
+}

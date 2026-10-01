@@ -1,0 +1,20 @@
+{
+  "observed_at_utc": "2026-10-01T03:55:33+00:00",
+  "mode": "observe",
+  "fetch": false,
+  "apply": false,
+  "original_workbench": {
+    "branch": "main",
+    "head": "20f56cc2d8321b824f3de2a45ec64c9b4c9c0f3d",
+    "cached_upstream_head": "14c824055534db33855a1e017c47087ffffaa667",
+    "classification": "DIRTY",
+    "dirty_paths": [
+      "DECISIONS.md"
+    ],
+    "preserved": true
+  },
+  "execution_checkout": "separate sparse clone",
+  "live_preparation_and_execution_start_verified": "7cd75251bdc9782e6e347b0fabd190b964296507",
+  "remote_identity": "camerontjs-dot/biotech-rag-assistant",
+  "no_existing_worktree_modified": true
+}

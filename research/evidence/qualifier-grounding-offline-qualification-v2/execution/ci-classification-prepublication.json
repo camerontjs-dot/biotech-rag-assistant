@@ -1,0 +1,12 @@
+{
+  "candidate_local_correctness_lint": "PASS E4,E7,E9,F",
+  "candidate_local_tests": "PASS 15 methods",
+  "candidate_source_style_findings": 7,
+  "execution_tool_style_findings": 23,
+  "inherited_frozen_author_helper_findings": 265,
+  "apparatus_status": "VALID",
+  "unrelated_repository_regression": "UNKNOWN until hosted observations",
+  "hosted_ci": "NOT_YET_OBSERVED; append a publication observation after Draft PR creation",
+  "scientific_disposition_effect": "Style/inherited CI failures do not override exact fresh contract gates; no green repository/publication claim",
+  "frozen_artifacts_repaired": false
+}

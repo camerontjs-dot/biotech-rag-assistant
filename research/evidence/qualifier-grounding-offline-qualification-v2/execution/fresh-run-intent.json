@@ -1,0 +1,14 @@
+{
+  "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+  "candidate_tree": "617fe8fae6b5cb9ed466ec86567c43260473f4b0",
+  "intent_at_utc": "2026-10-01T03:43:51.465615+00:00",
+  "phase": "fresh",
+  "call_budget": 69,
+  "retries_permitted": 0,
+  "launch_flags": [
+    "-I",
+    "-S",
+    "-B"
+  ],
+  "child_environment_entries": 0
+}

@@ -1,0 +1,398 @@
+{
+  "schema_version": "qualifier-grounding-known-regression-results/v2",
+  "scored_at_utc": "2026-10-01T03:48:19.994604+00:00",
+  "role": "KNOWN_REGRESSION_CONTROLS",
+  "native_v2_acceptance_key": false,
+  "candidate_commit": "1ff76f74dc15e997923d7002e48d8e56cdb11d30",
+  "control_count": 28,
+  "legacy_exact_matches": 14,
+  "legacy_disagreements": 14,
+  "pair_count": 9,
+  "legacy_relation_passes": 9,
+  "legacy_strict_pair_passes": 2,
+  "reducer_calls_during_scoring": 0,
+  "case_results": [
+    {
+      "case_id": "L01",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L02",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L03",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L04",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L05",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L06",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L07",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L08",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L09",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L10",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L11",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L12",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L13",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L14",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L15",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L16",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L17",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L18",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L19",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L20",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L21",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L22",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L23",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L24",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L25",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L26",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L27",
+      "legacy_exact_match": true,
+      "legacy_disagreements": [],
+      "native_v2_acceptance_key": false
+    },
+    {
+      "case_id": "L28",
+      "legacy_exact_match": false,
+      "legacy_disagreements": [
+        {
+          "field": "citation",
+          "actual": "NOMINATION_INSUFFICIENT",
+          "expected": "QUOTE_INSUFFICIENT"
+        }
+      ],
+      "native_v2_acceptance_key": false
+    }
+  ],
+  "pair_results": [
+    {
+      "expect": "packet defect becomes full body support; Q omission remains",
+      "from": "L02",
+      "kind": "BODY_SUPPORT_ADDITION",
+      "to": "L15",
+      "checks": {
+        "packet_defect_to_body_support": true,
+        "packet_aperture_becomes_supported": true,
+        "quote_omission_remains": true,
+        "known_gap_resolved": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": false,
+      "strict_pair_pass": false
+    },
+    {
+      "expect": "full support becomes packet defect",
+      "from": "L01",
+      "kind": "BODY_SUPPORT_REMOVAL",
+      "to": "L16",
+      "checks": {
+        "body_support_to_packet_defect": true,
+        "packet_support_removed": true,
+        "safe_core_and_explicit_gap": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": false,
+      "strict_pair_pass": false
+    },
+    {
+      "expect": "Q insufficiency resolved; N/P unchanged",
+      "from": "L03",
+      "kind": "QUOTE_WIDENING",
+      "to": "L17",
+      "checks": {
+        "quote_insufficiency_resolved": true,
+        "body_apertures_unchanged": true,
+        "packet_support_and_retained_ids_unchanged": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": true,
+      "strict_pair_pass": true
+    },
+    {
+      "expect": "safe core/gap becomes unsafe rejection",
+      "from": "L02",
+      "kind": "DEPENDENCY_SENSITIVITY",
+      "to": "L04",
+      "checks": {
+        "safe_core_to_unsafe_rejection": true,
+        "support_assessments_unchanged": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": false,
+      "strict_pair_pass": false
+    },
+    {
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "QUERY_INVARIANCE",
+      "to": "L18",
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": false,
+      "strict_pair_pass": false
+    },
+    {
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "HEADING_INVARIANCE",
+      "to": "L19",
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": false,
+      "strict_pair_pass": false
+    },
+    {
+      "expect": "same decision modulo declared ID bijection",
+      "from": "L02",
+      "kind": "BIJECTIVE_RENAMING",
+      "rename": {
+        "b0": "body-y",
+        "q0": "quote-x",
+        "u0": "context-z",
+        "u1": "context-w",
+        "v0": "rho",
+        "v1": "sigma",
+        "v2": "tau"
+      },
+      "to": "L20",
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": false,
+      "strict_pair_pass": false
+    },
+    {
+      "expect": "same decision",
+      "from": "L01",
+      "kind": "WITNESS_ORDER_INVARIANCE",
+      "to": "L21",
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": true,
+      "strict_pair_pass": true
+    },
+    {
+      "expect": "same decision",
+      "from": "L02",
+      "kind": "METADATA_INVARIANCE",
+      "to": "L28",
+      "checks": {
+        "same_decision_modulo_opaque_ids_and_rationale": true
+      },
+      "relation_pass": true,
+      "endpoints_match_contract": false,
+      "strict_pair_pass": false
+    }
+  ],
+  "method": "Compare original expected overlapping fields only; retain v2 diagnostics in separate decisive outputs. Evaluate original unchanged v1 score_pairs/normalized functions on projected persisted outputs; original main and reducer never invoked.",
+  "legacy_pair_source_sha256": "4fdd7f96d317423dd8d6522123fbc16a0f760c9ac39b053a556de8193f9488b6",
+  "observed_v2_safety_violation": "PENDING_POST_RUN_REVIEW"
+}
