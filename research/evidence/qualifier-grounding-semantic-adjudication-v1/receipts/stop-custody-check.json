@@ -1,0 +1,17 @@
+{
+  "schema_version": "semantic-adjudication-stop-custody/v1",
+  "at_utc": "2026-10-01T15:13:57.450325+00:00",
+  "status": "PASS_STOP_RECORD_STRUCTURE_ONLY",
+  "terminal_sha256": "008b9e14b8f69e94d61fd0483f5d8bcb8f9005ea74e99157aefd07ed555b3c0b",
+  "terminal_artifact_hash_checks": 26,
+  "parsed_stop_json_count": 26,
+  "role_not_run_records": 4,
+  "author_materialized_hashes": 7,
+  "planned_relations_not_run": 16,
+  "category_records_not_tested": 28,
+  "predecessor_artifact_hash_checks": 31,
+  "frozen_launch_packets": 6,
+  "frozen_predecessor_identity_hash_checks": 4,
+  "semantic_judgments_performed": 0,
+  "scope": "Checks stored record hashes/types/counts, materialized allowlist, absence of role outputs and preserved failed probe; cannot certify sandbox isolation or semantic truth."
+}

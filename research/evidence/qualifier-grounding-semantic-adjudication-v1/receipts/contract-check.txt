@@ -1,0 +1,2 @@
+  OK      /private/tmp/qg-semantic-adjudication-20261001T145000Z/research/evidence/qualifier-grounding-semantic-adjudication-v1/README.md  (adopted)
+  1 file(s) checked, no findings.

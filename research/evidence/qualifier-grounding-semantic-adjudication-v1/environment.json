@@ -1,0 +1,15 @@
+{
+  "supervisor_python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "cli": "codex-cli 0.154.0",
+  "research_role_model_provider": null,
+  "research_role_model_version": null,
+  "local_repository_start_commit": "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+  "isolated_git_clone": "Yes; predecessor tracked files unchanged",
+  "role_aperture_plain_directory": "Seven exact allowlisted files; no Git; no model launch",
+  "supervisor_context": "Broad existing conversation, workspace contracts and relevant memory; two scoped MindGraph queries treated as separately labelled leads, not evidence; live GitHub and exact bytes used as authority.",
+  "project_model_provider_calls": 0,
+  "supervisor_embedding_retrieval_queries": 2,
+  "backend_note": "Frozen mechanical preparation checker physically used jsonschema 4.25.1. No semantic runner/scorer executed."
+}

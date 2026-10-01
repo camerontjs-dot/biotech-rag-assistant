@@ -1,0 +1,29 @@
+{
+  "engine": "codex-cli 0.154.0",
+  "kind": "supervisor deterministic prelaunch",
+  "model_invocations": 0,
+  "initialization_renders": 3,
+  "sandbox_probes": 4,
+  "observed_generic_initialization_after_overrides": [
+    "permissions instructions",
+    "isolated working directory/shell/date/timezone",
+    "frozen neutral case-author instruction"
+  ],
+  "preflight_render_sha256": [
+    "6841b8a961478602330c21cc359c265be6eee206d63de9970f2f08c4380a677c",
+    "06de509277f9483437a6e902380751db8ba58ed4203e3572c6cdb4bcae407cb1",
+    "8ea7ac14378ca0e750312d72a7101b60328f138db7a06d8f1a7ddf149312b3ff"
+  ],
+  "no_copied_conversation": true,
+  "project_doc_max_bytes": 0,
+  "memories_use": false,
+  "memories_generate": false,
+  "skills_disabled_count": 21,
+  "apps_plugins_web_multi_agent_hooks_disabled": true,
+  "shell_environment_inherit": "none",
+  "outside_read_denial": "FAILED",
+  "full_model_initialization_identity": "NOT_RUN; rendering is not a research launch or complete model-request audit",
+  "private_raw_custody": "Supervisor diagnostic originals frozen privately; no role raw response exists",
+  "configuration_reference": "https://learn.chatgpt.com/docs/config-file/config-reference",
+  "interpretation": "Proposed adapter failed its required isolation preflight. This is not evidence that every possible local or remote adapter is incapable of fresh-context execution."
+}

@@ -1,0 +1,18 @@
+{
+  "status": "NOT_RUN",
+  "seed_assurance": "NOT_TESTED",
+  "relation_assurance": "NOT_TESTED",
+  "category_opportunities": "NOT_TESTED",
+  "required_guard_opportunities": "NOT_TESTED",
+  "shared_semantic_error_review": "NOT_RUN",
+  "author_hypotheses_revealed": false,
+  "author_hypotheses_status": "NOT_AUTHORED",
+  "reconciliation": "NOT_RUN",
+  "open_adjudication": "NOT_ENTERED",
+  "blind_c": "NOT_RUN",
+  "accepted_expectations_state": "NOT_FROZEN",
+  "accepted_expectations_sha256": null,
+  "unresolved_dimensions": "All required dimensions unadjudicated; no unresolved semantic ledger exists.",
+  "unresolved_count": null,
+  "semantic_rubric_disposition": "NOT_EVALUATED"
+}

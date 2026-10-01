@@ -1,0 +1,35 @@
+{
+  "context": {
+    "status": "UNKNOWN",
+    "basis": "Research roles NOT_RUN. Third deterministic initialization render suppressed skills, memory and project instructions; no actual role initialization or raw model output exists."
+  },
+  "implementation": {
+    "status": "NOT_APPLICABLE",
+    "basis": "No semantic assessor, reducer, scorer, or label implementation ran."
+  },
+  "model_tool": {
+    "status": "NOT_APPLICABLE",
+    "basis": "No research model invoked. CLI 0.154.0 tools used by supervisor for deterministic preflight only."
+  },
+  "data": {
+    "status": "NOT_APPLICABLE",
+    "basis": "No synthetic corpus authored. Only byte-identical preparation artifacts were materialized."
+  },
+  "human": {
+    "status": "NOT_APPLICABLE",
+    "basis": "No human semantic judgments occurred."
+  },
+  "training_history": {
+    "status": "UNKNOWN",
+    "basis": "Not tested; no independence claim."
+  },
+  "filesystem_confinement": {
+    "status": "NOT_ESTABLISHED",
+    "basis": "Probes 2, 3 and 4 permitted the outside sentinel read; 4 declared that exact file denied."
+  },
+  "network_confinement": {
+    "status": "UNKNOWN",
+    "basis": "Curl returned DNS failure in two probes; this does not establish enforced denial."
+  },
+  "contamination": "No research role launched; no role contamination asserted. Broad supervisor history/memory was not treated as a clean role."
+}

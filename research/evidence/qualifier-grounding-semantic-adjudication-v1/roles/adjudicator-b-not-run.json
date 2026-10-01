@@ -1,0 +1,24 @@
+{
+  "role": "ADJUDICATOR_B",
+  "status": "NOT_LAUNCHED",
+  "launch_packet_reference": "../qualifier-grounding-semantic-assessor-controls-v1/launches/adjudicator-b.json",
+  "launch_packet_sha256": "644d5e2b0c66aee583cf6cd6427031ff74193c7856337c7fb62c4788536753f2",
+  "allowed_file_hashes": {
+    "rubric.md": "11092f20ec28a1124b208f4eb09d43258c125fe4e57b94692613fa8ad009359d",
+    "schemas/case.schema.json": "602425c440fb4b910841894b97a55589b1f876f456686c5db118f8a763b77c31",
+    "schemas/annotation.schema.json": "da1aeb1af54395551c6bcfaf32b7b22134c9d77ed8c95f877a78e297dba9e9ef",
+    "schemas/launch-receipt.schema.json": "5835b9448ce2657c81e67926e8fa879eaa9e1770007d1cfab5202d20b7dbf820"
+  },
+  "corpus_sha256": null,
+  "actual_exposed_research_artifacts": [],
+  "raw_response_sha256": null,
+  "structured_output_sha256": null,
+  "transcript_sha256": null,
+  "role_context_id": null,
+  "role_model_provider": null,
+  "role_model_version": null,
+  "contamination_status": "NOT_APPLICABLE_NO_ROLE_LAUNCH",
+  "launch_receipt_state": "NOT_RUN; no frozen-schema execution receipt was fabricated",
+  "blocker": "FAILED_ISOLATION_PREFLIGHT",
+  "materialization": "NOT_MATERIALIZED; missing frozen input-only corpus"
+}

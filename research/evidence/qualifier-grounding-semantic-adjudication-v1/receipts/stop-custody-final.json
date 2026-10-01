@@ -1,0 +1,10 @@
+{
+  "schema_version": "semantic-adjudication-stop-custody/v1",
+  "at_utc": "2026-10-01T15:15:49.550482+00:00",
+  "status": "PASS_STOP_RECORD_STRUCTURE_ONLY",
+  "terminal_sha256": "626020f0a9454b88b3dd6c36701ccef3bc611c7c6b01462a41b67d49ca2fc199",
+  "terminal_artifact_hash_checks": 29,
+  "frozen_predecessor_tracked_changes": 0,
+  "scope": "Final pre-commit hash/custody binding only; no semantic or context-isolation pass",
+  "pre_freeze_profile_correction": "Initial terminal draft and its successful hash check preserved in receipts; README T0 profile added before freeze, final binding checked anew."
+}

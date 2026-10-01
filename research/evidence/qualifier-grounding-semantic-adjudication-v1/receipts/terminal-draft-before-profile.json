@@ -1,0 +1,133 @@
+{
+  "schema_version": "semantic-adjudication-terminal/v1",
+  "experiment_id": "qualifier-grounding-semantic-adjudication-v1",
+  "terminal_at_utc": "2026-10-01T15:12:58.400969+00:00",
+  "terminal_state": "APPARATUS_INVALID",
+  "classification_evaluator": "agent_llm",
+  "classification_basis": "Frozen adjudication.md APPARATUS_INVALID: incomplete required adjudication machinery; proposed role adapter failed prelaunch file-isolation probes.",
+  "branch": "research/qualifier-grounding-semantic-adjudication-v1",
+  "experiment_state": "aborted",
+  "predecessor": {
+    "pr": 30,
+    "publication_commit": "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+    "publication_tree": "2e20396777f4bb5d074b4ce8aeb5d89f0685750e",
+    "frozen_package_commit": "b817ef0b3c964a8f9e89170107d7b69fa90dd7a3",
+    "frozen_package_tree": "c109b41dd1b4708ca14dd474616f649583e1a22a",
+    "rubric_commit": "e68ea36403c4c17c5b111e88ae1e5ca9031c1ca5",
+    "rubric_sha256": "11092f20ec28a1124b208f4eb09d43258c125fe4e57b94692613fa8ad009359d",
+    "package_manifest_sha256": "9b20079779895255ee27fe9dda2899f0e0bda4d55792925a4bf9db322be8e4c9",
+    "terminal_state": "TERMINAL_PREPARATION_READY",
+    "preservation": "All predecessor tracked bytes unchanged; new execution evidence in separate directory."
+  },
+  "blocking_observation": {
+    "probe": "runtime/probe-4.json",
+    "explicit_file_deny": true,
+    "stdout": "READ_DENIAL_SENTINEL\ninside=0 outside=0\n",
+    "model_calls": 0
+  },
+  "direct_observations": [
+    "GitHub PR #30 closed without merge at the exact expected publication head; issue #31 open; both remote branch tips match before push.",
+    "Frozen preparation checker physically passed 31 artifact hashes, six launch packets and four predecessor identity hashes.",
+    "Only seven exact allowlisted files materialized in a plain author directory. No role model received the files.",
+    "Deterministic prompt renders suppressed extra skill metadata after explicit overrides; rendering did not establish a complete model-request audit.",
+    "Three correctly rooted sandbox probes permitted the outside sentinel read; final probe explicitly denied the exact sentinel file.",
+    "No case author, A, B, C, semantic assessor, reducer, project generation or G1-G7 replay launched."
+  ],
+  "inferences": [
+    "The proposed adapter did not establish the required file aperture, so this execution attempt cannot validly reach adjudication.",
+    "This is not a finding about semantic rubric accuracy or every possible fresh-context adapter."
+  ],
+  "corpus": {
+    "state": "NOT_AUTHORED",
+    "planned_packet_count": 44,
+    "actual_packet_count": 0,
+    "sha256": null,
+    "planned_anchor_count": 28,
+    "planned_invariance_count": 8,
+    "planned_mutation_count": 8
+  },
+  "roles": {
+    "case_author": "NOT_RUN",
+    "adjudicator_a": "NOT_RUN",
+    "adjudicator_b": "NOT_RUN",
+    "blind_c": "NOT_RUN"
+  },
+  "raw_agreement": "NOT_RUN; all dimensions/categories/classes NOT_TESTED, no scores asserted",
+  "complete_disagreement_count": null,
+  "reconciliation": "NOT_RUN",
+  "unresolved_dimensions": "All required semantic dimensions unadjudicated; no fabricated disagreement/resolution ledger",
+  "unresolved_count": null,
+  "relations": {
+    "planned": 16,
+    "evaluated": 0,
+    "all_results": "NOT_RUN",
+    "reference": "relations-NOT_RUN.json"
+  },
+  "apparatus_assurance": "NOT_RUN",
+  "accepted_expectations": {
+    "state": "NOT_FROZEN",
+    "sha256": null
+  },
+  "contamination_status": "No research role was launched; no role contamination finding or CLEAN execution claim. Supervisor retained broad context.",
+  "independence_reference": "independence.json",
+  "call_counts": {
+    "case_author_launches": 0,
+    "adjudicator_launches": 0,
+    "adjudicated_cases": 0,
+    "semantic_assessor_calls": 0,
+    "reducer_calls": 0,
+    "project_generation_calls": 0
+  },
+  "call_count_basis": "Direct supervisor tool trace; CLI debug renders and sandbox probes are deterministic prelaunch diagnostics, not research role/model launches.",
+  "failures_deviations_reference": "deviations.json",
+  "source_checks": {
+    "candidate_source": "No candidate or executable source added/changed; source lint not applicable",
+    "frozen_package": "PASS_PREPARATION_STRUCTURE_ONLY",
+    "new_stop_record_checks": "PENDING_APPEND_ONLY_RECEIPT",
+    "hosted_ci": "PENDING_PUBLICATION; append-only observation will classify actual hosted jobs separately"
+  },
+  "protected_boundary": {
+    "wave_b": "LOCKED",
+    "semantic_assessor_implementation_or_execution": false,
+    "qualified_reducer_calls": 0,
+    "protected_payload_access": false,
+    "cal_integration": false,
+    "adr_018_change": false,
+    "promotion_merge_release": false
+  },
+  "github": {
+    "issue": 31,
+    "pr": "RECORDED_AFTER_DRAFT_CREATION",
+    "base": "research/qualifier-grounding-semantic-assessor-controls-v1",
+    "predecessor_pr": 30
+  },
+  "smallest_next_evidence_producing_step": "Separately identified adapter preflight that establishes auditable clean initialization and leaf-file isolation with an outside-sentinel denial; then a new execution attempt of the unchanged sealed sequence. Stop before assessor implementation.",
+  "artifacts": {
+    "EXPERIMENT.json": "cd4792f757e710437a0c8099d0cbdb2ed35876df86bbd4fad5601098613ad40d",
+    "README.md": "7f322f56aedf9407975e4b31e8dfb8f4c960bfbe2f63e63dfd85b5678f3dc556",
+    "START.json": "7cdb4d3361120b66da0437e0c9e557d6b2f4d75bcd597b723b097b90f3a345b4",
+    "assurance-NOT_RUN.json": "fb45021bea1f2aea8c2586f4a61ac42d5469275b24c6edd97d23d0df5b1e4546",
+    "deviations.json": "0a62edc1c6cd470d1d35ea031bbce4570815a70203b13f5d2a855292e85d92a9",
+    "environment.json": "ee2dd1e49e93a9d88093c0490b9f7072996c8350a3cb3bcd6a86bc18ce44e2c2",
+    "independence.json": "ea254f5f0839fa96d741b101420ae6317c9ceb4a6492e3001848796cb5b740d2",
+    "raw-agreement-NOT_RUN.json": "88b4a477c21514879204fe84702506cd28302b533568ab37c40ea4b600a04ec0",
+    "receipts/execution-start.json": "b515f576a84c51f48d97dc1515f570345c178064212fe3db5c8ff9d785b5602e",
+    "receipts/issue31-start.json": "706c72e2a987e35f7f9aa1c6040f45e409c01be6d10c4bdc3dbe652c2e3d6e34",
+    "receipts/pr30.json": "04235aef7c7b0aacf8dea0c4bdaba1997d59e5b2200698af22961e503d242b2a",
+    "receipts/predecessor-check.json": "00434704867b7928f824955bcc07cf23081148d87ba0fef9daa4ed197eed7084",
+    "receipts/predecessor-final-check.json": "c5d761ad6568240004f795238e4ddd0d1327f424eae194500da656b3a4ba9946",
+    "receipts/predecessor-ref.json": "b1652c49710a31a9c652cff6669813184ae5c09fd5b1751c07b88c49f3deecc1",
+    "relations-NOT_RUN.json": "f5d51b2c71c122c51681fb9fc2f642919a527ca8fe59aa0ad930b14df95fa943",
+    "roles/adjudicator-a-not-run.json": "53b930fdc3639ddb4b17637970c1501ba54b5d7d03729e4b2b540fa582a7daa4",
+    "roles/adjudicator-b-not-run.json": "062572bce296c541e4e078036d34029db80be09d19f5e4cdf4b560b69a31e480",
+    "roles/adjudicator-c-not-run.json": "cc5119a7e85531cef5cc3ea55e951c77f7ab00e48ecfa7800b3f13456cc43369",
+    "roles/case-author-not-run.json": "57c6d56f7c2683b91eb7955ef98af319b15dcccdeb50c8da4bd9be4372e31a56",
+    "runtime/case-author-materialization.json": "170581a6038dab019cdf0e3768d847e4450f2f87d81a15cc34a4f0c41f7ff0e5",
+    "runtime/preflight-summary.json": "aac01aad15be506f45d067c51fca0952fdb8ada4d12b47f40169434b08b71c97",
+    "runtime/probe-1.json": "4e9c7ad182444075fecfa64d0aecdf23c308f99b4be7f865ceb4f24eea56925f",
+    "runtime/probe-2.json": "ee1fce8b5a6564d0e12ecce32d2c161a43744b5e422070511f19e5e844ba311e",
+    "runtime/probe-3.json": "ef4513e6db0da0df8f67f74895072cd05a2f719a80242f88492348ae7bdb6d42",
+    "runtime/probe-4.json": "c1f524fc8117203dcc0717fb52b1fd10f1d30fd70713a6e57edb447e1bcf47af",
+    "runtime/probe-template.json": "5faa433f9b893f4e3a55471ec247edeca91a006f38a3d1578ba8637a03578375"
+  }
+}

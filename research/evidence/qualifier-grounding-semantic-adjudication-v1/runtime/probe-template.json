@@ -1,0 +1,22 @@
+{
+  "purpose": "Reconstruct the decisive prelaunch sentinel failure only; does not launch a role. Substitute an existing isolated packet root and a harmless outside sentinel path.",
+  "entrypoint": "codex sandbox",
+  "cli_version": "0.154.0",
+  "args": [
+    "-C",
+    "<ISOLATED_PACKET_ROOT>",
+    "-P",
+    "sealed",
+    "-c",
+    "permissions.sealed.filesystem={\":minimal\"=\"read\",\":workspace_roots\"=\"write\",\"<OUTSIDE_SENTINEL_ABSOLUTE_PATH>\"=\"deny\"}",
+    "-c",
+    "permissions.sealed.network.enabled=false",
+    "/bin/sh",
+    "-c",
+    "/bin/cat rubric.md >/dev/null; inside=$?; /bin/cat <OUTSIDE_SENTINEL_ABSOLUTE_PATH>; outside=$?; printf \"\\ninside=%s outside=%s\\n\" \"$inside\" \"$outside\""
+  ],
+  "additional_configuration": "Per-skill disabled overrides were supplied in the original command; suppressed catalogue in render 3. The sandbox probe did not invoke a model.",
+  "expected": "inside=0, outside nonzero; sentinel bytes absent",
+  "observed": "READ_DENIAL_SENTINEL; inside=0 outside=0",
+  "limitations": "Prompt renders used debug command; executable probe used sandbox command. No real role execution was used to extrapolate either observation."
+}

@@ -1,0 +1,168 @@
+{
+  "status": "NOT_RUN",
+  "definitions_state": "NOT_AUTHORED; frozen design recipes exist, endpoint relations do not",
+  "planned_relation_count": 16,
+  "evaluated_count": 0,
+  "results": [
+    {
+      "slot": "invariant_1",
+      "family": "entity_rename",
+      "mode": "INVARIANT",
+      "anchor_category": "full_body_support",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "invariant_2",
+      "family": "entity_rename",
+      "mode": "INVARIANT",
+      "anchor_category": "safe_smaller_core",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "invariant_3",
+      "family": "sentence_or_witness_order",
+      "mode": "INVARIANT",
+      "anchor_category": "agreeing_witnesses",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "invariant_4",
+      "family": "sentence_or_witness_order",
+      "mode": "INVARIANT",
+      "anchor_category": "conflicting_witnesses",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "invariant_5",
+      "family": "harmless_paraphrase",
+      "mode": "INVARIANT",
+      "anchor_category": "obligation_vs_action",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "invariant_6",
+      "family": "harmless_paraphrase",
+      "mode": "INVARIANT",
+      "anchor_category": "distributed_support",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "invariant_7",
+      "family": "exact_duplicate",
+      "mode": "INVARIANT",
+      "anchor_category": "unsupported_temporal",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "invariant_8",
+      "family": "exact_duplicate",
+      "mode": "INVARIANT",
+      "anchor_category": "genuine_body_ambiguity",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_1",
+      "family": "add_material_qualifier",
+      "mode": "SENSITIVE",
+      "anchor_category": "full_body_support",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_2",
+      "family": "remove_material_qualifier",
+      "mode": "SENSITIVE",
+      "anchor_category": "unsupported_temporal",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_3",
+      "family": "negation",
+      "mode": "SENSITIVE",
+      "anchor_category": "full_body_support",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_4",
+      "family": "actor_swap",
+      "mode": "SENSITIVE",
+      "anchor_category": "full_body_support",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_5",
+      "family": "timing",
+      "mode": "SENSITIVE",
+      "anchor_category": "full_body_support",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_6",
+      "family": "numeric",
+      "mode": "SENSITIVE",
+      "anchor_category": "full_body_support",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_7",
+      "family": "condition_removal",
+      "mode": "SENSITIVE",
+      "anchor_category": "antecedent_loss",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    },
+    {
+      "slot": "mutation_8",
+      "family": "exception_removal",
+      "mode": "SENSITIVE",
+      "anchor_category": "exception_loss",
+      "left_case_id": null,
+      "right_case_id": null,
+      "result": "NOT_RUN",
+      "exact_endpoint_status": "NOT_ADJUDICATED"
+    }
+  ]
+}

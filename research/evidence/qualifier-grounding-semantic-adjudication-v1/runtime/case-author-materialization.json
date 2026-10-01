@@ -1,0 +1,27 @@
+{
+  "stage": "CASE_AUTHOR",
+  "status": "MATERIALIZED_NOT_LAUNCHED",
+  "allowed_artifacts": {
+    "rubric.md": "11092f20ec28a1124b208f4eb09d43258c125fe4e57b94692613fa8ad009359d",
+    "case-construction.md": "9d8f11e91f8edf4a065e0fac803acb074ae4ed80d070c84ee2f460f756d529f6",
+    "case-design.json": "b19a716ee490e4aa3d2509b9bc7e7eae3186390a267f32b8dbd063b62539f1dd",
+    "schemas/case.schema.json": "602425c440fb4b910841894b97a55589b1f876f456686c5db118f8a763b77c31",
+    "schemas/author-design.schema.json": "a33b9c6a3c435da233a78a0acced462cb27d2071bdeb436f2122c877ca1bb689",
+    "schemas/relations.schema.json": "2b189e46f6d684e88c00c090e6cb0c690712ad177d4f4254825f10829f1390e4",
+    "schemas/launch-receipt.schema.json": "5835b9448ce2657c81e67926e8fa879eaa9e1770007d1cfab5202d20b7dbf820"
+  },
+  "frozen_launch_sha256": "2e6fcd4c8501928dc3baa003f9b9ab788950d952f0585d5e14b3a4fb867af4ac",
+  "future_slots": [],
+  "neutral_instructions": "After separate authorization, author the 44 synthetic packets specified by the frozen construction protocol. Place packets alone in cases.jsonl; keep design hypotheses and endpoint relations separate and sealed. Supply no accepted labels or final decisions. Run only mechanical validation. Record actual exposure and custody, then stop; do not launch adjudicators.",
+  "initialization_preflight": {
+    "3_sha256": "8ea7ac14378ca0e750312d72a7101b60328f138db7a06d8f1a7ddf149312b3ff",
+    "observed": "No skills catalogue, memory or project instructions; minimal filesystem and isolated writable root; no model invocation."
+  },
+  "identity": {
+    "cli": "codex-cli 0.154.0",
+    "model": "NOT_INVOKED",
+    "provider": "NOT_INVOKED"
+  },
+  "runtime_probes": "PENDING",
+  "contamination_status": "NOT_LAUNCHED"
+}

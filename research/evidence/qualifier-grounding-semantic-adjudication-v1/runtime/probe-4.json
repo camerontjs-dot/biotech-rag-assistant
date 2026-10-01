@@ -1,0 +1,20 @@
+{
+  "at_utc": "2026-10-01T15:02:15.268481+00:00",
+  "exit_code": 0,
+  "stdout": "READ_DENIAL_SENTINEL\ninside=0 outside=0\n",
+  "stderr": "",
+  "model_calls": 0,
+  "inside_expected": 0,
+  "outside_expected": "nonzero denial",
+  "explicit_outside_deny": true,
+  "schema_version": "sealed-runtime-probe/v1",
+  "probe_id": "probe_4",
+  "kind": "SUPERVISOR_NO_MODEL_PRELAUNCH",
+  "role_launches": 0,
+  "profile": "minimal read plus explicit outside-file deny",
+  "expected_outside_read": "DENIED",
+  "observed_outside_read": "SUCCEEDED",
+  "aperture_result": "FAILED_OUTSIDE_READ_DENIAL",
+  "network_result": "NOT_TESTED",
+  "evidence_scope": "No model request or role context was initialized. Read only the public rubric and a supervisor-created sentinel."
+}

@@ -1,0 +1,32 @@
+{
+  "semantic_deviations": [],
+  "preflight_failures": [
+    {
+      "kind": "BLOCKING",
+      "finding": "Outside sentinel readable despite explicitly denied file in proposed adapter; leaf aperture could not be certified."
+    },
+    {
+      "kind": "INVALID_PROBE",
+      "finding": "Probe 1 put working-root/config options on the global command instead of the sandbox subcommand; missing local rubric preserved; corrected probes also failed outside denial."
+    },
+    {
+      "kind": "SUPERVISOR_SETUP",
+      "finding": "Initial prompt rendering exposed automatic generic skill metadata; subsequent per-skill overrides suppressed the catalogue before any role launch."
+    },
+    {
+      "kind": "SUPERVISOR_SETUP",
+      "finding": "An ignore-user-config flag supplied to the feature-list command was unsupported; corrected help/feature reads were deterministic."
+    },
+    {
+      "kind": "SUPERVISOR_SETUP",
+      "finding": "A sandbox help invocation used a nonexistent macos subcommand and failed; documented direct command form used thereafter."
+    },
+    {
+      "kind": "ENVIRONMENT",
+      "finding": "Sandbox denied local CLI diagnostic writes and GitHub networking; narrowly authorized elevated supervisor diagnostics/read/publish operations used. No role sandbox bypass or model invocation occurred."
+    }
+  ],
+  "scope_deviation": "Stopped before case author; A/B/comparison/reconciliation/assurance/expectation freeze NOT_RUN under preregistered apparatus stop.",
+  "protocol_or_predecessor_changes": false,
+  "raw_privacy": "Original diagnostic initialization/settings contain local paths and remain frozen in private custody; public records report exact safe outputs, relative reproduction templates, and hashes. No research-role transcript exists."
+}

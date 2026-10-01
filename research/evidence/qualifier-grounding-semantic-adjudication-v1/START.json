@@ -1,0 +1,37 @@
+{
+  "schema_version": "semantic-adjudication-experiment/v1",
+  "experiment_id": "qualifier-grounding-semantic-adjudication-v1",
+  "state": "active",
+  "authority_issue": 31,
+  "predecessor_pr": 30,
+  "publication_commit": "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+  "publication_tree": "2e20396777f4bb5d074b4ce8aeb5d89f0685750e",
+  "package_commit": "b817ef0b3c964a8f9e89170107d7b69fa90dd7a3",
+  "package_tree": "c109b41dd1b4708ca14dd474616f649583e1a22a",
+  "rubric_commit": "e68ea36403c4c17c5b111e88ae1e5ca9031c1ca5",
+  "rubric_sha256": "11092f20ec28a1124b208f4eb09d43258c125fe4e57b94692613fa8ad009359d",
+  "manifest_sha256": "9b20079779895255ee27fe9dda2899f0e0bda4d55792925a4bf9db322be8e4c9",
+  "primary_factor": "Frozen rubric applied by isolated role contexts to a sealed synthetic corpus",
+  "question": "Can the frozen rubric/control design produce a custody-valid sufficiently adjudicated expectation set?",
+  "unit_of_analysis": "case and semantic dimension; endpoint relations separately",
+  "stages": {
+    "runtime_preflight": "ACTIVE",
+    "case_author": "NOT_RUN",
+    "adjudicator_a": "NOT_RUN",
+    "adjudicator_b": "NOT_RUN",
+    "comparison": "NOT_RUN",
+    "reconciliation": "NOT_RUN",
+    "assurance": "NOT_RUN",
+    "accepted_expectation_freeze": "NOT_RUN"
+  },
+  "counts": {
+    "case_author_launches": 0,
+    "adjudicator_launches": 0,
+    "adjudicated_cases": 0,
+    "semantic_assessor_calls": 0,
+    "reducer_calls": 0,
+    "project_generation_calls": 0
+  },
+  "wave_b": "LOCKED",
+  "protected_actions_executed": []
+}

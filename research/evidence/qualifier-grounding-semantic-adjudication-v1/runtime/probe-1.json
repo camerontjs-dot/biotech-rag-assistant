@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-10-01T14:56:38.871825+00:00",
+  "exit_code": 0,
+  "stdout": "inside=1 outside=0 network=6\n",
+  "stderr": "cat: rubric.md: No such file or directory\n",
+  "model_calls": 0,
+  "schema_version": "sealed-runtime-probe/v1",
+  "probe_id": "probe_1",
+  "kind": "SUPERVISOR_NO_MODEL_PRELAUNCH",
+  "role_launches": 0,
+  "profile": "global-options probe (invalid working root)",
+  "expected_outside_read": "DENIED",
+  "observed_outside_read": "SUCCEEDED",
+  "aperture_result": "PROBE_INVALID_WORKING_ROOT",
+  "network_result": "UNKNOWN; curl DNS failure is not proof of network isolation",
+  "evidence_scope": "No model request or role context was initialized. Read only the public rubric and a supervisor-created sentinel."
+}

@@ -1,0 +1,363 @@
+{
+  "status": "NOT_RUN",
+  "reason": "A and B were not launched; no persisted endpoint annotations exist.",
+  "dimensions": {
+    "exact_case": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "obligation_boundary": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "materiality": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "atomic_body_relation": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "coverage": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "decomposition_applicability": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "core_independently_supported": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "bindings_preserved": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "required_context_retained": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "removal_independent": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "no_missing_presupposition": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "gap_explicit": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    }
+  },
+  "categories": [
+    {
+      "category": "full_body_support",
+      "planned_case_count": 7,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "unsupported_temporal",
+      "planned_case_count": 3,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "unsupported_population",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "unsupported_quantity",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "actor_misbinding",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "object_misbinding",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "event_misbinding",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "polarity_reversal",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "obligation_vs_action",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "antecedent_loss",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "exception_loss",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "safe_smaller_core",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "unsafe_decomposition",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "body_contradiction",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "agreeing_witnesses",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "conflicting_witnesses",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "witness_silence",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "genuine_body_ambiguity",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "lexical_false_friend",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "irrelevant_body",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "distributed_support",
+      "planned_case_count": 2,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "query_non_authority",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "heading_non_authority",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "metadata_non_authority",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "unsupported_proposed_core",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "incomplete_gap",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "unknown_projection_guard",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    },
+    {
+      "category": "unknown_claim_coverage",
+      "planned_case_count": 1,
+      "observed_case_count": 0,
+      "agreement": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "raw_disagreement_count": null
+    }
+  ],
+  "relation_classes": {
+    "ENTAILED": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "CONTRADICTED": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "SILENT": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    },
+    "AMBIGUOUS": {
+      "status": "NOT_TESTED",
+      "numerator": null,
+      "denominator": 0,
+      "rate": null
+    }
+  },
+  "complete_disagreement_count": null,
+  "disagreement_ledger_status": "NOT_RUN",
+  "unmatched_obligations": "NOT_TESTED",
+  "normalization_performed": false,
+  "raw_metrics_recalculated": false
+}
