@@ -1,0 +1,40 @@
+{
+  "base_config_snapshot_custody": "private supervisor snapshot; unchanged bytes checked before and after probes",
+  "base_config_snapshot_receipt_sha256": "2a91e5d38e513531f9dcff0d26132e093615c985d0a5ad9d61139c8a9ee40476",
+  "environment": {
+    "inherit": "none",
+    "set": {
+      "LANG": "C",
+      "PATH": "/usr/bin:/bin:/usr/sbin:/sbin"
+    },
+    "shell_login": false,
+    "stdin": "no supplied input"
+  },
+  "filesystem": {
+    ":minimal": "read",
+    ":root": "deny",
+    ":slash_tmp": "deny",
+    ":tmpdir": "deny",
+    "fixture/role": "write",
+    "fixture/sibling/n7q2.dat": "deny"
+  },
+  "fixture_aperture": "two random readable sentinels plus a symlink to denied sibling; no Git/project/semantic files",
+  "legacy_base_config": {
+    "effective_enforcement": "UNDER_TEST; never assumed",
+    "explicit_named_profile_selected": true,
+    "present": true,
+    "sandbox_mode": "danger-full-access"
+  },
+  "managed_configuration": "not included by the explicit sandbox command; OS restrictions still apply",
+  "model_context": "NOT_INITIALIZED",
+  "network": {
+    "enabled": false,
+    "tested": false
+  },
+  "official_reference": "https://learn.chatgpt.com/docs/permissions",
+  "profile_name": "sealed_preflight_v1",
+  "runtime_base_config_sha256": "preserved in private custody; public receipt hash above",
+  "sandbox_command": "codex sandbox -C <fixture/role> -P sealed_preflight_v1 -c <inline-exact-profile> -- <deterministic-command>",
+  "source_of_policy": "explicit named profile from inline TOML; inherited legacy configuration recorded as material",
+  "working_root": "fixture/role"
+}

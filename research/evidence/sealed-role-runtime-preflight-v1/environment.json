@@ -1,0 +1,13 @@
+{
+  "base_config_private_receipt_sha256": "2a91e5d38e513531f9dcff0d26132e093615c985d0a5ad9d61139c8a9ee40476",
+  "binary_and_parent_environment_private_receipt_sha256": "d2d75253a3ace109e0fbe0698b2944ea6832e8d3f62cb350bf17c11341de69a2",
+  "binary_sha256": "exact installed binary digest preserved privately; binding is checked before execution",
+  "cli": "codex-cli",
+  "model_calls": 0,
+  "operating_system": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0\nBuildVersion:\t\t26A428\n",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "pre_freeze_runtime_probes": 0,
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "tool_surface": "deterministic Codex sandbox command; /bin/sh, /bin/cat, /usr/bin/env; model tools not initialized",
+  "version": "0.154.0"
+}

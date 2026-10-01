@@ -1,0 +1,31 @@
+{
+  "at_utc": "2026-10-01T21:23:21.277479+00:00",
+  "checks": [
+    {
+      "check": "construction_tests",
+      "exit_code": 0,
+      "output": "test_backend_absence_is_not_a_pass (test_adapter.ConstructionChecks.test_backend_absence_is_not_a_pass) ... ok\ntest_embedded_sentinel_is_not_denial (test_adapter.ConstructionChecks.test_embedded_sentinel_is_not_denial) ... ok\ntest_missing_target_is_not_denial (test_adapter.ConstructionChecks.test_missing_target_is_not_denial) ... ok\ntest_refusing_valid_allowed_read_is_falsification (test_adapter.ConstructionChecks.test_refusing_valid_allowed_read_is_falsification) ... ok\ntest_successful_denied_read_is_falsification (test_adapter.ConstructionChecks.test_successful_denied_read_is_falsification) ... ok\ntest_wrong_positive_bytes_are_invalid (test_adapter.ConstructionChecks.test_wrong_positive_bytes_are_invalid) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.000s\n\nOK\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "813f9c4cf0b1ad08a06365d3efa93ef7c530a90b20faea95a30f9885457d9d75",
+      "is_runtime_probe": false
+    },
+    {
+      "check": "source_lint",
+      "exit_code": 0,
+      "output": "All checks passed!\n",
+      "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "is_runtime_probe": false
+    },
+    {
+      "check": "contract_profile",
+      "exit_code": 0,
+      "output": "  OK      research/evidence/sealed-role-runtime-preflight-v1/README.md  (adopted)\n  1 file(s) checked, no findings.\n",
+      "stdout_sha256": "b8f5ca7bdbfcc61f9ab2905a82912ca717bb839b49fd16030fce2f6f47a9e152",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "is_runtime_probe": false
+    }
+  ],
+  "no_decisive_runtime_probe": true,
+  "model_calls": 0
+}

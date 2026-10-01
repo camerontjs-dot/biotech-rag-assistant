@@ -1,0 +1,52 @@
+{
+  "acceptance": "See exact frozen PROTOCOL.json; all future role launches remain separately authorized.",
+  "adapter": "adapter.py",
+  "branch": "research/sealed-role-runtime-preflight-v1",
+  "candidate_freeze_receipt": "Exact freeze commit/tree and clean-checkout observation recorded in private candidate-freeze.json before execution; appended publicly afterward without rewriting this manifest.",
+  "candidate_id": "codex-0154-native-named-profile-v1",
+  "configuration_sha256": "2c4b69f382c88a7c4218b123a2befdeb42f41c1fe9f874395cb72b4472ad6a96",
+  "created_at_utc": "2026-10-01T21:24:07.703711+00:00",
+  "decisive_probe_calls_before_freeze": 0,
+  "exact_context_exposed_to_supervisor": "User tasks, MainFrame contracts/skills and memory leads, separated MindGraph nominations, GitHub/repository predecessor authority, runtime help and official permissions documentation; no protected semantic payloads. No role context is created.",
+  "exact_policy_sha256": "178a9b33f6e3d6be5d4c77ecbb5f06b9b457e384081c08a3b9998c7d746cad40",
+  "excluded": [
+    "real model-request initialization",
+    "semantic independence",
+    "model-training independence",
+    "network isolation",
+    "OS-wide sandbox security",
+    "production suitability",
+    "research roles and project engines"
+  ],
+  "fixture_manifest_sha256": "c6eb9e0804f286d3b097e015db4a6adcf26641d84bf23fe10b739be913bfcc07",
+  "included": [
+    "runtime adapter and exact policy",
+    "random file-control fixture",
+    "preregistered deterministic probes",
+    "observable child-root/environment evidence"
+  ],
+  "invariance_control_id": "codex-0154-native-named-profile-v1-name-invariance",
+  "invariance_policy_sha256": "20cae6c0144b91bab294c851bae0d024f10695b345ff6fe214a4017e6218a501",
+  "model_calls": 0,
+  "mutation_control_id": "codex-0154-native-named-profile-v1-mutation-control",
+  "mutation_policy_sha256": "beba14eaaaef228d02ae9e71e2bf0445bdce9fc4bee61110394fcb3310ea0ac4",
+  "predecessor_commit": "8f09e9529fdcfdafe09513e990f8809c7bb4cb25",
+  "predecessor_tree": "5ca7d81f228380c06b7a485f91e3d4b7264ba4d7",
+  "protocol_sha256": "0374cf42b9b245b05d7e1b5105f19071a0ded61ab2ac7247223390d72d1c320c",
+  "research_role_calls": 0,
+  "role_aperture": "fresh fixture/role only as working root; two random readable files and a symlink; exact denied sibling rule",
+  "runtime": {
+    "exact_binary_identity": "private binding includes exact SHA-256, rechecked physically before probes",
+    "mechanism": "installed macOS Codex sandbox command with explicit -P named profile; Seatbelt runtime boundary under test",
+    "name": "codex-cli",
+    "private_binding_sha256": "8a0ce936695f27c9f44b547f72a5b8b97fae22a83800717248b42698a20a0456",
+    "version": "0.154.0"
+  },
+  "schema_version": "sealed-role-runtime-candidate/v1",
+  "source_sha256": {
+    "adapter.py": "13c0de5977dff8577b2eb8bbe95bf3b8cbbb96d49a53ddbcacd9d835dd472019",
+    "run_probes.py": "4952e1a9fb5fb8525499686c87c61948f861afd137de4ae796841acfd867729b",
+    "test_adapter.py": "80fc7f11841e94397bc9fc4b2ca499f89ad6e077e77e29f327ee85b71d5e5523"
+  },
+  "state": "FROZEN_BEFORE_DECISIVE_PROBES"
+}

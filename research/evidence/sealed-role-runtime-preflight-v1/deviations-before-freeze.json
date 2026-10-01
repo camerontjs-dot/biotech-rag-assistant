@@ -1,0 +1,32 @@
+{
+  "lifecycle_navigation": "invalid/stale index entries bypassed with direct source authority; no unrelated repair",
+  "no_material_candidate_changes_between_decisive_probes": true,
+  "runtime_candidate_repairs_after_freeze": 0,
+  "setup_only": [
+    {
+      "kind": "session_router_usage",
+      "observation": "read-batch plus receipt-check rejected; corrected to separate invocations; no runtime tested"
+    },
+    {
+      "kind": "network_environment",
+      "observation": "initial GitHub reads could not connect in outer sandbox; authorized live reads succeeded with escalation"
+    },
+    {
+      "kind": "approval_review_timeout",
+      "observation": "first branch fetch automatic review timed out; one authorized retry succeeded; no unsafe rejection inferred"
+    },
+    {
+      "kind": "cli_discovery",
+      "observation": "sandbox macos --help tried nested sandbox execution and failed sandbox_apply Operation not permitted; not a filesystem test, no fixtures supplied; corrected using actual codex sandbox --help"
+    },
+    {
+      "kind": "lint_tool_setup",
+      "observation": "uvx cache write unavailable in outer sandbox; used existing installed Ruff directly with no cache"
+    },
+    {
+      "kind": "source_lint",
+      "observation": "two pre-freeze style findings repaired before candidate freeze"
+    }
+  ],
+  "unrelated_workspace_state": "dirty MainFrame and project workbench preserved; standalone checkout starts at exact prepared GitHub head"
+}

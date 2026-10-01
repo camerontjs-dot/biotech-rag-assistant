@@ -1,0 +1,35 @@
+{
+  "allowed": {
+    "path": "role/k4a9.dat",
+    "sha256": "aa2d6e24dd7584f5d0cea82a2bc4ca7fa624b4411b195eef3eac25af2716a3d9",
+    "size": 65,
+    "mode": "0444",
+    "expected": "READ_SUCCEEDS"
+  },
+  "denied": {
+    "path": "sibling/n7q2.dat",
+    "sha256": "ade99ce766cf90c6147f66ed6b56c515f6cdb4ed399f778befc9973d1e05cefd",
+    "size": 65,
+    "mode": "0444",
+    "expected": "READ_DENIED"
+  },
+  "allowed_renamed": {
+    "path": "role/u8w1.dat",
+    "sha256": "e9658f4dfa336bbe644e5d25d20cb9a65df7ba45f0a5287a64608b270e75daf5",
+    "size": 65,
+    "mode": "0444",
+    "expected": "READ_SUCCEEDS"
+  },
+  "denied_renamed": {
+    "path": "sibling/t3c6.dat",
+    "sha256": "0dd93a2d006ee007662cb43d58f602f878867924d7f9538422d144ded0fcca8a",
+    "size": 65,
+    "mode": "0444",
+    "expected": "READ_DENIED"
+  },
+  "symlink": {
+    "path": "role/v5r0.link",
+    "target": "sibling/n7q2.dat",
+    "expected": "READ_DENIED"
+  }
+}
