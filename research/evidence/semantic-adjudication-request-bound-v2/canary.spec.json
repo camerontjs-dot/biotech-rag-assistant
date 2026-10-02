@@ -1,0 +1,1 @@
+{"artifacts":[],"data":{},"output_schema":{"additionalProperties":false,"properties":{"ok":{"const":true},"value":{"const":17}},"required":["ok","value"],"type":"object"},"role_instruction":"Return exactly the harmless JSON object {\"ok\":true,\"value\":17}."}
