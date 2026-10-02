@@ -1,0 +1,13 @@
+test_disconnection_is_preserved_and_never_retried (test_semantic_request_once.Controls.test_disconnection_is_preserved_and_never_retried) ... ok
+test_drift_blocks_generation (test_semantic_request_once.Controls.test_drift_blocks_generation) ... ok
+test_exact_bytes_and_raw_capture (test_semantic_request_once.Controls.test_exact_bytes_and_raw_capture) ... ok
+test_external_schema_and_frozen_file_drift_fail_closed (test_semantic_request_once.Controls.test_external_schema_and_frozen_file_drift_fail_closed) ... ok
+test_injected_handles_and_artifact_drift_are_rejected (test_semantic_request_once.Controls.test_injected_handles_and_artifact_drift_are_rejected) ... ok
+test_interrupted_output_directory_cannot_be_reused (test_semantic_request_once.Controls.test_interrupted_output_directory_cannot_be_reused) ... ok
+test_malformed_or_contradictory_output_remains_raw (test_semantic_request_once.Controls.test_malformed_or_contradictory_output_remains_raw) ... ok
+test_mechanical_anchor_transform_never_guesses (test_semantic_request_once.Controls.test_mechanical_anchor_transform_never_guesses) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.043s
+
+OK

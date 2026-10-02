@@ -1,0 +1,3 @@
+# Preserve exact local inventory responses on disk; they contain unrelated machine paths.
+discovery/models.raw.json
+calls/*/models-discovery.raw.json
