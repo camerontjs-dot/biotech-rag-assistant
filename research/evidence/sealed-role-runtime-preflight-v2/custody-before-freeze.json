@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-02T03:17:02.295928+00:00",
+  "status": "PASS",
+  "custody": "binary, baseline/mutation exact bytes, four fresh fixtures, root classes and symlink",
+  "excluded_global": "concurrent project setting changed; not candidate authority, both snapshots retained, original legacy sandbox unchanged",
+  "mutation_difference": "exactly one target rule; separate config home operational relocation",
+  "freshness": "no hash matches any v1 sentinel",
+  "role_inventory": "two allowed files and symlink only; no Git/config",
+  "tmp_alias": "same canonical target"
+}

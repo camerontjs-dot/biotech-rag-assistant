@@ -1,0 +1,449 @@
+{
+  "original_private_stable_sha256": {
+    "baseline": "bb11797fceaf252544fe55b24d2107c97870ec20f711ac787fe9fc4a0240949a",
+    "mutation": "2935aafcc5c575affb675c0788cea87eb1dc3f84455e1c72e69493bbfa40cba9"
+  },
+  "receipts": {
+    "baseline": {
+      "doctor_exit_code": 1,
+      "doctor_overall_status": "fail",
+      "doctor_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "doctor_stdout_sha256": "0e3a34039687b606db00e9a25895c04820b1137e90127e2ac2d2aed3419019a0",
+      "limitation": "Resolved diagnostic summary; no compiled Seatbelt/kernel rule dump.",
+      "rpc_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rpc_trace_sha256": "d02ba747c34bf0701b240470e04d9085b007eeb25309a965682357b7a4ccbe02",
+      "stable": {
+        "layers": [
+          {
+            "config": {
+              "analytics": {
+                "enabled": false
+              },
+              "default_permissions": "sealed_preflight_v2",
+              "permissions": {
+                "sealed_preflight_v2": {
+                  "filesystem": {
+                    ":minimal": "read",
+                    ":root": "deny",
+                    ":slash_tmp": "deny",
+                    ":tmpdir": "deny",
+                    "<DENIED_FILE>": "deny",
+                    "<RENAMED_DENIED_FILE>": "deny",
+                    "<ROLE_ROOT>": "write"
+                  },
+                  "network": {
+                    "enabled": false
+                  }
+                }
+              }
+            },
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          {
+            "config": {},
+            "name": {
+              "file": "/etc/codex/config.toml",
+              "type": "system"
+            },
+            "version": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          }
+        ],
+        "loaded": {
+          "allow_login_shell": true,
+          "analytics": {
+            "enabled": false
+          },
+          "default_permissions": "sealed_preflight_v2",
+          "permissions": {
+            "sealed_preflight_v2": {
+              "description": null,
+              "extends": null,
+              "filesystem": {
+                ":minimal": "read",
+                ":root": "deny",
+                ":slash_tmp": "deny",
+                ":tmpdir": "deny",
+                "<DENIED_FILE>": "deny",
+                "<RENAMED_DENIED_FILE>": "deny",
+                "<ROLE_ROOT>": "write",
+                "glob_scan_max_depth": null
+              },
+              "network": {
+                "allow_local_binding": null,
+                "allow_upstream_proxy": null,
+                "dangerously_allow_all_unix_sockets": null,
+                "dangerously_allow_non_loopback_proxy": null,
+                "domains": null,
+                "enable_socks5": null,
+                "enable_socks5_udp": null,
+                "enabled": false,
+                "mitm": null,
+                "mode": null,
+                "proxy_url": null,
+                "socks_url": null,
+                "unix_sockets": null
+              },
+              "workspace_roots": null
+            }
+          },
+          "sandbox_mode": null,
+          "sandbox_workspace_write": null,
+          "shell_environment_policy": {
+            "exclude": null,
+            "experimental_use_profile": null,
+            "filters": null,
+            "ignore_default_excludes": null,
+            "include_only": null,
+            "inherit": null,
+            "set": null
+          }
+        },
+        "origins": {
+          "analytics.enabled": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "default_permissions": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:minimal": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:root": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:slash_tmp": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:tmpdir": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.filesystem.<DENIED_FILE>": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.filesystem.<RENAMED_DENIED_FILE>": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.filesystem.<ROLE_ROOT>": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          },
+          "permissions.sealed_preflight_v2.network.enabled": {
+            "name": {
+              "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+          }
+        },
+        "profiles": {
+          "data": [
+            {
+              "allowed": true,
+              "description": null,
+              "id": ":read-only"
+            },
+            {
+              "allowed": true,
+              "description": null,
+              "id": ":workspace"
+            },
+            {
+              "allowed": true,
+              "description": null,
+              "id": ":danger-full-access"
+            },
+            {
+              "allowed": true,
+              "description": null,
+              "id": "sealed_preflight_v2"
+            }
+          ],
+          "nextCursor": null
+        },
+        "requirements": {
+          "requirements": null
+        },
+        "resolved": {
+          "denied-read glob rules": "0",
+          "denied-read rules": "5",
+          "filesystem sandbox": "restricted",
+          "glob scan max depth": "unbounded",
+          "managed filesystem source": "none",
+          "network sandbox": "restricted"
+        }
+      },
+      "stable_sha256": "bb11797fceaf252544fe55b24d2107c97870ec20f711ac787fe9fc4a0240949a"
+    },
+    "mutation": {
+      "doctor_exit_code": 1,
+      "doctor_overall_status": "fail",
+      "doctor_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "doctor_stdout_sha256": "2c0e49a5407026cdb837c2ff16e88da3922fd6be8424a2d74fdcb1bbe748f2c9",
+      "limitation": "Resolved diagnostic summary; no compiled Seatbelt/kernel rule dump.",
+      "rpc_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rpc_trace_sha256": "d3c513ed8f2d4f95174eb94f69054f49ea00702fc595939d7ffe59a5ed642de6",
+      "stable": {
+        "layers": [
+          {
+            "config": {
+              "analytics": {
+                "enabled": false
+              },
+              "default_permissions": "sealed_preflight_v2",
+              "permissions": {
+                "sealed_preflight_v2": {
+                  "filesystem": {
+                    ":minimal": "read",
+                    ":root": "deny",
+                    ":slash_tmp": "deny",
+                    ":tmpdir": "deny",
+                    "<DENIED_FILE>": "read",
+                    "<RENAMED_DENIED_FILE>": "deny",
+                    "<ROLE_ROOT>": "write"
+                  },
+                  "network": {
+                    "enabled": false
+                  }
+                }
+              }
+            },
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          {
+            "config": {},
+            "name": {
+              "file": "/etc/codex/config.toml",
+              "type": "system"
+            },
+            "version": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          }
+        ],
+        "loaded": {
+          "allow_login_shell": true,
+          "analytics": {
+            "enabled": false
+          },
+          "default_permissions": "sealed_preflight_v2",
+          "permissions": {
+            "sealed_preflight_v2": {
+              "description": null,
+              "extends": null,
+              "filesystem": {
+                ":minimal": "read",
+                ":root": "deny",
+                ":slash_tmp": "deny",
+                ":tmpdir": "deny",
+                "<DENIED_FILE>": "read",
+                "<RENAMED_DENIED_FILE>": "deny",
+                "<ROLE_ROOT>": "write",
+                "glob_scan_max_depth": null
+              },
+              "network": {
+                "allow_local_binding": null,
+                "allow_upstream_proxy": null,
+                "dangerously_allow_all_unix_sockets": null,
+                "dangerously_allow_non_loopback_proxy": null,
+                "domains": null,
+                "enable_socks5": null,
+                "enable_socks5_udp": null,
+                "enabled": false,
+                "mitm": null,
+                "mode": null,
+                "proxy_url": null,
+                "socks_url": null,
+                "unix_sockets": null
+              },
+              "workspace_roots": null
+            }
+          },
+          "sandbox_mode": null,
+          "sandbox_workspace_write": null,
+          "shell_environment_policy": {
+            "exclude": null,
+            "experimental_use_profile": null,
+            "filters": null,
+            "ignore_default_excludes": null,
+            "include_only": null,
+            "inherit": null,
+            "set": null
+          }
+        },
+        "origins": {
+          "analytics.enabled": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "default_permissions": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:minimal": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:root": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:slash_tmp": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.filesystem.:tmpdir": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.filesystem.<DENIED_FILE>": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.filesystem.<RENAMED_DENIED_FILE>": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.filesystem.<ROLE_ROOT>": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          },
+          "permissions.sealed_preflight_v2.network.enabled": {
+            "name": {
+              "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+              "profile": null,
+              "type": "user"
+            },
+            "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+          }
+        },
+        "profiles": {
+          "data": [
+            {
+              "allowed": true,
+              "description": null,
+              "id": ":read-only"
+            },
+            {
+              "allowed": true,
+              "description": null,
+              "id": ":workspace"
+            },
+            {
+              "allowed": true,
+              "description": null,
+              "id": ":danger-full-access"
+            },
+            {
+              "allowed": true,
+              "description": null,
+              "id": "sealed_preflight_v2"
+            }
+          ],
+          "nextCursor": null
+        },
+        "requirements": {
+          "requirements": null
+        },
+        "resolved": {
+          "denied-read glob rules": "0",
+          "denied-read rules": "4",
+          "filesystem sandbox": "restricted",
+          "glob scan max depth": "unbounded",
+          "managed filesystem source": "none",
+          "network sandbox": "restricted"
+        }
+      },
+      "stable_sha256": "2935aafcc5c575affb675c0788cea87eb1dc3f84455e1c72e69493bbfa40cba9"
+    }
+  },
+  "redaction": "Public logical-path copy; exact pre-redaction stable fingerprints and original-stream hashes bind private originals. No kernel-rule export."
+}

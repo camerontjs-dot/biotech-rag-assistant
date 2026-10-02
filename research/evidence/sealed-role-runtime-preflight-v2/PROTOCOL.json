@@ -1,0 +1,60 @@
+{
+  "P0": "assert clean source freeze, binary/config/fixture custody; repeat config API and doctor fingerprint against prefrozen baseline; mismatch APPARATUS_INVALID before reads",
+  "P1": {
+    "argv": [
+      "/bin/sh",
+      "-c",
+      "pwd -P; /usr/bin/env"
+    ],
+    "limits": "non-login deterministic shell; marker is initialization observation, not standalone enforcement proof",
+    "require": [
+      "cwd exactly isolated role root",
+      "CODEX_SANDBOX=seatbelt marker"
+    ]
+  },
+  "P2": "cat allowed exact bytes/hash, native refusal FALSIFIED, wrong positive bytes APPARATUS_INVALID",
+  "P3": "cat absolute explicit outside target; exit 0 or any stdout FALSIFIED; any >=8-byte stderr sentinel segment FALSIFIED; other stderr-only partial/unknown faults cannot support; native cat EPERM/EACCES and empty stdout required for PASS; missing target or sandbox startup failure APPARATUS_INVALID",
+  "P4": {
+    "absolute": "tested by P3; no duplicate read",
+    "attempts": [
+      "relative ../sibling/<target>",
+      "relative ../sibling/./<target>",
+      "role symlink to target",
+      "/tmp alias of /private/tmp target"
+    ],
+    "finder_alias": "NOT_APPLICABLE; native Finder alias not resolved by cat",
+    "no_other_forms": "no hardlink/discretionary extra probes"
+  },
+  "P5": "separate frozen primary-read mutation; repeat mutation effective state; cat same outside bytes exact; no baseline config mutation",
+  "P6": "unchanged baseline, renamed allowed exact and renamed explicit denied target blocked",
+  "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+  "effective_binding": "loaded config/layers/origins and runtime doctor restricted-mode/rule counts, exact immutable config and binary; no compiled Seatbelt export",
+  "enforcement_review": "native cat, readable existing mode0444 fixtures, allowed control, unchanged hashes, policy sensitivity, name/path consistency and Seatbelt marker; distinguish direct facts from OS attribution inference",
+  "excluded_global": "Original user configuration is excluded from loaded candidate stack; preserve observed snapshots and deltas, do not treat external excluded changes as candidate drift.",
+  "freeze": "candidate commit/tree plus private receipt before P0; public receipt append afterward; no self-referential Git hash",
+  "persist": "actual invocation, stdout and stderr before scoring, partial receipts on errors",
+  "protected_boundary": [
+    "no model request",
+    "no semantic roles",
+    "no assessor",
+    "no reducer",
+    "no generation",
+    "no G1-G7",
+    "no Wave B/TEST/PROSPECTIVE",
+    "no CAL/ADR/rubric changes",
+    "no promotion/merge/release"
+  ],
+  "run_guard": "exclusive private DECISIVE_RUN_STARTED; exclusive output files",
+  "schema_version": "sealed-role-runtime-protocol/v2",
+  "scope": "native CLI deterministic filesystem preflight only",
+  "scoring": "adapter.classify_read only; startup failures not denial, zero-denominator NOT_RUN; support requires all stages",
+  "stop": "first non-PASS terminates all dependent probes; no rerun, repair, or alternative candidate in this experiment",
+  "successor": "only separately authorized unchanged PR30 semantic sequence with actual exposure receipts if preflight supported",
+  "terminal_states": [
+    "SUPPORTED_FOR_SEALED_ROLE_PREFLIGHT",
+    "FALSIFIED",
+    "INCONCLUSIVE",
+    "APPARATUS_INVALID"
+  ],
+  "work_class": "Research Infrastructure / deterministic apparatus qualification"
+}

@@ -1,0 +1,13 @@
+default_permissions = "sealed_preflight_v2"
+[analytics]
+enabled = false
+[permissions.sealed_preflight_v2.filesystem]
+":root" = "deny"
+":minimal" = "read"
+":slash_tmp" = "deny"
+":tmpdir" = "deny"
+"<ROLE_ROOT>" = "write"
+"<DENIED_FILE>" = "read"
+"<RENAMED_DENIED_FILE>" = "deny"
+[permissions.sealed_preflight_v2.network]
+enabled = false

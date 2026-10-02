@@ -1,0 +1,27 @@
+{
+  "OS": [
+    "ProductName:\t\tmacOS",
+    "ProductVersion:\t\t27.0",
+    "BuildVersion:\t\t26A428"
+  ],
+  "binary_sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc",
+  "config_home_policy": "subprocess-only dedicated home; parent and installed configuration unchanged",
+  "excluded_global_observation": {
+    "actor": "UNKNOWN",
+    "candidate_config_homes": "unchanged",
+    "candidate_loaded_global_layer": false,
+    "changed_key_count": 1,
+    "initial_material_sandbox": "danger-full-access",
+    "initial_sha256": "6485c3cd77149e73df1a8559b9e4ac69f54a6116df0b09260777d0fe068ff31a",
+    "later_material_sandbox": "danger-full-access",
+    "later_sha256": "0eff7e774684806395cfd94cc519c7f55eb02119a75c6b36ef258fce9c87c2a0"
+  },
+  "git_version": "git version 2.54.0 (Apple Git-157)",
+  "machine": "arm64",
+  "model_context": "NOT_INITIALIZED",
+  "model_inference_requests": 0,
+  "original_config_sha256": "6485c3cd77149e73df1a8559b9e4ac69f54a6116df0b09260777d0fe068ff31a",
+  "reducer_calls": 0,
+  "runtime": "Codex CLI 0.154.0",
+  "supervisor_python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]"
+}

@@ -1,0 +1,35 @@
+{
+  "allowed": {
+    "logical_path": "role/aea46dec42.dat",
+    "mode": "0444",
+    "sha256": "e21f079ee64e0eb53599273b918920b12460f7f69bd86f5b118ce3d89cd2a225",
+    "size_bytes": 65
+  },
+  "allowed_renamed": {
+    "logical_path": "role/bf0ba0535c.dat",
+    "mode": "0444",
+    "sha256": "2f16f0f5442ea2567969dee2bf9abc2b1a452ab79dec17c52233e6ffc29157d0",
+    "size_bytes": 65
+  },
+  "denied": {
+    "logical_path": "sibling/8cfcaa793d.dat",
+    "mode": "0444",
+    "sha256": "f68c75554c5334e9fd7ed2f6fe8607a74d2ff998753da46adb521c9956e372eb",
+    "size_bytes": 65
+  },
+  "denied_renamed": {
+    "logical_path": "sibling/d3223ff754.dat",
+    "mode": "0444",
+    "sha256": "fa3eac16a2d31b69a2955f354582724537d8aafde7b8949dcb49ba7d6d13bfa6",
+    "size_bytes": 65
+  },
+  "exact_config_sha256": {
+    "baseline": "d0d349d345c0b25fa45df94f2eb2cf2139386c341587761d6515c487d77a213e",
+    "mutation": "30f4ea768fb93ccb16f4fc112c071a69d2ffd0f3a808a8425c72e1080473ec60"
+  },
+  "symlink": {
+    "logical_path": "role/0e62f22b90.link",
+    "target": "sibling/8cfcaa793d.dat",
+    "type": "symlink"
+  }
+}

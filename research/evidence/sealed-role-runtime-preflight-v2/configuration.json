@@ -1,0 +1,177 @@
+{
+  "candidate_configurations": {
+    "baseline": {
+      "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+      "exact_config_sha256": "d0d349d345c0b25fa45df94f2eb2cf2139386c341587761d6515c487d77a213e",
+      "loaded_sources": [
+        {
+          "config": {
+            "analytics": {
+              "enabled": false
+            },
+            "default_permissions": "sealed_preflight_v2",
+            "permissions": {
+              "sealed_preflight_v2": {
+                "filesystem": {
+                  ":minimal": "read",
+                  ":root": "deny",
+                  ":slash_tmp": "deny",
+                  ":tmpdir": "deny",
+                  "<DENIED_FILE>": "deny",
+                  "<RENAMED_DENIED_FILE>": "deny",
+                  "<ROLE_ROOT>": "write"
+                },
+                "network": {
+                  "enabled": false
+                }
+              }
+            }
+          },
+          "name": {
+            "file": "<TASK_ROOT>/baseline-config-home/config.toml",
+            "profile": null,
+            "type": "user"
+          },
+          "version": "sha256:2a383066060586aab01401141a6ba439a51cf46e2e8148940164cfabc4ca6d95"
+        },
+        {
+          "config": {},
+          "name": {
+            "file": "/etc/codex/config.toml",
+            "type": "system"
+          },
+          "version": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      ],
+      "original_stable_sha256": "bb11797fceaf252544fe55b24d2107c97870ec20f711ac787fe9fc4a0240949a",
+      "resolved_doctor": {
+        "denied-read glob rules": "0",
+        "denied-read rules": "5",
+        "filesystem sandbox": "restricted",
+        "glob scan max depth": "unbounded",
+        "managed filesystem source": "none",
+        "network sandbox": "restricted"
+      },
+      "template_sha256": "a4ee0565c5d433141757289fa1af8e19dd675b74d60fc5d6b213b761f5fb343d"
+    },
+    "mutation": {
+      "candidate_id": "codex-0154-isolated-home-default-profile-v2-mutation-primary-read",
+      "exact_config_sha256": "30f4ea768fb93ccb16f4fc112c071a69d2ffd0f3a808a8425c72e1080473ec60",
+      "loaded_sources": [
+        {
+          "config": {
+            "analytics": {
+              "enabled": false
+            },
+            "default_permissions": "sealed_preflight_v2",
+            "permissions": {
+              "sealed_preflight_v2": {
+                "filesystem": {
+                  ":minimal": "read",
+                  ":root": "deny",
+                  ":slash_tmp": "deny",
+                  ":tmpdir": "deny",
+                  "<DENIED_FILE>": "read",
+                  "<RENAMED_DENIED_FILE>": "deny",
+                  "<ROLE_ROOT>": "write"
+                },
+                "network": {
+                  "enabled": false
+                }
+              }
+            }
+          },
+          "name": {
+            "file": "<TASK_ROOT>/mutation-config-home/config.toml",
+            "profile": null,
+            "type": "user"
+          },
+          "version": "sha256:b40538044ffdc7aa0fd45a36c00ffa81cfdb31d01e48609bcbba0ed70d02c428"
+        },
+        {
+          "config": {},
+          "name": {
+            "file": "/etc/codex/config.toml",
+            "type": "system"
+          },
+          "version": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      ],
+      "original_stable_sha256": "2935aafcc5c575affb675c0788cea87eb1dc3f84455e1c72e69493bbfa40cba9",
+      "resolved_doctor": {
+        "denied-read glob rules": "0",
+        "denied-read rules": "4",
+        "filesystem sandbox": "restricted",
+        "glob scan max depth": "unbounded",
+        "managed filesystem source": "none",
+        "network sandbox": "restricted"
+      },
+      "template_sha256": "dc37b038c35599aa358dc6bb0493527ac119bef7bd523a64ff24e2036bd02fcf"
+    }
+  },
+  "command_shape": [
+    "<PINNED_CODEX>",
+    "sandbox",
+    "-C",
+    "<ROLE_ROOT>",
+    "-P",
+    "sealed_preflight_v2",
+    "--",
+    "<DETERMINISTIC_ARGV>"
+  ],
+  "cwd": "<ROLE_ROOT>",
+  "diagnostic_command_shapes": [
+    [
+      "<PINNED_CODEX>",
+      "app-server",
+      "--stdio"
+    ],
+    [
+      "<PINNED_CODEX>",
+      "doctor",
+      "--json"
+    ]
+  ],
+  "environment_inheritance": {
+    "CODEX_HOME": "dedicated candidate-specific config home, outside role root",
+    "LANG": "C",
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "global_user_config": "unchanged; excluded from candidate loaded stack via child-only config home",
+    "parent_environment": "unchanged",
+    "policy": "replace environment for CLI subprocess with exactly PATH, LANG, CODEX_HOME"
+  },
+  "excluded_global_observation": {
+    "actor": "UNKNOWN",
+    "candidate_config_homes": "unchanged",
+    "candidate_loaded_global_layer": false,
+    "changed_key_count": 1,
+    "initial_material_sandbox": "danger-full-access",
+    "initial_sha256": "6485c3cd77149e73df1a8559b9e4ac69f54a6116df0b09260777d0fe068ff31a",
+    "later_material_sandbox": "danger-full-access",
+    "later_sha256": "0eff7e774684806395cfd94cc519c7f55eb02119a75c6b36ef258fce9c87c2a0"
+  },
+  "limits": [
+    "runtime-owned config/layer and resolved summary observed",
+    "per-rule generated Seatbelt/kernel state not exposed",
+    "config API, doctor and sandbox are separate processes with identical pinned config root/environment; no process-separation independence claim"
+  ],
+  "managed_requirements": null,
+  "network": "configured restricted; not a network qualification",
+  "original_user_config": {
+    "default_permissions": null,
+    "features": {
+      "js_repl": false,
+      "memories": true
+    },
+    "permissions": null,
+    "sandbox_mode": "danger-full-access",
+    "sandbox_workspace_write": null,
+    "sha256": "6485c3cd77149e73df1a8559b9e4ac69f54a6116df0b09260777d0fe068ff31a",
+    "shell_environment_policy_set_keys": [
+      "NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S"
+    ],
+    "source": "private byte-identical snapshot; these settings are excluded rather than mutated"
+  },
+  "profile_name": "sealed_preflight_v2",
+  "sandbox_mode": "runtime-resolved restricted filesystem, explicit named default, no legacy mode in loaded candidate configuration"
+}

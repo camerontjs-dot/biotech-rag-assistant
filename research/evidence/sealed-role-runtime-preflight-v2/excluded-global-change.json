@@ -1,0 +1,10 @@
+{
+  "actor": "UNKNOWN",
+  "candidate_config_homes": "unchanged",
+  "candidate_loaded_global_layer": false,
+  "changed_key_count": 1,
+  "initial_material_sandbox": "danger-full-access",
+  "initial_sha256": "6485c3cd77149e73df1a8559b9e4ac69f54a6116df0b09260777d0fe068ff31a",
+  "later_material_sandbox": "danger-full-access",
+  "later_sha256": "0eff7e774684806395cfd94cc519c7f55eb02119a75c6b36ef258fce9c87c2a0"
+}

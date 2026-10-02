@@ -1,0 +1,47 @@
+{
+  "branch": "research/sealed-role-runtime-preflight-v2",
+  "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+  "config_sha256": {
+    "baseline": "d0d349d345c0b25fa45df94f2eb2cf2139386c341587761d6515c487d77a213e",
+    "mutation": "30f4ea768fb93ccb16f4fc112c071a69d2ffd0f3a808a8425c72e1080473ec60"
+  },
+  "configuration_sha256": "795e7b0daaf2a3e8e3820c67026e23e243edc09f8352c7dcbe134a52c77b3c86",
+  "discovery_sha256": "1f75be3ab503eb6c64c02d94870be58cb752ecf80c517833c451125ad52cad15",
+  "effective_stable_sha256": {
+    "baseline": "bb11797fceaf252544fe55b24d2107c97870ec20f711ac787fe9fc4a0240949a",
+    "mutation": "2935aafcc5c575affb675c0788cea87eb1dc3f84455e1c72e69493bbfa40cba9"
+  },
+  "environment_policy": "explicit PATH, LANG, dedicated configuration-home key only",
+  "fixtures_sha256": "54a729e50754c17292ece4e3231ec62c07eeeb4cd6889e85a8f4a3bda61add49",
+  "freeze_receipt": "freeze.json",
+  "mutation_candidate_id": "codex-0154-isolated-home-default-profile-v2-mutation-primary-read",
+  "nonclaims": [
+    "v1 cause",
+    "hidden model context cleanliness",
+    "training independence",
+    "human independence",
+    "network confinement",
+    "production use"
+  ],
+  "not_run": [
+    "P0-P6",
+    "semantic sequence",
+    "model canary",
+    "semantic assessor",
+    "reducer"
+  ],
+  "protocol_sha256": "a19cb50dbb50698bd29929548015b06ce713136457824047f5712a83b629627d",
+  "runtime": {
+    "binary_sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc",
+    "version": "0.154.0"
+  },
+  "schema_version": "sealed-runtime-candidate/v2",
+  "source_commit_tree": "recorded externally in candidate-freeze receipt before P0; no self-reference",
+  "source_sha256": {
+    "adapter.py": "c08a452b117e4dc60208043db243b2d8ed1938d5ba8add38c5a2bb40808abdc9",
+    "run_probes.py": "b87f9ce7d73d55f4fbfe1fab2bad404d3c217bf5f83a40e0cf554dc483af71ca",
+    "test_adapter.py": "94083711cfad152c5d2983a4a48bd7b3a3a3ee678aa1bc3c0774fc91e08a38d5"
+  },
+  "status": "prepared for immutable source freeze; qualification NOT_RUN",
+  "test_scope": "preflight filesystem aperture, not real model/role initialization"
+}

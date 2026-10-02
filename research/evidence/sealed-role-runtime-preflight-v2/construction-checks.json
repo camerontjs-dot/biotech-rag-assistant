@@ -1,0 +1,25 @@
+{
+  "contract_lint": {
+    "adopted": true,
+    "exit_code": 0,
+    "findings": 0
+  },
+  "ruff": {
+    "exit_code": 0,
+    "stdout": "All checks passed!",
+    "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "sentinel_qualification_invocations": 0,
+  "source_sha256": {
+    "adapter.py": "c08a452b117e4dc60208043db243b2d8ed1938d5ba8add38c5a2bb40808abdc9",
+    "run_probes.py": "b87f9ce7d73d55f4fbfe1fab2bad404d3c217bf5f83a40e0cf554dc483af71ca",
+    "test_adapter.py": "94083711cfad152c5d2983a4a48bd7b3a3a3ee678aa1bc3c0774fc91e08a38d5"
+  },
+  "tests": {
+    "count": 11,
+    "exit_code": 0,
+    "kind": "construction/unit checks, includes absent backend and adversarial scoring; not runtime qualification",
+    "stderr_sha256": "a9301679de2c288d67b56a1f8a2bc921ac0919add0c09d2423155e78a6fae169",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

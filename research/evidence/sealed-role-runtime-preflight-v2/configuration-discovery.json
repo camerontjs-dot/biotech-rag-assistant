@@ -1,0 +1,58 @@
+{
+  "boundary": {
+    "model_inference_requests": 0,
+    "research_role_launches": 0,
+    "sentinel_reads": 0
+  },
+  "completed_at_utc": "2026-10-02T02:59:58.133755+00:00",
+  "documentation": [
+    {
+      "status": "source-claim only; legacy-precedence wording is not reproduced as a universal installed-runtime finding",
+      "url": "https://learn.chatgpt.com/docs/permissions"
+    },
+    {
+      "status": "source-claim; only CLI over user and home relocation observed",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-basic"
+    }
+  ],
+  "evaluator": "agent_llm",
+  "inferred": {
+    "binding_basis": "Loaded field/origin snapshots plus resolved doctor mode/rule counts, exact immutable bytes, selected profile and identical environment provide the strongest available reproducible pre-execution binding. Per-rule enforcement remains the test question.",
+    "precedence": "CLI overrides outrank user config in observed API; isolated CODEX_HOME selects a distinct user layer. Named config-file profile precedence is help/documentation only, not executed here."
+  },
+  "observed": {
+    "api": "config/read includes raw merged fields, layers and origins; configRequirements/read returns null in tested isolated homes",
+    "binary_sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc",
+    "clean_config": {
+      "default_permissions": "discovery",
+      "doctor_denied_read_rules": "1",
+      "doctor_filesystem": "restricted",
+      "sandbox_mode": null
+    },
+    "cli_override": "sandbox_mode=read-only overrides user danger-full-access with sessionFlags origin",
+    "doctor": "resolved sandbox.helpers reports filesystem mode, denied-read count and network mode; overall health failure comes from absent auth/restricted-network reachability",
+    "legacy_api_setup_failure": "first legacy app-server initialization failed SQLite state initialization; original trace/stderr retained; separate legacy-alt home config read succeeded",
+    "legacy_plus_explicit_default": {
+      "default_permissions": "discovery",
+      "doctor_denied_read_rules": "1",
+      "doctor_filesystem": "restricted",
+      "sandbox_mode": "danger-full-access"
+    },
+    "requirements": null,
+    "runtime": "0.154.0",
+    "sandbox_true_diagnostics": "clean and legacy selected-profile /usr/bin/true both exit 0, no stdout/stderr even with RUST_LOG",
+    "schema": "installed schema exposes command/exec without thread or turn, config layers and origin API; process/spawn is explicitly unsandboxed and was not invoked",
+    "state_json": "parse-only diagnostics establish permissionProfile and sandboxCwd fields; no exported effective SandboxState obtained",
+    "system_layer": "/etc/codex/config.toml reported as empty canonical JSON hash sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "schema_version": "runtime-config-discovery/v2",
+  "unknown": [
+    "v1 causal explanation",
+    "complete internally compiled Seatbelt policy / kernel effective rule dump",
+    "whether diagnostic and sandbox paths translate every rule identically",
+    "unselected profile / project / cloud-managed behavior",
+    "hidden model initialization",
+    "model tool-path equivalence",
+    "network confinement"
+  ]
+}

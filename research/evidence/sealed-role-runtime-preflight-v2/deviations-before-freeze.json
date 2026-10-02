@@ -1,0 +1,35 @@
+{
+  "deviations": [
+    {
+      "detail": "initial combined reads were truncated; recovered separate content before relying; parallel batch receipt updates raced; sequential reads restored complete act receipt.",
+      "stage": "workspace entry"
+    },
+    {
+      "detail": "legacy config API initialization failed SQLite setup; preserved first trace/stderr; separate same-bytes legacy-alt home inspected successfully; cause UNKNOWN.",
+      "stage": "discovery"
+    },
+    {
+      "detail": "five malformed state-json parse diagnostics used no sentinels and did not enter decisive qualification; parser surfaces only, no effective-state export.",
+      "stage": "discovery"
+    },
+    {
+      "detail": "doctor performs endpoint reachability/WebSocket/update diagnostics beyond config. Restricted-network discovery reports connection/DNS failures; no credentials, model prompt, thread or turn. This is not network confinement evidence.",
+      "stage": "discovery"
+    },
+    {
+      "detail": "Excluded global user config changed concurrently in one projects key; actor UNKNOWN. Initial custody check incorrectly required excluded source immutability and failed before freeze. Removed false dependency; both loaded candidate snapshots remained exactly identical; task did not write global config.",
+      "stage": "construction"
+    },
+    {
+      "detail": "Privacy hook rejected generic home-path redaction regexp in source. Commit was not created. Replaced with explicit private binding prefix mapping, refreshed AST/source identities, kept old draft privately; no hook bypass.",
+      "stage": "pre-freeze commit"
+    },
+    {
+      "detail": "First staging/commit attempt followed the failed construction check before inspection; commit hook failed, so no candidate freeze or decisive run occurred. Subsequent gates checked sequentially.",
+      "stage": "construction sequencing"
+    }
+  ],
+  "protected_boundary": "all semantic roles, assessor, reducer, generation NOT_RUN; Wave B LOCKED",
+  "repairs": "Pre-freeze construction scoring, excluded-source gate and generic redaction changes only; no candidate execution/repair after freeze.",
+  "routine_read_failures": "none GitHub"
+}

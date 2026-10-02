@@ -1,0 +1,17 @@
+{
+  "after_discovery_sha256": "1f75be3ab503eb6c64c02d94870be58cb752ecf80c517833c451125ad52cad15",
+  "candidate_class": "native codex sandbox named permission profile, explicitly selected default in isolated configuration home",
+  "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+  "claim": "deterministic filesystem preflight only",
+  "effective_state_limit": "doctor resolved profile summary is not a kernel Seatbelt rule dump; mismatch/incomplete snapshot stops before scoring",
+  "material_changes_from_v1": [
+    "dedicated subprocess configuration home, original global configuration untouched",
+    "explicit default_permissions=sealed_preflight_v2",
+    "baseline removes inherited legacy sandbox_mode and shell environment additions by selecting distinct config home",
+    "exact primary and renamed deny entries both frozen",
+    "runtime-observed loaded config plus doctor resolved state asserted before read probes"
+  ],
+  "mutation": "only primary outside rule changes deny to read; separate config home, unchanged baseline bytes",
+  "mutation_candidate_id": "codex-0154-isolated-home-default-profile-v2-mutation-primary-read",
+  "selected_at_utc": "2026-10-02T02:59:58.354658+00:00"
+}
