@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "<CODEX>",
+    "debug",
+    "app-server",
+    "--help"
+  ],
+  "exit_code": 0,
+  "time": "2026-10-02T02:46:33.383067+00:00",
+  "stdout_sha256": "f6d9aecf0d2c594b863a179bbdf0ea6b339d8de81bd7555f80e62c10a7cd76df",
+  "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+}

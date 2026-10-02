@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "<CODEX>",
+    "doctor",
+    "--help"
+  ],
+  "exit_code": 0,
+  "time": "2026-10-02T02:46:33.373854+00:00",
+  "stdout_sha256": "ec1fc4ad3912ac286f726fd7ff536c7121b80d60a5bbca64cb839ddeedc803e1",
+  "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+}

@@ -1,0 +1,25 @@
+{
+  "candidate_changes": 0,
+  "failed_commit_attempt": {
+    "check": "pre-commit privacy scan",
+    "commit_created": false,
+    "reason": "generic path pattern matched slash-separated prose in comparison_to_v1; no actual local path or credential"
+  },
+  "hook_bypass": false,
+  "metadata_change": {
+    "field": "comparison_to_v1",
+    "file": "EXPERIMENT.json",
+    "original_sha256": "39caee7ebf2f31e5613ed42e1ad0af861d1c3cfd5e9cd86d5217629ba6ab4cf0",
+    "public_sha256": "abf77e4878ca30a7100ea76b123d7b721ed98101bb7b7ed927d4577261ba1d70",
+    "scope": "prose punctuation; candidate, protocol, results and disposition unchanged"
+  },
+  "original_terminal_sha256": "efd44bd4d70529682bb2a3cdf907c9eece5857b71e007d2b54956250f9b1b3c6",
+  "originals": "byte-identical private custody/publication-staging copies",
+  "recorded_at_utc": "2026-10-02T03:45:27.125360+00:00",
+  "runtime_invocations_after_terminal": 0,
+  "whitespace_check": {
+    "excluding_cli_stdout": "PASS",
+    "full_staged_diff": "17 findings, all in captured CLI help stdout",
+    "handling": "preserve evidence bytes; no whitespace rewriting"
+  }
+}

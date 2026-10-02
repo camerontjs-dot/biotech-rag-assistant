@@ -1,0 +1,23 @@
+{
+  "CLI_policy_enforcement": "explicit deny supplied in observed config; effective read refusal absent",
+  "OS_Seatbelt_enforcement": "marker observed; compiled/applied kernel rules UNKNOWN, no denied syscall observed",
+  "adapter_enforcement": "NONE by source inspection",
+  "classification": "required file-read deny NOT_ENFORCED by this pinned CLI sandbox candidate",
+  "direct_observations": {
+    "P0": "actual config API fingerprint and resolved doctor state match freeze; sandbox_mode null, explicit default profile selected, root and outside target deny present",
+    "P1": "actual root correct; CODEX_SANDBOX=seatbelt marker; no Git/config in role root",
+    "P2": "native cat returns exact allowed bytes, exit0, empty stderr",
+    "P3": "same native runtime route returns exact explicitly denied outside bytes, exit0, empty stderr",
+    "doctor_denied_read_rules": "5",
+    "doctor_filesystem": "restricted",
+    "fixtures": "readable mode0444, paths exist, hashes and symlink unchanged",
+    "mutation": "separate frozen config only; NOT_RUN by stop rule",
+    "source": "adapter delegates native cat through codex sandbox; no access interception or fabricated child output"
+  },
+  "evaluator": "agent_llm with persisted byte/hash/AST checks",
+  "inference": "Changing to isolated config/default profile did not establish the aperture. A configuration-summary-to-subprocess-policy translation discrepancy is a next hypothesis, not an established cause. v1 cause remains UNKNOWN.",
+  "nonexistence_or_broken_filesystem": "excluded by exact current bytes and unchanged custody",
+  "prompt_convention": "no prompt or model; not a mechanism",
+  "terminal_disposition": "FALSIFIED",
+  "unix_permission_cause": "not a denial; files0444 and both reads succeed"
+}

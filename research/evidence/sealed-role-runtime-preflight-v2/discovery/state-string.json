@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "<CODEX>",
+    "sandbox",
+    "--sandbox-state-json",
+    "{\"type\":\"restricted\"}",
+    "--",
+    "/usr/bin/true"
+  ],
+  "exit_code": 1,
+  "time": "2026-10-02T02:49:00.650731+00:00",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "5102edee216c1b07f4fa45fd92d5f5e1ce59a58092d2f30db715a60fb71ea462"
+}

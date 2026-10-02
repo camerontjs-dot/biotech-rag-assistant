@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "<CODEX>",
+    "doctor",
+    "--json"
+  ],
+  "timestamp": "2026-10-02T02:53:55.342367+00:00",
+  "exit_code": 1,
+  "stdout_sha256": "908cad194fed654534342cb890e622cc756f01b967ccea0f004a074bc4079cb9",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

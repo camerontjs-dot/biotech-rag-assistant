@@ -1,0 +1,34 @@
+{
+  "argv": [
+    "<PINNED_CODEX>",
+    "sandbox",
+    "-C",
+    "<ROLE_ROOT>",
+    "-P",
+    "sealed_preflight_v2",
+    "--",
+    "/bin/sh",
+    "-c",
+    "pwd -P; /usr/bin/env"
+  ],
+  "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+  "cwd": "<ROLE_ROOT>",
+  "denied": false,
+  "environment": {
+    "CODEX_HOME": "<TASK_ROOT>/baseline-config-home",
+    "LANG": "C",
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin"
+  },
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-02T03:20:30.379371+00:00",
+  "fixture": null,
+  "probe": "P1",
+  "public_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public_stdout_sha256": "43f007423d10aa1ba6f411c8288635af4821b1fb0f4d2f6f9ef2fe3e371b602c",
+  "started_at_utc": "2026-10-02T03:20:30.314311+00:00",
+  "status": "PASS",
+  "stderr": "",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "<ROLE_ROOT>\nCODEX_SANDBOX_NETWORK_DISABLED=1\nCODEX_HOME=<TASK_ROOT>/baseline-config-home\n__CF_USER_TEXT_ENCODING=<REDACTED_OS_METADATA>\nPATH=<TASK_ROOT>/baseline-config-home/tmp/arg0/codex-arg053sqfK:<USER_HOME>/.codex/packages/standalone/releases/0.154.0-aarch64-apple-darwin/codex-path:/usr/bin:/bin:/usr/sbin:/sbin\nCODEX_SANDBOX=seatbelt\nPWD=<ROLE_ROOT>\nLANG=C\nSHLVL=1\n_=/usr/bin/env\n",
+  "stdout_sha256": "bb44c74e26f920d28f7e61bad77d4aaf3e698494da98c3b566946144b0a033a9"
+}

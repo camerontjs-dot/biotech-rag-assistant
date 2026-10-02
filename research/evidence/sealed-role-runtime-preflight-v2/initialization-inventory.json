@@ -1,0 +1,88 @@
+{
+  "auth": "no credentials found in candidate home by runtime diagnostic; no model thread/turn",
+  "doctor_network_observations": {
+    "network.provider_reachability": {
+      "category": "reachability",
+      "details": {
+        "ChatGPT inference URL": "https://chatgpt.com/backend-api/<redacted> reachable (HTTP 405)",
+        "desktop assets CDN": "https://persistent.oaistatic.com/codex-app-prod/<redacted> reachable (HTTP 200)",
+        "reachability mode": "ChatGPT auth"
+      },
+      "durationMs": 1231,
+      "id": "network.provider_reachability",
+      "remediation": null,
+      "status": "ok",
+      "summary": "active provider endpoints are reachable over HTTP"
+    },
+    "network.websocket_reachability": {
+      "category": "websocket",
+      "details": {
+        "DNS": "2 IPv4, 0 IPv6, first IPv4",
+        "auth mode": "none",
+        "connect timeout": "15000 ms",
+        "endpoint": "wss://api.openai.com/v1/<redacted>",
+        "handshake transport error": "http 401 Unauthorized: Some(\"{\\\"error\\\":{\\\"message\\\":\\\"Missing bearer or basic authentication in header\\\",\\\"type\\\":\\\"invalid_request_error\\\",\\\"param\\\":null,\\\"code\\\":null}}\")",
+        "model provider": "openai",
+        "provider name": "OpenAI",
+        "proxy env vars": "none",
+        "supports websockets": "true",
+        "wire API": "responses"
+      },
+      "durationMs": 1612,
+      "id": "network.websocket_reachability",
+      "remediation": "Check proxy, VPN, firewall, DNS, custom CA, and WebSocket policy support.",
+      "status": "warning",
+      "summary": "Responses WebSocket failed; HTTPS fallback may still work"
+    },
+    "updates.status": {
+      "category": "updates",
+      "details": {
+        "check for update on startup": "true",
+        "latest version": "0.160.0",
+        "latest version status": "newer version is available",
+        "update action": "manual or unknown",
+        "version cache": [
+          "<TASK_ROOT>/baseline-config-home/version.json",
+          "missing"
+        ]
+      },
+      "durationMs": 2098,
+      "id": "updates.status",
+      "remediation": null,
+      "status": "ok",
+      "summary": "update configuration is locally consistent"
+    }
+  },
+  "doctor_network_scope": "supervisor diagnostic outside tested child sandbox; HTTP405/200 reachability and unauthenticated WebSocket401 observed at P0. No inference request or model output; not network-confinement evidence. No update/install executed.",
+  "environment_augmentation": "runtime adds PATH aliases, CODEX_SANDBOX and network marker, OS encoding variable; shell adds PWD/SHLVL/_",
+  "hidden_model_context": "UNKNOWN/NOT_TESTED",
+  "layer": "deterministic no-model CLI initialization only",
+  "model_canary_calls": 0,
+  "network_confinement": "NOT_TESTED",
+  "observed_child_environment": [
+    "CODEX_SANDBOX_NETWORK_DISABLED=1",
+    "CODEX_HOME=<TASK_ROOT>/baseline-config-home",
+    "__CF_USER_TEXT_ENCODING=<REDACTED_OS_METADATA>",
+    "PATH=<TASK_ROOT>/baseline-config-home/tmp/arg0/codex-arg053sqfK:<USER_HOME>/.codex/packages/standalone/releases/0.154.0-aarch64-apple-darwin/codex-path:/usr/bin:/bin:/usr/sbin:/sbin",
+    "CODEX_SANDBOX=seatbelt",
+    "PWD=<ROLE_ROOT>",
+    "LANG=C",
+    "SHLVL=1",
+    "_=/usr/bin/env"
+  ],
+  "parent_to_CLI_environment": [
+    "PATH",
+    "LANG",
+    "CODEX_HOME"
+  ],
+  "profile_configuration": "isolated user layer and empty system layer; no managed requirements in API; legacy sandbox mode absent from candidate snapshot",
+  "real_research_role_aperture": "NOT_TESTED; roles stopped",
+  "repository_context": "not ordinary child cwd; supervisor checkout separate",
+  "role_root_inventory": [
+    "role/aea46dec42.dat",
+    "role/bf0ba0535c.dat",
+    "role/0e62f22b90.link"
+  ],
+  "semantic_independence": "NOT_TESTED",
+  "training_history_independence": "NOT_TESTED"
+}

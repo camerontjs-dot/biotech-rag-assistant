@@ -1,0 +1,30 @@
+{
+  "advance": "none; semantic roles remain stopped",
+  "candidate_commit": "073d7c97a65f5f94a5c1b9277e9818101fb7d0c5",
+  "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+  "candidate_tree": "56073b675daeb7d9eb2fb5a7aa6ff29c7534816e",
+  "comparison_to_v1": "new configuration, isolated home, explicit default profile and fresh fixtures; not a single-factor causal identification of v1 defect",
+  "counts": {
+    "assessor_calls": 0,
+    "configuration_observations": 1,
+    "model_inference_requests": 0,
+    "project_generation_calls": 0,
+    "reducer_calls": 0,
+    "research_role_launches": 0,
+    "sandbox_invocations": 3
+  },
+  "effective_binding_sha256": "bb11797fceaf252544fe55b24d2107c97870ec20f711ac787fe9fc4a0240949a",
+  "ended_at_utc": "2026-10-02T03:20:30.800074+00:00",
+  "evidence_layer": "no-model CLI filesystem preflight",
+  "experiment_id": "sealed-role-runtime-preflight-v2",
+  "fixtures_sha256": "54a729e50754c17292ece4e3231ec62c07eeeb4cd6889e85a8f4a3bda61add49",
+  "probe_run_sha256": "723d5350566c736d345880279f74913138efaaf5171ec04f36ff4908d77ba6cd",
+  "protocol_sha256": "a19cb50dbb50698bd29929548015b06ce713136457824047f5712a83b629627d",
+  "question": "Does this separately frozen runtime/config candidate enforce the stated file aperture?",
+  "schema_version": "runtime-preflight-experiment/v2",
+  "started_at_utc": "2026-10-02T03:20:16.613997+00:00",
+  "state": "completed",
+  "study_type": "deterministic confirmatory apparatus qualification",
+  "terminal_disposition": "FALSIFIED",
+  "unit": "one persisted result per ordered probe, stop at first failure"
+}

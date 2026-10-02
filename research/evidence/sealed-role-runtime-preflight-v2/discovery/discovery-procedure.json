@@ -1,0 +1,20 @@
+{
+  "scope": "no-model configuration inspection only",
+  "not_decisive_qualification": true,
+  "commands": [
+    "generated schemas",
+    "config/read includeLayers",
+    "configRequirements/read",
+    "sandbox malformed-state parse diagnostics",
+    "sandbox true with diagnostic logging under clean and legacy settings"
+  ],
+  "filesystem_sentinel_reads": 0,
+  "candidate_not_yet_selected": true,
+  "forbidden": [
+    "thread/start",
+    "turn/start",
+    "exec model",
+    "debug send-message-v2",
+    "semantic roles"
+  ]
+}

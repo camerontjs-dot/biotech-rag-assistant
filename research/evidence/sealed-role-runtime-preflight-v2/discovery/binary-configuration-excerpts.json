@@ -1,0 +1,330 @@
+{
+  "binary_sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc",
+  "strings_exit_code": 0,
+  "excerpts": [
+    {
+      "keyword": "permission profile",
+      "excerpt": "# exceeds total permission profiles "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "'failed to resolve permission profiles: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "invalid permission profile: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "\"Failed to set permission profile: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "\"Failed to set permission profile `"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "0Failed to rebuild config for permission profile "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "Afailed to read effective config for selected permission profile: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": ":guardian review session could not set permission profile: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "9configured permission profile with valid network policy ("
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "(failed to serialize permission profile: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "1failed to serialize permission profile metadata: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "5Failed to carry forward permission profile override: "
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "': unsupported active permission profile"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "): unsupported active permission profile `"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "@temporary structured thread did not preserve permission profile "
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "uthRequiredInsufficientScopeReservedHeaderConflictSessionExpiredSessionRecoveryTimeoutControlRequestTimeoutoverflow adding duration to dateresulting value is out of rangeoverflow subtracting duration from datecommandttystream_stdinstream_stdout_stderrdisable_output_capdisable_timeouttimeout_mscwdenvsandbox_policypermission_profileCommandExecParamsPollImmediate polled after completioncodex_apps.failed to force-refresh tools for MCP server '"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy = excluded.sandbox_policy,"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "default_permissions` overrides cannot both be set`sandbox_mode` and `permission_profile` overrides cannot both be set`experimental_thread_store_endpoint` is no longer supported; remove it from config.tomlconfig defines `[permissions]` profiles but does not set `default_permissions`:workspacederived permission profile cannot be represented as a legacy sandbox policy; falling back to read-onlydefault approval policy is disallowed by requirements; falling back to required defaultdefault approvals reviewer is disallowed by requirements; falling back to required defaultfeatures.multi_agent_v2.max_concurrent_threads_per_session must be at least 1features.multi_agent_v2.min_wait_timeout_msfeatures.multi_agent_v2.max_wait_timeout_msfeatures.multi_agent_v2.default_wait_timeout_msmodel instructions "
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy = excluded.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "replacedreview_endedbudget_limitedcurrent_datesandbox_policyfile_system_sandbox_policyrealtime_activecyber_access_programW3cTraceContexttraceparenttracestatestartingThreadGoalStatusactivepausedusageLimitedbudgetLimitedusageturn_token_usagethread_token_usagetrace_idcollaboration_mode_kindimagesimage_detailslocal_imageslocal_image_detailswhole_iteminline_markdowninline_visualizationindexrealtime_session_startedtranscript_segmentbem_item_promotedpresentationrealtime_session_closedoutcomeendedassistantwrite_stdinGuardianRiskLevelcriticalopenai/"
+    },
+    {
+      "keyword": "file_system_sandbox_policy",
+      "excerpt": "replacedreview_endedbudget_limitedcurrent_datesandbox_policyfile_system_sandbox_policyrealtime_activecyber_access_programW3cTraceContexttraceparenttracestatestartingThreadGoalStatusactivepausedusageLimitedbudgetLimitedusageturn_token_usagethread_token_usagetrace_idcollaboration_mode_kindimagesimage_detailslocal_imageslocal_image_detailswhole_iteminline_markdowninline_visualizationindexrealtime_session_startedtranscript_segmentbem_item_promotedpresentationrealtime_session_closedoutcomeendedassistantwrite_stdinGuardianRiskLevelcriticalopenai/userVerificati"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "other_sourcessign_in_serverspending_headertranscript_hintStartupWarningsCellsandbox state cwd is not native to this host--sandbox-state-disable-network cannot be applied to a disabled permission profileWindows sandbox is only available on Windowssandbox command must not be emptySeatbelt command is missing its generated policy"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "led to load skills on startupdefault model and reasoning effortCyber models default to \"Approve for me\" for safety reasons.codex.windows_sandbox.fallback_prompt_showncodex.windows_sandbox.elevated_setup_duration_msFailed to set approval policyfailed to set approval policy on app configFailed to set permission profilefailed to set active permission profile on app configfailed to set permission profile on chat configplan_mode_reasoning_effortPlan mode reasoning effortE X E CEnvironment: Permission rule: P E R M I S S I O N SP A T C HE L I C I T A T I O NWait for the current task to finish before running /recap.failed to resolve dynamic tool callfailed to load older transcript historyNo compatible setup was found to import.To continue this session, run the selected thread is no longer availab"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": " terminals block /cd.Requested directory or permissions not applied.the effective config is overridden by a higher-priority layerfailed to update constrained feature flagsApprove for meFailed to enable Approve for mefailed to set auto-review approval policy on staged configfailed to set auto-review permission profile on staged configfailed to set auto-review permission profile on chat configfeature flag config write was overridden by effective configExperimental feature changesfailed to persist feature flagsmemory settings config write was overridden by effective configMemory setting changesfailed to persist memory settingsWait for the current turn to finish before changing permissions.Wait for the task to connect before selecting permissions.Named profiles require a newer app server.faile"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "tinue this chat. Review its latest status before trying again.This thread does not currently have a goal.Goal clearedclearUsage: /goal [<objective>|clear|edit|pause|resume]No goal is currently set.replacethis app server does not support confirmed permission changes; use /permissionsunknown built-in permission profileSubagentsmemory_tool"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "ephemeral tasks cannot create inspectable background tasksCannot inherit an external sandbox without a permission profilefailed to name background tasksame-directorysourceThreadIdcontinuationThe fork contains completed history only. If the source thread was running, the active turn and unfinished response are not in the child. Send a follow-up message to threadId only if the task requires work to continue there.turnStatuslatestItemIdturnCompletedinactiveStatus"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "ergoal_idevent_kindgoal_statuscumulative_tokens_accountedcumulative_time_accounted_secondsmodel_slughook_namehook_sourcehandler_typeexecution_modecodex_rs_versionruntime_osruntime_os_versionruntime_archroot_turn_idturn_triggercodex_turn_sourcesubmission_typeephemeralinitialization_modemodel_providersandbox_policyreasoning_summaryservice_tierapproval_policyapprovals_reviewerguardian_v2_enabledsandbox_network_accesscollaboration_modepersonalityworkspace_kindnum_input_imagesimage_preparationsis_first_turnexplicit_client_interrupt_requested_at_msturn_errorcodex_error_http_status_codesteer_counttotal_tool_call_countshell_command_countfile_change_countmcp_tool_call_countdynamic_tool_call_countsubagent_tool_call_countimage_generation_countinput_tokenscached_input_tokenscache_write_input_tokensout"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "ode` and `default_permissions` overrides cannot both be set`sandbox_mode` and `permission_profile` overrides cannot both be set`experimental_thread_store_endpoint` is no longer supported; remove it from config.tomlconfig defines `[permissions]` profiles but does not set `default_permissions`derived permission profile cannot be represented as a legacy sandbox policy; falling back to read-onlydefault approval policy is disallowed by requirements; falling back to required defaultdefault approvals reviewer is disallowed by requirements; falling back to required defaultfeatures.multi_agent_v2.max_concurrent_threads_per_session must be at least 1features.multi_agent_v2.min_wait_timeout_msfeatures.multi_agent_v2.max_wait_timeout_msfeatures.multi_agent_v2.default_wait_timeout_msmodel instructions "
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "UnlessTrustedOnRequestsandbox_approvalrulesskill_approvalrequest_permissionsmcp_elicitationsNevercwdapproval_policyapprovals_reviewersandbox_policyactive_permission_profilemodelmodel_providerservice_tiereffortsummarycollaboration_modepersonalityThreadSettingsWaitingOnApprovalWaitingOnUserInputActivePausedBlockedUsageLimitedBudgetLimitedtotalmodel_context_windowFsChangedNotificationchanged_pathsAutoReviewnetwork_accessExternalSandboxWorkspaceWritewritable_rootsexclude_tmpdir_env_varexclude_slash_tmptotal_tokensinput_tokenscached_input_tokenscache_write_input_tokensoutput_tokensreasoning_output_tokensTokenUsageBreakdownConfigur"
+    },
+    {
+      "keyword": "sandbox-state-meta",
+      "excerpt": "allow-unix-socketlog_denialsLOG_DENIALSWhile the command runs, capture macOS sandbox denials via `log stream` and print them after exitlog-denialsFull command args to run under seatbeltsandbox_state_jsonsandbox_state_readable_rootsandbox_state_disable_networkSANDBOX_STATE_JSONJSON value from `codex/sandbox-state-meta` to apply directlysandbox-state-jsonSANDBOX_STATE_READABLE_ROOTAdd a readable root to the supplied sandbox state. Repeat for multiple rootssandbox-state-readable-rootSANDBOX_STATE_DISABLE_NETWORKDisable direct network access in the supplied sandbox statesandbox-state-disable-networkfatal runtime error: thread result panicked on drop, aborting"
+    },
+    {
+      "keyword": "sandbox_state_json",
+      "excerpt": "kets rooted at this path. Relative paths are resolved against the current directory. Repeat to allow multiple pathsallow-unix-socketlog_denialsLOG_DENIALSWhile the command runs, capture macOS sandbox denials via `log stream` and print them after exitlog-denialsFull command args to run under seatbeltsandbox_state_jsonsandbox_state_readable_rootsandbox_state_disable_networkSANDBOX_STATE_JSONJSON value from `codex/sandbox-state-meta` to apply directlysandbox-state-jsonSANDBOX_STATE_READABLE_ROOTAdd a readable root to the supplied sandbox state. Repeat for multiple rootssandbox-state-readable-rootSANDBOX_STATE_DISABLE_NETWORKDisable direct network access in the supplied sandbox statesandbox-state-disable-networkfatal runtime error: thread result panicked on drop, aborting"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "default_permissions` overrides cannot both be set`sandbox_mode` and `permission_profile` overrides cannot both be set`experimental_thread_store_endpoint` is no longer supported; remove it from config.tomlconfig defines `[permissions]` profiles but does not set `default_permissions`:workspacederived permission profile cannot be represented as a legacy sandbox policy; falling back to read-onlydefault approval policy is disallowed by requirements; falling back to required defaultdefault approvals reviewer is disallowed by requirements; falling back to required defaultfeatures.multi_agent_v2.max_concurrent_threads_per_session must be at least 1features.multi_agent_v2.min_wait_timeout_msfeatures.multi_agent_v2.max_wait_timeout_msfeatures.multi_agent_v2.default_wait_timeout_msdefaultmodel instru"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "The parent turn's active permission profile denies reading these paths/globs. These are policy restrictions; do not approve escalation whose purpose is to read them."
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy = excluded.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "loaded exec policiesrulesexec policy rules loadedexec policy update semaphore closedcodex.turn.ttfm.duration_mscore.threads.livefailed to resolve parent transcript path for subagent hookapply_patchmanualautomcp_tool_hookcontinuingaborting operationcodex_appssandboxsandbox_policyread-onlyworkspace-writedanger-full-accessexternal-sandboxnoneseatbeltexternal"
+    },
+    {
+      "keyword": "sandbox-state-meta",
+      "excerpt": "codex/sandbox-state-meta"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "icy_amendmentrejectionabortthread_spawndepthtotal_token_usagelast_token_usagefullstateon-failurehas_creditsunlimitedbalanceend_ordinal_exclusiveend_byte_offsetmcp_toolused_percentwindow_minutesstartendgitTokenCountEventrate_limitsreplacedreview_endedbudget_limitedroot_turn_idcurrent_datefile_system_sandbox_policycomp_hashrealtime_activecyber_access_programeffortadditional_detailsactivepausedusageLimitedbudgetLimitedcompleteusageturn_token_usagethread_token_usagecollaboration_mode_kindimagesimage_detailslocal_imageslocal_image_detailslocal_audiotext_elementsclean_background_terminalsrealtime_conversation_startrealtime_conversation_audiorealtime_conversation_textrealtime_conversation_speechrealtime_conversation_closerealtime_conversation_list_voicesturn_inputrecover_turnsuspend_turn_and_shut"
+    },
+    {
+      "keyword": "file_system_sandbox_policy",
+      "excerpt": "tnetwork_policy_amendmentrejectionabortthread_spawndepthtotal_token_usagelast_token_usagefullstateon-failurehas_creditsunlimitedbalanceend_ordinal_exclusiveend_byte_offsetmcp_toolused_percentwindow_minutesstartendgitTokenCountEventrate_limitsreplacedreview_endedbudget_limitedroot_turn_idcurrent_datefile_system_sandbox_policycomp_hashrealtime_activecyber_access_programeffortadditional_detailsactivepausedusageLimitedbudgetLimitedcompleteusageturn_token_usagethread_token_usagecollaboration_mode_kindimagesimage_detailslocal_imageslocal_image_detailslocal_audiotext_elementsclean_background_terminalsrealtime_conversation_startrealtime_conversation_audiorealtime_conversation_textrealtime_conversation_speechrealtime_conversation_closerealtime_conversation_list_voicesturn_inputrecover_turnsuspend_t"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "equest.Optional short explanation for why additional permissions are needed.Environment id from <environment_context>. Omit to use the primary environment.request_permissionsRequest additional filesystem or network permissions from the user and wait for the client to grant a subset of the requested permission profile. Use environment_id to target a specific attached environment; omit it to use the primary environment. Relative filesystem paths resolve against the selected environment cwd. Granted permissions apply automatically to later shell-like commands in the current turn, or for the rest of the session if the client approves them at session scope.Shell command to execute."
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "_sampling_requestI need your input. Please respond in the app.I need your approval to continue. Please review the request in the app.turn_diff_display_rootsbuild_skills_and_pluginsrun_pre_sampling_compacttry_run_sampling_requestreceivingevent core/src/session/turn.rs:2286feedback_tagsapproval_policysandbox_policyauth_modestream_requestcodex.request.reasoning_effortgen_ai.usage.input_tokensgen_ai.usage.cache_read.input_tokensgen_ai.usage.cache_write.input_tokensgen_ai.usage.output_tokenscodex.usage.reasoning_output_tokenscodex.usage.total_tokensrun_hooks_and_record_inputsprepare_tool_recommendationsbuilt_tools.load_pluginsbuild_extension_turn_input_itemstrack_turn_resolved_config_analyticsinput_countevent core/src/session/turn.rs:199event core/src/session/turn.rs:638run_turn.collect_post_sa"
+    },
+    {
+      "keyword": "sandbox-state-meta",
+      "excerpt": "imeoutcachecodex.mcp.tools.list.duration_msinternal error: entered unreachable code: non-local stdio MCP servers resolve an environment before launchcodex/auth-changeinitialinternal error: entered unreachable code: Codex Apps fetch ticket requires cache contextcodex/tool-catalog-cachecacheablecodex/sandbox-state-metaMCP server startup failedlegacytriggercodex.apps.refresh.duration_msApps MCP startup reconnect failed; continuing with cached toolscodex.mcp.tools.fetch_uncached.duration_msMCP auth invalidation delivery failed; closing connectiongenerationownerGenerationnotifications/codex/authChanged"
+    },
+    {
+      "keyword": "sandbox-state-meta",
+      "excerpt": "ror: entered unreachable code: non-local stdio MCP servers resolve an environment before launchstart_server_taskcodex/auth-changeinitialcachecodex.mcp.tools.list.duration_msinternal error: entered unreachable code: Codex Apps fetch ticket requires cache contextcodex/tool-catalog-cachecacheablecodex/sandbox-state-metanew"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "# AGENTS.md instructions</INSTRUCTIONS><skill></skill>codex.memory.phase1.e2e_msskipped_no_candidatescodex.memory.phase1claimedcodex.memory.phase2skipped_retry_unavailableskipped_runningfailed_claimcodex.memory.phase2.e2e_msfailed_prepare_workspacefailed to get agent configfailed_sandbox_policyfailed_load_stage1_outputsfailed_sync_workspace_inputsfailed_workspace_statusPhase 2 no changessucceeded_no_workspace_changesfailed_workspace_diff_filefailed_spawn_agentevent memories/write/src/storage.rs:100codex_memories_write::storagememories/write/src/storage.rsMerged stage-1 raw memories (stable ascending thread-id order):"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": ".env_refresh_token_url_override_presentauth.request_idauth.cf_rayauth.errorauth.error_codeauth.agent_idauth.task_idstatuscodex.api_requestcodex.api_request.duration_msnoneevent otel/src/events/session_telemetry.rs:570provider_namereasoning_summarycontext_windowauto_compact_token_limitapproval_policysandbox_policymcp_serverscodex.conversation_starts, agent_messagereasoningfunction_callfunction_call_outputcustom_tool_call_outputtool_search_outputweb_search_callimage_generation_callcompactionconfiguration_updatecompaction_triggercontext_compactionotherevent otel/src/events/session_telemetry.rs:1012input_token_countoutput_token_countcached_token_countcache_write_token_countreasoning_token_countttft_msservice_tiermodel_reasoning_effortcodex.sse_eventresponse.completedevent otel/src/events/sessi"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "The active permission profile denies reading these paths/globs. Do not request escalation or additional permissions to read them; these denials are policy restrictions."
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "istoryPosition with 3 elementsstruct HookOutputEntry with 2 elementsused_percentwindow_minutesresets_atstruct RateLimitWindow with 3 elementsstruct ReviewLineRange with 2 elementsrate_limitsstruct TokenCountEvent with 2 elementsroot_turn_idworkspace_rootscurrent_dateapproval_policyapprovals_reviewersandbox_policypermission_profileactive_permission_profilenetworkfile_system_sandbox_policymodelcomp_hashpersonalitycollaboration_modemulti_agent_versionrealtime_activecyber_access_programeffortstruct TurnContextItem with 23 elementsbyte_rangeplaceholderstruct TextElement with 2 elementsdeveloper_instructionsstruct Settings with 3 elementsoptionsstruct AsyncUserInputQuestion with 2 elementsstruct FunctionCallOutputItem with 4 elementswritetimeout_msworking_directoryenvstruct LocalShellExecAction "
+    },
+    {
+      "keyword": "file_system_sandbox_policy",
+      "excerpt": "entsused_percentwindow_minutesresets_atstruct RateLimitWindow with 3 elementsstruct ReviewLineRange with 2 elementsrate_limitsstruct TokenCountEvent with 2 elementsroot_turn_idworkspace_rootscurrent_dateapproval_policyapprovals_reviewersandbox_policypermission_profileactive_permission_profilenetworkfile_system_sandbox_policymodelcomp_hashpersonalitycollaboration_modemulti_agent_versionrealtime_activecyber_access_programeffortstruct TurnContextItem with 23 elementsbyte_rangeplaceholderstruct TextElement with 2 elementsdeveloper_instructionsstruct Settings with 3 elementsoptionsstruct AsyncUserInputQuestion with 2 elementsstruct FunctionCallOutputItem with 4 elementswritetimeout_msworking_directoryenvstruct LocalShellExecAction with 5 elementsstruct variant ReasoningItemContent::Text with 1 "
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "workspace_rootscurrent_datetimezonesandbox_policynetworkfile_system_sandbox_policycomp_hashmulti_agent_moderealtime_activecyber_access_programstartingBemItemPresentationwhole_iteminline_markdowninline_visualizationindexRealtimeItemContentrealtime_session_startedtranscript_segmentbem_item_promotedpresentationrealtime_session_closedinternally tagged enum BemItemPresentationWholeItemInlineMarkdowninternally tagged enum RealtimeItemContentRealtimeSessionStarted"
+    },
+    {
+      "keyword": "file_system_sandbox_policy",
+      "excerpt": "workspace_rootscurrent_datetimezonesandbox_policynetworkfile_system_sandbox_policycomp_hashmulti_agent_moderealtime_activecyber_access_programstartingBemItemPresentationwhole_iteminline_markdowninline_visualizationindexRealtimeItemContentrealtime_session_startedtranscript_segmentbem_item_promotedpresentationrealtime_session_closedinternally tagged enum BemItemPresentationWholeItemInlineMarkdowninternally tagged enum RealtimeItemContentRealtimeSessionStarted"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "event rollout-trace/src/thread.rs:439event rollout-trace/src/thread.rs:442thread_idagent_pathtask_namenicknameagent_rolesession_sourcerollout_pathmodelprovider_nameapproval_policysandbox_policyevent rollout-trace/src/thread.rs:508event rollout-trace/src/thread.rs:468event rollout-trace/src/thread.rs:522"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy TEXT NOT NULL,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "rTryFromIntErrorErrorNotPresentNotUnicodeBUG: inner connection already taken!internal error: entered unreachable codeMap must not be polled after it returned `Poll::Ready`idrollout_pathcreated_atupdated_atsourceoriginatoragent_nicknameagent_roleagent_pathmodel_providermodelcwdcli_versiontitlepreviewsandbox_policyapproval_modetokens_usedfirst_user_messagearchived_atsectionproject_idgit_shagit_branchgit_origin_urlrecency_athistory_modethread_sourcesection_namesection_appearancesection_entered_at_msfullclosedall branches are disabled and there is no else branchmessage"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "urcethread_spawndepthtotal_token_usagelast_token_usagemodel_context_windowfullstateon-failurehas_creditsunlimitedbalanceend_ordinal_exclusiveend_byte_offsetmcp_toolused_percentwindow_minutesstartendgitTokenCountEventrate_limitsreplacedreview_endedbudget_limitedroot_turn_idworkspace_rootscurrent_datesandbox_policynetworkfile_system_sandbox_policycomp_hashrealtime_activecyber_access_programeffortadditional_detailsactivepausedusageLimitedbudgetLimitedcompleteusageturn_token_usagethread_token_usagecollaboration_mode_kindimagesimage_detailslocal_imageslocal_image_detailsaudiolocal_audiotext_elementsBemItemPresentationwhole_iteminline_markdowninline_visualizationindexRealtimeItemContentrealtime_session_startedtranscript_segmentbem_item_promotedpresentationrealtime_session_closedoutcomeinternally"
+    },
+    {
+      "keyword": "file_system_sandbox_policy",
+      "excerpt": "total_token_usagelast_token_usagemodel_context_windowfullstateon-failurehas_creditsunlimitedbalanceend_ordinal_exclusiveend_byte_offsetmcp_toolused_percentwindow_minutesstartendgitTokenCountEventrate_limitsreplacedreview_endedbudget_limitedroot_turn_idworkspace_rootscurrent_datesandbox_policynetworkfile_system_sandbox_policycomp_hashrealtime_activecyber_access_programeffortadditional_detailsactivepausedusageLimitedbudgetLimitedcompleteusageturn_token_usagethread_token_usagecollaboration_mode_kindimagesimage_detailslocal_imageslocal_image_detailsaudiolocal_audiotext_elementsBemItemPresentationwhole_iteminline_markdowninline_visualizationindexRealtimeItemContentrealtime_session_startedtranscript_segmentbem_item_promotedpresentationrealtime_session_closedoutcomeinternally tagged enum BemItemP"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy = excluded.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy = excluded.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    threads.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "    sandbox_policy = excluded.sandbox_policy,"
+    },
+    {
+      "keyword": "sandbox_policy",
+      "excerpt": "collaboration_modemodeldeveloper_instructionssandbox_policy"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "failed to carry forward approval policy overridefailed to carry forward permission profile overrideWait for permissions to update before changing permissions.config/read omitted memories after an overridden memory settings writePermission overrides are not supported when resuming a remote task.failed to sync effective feature state after an overridden writefailed to sync effective approval policy after an overridden writeloading older transcript history pageAttestation generation is not available in TUI.External current time is not available in TUI.Legacy patch appr"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "Searching the web  for the selected permission profile cannot be safely represented by the legacy app-server sandbox policy; select a named or legacy-compatible permission profile"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "Thread model is unavailable. Wait for the thread to finish syncing or choose a model before sending input. (Identical to Agent mode):workspaceOnly ask for actions detected as potentially unsafe.:danger-full-access:read-onlyNot available on this server.Current permission profile.permission-profilesUpdate Model PermissionsInternal error: missing the 'full-access' approval preset.Internal error: missing the 'auto' approval preset.Internal error: missing the 'read-only' approval preset.No permission profiles returned by the server."
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "on and verification.No approved plan availableYes, implement this planSwitch to Default and start coding.Yes, clear context and implementNo, stay in Plan modeContinue planning with the model.Fresh thread with this plan.isareReasoning shortcuts are disabled until startup completes.renaming...Loading permission profiles"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": " type to continuePress a number to chooseProject name (omitted when unavailable)Current machine hostname (omitted when unavailable)Open pull request number for the current branch (omitted when unavailable)Committed branch changes against the default branch (omitted when unavailable)Active permission profile or sandbox modeActive command approval modeTotal context window size in tokens (omitted when unknown)Estimated current-thread cost in USD (Enterprise workspaces only; omitted when unavailable)Whether raw scrollback mode is activeWorkspace notification headline (Enterprise workspaces only; omitted when unavailable)status-line-use-theme-colorsApply colors from the active /themeConfigure Status LineSelect which items to display in the status line.support.typestringmarkup.underlin"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "ive writerhistorymodehistory modeexcludeturnsexclude turnsthread/turns/listthread/items/listunknown variantunsupported variantinvalid enumthread/settings/updateevent tui/src/app_server_session.rs:267tui-permission-configtui-permission-requirementstui-permission-profilesThe server returned duplicate permission profiles.Permission discovery exceeded its pagination limit. Try /permissions again.Permission discovery timed out. Try /permissions again.Experimental feature pagination repeated a cursorExperimental feature discovery exceeded 10 pagesExperimental feature page exceeds requested limitExperimental feature discovery timed outExperimental feature request failedtui-experimental-save-readbacktui-experimental-feature-writeFeature discovery was interruptedFeatures were saved, but readback wa"
+    },
+    {
+      "keyword": "permission profile",
+      "excerpt": "dget/status_controls.rsevent tui/src/chatwidget/status_controls.rs:171event tui/src/chatwidget/status_controls.rs:121event tui/src/chatwidget/status_controls.rs:162event tui/src/chatwidget/input_submission.rs:130codex_tui::chatwidget::input_submissiontui/src/chatwidget/input_submission.rsConfigured permission profile.event tui/src/chatwidget/protocol_requests.rs:168codex_tui::chatwidget::protocol_requeststui/src/chatwidget/protocol_requests.rsevent tui/src/chatwidget/connector_mentions.rs:55codex_tui::chatwidget::connector_mentionstui/src/chatwidget/connector_mentions.rstui-luna-reserve"
+    }
+  ]
+}

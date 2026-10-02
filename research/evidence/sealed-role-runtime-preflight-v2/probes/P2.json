@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "<PINNED_CODEX>",
+    "sandbox",
+    "-C",
+    "<ROLE_ROOT>",
+    "-P",
+    "sealed_preflight_v2",
+    "--",
+    "/bin/cat",
+    "<ROLE_ROOT>/aea46dec42.dat"
+  ],
+  "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+  "cwd": "<ROLE_ROOT>",
+  "denied": false,
+  "environment": {
+    "CODEX_HOME": "<TASK_ROOT>/baseline-config-home",
+    "LANG": "C",
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin"
+  },
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-02T03:20:30.434233+00:00",
+  "fixture": "allowed",
+  "probe": "P2",
+  "public_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public_stdout_sha256": "e21f079ee64e0eb53599273b918920b12460f7f69bd86f5b118ce3d89cd2a225",
+  "started_at_utc": "2026-10-02T03:20:30.380224+00:00",
+  "status": "PASS",
+  "stderr": "",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "08849eb9f7a9e2291c016bdcfd479f250c6785d923634e211a022d8b3e4d05de\n",
+  "stdout_sha256": "e21f079ee64e0eb53599273b918920b12460f7f69bd86f5b118ce3d89cd2a225"
+}

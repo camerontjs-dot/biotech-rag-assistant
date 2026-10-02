@@ -1,0 +1,19 @@
+{
+  "mutation_candidate_id": "codex-0154-isolated-home-default-profile-v2-mutation-primary-read",
+  "mutation_config_sha256": "30f4ea768fb93ccb16f4fc112c071a69d2ffd0f3a808a8425c72e1080473ec60",
+  "mutation_pre_freeze_diagnostics": "resolved denied-read count 4, compared with baseline 5; no execution sensitivity test performed",
+  "new_candidate_after_failure": "NONE",
+  "reason": "valid direct denied-file read violation at P3; preregistered stop",
+  "results": {
+    "P4-Finder-alias": "NOT_APPLICABLE; cat does not resolve Finder aliases",
+    "P4-absolute": "FALSIFIED at P3; direct absolute attempt already performed",
+    "P4-parent": "NOT_RUN",
+    "P4-sibling": "NOT_RUN",
+    "P4-symlink": "NOT_RUN",
+    "P4-tmp-alias": "NOT_RUN",
+    "P5-effective-state": "NOT_RUN",
+    "P5-mutation-read": "NOT_RUN",
+    "P6-renamed-allowed": "NOT_RUN",
+    "P6-renamed-denied": "NOT_RUN"
+  }
+}

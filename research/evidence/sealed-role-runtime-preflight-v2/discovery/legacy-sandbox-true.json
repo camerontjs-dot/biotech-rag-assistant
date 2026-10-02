@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "<PINNED_CODEX>",
+    "sandbox",
+    "-C",
+    "<TASK_ROOT>/discovery/role",
+    "-P",
+    "discovery",
+    "--",
+    "/usr/bin/true"
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "LANG": "C",
+    "CODEX_HOME": "<TASK_ROOT>/discovery/legacy-home",
+    "RUST_LOG": "codex_core=trace,codex_cli=trace"
+  },
+  "started_at": "2026-10-02T02:49:59.906208+00:00",
+  "exit_code": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "classification": "non-sentinel configuration discovery"
+}

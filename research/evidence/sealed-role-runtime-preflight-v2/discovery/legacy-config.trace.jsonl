@@ -1,0 +1,1 @@
+{"direction": "request", "message": {"id": 1, "method": "initialize", "params": {"clientInfo": {"name": "runtime_preflight_discovery", "version": "1"}, "capabilities": {"experimentalApi": true}}}}

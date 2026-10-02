@@ -1,0 +1,17 @@
+{
+  "doctor_network_diagnostics": "non-model supervisor endpoint diagnostics occurred; P0 observed HTTP405/200 and unauthorized WebSocket401; no model request or generation",
+  "downstream_probes": "NOT_RUN",
+  "post_freeze_changes": "public-copy OS metadata sanitization only; original streams and all candidate files/config unchanged",
+  "pre_freeze_receipt_sha256": "869e76214eb61060e5f9f40806ff458fd0e74aee52ee9b88ec3681066c81d206",
+  "protected_payload_exposure": "NONE",
+  "repairs_after_valid_failure": 0,
+  "retries": 0,
+  "semantic_roles": "NOT_CREATED",
+  "valid_candidate_failure": {
+    "exact_denied_stdout_sha256": "f68c75554c5334e9fd7ed2f6fe8607a74d2ff998753da46adb521c9956e372eb",
+    "native_exit_code": 0,
+    "probe": "P3",
+    "result": "FALSIFIED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

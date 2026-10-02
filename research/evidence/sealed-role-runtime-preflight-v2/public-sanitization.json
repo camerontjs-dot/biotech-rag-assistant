@@ -1,0 +1,12 @@
+{
+  "P1_original_generated_public_receipt_sha256": "cacb7a11dc2fa95eddbb3735f153375ab26c579ff80a5817946967d4e091ee87",
+  "original_private_stdout_sha256": "bb44c74e26f920d28f7e61bad77d4aaf3e698494da98c3b566946144b0a033a9",
+  "probe_retries": 0,
+  "published_receipt_sha256": "55eb737ee1b1bf5b9e1a13c75bdba54bcd0f70ae4d650b22ae45feea0ccc9d2f",
+  "redactions": [
+    "logical path mapping in frozen runner",
+    "post-run public-copy OS user-encoding metadata redaction; original privately preserved"
+  ],
+  "scientific_streams": "original stdout/stderr remain byte-identical in private custody; P1 public copy has separately labeled hash",
+  "stage": "before first push, no source/configuration change"
+}

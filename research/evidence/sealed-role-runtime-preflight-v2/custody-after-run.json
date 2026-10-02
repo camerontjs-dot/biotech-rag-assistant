@@ -1,0 +1,13 @@
+{
+  "P2_exact_bytes": true,
+  "P3_exact_bytes": true,
+  "baseline_effective_fingerprint_match": true,
+  "baseline_mutation_config_hashes_checked": 2,
+  "binary_sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc",
+  "candidate_file_hashes_checked": 20,
+  "fixture_hashes_checked": 4,
+  "predecessor_file_hashes_checked": 35,
+  "source_or_configuration_repair_after_freeze": false,
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T03:32:35.957948+00:00"
+}

@@ -1,0 +1,65 @@
+{
+  "time": "2026-10-02T02:46:04.675946+00:00",
+  "binary_sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc",
+  "base_config_sha256": "6485c3cd77149e73df1a8559b9e4ac69f54a6116df0b09260777d0fe068ff31a",
+  "commands": [
+    {
+      "name": "version",
+      "argv": [
+        "<CODEX>",
+        "--version"
+      ],
+      "time": "2026-10-02T02:46:04.623193+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "5efa0283757c66156d45d082b4e2e8afb881de3a97862bc03aed7fb34f45df7b",
+      "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+    },
+    {
+      "name": "help",
+      "argv": [
+        "<CODEX>",
+        "--help"
+      ],
+      "time": "2026-10-02T02:46:04.634687+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "4abfbbaee583f6d8c3fa45fd751a138b2b8fdac68f651ac444aa36599629acb7",
+      "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+    },
+    {
+      "name": "sandbox-help",
+      "argv": [
+        "<CODEX>",
+        "sandbox",
+        "--help"
+      ],
+      "time": "2026-10-02T02:46:04.644227+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "6f07d12fb0614fbca21988b0e2a9165f33d341dbd0899728fcd3b67e19ac7660",
+      "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+    },
+    {
+      "name": "debug-help",
+      "argv": [
+        "<CODEX>",
+        "debug",
+        "--help"
+      ],
+      "time": "2026-10-02T02:46:04.653987+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "543c51e93af525eafdeb308da60f15fc92062f1e5ce3aed1b2edfb4debfdddeb",
+      "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+    },
+    {
+      "name": "app-server-help",
+      "argv": [
+        "<CODEX>",
+        "app-server",
+        "--help"
+      ],
+      "time": "2026-10-02T02:46:04.664497+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "95d290035d274e91e6f85b9af63e9a3fd2cf70a2295d9eedbfc23a2ee82d4383",
+      "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+    }
+  ]
+}

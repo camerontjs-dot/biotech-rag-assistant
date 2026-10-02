@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "<PINNED_CODEX>",
+    "sandbox",
+    "--sandbox-state-json",
+    "{\"permissionProfile\":{\"type\":\"restricted\"}}",
+    "--",
+    "/usr/bin/true"
+  ],
+  "timestamp": "2026-10-02T02:52:41.102606+00:00",
+  "exit_code": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "a7abdf68246f36a826286e97d927b17f79054a9024fdc577a8a2322197964bb8",
+  "classification": "parse-only configuration schema diagnostic"
+}

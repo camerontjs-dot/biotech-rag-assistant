@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "<CODEX>",
+    "app-server",
+    "generate-json-schema",
+    "--experimental",
+    "--out",
+    "<SCHEMA_OUTPUT>"
+  ],
+  "time": "2026-10-02T02:46:58.048448+00:00",
+  "exit_code": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "3087f13b0d34323fbc05177ef68ae53dc523d9acaf6c0c63852825479db5af2a"
+}

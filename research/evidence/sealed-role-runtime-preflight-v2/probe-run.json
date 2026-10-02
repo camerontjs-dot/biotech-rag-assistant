@@ -1,0 +1,36 @@
+{
+  "candidate_commit": "073d7c97a65f5f94a5c1b9277e9818101fb7d0c5",
+  "candidate_tree": "56073b675daeb7d9eb2fb5a7aa6ff29c7534816e",
+  "counts": {
+    "assessor_calls": 0,
+    "configuration_observations": 1,
+    "model_inference_requests": 0,
+    "project_generation_calls": 0,
+    "reducer_calls": 0,
+    "research_role_launches": 0,
+    "sandbox_invocations": 3
+  },
+  "finished_at_utc": "2026-10-02T03:20:30.800074+00:00",
+  "records": [
+    {
+      "probe": "P0",
+      "status": "PASS"
+    },
+    {
+      "probe": "P1",
+      "status": "PASS"
+    },
+    {
+      "probe": "P2",
+      "status": "PASS"
+    },
+    {
+      "probe": "P3",
+      "status": "FALSIFIED"
+    }
+  ],
+  "schema_version": "sealed-runtime-probe-run/v2",
+  "started_at_utc": "2026-10-02T03:20:16.613997+00:00",
+  "stop_policy": "first non-PASS; no repair, retry or later probe",
+  "terminal_disposition": "FALSIFIED"
+}

@@ -1,0 +1,61 @@
+{
+  "branch": "research/sealed-role-runtime-preflight-v2",
+  "candidate_commit": "073d7c97a65f5f94a5c1b9277e9818101fb7d0c5",
+  "candidate_id": "codex-0154-isolated-home-default-profile-v2",
+  "candidate_tree": "56073b675daeb7d9eb2fb5a7aa6ff29c7534816e",
+  "clean_checkout_verified": true,
+  "configuration_observation_limit": "actual loaded config and runtime-resolved doctor summary; compiled Seatbelt/kernel rule export unavailable",
+  "contamination": "not an independent semantic-role experiment; no clean role launched or forbidden research payload opened",
+  "context_exposed": [
+    "current task and prior supervisor conversation",
+    "root/MainFrame contracts and five announced skills",
+    "bounded memory registry preference block",
+    "two MindGraph nomination groups",
+    "live PR34/issue35/prepared ref",
+    "v1 runtime source and frozen receipts (35 hashes)",
+    "installed CLI help/generated protocol schemas/doctor/config API",
+    "current and initial excluded global config snapshots (private)",
+    "fresh synthetic fixture identities and hashes; bytes only generated/hashed in supervisor, no semantic corpus"
+  ],
+  "effective_stable_sha256": {
+    "baseline": "bb11797fceaf252544fe55b24d2107c97870ec20f711ac787fe9fc4a0240949a",
+    "mutation": "2935aafcc5c575affb675c0788cea87eb1dc3f84455e1c72e69493bbfa40cba9"
+  },
+  "exact_config_sha256": {
+    "baseline": "d0d349d345c0b25fa45df94f2eb2cf2139386c341587761d6515c487d77a213e",
+    "mutation": "30f4ea768fb93ccb16f4fc112c071a69d2ffd0f3a808a8425c72e1080473ec60"
+  },
+  "fixture_contents_in_command_or_environment": false,
+  "frozen_at_utc": "2026-10-02T03:19:55.973986+00:00",
+  "runtime_binary_sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc",
+  "schema_version": "sealed-runtime-freeze/v2",
+  "semantic_role_contexts": "NOT_CREATED",
+  "source_sha256": {
+    "CANDIDATE.json": "1c739b389d7e27bf3b0e1e8206e616f4de47d04d69953fde9d33f55e1b536bdf",
+    "PROTOCOL.json": "a19cb50dbb50698bd29929548015b06ce713136457824047f5712a83b629627d",
+    "README.md": "cdfeff2e4c070757983e39475dcfb9d4f7b97c6b7dff45e6471cb12a9d8c2c4e",
+    "adapter.py": "c08a452b117e4dc60208043db243b2d8ed1938d5ba8add38c5a2bb40808abdc9",
+    "authority.json": "3d9cf4c4a629bb23d30fe5cd47f4b9b35ec0eb0465338382b4f3016fd2aa084c",
+    "baseline-config.template.toml": "a4ee0565c5d433141757289fa1af8e19dd675b74d60fc5d6b213b761f5fb343d",
+    "candidate-selection.json": "dac6aefe112ecc9d3c8091a6875cae1cdca576d82c78b8e83562e339c6959161",
+    "configuration-discovery.json": "1f75be3ab503eb6c64c02d94870be58cb752ecf80c517833c451125ad52cad15",
+    "configuration.json": "795e7b0daaf2a3e8e3820c67026e23e243edc09f8352c7dcbe134a52c77b3c86",
+    "construction-checks.json": "59176ab8179b0084b549421c71b5f870f8e82eab56d76d8cf81a18506df8146f",
+    "custody-before-freeze.json": "d2d916f2ef9ca241b1dbb85f773181aa4adc4c5850e2763785e7a0cd641e3958",
+    "deviations-before-freeze.json": "869e76214eb61060e5f9f40806ff458fd0e74aee52ee9b88ec3681066c81d206",
+    "effective-prefreeze.json": "2c6af6eef80b400fe5e2d9d6aa6a1871098a91b60a84feac5871176049616836",
+    "environment.json": "0772053bd78845afba65fa647f5006ec991c7db82231ba2d1bf60175c49ce0e6",
+    "excluded-global-change.json": "1a53c5f2458eba8fa3be841d6f9f9a58cdd766972ece8edb325bdeaf60b95d18",
+    "fixtures.json": "54a729e50754c17292ece4e3231ec62c07eeeb4cd6889e85a8f4a3bda61add49",
+    "mutation-config.template.toml": "dc37b038c35599aa358dc6bb0493527ac119bef7bd523a64ff24e2036bd02fcf",
+    "run_probes.py": "b87f9ce7d73d55f4fbfe1fab2bad404d3c217bf5f83a40e0cf554dc483af71ca",
+    "source-review-before-freeze.json": "829a4164e3e7fdec38986ccfdcc6f573693f7627197132ef31acd55fcaa2f4a5",
+    "test_adapter.py": "94083711cfad152c5d2983a4a48bd7b3a3a3ee678aa1bc3c0774fc91e08a38d5"
+  },
+  "system_command_sha256": {
+    "/bin/cat": "1e238665b377c3ef21734890c783aa828cf912d175b90998b88276cefad0b25a",
+    "/bin/sh": "84ca7f9b83021621e16059a1c7850df72a462d879e8239d566236ca6ddd00953",
+    "/usr/bin/env": "2b2a1145527f00e8369fda0d2ffc523b520201bb08dbaf4b0bded837f7652ce0"
+  },
+  "working_root": "<ROLE_ROOT>"
+}
