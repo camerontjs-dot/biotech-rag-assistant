@@ -1,0 +1,280 @@
+{
+  "classification": {
+    "apparatus_failure": "NONE; hosted lint unrelated to filesystem-run apparatus",
+    "candidate_source_failure": "NONE_OBSERVED; no v2 lint diagnostic; candidate-local Ruff and 11 tests passed before freeze",
+    "inherited_frozen_evidence_lint": {
+      "affected_paths": [
+        {
+          "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/build_controls.py",
+          "predecessor_byte_identical": true,
+          "sha256": "421bc05030e1232659f627d254512884b9293566cfc64ff5624b7e585573048a"
+        },
+        {
+          "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/check_controls.py",
+          "predecessor_byte_identical": true,
+          "sha256": "ec6f4ef90beecd173dc2131cc9e594a1ffb3ebc6bf560f1b9294d1e9eccbfc39"
+        },
+        {
+          "path": "research/evidence/qualifier-grounding-offline-qualification-v2/fresh-controls/freeze_controls.py",
+          "predecessor_byte_identical": true,
+          "sha256": "5fb887b6cdf10a3f30414da33d016a0fe81c9a3a21143f61bbcff50865a8b5dd"
+        },
+        {
+          "path": "research/qualifier_grounding_reducer_v2/reducer.py",
+          "predecessor_byte_identical": true,
+          "sha256": "8b56889e84660db1fc93bc29ab7fabe7fcbc12706ee15be488daab8c76baf5f7"
+        },
+        {
+          "path": "research/qualifier_grounding_reducer_v2/test_reducer.py",
+          "predecessor_byte_identical": true,
+          "sha256": "da3d4616e8420c249aeda2495847a2219b03aa035dbf5dbb25930fc5dbec8f8b"
+        },
+        {
+          "path": "research/review_qualifier_grounding_v2_persisted.py",
+          "predecessor_byte_identical": true,
+          "sha256": "f2b9ca128aa7af0785ac1dbfe459fbeb43ee8c896f4e74520f8b41097805df9f"
+        },
+        {
+          "path": "research/run_qualifier_grounding_v2_once.py",
+          "predecessor_byte_identical": true,
+          "sha256": "72d88cad5d622fa2cc70decced828dbe7fc8a36e3cc9523f7e544d244370d6f6"
+        },
+        {
+          "path": "research/run_qualifier_offline_qualification.py",
+          "predecessor_byte_identical": true,
+          "sha256": "4fdd7f96d317423dd8d6522123fbc16a0f760c9ac39b053a556de8193f9488b6"
+        },
+        {
+          "path": "research/score_qualifier_grounding_v2_persisted.py",
+          "predecessor_byte_identical": true,
+          "sha256": "8ead917482c6ec465960029307d5297bc63547fe37dcfaa9a1fb7c7ab3b71b9a"
+        }
+      ],
+      "findings_per_python_job": 298,
+      "predecessor": "5449900a28a8a3c07af0b3fd2da4c9aa5b36643e"
+    },
+    "unrelated_repository_regression": "NONE_OBSERVED; static parity passed; pytest/compile/smoke skipped after lint"
+  },
+  "conclusion": "failure",
+  "event": "pull_request",
+  "frozen_artifact_repairs": 0,
+  "head_sha": "e074835101c010c0702cb31df846729720ccb36d",
+  "jobs": [
+    {
+      "conclusion": "success",
+      "id": 110696858849,
+      "name": "static demo JS==Python parity",
+      "runner_id": 1000008836,
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Install"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build + verify static demo"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job"
+        }
+      ]
+    },
+    {
+      "conclusion": "failure",
+      "id": 110696859099,
+      "name": "ruff + pytest (py3.12)",
+      "runner_id": 1000008837,
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Install"
+        },
+        {
+          "conclusion": "failure",
+          "name": "Lint"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Tests"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Compile"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Corpus smoke"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job"
+        }
+      ]
+    },
+    {
+      "conclusion": "failure",
+      "id": 110696859114,
+      "name": "ruff + pytest (py3.11)",
+      "runner_id": 1000008838,
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Install"
+        },
+        {
+          "conclusion": "failure",
+          "name": "Lint"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Tests"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Compile"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Corpus smoke"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job"
+        }
+      ]
+    },
+    {
+      "conclusion": "failure",
+      "id": 110696859157,
+      "name": "ruff + pytest (py3.13)",
+      "runner_id": 1000008839,
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Install"
+        },
+        {
+          "conclusion": "failure",
+          "name": "Lint"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Tests"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Compile"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Corpus smoke"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v5"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job"
+        }
+      ]
+    }
+  ],
+  "observed_at_utc": "2026-10-02T03:52:11.572000+00:00",
+  "raw_private_sha256": {
+    "ci-e074-jobs.json": "311856d076f375f5c35073e7a94fbeba6f2f9dd8cc41a5060be8d9f2ef86c016",
+    "ci-e074-run.json": "e0e356b46786a7da752b8a76b5e4e554f4360d8913df20f14cbd49af6fe7a1e0",
+    "ci-e074.log": "008a04efbcacb784df8c390022d6344941513b74d249b09d1b411e66a63c5643"
+  },
+  "reruns_requested": 0,
+  "run_id": 36961789314,
+  "scientific_disposition": "FALSIFIED by valid P3; CI cannot override",
+  "scope": "automatically triggered hosted CI; no manual dispatch; runtime/role qualification counts refer to supervised local task",
+  "status": "completed",
+  "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/36961789314"
+}

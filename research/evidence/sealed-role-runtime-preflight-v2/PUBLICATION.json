@@ -1,0 +1,98 @@
+{
+  "branch": "research/sealed-role-runtime-preflight-v2",
+  "candidate": {
+    "commit": "073d7c97a65f5f94a5c1b9277e9818101fb7d0c5",
+    "id": "codex-0154-isolated-home-default-profile-v2",
+    "tree": "56073b675daeb7d9eb2fb5a7aa6ff29c7534816e"
+  },
+  "ci": {
+    "artifact": "CI.json",
+    "classification": "298 inherited frozen-evidence lint findings per Python job; no v2 lint diagnostic; parity passed; pytest/compile/smoke skipped",
+    "run": 36961789314,
+    "scientific_effect": "none",
+    "sha256": "9a7286387e3b2ae3669ff1bfb823c5e3ffe87b3e0bbb34debd52e760e57761c5"
+  },
+  "draft_pr": {
+    "base": "research/sealed-role-runtime-preflight-v1",
+    "body_sha256": "612875a1f9af17ffddd2c01c9e1cf083da71b7e67018f3edf721069138ba484f",
+    "draft": true,
+    "head": "research/sealed-role-runtime-preflight-v2",
+    "merged_at": null,
+    "number": 36,
+    "state": "OPEN",
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/36"
+  },
+  "issue": {
+    "closed_at": "2026-10-02T03:54:42Z",
+    "closure_gate": "exact remote terminal commit/tree/bytes and both terminal comment bodies verified before close",
+    "number": 35,
+    "state": "CLOSED",
+    "state_reason": "completed",
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/35"
+  },
+  "predecessor": {
+    "evidence_bytes": "all unchanged",
+    "head": "5449900a28a8a3c07af0b3fd2da4c9aa5b36643e",
+    "merged_at": null,
+    "pr": 34,
+    "state": "CLOSED"
+  },
+  "private_delivery_artifact_sha256": {
+    "ci-e074-jobs.json": "311856d076f375f5c35073e7a94fbeba6f2f9dd8cc41a5060be8d9f2ef86c016",
+    "ci-e074-run.json": "e0e356b46786a7da752b8a76b5e4e554f4360d8913df20f14cbd49af6fe7a1e0",
+    "ci-e074.log": "008a04efbcacb784df8c390022d6344941513b74d249b09d1b411e66a63c5643",
+    "issue-closure-gate.json": "7a7e449378bc1398fb5dd69120241762617cfbb4a06f6aecaa4b88e1c8540856",
+    "issue35-closed.json": "1e4f1f8b2f2ac102c62d79fa4d9cab3795ce7c63c977eb80192f32c6ca636bc2",
+    "issue35-terminal-comment.json": "b5a7a1c7cd5591c407cb68c71254bee18ddd53a15e1a95839a04f14ccdefa517",
+    "pr-body.md": "612875a1f9af17ffddd2c01c9e1cf083da71b7e67018f3edf721069138ba484f",
+    "pr34-after-terminal.json": "d38cb761c5f629bcae68cd6db81e0f7ba6d009dc7c5ad85e65991738b0f3fedb",
+    "pr36-before-publication-commit.json": "329c50d8f65ce86b132f55b0911ab94cf1f4b357cfb945455db83d69eb825e0b",
+    "pr36-created.json": "343435078c12cd720a404e408c8d3260c21999ee044517a7fe6a528e7041b1a1",
+    "pr36-terminal-comment.json": "d66541c6352b987b8375620e9b6c88d88f0d920184f56e19d81abe1559c46131",
+    "terminal-comment.md": "c093d5afcf96912ae68531df5075a66db51cc52c114df06cc4b805e65c1d2b97",
+    "terminal-commit-remote.json": "0095e507d002021d21dc222ff223aa77adf209c7c49007c32ce81d3e0b2095ed",
+    "terminal-remote.json": "3f49752461c541d602b903857682e3174aaf5dd07d187c37234f40ebcc43882e"
+  },
+  "protected_boundary": {
+    "Wave_B": "LOCKED",
+    "assessor_calls": 0,
+    "merged": false,
+    "project_generation_calls": 0,
+    "promotion": false,
+    "reducer_calls": 0,
+    "release": false,
+    "runtime_model_inference_requests": 0,
+    "semantic_roles": 0
+  },
+  "publication_commit_binding": "this append-only delivery receipt is a successor to the terminal commit; final publication commit/tree verified externally after push, avoiding a self-referential hash",
+  "publication_deviations": {
+    "cli_help_whitespace": "17 findings retained; other staged bytes pass whitespace check",
+    "initial_commit": "privacy-pattern false positive on slash-separated prose; original metadata retained privately, no commit created, no source/config change",
+    "post_freeze_repair": 0,
+    "retries": 0
+  },
+  "recorded_at_utc": "2026-10-02T03:57:13.855711+00:00",
+  "schema_version": "sealed-runtime-publication/v2",
+  "scientific_terminal": "FALSIFIED",
+  "terminal": {
+    "artifact": "research/evidence/sealed-role-runtime-preflight-v2/TERMINAL.json",
+    "artifact_count": 102,
+    "commit": "e074835101c010c0702cb31df846729720ccb36d",
+    "sha256": "f5d70458aa927dc88a26f5e1a4c1220bdcc8f03b2232a304598db9619b130ec6",
+    "tree": "f1cc4c49ee74ade261161d5c49a146570295a9f2"
+  },
+  "terminal_delivery": [
+    {
+      "body_sha256": "c093d5afcf96912ae68531df5075a66db51cc52c114df06cc4b805e65c1d2b97",
+      "created_at": "2026-10-02T03:53:38Z",
+      "id": 5945302994,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/36#issuecomment-5945302994"
+    },
+    {
+      "body_sha256": "c093d5afcf96912ae68531df5075a66db51cc52c114df06cc4b805e65c1d2b97",
+      "created_at": "2026-10-02T03:53:48Z",
+      "id": 5945304746,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/35#issuecomment-5945304746"
+    }
+  ]
+}
