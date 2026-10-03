@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system administrator updated the firewall rules at 09:00 UTC."
+        }
+      ],
+      "claim": "The system administrator updated the firewall rules at 09:00 UTC.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_07"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "This anchor is an explicit event misbinding opportunity. The claim asserts a specific actor (system administrator) performing a specific action (updating firewall rules). The BODY supports this exact event. Invariance variants will rename the actor or reorder sentences without changing truth conditions. Mutation variants will swap the actor to a different entity not mentioned in the BODY, test bindings_preserved guard.",
+      "category": "event_misbinding",
+      "contrast_anchors": [],
+      "guard_opportunities": [
+        {
+          "guard": "bindings_preserved",
+          "value": "FALSE"
+        }
+      ],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_07"
+    }
+  ],
+  "relations": []
+}
