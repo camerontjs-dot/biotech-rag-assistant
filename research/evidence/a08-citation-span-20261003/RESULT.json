@@ -1,0 +1,84 @@
+{
+  "arm_a": {
+    "char_end": 414,
+    "char_start": 366,
+    "characters": 48,
+    "name": "historical_quote",
+    "text": "both operations and QA sign the clearance record"
+  },
+  "arm_b": {
+    "char_end": 415,
+    "char_start": 339,
+    "characters": 76,
+    "name": "smallest_authorized_sentence_containing_quote",
+    "selection_rule": "shortest sentence inside the frozen admitted body that contains the historical quote; earliest sentence wins a length tie",
+    "text": "The run cannot start until both operations and QA sign the clearance record."
+  },
+  "base_commit": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+  "case_id": "A08-line-clearance-signatories",
+  "claim": "Both operations and QA must sign the clearance record before the run starts.",
+  "disposition": "BOUNDED_CITATION_SPAN_EXPANSION_SUPPORTED",
+  "disposition_basis": "Arm B is the only sentence in the frozen N/P body that contains the historical quote. PR #20's counterevidence says that quote omitted part of this supporting conditional sentence while N/P retained the full condition. Widening the quote to that sentence closes the named omission without a new source, heading, or semantic model call.",
+  "execution": {
+    "command": "PYTHONPATH=. pytest tests/test_a08_citation_span.py -q",
+    "model_calls": 0,
+    "not_run": [
+      "semantic model adjudication",
+      "provider request"
+    ],
+    "result": "3 passed"
+  },
+  "experiment_id": "a08-citation-span-20261003",
+  "falsifiers": {
+    "cannot_distinguish_citation_from_packet": false,
+    "expansion_leaves_quote_ambiguous_inside_body": false,
+    "imports_heading_semantics": false,
+    "requires_new_packet_evidence": false,
+    "source_identity_changed": false
+  },
+  "held_fixed": {
+    "body_char_end": 415,
+    "body_char_start": 213,
+    "body_sha256": "63862db672948bf58b3953214d486506458219ef31401dbc9a2323746181bab2",
+    "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+    "claim": "Both operations and QA must sign the clearance record before the run starts.",
+    "doc_id": "SOP-OPS-007",
+    "heading_policy": "ADR-018",
+    "packet_id": "ep1:ea3928728472273819f3c6183683da95690b1bb012d514adfb9b9ce7d4086397",
+    "retrieval_baseline": "BM25_UNCHANGED",
+    "source_sha256": "ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+    "status": "Approved",
+    "version": "1.2"
+  },
+  "inherited_judgment": {
+    "counterevidence": "The selected quote is an exact substring of the supporting conditional sentence, so the omission is at Q; N/P retain the full condition.",
+    "n": "SUPPORTED",
+    "p": "SUPPORTED",
+    "q": "OVER_BROAD",
+    "source": "PR #20 wave-a-ep1-authority-readjudication",
+    "terminal": "CITATION_SPAN_INSUFFICIENCY"
+  },
+  "model_calls": 0,
+  "nonclaims": [
+    "Does not establish general semantic entailment.",
+    "Does not re-judge the modality paraphrase already accepted at N/P.",
+    "Does not support packet expansion, Wave B, CAL, or production generation.",
+    "Does not show the selector is safe for every other quote."
+  ],
+  "observations": {
+    "added_prefix": "The run cannot start until ",
+    "added_suffix": ".",
+    "added_text": "The run cannot start until .",
+    "arm_a_exact_substring_of_arm_b": true,
+    "arm_b_contained_in_frozen_supported_body": true,
+    "arm_b_equals_document_slice": true,
+    "character_increase": 28,
+    "heading_imported": false,
+    "new_source_required": false,
+    "packet_membership_changed": false,
+    "quote_occurrences_in_body": 1,
+    "source_identity_changed": false
+  },
+  "protocol_commit": "518a3795381e00780d84d58c13b8ca0c8f8449ee",
+  "semantic_oracle": "NONE_NEW"
+}
