@@ -1,0 +1,31 @@
+{
+  "schema_version": "semantic-control-memory-ceiling-correction/v1",
+  "replaces_signal": "cumulative Swapouts greater than zero",
+  "reason": "During author-20 the counter moved from 0 to 16 while swap in use was 0.25MB, free memory was 36%, and qwen3.5:9b stayed at 6.1GB with context 16384. The counter cannot clear, so the old rule would refuse every later call on a healthy machine.",
+  "unchanged": {
+    "only_model": "qwen3.5:9b",
+    "num_ctx_at_most": 16384,
+    "do_not_start_if_free_percentage_below": 50,
+    "unload_if_free_percentage_below": 25,
+    "unload_if_resident_gb_at_least": 12,
+    "unload_if_reported_context_above": 16384,
+    "forbidden_models": ["qwen3-coder:30b", "qwen3:14b", "qwen2.5-coder:14b"]
+  },
+  "replacement_swap_rule": {
+    "measure": "vm.swapusage used mebibytes, not the Swapouts counter",
+    "unload_if_swap_used_mb_at_least": 512
+  },
+  "completed_request_path_passes": [
+    "author-03",
+    "author-04",
+    "author-05",
+    "author-06",
+    "author-07",
+    "author-08",
+    "author-13",
+    "author-14",
+    "author-17",
+    "author-19"
+  ],
+  "not_a_semantic_disposition": true
+}
