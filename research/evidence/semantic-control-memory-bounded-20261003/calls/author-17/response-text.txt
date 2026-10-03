@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system administrator reviewed the logs and found no errors."
+        }
+      ],
+      "claim": "The system administrator reviewed the logs and found no errors.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_17"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "Witness silence: relevant topic but no assertion or denial of the material obligation.",
+      "category": "witness_silence",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_17"
+    }
+  ],
+  "relations": []
+}
