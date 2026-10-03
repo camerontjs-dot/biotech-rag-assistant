@@ -1,0 +1,2 @@
+# Local model inventory includes unrelated machine paths. The receipt keeps the hash.
+calls/*/models-discovery.raw.json
