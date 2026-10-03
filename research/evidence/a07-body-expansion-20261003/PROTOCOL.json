@@ -1,0 +1,52 @@
+{
+  "experiment_id": "a07-body-expansion-20261003",
+  "issue": 43,
+  "parent_issue": 39,
+  "status": "PREREGISTERED",
+  "base_commit": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+  "question": "Can a bounded same-section BODY expansion supply A07's missing material proposition without weakening the authority boundary?",
+  "claim": "The analyst uses two traceable weights for the daily balance check.",
+  "missing_proposition": "daily balance check",
+  "inherited_pr20": {
+    "q": "OVER_BROAD",
+    "n": "OVER_BROAD",
+    "p": "OVER_BROAD",
+    "terminal": "PACKET_LEVEL_GROUNDING_DEFECT",
+    "qualifier_present_in_authorized_body": false,
+    "qualifier_present_in_excluded_heading": true
+  },
+  "held_fixed": [
+    "BM25 baseline",
+    "exact query and case",
+    "source document authority",
+    "Effective status",
+    "current-version identity",
+    "EvidencePacket provenance",
+    "ADR-018 heading policy"
+  ],
+  "factor": "additional authorized same-section BODY text only",
+  "arms": {
+    "historical": "frozen N body, document offsets 55:240",
+    "candidate": "entire Daily check section body",
+    "negative_control": "nearby section sentence that does not state the missing proposition",
+    "authority_trap": "held-out CAL-0507 and obsolete SOP-EN-044"
+  },
+  "semantic_oracle": "NONE_NEW",
+  "model_calls_planned": 0,
+  "execution": "deterministic section-boundary and admission check; no provider call",
+  "falsifiers": [
+    "support comes only from the heading",
+    "stale or held-out text is admitted",
+    "negative control states the missing proposition",
+    "source identity cannot be reconstructed",
+    "retrieval or reranking also changes"
+  ],
+  "nonclaims": [
+    "heading-semantic grant",
+    "the daily-check fact is false",
+    "retrieval promotion",
+    "CAL",
+    "Wave B",
+    "packet-expansion implementation"
+  ]
+}
