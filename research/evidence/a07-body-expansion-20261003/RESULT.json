@@ -1,0 +1,109 @@
+{
+  "authority_trap": {
+    "authorized_span_admitted": true,
+    "held_out": {
+      "corpus": "benchmarks/controlled-docs-v2.1",
+      "doc_id": "CAL-0507",
+      "role": "held_out_other_document",
+      "source_commit": "600115f9590fb9e7d76cd90fc0171c35afd06905",
+      "source_sha256": "d2b05af8e2ee57afe760f24ef1563617a339fd738bd9ef1eb097820b757e3691",
+      "span": "Daily balance checks are logged on FRM-QC-141.",
+      "span_char_end": 504,
+      "span_char_start": 458,
+      "status": "Effective",
+      "version": "2.0"
+    },
+    "held_out_admitted": false,
+    "stale": {
+      "corpus": "benchmarks/controlled-docs-v2.1",
+      "doc_id": "SOP-EN-044",
+      "role": "stale_status_trap",
+      "source_commit": "600115f9590fb9e7d76cd90fc0171c35afd06905",
+      "source_sha256": "70a6e81aada422d613316f7f2b68782352750fc20eccef52a1f9f6be9ff6cbe3",
+      "status": "Obsolete",
+      "version": "1.0"
+    },
+    "stale_admitted": false
+  },
+  "base_commit": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+  "candidate": {
+    "characters": 185,
+    "characters_added": 0,
+    "proposition_present": false,
+    "rule": "entire same-section body under the authorized heading",
+    "spans_added": 0,
+    "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service."
+  },
+  "case_id": "A07-balance-weight-count",
+  "claim": "The analyst uses two traceable weights for the daily balance check.",
+  "disposition": "SAME_SECTION_BODY_EXPANSION_NOT_SUPPORTED",
+  "disposition_basis": "The authorized Daily check section body is byte-identical to the historical aperture. That text does not contain the frozen missing proposition. No same-section body remains to add. The heading is excluded. Held-out CAL-0507 and obsolete SOP-EN-044 are not admitted.",
+  "execution": {
+    "command": "PYTHONPATH=. pytest tests/test_a07_packet_body.py -q",
+    "model_calls": 0,
+    "not_run": [
+      "semantic model adjudication",
+      "heading-semantic grant",
+      "provider request"
+    ],
+    "result": "3 passed"
+  },
+  "experiment_id": "a07-body-expansion-20261003",
+  "falsifiers": {
+    "negative_control_states_proposition": false,
+    "retrieval_or_reranker_changed": false,
+    "source_identity_unreconstructed": false,
+    "stale_or_held_out_admitted": false,
+    "supported_only_by_heading": false
+  },
+  "heading": {
+    "added_text_excluded_heading": true,
+    "contains_daily_token": true,
+    "proposition_equals_heading": false,
+    "text": "Daily check",
+    "used_as_support": false
+  },
+  "held_fixed": {
+    "chunk_id": "CAL-ENG-005_v1_0_chunk_001",
+    "claim": "The analyst uses two traceable weights for the daily balance check.",
+    "doc_id": "CAL-ENG-005",
+    "heading_policy": "ADR-018",
+    "packet_id": "ep1:d593fa9971cf114ba0b3b6b091e5228d0d7a758b6d35be206df1854436264865",
+    "retrieval_baseline": "BM25_UNCHANGED",
+    "source_sha256": "68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+    "status": "Effective",
+    "version": "1.0"
+  },
+  "historical_body": {
+    "char_end": 240,
+    "char_start": 55,
+    "characters": 185,
+    "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service."
+  },
+  "inherited_judgment": {
+    "missing_proposition": "daily balance check",
+    "n": "OVER_BROAD",
+    "p": "OVER_BROAD",
+    "q": "OVER_BROAD",
+    "qualifier_present_in_authorized_body": false,
+    "qualifier_present_in_excluded_heading": true,
+    "source": "PR #20 wave-a-ep1-authority-readjudication",
+    "terminal": "PACKET_LEVEL_GROUNDING_DEFECT"
+  },
+  "model_calls": 0,
+  "negative_control": {
+    "next_section_admitted": false,
+    "next_section_text": "Engineering reviews the failure, QA assesses product impact, and the owning lab documents whether any results generated since the last passing check need review.",
+    "note": "The section has no unused body. The second sentence is already inside the historical aperture and does not state the missing proposition. The following section was not admitted.",
+    "states_missing_proposition": false,
+    "text": "The analyst verifies the balance with two traceable weights before use. If either weight falls outside the acceptance range, the analyst stops use and labels the balance out of service."
+  },
+  "nonclaims": [
+    "Does not test an explicit heading-semantic grant.",
+    "Does not show the daily-check fact is false in the source document.",
+    "Does not change retrieval, reranking, CAL, or Wave B.",
+    "Does not implement packet expansion."
+  ],
+  "protocol_commit": "9d922a3dc22a1008f4979c699be010cef0bc5b10",
+  "semantic_oracle": "NONE_NEW"
+}

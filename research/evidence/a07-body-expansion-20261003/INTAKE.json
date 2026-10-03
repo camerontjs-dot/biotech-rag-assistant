@@ -1,0 +1,85 @@
+{
+  "base_commit": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+  "collection_nominations": [
+    "biotech-rag grounding",
+    "packet-completeness"
+  ],
+  "evidence_room_issue": 47,
+  "evidence_room_repo": "camerontjs-dot/the-evidence-room",
+  "execution_attempts": [
+    {
+      "model_calls": 0,
+      "name": "deterministic section-body check",
+      "outcome": "3 passed"
+    }
+  ],
+  "experiment_id": "a07-body-expansion-20261003",
+  "issue": 43,
+  "limitations": [
+    "No unused sentence exists inside the Daily check section.",
+    "The heading contains the token daily and was not granted semantic force."
+  ],
+  "machine_result": "SAME_SECTION_BODY_EXPANSION_NOT_SUPPORTED",
+  "mutated_promoted_baseline": false,
+  "non_executions": [
+    "heading-semantic grant",
+    "new model adjudication",
+    "CAL",
+    "retrieval rerun",
+    "Wave B"
+  ],
+  "nonclaims": [
+    "Does not test an explicit heading-semantic grant.",
+    "Does not show the daily-check fact is false in the source document.",
+    "Does not change retrieval, reranking, CAL, or Wave B.",
+    "Does not implement packet expansion."
+  ],
+  "protocol_commit": "9d922a3dc22a1008f4979c699be010cef0bc5b10",
+  "relations": [
+    {
+      "target": "biotech-rag-assistant PR #20",
+      "type": "uses_frozen_judgment"
+    },
+    {
+      "target": "A08 citation-span experiment",
+      "type": "independent_of"
+    },
+    {
+      "target": "explicit heading-semantic grant",
+      "type": "successor_not_executed"
+    }
+  ],
+  "schema_version": "evidence-room-intake-ready/v1",
+  "semantic_review": "candidate text is byte-identical to the PR #20 OVER_BROAD body; no new semantic oracle",
+  "source_access_identities": {
+    "authorized": {
+      "doc_id": "CAL-ENG-005",
+      "source_sha256": "68992780e0d5982f28afa29766ce610e9eb6fcf777c559349b3edc5417ff73d4",
+      "status": "Effective",
+      "version": "1.0"
+    },
+    "held_out": {
+      "corpus": "benchmarks/controlled-docs-v2.1",
+      "doc_id": "CAL-0507",
+      "role": "held_out_other_document",
+      "source_commit": "600115f9590fb9e7d76cd90fc0171c35afd06905",
+      "source_sha256": "d2b05af8e2ee57afe760f24ef1563617a339fd738bd9ef1eb097820b757e3691",
+      "span": "Daily balance checks are logged on FRM-QC-141.",
+      "span_char_end": 504,
+      "span_char_start": 458,
+      "status": "Effective",
+      "version": "2.0"
+    },
+    "stale": {
+      "corpus": "benchmarks/controlled-docs-v2.1",
+      "doc_id": "SOP-EN-044",
+      "role": "stale_status_trap",
+      "source_commit": "600115f9590fb9e7d76cd90fc0171c35afd06905",
+      "source_sha256": "70a6e81aada422d613316f7f2b68782352750fc20eccef52a1f9f6be9ff6cbe3",
+      "status": "Obsolete",
+      "version": "1.0"
+    }
+  },
+  "source_repository": "camerontjs-dot/biotech-rag-assistant",
+  "status": "STAGED_NOT_PROMOTED"
+}
