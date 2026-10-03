@@ -1,0 +1,47 @@
+{
+  "experiment_id": "a08-citation-span-20261003",
+  "issue": 42,
+  "parent_issue": 39,
+  "status": "PREREGISTERED",
+  "base_commit": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+  "question": "Does changing only the authorized citation span make the exact A08 claim citation-sufficient?",
+  "claim": "Both operations and QA must sign the clearance record before the run starts.",
+  "historical_quote": "both operations and QA sign the clearance record",
+  "inherited_pr20": {
+    "q": "OVER_BROAD",
+    "n_p": "SUPPORTED",
+    "terminal": "CITATION_SPAN_INSUFFICIENCY",
+    "counterevidence": "The selected quote is an exact substring of the supporting conditional sentence, so the omission is at Q; N/P retain the full condition."
+  },
+  "held_fixed": [
+    "exact claim",
+    "case and query",
+    "EvidencePacket membership",
+    "source document chunk identity and hash",
+    "BM25 baseline",
+    "authority and status gates",
+    "ADR-018 heading policy"
+  ],
+  "factor": "citation span inside the already admitted body",
+  "arms": {
+    "A": "historical quote",
+    "B": "shortest sentence in the frozen admitted body that contains the historical quote"
+  },
+  "semantic_oracle": "NONE_NEW",
+  "model_calls_planned": 0,
+  "execution": "deterministic source-offset check; no provider call",
+  "falsifiers": [
+    "new packet evidence required",
+    "heading semantics imported",
+    "source identity changes",
+    "quote is ambiguous inside the body",
+    "citation insufficiency cannot be separated from packet insufficiency"
+  ],
+  "nonclaims": [
+    "general semantic entailment",
+    "packet expansion",
+    "Wave B",
+    "CAL",
+    "production generation"
+  ]
+}
