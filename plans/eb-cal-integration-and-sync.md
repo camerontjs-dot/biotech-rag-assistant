@@ -29,6 +29,29 @@ The contract boundary is unchanged: EB/CAL sit at the ingest and answer-groundin
 deterministic trust controls (status gating, citation validation, refusal, current-version
 invariant, audit) remain this asset's own. ADR-001's "local controlled-document models" still hold.
 
+## Current semantic-integration stop — 2026-10-03
+
+CAL is **not currently eligible** to serve as this project's semantic-grounding auditor.
+
+Live pressure evidence in `camerontjs-dot/claim-audit-lab` preserves a critical semantic falsifier
+against convergence candidate #186: a positive comparison claim was returned `supported` from
+admitted evidence containing explicit negation. Pressure PR #189 records
+`PRESSURE_FALSIFIED_CRITICAL_SEMANTIC_FAILURE`.
+
+Therefore CAL is blocked by more than tag/release maturity. Before CAL can be wired here:
+
+1. CAL needs a separately identified, independently qualified semantic successor that clears the
+   relevant negation failure; and
+2. Biotech RAG needs its own bounded integration experiment showing CAL preserves EvidencePacket
+   authority, material-qualifier, citation-span, NOT_RUN and refusal distinctions.
+
+Do not use current CAL to resolve the open A07/A08 grounding experiments. Those are governed by
+[the Evidence Room-guided grounding plan](evidence-room-guided-semantic-grounding.md) and issues
+#39/#41/#42/#43.
+
+This stop does not revoke the long-term ADR-015 direction. It records that current evidence does
+not satisfy the execution gate.
+
 ## Concrete steps (when gates clear)
 
 1. Confirm the public owner and Pages source. This gate is cleared for
