@@ -1,0 +1,77 @@
+{
+  "schema_version": "semantic-control-memory-bounded-protocol/v1",
+  "experiment_id": "semantic-control-memory-bounded-20261003",
+  "issue": 41,
+  "parent_issue": 39,
+  "status": "PREREGISTERED_PREFLIGHT_6",
+  "base_commit": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+  "preserved_terminal": "research/semantic-adjudication-request-bound-v2",
+  "question": "Can the frozen PR #30 author corpus be recovered on this machine without repeating the PR #38 timeout or the context allocation that crashed the host?",
+  "held_fixed": [
+    "PR #30 rubric, categories, 44 slots, A/B semantics, reconciliation thresholds, and the v2 reducer contract",
+    "PR #38 bytes, including its APPARATUS_INVALID terminal record",
+    "request-bound runner research/run_semantic_request_once.py",
+    "frozen 28-group author partition and the committed author-03 spec"
+  ],
+  "changed_factors": [
+    "provider version 0.34.4 to 0.35.1",
+    "model qwen3-coder:30b to qwen3.5:9b",
+    "num_ctx 65536 to 16384",
+    "num_predict 16384 to 1024 for this one budget call",
+    "timeout_seconds 1800 to 420 for this one budget call"
+  ],
+  "not_changed": [
+    "partition layout",
+    "author-03 spec bytes",
+    "temperature, top_k, top_p, repeat_penalty, and seed 37030"
+  ],
+  "memory_ceiling": {
+    "memsize_bytes": 25769803776,
+    "only_model": "qwen3.5:9b",
+    "num_ctx_at_most": 16384,
+    "unload_if_free_percentage_below": 25,
+    "unload_if_resident_gb_at_least": 12,
+    "unload_if_swapouts_above": 0,
+    "unload_if_reported_context_above": 16384,
+    "reason": "PR #38's 30B request at num_ctx 65536 produced no author response. A later 14B load at a larger context preceded a host crash. This successor does not reload either model."
+  },
+  "preflight": {
+    "1_pr30_hashes": "inherited from the base commit's apparatus freeze; rechecked by the runner before the call",
+    "2_provider_process": "one new HTTP request through the frozen runner; keep_alive 0",
+    "3_request_aperture": "serialized spec plus pinned config; no tools, repo, filesystem, or prior role output in the request",
+    "4_runtime_identity": "author-config.json",
+    "5_structured_canary": "PASS; see CAPACITY.json canary. Response was {\"ready\": true}.",
+    "6_output_budget": "NOT_RUN. The single authorized call is author-03.",
+    "7_decisive_schedule": "NOT_FROZEN. No further author request is authorized by this file."
+  },
+  "authorized_call": {
+    "id": "author-03-budget",
+    "spec": "research/evidence/semantic-adjudication-request-bound-v2/requests/author-03.spec.json",
+    "partition": "author-03",
+    "slots": ["anchor_03"],
+    "relation_slots": [],
+    "config": "research/evidence/semantic-control-memory-bounded-20261003/author-config.json",
+    "runner": "research/run_semantic_request_once.py",
+    "calls": 1,
+    "retries": 0,
+    "semantic_use": "NONE. The receipt estimates output tokens and records truncation, malformation, or timeout. It does not accept the case."
+  },
+  "stop_rules": [
+    "If resident size, free memory, swap, or reported context crosses the ceiling, unload the model and record APPARATUS_INVALID for this call.",
+    "If the runner returns before a complete stop, keep that receipt. Do not retry it inside this protocol.",
+    "If author-03 completes under the ceiling, freeze num_predict and timeout from the measured counts before any other author id is sent.",
+    "Do not raise num_ctx to finish a prompt. The frozen author-01 prompt already fit in 15631 tokens."
+  ],
+  "model_calls_executed_before_this_protocol": {
+    "semantic_authoring": 0,
+    "capacity_prefill": 2,
+    "structured_canary": 1
+  },
+  "nonclaims": [
+    "No semantic-control slot has been authored or adjudicated.",
+    "No production assessor is implemented.",
+    "Wave B, TEST, PROSPECTIVE, CAL, retrieval selection, and answer generation stay unchanged.",
+    "Hidden provider context and training independence remain UNKNOWN.",
+    "A successful budget call is not SUPPORTED_FOR_BOUNDED_SEMANTIC_ASSESSOR_SCREEN."
+  ]
+}
