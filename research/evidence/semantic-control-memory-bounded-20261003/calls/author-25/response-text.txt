@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system must log all user actions."
+        }
+      ],
+      "claim": "The system must log all user actions.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_25"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "This packet tests unsupported_proposed_core by including an unestablished original proposition in the proposed core.",
+      "category": "unsupported_proposed_core",
+      "contrast_anchors": [],
+      "guard_opportunities": [
+        {
+          "guard": "core_independently_supported",
+          "value": "FALSE"
+        }
+      ],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_25"
+    }
+  ],
+  "relations": []
+}
