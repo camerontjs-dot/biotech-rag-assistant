@@ -1,0 +1,58 @@
+{
+  "base_commit": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+  "collection_nominations": [
+    "biotech-rag grounding",
+    "citation-span"
+  ],
+  "evidence_room_issue": 47,
+  "evidence_room_repo": "camerontjs-dot/the-evidence-room",
+  "execution_attempts": [
+    {
+      "model_calls": 0,
+      "name": "deterministic span check",
+      "outcome": "3 passed"
+    }
+  ],
+  "experiment_id": "a08-citation-span-20261003",
+  "issue": 42,
+  "limitations": [
+    "Sufficiency of the widened quote inherits the frozen packet judgment.",
+    "It does not independently re-judge must versus cannot-start-until."
+  ],
+  "machine_result": "BOUNDED_CITATION_SPAN_EXPANSION_SUPPORTED",
+  "mutated_promoted_baseline": false,
+  "non_executions": [
+    "new model adjudication",
+    "CAL",
+    "retrieval rerun",
+    "Wave B"
+  ],
+  "nonclaims": [
+    "Does not establish general semantic entailment.",
+    "Does not re-judge the modality paraphrase already accepted at N/P.",
+    "Does not support packet expansion, Wave B, CAL, or production generation.",
+    "Does not show the selector is safe for every other quote."
+  ],
+  "protocol_commit": "518a3795381e00780d84d58c13b8ca0c8f8449ee",
+  "relations": [
+    {
+      "target": "biotech-rag-assistant PR #20",
+      "type": "uses_frozen_judgment"
+    },
+    {
+      "target": "A07 body-expansion experiment",
+      "type": "independent_of"
+    }
+  ],
+  "schema_version": "evidence-room-intake-ready/v1",
+  "semantic_review": "inherited PR #20 N/P SUPPORTED and the named supporting sentence; no new semantic oracle",
+  "source_access_identities": {
+    "chunk_id": "SOP-OPS-007_v1_2_chunk_002",
+    "doc_id": "SOP-OPS-007",
+    "source_sha256": "ad866150db306fbf8eaaab555acb8c661a203d34b42e62f4e510f3efff270735",
+    "status": "Approved",
+    "version": "1.2"
+  },
+  "source_repository": "camerontjs-dot/biotech-rag-assistant",
+  "status": "STAGED_NOT_PROMOTED"
+}
