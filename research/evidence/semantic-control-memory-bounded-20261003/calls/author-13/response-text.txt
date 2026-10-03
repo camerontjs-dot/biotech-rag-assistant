@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system must log all user actions."
+        }
+      ],
+      "claim": "The system must log all user actions.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_13"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "unsafe_decomposition: partial support with dependent removal and a required prior-event/identity presupposition lost by the proposed core.",
+      "category": "unsafe_decomposition",
+      "contrast_anchors": [],
+      "guard_opportunities": [
+        {
+          "guard": "removal_independent",
+          "value": "FALSE"
+        },
+        {
+          "guard": "no_missing_presupposition",
+          "value": "FALSE"
+        }
+        ],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_13"
+    }
+  ],
+  "relations": []
+}

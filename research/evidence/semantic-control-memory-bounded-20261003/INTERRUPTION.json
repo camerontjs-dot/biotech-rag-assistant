@@ -1,0 +1,33 @@
+{
+  "schema_version": "semantic-control-memory-interruption/v1",
+  "call_id": "author-20",
+  "attempt": 1,
+  "outcome": "INTERRUPTED_BEFORE_RESPONSE",
+  "started_logged_utc": "2026-10-03T18:24:24Z",
+  "free_percentage_at_start": 69,
+  "swapouts_at_start": 0,
+  "trip": {
+    "signal": "memory_pressure Swapouts counter",
+    "value": 16,
+    "swap_used_mb": 0.25,
+    "free_percentage_while_loaded": 36,
+    "resident_gb": 6.1,
+    "reported_context": 16384
+  },
+  "response_bytes": 0,
+  "preserved_files": [
+    "before-send.json",
+    "prompt.txt",
+    "provider-discovery.raw.json",
+    "request.json",
+    "send-started.json"
+  ],
+  "after_unload": {
+    "loaded_models": 0,
+    "free_percentage": 70,
+    "swap_used_mb": 0.25,
+    "swapouts_counter": 16
+  },
+  "latch": "Swapouts counts pages since boot and does not return to zero. A greater-than-zero rule trips on every later check after the first swapped page.",
+  "attempt_2": "A later request for this same spec is attempt 2. It is a new directory. Attempt 1 is not overwritten and is not a completed authoring."
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "semantic-control-memory-capacity/v1",
+  "observed_local": "2026-10-03T13:33:00-04:00",
+  "machine": {
+    "memsize_bytes": 25769803776,
+    "page_size_bytes": 16384,
+    "unified_memory": true
+  },
+  "ceiling": {
+    "refuse_models": ["qwen3-coder:30b", "qwen3:14b", "qwen2.5-coder:14b"],
+    "num_ctx_at_most": 16384,
+    "unload_if_free_percentage_below": 25,
+    "unload_if_resident_gb_at_least": 12,
+    "unload_if_swapouts_above": 0,
+    "unload_if_reported_context_above": 16384
+  },
+  "provider": {
+    "name": "ollama",
+    "version": "0.35.1",
+    "host": "127.0.0.1:11434"
+  },
+  "model": {
+    "name": "qwen3.5:9b",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "disk_size_bytes": 6594474711,
+    "trained_context_tokens": 262144,
+    "loaded_context_tokens": 16384
+  },
+  "canary": {
+    "prompt": "Return the schema.",
+    "schema": {"type": "object", "additionalProperties": false, "properties": {"ready": {"type": "boolean"}}, "required": ["ready"]},
+    "num_ctx": 16384,
+    "num_predict": 16,
+    "temperature": 0,
+    "top_k": 1,
+    "seed": 1,
+    "stream": true,
+    "raw": true,
+    "first_text_s": 4.297,
+    "elapsed_s": 5.047,
+    "prompt_eval_count": 4,
+    "eval_count": 8,
+    "done_reason": "stop",
+    "response_text": "{\"ready\":true}",
+    "resident_gb": 6.1,
+    "reported_context": 16384,
+    "min_free_percentage": 37,
+    "swapouts": 0
+  },
+  "frozen_prompt_prefill": {
+    "source": "research/evidence/semantic-adjudication-request-bound-v2/calls/author-01/prompt.txt",
+    "prompt_sha256": "8575963f5311f9c3b4d50ab067f8e35fa437f50535e779e538a1d0dc4c8026b3",
+    "prompt_bytes": 65752,
+    "purpose": "capacity only; num_predict 8; output schema omitted; not an authoring result",
+    "attempt_1": {
+      "client_timeout_s": 90,
+      "first_event_s": null,
+      "provider_accepted_tokens": 15631,
+      "provider_progress_tokens_at_84_76s": 13312,
+      "http_status_at_client_timeout": 500,
+      "resident_gb_max": 6.1,
+      "min_free_percentage": 38,
+      "swapouts": 0
+    },
+    "attempt_2": {
+      "changed_factor": "client timeout 90s to 150s",
+      "client_timeout_s": 150,
+      "first_text_s": 118.062,
+      "elapsed_s": 118.654,
+      "prompt_eval_count": 15631,
+      "prompt_eval_ms": 117997.84,
+      "prompt_tokens_per_second": 132.47,
+      "eval_count": 8,
+      "eval_ms": 591.35,
+      "done_reason": "length",
+      "prompt_truncated": false,
+      "response_preview": "Do not include any other text, explanations",
+      "response_chars": 43,
+      "resident_gb_max": 6.1,
+      "min_free_percentage": 37,
+      "swapouts": 0,
+      "http_elapsed": "1m58s",
+      "completed_local": "2026-10-03T13:38:44-04:00"
+    }
+  },
+  "after_unload": {
+    "ollama_ps_models": 0,
+    "free_percentage": 72,
+    "swapouts": 0
+  },
+  "nonclaims": [
+    "This file does not author, adjudicate, or score any semantic-control slot.",
+    "The eight generated tokens are a capped echo, not a case packet.",
+    "Fitting in 16384 tokens does not show that a finished author response fits in num_predict 1024.",
+    "No 14B or 30B model was loaded for this measurement."
+  ]
+}

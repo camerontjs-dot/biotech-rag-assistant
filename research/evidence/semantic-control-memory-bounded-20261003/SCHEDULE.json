@@ -1,0 +1,60 @@
+{
+  "schema_version": "semantic-control-author-schedule/v1",
+  "frozen_after_call": "author-03-budget",
+  "config": "research/evidence/semantic-control-memory-bounded-20261003/author-config.json",
+  "freeze": "research/evidence/semantic-control-memory-bounded-20261003/FREEZE.json",
+  "runner": "research/run_semantic_request_once.py",
+  "same_caps": {
+    "num_ctx": 16384,
+    "num_predict": 1024,
+    "timeout_seconds": 420,
+    "reason": "author-03 stopped on its own at 220 tokens and 195 seconds, inside these caps. The caps stay as frozen. They are not tightened to the measured point."
+  },
+  "authorized_one_slot": [
+    "author-04",
+    "author-05",
+    "author-06",
+    "author-07",
+    "author-08",
+    "author-13",
+    "author-14",
+    "author-17",
+    "author-19",
+    "author-20",
+    "author-22",
+    "author-23",
+    "author-24",
+    "author-25",
+    "author-26",
+    "author-27",
+    "author-28"
+  ],
+  "already_recorded": ["author-03"],
+  "not_authorized": {
+    "author-01": "7 slots. This is the partition shape that timed out in PR #38. Output budget was not measured.",
+    "author-02": "3 slots. Output budget was not measured.",
+    "author-09": "2 slots. Output budget was not measured.",
+    "author-10": "2 slots. Output budget was not measured.",
+    "author-11": "2 slots. Output budget was not measured.",
+    "author-12": "2 slots. Output budget was not measured.",
+    "author-15": "2 slots. Output budget was not measured.",
+    "author-16": "2 slots. Output budget was not measured.",
+    "author-18": "2 slots. Output budget was not measured.",
+    "author-21": "2 slots. Output budget was not measured."
+  },
+  "execution": {
+    "order": "listed order",
+    "parallelism": 1,
+    "retries": 0,
+    "stop_on_first_non_pass": true,
+    "semantic_use": "NONE until the author set is complete and a later adjudication protocol says otherwise"
+  },
+  "memory_ceiling": {
+    "only_model": "qwen3.5:9b",
+    "num_ctx_at_most": 16384,
+    "do_not_start_if_free_percentage_below": 50,
+    "unload_if_free_percentage_below": 25,
+    "unload_if_resident_gb_at_least": 12,
+    "unload_if_swapouts_above": 0
+  }
+}

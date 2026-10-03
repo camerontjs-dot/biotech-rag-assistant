@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system administrator updated the firewall rules at 09:00."
+        }
+      ],
+      "claim": "The system administrator updated the firewall rules at 10:00.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_03"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "BODY asserts a narrower time window (09:00) than the claim (10:00). The claim is unestablished.",
+      "category": "unsupported_temporal",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_03"
+    }
+  ],
+  "relations": []
+}

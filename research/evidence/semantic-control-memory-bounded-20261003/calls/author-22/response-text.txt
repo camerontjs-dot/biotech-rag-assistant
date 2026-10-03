@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system administrator updated the firewall rules at 09:00 UTC."
+        }
+      ],
+      "claim": "The system administrator updated the firewall rules at 09:00 UTC.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_22"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "QUERY contains the claimed support; BODY is silent.",
+      "category": "query_non_authority",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_22"
+    }
+  ],
+  "relations": []
+}

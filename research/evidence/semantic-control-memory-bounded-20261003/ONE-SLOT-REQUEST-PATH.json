@@ -1,0 +1,43 @@
+{
+  "schema_version": "semantic-control-one-slot-request-path/v1",
+  "status": "REQUEST_PATH_COMPLETE_FOR_ONE_SLOT_PARTITIONS",
+  "semantic_acceptance": false,
+  "head": "2f2427e",
+  "passes": [
+    {"id": "author-03", "directory": "author-03-budget", "done_reason": "stop", "eval_count": 220},
+    {"id": "author-04", "done_reason": "stop", "eval_count": 190},
+    {"id": "author-05", "done_reason": "stop", "eval_count": 246},
+    {"id": "author-06", "done_reason": "stop", "eval_count": 208},
+    {"id": "author-07", "done_reason": "stop", "eval_count": 294},
+    {"id": "author-08", "done_reason": "stop", "eval_count": 224},
+    {"id": "author-13", "done_reason": "stop", "eval_count": 254},
+    {"id": "author-14", "done_reason": "stop", "eval_count": 189},
+    {"id": "author-17", "done_reason": "stop", "eval_count": 199},
+    {"id": "author-19", "done_reason": "stop", "eval_count": 216},
+    {"id": "author-20", "directory": "author-20-attempt-2", "done_reason": "stop", "eval_count": 214, "attempt_1": "INTERRUPTED_BEFORE_RESPONSE"},
+    {"id": "author-22", "done_reason": "stop", "eval_count": 203},
+    {"id": "author-23", "done_reason": "stop", "eval_count": 244},
+    {"id": "author-24", "done_reason": "stop", "eval_count": 241},
+    {"id": "author-25", "done_reason": "stop", "eval_count": 226},
+    {"id": "author-26", "done_reason": "stop", "eval_count": 251},
+    {"id": "author-27", "done_reason": "stop", "eval_count": 305},
+    {"id": "author-28", "done_reason": "stop", "eval_count": 193}
+  ],
+  "prompt_eval_count": 15582,
+  "eval_count_min": 189,
+  "eval_count_max": 305,
+  "num_predict_cap": 1024,
+  "num_ctx": 16384,
+  "not_run": {
+    "two_slot": ["author-09", "author-10", "author-11", "author-12", "author-15", "author-16", "author-18", "author-21"],
+    "three_slot": ["author-02"],
+    "seven_slot": ["author-01"],
+    "adjudication": "NOT_RUN",
+    "reason": "Output budget was measured for one slot only. A second local Ollama client has gemma4:12b resident. This record does not load qwen3.5:9b on top of it."
+  },
+  "nonclaims": [
+    "Schema-valid author JSON is not semantic support.",
+    "The one-slot set is not the frozen 44-slot corpus.",
+    "No adjudication, reconciliation, or assessor screen has been run."
+  ]
+}

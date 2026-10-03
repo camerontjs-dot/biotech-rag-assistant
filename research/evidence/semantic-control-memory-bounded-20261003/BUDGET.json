@@ -1,0 +1,52 @@
+{
+  "schema_version": "semantic-control-author-budget/v1",
+  "call_id": "author-03-budget",
+  "spec": "research/evidence/semantic-adjudication-request-bound-v2/requests/author-03.spec.json",
+  "slots": ["anchor_03"],
+  "status": "PASS_REQUEST_PATH_ONLY",
+  "semantic_acceptance": false,
+  "started_at_utc": "2026-10-03T17:44:26.969206+00:00",
+  "finished_at_utc": "2026-10-03T17:47:42.026002+00:00",
+  "wall_clock_s": 195.057,
+  "load_duration_ns": 4081145209,
+  "prompt_eval_count": 15582,
+  "prompt_eval_duration_ns": 159023870000,
+  "eval_count": 220,
+  "eval_duration_ns": 31838043000,
+  "done": true,
+  "done_reason": "stop",
+  "response_chars": 697,
+  "response_sha256": "1ef55d96ac10bad241a2925b741b0be42516ca815cde468a68ccfa8a78acf3b4",
+  "request_sha256": "f819e64b3ba87435caa95db037036e3987e746fcec5bf76fd2b9d888559274ea",
+  "prompt_sha256": "151810e9181351beffc1ad98275d7da950159164c462b3e8b7f2fd01ecd46436",
+  "raw_response_sha256": "6c7cba9bb1339ce22ca7f881fda0faff9268378a866476a8a816492a625a4d2d",
+  "parsed_output_sha256": "a9eb6db42ec51f95263d41aea49c616a096e49cb9a3084a0a97f2e75802032a1",
+  "parsed_shape": {
+    "cases": 1,
+    "design_entries": 1,
+    "relations": 0,
+    "claim_words": 9,
+    "authorized_body_spans": 1,
+    "distractors": 0
+  },
+  "config_caps": {
+    "num_predict": 1024,
+    "timeout_seconds": 420,
+    "num_ctx": 16384
+  },
+  "headroom": {
+    "generated_tokens_under_cap": 804,
+    "wall_clock_under_timeout_s": 225
+  },
+  "after_unload": {
+    "free_percentage": 70,
+    "swapouts": 0,
+    "loaded_models": 0
+  },
+  "ceiling_tripped": false,
+  "nonclaims": [
+    "Schema validity is not semantic support.",
+    "The case text is preserved and not accepted.",
+    "This budget does not cover partitions with more than one slot."
+  ]
+}
