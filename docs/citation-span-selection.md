@@ -1,96 +1,93 @@
-# Citation span selection: bounded successor contract
+# Citation selection from explicit authorized bounds
 
-This candidate follows rejected PR #50. It adds a pure, unconnected helper in
-`biotech_rag_assistant.citation_spans`. It does not change any API, CLI, retrieval,
-chunking, source-status rule, heading permission, or semantic gate.
+This unconnected utility validates a quote inside a span whose BODY offsets the
+caller has already authorized. It makes no sentence-boundary inference. API, CLI,
+retrieval, chunking, source status, headings and semantic gates are unchanged.
 
-## Authority and outputs
+## Why the contract changed
 
-The caller supplies one already authorized `body` and an exact `quote`. The helper
-has no source lookup, packet lookup, file access, model call, or claim input. It
-cannot authorize the supplied body. Offsets use Python Unicode string indices,
-with an inclusive `start` and exclusive `end`; they are not UTF-8 byte offsets.
+Rejected [PR #50](https://github.com/camerontjs-dot/biotech-rag-assistant/pull/50)
+accepted overlapping repeated quotes and truncated a condition after `No.`.
+The automatic successor at
+[`093fcd031138b8219722f4e9c888dec2d7ebc354`](https://github.com/camerontjs-dot/biotech-rag-assistant/commit/093fcd031138b8219722f4e9c888dec2d7ebc354)
+passed all 29 historical author/probe cases, but a separately frozen 32-case
+review found two paragraph-crossing failures. Additional review reproduced the
+condition-truncation failure with an unfamiliar abbreviation:
 
-The output has exactly `outcome`, `text`, `start`, and `end`:
+> Release is allowed only after Coord. Smith signs the authorization.
+
+The automatic selector returned only `Release is allowed only after Coord.`.
+An abbreviation list cannot establish that every other full stop is a sentence
+ending. The failed automatic candidate remains an immutable ancestor; it is not
+qualified by the narrower utility below.
+
+## Input and output contract
+
+```python
+select_authorized_span(
+    body,
+    quote,
+    authorized_start=...,
+    authorized_end=...,
+)
+```
+
+The caller provides one authorized BODY, an exact literal quote, and a previously
+authorized range within that BODY. `start` is inclusive and `end` exclusive.
+Offsets use Python Unicode string indices, not UTF-8 bytes. They must be plain
+integers; booleans, floating-point values and strings are invalid.
 
 | Outcome | Meaning |
 | --- | --- |
-| `selected` | Exactly one literal quote occurrence is enclosed in one span under the policy below; `text == body[start:end]`. |
-| `not_found` | Empty/whitespace-only or missing quote, or the unique quote crosses a supported span boundary. |
-| `ambiguous` | More than one occurrence, including overlapping occurrences. |
-| `boundary_uncertain` | The body's punctuation is outside the supported policy; no span is returned. |
+| `selected` | The exact authorized slice contains the sole literal quote occurrence. |
+| `not_found` | The quote is empty, whitespace-only, or absent from BODY. |
+| `ambiguous` | More than one occurrence exists anywhere in BODY, including overlapping occurrences. |
+| `bounds_required` | A unique quote exists, but neither authorized bound was supplied. |
+| `invalid_bounds` | The range is incomplete, invalid, outside BODY, does not fully contain the quote, or crosses a paragraph break. |
 
-Every refusal has null text and offsets. Occurrence checks precede boundary
-parsing. No normalization, case folding, trimming of the quote, or source-text
-rewriting occurs. Leading/trailing whitespace around spans is excluded. A final
-unpunctuated fragment is permitted. A full-span quote remains unchanged.
+Every refusal has null `text`, `start` and `end`. Quote presence and global
+uniqueness are checked before bounds. The helper does not resolve a repeated
+quote merely because one occurrence falls within the supplied range.
 
-`sentence_spans(body)` exposes the same syntactic policy: a list of offset pairs,
-or `None` when any boundary is uncertain. Uncertainty anywhere in the supplied
-body refuses the whole selection, even if another sentence appears ordinary.
+A selected result always satisfies `text == body[start:end]`. No trimming,
+normalization, case folding, punctuation analysis, offset repair or inferred
+expansion occurs. Single line breaks may wrap a span; blank lines (LF, CRLF or
+CR, including whitespace-only intervening lines) and Unicode U+2029 separate
+paragraphs. Bounds may select within one paragraph of a larger supplied BODY.
 
-## Supported punctuation policy
+## Authority the helper does not supply
 
-This is a conservative policy for controlled English prose, not a general
-natural-language sentence segmenter. A span ends at a single ASCII `.`, `!`, or
-`?`, followed by whitespace or the end of the body. A matching ASCII closing
-double quote may immediately follow the terminator and is included in the span.
-The next non-whitespace character must not be an ASCII lowercase letter or a
-digit. Non-ASCII letters (including scientific labels such as `αβ:`) retain their
-original offsets without an English capitalization inference. Decimal periods
-directly between digits are internal punctuation.
+The correctness and linguistic completeness of the caller's range are input
+preconditions. A caller can supply a syntactically valid but incomplete range;
+this utility cannot detect that semantic mistake. It also cannot verify source
+status, source hashes, packet membership, truth, relevance or claim support.
 
-The only recognized abbreviations are case-sensitive:
+There is deliberately no automatic fallback. Supplying no bounds for the
+`Coord.` example returns `bounds_required`; it never chooses the shorter span.
+An upstream mechanism that simply supplies unchecked punctuation-parser offsets
+would reintroduce the same unresolved problem. Qualifying such an upstream
+mechanism, and wiring this utility into a maintained consumer, remain separate
+work under [programme #39](https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39).
 
-| Abbreviation | Required continuation; period remains inside the span |
-| --- | --- |
-| `No.` | Whitespace, then an ASCII digit, as in `lot No. 7 only after QA approval.` |
-| `Dr.` | Whitespace, then an ASCII capitalized name, as in `Dr. Vale must approve release.` |
-| `a.m.` / `p.m.` | Whitespace, then lowercase continuation, as in `5 p.m. unless QA grants an exception.` |
+A08's frozen authorized sentence can be supplied explicitly with unchanged
+BODY/source identity. That establishes the bounded selection operation; it does
+not generalize A08's semantic judgment or supply authority for A07 headings.
 
-These abbreviations in other positions produce `boundary_uncertain`, including a
-time abbreviation at end of body or before an uppercase continuation. Unknown
-internal dots, numeric terminal tokens, tokens of three or fewer letters before
-a period with following text, and these common ambiguous abbreviations are also
-refused: `approx`, `art`, `cf`, `dept`, `e.g`, `est`, `etc`, `fig`, `i.e`, `inc`,
-`ref`, `resp`, `rev`, `sec`, `vol`, `vs`. The list is a bounded detection policy;
-it does not establish that every other word is linguistically unambiguous.
+## Historical evidence and verification
 
-Ellipses, repeated/mixed terminators, brackets or parentheses, angle brackets,
-unbalanced double quotes, punctuation inside a quote before its closing quote,
-single/smart quotation marks, CJK sentence terminators, and non-whitespace ASCII
-control characters are refused. Apostrophes strictly between alphabetic
-characters are permitted. Newlines and tabs are whitespace, not independent
-sentence boundaries. Markdown headings receive no special interpretation.
+The original #50 source, five author tests, 24 independent probes and
+counterexample JSON remain byte-for-byte in
+`tests/fixtures/citation-span-selection-pr50/`. The historical automatic tests
+are `.py.txt` archives: they describe a different contract and are not relabeled
+as passing tests of this explicit-bounds API. The earlier automatic successor
+and its tests are reconstructable at commit `093fcd031138b8219722f4e9c888dec2d7ebc354`.
 
-## Limits and historical evidence
-
-Selection establishes literal containment and this declared punctuation policy.
-It does not establish that a quote is true, complete, relevant, sufficient,
-current, or supportive of a claim. A condition may live in another sentence,
-section, or document. An unrecognized domain abbreviation can still look like
-an ordinary full stop. Arbitrary-language coverage and corpus-wide incidence of
-refusals are unmeasured. A future caller must retain source/packet identity and
-its existing support and authorization gates.
-
-Original source subject:
-[`9685872827b37b55c981b88ad3177a2ed3b13533`](https://github.com/camerontjs-dot/biotech-rag-assistant/commit/9685872827b37b55c981b88ad3177a2ed3b13533).
-Independent review publication:
-[`4191e9b7809f76956330f0c01312ccdb09f8055e`](https://github.com/camerontjs-dot/biotech-rag-assistant/commit/4191e9b7809f76956330f0c01312ccdb09f8055e).
-PR #50's rejected source and counterexample JSON are retained byte-for-byte in
-`tests/fixtures/citation-span-selection-pr50/`. Its five author tests and 24
-independent probes are retained byte-for-byte as
-`tests/test_citation_spans_pr50_author.py` and
-`tests/test_citation_spans_pr50_independent.py`; their assertions are unchanged.
-The successor tests pin all four SHA-256 identities. Replaying known probes is
-regression evidence, not a new independent review or semantic adjudication.
-
-Run the successor and unchanged historical expectations with:
+Run the maintained utility tests with:
 
 ```bash
-PYTHONPATH=src python -m pytest -q tests/test_citation_spans_*.py
+PYTHONPATH=src python -m pytest -q tests/test_authorized_citation_spans.py
 ```
 
-A passing run does not retroactively qualify #50 and does not promote this
-candidate. Wiring the helper into an answer or citation consumer is a separate
-behavioral change requiring its own authority and verification.
+The separate engineering review records first-candidate failures and evaluates
+this changed contract independently. No provider call or semantic adjudication
+is part of utility qualification. Nothing is promoted by adding this helper.
