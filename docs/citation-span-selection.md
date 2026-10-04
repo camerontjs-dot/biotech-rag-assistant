@@ -9,7 +9,7 @@ retrieval, chunking, source status, headings and semantic gates are unchanged.
 Rejected [PR #50](https://github.com/camerontjs-dot/biotech-rag-assistant/pull/50)
 accepted overlapping repeated quotes and truncated a condition after `No.`.
 The automatic successor at
-[`093fcd031138b8219722f4e9c888dec2d7ebc354`](https://github.com/camerontjs-dot/biotech-rag-assistant/commit/093fcd031138b8219722f4e9c888dec2d7ebc354)
+[`8ddd2a8969869be5e5dfe339b45087f1ee7e8803`](https://github.com/camerontjs-dot/biotech-rag-assistant/commit/8ddd2a8969869be5e5dfe339b45087f1ee7e8803)
 passed all 29 historical author/probe cases, but a separately frozen 32-case
 review found two paragraph-crossing failures. Additional review reproduced the
 condition-truncation failure with an unfamiliar abbreviation:
@@ -80,7 +80,7 @@ counterexample JSON remain byte-for-byte in
 `tests/fixtures/citation-span-selection-pr50/`. The historical automatic tests
 are `.py.txt` archives: they describe a different contract and are not relabeled
 as passing tests of this explicit-bounds API. The earlier automatic successor
-and its tests are reconstructable at commit `093fcd031138b8219722f4e9c888dec2d7ebc354`.
+and its tests are reconstructable at publication commit `8ddd2a8969869be5e5dfe339b45087f1ee7e8803`. The [publication map](../research/evidence/citation-authorized-bounds-20261004/publication-map.json) preserves the distinct original local commit identities and identical trees.
 
 Run the maintained utility tests with:
 

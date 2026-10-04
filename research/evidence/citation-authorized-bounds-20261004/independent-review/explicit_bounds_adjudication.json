@@ -1,0 +1,35 @@
+{
+  "reviewed_local_commit": "786a09421c95c55506a3e82f96006449e064b4d7",
+  "published_content_equivalent_commit": "897e22827fe9848d460734f1b2432c6f6babc45d",
+  "tree": "4ff09a40a38c41a20d64d436ff67463750a254cd",
+  "probe_sha256": "22460e1fe41a0b0a3875d15e56552ee473e1ad36ae80e771c51333699e4f8659",
+  "raw_frozen_score": {
+    "total": 51,
+    "passed": 49,
+    "failed": 2
+  },
+  "behavior_counts": {
+    "required_exact_selections_observed": 15,
+    "required_safe_refusals_observed": 36
+  },
+  "unmodified_probe_mismatches": [
+    {
+      "id": "missing_start_bound",
+      "frozen_expected_outcome": "bounds_required",
+      "actual_outcome": "invalid_bounds",
+      "actual_span_fields": "all null",
+      "classification": "reviewer overconstraint of an unspecified outcome-label distinction",
+      "reason": "The announced API did not distinguish partially supplied bounds from neither supplied bound. The source contract explicitly assigns incomplete ranges to invalid_bounds and neither supplied bound to bounds_required. Both cases safely refuse without inferred bounds."
+    },
+    {
+      "id": "missing_end_bound",
+      "frozen_expected_outcome": "bounds_required",
+      "actual_outcome": "invalid_bounds",
+      "actual_span_fields": "all null",
+      "classification": "reviewer overconstraint of an unspecified outcome-label distinction",
+      "reason": "The announced API did not distinguish partially supplied bounds from neither supplied bound. The source contract explicitly assigns incomplete ranges to invalid_bounds and neither supplied bound to bounds_required. Both cases safely refuse without inferred bounds."
+    }
+  ],
+  "decision": "No implementation change requested for the two raw mismatches. They remain raw failures in every preserved/reproduced score. Accept the documented refusal taxonomy and qualify only the exact explicit-bounds mechanical utility, with authority and linguistic completeness remaining caller preconditions.",
+  "documentation_basis": "docs/citation-span-selection.md at tested tree 4ff09a40a38c41a20d64d436ff67463750a254cd, outcome table; implementation lines 53–56."
+}

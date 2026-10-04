@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "purpose": "Pre-implementation engineering probes derived from the stated citation helper contract and known historical failures. This is not a claim of semantic validation, clean-room testing, or training independence.",
+  "expected_semantics": {
+    "exact": "Success required: exact specified text and body-relative Unicode codepoint [start,end) offsets.",
+    "refuse": "No successful span may be returned.",
+    "exact_or_refuse": "Either safe refusal or exactly the specified complete sentence and offsets. Any shorter/longer/different span fails."
+  },
+  "input_contract": "Pass only body and quote to the target helper. Metadata such as outside_authorized_body must never be passed.",
+  "cases": [
+    {
+      "id": "simple_period",
+      "rule": "Required ordinary complete sentence",
+      "body": "Release requires QA approval.",
+      "quote": "QA approval",
+      "expected_outcome": "exact",
+      "expected_sentence": {
+        "text": "Release requires QA approval.",
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "id": "middle_sentence",
+      "rule": "No neighboring-sentence inclusion",
+      "body": "Lots remain quarantined. Release requires QA approval. Records remain available.",
+      "quote": "Release requires",
+      "expected_outcome": "exact",
+      "expected_sentence": {
+        "text": "Release requires QA approval.",
+        "start": 25,
+        "end": 54
+      }
+    },
+    {
+      "id": "simple_question",
+      "rule": "Ordinary question punctuation",
+      "body": "Has QA approved release?",
+      "quote": "QA approved",
+      "expected_outcome": "exact",
+      "expected_sentence": {
+        "text": "Has QA approved release?",
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "id": "simple_exclamation",
+      "rule": "Ordinary exclamation punctuation",
+      "body": "Keep the lot quarantined!",
+      "quote": "lot quarantined",
+      "expected_outcome": "exact",
+      "expected_sentence": {
+        "text": "Keep the lot quarantined!",
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "id": "unicode_codepoint_offsets",
+      "rule": "Body-relative codepoints, not UTF-8 bytes or UTF-16 units",
+      "body": "🧪 Evidence is preliminary. Café lots remain blocked until QA approval.",
+      "quote": "lots remain blocked",
+      "expected_outcome": "exact",
+      "expected_sentence": {
+        "text": "Café lots remain blocked until QA approval.",
+        "start": 27,
+        "end": 70
+      }
+    },
+    {
+      "id": "crlf_paragraph_offsets",
+      "rule": "Preserve original body-relative offsets through CRLF paragraphs",
+      "body": "Records are complete.\r\n\r\nRelease requires QA approval.",
+      "quote": "Release requires",
+      "expected_outcome": "exact",
+      "expected_sentence": {
+        "text": "Release requires QA approval.",
+        "start": 25,
+        "end": 54
+      }
+    },
+    {
+      "id": "overlapping_historical",
+      "rule": "Reject overlapping multiple occurrences",
+      "body": "Notify QA QA QA before release.",
+      "quote": "QA QA",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "overlapping_short",
+      "rule": "Reject nested overlapping multiple occurrences",
+      "body": "Keep aaaa under review.",
+      "quote": "aaa",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "nonoverlap_same_sentence",
+      "rule": "Reject nonoverlapping multiple occurrences within a sentence",
+      "body": "QA review follows QA review.",
+      "quote": "QA review",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "nonoverlap_other_sentence",
+      "rule": "Reject duplicates even across sentences",
+      "body": "QA review is pending. QA review blocks release.",
+      "quote": "QA review",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "cross_sentence_quote",
+      "rule": "No sentence can enclose a multi-sentence quote",
+      "body": "Release requires QA approval. Records remain available.",
+      "quote": "approval. Records",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "cross_paragraph_quote",
+      "rule": "No paragraph crossing",
+      "body": "Release is blocked\n\nuntil QA approval.",
+      "quote": "blocked\n\nuntil",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "quote_absent",
+      "rule": "Never fall back to a heading or text outside the authorized body",
+      "body": "Release requires written QA approval.",
+      "quote": "Release may proceed",
+      "expected_outcome": "refuse",
+      "outside_authorized_body": "Release may proceed"
+    },
+    {
+      "id": "exact_case_mismatch",
+      "rule": "Quote matching remains exact",
+      "body": "Release requires QA approval.",
+      "quote": "release requires",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "empty_quote",
+      "rule": "Empty exact quote cannot identify a unique occurrence",
+      "body": "Release requires QA approval.",
+      "quote": "",
+      "expected_outcome": "refuse"
+    },
+    {
+      "id": "no_historical_abbreviation",
+      "rule": "Do not truncate the limiting clause at No.",
+      "body": "Release is allowed for lot No. 7 only after QA approval.",
+      "quote": "Release is allowed",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is allowed for lot No. 7 only after QA approval.",
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "id": "dr_abbreviation",
+      "rule": "Do not truncate the condition following a personal-title abbreviation",
+      "body": "Release is permitted by Dr. Shah only after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted by Dr. Shah only after QA approval.",
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "id": "eg_abbreviation",
+      "rule": "Do not truncate an abbreviation inside a limiting clause",
+      "body": "Release is permitted after review, e.g. after QA approval has been recorded.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted after review, e.g. after QA approval has been recorded.",
+        "start": 0,
+        "end": 76
+      }
+    },
+    {
+      "id": "acronym_abbreviation",
+      "rule": "Do not truncate dotted acronym conditions",
+      "body": "Release is permitted in the U.S. only after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted in the U.S. only after QA approval.",
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "id": "decimal_condition",
+      "rule": "Do not split a decimal preceding a limiting clause",
+      "body": "Release is permitted at 0.5 mg only after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted at 0.5 mg only after QA approval.",
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "id": "dotted_date_condition",
+      "rule": "Do not split dotted date notation preceding a limiting clause",
+      "body": "Release is permitted on 07.10.2026 only after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted on 07.10.2026 only after QA approval.",
+        "start": 0,
+        "end": 58
+      }
+    },
+    {
+      "id": "abbreviated_date_condition",
+      "rule": "Do not split month abbreviation preceding a limiting clause",
+      "body": "Release is permitted on Oct. 7 only after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted on Oct. 7 only after QA approval.",
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "id": "quoted_period_condition",
+      "rule": "Do not split quoted punctuation from the actual governing condition",
+      "body": "The label says \"Release permitted.\" only after QA approval is recorded.",
+      "quote": "Release permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "The label says \"Release permitted.\" only after QA approval is recorded.",
+        "start": 0,
+        "end": 71
+      }
+    },
+    {
+      "id": "quoted_question_condition",
+      "rule": "Do not split quoted question punctuation from attribution/condition",
+      "body": "\"Can the lot be released?\" asked QA before approval was recorded.",
+      "quote": "Can the lot",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "\"Can the lot be released?\" asked QA before approval was recorded.",
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "id": "smart_quoted_exclamation_condition",
+      "rule": "Do not split curly-quoted punctuation from the condition",
+      "body": "The display reads “Release permitted!” only after QA approval is recorded.",
+      "quote": "Release permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "The display reads “Release permitted!” only after QA approval is recorded.",
+        "start": 0,
+        "end": 74
+      }
+    },
+    {
+      "id": "parenthetical_decimal_condition",
+      "rule": "Do not truncate a parenthetical decimal or limiting clause",
+      "body": "Release is permitted (at 0.5 mg, if stable) only after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted (at 0.5 mg, if stable) only after QA approval.",
+        "start": 0,
+        "end": 67
+      }
+    },
+    {
+      "id": "ellipsis_condition",
+      "rule": "Uncertain ellipsis may safely refuse, but never omit the condition",
+      "body": "Release is permitted... only after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted... only after QA approval.",
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "id": "unpunctuated_first_paragraph",
+      "rule": "Never invent a sentence across a paragraph break",
+      "body": "Release is permitted\n\nOnly after QA approval.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release is permitted",
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "id": "unterminated_final_sentence",
+      "rule": "Conservative refusal is allowed for incomplete syntax",
+      "body": "Release requires QA approval",
+      "quote": "QA approval",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release requires QA approval",
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "id": "sentence_with_newline",
+      "rule": "Line wrapping within one paragraph must preserve exact source text or refuse",
+      "body": "Release requires\nwritten QA approval.",
+      "quote": "Release requires",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "Release requires\nwritten QA approval.",
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "id": "period_neighbor_not_absorbed",
+      "rule": "Do not absorb an adjacent ordinary sentence",
+      "body": "Release is permitted. QA approval remains required.",
+      "quote": "Release is permitted",
+      "expected_outcome": "exact",
+      "expected_sentence": {
+        "text": "Release is permitted.",
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "id": "multisentence_quoted_passage",
+      "rule": "For uncertain nested quotation syntax, return the complete enclosing sentence or refuse",
+      "body": "The note states \"Review is complete. Release remains blocked.\" pending QA approval.",
+      "quote": "Review is complete. Release remains blocked.",
+      "expected_outcome": "exact_or_refuse",
+      "expected_sentence": {
+        "text": "The note states \"Review is complete. Release remains blocked.\" pending QA approval.",
+        "start": 0,
+        "end": 83
+      }
+    }
+  ]
+}

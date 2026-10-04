@@ -1,0 +1,392 @@
+{
+  "commit": "093fcd031138b8219722f4e9c888dec2d7ebc354",
+  "tree": "d7a96fe4bae53f30dbdcf1f179b3710bd1a5b5cf",
+  "probe_sha256": "3666cec6252e3e3d074d49667cdc0f608c1bb8a5b907d39aa1db70de537fb101",
+  "source_sha256": "386749546e2cafaf237e69936dae894982b6d9592d0efc0594a2f8d83a2c4df5",
+  "contract_sha256": "8477fbc9c883c1b07502da0ec0fa16c4edb0be663dbd361c3b3ad4d9f4775adc",
+  "python": "/workspace/scratch/7b8946fc1488/biotech-test-env/bin/python",
+  "outcomes": [
+    {
+      "id": "simple_period",
+      "status": "success",
+      "text": "Release requires QA approval.",
+      "start": 0,
+      "end": 29,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release requires QA approval.",
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "id": "middle_sentence",
+      "status": "success",
+      "text": "Release requires QA approval.",
+      "start": 25,
+      "end": 54,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release requires QA approval.",
+        "start": 25,
+        "end": 54
+      }
+    },
+    {
+      "id": "simple_question",
+      "status": "success",
+      "text": "Has QA approved release?",
+      "start": 0,
+      "end": 24,
+      "raw": {
+        "outcome": "selected",
+        "text": "Has QA approved release?",
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "id": "simple_exclamation",
+      "status": "success",
+      "text": "Keep the lot quarantined!",
+      "start": 0,
+      "end": 25,
+      "raw": {
+        "outcome": "selected",
+        "text": "Keep the lot quarantined!",
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "id": "unicode_codepoint_offsets",
+      "status": "success",
+      "text": "Café lots remain blocked until QA approval.",
+      "start": 27,
+      "end": 70,
+      "raw": {
+        "outcome": "selected",
+        "text": "Café lots remain blocked until QA approval.",
+        "start": 27,
+        "end": 70
+      }
+    },
+    {
+      "id": "crlf_paragraph_offsets",
+      "status": "success",
+      "text": "Release requires QA approval.",
+      "start": 25,
+      "end": 54,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release requires QA approval.",
+        "start": 25,
+        "end": 54
+      }
+    },
+    {
+      "id": "overlapping_historical",
+      "status": "refused",
+      "reason": "ambiguous",
+      "raw": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "overlapping_short",
+      "status": "refused",
+      "reason": "ambiguous",
+      "raw": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "nonoverlap_same_sentence",
+      "status": "refused",
+      "reason": "ambiguous",
+      "raw": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "nonoverlap_other_sentence",
+      "status": "refused",
+      "reason": "ambiguous",
+      "raw": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "cross_sentence_quote",
+      "status": "refused",
+      "reason": "not_found",
+      "raw": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "cross_paragraph_quote",
+      "status": "success",
+      "text": "Release is blocked\n\nuntil QA approval.",
+      "start": 0,
+      "end": 38,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release is blocked\n\nuntil QA approval.",
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "id": "quote_absent",
+      "status": "refused",
+      "reason": "not_found",
+      "raw": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "exact_case_mismatch",
+      "status": "refused",
+      "reason": "not_found",
+      "raw": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "empty_quote",
+      "status": "refused",
+      "reason": "not_found",
+      "raw": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "no_historical_abbreviation",
+      "status": "success",
+      "text": "Release is allowed for lot No. 7 only after QA approval.",
+      "start": 0,
+      "end": 56,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release is allowed for lot No. 7 only after QA approval.",
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "id": "dr_abbreviation",
+      "status": "success",
+      "text": "Release is permitted by Dr. Shah only after QA approval.",
+      "start": 0,
+      "end": 56,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release is permitted by Dr. Shah only after QA approval.",
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "id": "eg_abbreviation",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "acronym_abbreviation",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "decimal_condition",
+      "status": "success",
+      "text": "Release is permitted at 0.5 mg only after QA approval.",
+      "start": 0,
+      "end": 54,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release is permitted at 0.5 mg only after QA approval.",
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "id": "dotted_date_condition",
+      "status": "success",
+      "text": "Release is permitted on 07.10.2026 only after QA approval.",
+      "start": 0,
+      "end": 58,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release is permitted on 07.10.2026 only after QA approval.",
+        "start": 0,
+        "end": 58
+      }
+    },
+    {
+      "id": "abbreviated_date_condition",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "quoted_period_condition",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "quoted_question_condition",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "smart_quoted_exclamation_condition",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "parenthetical_decimal_condition",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "ellipsis_condition",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "unpunctuated_first_paragraph",
+      "status": "success",
+      "text": "Release is permitted\n\nOnly after QA approval.",
+      "start": 0,
+      "end": 45,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release is permitted\n\nOnly after QA approval.",
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "id": "unterminated_final_sentence",
+      "status": "success",
+      "text": "Release requires QA approval",
+      "start": 0,
+      "end": 28,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release requires QA approval",
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "id": "sentence_with_newline",
+      "status": "success",
+      "text": "Release requires\nwritten QA approval.",
+      "start": 0,
+      "end": 37,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release requires\nwritten QA approval.",
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "id": "period_neighbor_not_absorbed",
+      "status": "success",
+      "text": "Release is permitted.",
+      "start": 0,
+      "end": 21,
+      "raw": {
+        "outcome": "selected",
+        "text": "Release is permitted.",
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "id": "multisentence_quoted_passage",
+      "status": "refused",
+      "reason": "boundary_uncertain",
+      "raw": {
+        "outcome": "boundary_uncertain",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    }
+  ]
+}
