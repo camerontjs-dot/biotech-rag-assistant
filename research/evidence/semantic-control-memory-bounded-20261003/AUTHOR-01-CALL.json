@@ -1,0 +1,27 @@
+{
+  "schema_version": "semantic-control-author-01-call/v1",
+  "status": "PREREGISTERED_ONE_CALL",
+  "author_02_budget": {
+    "status": "PASS_REQUEST_PATH_ONLY",
+    "semantic_acceptance": false,
+    "done_reason": "stop",
+    "eval_count": 857,
+    "prompt_eval_count": 15599,
+    "wall_clock_s": 341.2,
+    "loaded_num_ctx": 18432,
+    "swap_used_mb_unchanged": 2712,
+    "free_percentage_after_unload": 76
+  },
+  "authorized_call": {
+    "id": "author-01",
+    "slots": 7,
+    "relation_slots": 6,
+    "spec": "research/evidence/semantic-adjudication-request-bound-v2/requests/author-01.spec.json",
+    "config": "research/evidence/semantic-control-memory-bounded-20261003/author-config-room-18432.json",
+    "freeze": "research/evidence/semantic-control-memory-bounded-20261003/FREEZE-room-18432.json",
+    "calls": 1,
+    "retries": 0,
+    "why_this_config": "The three-slot response stopped at 857 tokens. Slot count did not scale from the two-slot maximum of 834, so the tested 18432 context and 2048-token cap are the first setting for the seven-slot partition. A timeout or length stop stays evidence. This file does not raise the context again in advance."
+  },
+  "semantic_use": "NONE"
+}

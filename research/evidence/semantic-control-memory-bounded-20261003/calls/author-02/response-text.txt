@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system must log all user actions."
+        }
+      ],
+      "claim": "The system must log all user actions.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_02"
+    },
+    {
+      "authorized_body": [
+        {
+          "text": "The system must log all user actions."
+        }
+      ],
+      "claim": "The system must log all user actions.",
+      "distractors": [],
+      "projection": null,
+      "slot": "invariant_7"
+    },
+    {
+      "authorized_body": [
+        {
+          "text": "The system must log all user actions."
+        }
+      ],
+      "claim": "The system must log all cases.",
+      "distractors": [],
+      "projection": null,
+      "slot": "mutation_2"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "BODY asserts the event but omits a materially claimed time.",
+      "category": "unsupported_temporal",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_02"
+    },
+    {
+      "author_hypothesis": "Exact duplicate under new opaque ID.",
+      "category": "full_body_support",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+       "role": "INVARIANT",
+      "seed_kind": "positive",
+      "slot": "invariant_7"
+    },
+    {
+      "author_hypothesis": "Remove the independently additive unestablished temporal facet; preserve bindings and BODY; remaining full support must be judged independently.",
+      "category": "full_body_support",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "MUTATION",
+      "seed_kind": "explicit",
+      "slot": "mutation_2"
+    }
+  ],
+  "relations": [
+    {
+      "anchor_map": [
+        {
+          "kind": "ASSERTION",
+          "left": {
+            "text": "The system must log all user actions."
+          },
+          "right": {
+            "text": "The system must log all user actions."
+          }
+        }
+      ],
+      "changed_ranges": [],
+      "dimensions": ["truth", "scope"],
+      "family": "exact_duplicate",
+      "hypothesis": "Exact duplicate under new opaque ID.",
+      "id": "rel-invariant-7",
+      "mode": "INVARIANT"
+    },
+    {
+      "anchor_map": [
+        {
+          "kind": "ASSERTION",
+          "left": {
+            "text": "The system must log all user actions."
+          },
+          "right": {
+            "text": "The system must log all cases."
+          }
+        }
+      ],
+      "changed_ranges": [
+        {
+          "after": "The system must log all cases.",
+          "before": "The system must log all user actions.",
+          "surface": "CLAIM"
+        }
+      ],
+      "dimensions": ["truth", "scope"],
+      "family": "remove_material_qualifier",
+      "hypothesis": "Remove the independently additive unestablished temporal facet; preserve bindings and BODY; remaining full support must be judged independently.",
+      "id": "rel-mutation-2",
+      "mode": "SENSITIVE"
+    }
+  ]
+}
