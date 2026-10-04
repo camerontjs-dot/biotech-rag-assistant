@@ -1,0 +1,20 @@
+{
+  "schema_version": "semantic-control-three-slot-budget/v1",
+  "status": "PREREGISTERED_ONE_CALL",
+  "two_slot_request_path": "COMPLETE",
+  "two_slot_note": "author-09, author-10, and author-11 stopped inside the 16384 context. author-12 attempt 1 was cut at 793 tokens. author-12 attempt 2 and author-15, author-16, author-18, and author-21 stopped inside the 18432 context. None of those receipts is semantic acceptance.",
+  "authorized_call": {
+    "id": "author-02",
+    "slots": ["anchor_02", "invariant_7", "mutation_2"],
+    "relation_slots": 2,
+    "spec": "research/evidence/semantic-adjudication-request-bound-v2/requests/author-02.spec.json",
+    "config": "research/evidence/semantic-control-memory-bounded-20261003/author-config-room-18432.json",
+    "freeze": "research/evidence/semantic-control-memory-bounded-20261003/FREEZE-room-18432.json",
+    "calls": 1,
+    "retries": 0,
+    "semantic_use": "NONE. The receipt estimates whether a three-slot response fits the 18432 context and the 2048-token cap."
+  },
+  "not_authorized": {
+    "author-01": "7 slots and 6 relations. A three-slot budget does not show that this partition fits."
+  }
+}
