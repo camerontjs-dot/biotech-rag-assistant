@@ -326,6 +326,29 @@ class Wrapper(unittest.TestCase):
             boundary.execute(self.root, self.run, "author-01", self.fake())
         self.assertEqual(len(self.calls), 3)
 
+    def test_self_consistent_materialized_edit_cannot_override_unchanged_raw_response(self):
+        self.canary()
+        first = self.partition["partitions"][0]
+        draft = token_draft(first, self.inventory)
+        boundary.execute(self.root, self.run, first["id"], self.fake(draft))
+        boundary.checked_materialization(self.run, first, draft, self.inventory,
+                                         self.partition, self.schemas)
+        path = self.run / "calls/author-01/materialized.json"
+        changed = boundary.read(path)
+        changed["cases"][0]["claim"] = "CHANGED STRUCTURAL TOKEN"
+        path.write_bytes(once.encoded(changed) + b"\n")
+        acceptance_path = self.run / "calls/author-01/author-boundary.json"
+        acceptance = boundary.read(acceptance_path)
+        acceptance["materialized_sha256"] = once.sha(path.read_bytes())
+        acceptance_path.write_bytes(once.encoded(acceptance) + b"\n")
+        count = len(self.calls)
+        second = self.partition["partitions"][1]
+        with self.assertRaisesRegex(ValueError, "canonical raw-response rederivation"):
+            boundary.execute(self.root, self.run, second["id"],
+                             self.fake(token_draft(second, self.inventory)))
+        self.assertEqual(len(self.calls), count)
+        self.assertFalse((self.run / "calls/author-02").exists())
+
     def test_all_28_synthetic_partitions_freeze_only_after_exact_raw_revalidation(self):
         self.canary()
         for group in self.partition["partitions"]:

@@ -47,7 +47,10 @@ Changed-text occurrence checks establish reference validity only: they do not pr
 complete edit accounting, meaningful alignment, semantic invariance or mutation.
 
 Before the next request, the wrapper verifies the prospective freeze and reconstructs
-all earlier acceptance from request/raw-response/parsed-output custody. A missing,
+all earlier acceptance from request/raw-response/parsed-output custody. Persisted
+materialized bytes must match their receipt hash **and** a canonical rederivation
+from the unchanged raw response, before any next request or complete-corpus freeze.
+A missing,
 interrupted, invalid or out-of-order call stops the sequence. One generation attempt
 per frozen call; no retries, repair, adaptive repartition or continuation after failure.
 Only the new `research/evidence/semantic-author-slot-bound-v1-*` namespace is accepted.

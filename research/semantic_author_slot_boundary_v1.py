@@ -434,6 +434,14 @@ def check_budget(raw, config):
     return tokens
 
 
+def checked_materialization(run, group, draft, inventory, partition, schemas):
+    result = materialize(draft, group, inventory, partition, schemas)
+    raw = (run / "calls" / group["id"] / "materialized.json").read_bytes()
+    once.require(raw == once.encoded(result) + b"\n",
+                 "materialized bytes differ from canonical raw-response rederivation")
+    return result
+
+
 def execute(root, run, group_id, transport=once.local_http):
     inventory, partition, schemas, specs, config = verify_prepared(root, run)
     once.require(not (run / "corpus-freeze-started.json").exists(),
@@ -454,7 +462,7 @@ def execute(root, run, group_id, transport=once.local_http):
         draft = checked_call(run, earlier, spec, config, status)
         if earlier != "canary":
             group = next(g for g in partition["partitions"] if g["id"] == earlier)
-            materialize(draft, group, inventory, partition, schemas)
+            checked_materialization(run, group, draft, inventory, partition, schemas)
     spec = canary if group_id == "canary" else specs[group_id]
     output = calls / group_id
     receipt, draft = once.run_once(spec, config, output, transport=transport)
@@ -494,6 +502,8 @@ def _freeze_corpus(root, run):
                  "incomplete/extra call set")
     drafts = {group["id"]: checked_call(run, group["id"], specs[group["id"]], config, STATUS)
               for group in partition["partitions"]}
+    for group in partition["partitions"]:
+        checked_materialization(run, group, drafts[group["id"]], inventory, partition, schemas)
     outputs = assemble(drafts, inventory, partition, schemas)
     # All data validate before the exclusive directory or any corpus output exists.
     out = run / "corpus"
