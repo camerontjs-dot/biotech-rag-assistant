@@ -1,0 +1,63 @@
+{
+  "head": "9685872827b37b55c981b88ad3177a2ed3b13533",
+  "tree": "68a241ea95194929f4b1ac631eebe4962dd32cae",
+  "cases": [
+    {
+      "case": "overlapping_repeat",
+      "body": "Notify QA QA QA before release.",
+      "quote": "QA QA",
+      "exact_occurrence_offsets": [
+        7,
+        10
+      ],
+      "result": {
+        "outcome": "selected",
+        "text": "Notify QA QA QA before release.",
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "case": "abbreviation_truncates_condition",
+      "body": "Release is allowed for lot No. 7 only after QA approval.",
+      "quote": "Release is allowed",
+      "exact_occurrence_offsets": [
+        0
+      ],
+      "result": {
+        "outcome": "selected",
+        "text": "Release is allowed for lot No.",
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "case": "complete_sentence_rejected",
+      "body": "Hold until 5 p.m. unless QA grants an exception. Retain the record.",
+      "quote": "Hold until 5 p.m. unless QA grants an exception.",
+      "exact_occurrence_offsets": [
+        0
+      ],
+      "result": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "case": "complete_sentence_expands",
+      "body": "QA must approve! Operators may proceed.",
+      "quote": "QA must approve!",
+      "exact_occurrence_offsets": [
+        0
+      ],
+      "result": {
+        "outcome": "selected",
+        "text": "QA must approve! Operators may proceed.",
+        "start": 0,
+        "end": 39
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Suite: synthetic-controlled-docs-trust-layer
+Trust layer status: pass
+Cases passed: 24/24
+case_pass_rate: 24/24
+retrieval_expectation_match_rate: 24/24
+stale_document_exclusion_rate: 24/24
+refusal_expectation_match_rate: 6/6
+citation_resolves_to_retrieved_chunk_rate: 3/6
+citation_expectation_match_rate: 6/6
+generated_answer_outcome_match_rate: 24/24
+generated_answer_citation_validation_rate: 24/24

@@ -1,0 +1,43 @@
+"""Portable replay of the original review's Pages output-directory redirection.
+
+Usage: python pages_parity.py EXACT_REVIEWED_CHECKOUT NEW_OUTPUT_DIRECTORY
+This harness is new publication support code, not an original contract probe.
+"""
+
+from __future__ import annotations
+
+import importlib.util
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+EXPECTED_HEAD = "9685872827b37b55c981b88ad3177a2ed3b13533"
+EXPECTED_TREE = "68a241ea95194929f4b1ac631eebe4962dd32cae"
+
+if len(sys.argv) != 3:
+    raise SystemExit("usage: pages_parity.py EXACT_REVIEWED_CHECKOUT NEW_OUTPUT_DIRECTORY")
+
+repo = Path(sys.argv[1]).resolve()
+output = Path(sys.argv[2]).resolve()
+if output == repo or repo in output.parents:
+    raise SystemExit("output must be outside the reviewed source checkout")
+if output.exists():
+    raise SystemExit("output directory must not already exist")
+
+head = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
+tree = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD^{tree}"], text=True).strip()
+if head != EXPECTED_HEAD or tree != EXPECTED_TREE:
+    raise SystemExit(f"source identity mismatch: head={head}, tree={tree}")
+subprocess.run(["git", "-C", str(repo), "diff", "--quiet", "HEAD", "--"], check=True)
+
+shutil.copytree(repo / "docs", output)
+spec = importlib.util.spec_from_file_location("review_pages_parity", repo / "scripts/build_pages_demo.py")
+assert spec is not None and spec.loader is not None
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+module.DOCS = output
+print(f"Source HEAD: {head}")
+print(f"Source tree: {tree}")
+print(f"Only DOCS output directory redirected to: {output}")
+raise SystemExit(module.main())

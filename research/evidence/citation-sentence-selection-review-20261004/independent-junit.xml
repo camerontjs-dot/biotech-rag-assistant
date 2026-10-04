@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="24" time="0.171" timestamp="2026-10-04T05:59:15.746315+02:00" hostname="73425ddf98bf"><testcase classname="evidence.citation-review.test_independent_contract" name="test_unique_quote_selects_exact_sentence[Context only. QA must hold the lot until the owner approves release. Other text.-hold the lot-QA must hold the lot until the owner approves release.]" time="0.001" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_unique_quote_selects_exact_sentence[Context only. QA must hold the lot until the owner approves release. Other text.-QA must hold the lot until the owner approves release.-QA must hold the lot until the owner approves release.]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_unique_quote_selects_exact_sentence[Read the report. Keep this final line-this final-Keep this final line]" time="0.001" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_unique_quote_selects_exact_sentence[First.\r\n\u03b1\u03b2: QA holds lot \u03b2 until owner approval.\r\nLast.-lot \u03b2-\u03b1\u03b2: QA holds lot \u03b2 until owner approval.]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_unique_quote_selects_exact_sentence[Concentration is 2.5 mg per unit. Other.-2.5 mg-Concentration is 2.5 mg per unit.]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_missing_or_external_quote_fails_closed[]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_missing_or_external_quote_fails_closed[absent]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_missing_or_external_quote_fails_closed[HEADER_ONLY]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_missing_or_external_quote_fails_closed[STALE_ONLY]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_missing_or_external_quote_fails_closed[HELD_OUT_ONLY]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_repeated_quote_is_ambiguous_including_overlapping_occurrences[QA approval is required. QA approval is recorded.-QA approval]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_repeated_quote_is_ambiguous_including_overlapping_occurrences[QA approves after QA reviews.-QA]" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_repeated_quote_is_ambiguous_including_overlapping_occurrences[Notify QA QA QA before release.-QA QA]" time="0.001"><failure message="AssertionError: assert {'outcome': 'selected', 'text': 'Notify QA QA QA before release.', 'start': 0, 'end': 31} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}&#10;  &#10;  Differing items:&#10;  {'end': 31} != {'end': None}&#10;  {'outcome': 'selected'} != {'outcome': 'ambiguous'}&#10;  {'text': 'Notify QA QA QA before release.'} != {'text': None}&#10;  {'start': 0} != {'start': None}&#10;  &#10;  Full diff:&#10;    {&#10;  -     'outcome': 'ambiguous',&#10;  -     'text': None,&#10;  +     'outcome': 'selected',&#10;  +     'text': 'Notify QA QA QA before release.',&#10;  -     'start': None,&#10;  ?              ^^^^&#10;  +     'start': 0,&#10;  ?              ^&#10;  -     'end': None,&#10;  ?            ^^^^&#10;  +     'end': 31,&#10;  ?            ^^&#10;    }">../evidence/citation-review/test_independent_contract.py:69: in test_repeated_quote_is_ambiguous_including_overlapping_occurrences
+    assert result.model_dump() == {
+E   AssertionError: assert {'outcome': 'selected', 'text': 'Notify QA QA QA before release.', 'start': 0, 'end': 31} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+E     
+E     Differing items:
+E     {'end': 31} != {'end': None}
+E     {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+E     {'text': 'Notify QA QA QA before release.'} != {'text': None}
+E     {'start': 0} != {'start': None}
+E     
+E     Full diff:
+E       {
+E     -     'outcome': 'ambiguous',
+E     -     'text': None,
+E     +     'outcome': 'selected',
+E     +     'text': 'Notify QA QA QA before release.',
+E     -     'start': None,
+E     ?              ^^^^
+E     +     'start': 0,
+E     ?              ^
+E     -     'end': None,
+E     ?            ^^^^
+E     +     'end': 31,
+E     ?            ^^
+E       }</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_repeated_quote_is_ambiguous_including_overlapping_occurrences[The repeat is CAGCAGCAG.-CAGCAG]" time="0.001"><failure message="AssertionError: assert {'outcome': 'selected', 'text': 'The repeat is CAGCAGCAG.', 'start': 0, 'end': 24} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}&#10;  &#10;  Differing items:&#10;  {'end': 24} != {'end': None}&#10;  {'outcome': 'selected'} != {'outcome': 'ambiguous'}&#10;  {'text': 'The repeat is CAGCAGCAG.'} != {'text': None}&#10;  {'start': 0} != {'start': None}&#10;  &#10;  Full diff:&#10;    {&#10;  -     'outcome': 'ambiguous',&#10;  -     'text': None,&#10;  +     'outcome': 'selected',&#10;  +     'text': 'The repeat is CAGCAGCAG.',&#10;  -     'start': None,&#10;  ?              ^^^^&#10;  +     'start': 0,&#10;  ?              ^&#10;  -     'end': None,&#10;  ?            ^^^^&#10;  +     'end': 24,&#10;  ?            ^^&#10;    }">../evidence/citation-review/test_independent_contract.py:69: in test_repeated_quote_is_ambiguous_including_overlapping_occurrences
+    assert result.model_dump() == {
+E   AssertionError: assert {'outcome': 'selected', 'text': 'The repeat is CAGCAGCAG.', 'start': 0, 'end': 24} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+E     
+E     Differing items:
+E     {'end': 24} != {'end': None}
+E     {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+E     {'text': 'The repeat is CAGCAGCAG.'} != {'text': None}
+E     {'start': 0} != {'start': None}
+E     
+E     Full diff:
+E       {
+E     -     'outcome': 'ambiguous',
+E     -     'text': None,
+E     +     'outcome': 'selected',
+E     +     'text': 'The repeat is CAGCAGCAG.',
+E     -     'start': None,
+E     ?              ^^^^
+E     +     'start': 0,
+E     ?              ^
+E     -     'end': None,
+E     ?            ^^^^
+E     +     'end': 24,
+E     ?            ^^
+E       }</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_repeated_quote_is_ambiguous_including_overlapping_occurrences[aaaaa.-aaa]" time="0.002"><failure message="AssertionError: assert {'outcome': 'selected', 'text': 'aaaaa.', 'start': 0, 'end': 6} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}&#10;  &#10;  Differing items:&#10;  {'end': 6} != {'end': None}&#10;  {'outcome': 'selected'} != {'outcome': 'ambiguous'}&#10;  {'text': 'aaaaa.'} != {'text': None}&#10;  {'start': 0} != {'start': None}&#10;  &#10;  Full diff:&#10;    {&#10;  -     'outcome': 'ambiguous',&#10;  -     'text': None,&#10;  +     'outcome': 'selected',&#10;  +     'text': 'aaaaa.',&#10;  -     'start': None,&#10;  ?              ^^^^&#10;  +     'start': 0,&#10;  ?              ^&#10;  -     'end': None,&#10;  ?            ^^^^&#10;  +     'end': 6,&#10;  ?            ^&#10;    }">../evidence/citation-review/test_independent_contract.py:69: in test_repeated_quote_is_ambiguous_including_overlapping_occurrences
+    assert result.model_dump() == {
+E   AssertionError: assert {'outcome': 'selected', 'text': 'aaaaa.', 'start': 0, 'end': 6} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+E     
+E     Differing items:
+E     {'end': 6} != {'end': None}
+E     {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+E     {'text': 'aaaaa.'} != {'text': None}
+E     {'start': 0} != {'start': None}
+E     
+E     Full diff:
+E       {
+E     -     'outcome': 'ambiguous',
+E     -     'text': None,
+E     +     'outcome': 'selected',
+E     +     'text': 'aaaaa.',
+E     -     'start': None,
+E     ?              ^^^^
+E     +     'start': 0,
+E     ?              ^
+E     -     'end': None,
+E     ?            ^^^^
+E     +     'end': 6,
+E     ?            ^
+E       }</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_complete_sentences_remain_stable_and_do_not_gain_neighbors[QA must approve! Operators may proceed.-QA must approve!-QA must approve!]" time="0.001"><failure message="AssertionError: assert 'QA must approve! Operators may proceed.' == 'QA must approve!'&#10;  &#10;  - QA must approve!&#10;  + QA must approve! Operators may proceed.">../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'QA must approve! Operators may proceed.' == 'QA must approve!'
+E     
+E     - QA must approve!
+E     + QA must approve! Operators may proceed.</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Is QA approval recorded? Operators must verify.-Is QA approval recorded?-Is QA approval recorded?]" time="0.002"><failure message="AssertionError: assert 'Is QA approval recorded? Operators must verify.' == 'Is QA approval recorded?'&#10;  &#10;  - Is QA approval recorded?&#10;  + Is QA approval recorded? Operators must verify.">../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'Is QA approval recorded? Operators must verify.' == 'Is QA approval recorded?'
+E     
+E     - Is QA approval recorded?
+E     + Is QA approval recorded? Operators must verify.</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_complete_sentences_remain_stable_and_do_not_gain_neighbors[The label says &quot;Hold.&quot; QA must approve release.-The label says &quot;Hold.&quot;-The label says &quot;Hold.&quot;]" time="0.001"><failure message="assert 'The label says &quot;Hold.&quot; QA must approve release.' == 'The label says &quot;Hold.&quot;'&#10;  &#10;  - The label says &quot;Hold.&quot;&#10;  + The label says &quot;Hold.&quot; QA must approve release.">../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   assert 'The label says "Hold." QA must approve release.' == 'The label says "Hold."'
+E     
+E     - The label says "Hold."
+E     + The label says "Hold." QA must approve release.</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until 5 p.m. unless QA grants an exception.-Hold until 5 p.m. unless QA grants an exception.]" time="0.001"><failure message="AssertionError: assert 'not_found' == 'selected'&#10;  &#10;  - selected&#10;  + not_found">../evidence/citation-review/test_independent_contract.py:97: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.outcome == "selected"
+E   AssertionError: assert 'not_found' == 'selected'
+E     
+E     - selected
+E     + not_found</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until-Hold until 5 p.m. unless QA grants an exception.]" time="0.001"><failure message="AssertionError: assert 'Hold until 5 p.m.' == 'Hold until 5 p.m. unless QA grants an exception.'&#10;  &#10;  - Hold until 5 p.m. unless QA grants an exception.&#10;  + Hold until 5 p.m.">../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'Hold until 5 p.m.' == 'Hold until 5 p.m. unless QA grants an exception.'
+E     
+E     - Hold until 5 p.m. unless QA grants an exception.
+E     + Hold until 5 p.m.</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Dr. Vale must approve release. Retain the record.-must approve release-Dr. Vale must approve release.]" time="0.001"><failure message="AssertionError: assert 'Vale must approve release.' == 'Dr. Vale must approve release.'&#10;  &#10;  - Dr. Vale must approve release.&#10;  ? ----&#10;  + Vale must approve release.">../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'Vale must approve release.' == 'Dr. Vale must approve release.'
+E     
+E     - Dr. Vale must approve release.
+E     ? ----
+E     + Vale must approve release.</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_complete_sentences_remain_stable_and_do_not_gain_neighbors[\n  QA must approve release. Retain the record.-QA must approve release.-QA must approve release.]" time="0.001"><failure message="AssertionError: assert '\n  QA must approve release.' == 'QA must approve release.'&#10;  &#10;  + &#10;  - QA must approve release.&#10;  +   QA must approve release.&#10;  ? ++">../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert '\n  QA must approve release.' == 'QA must approve release.'
+E     
+E     + 
+E     - QA must approve release.
+E     +   QA must approve release.
+E     ? ++</failure></testcase><testcase classname="evidence.citation-review.test_independent_contract" name="test_cross_sentence_quote_fails_closed" time="0.000" /><testcase classname="evidence.citation-review.test_independent_contract" name="test_authorized_body_offsets_compose_with_unchanged_source_identity" time="0.000" /></testsuite></testsuites>

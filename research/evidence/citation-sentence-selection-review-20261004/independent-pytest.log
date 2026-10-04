@@ -1,0 +1,266 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- <REVIEW_WORKSPACE>/evidence/citation-review/venv/bin/python
+cachedir: .pytest_cache
+rootdir: <REVIEW_WORKSPACE>
+plugins: anyio-4.15.1
+collecting ... collected 24 items
+
+../evidence/citation-review/test_independent_contract.py::test_unique_quote_selects_exact_sentence[Context only. QA must hold the lot until the owner approves release. Other text.-hold the lot-QA must hold the lot until the owner approves release.] PASSED [  4%]
+../evidence/citation-review/test_independent_contract.py::test_unique_quote_selects_exact_sentence[Context only. QA must hold the lot until the owner approves release. Other text.-QA must hold the lot until the owner approves release.-QA must hold the lot until the owner approves release.] PASSED [  8%]
+../evidence/citation-review/test_independent_contract.py::test_unique_quote_selects_exact_sentence[Read the report. Keep this final line-this final-Keep this final line] PASSED [ 12%]
+../evidence/citation-review/test_independent_contract.py::test_unique_quote_selects_exact_sentence[First.\r\n\u03b1\u03b2: QA holds lot \u03b2 until owner approval.\r\nLast.-lot \u03b2-\u03b1\u03b2: QA holds lot \u03b2 until owner approval.] PASSED [ 16%]
+../evidence/citation-review/test_independent_contract.py::test_unique_quote_selects_exact_sentence[Concentration is 2.5 mg per unit. Other.-2.5 mg-Concentration is 2.5 mg per unit.] PASSED [ 20%]
+../evidence/citation-review/test_independent_contract.py::test_missing_or_external_quote_fails_closed[] PASSED [ 25%]
+../evidence/citation-review/test_independent_contract.py::test_missing_or_external_quote_fails_closed[absent] PASSED [ 29%]
+../evidence/citation-review/test_independent_contract.py::test_missing_or_external_quote_fails_closed[HEADER_ONLY] PASSED [ 33%]
+../evidence/citation-review/test_independent_contract.py::test_missing_or_external_quote_fails_closed[STALE_ONLY] PASSED [ 37%]
+../evidence/citation-review/test_independent_contract.py::test_missing_or_external_quote_fails_closed[HELD_OUT_ONLY] PASSED [ 41%]
+../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[QA approval is required. QA approval is recorded.-QA approval] PASSED [ 45%]
+../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[QA approves after QA reviews.-QA] PASSED [ 50%]
+../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[Notify QA QA QA before release.-QA QA] FAILED [ 54%]
+../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[The repeat is CAGCAGCAG.-CAGCAG] FAILED [ 58%]
+../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[aaaaa.-aaa] FAILED [ 62%]
+../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[QA must approve! Operators may proceed.-QA must approve!-QA must approve!] FAILED [ 66%]
+../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Is QA approval recorded? Operators must verify.-Is QA approval recorded?-Is QA approval recorded?] FAILED [ 70%]
+../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[The label says "Hold." QA must approve release.-The label says "Hold."-The label says "Hold."] FAILED [ 75%]
+../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until 5 p.m. unless QA grants an exception.-Hold until 5 p.m. unless QA grants an exception.] FAILED [ 79%]
+../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until-Hold until 5 p.m. unless QA grants an exception.] FAILED [ 83%]
+../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Dr. Vale must approve release. Retain the record.-must approve release-Dr. Vale must approve release.] FAILED [ 87%]
+../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[\n  QA must approve release. Retain the record.-QA must approve release.-QA must approve release.] FAILED [ 91%]
+../evidence/citation-review/test_independent_contract.py::test_cross_sentence_quote_fails_closed PASSED [ 95%]
+../evidence/citation-review/test_independent_contract.py::test_authorized_body_offsets_compose_with_unchanged_source_identity PASSED [100%]
+
+=================================== FAILURES ===================================
+_ test_repeated_quote_is_ambiguous_including_overlapping_occurrences[Notify QA QA QA before release.-QA QA] _
+../evidence/citation-review/test_independent_contract.py:69: in test_repeated_quote_is_ambiguous_including_overlapping_occurrences
+    assert result.model_dump() == {
+E   AssertionError: assert {'outcome': 'selected', 'text': 'Notify QA QA QA before release.', 'start': 0, 'end': 31} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+E     
+E     Differing items:
+E     {'end': 31} != {'end': None}
+E     {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+E     {'text': 'Notify QA QA QA before release.'} != {'text': None}
+E     {'start': 0} != {'start': None}
+E     
+E     Full diff:
+E       {
+E     -     'outcome': 'ambiguous',
+E     -     'text': None,
+E     +     'outcome': 'selected',
+E     +     'text': 'Notify QA QA QA before release.',
+E     -     'start': None,
+E     ?              ^^^^
+E     +     'start': 0,
+E     ?              ^
+E     -     'end': None,
+E     ?            ^^^^
+E     +     'end': 31,
+E     ?            ^^
+E       }
+_ test_repeated_quote_is_ambiguous_including_overlapping_occurrences[The repeat is CAGCAGCAG.-CAGCAG] _
+../evidence/citation-review/test_independent_contract.py:69: in test_repeated_quote_is_ambiguous_including_overlapping_occurrences
+    assert result.model_dump() == {
+E   AssertionError: assert {'outcome': 'selected', 'text': 'The repeat is CAGCAGCAG.', 'start': 0, 'end': 24} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+E     
+E     Differing items:
+E     {'end': 24} != {'end': None}
+E     {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+E     {'text': 'The repeat is CAGCAGCAG.'} != {'text': None}
+E     {'start': 0} != {'start': None}
+E     
+E     Full diff:
+E       {
+E     -     'outcome': 'ambiguous',
+E     -     'text': None,
+E     +     'outcome': 'selected',
+E     +     'text': 'The repeat is CAGCAGCAG.',
+E     -     'start': None,
+E     ?              ^^^^
+E     +     'start': 0,
+E     ?              ^
+E     -     'end': None,
+E     ?            ^^^^
+E     +     'end': 24,
+E     ?            ^^
+E       }
+_ test_repeated_quote_is_ambiguous_including_overlapping_occurrences[aaaaa.-aaa] _
+../evidence/citation-review/test_independent_contract.py:69: in test_repeated_quote_is_ambiguous_including_overlapping_occurrences
+    assert result.model_dump() == {
+E   AssertionError: assert {'outcome': 'selected', 'text': 'aaaaa.', 'start': 0, 'end': 6} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+E     
+E     Differing items:
+E     {'end': 6} != {'end': None}
+E     {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+E     {'text': 'aaaaa.'} != {'text': None}
+E     {'start': 0} != {'start': None}
+E     
+E     Full diff:
+E       {
+E     -     'outcome': 'ambiguous',
+E     -     'text': None,
+E     +     'outcome': 'selected',
+E     +     'text': 'aaaaa.',
+E     -     'start': None,
+E     ?              ^^^^
+E     +     'start': 0,
+E     ?              ^
+E     -     'end': None,
+E     ?            ^^^^
+E     +     'end': 6,
+E     ?            ^
+E       }
+_ test_complete_sentences_remain_stable_and_do_not_gain_neighbors[QA must approve! Operators may proceed.-QA must approve!-QA must approve!] _
+../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'QA must approve! Operators may proceed.' == 'QA must approve!'
+E     
+E     - QA must approve!
+E     + QA must approve! Operators may proceed.
+_ test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Is QA approval recorded? Operators must verify.-Is QA approval recorded?-Is QA approval recorded?] _
+../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'Is QA approval recorded? Operators must verify.' == 'Is QA approval recorded?'
+E     
+E     - Is QA approval recorded?
+E     + Is QA approval recorded? Operators must verify.
+_ test_complete_sentences_remain_stable_and_do_not_gain_neighbors[The label says "Hold." QA must approve release.-The label says "Hold."-The label says "Hold."] _
+../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   assert 'The label says "Hold." QA must approve release.' == 'The label says "Hold."'
+E     
+E     - The label says "Hold."
+E     + The label says "Hold." QA must approve release.
+_ test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until 5 p.m. unless QA grants an exception.-Hold until 5 p.m. unless QA grants an exception.] _
+../evidence/citation-review/test_independent_contract.py:97: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.outcome == "selected"
+E   AssertionError: assert 'not_found' == 'selected'
+E     
+E     - selected
+E     + not_found
+_ test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until-Hold until 5 p.m. unless QA grants an exception.] _
+../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'Hold until 5 p.m.' == 'Hold until 5 p.m. unless QA grants an exception.'
+E     
+E     - Hold until 5 p.m. unless QA grants an exception.
+E     + Hold until 5 p.m.
+_ test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Dr. Vale must approve release. Retain the record.-must approve release-Dr. Vale must approve release.] _
+../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert 'Vale must approve release.' == 'Dr. Vale must approve release.'
+E     
+E     - Dr. Vale must approve release.
+E     ? ----
+E     + Vale must approve release.
+_ test_complete_sentences_remain_stable_and_do_not_gain_neighbors[\n  QA must approve release. Retain the record.-QA must approve release.-QA must approve release.] _
+../evidence/citation-review/test_independent_contract.py:98: in test_complete_sentences_remain_stable_and_do_not_gain_neighbors
+    assert result.text == expected
+E   AssertionError: assert '\n  QA must approve release.' == 'QA must approve release.'
+E     
+E     + 
+E     - QA must approve release.
+E     +   QA must approve release.
+E     ? ++
+- generated xml file: <REVIEW_WORKSPACE>/evidence/citation-review/independent-junit.xml -
+=========================== short test summary info ============================
+FAILED ../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[Notify QA QA QA before release.-QA QA] - AssertionError: assert {'outcome': 'selected', 'text': 'Notify QA QA QA before release.', 'start': 0, 'end': 31} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+  
+  Differing items:
+  {'end': 31} != {'end': None}
+  {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+  {'text': 'Notify QA QA QA before release.'} != {'text': None}
+  {'start': 0} != {'start': None}
+  
+  Full diff:
+    {
+  -     'outcome': 'ambiguous',
+  -     'text': None,
+  +     'outcome': 'selected',
+  +     'text': 'Notify QA QA QA before release.',
+  -     'start': None,
+  ?              ^^^^
+  +     'start': 0,
+  ?              ^
+  -     'end': None,
+  ?            ^^^^
+  +     'end': 31,
+  ?            ^^
+    }
+FAILED ../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[The repeat is CAGCAGCAG.-CAGCAG] - AssertionError: assert {'outcome': 'selected', 'text': 'The repeat is CAGCAGCAG.', 'start': 0, 'end': 24} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+  
+  Differing items:
+  {'end': 24} != {'end': None}
+  {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+  {'text': 'The repeat is CAGCAGCAG.'} != {'text': None}
+  {'start': 0} != {'start': None}
+  
+  Full diff:
+    {
+  -     'outcome': 'ambiguous',
+  -     'text': None,
+  +     'outcome': 'selected',
+  +     'text': 'The repeat is CAGCAGCAG.',
+  -     'start': None,
+  ?              ^^^^
+  +     'start': 0,
+  ?              ^
+  -     'end': None,
+  ?            ^^^^
+  +     'end': 24,
+  ?            ^^
+    }
+FAILED ../evidence/citation-review/test_independent_contract.py::test_repeated_quote_is_ambiguous_including_overlapping_occurrences[aaaaa.-aaa] - AssertionError: assert {'outcome': 'selected', 'text': 'aaaaa.', 'start': 0, 'end': 6} == {'outcome': 'ambiguous', 'text': None, 'start': None, 'end': None}
+  
+  Differing items:
+  {'end': 6} != {'end': None}
+  {'outcome': 'selected'} != {'outcome': 'ambiguous'}
+  {'text': 'aaaaa.'} != {'text': None}
+  {'start': 0} != {'start': None}
+  
+  Full diff:
+    {
+  -     'outcome': 'ambiguous',
+  -     'text': None,
+  +     'outcome': 'selected',
+  +     'text': 'aaaaa.',
+  -     'start': None,
+  ?              ^^^^
+  +     'start': 0,
+  ?              ^
+  -     'end': None,
+  ?            ^^^^
+  +     'end': 6,
+  ?            ^
+    }
+FAILED ../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[QA must approve! Operators may proceed.-QA must approve!-QA must approve!] - AssertionError: assert 'QA must approve! Operators may proceed.' == 'QA must approve!'
+  
+  - QA must approve!
+  + QA must approve! Operators may proceed.
+FAILED ../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Is QA approval recorded? Operators must verify.-Is QA approval recorded?-Is QA approval recorded?] - AssertionError: assert 'Is QA approval recorded? Operators must verify.' == 'Is QA approval recorded?'
+  
+  - Is QA approval recorded?
+  + Is QA approval recorded? Operators must verify.
+FAILED ../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[The label says "Hold." QA must approve release.-The label says "Hold."-The label says "Hold."] - assert 'The label says "Hold." QA must approve release.' == 'The label says "Hold."'
+  
+  - The label says "Hold."
+  + The label says "Hold." QA must approve release.
+FAILED ../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until 5 p.m. unless QA grants an exception.-Hold until 5 p.m. unless QA grants an exception.] - AssertionError: assert 'not_found' == 'selected'
+  
+  - selected
+  + not_found
+FAILED ../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Hold until 5 p.m. unless QA grants an exception. Retain the record.-Hold until-Hold until 5 p.m. unless QA grants an exception.] - AssertionError: assert 'Hold until 5 p.m.' == 'Hold until 5 p.m. unless QA grants an exception.'
+  
+  - Hold until 5 p.m. unless QA grants an exception.
+  + Hold until 5 p.m.
+FAILED ../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[Dr. Vale must approve release. Retain the record.-must approve release-Dr. Vale must approve release.] - AssertionError: assert 'Vale must approve release.' == 'Dr. Vale must approve release.'
+  
+  - Dr. Vale must approve release.
+  ? ----
+  + Vale must approve release.
+FAILED ../evidence/citation-review/test_independent_contract.py::test_complete_sentences_remain_stable_and_do_not_gain_neighbors[\n  QA must approve release. Retain the record.-QA must approve release.-QA must approve release.] - AssertionError: assert '\n  QA must approve release.' == 'QA must approve release.'
+  
+  + 
+  - QA must approve release.
+  +   QA must approve release.
+  ? ++
+======================== 10 failed, 14 passed in 0.17s =========================

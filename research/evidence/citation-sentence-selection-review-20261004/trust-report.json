@@ -1,0 +1,587 @@
+{
+  "valid": true,
+  "trust_layer_status": "pass",
+  "suite_name": "synthetic-controlled-docs-trust-layer",
+  "corpus_summary": {
+    "corpus_dir": "<REVIEW_WORKSPACE>/review-citation-50/examples/synthetic-controlled-docs",
+    "metadata_files_seen": 10,
+    "documents_valid": 10,
+    "documents_retrievable": 8,
+    "documents_excluded": 2
+  },
+  "retrieval_config": {
+    "method": "bm25",
+    "top_k": "per_case",
+    "score_floor": 0.0,
+    "min_top_coverage": 0.6
+  },
+  "case_count": 24,
+  "passed_case_count": 24,
+  "metrics": {
+    "case_pass_rate": "24/24",
+    "retrieval_expectation_match_rate": "24/24",
+    "stale_document_exclusion_rate": "24/24",
+    "refusal_expectation_match_rate": "6/6",
+    "citation_resolves_to_retrieved_chunk_rate": "3/6",
+    "citation_expectation_match_rate": "6/6",
+    "generated_answer_outcome_match_rate": "24/24",
+    "generated_answer_citation_validation_rate": "24/24"
+  },
+  "cases": [
+    {
+      "case_id": "valid-env-containment",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-QA-001_v1_0_chunk_002",
+        "SOP-QA-001_v1_0_chunk_003",
+        "SOP-QA-001_v1_0_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "SOP-QA-001",
+        "SOP-QA-001",
+        "SOP-QA-001"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": true,
+      "citation_resolves_to_retrieved_chunk": true,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "missing-citation-env-containment",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-QA-001_v1_0_chunk_002",
+        "SOP-QA-001_v1_0_chunk_003",
+        "SOP-QA-001_v1_0_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "SOP-QA-001",
+        "SOP-QA-001",
+        "SOP-QA-001"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": true,
+      "citation_resolves_to_retrieved_chunk": false,
+      "citation_issue_codes": [
+        "missing_answer_citation"
+      ],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "hallucinated-citation-env-containment",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-QA-001_v1_0_chunk_002",
+        "SOP-QA-001_v1_0_chunk_003",
+        "SOP-QA-001_v1_0_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "SOP-QA-001",
+        "SOP-QA-001",
+        "SOP-QA-001"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": true,
+      "citation_resolves_to_retrieved_chunk": false,
+      "citation_issue_codes": [
+        "unresolved_citation"
+      ],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "obsolete-sterility-excluded",
+      "passed": true,
+      "expected_outcome": "refusal",
+      "hit_chunk_ids": [],
+      "hit_doc_ids": [],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": true,
+      "citation_resolves_to_retrieved_chunk": true,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "refusal",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "draft-cleaning-excluded",
+      "passed": true,
+      "expected_outcome": "refusal",
+      "hit_chunk_ids": [],
+      "hit_doc_ids": [],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": true,
+      "citation_resolves_to_retrieved_chunk": true,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "refusal",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "refusal-with-citation-is-caught",
+      "passed": true,
+      "expected_outcome": "refusal",
+      "hit_chunk_ids": [],
+      "hit_doc_ids": [],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": true,
+      "citation_resolves_to_retrieved_chunk": false,
+      "citation_issue_codes": [
+        "refusal_has_citation",
+        "unresolved_citation"
+      ],
+      "generated_answer_outcome": "refusal",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "water-action-limit",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SPEC-QC-006_v3_0_chunk_002",
+        "SOP-QA-001_v1_0_chunk_002",
+        "SPEC-QC-006_v3_0_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "SPEC-QC-006",
+        "SOP-QA-001",
+        "SPEC-QC-006"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "line-clearance-independent-check",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-OPS-007_v1_2_chunk_002",
+        "SOP-OPS-007_v1_2_chunk_001",
+        "SOP-QA-001_v1_0_chunk_003"
+      ],
+      "hit_doc_ids": [
+        "SOP-OPS-007",
+        "SOP-OPS-007",
+        "SOP-QA-001"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "env-investigation-record",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-QA-001_v1_0_chunk_003",
+        "SOP-QA-001_v1_0_chunk_002",
+        "SOP-QA-002_v1_1_chunk_003"
+      ],
+      "hit_doc_ids": [
+        "SOP-QA-001",
+        "SOP-QA-001",
+        "SOP-QA-002"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "deviation-major-escalation",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-QA-002_v1_1_chunk_002",
+        "SOP-QA-002_v1_1_chunk_001",
+        "SOP-QA-001_v1_0_chunk_002"
+      ],
+      "hit_doc_ids": [
+        "SOP-QA-002",
+        "SOP-QA-002",
+        "SOP-QA-001"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "deviation-closure-rule",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-QA-002_v1_1_chunk_003",
+        "SOP-QA-001_v1_0_chunk_002",
+        "SOP-QA-001_v1_0_chunk_003"
+      ],
+      "hit_doc_ids": [
+        "SOP-QA-002",
+        "SOP-QA-001",
+        "SOP-QA-001"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "document-current-version-rule",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "POL-DOC-003_v2_0_chunk_001",
+        "SOP-QA-001_v1_0_chunk_001",
+        "SOP-OPS-007_v1_2_chunk_002"
+      ],
+      "hit_doc_ids": [
+        "POL-DOC-003",
+        "SOP-QA-001",
+        "SOP-OPS-007"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "document-draft-obsolete-rule",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "POL-DOC-003_v2_0_chunk_002",
+        "NOTE-TS-008_v1_0_chunk_002",
+        "SOP-OPS-007_v1_2_chunk_002"
+      ],
+      "hit_doc_ids": [
+        "POL-DOC-003",
+        "NOTE-TS-008",
+        "SOP-OPS-007"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "gowning-training-scope",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "TRN-QA-004_v1_0_chunk_001",
+        "TRN-QA-004_v1_0_chunk_002",
+        "SOP-QA-001_v1_0_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "TRN-QA-004",
+        "TRN-QA-004",
+        "SOP-QA-001"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "gowning-requalification-trigger",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "TRN-QA-004_v1_0_chunk_002",
+        "TRN-QA-004_v1_0_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "TRN-QA-004",
+        "TRN-QA-004"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "balance-daily-check",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "CAL-ENG-005_v1_0_chunk_001",
+        "SPEC-QC-006_v3_0_chunk_002",
+        "SOP-OPS-007_v1_2_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "CAL-ENG-005",
+        "SPEC-QC-006",
+        "SOP-OPS-007"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "balance-calibration-failure",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "CAL-ENG-005_v1_0_chunk_002",
+        "SOP-QA-002_v1_1_chunk_002",
+        "SOP-OPS-007_v1_2_chunk_002"
+      ],
+      "hit_doc_ids": [
+        "CAL-ENG-005",
+        "SOP-QA-002",
+        "SOP-OPS-007"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "customer-requirement-intake",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "NOTE-TS-008_v1_0_chunk_001",
+        "NOTE-TS-008_v1_0_chunk_002"
+      ],
+      "hit_doc_ids": [
+        "NOTE-TS-008",
+        "NOTE-TS-008"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "customer-conflict-review",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "NOTE-TS-008_v1_0_chunk_002",
+        "NOTE-TS-008_v1_0_chunk_001",
+        "POL-DOC-003_v2_0_chunk_002"
+      ],
+      "hit_doc_ids": [
+        "NOTE-TS-008",
+        "NOTE-TS-008",
+        "POL-DOC-003"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "water-sampling-missed-sample",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SPEC-QC-006_v3_0_chunk_001",
+        "SOP-QA-001_v1_0_chunk_003",
+        "NOTE-TS-008_v1_0_chunk_002"
+      ],
+      "hit_doc_ids": [
+        "SPEC-QC-006",
+        "SOP-QA-001",
+        "NOTE-TS-008"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "line-clearance-pre-run",
+      "passed": true,
+      "expected_outcome": "answer",
+      "hit_chunk_ids": [
+        "SOP-OPS-007_v1_2_chunk_001",
+        "SOP-OPS-007_v1_2_chunk_002",
+        "SOP-QA-002_v1_1_chunk_001"
+      ],
+      "hit_doc_ids": [
+        "SOP-OPS-007",
+        "SOP-OPS-007",
+        "SOP-QA-002"
+      ],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "answer",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "unsupported-lyophilizer-purge",
+      "passed": true,
+      "expected_outcome": "refusal",
+      "hit_chunk_ids": [],
+      "hit_doc_ids": [],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "refusal",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "unsupported-endotoxin-method",
+      "passed": true,
+      "expected_outcome": "refusal",
+      "hit_chunk_ids": [],
+      "hit_doc_ids": [],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "refusal",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    },
+    {
+      "case_id": "obsolete-and-draft-combined-trap",
+      "passed": true,
+      "expected_outcome": "refusal",
+      "hit_chunk_ids": [],
+      "hit_doc_ids": [],
+      "retrieval_expectation_passed": true,
+      "stale_document_exclusion_passed": true,
+      "refusal_expectation_passed": true,
+      "citation_expectation_passed": null,
+      "citation_resolves_to_retrieved_chunk": null,
+      "citation_issue_codes": [],
+      "generated_answer_outcome": "refusal",
+      "generated_answer_outcome_passed": true,
+      "generated_answer_citation_validation_passed": true,
+      "issues": []
+    }
+  ]
+}

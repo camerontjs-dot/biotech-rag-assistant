@@ -1,0 +1,20 @@
+"""Run the committed Pages parity program with writes redirected to review evidence."""
+
+from __future__ import annotations
+
+import importlib.util
+import shutil
+from pathlib import Path
+
+REPO = Path("<REVIEW_WORKSPACE>/review-citation-50")
+OUTPUT = Path("<REVIEW_WORKSPACE>/evidence/citation-review/pages-docs")
+
+shutil.copytree(REPO / "docs", OUTPUT, dirs_exist_ok=True)
+spec = importlib.util.spec_from_file_location("review_pages_parity", REPO / "scripts/build_pages_demo.py")
+assert spec is not None and spec.loader is not None
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+module.DOCS = OUTPUT
+print(f"Committed parity program: {REPO / 'scripts/build_pages_demo.py'}")
+print(f"Output directory only redirected to: {OUTPUT}")
+raise SystemExit(module.main())

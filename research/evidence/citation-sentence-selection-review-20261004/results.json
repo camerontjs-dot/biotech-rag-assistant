@@ -1,0 +1,88 @@
+{
+  "original_reviewed_head": "9685872827b37b55c981b88ad3177a2ed3b13533",
+  "original_reviewed_tree": "68a241ea95194929f4b1ac631eebe4962dd32cae",
+  "review_verdict": "NOT_QUALIFIED",
+  "results_origin": "Original completed review runs; publication did not rerun or revise their tests",
+  "maintained_full": {
+    "tests": 118,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 118,
+    "exit_code": 0,
+    "log": "full-pytest.log",
+    "junit": "full-junit.xml"
+  },
+  "maintained_focused": {
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 21,
+    "exit_code": 0,
+    "log": "focused-pytest.log",
+    "junit": "focused-junit.xml",
+    "api_cli_parity_comparisons": 4
+  },
+  "independent": {
+    "tests": 24,
+    "failures": 10,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 14,
+    "exit_code": 1,
+    "log": "independent-pytest.log",
+    "junit": "independent-junit.xml",
+    "probe_archive": "contract-probes.py.txt",
+    "probe_sha256": "48818936a0b317d23eed48ef507e9516bb0de9c67cf29a02592338175711444a",
+    "failure_groups": {
+      "overlapping_repetition": 3,
+      "abbreviation_or_terminal_punctuation": 6,
+      "leading_whitespace_stability_limit": 1
+    }
+  },
+  "ruff": {
+    "passed": true,
+    "log": "ruff.log"
+  },
+  "compileall": {
+    "passed": true,
+    "log": "compileall.log"
+  },
+  "corpus": {
+    "valid_documents": 10,
+    "retrievable_documents": 8,
+    "status_excluded_documents": 2,
+    "log": "validate-corpus.log"
+  },
+  "trust": {
+    "cases": 24,
+    "passed": 24,
+    "status": "pass",
+    "metrics": {
+      "case_pass_rate": "24/24",
+      "retrieval_expectation_match_rate": "24/24",
+      "stale_document_exclusion_rate": "24/24",
+      "refusal_expectation_match_rate": "6/6",
+      "citation_resolves_to_retrieved_chunk_rate": "3/6",
+      "citation_expectation_match_rate": "6/6",
+      "generated_answer_outcome_match_rate": "24/24",
+      "generated_answer_citation_validation_rate": "24/24"
+    },
+    "log": "trust-evaluation.log",
+    "report": "trust-report.json"
+  },
+  "pages_parity": {
+    "cases": 42,
+    "passed": 42,
+    "log": "pages-parity.log",
+    "original_harness_archive": "pages-parity-original.py.txt",
+    "portable_harness": "pages-parity-harness.py.txt"
+  },
+  "limits": [
+    "Local Python version 3.12.14 only; Python 3.11/3.13 matrix not independently replayed",
+    "One dependency deprecation warning in each maintained pytest run",
+    "Structural span and trust review; no semantic-support adjudication",
+    "No production caller imports the new helper at the original source HEAD"
+  ]
+}

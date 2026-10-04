@@ -1,0 +1,5 @@
+Committed parity program: <REVIEW_WORKSPACE>/review-citation-50/scripts/build_pages_demo.py
+Output directory only redirected to: <REVIEW_WORKSPACE>/evidence/citation-review/pages-docs
+exported docs/corpus-data.json: 18 chunks, 8 retrievable, 2 excluded
+exported docs/demo-offline.html: single-file offline copy (no server, no network)
+PARITY OK: 42/42 JS matches Python (outcome + top doc + top chunk + held-out hits)

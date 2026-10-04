@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "purpose": "Publication-safe archival evidence for terminal rejection of original PR #50",
+  "original_reviewed_head": "9685872827b37b55c981b88ad3177a2ed3b13533",
+  "original_reviewed_tree": "68a241ea95194929f4b1ac631eebe4962dd32cae",
+  "review_verdict": "NOT_QUALIFIED",
+  "raw_artifact_locations": "Names relative to the retained original citation-review evidence directory; source archive identified by original Git commit and path",
+  "workspace_prefix_transformation": {
+    "operation": "Literal byte replacement only: raw.replace(ephemeral_absolute_scratch_workspace_prefix, replacement)",
+    "prefix_pattern_description": "/workspace/scratch/<session-id>",
+    "raw_prefix_sha256": "684630f1c50224b4c67c5ba38dc75a9ed8bf3df518b24d5f620d41e0adc2513a",
+    "raw_prefix_byte_count": 31,
+    "replacement": "<REVIEW_WORKSPACE>",
+    "scope": "Copied historical logs, JUnit receipts, trust reports, original review and original Pages wrapper",
+    "no_other_receipt_changes": true
+  },
+  "preserved_artifacts": [
+    {
+      "raw_artifact": "test_independent_contract.py",
+      "published_artifact": "contract-probes.py.txt",
+      "raw_sha256": "48818936a0b317d23eed48ef507e9516bb0de9c67cf29a02592338175711444a",
+      "published_sha256": "48818936a0b317d23eed48ef507e9516bb0de9c67cf29a02592338175711444a",
+      "raw_byte_count": 5432,
+      "published_byte_count": 5432,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "counterexamples.json",
+      "published_artifact": "counterexamples.json",
+      "raw_sha256": "fdb9439935551bb0c7cbcee9bee75a89cc12e63c39b5021a7b8813a5aaf54fd8",
+      "published_sha256": "fdb9439935551bb0c7cbcee9bee75a89cc12e63c39b5021a7b8813a5aaf54fd8",
+      "raw_byte_count": 1581,
+      "published_byte_count": 1581,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "dependencies.txt",
+      "published_artifact": "dependencies.txt",
+      "raw_sha256": "14fc432bf8f3df212a0e43ff5fd55d089a1827a747960d101ebe5a93f19ce8d4",
+      "published_sha256": "14fc432bf8f3df212a0e43ff5fd55d089a1827a747960d101ebe5a93f19ce8d4",
+      "raw_byte_count": 738,
+      "published_byte_count": 738,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "REVIEW.md",
+      "published_artifact": "review-original.md",
+      "raw_sha256": "4ff52603acc46722d12adde41e8a36c1eb048234f228aceacd321eb0f5633a11",
+      "published_sha256": "52fa87f76b8fcaec2d00b779785526d4e5ca68033e7699cad2a17031254ff0fe",
+      "raw_byte_count": 10477,
+      "published_byte_count": 10334,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 11
+    },
+    {
+      "raw_artifact": "check_pages_parity.py",
+      "published_artifact": "pages-parity-original.py.txt",
+      "raw_sha256": "80f9b73570d3e166d67649a303b9351efeec28e32269f5d7286ed29f72606574",
+      "published_sha256": "1b99e2ba3dbfc8cee98baac716a4c0bfd22607687b7a5f7ef7cb6f215d104c6c",
+      "raw_byte_count": 820,
+      "published_byte_count": 794,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 2
+    },
+    {
+      "raw_artifact": "full-pytest.log",
+      "published_artifact": "full-pytest.log",
+      "raw_sha256": "21fef71a65905577baa5805cc12c91b7a6a037ad78e24457882a73bf0210f532",
+      "published_sha256": "9280d09732fc17d110f4709811c88b6d1d148cdfb1d5189398ecd6d9ef7c116c",
+      "raw_byte_count": 731,
+      "published_byte_count": 718,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 1
+    },
+    {
+      "raw_artifact": "focused-pytest.log",
+      "published_artifact": "focused-pytest.log",
+      "raw_sha256": "1fa7d1ecbd09176fc4ca82fdc8c5e8532c29e340015ebd03c961b060d9de8dcf",
+      "published_sha256": "4587a9b2d9ba3666022fd07e712f306021ce5e0c2eff17fd6f4067621995c68f",
+      "raw_byte_count": 650,
+      "published_byte_count": 637,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 1
+    },
+    {
+      "raw_artifact": "independent-pytest.log",
+      "published_artifact": "independent-pytest.log",
+      "raw_sha256": "88a7fe76a2b3196ee4014cf4ce53963ef3780bd74fdf4f60680027e262b56870",
+      "published_sha256": "d97b99c953546d3833ad9918e38fb85c626582703aa2bd7fb1e1887abefb3395",
+      "raw_byte_count": 17384,
+      "published_byte_count": 17345,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 3
+    },
+    {
+      "raw_artifact": "full-junit.xml",
+      "published_artifact": "full-junit.xml",
+      "raw_sha256": "8a404df37ee5a938956267ef5e16ebba949bc33935952ced358fd2192fd12689",
+      "published_sha256": "8a404df37ee5a938956267ef5e16ebba949bc33935952ced358fd2192fd12689",
+      "raw_byte_count": 14589,
+      "published_byte_count": 14589,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "focused-junit.xml",
+      "published_artifact": "focused-junit.xml",
+      "raw_sha256": "b40735707a16d5bbddff057b9df3a4cd9ced59bebcae15cbc7ceedf1cd70ca2b",
+      "published_sha256": "b40735707a16d5bbddff057b9df3a4cd9ced59bebcae15cbc7ceedf1cd70ca2b",
+      "raw_byte_count": 2403,
+      "published_byte_count": 2403,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "independent-junit.xml",
+      "published_artifact": "independent-junit.xml",
+      "raw_sha256": "761dfa07bba3de92207dc4ceb52cd790c2bf4831ae2bd7a3689794c27963789d",
+      "published_sha256": "761dfa07bba3de92207dc4ceb52cd790c2bf4831ae2bd7a3689794c27963789d",
+      "raw_byte_count": 14589,
+      "published_byte_count": 14589,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "ruff.log",
+      "published_artifact": "ruff.log",
+      "raw_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "published_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "raw_byte_count": 19,
+      "published_byte_count": 19,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "compileall.log",
+      "published_artifact": "compileall.log",
+      "raw_sha256": "a0d9c00bcce707f70d42f5985886dc5b8682c439ccbc34a852ee1550e9be0e53",
+      "published_sha256": "a0d9c00bcce707f70d42f5985886dc5b8682c439ccbc34a852ee1550e9be0e53",
+      "raw_byte_count": 1229,
+      "published_byte_count": 1229,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "validate-corpus.log",
+      "published_artifact": "validate-corpus.log",
+      "raw_sha256": "1abce34dace00411c7b311d01ccff050be5d4596c7e7c7844d6211796b099555",
+      "published_sha256": "1abce34dace00411c7b311d01ccff050be5d4596c7e7c7844d6211796b099555",
+      "raw_byte_count": 126,
+      "published_byte_count": 126,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "trust-evaluation.log",
+      "published_artifact": "trust-evaluation.log",
+      "raw_sha256": "f7d3c1545560630610036dc8ad5cb3bd84b657d38e172ed0d16de8f1e78d3350",
+      "published_sha256": "f7d3c1545560630610036dc8ad5cb3bd84b657d38e172ed0d16de8f1e78d3350",
+      "raw_byte_count": 401,
+      "published_byte_count": 401,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    },
+    {
+      "raw_artifact": "trust-report.json",
+      "published_artifact": "trust-report.json",
+      "raw_sha256": "14adcb3660e247b3fb61506ebc20c3dc6eee64e1edbbfc27a8c040c1490301a4",
+      "published_sha256": "e6e1624355ba01fd8f4bd453b5f335217e888e12f6fce0fcdf0fe3b6ade70726",
+      "raw_byte_count": 18886,
+      "published_byte_count": 18873,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 1
+    },
+    {
+      "raw_artifact": "trust-report.md",
+      "published_artifact": "trust-report.md",
+      "raw_sha256": "7e18a7cfe34c7f7e84f86bb6236a8602cfea462eed74c3c3f073023a4eb7055a",
+      "published_sha256": "a1cea7cd3f0024a45dc9997aa986ff22ec670a9e8c812f8c882d8a85eff01d19",
+      "raw_byte_count": 4716,
+      "published_byte_count": 4703,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 1
+    },
+    {
+      "raw_artifact": "pages-parity.log",
+      "published_artifact": "pages-parity.log",
+      "raw_sha256": "024b6d402d826f4ab16b21243ec30893986648664429c51100e52e127d0615e8",
+      "published_sha256": "aa0a3e6118fb65ceb6bd9353573851761deee411761311282e7f58b47082141b",
+      "raw_byte_count": 444,
+      "published_byte_count": 418,
+      "transformation": "literal_workspace_prefix_replacement",
+      "prefix_replacement_count": 2
+    },
+    {
+      "raw_artifact": "git:9685872827b37b55c981b88ad3177a2ed3b13533:src/biotech_rag_assistant/citation_spans.py",
+      "published_artifact": "source-citation-spans.py.txt",
+      "raw_sha256": "f2d55d054c0a06b8bfd8af775ade8da09953b83529b29e8672588d25421ef9fa",
+      "published_sha256": "f2d55d054c0a06b8bfd8af775ade8da09953b83529b29e8672588d25421ef9fa",
+      "raw_byte_count": 2431,
+      "published_byte_count": 2431,
+      "transformation": "byte_identical_copy",
+      "prefix_replacement_count": 0
+    }
+  ],
+  "derived_artifacts": [
+    {
+      "artifact": "environment-requirements.txt",
+      "source": "dependencies.txt",
+      "source_sha256": "14fc432bf8f3df212a0e43ff5fd55d089a1827a747960d101ebe5a93f19ce8d4",
+      "published_sha256": "91e0e14c900e72deb3d07976e75c810033d081b8d5f00d0206e4b5503db5127c",
+      "operation": "Remove only the single line beginning '-e '; install original exact-head source separately",
+      "removed_line_sha256": "9ef577fb4eed940b015321b3e67b255b41b309cf845c6dd0bedd559be9ddec90",
+      "removed_line_count": 1,
+      "remaining_dependency_versions_unchanged": true
+    },
+    {
+      "artifact": "pages-parity-harness.py.txt",
+      "source": "pages-parity-original.py.txt",
+      "operation": "New portable reproduction wrapper accepts repository/output arguments, checks original Git identity and tracked cleanliness, preserves the original imported-program plus DOCS-redirection technique",
+      "original_contract_probe": false
+    },
+    {
+      "artifact": "REVIEW.md",
+      "source": "review-original.md",
+      "operation": "Publication narrative adds relative artifact links, explicit rejection of original implementation, and separate successor-policy ownership under #39; original verdict and findings preserved"
+    }
+  ],
+  "generated_indexes": [
+    "README.md",
+    "source-identity.json",
+    "versions.json",
+    "results.json",
+    "provenance.json",
+    "SHA256SUMS"
+  ],
+  "omitted_large_or_redundant_material": [
+    "virtual environment",
+    "generated Pages directory",
+    "package caches"
+  ],
+  "original_probe_bytes_changed": false,
+  "original_expectations_changed": false,
+  "product_or_author_tests_changed": false,
+  "remote_actions_performed_by_bundle_assembly": false
+}

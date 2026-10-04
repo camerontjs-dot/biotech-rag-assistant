@@ -1,0 +1,29 @@
+{
+  "repository": "camerontjs-dot/biotech-rag-assistant",
+  "original_pull_request": 50,
+  "original_reviewed_head": "9685872827b37b55c981b88ad3177a2ed3b13533",
+  "original_reviewed_tree": "68a241ea95194929f4b1ac631eebe4962dd32cae",
+  "compared_base": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+  "review_verdict": "NOT_QUALIFIED",
+  "disposition_recommendation": "reject_and_close_original_implementation_unmerged",
+  "successor_boundary_policy_owner": "issue_39",
+  "source_and_author_tests_unchanged": true,
+  "tracked_checkout_clean_at_bundle_assembly": true,
+  "source_diff_paths": [
+    "src/biotech_rag_assistant/citation_spans.py",
+    "tests/test_citation_spans.py"
+  ],
+  "source_module": {
+    "path": "src/biotech_rag_assistant/citation_spans.py",
+    "git_blob": "7f4f99fb542dbd1858ee90366837cccc6b9174f2",
+    "sha256": "f2d55d054c0a06b8bfd8af775ade8da09953b83529b29e8672588d25421ef9fa",
+    "archive": "source-citation-spans.py.txt"
+  },
+  "author_tests": {
+    "path": "tests/test_citation_spans.py",
+    "git_blob": "ea8d67a761f3a83740fa74554d752509f9b82128",
+    "sha256": "67751c42f918f32cea35bc6bd86e3bddd0a9ea7574376865e1ed82cd6078414d"
+  },
+  "independent_probe_sha256": "48818936a0b317d23eed48ef507e9516bb0de9c67cf29a02592338175711444a",
+  "later_evidence_only_commit_is_reviewed_source": false
+}
