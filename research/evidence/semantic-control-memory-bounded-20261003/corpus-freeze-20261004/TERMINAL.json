@@ -1,0 +1,158 @@
+{
+  "accepted_expectations_sha256": null,
+  "author03_rule": "Budget-only no-semantic-acceptance record remains preserved; sole first complete response selected mechanically under current operator Part 3.",
+  "author_request_path": "REQUEST_PATH_COMPLETE",
+  "cases_sha256": null,
+  "checks": {
+    "source_checkout_unchanged": true
+  },
+  "classification_basis": [
+    {
+      "lines": [
+        23,
+        30
+      ],
+      "path": "research/evidence/qualifier-grounding-semantic-assessor-controls-v1/case-construction.md",
+      "rule": "Incomplete authoring is NOT_READY; changed recipes require successor; exactly 44 assigned packets required.",
+      "sha256": "9d8f11e91f8edf4a065e0fac803acb074ae4ed80d070c84ee2f460f756d529f6"
+    },
+    {
+      "lines": [
+        46,
+        56
+      ],
+      "path": "research/evidence/qualifier-grounding-semantic-assessor-controls-v1/SCHEMAS.md",
+      "rule": "Corpus slot/endpoint assignments are structural validation; frozen validate_corpus is required before corpus freeze.",
+      "sha256": "d5e3d21982b8d8d81d51d970ba5a46c82e9e6c260ad22a90eb1c6e2fcf42a36b"
+    },
+    {
+      "lines": [
+        133,
+        138
+      ],
+      "path": "research/build_semantic_author_requests.py",
+      "rule": "Unchanged frozen materializer rejects case slot/order, design slot, and relation slot mismatches.",
+      "sha256": "aa70e5aecdbfadcc000694b72bce82f5b9410940167ca46a74671fb599dc1a4c"
+    },
+    {
+      "lines": [
+        120,
+        127
+      ],
+      "path": "research/evidence/qualifier-grounding-semantic-assessor-controls-v1/adjudication.md",
+      "rule": "Malformed packets/output are APPARATUS_INVALID; semantic rubric ambiguity and failed seed/family semantics are INCONCLUSIVE.",
+      "sha256": "4e70bb8d97886fae1bd1dc8e2ddf1f3c27799079fb4a8e34bd1d85fe268f09a7"
+    },
+    {
+      "path": "research/evidence/semantic-adjudication-request-bound-v2/TERMINAL.json",
+      "rule": "Preserved PR #38 precedent separately classified failure to freeze required 44-packet author corpus as APPARATUS_INVALID.",
+      "sha256": "8e3e767cb38e10bf218e0325983660b3e25506d43db4d2f15bb8e73a4b89ce82"
+    }
+  ],
+  "continuation": "STOPPED_TERMINAL_FOR_THIS_CANDIDATE. Do not relabel, repair, delete cases or re-author this frozen candidate. A changed authoring/transport enforcement mechanism requires a separately identified prospective successor before new calls.",
+  "counts": {
+    "author_partitions": 28,
+    "authored_rows": 44,
+    "failed_materialization_partitions": 10,
+    "materialized_partitions": 18,
+    "missing_planned_slots": 11,
+    "new_provider_calls": 0,
+    "new_reducer_calls": 0,
+    "new_semantic_adjudicator_calls": 0,
+    "transport_schema_valid_complete_responses": 28,
+    "unique_planned_slots": 33
+  },
+  "design_sha256": null,
+  "disposition": "APPARATUS_INVALID",
+  "duplicate_slots": {
+    "anchor_02": 2,
+    "anchor_03": 2,
+    "anchor_04": 2,
+    "anchor_05": 2,
+    "anchor_06": 2,
+    "anchor_07": 2,
+    "anchor_09": 2,
+    "anchor_10": 2,
+    "anchor_12": 2,
+    "anchor_16": 2,
+    "anchor_18": 2
+  },
+  "experiment_id": "semantic-control-memory-bounded-20261003",
+  "failure_groups": {
+    "case_slot_order_mismatch": [
+      "author-01",
+      "author-09",
+      "author-10",
+      "author-12",
+      "author-16",
+      "author-18"
+    ],
+    "design_slot_mismatch": [
+      "author-11"
+    ],
+    "relation_slot_mismatch": [
+      "author-02",
+      "author-15",
+      "author-21"
+    ]
+  },
+  "immutable_predecessors": [
+    "PR #30 frozen semantic design",
+    "PR #38 APPARATUS_INVALID terminal",
+    "PR #51 source head and all raw attempts"
+  ],
+  "issue": 41,
+  "mechanical_status": "AUTHOR_CORPUS_NOT_READY",
+  "missing_slots": [
+    "invariant_1",
+    "invariant_2",
+    "invariant_4",
+    "invariant_5",
+    "invariant_8",
+    "mutation_1",
+    "mutation_3",
+    "mutation_4",
+    "mutation_5",
+    "mutation_6",
+    "mutation_7"
+  ],
+  "private_runtime_inventory": "Selected model/digest/configuration are public receipt identities; full local model inventory stays intentionally unpublished, hash-only, and independently unverified here.",
+  "reason": "28 first complete transport-schema-valid author responses contain 44 rows but only 33 unique planned slots. Eleven planned variant/mutation slots are absent. Ten partitions fail unchanged frozen materialization. No valid full cases/design/relations corpus can be frozen.",
+  "receipt_artifacts": {
+    "apparatus-freeze-check.json": "2d72621ea81a87c8717bfd906eec7c420e8ecdf9b839779a082b09765c38c89b",
+    "assembly-attempt.json": "dee0bf9c90dc81f5af7b2e1e629c8c88960d5ebae66333de3b06f5a0573d602c",
+    "attempt-custody.json": "becf46cb17b745aae9f098e2f36cacbe98507da69ee50d40eb6be792e84a0e5d",
+    "canonical-attempt-map.json": "c0e10fa3ac6883b1c91b179baf253208453e187077a8645140b75be06b24dd6b",
+    "canonical-attempt-policy.json": "120df8281830b0fa90e453404e070b4c5397c1e9e020abed1d96b08f79bd8fc8",
+    "corpus-freeze-attempt-receipt.json": "142785de4ade0208630efb851ea4bfa104b2ac54df2965038b0692e19e2d43bd",
+    "correction-lineage.json": "0ea0b3b169f61c194fc1b691151ba1f5dcb9bc528070ae4bb9ec9f3db23b7ee2",
+    "execution-attempt-001.json": "3785bedf4b581eebe152155a1806df063a8e9549d70faee8595445d929a07c47",
+    "identifier-checks.json": "f140cef9bb7fe68cf18f340e47d9c355084da1aff64ee13e4926a545f6665e56",
+    "materialization-check.json": "4b717f649f38461ba61eb045808cfb6c769f47ff4fc61904ab1e6e0844c7521d",
+    "reconstruction-environment.json": "3492b1a80aa02f0de575aebbb66007854b747fb055117055c2d0050fb36b38ca",
+    "runtime-identity-check.json": "fea9fc0130de9f6317b27beae375b590e2cc24f8b00e4cdc3da0c1ed3fa7cefa",
+    "slot-proof.json": "17b29b3dc525d6268b60bb0b738c870f13eff870e91ff995ffeeeab34820cf27"
+  },
+  "relations_sha256": null,
+  "request_path_success_preserved": true,
+  "research_pr": 51,
+  "schema_version": "semantic-control-author-corpus-freeze-terminal/v1",
+  "semantic_question": "UNRESOLVED. No semantic-adjudicator performance or semantic-assessor validity inference.",
+  "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+  "source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91",
+  "stage": "AUTHOR_CORPUS_MATERIALIZATION_AND_FREEZE",
+  "stage_dispositions": {
+    "A": "NOT_RUN",
+    "B": "NOT_RUN",
+    "C": "NOT_RUN",
+    "assessor_implementation": "NOT_RUN",
+    "canonical_attempt_selection": "RECORDED_MECHANICALLY",
+    "corpus_design_relation_freeze": "APPARATUS_INVALID",
+    "raw_comparison_disagreements": "NOT_RUN",
+    "reconciliation": "NOT_RUN",
+    "request_path": "REQUEST_PATH_COMPLETE",
+    "semantic_assurance": "NOT_RUN",
+    "semantic_qualification": "NOT_RUN"
+  },
+  "wave_b": "LOCKED"
+}

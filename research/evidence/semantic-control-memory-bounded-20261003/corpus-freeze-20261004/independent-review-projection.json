@@ -1,0 +1,5 @@
+{
+  "projected_sha256": "097cbdd8b0076f5ce9aa1b986e5d16f6c3673642f9ed8a140511b17cfd561276",
+  "source_sha256": "b1eb0573e0cdd9d7ace25ceafc04b56d8c31f51c92979d0f0fc1556981f4b79a",
+  "transformation": "Replace the absolute scratch root path prefix with SCRATCH_ROOT; all findings and hashes retained. No case prose or hypotheses included."
+}

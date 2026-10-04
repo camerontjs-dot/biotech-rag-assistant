@@ -1,0 +1,44 @@
+{
+  "author03_budget": {
+    "current_authority": "Operator task Part 3 explicitly authorizes mechanical canonical selection and corpus freeze; no semantic acceptance follows.",
+    "frozen_successor_records": [
+      "SCHEDULE.json",
+      "ONE-SLOT-REQUEST-PATH.json",
+      "AUTHOR-REQUEST-PATH.json"
+    ],
+    "initial_semantic_acceptance": false,
+    "selection": "author-03-budget is the sole first complete schema-valid response for author-03."
+  },
+  "corrections": [
+    {
+      "call_send_time": "2026-10-04T01:30:57.161071+00:00",
+      "canonical_directory": "author-01-attempt-2",
+      "claim_limit": "Preserved Git history and recorded request timestamps; no external timestamp attestation.",
+      "correction_precedes_send_in_preserved_git_history": true,
+      "first_recording_commit": "acdc5e8ab0df7cb3db812775e99f2a5407c7cd4c",
+      "prospective_correction_path": "research/evidence/semantic-control-memory-bounded-20261003/AUTHOR-01-ATTEMPT-2.json",
+      "prospective_correction_sha256": "97361c62ef7bd78e44076c5081381a54365bfc56856a31eae9ac3db0258e7e06",
+      "recorded_commit_time": "2026-10-03T21:30:44-04:00"
+    },
+    {
+      "call_send_time": "2026-10-04T00:50:10.016250+00:00",
+      "canonical_directory": "author-12-attempt-2",
+      "claim_limit": "Preserved Git history and recorded request timestamps; no external timestamp attestation.",
+      "correction_precedes_send_in_preserved_git_history": true,
+      "first_recording_commit": "49044efaf7019911ef0e109e80653cf890422a73",
+      "prospective_correction_path": "research/evidence/semantic-control-memory-bounded-20261003/AUTHOR-12-TRUNCATION.json",
+      "prospective_correction_sha256": "1ddc9381b5d9a9a202190b7c2cde5a494527c0da3785878a44099c2444fbb289",
+      "recorded_commit_time": "2026-10-03T20:49:41-04:00"
+    },
+    {
+      "call_send_time": "2026-10-03T18:27:55.637644+00:00",
+      "canonical_directory": "author-20-attempt-2",
+      "claim_limit": "Preserved Git history and recorded request timestamps; no external timestamp attestation.",
+      "correction_precedes_send_in_preserved_git_history": true,
+      "first_recording_commit": "489712ff015d7cc10b68a8b204b33b4a41f48262",
+      "prospective_correction_path": "research/evidence/semantic-control-memory-bounded-20261003/CEILING-CORRECTION.json",
+      "prospective_correction_sha256": "c707320ea214bb91ed11f0827e1a750da79fc25a0957918f18564388a016a9f3",
+      "recorded_commit_time": "2026-10-03T14:27:10-04:00"
+    }
+  ]
+}

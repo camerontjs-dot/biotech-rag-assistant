@@ -1,0 +1,201 @@
+{
+  "attempts": [
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-01",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-01-attempt-2",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-02",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-03-budget",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-04",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-05",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-06",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-07",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-08",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-09",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-10",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-11",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-12",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-12-attempt-2",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-13",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-14",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-15",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-16",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-17",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-18",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-19",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-20",
+      "final_receipt_absent": true,
+      "final_receipt_identity_matches_before_send": null
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-20-attempt-2",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-21",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-22",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-23",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-24",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-25",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-26",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-27",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    },
+    {
+      "configuration_matches_before_send": true,
+      "directory": "author-28",
+      "final_receipt_absent": false,
+      "final_receipt_identity_matches_before_send": true
+    }
+  ],
+  "complete_response_transport_schema_count": 28,
+  "full_model_inventory": "INTENTIONALLY_UNPUBLISHED_HASH_ONLY",
+  "independence": "Read-only new-context mechanical review, shared frozen specification, no semantic/human adjudication.",
+  "model": "qwen3.5:9b",
+  "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "provider": "Ollama",
+  "provider_hidden_context": "UNKNOWN",
+  "provider_version": "0.35.1",
+  "request_reconstruction_count": 31,
+  "response_hash_reconstruction_count": 30,
+  "source_artifact_count": 301
+}

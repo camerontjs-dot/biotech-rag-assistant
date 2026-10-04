@@ -1,0 +1,578 @@
+[
+  {
+    "actual_case_slots": [
+      "anchor_01",
+      "anchor_02",
+      "anchor_03",
+      "anchor_04",
+      "anchor_05",
+      "anchor_06",
+      "anchor_07"
+    ],
+    "actual_design_slots": [
+      "anchor_01",
+      "anchor_02",
+      "anchor_03",
+      "anchor_04",
+      "anchor_05",
+      "anchor_06",
+      "anchor_07"
+    ],
+    "actual_relation_ids": [
+      "rel_01",
+      "rel_02",
+      "rel_03",
+      "rel_04",
+      "rel_05",
+      "rel_07"
+    ],
+    "case_slots_order_match": false,
+    "design_slot_set_match": false,
+    "expected_case_and_design_slots": [
+      "anchor_01",
+      "invariant_1",
+      "mutation_1",
+      "mutation_3",
+      "mutation_4",
+      "mutation_5",
+      "mutation_6"
+    ],
+    "expected_relation_ids": [
+      "invariant_1",
+      "mutation_1",
+      "mutation_3",
+      "mutation_4",
+      "mutation_5",
+      "mutation_6"
+    ],
+    "partition": "author-01",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_02",
+      "invariant_7",
+      "mutation_2"
+    ],
+    "actual_design_slots": [
+      "anchor_02",
+      "invariant_7",
+      "mutation_2"
+    ],
+    "actual_relation_ids": [
+      "rel-invariant-7",
+      "rel-mutation-2"
+    ],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_02",
+      "invariant_7",
+      "mutation_2"
+    ],
+    "expected_relation_ids": [
+      "invariant_7",
+      "mutation_2"
+    ],
+    "partition": "author-02",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_03"
+    ],
+    "actual_design_slots": [
+      "anchor_03"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_03"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-03",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_04"
+    ],
+    "actual_design_slots": [
+      "anchor_04"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_04"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-04",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_05"
+    ],
+    "actual_design_slots": [
+      "anchor_05"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_05"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-05",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_06"
+    ],
+    "actual_design_slots": [
+      "anchor_06"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_06"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-06",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_07"
+    ],
+    "actual_design_slots": [
+      "anchor_07"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_07"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-07",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_08"
+    ],
+    "actual_design_slots": [
+      "anchor_08"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_08"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-08",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_09",
+      "anchor_09"
+    ],
+    "actual_design_slots": [
+      "anchor_09",
+      "invariant_5"
+    ],
+    "actual_relation_ids": [
+      "rel-09-invariant-5"
+    ],
+    "case_slots_order_match": false,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_09",
+      "invariant_5"
+    ],
+    "expected_relation_ids": [
+      "invariant_5"
+    ],
+    "partition": "author-09",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_10",
+      "anchor_10"
+    ],
+    "actual_design_slots": [
+      "anchor_10",
+      "mutation_7"
+    ],
+    "actual_relation_ids": [
+      "rel-10-7"
+    ],
+    "case_slots_order_match": false,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_10",
+      "mutation_7"
+    ],
+    "expected_relation_ids": [
+      "mutation_7"
+    ],
+    "partition": "author-10",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_11",
+      "mutation_8"
+    ],
+    "actual_design_slots": [
+      "anchor_11",
+      "mutation_ case_id"
+    ],
+    "actual_relation_ids": [
+      "rel-11-m8"
+    ],
+    "case_slots_order_match": true,
+    "design_slot_set_match": false,
+    "expected_case_and_design_slots": [
+      "anchor_11",
+      "mutation_8"
+    ],
+    "expected_relation_ids": [
+      "mutation_8"
+    ],
+    "partition": "author-11",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_12",
+      "anchor_12"
+    ],
+    "actual_design_slots": [
+      "anchor_12",
+      "invariant_2"
+    ],
+    "actual_relation_ids": [
+      "rel_invariant_2_anchor_12"
+    ],
+    "case_slots_order_match": false,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_12",
+      "invariant_2"
+    ],
+    "expected_relation_ids": [
+      "invariant_2"
+    ],
+    "partition": "author-12",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_13"
+    ],
+    "actual_design_slots": [
+      "anchor_13"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_13"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-13",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_14"
+    ],
+    "actual_design_slots": [
+      "anchor_14"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_14"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-14",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_15",
+      "invariant_3"
+    ],
+    "actual_design_slots": [
+      "anchor_15",
+      "invariant_3"
+    ],
+    "actual_relation_ids": [
+      "rel-invariant-3-anchor15"
+    ],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_15",
+      "invariant_3"
+    ],
+    "expected_relation_ids": [
+      "invariant_3"
+    ],
+    "partition": "author-15",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_16",
+      "anchor_16"
+    ],
+    "actual_design_slots": [
+      "anchor_16",
+      "invariant_4"
+    ],
+    "actual_relation_ids": [
+      "rel-invariant-4-anchor16"
+    ],
+    "case_slots_order_match": false,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_16",
+      "invariant_4"
+    ],
+    "expected_relation_ids": [
+      "invariant_4"
+    ],
+    "partition": "author-16",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_17"
+    ],
+    "actual_design_slots": [
+      "anchor_17"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_17"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-17",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_18",
+      "anchor_18"
+    ],
+    "actual_design_slots": [
+      "anchor_18",
+      "invariant_8"
+    ],
+    "actual_relation_ids": [
+      "rel-invariant-8-anchor18"
+    ],
+    "case_slots_order_match": false,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_18",
+      "invariant_8"
+    ],
+    "expected_relation_ids": [
+      "invariant_8"
+    ],
+    "partition": "author-18",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_19"
+    ],
+    "actual_design_slots": [
+      "anchor_19"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_19"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-19",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_20"
+    ],
+    "actual_design_slots": [
+      "anchor_20"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_20"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-20",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_21",
+      "invariant_6"
+    ],
+    "actual_design_slots": [
+      "anchor_21",
+      "invariant_6"
+    ],
+    "actual_relation_ids": [
+      "rel-invariant-6-anchor_21"
+    ],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_21",
+      "invariant_6"
+    ],
+    "expected_relation_ids": [
+      "invariant_6"
+    ],
+    "partition": "author-21",
+    "relation_id_set_match": false
+  },
+  {
+    "actual_case_slots": [
+      "anchor_22"
+    ],
+    "actual_design_slots": [
+      "anchor_22"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_22"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-22",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_23"
+    ],
+    "actual_design_slots": [
+      "anchor_23"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_23"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-23",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_24"
+    ],
+    "actual_design_slots": [
+      "anchor_24"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_24"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-24",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_25"
+    ],
+    "actual_design_slots": [
+      "anchor_25"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_25"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-25",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_26"
+    ],
+    "actual_design_slots": [
+      "anchor_26"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_26"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-26",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_27"
+    ],
+    "actual_design_slots": [
+      "anchor_27"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_27"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-27",
+    "relation_id_set_match": true
+  },
+  {
+    "actual_case_slots": [
+      "anchor_28"
+    ],
+    "actual_design_slots": [
+      "anchor_28"
+    ],
+    "actual_relation_ids": [],
+    "case_slots_order_match": true,
+    "design_slot_set_match": true,
+    "expected_case_and_design_slots": [
+      "anchor_28"
+    ],
+    "expected_relation_ids": [],
+    "partition": "author-28",
+    "relation_id_set_match": true
+  }
+]

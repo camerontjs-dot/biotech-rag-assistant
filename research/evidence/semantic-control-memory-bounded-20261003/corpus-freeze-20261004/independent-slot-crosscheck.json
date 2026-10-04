@@ -1,0 +1,1706 @@
+{
+  "schema_version": "independent-slot-crosscheck-v1",
+  "review_scope": "Identifier coverage and byte custody only; no case-text review, design-hypothesis review, semantic adjudication, provider execution, or source edits.",
+  "reviewed_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+  "repository": "SCRATCH_ROOT/review-corpus-51",
+  "frozen_partition": {
+    "path": "research/evidence/semantic-adjudication-request-bound-v2/author-partition.json",
+    "sha256": "e6a6e41642d23fd1b71a4b01a159ffa6da3e64aa5c22499f29c03b43b19f7338",
+    "partitions": 28,
+    "planned_case_rows": 44,
+    "unique_planned_case_slots": 44,
+    "planned_relation_rows": 16,
+    "unique_planned_relation_ids": 16,
+    "partition_case_slot_duplicates": {},
+    "corpus_order_same_slot_set": true,
+    "spec_partition_mismatches": []
+  },
+  "identifier_contract": {
+    "source": "research/build_semantic_author_requests.py",
+    "source_sha256": "aa70e5aecdbfadcc000694b72bce82f5b9410940167ca46a74671fb599dc1a4c",
+    "cases": "cases[*].slot must equal frozen spec data.partition.slots in order (materializer line 134).",
+    "design_entries": "set(design_entries[*].slot) must equal set(data.partition.slots) (lines 135-136); duplicates also independently counted.",
+    "relations": "set(relations[*].id) must equal set(data.partition.relation_slots) (lines 137-138); no inferred renaming or mapping."
+  },
+  "selection": {
+    "rule": "Earliest complete PASS_REQUEST_PATH_ONLY attempt per frozen author partition, sorted by receipt started_at_utc then finished_at_utc then directory; completeness means receipt, raw response, response text, and parsed output files exist; no identifier or semantic quality selection.",
+    "alias": {
+      "author-03-budget": "author-03"
+    },
+    "discovered_attempts": 31,
+    "selected_outputs": 28,
+    "partitions_with_multiple_eligible_outputs": [],
+    "excluded_attempts": [
+      {
+        "author": "author-01",
+        "attempt": "author-01",
+        "status": "APPARATUS_INVALID",
+        "started_at_utc": "2026-10-04T01:20:27.447876+00:00",
+        "finished_at_utc": "2026-10-04T01:29:55.971834+00:00",
+        "missing_files": [
+          "response-text.txt",
+          "parsed-output.json"
+        ],
+        "reason": "not_PASS_REQUEST_PATH_ONLY"
+      },
+      {
+        "author": "author-12",
+        "attempt": "author-12",
+        "status": "APPARATUS_INVALID",
+        "started_at_utc": "2026-10-04T00:43:17.484638+00:00",
+        "finished_at_utc": "2026-10-04T00:47:40.894791+00:00",
+        "missing_files": [
+          "response-text.txt",
+          "parsed-output.json"
+        ],
+        "reason": "not_PASS_REQUEST_PATH_ONLY"
+      },
+      {
+        "author": "author-20",
+        "attempt": "author-20",
+        "status": null,
+        "started_at_utc": "2026-10-03T18:24:24.891743+00:00",
+        "finished_at_utc": null,
+        "missing_files": [
+          "receipt.json",
+          "provider-response.raw.json",
+          "response-text.txt",
+          "parsed-output.json"
+        ],
+        "reason": "missing_receipt"
+      }
+    ]
+  },
+  "totals": {
+    "case_rows": 44,
+    "design_entry_rows": 44,
+    "relation_rows": 16,
+    "all_section_rows": 104,
+    "partitions_with_identifier_mismatch": 10,
+    "partition_mismatch_counts_by_section": {
+      "cases": 6,
+      "design_entries": 2,
+      "relations": 10
+    },
+    "partitions_with_row_count_mismatch": 0,
+    "custody_verified_outputs": 28
+  },
+  "coverage": {
+    "cases": {
+      "rows": 44,
+      "planned_rows": 44,
+      "planned_unique_identifiers": 44,
+      "observed_unique_identifiers": 33,
+      "observed_unique_planned_identifiers": 33,
+      "missing_planned_identifiers": [
+        "invariant_1",
+        "mutation_1",
+        "mutation_3",
+        "mutation_4",
+        "mutation_5",
+        "mutation_6",
+        "invariant_5",
+        "mutation_7",
+        "invariant_2",
+        "invariant_4",
+        "invariant_8"
+      ],
+      "missing_planned_identifier_count": 11,
+      "unexpected_identifiers": [],
+      "duplicated_identifiers": {
+        "anchor_02": 2,
+        "anchor_03": 2,
+        "anchor_04": 2,
+        "anchor_05": 2,
+        "anchor_06": 2,
+        "anchor_07": 2,
+        "anchor_09": 2,
+        "anchor_10": 2,
+        "anchor_12": 2,
+        "anchor_16": 2,
+        "anchor_18": 2
+      },
+      "duplicated_identifier_count": 11,
+      "duplicate_row_excess": 11,
+      "duplicate_locations": {
+        "anchor_02": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 1
+          },
+          {
+            "author": "author-02",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_03": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 2
+          },
+          {
+            "author": "author-03",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_04": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 3
+          },
+          {
+            "author": "author-04",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_05": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 4
+          },
+          {
+            "author": "author-05",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_06": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 5
+          },
+          {
+            "author": "author-06",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_07": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 6
+          },
+          {
+            "author": "author-07",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_09": [
+          {
+            "author": "author-09",
+            "row_index_0_based": 0
+          },
+          {
+            "author": "author-09",
+            "row_index_0_based": 1
+          }
+        ],
+        "anchor_10": [
+          {
+            "author": "author-10",
+            "row_index_0_based": 0
+          },
+          {
+            "author": "author-10",
+            "row_index_0_based": 1
+          }
+        ],
+        "anchor_12": [
+          {
+            "author": "author-12",
+            "row_index_0_based": 0
+          },
+          {
+            "author": "author-12",
+            "row_index_0_based": 1
+          }
+        ],
+        "anchor_16": [
+          {
+            "author": "author-16",
+            "row_index_0_based": 0
+          },
+          {
+            "author": "author-16",
+            "row_index_0_based": 1
+          }
+        ],
+        "anchor_18": [
+          {
+            "author": "author-18",
+            "row_index_0_based": 0
+          },
+          {
+            "author": "author-18",
+            "row_index_0_based": 1
+          }
+        ]
+      }
+    },
+    "design_entries": {
+      "rows": 44,
+      "planned_rows": 44,
+      "planned_unique_identifiers": 44,
+      "observed_unique_identifiers": 38,
+      "observed_unique_planned_identifiers": 37,
+      "missing_planned_identifiers": [
+        "invariant_1",
+        "mutation_1",
+        "mutation_3",
+        "mutation_4",
+        "mutation_5",
+        "mutation_6",
+        "mutation_8"
+      ],
+      "missing_planned_identifier_count": 7,
+      "unexpected_identifiers": [
+        "mutation_ case_id"
+      ],
+      "duplicated_identifiers": {
+        "anchor_02": 2,
+        "anchor_03": 2,
+        "anchor_04": 2,
+        "anchor_05": 2,
+        "anchor_06": 2,
+        "anchor_07": 2
+      },
+      "duplicated_identifier_count": 6,
+      "duplicate_row_excess": 6,
+      "duplicate_locations": {
+        "anchor_02": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 1
+          },
+          {
+            "author": "author-02",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_03": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 2
+          },
+          {
+            "author": "author-03",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_04": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 3
+          },
+          {
+            "author": "author-04",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_05": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 4
+          },
+          {
+            "author": "author-05",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_06": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 5
+          },
+          {
+            "author": "author-06",
+            "row_index_0_based": 0
+          }
+        ],
+        "anchor_07": [
+          {
+            "author": "author-01",
+            "row_index_0_based": 6
+          },
+          {
+            "author": "author-07",
+            "row_index_0_based": 0
+          }
+        ]
+      }
+    },
+    "relations": {
+      "rows": 16,
+      "planned_rows": 16,
+      "planned_unique_identifiers": 16,
+      "observed_unique_identifiers": 16,
+      "observed_unique_planned_identifiers": 0,
+      "missing_planned_identifiers": [
+        "invariant_1",
+        "mutation_1",
+        "mutation_3",
+        "mutation_4",
+        "mutation_5",
+        "mutation_6",
+        "invariant_7",
+        "mutation_2",
+        "invariant_5",
+        "mutation_7",
+        "mutation_8",
+        "invariant_2",
+        "invariant_3",
+        "invariant_4",
+        "invariant_8",
+        "invariant_6"
+      ],
+      "missing_planned_identifier_count": 16,
+      "unexpected_identifiers": [
+        "rel_01",
+        "rel_02",
+        "rel_03",
+        "rel_04",
+        "rel_05",
+        "rel_07",
+        "rel-invariant-7",
+        "rel-mutation-2",
+        "rel-09-invariant-5",
+        "rel-10-7",
+        "rel-11-m8",
+        "rel_invariant_2_anchor_12",
+        "rel-invariant-3-anchor15",
+        "rel-invariant-4-anchor16",
+        "rel-invariant-8-anchor18",
+        "rel-invariant-6-anchor_21"
+      ],
+      "duplicated_identifiers": {},
+      "duplicated_identifier_count": 0,
+      "duplicate_row_excess": 0,
+      "duplicate_locations": {}
+    }
+  },
+  "mismatches_by_partition": [
+    {
+      "author": "author-01",
+      "selected_attempt": "author-01-attempt-2",
+      "sections": {
+        "cases": {
+          "expected": [
+            "anchor_01",
+            "invariant_1",
+            "mutation_1",
+            "mutation_3",
+            "mutation_4",
+            "mutation_5",
+            "mutation_6"
+          ],
+          "actual": [
+            "anchor_01",
+            "anchor_02",
+            "anchor_03",
+            "anchor_04",
+            "anchor_05",
+            "anchor_06",
+            "anchor_07"
+          ],
+          "missing": [
+            "invariant_1",
+            "mutation_1",
+            "mutation_3",
+            "mutation_4",
+            "mutation_5",
+            "mutation_6"
+          ],
+          "unexpected": [
+            "anchor_02",
+            "anchor_03",
+            "anchor_04",
+            "anchor_05",
+            "anchor_06",
+            "anchor_07"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "design_entries": {
+          "expected": [
+            "anchor_01",
+            "invariant_1",
+            "mutation_1",
+            "mutation_3",
+            "mutation_4",
+            "mutation_5",
+            "mutation_6"
+          ],
+          "actual": [
+            "anchor_01",
+            "anchor_02",
+            "anchor_03",
+            "anchor_04",
+            "anchor_05",
+            "anchor_06",
+            "anchor_07"
+          ],
+          "missing": [
+            "invariant_1",
+            "mutation_1",
+            "mutation_3",
+            "mutation_4",
+            "mutation_5",
+            "mutation_6"
+          ],
+          "unexpected": [
+            "anchor_02",
+            "anchor_03",
+            "anchor_04",
+            "anchor_05",
+            "anchor_06",
+            "anchor_07"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "relations": {
+          "expected": [
+            "invariant_1",
+            "mutation_1",
+            "mutation_3",
+            "mutation_4",
+            "mutation_5",
+            "mutation_6"
+          ],
+          "actual": [
+            "rel_01",
+            "rel_02",
+            "rel_03",
+            "rel_04",
+            "rel_05",
+            "rel_07"
+          ],
+          "missing": [
+            "invariant_1",
+            "mutation_1",
+            "mutation_3",
+            "mutation_4",
+            "mutation_5",
+            "mutation_6"
+          ],
+          "unexpected": [
+            "rel_01",
+            "rel_02",
+            "rel_03",
+            "rel_04",
+            "rel_05",
+            "rel_07"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-02",
+      "selected_attempt": "author-02",
+      "sections": {
+        "relations": {
+          "expected": [
+            "invariant_7",
+            "mutation_2"
+          ],
+          "actual": [
+            "rel-invariant-7",
+            "rel-mutation-2"
+          ],
+          "missing": [
+            "invariant_7",
+            "mutation_2"
+          ],
+          "unexpected": [
+            "rel-invariant-7",
+            "rel-mutation-2"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-09",
+      "selected_attempt": "author-09",
+      "sections": {
+        "cases": {
+          "expected": [
+            "anchor_09",
+            "invariant_5"
+          ],
+          "actual": [
+            "anchor_09",
+            "anchor_09"
+          ],
+          "missing": [
+            "invariant_5"
+          ],
+          "unexpected": [
+            "anchor_09"
+          ],
+          "duplicated": {
+            "anchor_09": 2
+          },
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "relations": {
+          "expected": [
+            "invariant_5"
+          ],
+          "actual": [
+            "rel-09-invariant-5"
+          ],
+          "missing": [
+            "invariant_5"
+          ],
+          "unexpected": [
+            "rel-09-invariant-5"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-10",
+      "selected_attempt": "author-10",
+      "sections": {
+        "cases": {
+          "expected": [
+            "anchor_10",
+            "mutation_7"
+          ],
+          "actual": [
+            "anchor_10",
+            "anchor_10"
+          ],
+          "missing": [
+            "mutation_7"
+          ],
+          "unexpected": [
+            "anchor_10"
+          ],
+          "duplicated": {
+            "anchor_10": 2
+          },
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "relations": {
+          "expected": [
+            "mutation_7"
+          ],
+          "actual": [
+            "rel-10-7"
+          ],
+          "missing": [
+            "mutation_7"
+          ],
+          "unexpected": [
+            "rel-10-7"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-11",
+      "selected_attempt": "author-11",
+      "sections": {
+        "design_entries": {
+          "expected": [
+            "anchor_11",
+            "mutation_8"
+          ],
+          "actual": [
+            "anchor_11",
+            "mutation_ case_id"
+          ],
+          "missing": [
+            "mutation_8"
+          ],
+          "unexpected": [
+            "mutation_ case_id"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "relations": {
+          "expected": [
+            "mutation_8"
+          ],
+          "actual": [
+            "rel-11-m8"
+          ],
+          "missing": [
+            "mutation_8"
+          ],
+          "unexpected": [
+            "rel-11-m8"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-12",
+      "selected_attempt": "author-12-attempt-2",
+      "sections": {
+        "cases": {
+          "expected": [
+            "anchor_12",
+            "invariant_2"
+          ],
+          "actual": [
+            "anchor_12",
+            "anchor_12"
+          ],
+          "missing": [
+            "invariant_2"
+          ],
+          "unexpected": [
+            "anchor_12"
+          ],
+          "duplicated": {
+            "anchor_12": 2
+          },
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "relations": {
+          "expected": [
+            "invariant_2"
+          ],
+          "actual": [
+            "rel_invariant_2_anchor_12"
+          ],
+          "missing": [
+            "invariant_2"
+          ],
+          "unexpected": [
+            "rel_invariant_2_anchor_12"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-15",
+      "selected_attempt": "author-15",
+      "sections": {
+        "relations": {
+          "expected": [
+            "invariant_3"
+          ],
+          "actual": [
+            "rel-invariant-3-anchor15"
+          ],
+          "missing": [
+            "invariant_3"
+          ],
+          "unexpected": [
+            "rel-invariant-3-anchor15"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-16",
+      "selected_attempt": "author-16",
+      "sections": {
+        "cases": {
+          "expected": [
+            "anchor_16",
+            "invariant_4"
+          ],
+          "actual": [
+            "anchor_16",
+            "anchor_16"
+          ],
+          "missing": [
+            "invariant_4"
+          ],
+          "unexpected": [
+            "anchor_16"
+          ],
+          "duplicated": {
+            "anchor_16": 2
+          },
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "relations": {
+          "expected": [
+            "invariant_4"
+          ],
+          "actual": [
+            "rel-invariant-4-anchor16"
+          ],
+          "missing": [
+            "invariant_4"
+          ],
+          "unexpected": [
+            "rel-invariant-4-anchor16"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-18",
+      "selected_attempt": "author-18",
+      "sections": {
+        "cases": {
+          "expected": [
+            "anchor_18",
+            "invariant_8"
+          ],
+          "actual": [
+            "anchor_18",
+            "anchor_18"
+          ],
+          "missing": [
+            "invariant_8"
+          ],
+          "unexpected": [
+            "anchor_18"
+          ],
+          "duplicated": {
+            "anchor_18": 2
+          },
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        },
+        "relations": {
+          "expected": [
+            "invariant_8"
+          ],
+          "actual": [
+            "rel-invariant-8-anchor18"
+          ],
+          "missing": [
+            "invariant_8"
+          ],
+          "unexpected": [
+            "rel-invariant-8-anchor18"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    },
+    {
+      "author": "author-21",
+      "selected_attempt": "author-21",
+      "sections": {
+        "relations": {
+          "expected": [
+            "invariant_6"
+          ],
+          "actual": [
+            "rel-invariant-6-anchor_21"
+          ],
+          "missing": [
+            "invariant_6"
+          ],
+          "unexpected": [
+            "rel-invariant-6-anchor_21"
+          ],
+          "duplicated": {},
+          "set_match": false,
+          "multiset_match": false,
+          "exact_order_match": false
+        }
+      }
+    }
+  ],
+  "selected_outputs": [
+    {
+      "author": "author-01",
+      "selected_attempt": "author-01-attempt-2",
+      "started_at_utc": "2026-10-04T01:30:57.148235+00:00",
+      "finished_at_utc": "2026-10-04T01:40:19.353898+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 7,
+        "design_entries": 7,
+        "relations": 6
+      },
+      "spec_sha256": "18910a954ab280317f0e438564ddf610b648e5e7ceaa9cc3b1e6788cde59801b",
+      "raw_response_sha256": "8c7292ccc7c72393fcdf0478e1a54ac7f652db64065735f5ac22c13d82ec435a",
+      "parsed_output_sha256": "421063fa193b8fe9f675b79b5f207a459f720a607192bce505a79af8f2bbaf8e",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": false,
+        "design_entries": false,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-02",
+      "selected_attempt": "author-02",
+      "started_at_utc": "2026-10-04T01:13:54.542861+00:00",
+      "finished_at_utc": "2026-10-04T01:19:36.040040+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 3,
+        "design_entries": 3,
+        "relations": 2
+      },
+      "spec_sha256": "7c246b69451dbe262f1698b989c79ed85d2358f2c0ddbe99b1f9126c8a7d1d17",
+      "raw_response_sha256": "23dc9b6e38e6a5e0e44e1d5afc3303b6e2eee12eafa0ff8dd6eeb38f0e2296c2",
+      "parsed_output_sha256": "52e0fc8947e9aa1ad5e8a3d423647b90c8e0e8037d4adfb5ef46030a00053057",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-03",
+      "selected_attempt": "author-03-budget",
+      "started_at_utc": "2026-10-03T17:44:26.969206+00:00",
+      "finished_at_utc": "2026-10-03T17:47:42.026002+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "a7bab1f90bbc449a85bb2d86f32c8c1e006d57618d7306b998a76705e83fdfa2",
+      "raw_response_sha256": "6c7cba9bb1339ce22ca7f881fda0faff9268378a866476a8a816492a625a4d2d",
+      "parsed_output_sha256": "a9eb6db42ec51f95263d41aea49c616a096e49cb9a3084a0a97f2e75802032a1",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-04",
+      "selected_attempt": "author-04",
+      "started_at_utc": "2026-10-03T17:51:12.025937+00:00",
+      "finished_at_utc": "2026-10-03T17:54:25.471404+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "3a6ade21ef0aeec9689a0a6faf01a5fd4d90d519b3ec5ad0897d288e59ba02af",
+      "raw_response_sha256": "1a2fd0a0755e152ae2dddac138e043905a6a424bfa2505f5e2a854dc762c72d0",
+      "parsed_output_sha256": "8664ca4757774be1cbe3c1abbeb82e1c909cd098e7bc6f2536ca5043bf39589c",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-05",
+      "selected_attempt": "author-05",
+      "started_at_utc": "2026-10-03T17:54:27.486286+00:00",
+      "finished_at_utc": "2026-10-03T17:58:00.531929+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "73ea4b73df37f7ee7536d2f74eba150bed3a9cc8a94d1d2cf2d3208193be1400",
+      "raw_response_sha256": "dce4ca6913864e06cde44039bd4f7f98be85faa754177d2a2e289e469255f044",
+      "parsed_output_sha256": "ab4cbddf4082019cc3e5215a3c808db57eb687cea4295944a42c5a9e798b0ded",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-06",
+      "selected_attempt": "author-06",
+      "started_at_utc": "2026-10-03T17:58:02.200223+00:00",
+      "finished_at_utc": "2026-10-03T18:01:51.347796+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "2a66d693ff78c1cc0687c7e2de9e5cdcab0d6d842423d426000fa6daf33339c7",
+      "raw_response_sha256": "2bd633f65253dc0453167fb56635cf954f7165a7f1b142c5ea64fba2555b4dea",
+      "parsed_output_sha256": "62aadd67dd3ead0887ba22a4a5b934d3ff1b695976474c71ece6a9ea9b1aa168",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-07",
+      "selected_attempt": "author-07",
+      "started_at_utc": "2026-10-03T18:01:53.019943+00:00",
+      "finished_at_utc": "2026-10-03T18:06:04.731654+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "332b7e2aebaabc14fd5bc980b5b3b3e57083455b5758412a9cf1e3ce9dc9c42c",
+      "raw_response_sha256": "16dd2679e2f01bd30a5a2c7de908e93368f0976b1f175fd7680fead73275f4c7",
+      "parsed_output_sha256": "8331a166f52463c5d536c7c544fe2ca69fbf1bcee29d7c11d02da7509103d470",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-08",
+      "selected_attempt": "author-08",
+      "started_at_utc": "2026-10-03T18:06:06.931548+00:00",
+      "finished_at_utc": "2026-10-03T18:10:00.323784+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "c77e13fe349a90aa51dee576eeb9eaa1d2537eb7f6bc9f3db69ec4a53314aa42",
+      "raw_response_sha256": "d1a77f898241bf5a663516c6a4418992e23c1081a1a19aae99df92440f0ee402",
+      "parsed_output_sha256": "bfc412cc463354d12d0535f9bad3fc39dbae11efada63a575e55554e63897f01",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-09",
+      "selected_attempt": "author-09",
+      "started_at_utc": "2026-10-04T00:31:03.302793+00:00",
+      "finished_at_utc": "2026-10-04T00:33:47.999778+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "dd1690059eb713b2d85fc9591acb927b28c1ae2ac7aa5b983939b61aee2fc95c",
+      "raw_response_sha256": "8d330a71a7ca5a09cda2f99a3bad217a2d8e8d15db71a5dba9a394c85791fdaf",
+      "parsed_output_sha256": "744f7aaf1b7ce115bee37ecf8f2d0f4b70bfd41535d2ac24daa41b4f58af4a31",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": false,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-10",
+      "selected_attempt": "author-10",
+      "started_at_utc": "2026-10-04T00:34:42.636636+00:00",
+      "finished_at_utc": "2026-10-04T00:38:49.333655+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "b1ca529a25da0d7b3517b6b6d3da78a0c6283d0e883199d1567263b79cb4b3d8",
+      "raw_response_sha256": "bfe51fa38316534bead54d2fb7ba2444a29d39a8942388be8340a8edeadfb154",
+      "parsed_output_sha256": "f51be31285bea3c92a73788da18969a4042913ffe175973cbc47d73e3a7925ca",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": false,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-11",
+      "selected_attempt": "author-11",
+      "started_at_utc": "2026-10-04T00:38:51.054248+00:00",
+      "finished_at_utc": "2026-10-04T00:43:15.480560+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "ec1016c038b5dc34dfe56fb82b366852354bcb138a9396dce89ab2e1368af8a9",
+      "raw_response_sha256": "34759f7b2d31b84e06c584869964d8a84f5013e92363902ceac5e55eaa742fa4",
+      "parsed_output_sha256": "627219175df839aaefabde61925b6de14049438476405e5551700f440dcf5d84",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": false,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-12",
+      "selected_attempt": "author-12-attempt-2",
+      "started_at_utc": "2026-10-04T00:50:09.997710+00:00",
+      "finished_at_utc": "2026-10-04T00:54:11.779198+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "df6d579281c1e46c3263af6952b25f34d69026281be12394d430c08e671170c3",
+      "raw_response_sha256": "7769e61e3747607d0f0d6c380f7ae24a9beb4899d8bb76635406e82ee7277146",
+      "parsed_output_sha256": "62341c373f3affa6d60be3ce84ccccde5d42f9515faea5768e59150d85032cd4",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": false,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-13",
+      "selected_attempt": "author-13",
+      "started_at_utc": "2026-10-03T18:10:01.976518+00:00",
+      "finished_at_utc": "2026-10-03T18:14:16.167044+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "79a093c748a5720781e68eb18fc51cea43df5f524be33f3cdf9f2b09242d8e28",
+      "raw_response_sha256": "45d8adebce2b12de5cfc10d6541584365ebba82a22b619e395f65bd2b2b59ef9",
+      "parsed_output_sha256": "43884466a58a568257006272c865984f9a9aa6f4696565c6d792122002c3d5f2",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-14",
+      "selected_attempt": "author-14",
+      "started_at_utc": "2026-10-03T18:14:18.046713+00:00",
+      "finished_at_utc": "2026-10-03T18:18:05.728414+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "d70e05f79230c548ca5b89153014c1433ea1737cf680eed4f86f6e174141f103",
+      "raw_response_sha256": "e8b8bb4cbc586b8995755ad02774275358032adb5b042917ffebfd06c513e482",
+      "parsed_output_sha256": "31fe3109eddfb3b28a99b310a64efa4175c04043162e14dcb2b436cbdd9862d9",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-15",
+      "selected_attempt": "author-15",
+      "started_at_utc": "2026-10-04T00:55:09.640106+00:00",
+      "finished_at_utc": "2026-10-04T00:58:45.763080+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "8ccfa25122729a8a4c6863ad349a9c358f4aee0f9a7077c5e0a8eaccaa801589",
+      "raw_response_sha256": "646444e2a3bbbbce123681b17f0ea0668f98fe17d61af93f54cdb6769b783f27",
+      "parsed_output_sha256": "76f49127ffefe4f82e9cc467e4868ce58297b71178d37854d4b99bf12554edcb",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-16",
+      "selected_attempt": "author-16",
+      "started_at_utc": "2026-10-04T00:58:47.420754+00:00",
+      "finished_at_utc": "2026-10-04T01:02:58.779937+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "f14a3f0dd2f1fb5ae109d386d9b617e8e77b3dc7b3e374028762af8d73845e21",
+      "raw_response_sha256": "f4dd552cd9f9e30f3517e94c9628e0f37127fa7ae5b989f5f816195ffc529081",
+      "parsed_output_sha256": "cb525475bf32c150af8457b047e4dc7cf513d326c6ff300fea963ab4cc5b70a4",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": false,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-17",
+      "selected_attempt": "author-17",
+      "started_at_utc": "2026-10-03T18:18:07.720357+00:00",
+      "finished_at_utc": "2026-10-03T18:21:16.331223+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "beb6ac9730c952f5479a358a0005adfa7525be3c147dd214a4cfc166775f0dc1",
+      "raw_response_sha256": "cf01c19ea4551a50d0b283e4a1a8491c49c4cfa85c0f3583a09c5c4c6f3848d9",
+      "parsed_output_sha256": "fdecbec354555080e2916d8a6cdc0799b6cb4bd402336c4433c4fcbf017e472b",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-18",
+      "selected_attempt": "author-18",
+      "started_at_utc": "2026-10-04T01:03:00.684149+00:00",
+      "finished_at_utc": "2026-10-04T01:07:28.837146+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "22bbdcb97d1ecf95a5f63a97569f9de30170a462ddb9bd57647be2fc1ab3b9cf",
+      "raw_response_sha256": "8b856363faee04ff818e94248d9624ab73d6c73c9f0ecfda5159940f246e5efa",
+      "parsed_output_sha256": "a9ed745ca2813d6a64a4a422e5b0f387cac8092bb88908bd9db3a35082213796",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": false,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-19",
+      "selected_attempt": "author-19",
+      "started_at_utc": "2026-10-03T18:21:18.728429+00:00",
+      "finished_at_utc": "2026-10-03T18:24:22.970850+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "4ba1f84ca75425468fb2d2fda7bdbd3c60f92f8e6b110b4707b7b1ff0122309d",
+      "raw_response_sha256": "7a96ac2fdc2607dc6b893a2bce07294875c4034ca06a7bec92c9c8e87e8c1974",
+      "parsed_output_sha256": "d1f18f5a2c338632f6516582b5083f46655b4bae50f5f1aa530ce289127d8224",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-20",
+      "selected_attempt": "author-20-attempt-2",
+      "started_at_utc": "2026-10-03T18:27:55.620505+00:00",
+      "finished_at_utc": "2026-10-03T18:30:26.791953+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "8ab431156acf759650824a1575c18f895f70f63747534d41f3dd6757e870a5dc",
+      "raw_response_sha256": "6dab761a4decdc692862c627b8794c4ab7383a66e9a7dee833794688bd5cfaa0",
+      "parsed_output_sha256": "c062aecfd282fa3764b489bda5f83d6fd14cf77b1b6579e348b8e4c7274f4aa7",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-21",
+      "selected_attempt": "author-21",
+      "started_at_utc": "2026-10-04T01:07:31.082186+00:00",
+      "finished_at_utc": "2026-10-04T01:12:55.636167+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 2,
+        "design_entries": 2,
+        "relations": 1
+      },
+      "spec_sha256": "535b1fd37461a4a2ec85999164520bbdda8a10fa9eb4ba14db67413620e6e102",
+      "raw_response_sha256": "f713c49df8c025646b2ca2d86834952ee5a7edf5cfda3d2910a3ff4bb63d6ca2",
+      "parsed_output_sha256": "6ef6fe797b75fcb7e05f9507669d283ba2219b7d3f126c9a5b5b1ca5ea6e0f0b",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": false
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-22",
+      "selected_attempt": "author-22",
+      "started_at_utc": "2026-10-03T18:30:28.489940+00:00",
+      "finished_at_utc": "2026-10-03T18:33:26.944647+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "e68e518fb0a34b6408197e21cb96a028b726660e3dcc0a6277c4cf586e3c8ba7",
+      "raw_response_sha256": "87ad2bd744590582f44641a273cb78c284a5af5072380d970f1c6da8c9ae6f2e",
+      "parsed_output_sha256": "0f180ac974275de9760d1d41d724127d0d9eaffd79404bccec23f3031edce83b",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-23",
+      "selected_attempt": "author-23",
+      "started_at_utc": "2026-10-03T18:33:29.110204+00:00",
+      "finished_at_utc": "2026-10-03T18:36:43.741300+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "e6846008a0e4a8968fb7e41af9bf5a5bb4cf29b46a3ebd6b4b607d16dbcb937b",
+      "raw_response_sha256": "0ab49bd67e900cde5007bb2b85f2b68eeffa6ff9fbcd23c5f04414b36f1d8813",
+      "parsed_output_sha256": "e5da26ef5287868b642648ec94c2079bdf26d41570050e3fa6ff9b364adf20a3",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-24",
+      "selected_attempt": "author-24",
+      "started_at_utc": "2026-10-03T18:36:45.572073+00:00",
+      "finished_at_utc": "2026-10-03T18:41:25.191706+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "58b3984d336fb6c861b999be29bdec44f7b14b6fc579da13a92755098b1b1fd9",
+      "raw_response_sha256": "c4377bb99e2822fdc14f1b1c5e39b1a6a1215d79392ff35dce8b35dc44fad65b",
+      "parsed_output_sha256": "4192809e3267677ff841414700473361343db86d1131cdd379e2d73e5a05c5e0",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-25",
+      "selected_attempt": "author-25",
+      "started_at_utc": "2026-10-03T18:41:27.329001+00:00",
+      "finished_at_utc": "2026-10-03T18:46:38.328812+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "bf645e27e86e6a189ca3a6f8432fe6e9dc4897c3b7430a09d1f439f70bc3b5a1",
+      "raw_response_sha256": "43cf7eea508bd9907485b7a9d56b9c6d5440b86b63ff7ee7c4f8b8ba9bb13b54",
+      "parsed_output_sha256": "6698ba3a3b56119d63684c7b166e0cb8cb0fd750167ba1e839a9daa45ba16a99",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-26",
+      "selected_attempt": "author-26",
+      "started_at_utc": "2026-10-03T18:46:40.298417+00:00",
+      "finished_at_utc": "2026-10-03T18:51:53.393339+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "6ed5f4bc7cfe8544350766d182f7e961f9989b1cb112b992c8a47f5a87cc255e",
+      "raw_response_sha256": "74c66ef3cfeebca077d380be1363bcee64399136adbe0742800c1be264a99338",
+      "parsed_output_sha256": "cb2cffd84d57801aa4c175801e1ac880e58943965d7286b7d621289c046e5ab1",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-27",
+      "selected_attempt": "author-27",
+      "started_at_utc": "2026-10-03T18:51:55.425131+00:00",
+      "finished_at_utc": "2026-10-03T18:57:23.350697+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "37b49e3e4c8fc468941a06a96c56b61e8f77d576db92475dc78d934c0f76679a",
+      "raw_response_sha256": "4dd82fb1aa024a075549174bbaafcb88d0ad20e556d68d09c28ccf57abf28eb9",
+      "parsed_output_sha256": "68f68817941e9f9130efc4c5999cefc1b12a13de46c5481e17f7ac3d21409aa2",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    },
+    {
+      "author": "author-28",
+      "selected_attempt": "author-28",
+      "started_at_utc": "2026-10-03T18:57:25.426799+00:00",
+      "finished_at_utc": "2026-10-03T19:02:50.707880+00:00",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "rows": {
+        "cases": 1,
+        "design_entries": 1,
+        "relations": 0
+      },
+      "spec_sha256": "8bdc6d79d50b5bffeae169f908b32dd213d9f87ce02f12c70eb896758dfcf526",
+      "raw_response_sha256": "e4eb423c0d972c1539d34954b4304e7b73d4f9f34a47266bef389cfb68415958",
+      "parsed_output_sha256": "7759d9005f31416cfe5176fdefd1c9070f1c0306ba0859bfb5f1e4e976cae339",
+      "spec_partition_match": true,
+      "row_counts_match": true,
+      "identifier_contract_match": {
+        "cases": true,
+        "design_entries": true,
+        "relations": true
+      },
+      "custody": {
+        "raw_sha256_matches_receipt": true,
+        "parsed_sha256_matches_receipt": true,
+        "raw_response_json_equals_parsed_output": true,
+        "response_text_exact_match": true,
+        "response_text_match_after_outer_whitespace_strip": true,
+        "raw_done": true
+      }
+    }
+  ],
+  "custody_exceptions": [],
+  "source_pin_verification": {
+    "files_read": 145,
+    "all_read_source_bytes_equal_pinned_git_blobs": true,
+    "mismatches": [],
+    "head_unchanged": true
+  },
+  "disposition": "FAIL_IDENTIFIER_COVERAGE",
+  "semantic_disposition": "NOT_PERFORMED"
+}

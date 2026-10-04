@@ -1,0 +1,11 @@
+{
+  "schema_version": "mechanical-reconstruction-execution/v1",
+  "attempt": "attempt-001",
+  "status": "FAILED_BEFORE_MATERIALIZATION",
+  "exit_code": 1,
+  "failure_type": "ValueError",
+  "message": "Slot completeness mismatch",
+  "script_snapshot": "reconstruct-corpus-attempt-001.py",
+  "preserved_evidence": "attempt-001/slot-proof.json",
+  "interpretation": "Required exact slot proof failed; no corpus artifacts or A/B requests were produced. Attempt 002 adds diagnostic per-partition replay without changing inputs, selection, source materializer, or acceptance gate."
+}

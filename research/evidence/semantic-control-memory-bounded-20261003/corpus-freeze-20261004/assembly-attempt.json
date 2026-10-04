@@ -1,0 +1,15 @@
+{
+  "assembly_gate": "Slot-proof and per-partition materialization already failed; diagnostic only.",
+  "created_cases_jsonl": false,
+  "created_design_json": false,
+  "created_relations_json": false,
+  "diagnostic_model_calls": 0,
+  "diagnostic_reducer_calls": 0,
+  "error": "[Errno 2] No such file or directory: 'STAGING/research/evidence/semantic-adjudication-request-bound-v2/author-materialized/author-01.json'",
+  "error_type": "FileNotFoundError",
+  "log_projection": "Only absolute scratch prefix replaced with SCRATCH_ROOT; raw log retained locally.",
+  "materializer_sha256": "aa70e5aecdbfadcc000694b72bce82f5b9410940167ca46a74671fb599dc1a4c",
+  "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+  "status": "REJECTED_MISSING_MATERIALIZED_PARTITION",
+  "traceback_path": "assembly-error.log"
+}

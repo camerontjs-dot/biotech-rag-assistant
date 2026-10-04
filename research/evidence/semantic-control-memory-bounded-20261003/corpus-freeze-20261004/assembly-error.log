@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "SCRATCH_ROOT/evidence/corpus-freeze/build_publication.py", line 35, in <module>
+    result=builder.assemble(ATTEMPT/'sealed-materializer-staging')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "SCRATCH_ROOT/review-corpus-51/research/build_semantic_author_requests.py", line 181, in assemble
+    groups = [decoded((out / "author-materialized" / f"{p['id']}.json").read_bytes())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'SCRATCH_ROOT/evidence/corpus-freeze/attempt-002/sealed-materializer-staging/research/evidence/semantic-adjudication-request-bound-v2/author-materialized/author-01.json'

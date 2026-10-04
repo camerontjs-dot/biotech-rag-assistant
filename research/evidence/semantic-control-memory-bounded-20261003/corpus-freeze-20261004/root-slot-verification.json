@@ -1,0 +1,111 @@
+{
+  "method": "Independent direct JSON slot enumeration; no materializer or worker slot-proof consumed",
+  "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+  "partitions": 28,
+  "rows": 44,
+  "unique": 33,
+  "missing": [
+    "invariant_1",
+    "invariant_2",
+    "invariant_4",
+    "invariant_5",
+    "invariant_8",
+    "mutation_1",
+    "mutation_3",
+    "mutation_4",
+    "mutation_5",
+    "mutation_6",
+    "mutation_7"
+  ],
+  "duplicated": {
+    "anchor_02": 2,
+    "anchor_03": 2,
+    "anchor_04": 2,
+    "anchor_05": 2,
+    "anchor_06": 2,
+    "anchor_07": 2,
+    "anchor_09": 2,
+    "anchor_10": 2,
+    "anchor_12": 2,
+    "anchor_16": 2,
+    "anchor_18": 2
+  },
+  "case_slot_mismatches": [
+    {
+      "partition": "author-01",
+      "expected": [
+        "anchor_01",
+        "invariant_1",
+        "mutation_1",
+        "mutation_3",
+        "mutation_4",
+        "mutation_5",
+        "mutation_6"
+      ],
+      "actual": [
+        "anchor_01",
+        "anchor_02",
+        "anchor_03",
+        "anchor_04",
+        "anchor_05",
+        "anchor_06",
+        "anchor_07"
+      ]
+    },
+    {
+      "partition": "author-09",
+      "expected": [
+        "anchor_09",
+        "invariant_5"
+      ],
+      "actual": [
+        "anchor_09",
+        "anchor_09"
+      ]
+    },
+    {
+      "partition": "author-10",
+      "expected": [
+        "anchor_10",
+        "mutation_7"
+      ],
+      "actual": [
+        "anchor_10",
+        "anchor_10"
+      ]
+    },
+    {
+      "partition": "author-12",
+      "expected": [
+        "anchor_12",
+        "invariant_2"
+      ],
+      "actual": [
+        "anchor_12",
+        "anchor_12"
+      ]
+    },
+    {
+      "partition": "author-16",
+      "expected": [
+        "anchor_16",
+        "invariant_4"
+      ],
+      "actual": [
+        "anchor_16",
+        "anchor_16"
+      ]
+    },
+    {
+      "partition": "author-18",
+      "expected": [
+        "anchor_18",
+        "invariant_8"
+      ],
+      "actual": [
+        "anchor_18",
+        "anchor_18"
+      ]
+    }
+  ]
+}
