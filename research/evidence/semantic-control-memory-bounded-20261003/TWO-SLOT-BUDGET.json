@@ -1,0 +1,36 @@
+{
+  "schema_version": "semantic-control-two-slot-budget/v1",
+  "status": "PREREGISTERED_ONE_CALL",
+  "authorized_call": {
+    "id": "author-09",
+    "slots": 2,
+    "relation_slots": 1,
+    "spec": "research/evidence/semantic-adjudication-request-bound-v2/requests/author-09.spec.json",
+    "config": "research/evidence/semantic-control-memory-bounded-20261003/author-config.json",
+    "calls": 1,
+    "retries": 0,
+    "semantic_use": "NONE. The receipt estimates whether a two-slot response fits the frozen 1024-token and 420-second caps."
+  },
+  "not_authorized_until_this_returns": [
+    "author-10",
+    "author-11",
+    "author-12",
+    "author-15",
+    "author-16",
+    "author-18",
+    "author-21",
+    "author-02",
+    "author-01"
+  ],
+  "baseline_before_call": {
+    "ollama_models_loaded": 0,
+    "free_percentage": 87,
+    "swap_used_mb": 4330,
+    "swap_file_total_mb": 5120,
+    "note": "No model is loaded and the free-memory percentage is high. The swap file still holds about 4.3GB from earlier pressure. The absolute 512MB swap rule would refuse every call on that leftover. This call instead stops if swap in use grows by 256MB from the baseline, if free memory falls below 25%, if resident size reaches 12GB, or if reported context exceeds 16384."
+  },
+  "nonclaims": [
+    "A two-slot budget call is not semantic support.",
+    "It does not authorize the seven-slot author-01 partition."
+  ]
+}
