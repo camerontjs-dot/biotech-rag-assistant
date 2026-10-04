@@ -1,0 +1,70 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system administrator updated the firewall rules at 09:00 UTC."
+        },
+        {
+          "text": "The network traffic was logged by the monitoring service."
+        }
+      ],
+      "claim": "The system administrator updated the firewall rules at 09:00 UTC.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_21"
+    },
+    {
+      "authorized_body": [
+        {
+          "text": "The network traffic was logged by the monitoring service."
+        }
+      ],
+      "claim": "The system administrator updated the firewall rules at 09:00 UTC.",
+      "distractors": [],
+      "projection": null,
+      "slot": "invariant_6"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "This anchor represents distributed support where the claim is fully supported by an explicit identity-linked conjunction across two admitted BODY spans.",
+      "category": "distributed_support",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "ANCHOR",
+      "seed_kind": "positive",
+      "slot": "anchor_21"
+    },
+    {
+      "author_hypothesis": "This invariant preserves all truth, scope, relation, coverage and applicable guard labels under the recorded identity/anchor map.",
+      "category": "distributed_support",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "INVARIANT",
+      "seed_kind": "positive",
+      "slot": "invariant_6"
+    }
+  ],
+  "relations": [
+    {
+      "anchor_map": [
+        {
+          "kind": "ASSERTION",
+          "left": {
+            "text": "The system administrator updated the firewall rules at 09: in 09:00 UTC."
+          },
+          "right": {
+            "text": "The network traffic was logged by the monitoring service."
+          }
+        }
+      ],
+      "changed_ranges": [],
+      "dimensions": ["distributed_support"],
+      "family": "sentence_or_witness_order",
+      "hypothesis": "This invariant preserves all truth, scope, relation, design_entries and applicable guard labels under the recorded identity/anchor map.",
+      "id": "rel-invariant-6-anchor_21",
+      "mode": "INVARIANT"
+    }
+  ]
+}
