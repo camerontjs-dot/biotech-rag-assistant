@@ -1,0 +1,28 @@
+{
+  "schema_version": "semantic-control-two-slot-remainder/v1",
+  "author_12_attempt_2": {
+    "status": "PASS_REQUEST_PATH_ONLY",
+    "semantic_acceptance": false,
+    "done_reason": "stop",
+    "eval_count": 834,
+    "prompt_eval_count": 15591,
+    "wall_clock_s": 241.8,
+    "requested_num_ctx": 18432,
+    "loaded_num_ctx": 18432,
+    "swap_used_mb_before": 3506,
+    "swap_used_mb_after": 3498,
+    "free_percentage_after_unload": 81,
+    "ceiling_tripped": false
+  },
+  "why_the_remainder_moves": "Attempt 1 was cut at 793 tokens because that was all the 16384 context had left. The finished response is 834 tokens. The unsent two-slot partitions can land on either side of 793, so they use the 18432 context that just held 834 tokens.",
+  "authorized_same_room": ["author-15", "author-16", "author-18", "author-21"],
+  "config": "research/evidence/semantic-control-memory-bounded-20261003/author-config-room-18432.json",
+  "freeze": "research/evidence/semantic-control-memory-bounded-20261003/FREEZE-room-18432.json",
+  "not_rerun": ["author-09", "author-10", "author-11", "author-12"],
+  "still_not_authorized": ["author-02", "author-01"],
+  "execution": {
+    "parallelism": 1,
+    "retries": 0,
+    "stop_on_first_non_pass": true
+  }
+}
