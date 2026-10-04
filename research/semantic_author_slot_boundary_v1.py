@@ -13,6 +13,7 @@ import json
 import math
 import re
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import build_semantic_author_requests as inherited_builder
@@ -385,44 +386,106 @@ def verify_prepared(root, run):
     return inventory, partition, schemas, specs, config
 
 
+TRANSPORT_ARTIFACTS = (
+    "request.json", "prompt.txt", "before-send.json", "provider-discovery.raw.json",
+    "models-discovery.raw.json", "send-started.json", "provider-response.raw.json",
+    "http-response.json", "response-text.txt", "parsed-output.json", "receipt.json",
+)
+CAPACITY_LIMIT = (
+    "Canary embeds largest UTF-8-byte author prompt; token dominance is not proven. "
+    "Each later raw response must separately fit the frozen context reserve.")
+
+
+def utc_timestamp(value):
+    instant = datetime.fromisoformat(value)
+    once.require(instant.utcoffset() == timedelta(0), "receipt timestamp must be UTC")
+    return instant
+
+
+def checked_transport(output, spec, config):
+    """Validate retained runner evidence against the request/config, without network."""
+    artifacts = {name: (output / name).read_bytes() for name in TRANSPORT_ARTIFACTS}
+    receipt = once.decoded(artifacts["receipt.json"])
+    before = once.decoded(artifacts["before-send.json"])
+    send = once.decoded(artifacts["send-started.json"])
+    request, prompt = once.build_request(spec, config)
+    once.require(artifacts["request.json"] == request and artifacts["prompt.txt"] == prompt,
+                 "request custody mismatch")
+    initial = {
+        "started_at_utc": receipt["started_at_utc"], "request_sha256": once.sha(request),
+        "prompt_sha256": once.sha(prompt), "model": config["model"],
+        "model_digest": config["model_digest"], "provider_version": config["provider_version"],
+        "parameters": config["options"], "generation_attempts": 0, "retries": 0, "tools": [],
+        "session_reuse": False, "aperture": "exact request bytes",
+        "hidden_provider_context": "UNKNOWN", "status": "APPARATUS_INVALID",
+        "raw_response_sha256": None, "parsed_output_sha256": None, "errors": [],
+    }
+    once.require(once.encoded(before) == once.encoded(initial), "before-send receipt mismatch")
+    expected_send = {"at_utc": send["at_utc"], "request_sha256": once.sha(request),
+                     "generation_attempts": 1}
+    once.require(once.encoded(send) == once.encoded(expected_send), "send-started marker mismatch")
+    once.require(utc_timestamp(receipt["started_at_utc"]) <= utc_timestamp(send["at_utc"]) <=
+                 utc_timestamp(receipt["finished_at_utc"]), "request marker chronology mismatch")
+    expected_receipt = {
+        **initial, "generation_attempts": 1, "status": "PASS_REQUEST_PATH_ONLY",
+        "finished_at_utc": receipt["finished_at_utc"],
+        "provider_discovery_sha256": once.sha(artifacts["provider-discovery.raw.json"]),
+        "models_discovery_sha256": once.sha(artifacts["models-discovery.raw.json"]),
+        "raw_response_sha256": once.sha(artifacts["provider-response.raw.json"]),
+        "parsed_output_sha256": once.sha(artifacts["parsed-output.json"]),
+    }
+    once.require(once.encoded(receipt) == once.encoded(expected_receipt),
+                 "runtime/transport receipt or response custody drift")
+    provider = once.decoded(artifacts["provider-discovery.raw.json"])
+    models = once.decoded(artifacts["models-discovery.raw.json"])
+    selected = [model for model in models["models"] if model["name"] == config["model"]]
+    once.require(provider["version"] == config["provider_version"] and len(selected) == 1 and
+                 selected[0]["digest"] == config["model_digest"], "discovered runtime mismatch")
+    raw = once.decoded(artifacts["provider-response.raw.json"])
+    once.require(raw.get("model") == config["model"] and raw.get("done") is True and
+                 raw.get("done_reason") == "stop" and
+                 "tool_calls" not in raw and "tools" not in raw,
+                 "raw response identity/completion mismatch")
+    once.require(artifacts["response-text.txt"] == raw["response"].encode("utf-8"),
+                 "response text differs from raw response")
+    draft = once.decoded(raw["response"])
+    once.require(artifacts["parsed-output.json"] == once.encoded(draft) + b"\n",
+                 "parsed output differs from canonical raw response")
+    http = once.decoded(artifacts["http-response.json"])
+    once.require(set(http) == {"status", "headers", "incomplete_read"} and
+                 type(http["status"]) is int and http["status"] == 200 and
+                 http["incomplete_read"] is None, "incomplete/invalid HTTP response")
+    frozen.schema_check(draft, spec["output_schema"])
+    hashes = {name: once.sha(data) for name, data in artifacts.items()}
+    return draft, hashes, check_budget(raw, config)
+
+
+def acceptance_metadata(run, group_id, artifact_hashes, prompt_tokens):
+    return {"schema_version": "semantic-author-boundary-receipt/v2", "request": group_id,
+            "stage": "CANARY" if group_id == "canary" else "AUTHOR",
+            "errors": [], "semantic_validity": "NOT_ASSESSED", "adjudication": "NOT_RUN",
+            "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
+            "request_receipt_sha256": artifact_hashes["receipt.json"],
+            "execution_freeze_sha256": once.sha((run / "EXECUTION-FREEZE.json").read_bytes()),
+            "transport_artifacts_sha256": artifact_hashes, "observed_prompt_tokens": prompt_tokens}
+
+
 def checked_call(run, group_id, spec, config, expected_status):
-    """Reconstruct acceptance from exact raw bytes; an edited PASS receipt is insufficient."""
+    """Reconstruct acceptance from retained evidence; a PASS label is insufficient."""
     output = run / "calls" / group_id
     acceptance = read(output / "author-boundary.json")
-    receipt = read(output / "receipt.json")
-    request, prompt = once.build_request(spec, config)
-    once.require(acceptance["status"] == expected_status and
-                 receipt["status"] == "PASS_REQUEST_PATH_ONLY", "previous call is invalid")
-    once.require(receipt["generation_attempts"] == 1 and receipt["retries"] == 0 and
-                 receipt["tools"] == [] and receipt["session_reuse"] is False and
-                 receipt["request_sha256"] == once.sha(request) and
-                 receipt["prompt_sha256"] == once.sha(prompt), "request receipt mismatch")
-    once.require((output / "request.json").read_bytes() == request and
-                 (output / "prompt.txt").read_bytes() == prompt, "request custody mismatch")
-    for name, field in (("provider-response.raw.json", "raw_response_sha256"),
-                        ("parsed-output.json", "parsed_output_sha256")):
-        once.require(once.sha((output / name).read_bytes()) == receipt[field],
-                     "response custody drift")
-    receipt_sha = once.sha((output / "receipt.json").read_bytes())
-    once.require(acceptance["request_receipt_sha256"] == receipt_sha
-                 and acceptance["execution_freeze_sha256"] ==
-                 once.sha((run / "EXECUTION-FREEZE.json").read_bytes()), "acceptance custody drift")
-    raw_response = read(output / "provider-response.raw.json")
-    draft = read(output / "parsed-output.json")
-    once.require(once.decoded(raw_response["response"]) == draft and
-                 raw_response.get("model") == config["model"] and
-                 raw_response.get("done") is True and raw_response.get("done_reason") == "stop" and
-                 "tool_calls" not in raw_response and "tools" not in raw_response,
-                 "raw response/parse disagreement")
-    http = read(output / "http-response.json")
-    once.require(http["status"] == 200 and http["incomplete_read"] is None,
-                 "incomplete/invalid HTTP response")
-    if expected_status == STATUS:
-        once.require(acceptance["materialized_sha256"] ==
-                     once.sha((output / "materialized.json").read_bytes()),
-                     "materialized custody drift")
-    frozen.schema_check(draft, spec["output_schema"])
-    check_budget(raw_response, config)
+    once.require(acceptance["status"] == expected_status, "previous call is invalid")
+    draft, artifact_hashes, prompt_tokens = checked_transport(output, spec, config)
+    expected = {**acceptance_metadata(run, group_id, artifact_hashes, prompt_tokens),
+                "status": expected_status}
+    if group_id == "canary":
+        once.require(expected_status == "PASS_NONSEMANTIC_CANARY_ONLY", "canary status mismatch")
+        expected["capacity_limit"] = CAPACITY_LIMIT
+    else:
+        once.require(expected_status == STATUS, "author status mismatch")
+        expected["materialized_sha256"] = once.sha((output / "materialized.json").read_bytes())
+    once.require(once.encoded(acceptance) == once.encoded(expected),
+                 "acceptance metadata or retained-artifact custody mismatch")
     return draft
 
 
@@ -466,7 +529,8 @@ def execute(root, run, group_id, transport=once.local_http):
     spec = canary if group_id == "canary" else specs[group_id]
     output = calls / group_id
     receipt, draft = once.run_once(spec, config, output, transport=transport)
-    boundary = {"schema_version": "semantic-author-boundary-receipt/v1",
+    boundary = {"schema_version": "semantic-author-boundary-receipt/v2",
+                "stage": "CANARY" if group_id == "canary" else "AUTHOR",
                 "request": group_id, "status": "APPARATUS_INVALID", "errors": [],
                 "semantic_validity": "NOT_ASSESSED", "adjudication": "NOT_RUN",
                 "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
@@ -474,13 +538,11 @@ def execute(root, run, group_id, transport=once.local_http):
                 "execution_freeze_sha256": once.sha((run / "EXECUTION-FREEZE.json").read_bytes())}
     try:
         once.require(receipt["status"] == "PASS_REQUEST_PATH_ONLY", "request path invalid")
-        raw = read(output / "provider-response.raw.json")
-        boundary["observed_prompt_tokens"] = check_budget(raw, config)
+        draft, artifact_hashes, prompt_tokens = checked_transport(output, spec, config)
+        boundary.update(acceptance_metadata(run, group_id, artifact_hashes, prompt_tokens))
         if group_id == "canary":
             boundary["status"] = "PASS_NONSEMANTIC_CANARY_ONLY"
-            boundary["capacity_limit"] = (
-                "Canary embeds largest UTF-8-byte author prompt; token dominance is not proven. "
-                "Each later raw response must separately fit the frozen context reserve.")
+            boundary["capacity_limit"] = CAPACITY_LIMIT
         else:
             group = next(g for g in partition["partitions"] if g["id"] == group_id)
             result = materialize(draft, group, inventory, partition, schemas)
@@ -521,7 +583,8 @@ def _freeze_corpus(root, run):
                "execution_freeze_sha256": once.sha((run / "EXECUTION-FREEZE.json").read_bytes()),
                "artifacts": {name: once.sha(raw) for name, raw in outputs.items()},
                "source_acceptance_receipts": {key: once.sha(
-                   (run / "calls" / key / "author-boundary.json").read_bytes()) for key in drafts}}
+                   (run / "calls" / key / "author-boundary.json").read_bytes())
+                   for key in ["canary", *drafts]}}
     once.save_json(out / "CORPUS-FREEZE.json", receipt)
     return receipt
 

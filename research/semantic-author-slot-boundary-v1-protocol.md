@@ -50,6 +50,14 @@ Before the next request, the wrapper verifies the prospective freeze and reconst
 all earlier acceptance from request/raw-response/parsed-output custody. Persisted
 materialized bytes must match their receipt hash **and** a canonical rederivation
 from the unchanged raw response, before any next request or complete-corpus freeze.
+The v2 boundary receipt hashes all 11 captured transport artifacts, including response
+text, both discovery responses, before-send/send-started markers and HTTP metadata.
+Their retained content is checked against the frozen request and runtime configuration;
+marker identities and UTC chronology must agree. Boundary stage, request identity,
+errors and semantic/adjudication states must match their bounded meanings. Final corpus
+commitments include the mandatory canary acceptance as well as every author receipt.
+These are retained-evidence consistency checks; they do not authenticate the provider
+against coordinated rewriting of all inputs, receipts and source authority.
 A missing,
 interrupted, invalid or out-of-order call stops the sequence. One generation attempt
 per frozen call; no retries, repair, adaptive repartition or continuation after failure.

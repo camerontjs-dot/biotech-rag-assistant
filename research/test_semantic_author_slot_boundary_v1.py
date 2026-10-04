@@ -326,6 +326,75 @@ class Wrapper(unittest.TestCase):
             boundary.execute(self.root, self.run, "author-01", self.fake())
         self.assertEqual(len(self.calls), 3)
 
+    def test_retained_text_discovery_markers_runtime_and_stage_are_revalidated(self):
+        self.canary()
+        output = self.run / "calls/canary"
+        originals = {path.name: path.read_bytes() for path in output.iterdir()}
+
+        def edit(name, key, value):
+            data = boundary.read(output / name)
+            data[key] = value
+            (output / name).write_bytes(once.encoded(data) + b"\n")
+
+        mutations = [
+            lambda: (output / "response-text.txt").write_text("ALTERED TEXT"),
+            lambda: (output / "provider-discovery.raw.json").unlink(),
+            lambda: (output / "models-discovery.raw.json").unlink(),
+            lambda: edit("provider-discovery.raw.json", "version", "different-version"),
+            lambda: edit("models-discovery.raw.json", "models", []),
+            lambda: (output / "before-send.json").unlink(),
+            lambda: (output / "send-started.json").unlink(),
+            lambda: edit("send-started.json", "request_sha256", "b" * 64),
+            lambda: edit("before-send.json", "generation_attempts", 1),
+            lambda: edit("receipt.json", "model_digest", "b" * 64),
+            lambda: edit("receipt.json", "provider_version", "different-version"),
+            lambda: edit("receipt.json", "parameters", {"temperature": 1}),
+            lambda: edit("author-boundary.json", "request", "author-28"),
+            lambda: edit("author-boundary.json", "stage", "ADJUDICATION"),
+            lambda: edit("author-boundary.json", "schema_version", "unknown"),
+            lambda: edit("author-boundary.json", "errors", ["undeclared failure"]),
+            lambda: edit("author-boundary.json", "adjudication", "FALSE_CLAIM"),
+            lambda: edit("author-boundary.json", "semantic_validity", "QUALIFIED"),
+            lambda: edit("author-boundary.json", "observed_prompt_tokens", 1),
+            lambda: edit("http-response.json", "headers", [["Altered", "retained bytes"]]),
+        ]
+        spec = boundary.read(self.run / "canary.spec.json")
+        for number, mutate in enumerate(mutations):
+            for name, raw in originals.items():
+                (output / name).write_bytes(raw)
+            with self.subTest(mutation=number):
+                mutate()
+                with self.assertRaises((ValueError, FileNotFoundError)):
+                    boundary.checked_call(self.run, "canary", spec, CONFIG,
+                                          "PASS_NONSEMANTIC_CANARY_ONLY")
+        # Exercise the real next-request entrypoint too, with the final corruption retained.
+        group = self.partition["partitions"][0]
+        with self.assertRaises(ValueError):
+            boundary.execute(self.root, self.run, group["id"],
+                             self.fake(token_draft(group, self.inventory)))
+        self.assertEqual(len(self.calls), 3)
+
+    def test_consistent_discovery_hashes_cannot_replace_frozen_runtime_identity(self):
+        self.canary()
+        output = self.run / "calls/canary"
+        discovery = boundary.read(output / "models-discovery.raw.json")
+        discovery["models"][0]["digest"] = "b" * 64
+        (output / "models-discovery.raw.json").write_bytes(once.encoded(discovery) + b"\n")
+        receipt = boundary.read(output / "receipt.json")
+        receipt["models_discovery_sha256"] = once.sha(
+            (output / "models-discovery.raw.json").read_bytes())
+        (output / "receipt.json").write_bytes(once.encoded(receipt) + b"\n")
+        acceptance = boundary.read(output / "author-boundary.json")
+        acceptance["request_receipt_sha256"] = once.sha((output / "receipt.json").read_bytes())
+        for name in ("models-discovery.raw.json", "receipt.json"):
+            acceptance["transport_artifacts_sha256"][name] = once.sha((output / name).read_bytes())
+        (output / "author-boundary.json").write_bytes(once.encoded(acceptance) + b"\n")
+        group = self.partition["partitions"][0]
+        with self.assertRaisesRegex(ValueError, "discovered runtime mismatch"):
+            boundary.execute(self.root, self.run, group["id"],
+                             self.fake(token_draft(group, self.inventory)))
+        self.assertEqual(len(self.calls), 3)
+
     def test_self_consistent_materialized_edit_cannot_override_unchanged_raw_response(self):
         self.canary()
         first = self.partition["partitions"][0]
@@ -359,6 +428,8 @@ class Wrapper(unittest.TestCase):
         self.assertEqual(result["status"], "PASS_COMPLETE_CORPUS_STRUCTURE_ONLY")
         self.assertEqual(result["adjudication"], "NOT_RUN")
         self.assertEqual(result["semantic_validity"], "NOT_ASSESSED")
+        self.assertEqual(set(result["source_acceptance_receipts"]),
+                         {"canary", *[g["id"] for g in self.partition["partitions"]]})
         self.assertEqual(len([call for call in self.calls if call[0] == "POST"]), 29)
         for name, digest in result["artifacts"].items():
             self.assertEqual(once.sha((self.run / "corpus" / name).read_bytes()), digest)
