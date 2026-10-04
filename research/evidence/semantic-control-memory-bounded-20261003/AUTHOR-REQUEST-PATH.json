@@ -1,0 +1,229 @@
+{
+  "schema_version": "semantic-control-author-request-path/v1",
+  "status": "REQUEST_PATH_COMPLETE",
+  "semantic_acceptance": false,
+  "adjudication": "NOT_RUN",
+  "calls_with_provider_response": [
+    {
+      "directory": "author-01",
+      "status": "APPARATUS_INVALID",
+      "done_reason": "length",
+      "eval_count": 2048,
+      "prompt_eval_count": 15631
+    },
+    {
+      "directory": "author-01-attempt-2",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 2185,
+      "prompt_eval_count": 15631
+    },
+    {
+      "directory": "author-02",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 857,
+      "prompt_eval_count": 15599
+    },
+    {
+      "directory": "author-03-budget",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 220,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-04",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 190,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-05",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 246,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-06",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 208,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-07",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 294,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-08",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 224,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-09",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 562,
+      "prompt_eval_count": 15591
+    },
+    {
+      "directory": "author-10",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 606,
+      "prompt_eval_count": 15589
+    },
+    {
+      "directory": "author-11",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 565,
+      "prompt_eval_count": 15589
+    },
+    {
+      "directory": "author-12",
+      "status": "APPARATUS_INVALID",
+      "done_reason": "length",
+      "eval_count": 793,
+      "prompt_eval_count": 15591
+    },
+    {
+      "directory": "author-12-attempt-2",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 834,
+      "prompt_eval_count": 15591
+    },
+    {
+      "directory": "author-13",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 254,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-14",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 189,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-15",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 521,
+      "prompt_eval_count": 15591
+    },
+    {
+      "directory": "author-16",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 612,
+      "prompt_eval_count": 15591
+    },
+    {
+      "directory": "author-17",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 199,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-18",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 601,
+      "prompt_eval_count": 15591
+    },
+    {
+      "directory": "author-19",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 216,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-20-attempt-2",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 214,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-21",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 597,
+      "prompt_eval_count": 15591
+    },
+    {
+      "directory": "author-22",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 203,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-23",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 244,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-24",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 241,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-25",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 226,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-26",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 251,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-27",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 305,
+      "prompt_eval_count": 15582
+    },
+    {
+      "directory": "author-28",
+      "status": "PASS_REQUEST_PATH_ONLY",
+      "done_reason": "stop",
+      "eval_count": 193,
+      "prompt_eval_count": 15582
+    }
+  ],
+  "interrupted_without_response": [
+    "author-20"
+  ],
+  "nonclaims": [
+    "Schema-valid author JSON is not semantic support.",
+    "No A or B adjudication has been run.",
+    "No reconciliation, blind C, or assessor screen has been run.",
+    "author-20 attempt 1 has no response; attempt 2 does.",
+    "author-01 attempt 1 hit num_predict 2048; attempt 2 stopped at 2185 tokens.",
+    "author-12 attempt 1 hit the 16384 context remainder; attempt 2 stopped at 834 tokens."
+  ]
+}
