@@ -1,0 +1,76 @@
+{
+  "schema_version": "frozen-boundary-baseline-probe/v1",
+  "scope": "HISTORICAL_SOURCE_AND_UNINTERPRETED_STRUCTURAL_FIXTURES_ONLY",
+  "source_commit": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+  "provider_calls": 0,
+  "semantic_adjudication": "NOT_RUN",
+  "jsonschema_version": "4.25.1",
+  "module_sha256": {
+    "research/check_semantic_assessor_preparation.py": "9bbaa06b84f9632bb4d2305c0a9798a853466e286604aaa89036145562ebc718",
+    "research/run_semantic_request_once.py": "5410b5ec9ffc3b35345d57f26d871f29cfb97eb7fede8aae580b5f2bb8063b32",
+    "research/build_semantic_author_requests.py": "aa70e5aecdbfadcc000694b72bce82f5b9410940167ca46a74671fb599dc1a4c"
+  },
+  "plan_counts": {
+    "partitions": 28,
+    "slots": 44,
+    "relations": 16,
+    "reserved_ids": 528,
+    "unique_reserved_ids": 528
+  },
+  "schema_and_materializer_controls": [
+    {
+      "fixture": "nominal_tokens",
+      "transport_schema": "PASS",
+      "materializer": "ACCEPTED_STRUCTURAL_FIXTURE"
+    },
+    {
+      "fixture": "duplicate_case_slot",
+      "transport_schema": "PASS",
+      "materializer": "ValueError: case slot/order mismatch"
+    },
+    {
+      "fixture": "reordered_case_rows",
+      "transport_schema": "PASS",
+      "materializer": "ValueError: case slot/order mismatch"
+    },
+    {
+      "fixture": "duplicate_design_slot",
+      "transport_schema": "PASS",
+      "materializer": "ValueError: design slot mismatch"
+    },
+    {
+      "fixture": "reordered_design_rows",
+      "transport_schema": "PASS",
+      "materializer": "ACCEPTED_STRUCTURAL_FIXTURE"
+    },
+    {
+      "fixture": "wrong_design_assignment",
+      "transport_schema": "PASS",
+      "materializer": "ACCEPTED_STRUCTURAL_FIXTURE"
+    },
+    {
+      "fixture": "wrong_relation_id",
+      "transport_schema": "PASS",
+      "materializer": "ValueError: relation slot mismatch"
+    },
+    {
+      "fixture": "reordered_relation_rows",
+      "transport_schema": "PASS",
+      "materializer": "ACCEPTED_STRUCTURAL_FIXTURE"
+    },
+    {
+      "fixture": "wrong_relation_family",
+      "transport_schema": "PASS",
+      "materializer": "ACCEPTED_STRUCTURAL_FIXTURE"
+    }
+  ],
+  "rawless_assembly_control": {
+    "calls_directory_exists": false,
+    "assembled_artifact_names": [
+      "cases.jsonl",
+      "design.json",
+      "relations.json"
+    ],
+    "result": "ACCEPTED_STRUCTURAL_FIXTURE_WITHOUT_RAW_CUSTODY"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "author-boundary-engineering-publication/v1",
+  "source_publication": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+  "unchanged_source_files_verified": {
+    "research/semantic_author_slot_boundary_v1.py": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
+    "research/test_semantic_author_slot_boundary_v1.py": "4cddc26c63dbf70201f11a7d19aab83dbb078fbf270dc61fa46a81f2a3cb7867",
+    "research/semantic-author-slot-boundary-v1-protocol.md": "23bfcfd62064a723512518b8cf7d70ee674e6d238bcd4740bf187db827e15634"
+  },
+  "artifacts": {
+    "README.md": "db7b098b34be14f770b94fb39f1474f93e2e9238673f6ca1a53e24be3cfc21b7",
+    "biotech-authoring-canonical-check-tests.txt": "b907d6a59d710baf366811567ee8626d1f361769c782a959139520e928c50d49",
+    "biotech-authoring-materialized-canonical-review.json": "6bcc458e90893c41fdf49ad78b4c1d6d7303de8e49f07f7c2d71d151282b630e",
+    "biotech-authoring-module-custody-review.json": "67c96f36b08271ff8b3ed90e19620bd964f73ca7e61ebe8337f643ba76628f1f",
+    "biotech-authoring-symlink-review.json": "4faf1cb8654a6c500cd342d246800fa52ef80c9858137c994f58726c8f7ccc9a",
+    "biotech-authoring-tests-final.txt": "1eedbda0027a134b05f8f16d4e2b718ea9e70df167281637f681f0b22dc42c84",
+    "biotech-authoring-transport-custody-tests.txt": "112be1d024f9e0ff1990f7deeefaf5b24d2df634cd311821d0e596ea8a92b5be",
+    "independent-review/FILE-MAP.json": "823de968cb4be486402e4c0bd3534ceb5836a3181948c5cafc9a6f5f674cd3ab",
+    "independent-review/MANIFEST.json": "9a258ab58fd3e1dc4a60195aa3a5db44ac9a4130467917c9e190c41bcd364091",
+    "independent-review/README.md": "f023153539899c850663ab4236b28924b070372e0b2a46a471d94e3af7ee6aa5",
+    "independent-review/acceptance-plan.md": "eafb99f8b0135f0e48b02103db56727bc4359e207e914bdabd3f19326ef8597e",
+    "independent-review/final-subject-probes.json": "abc52699c2a709114e4139f8b3107f3d76e8ab64382bb488a1aa0598673ff88d",
+    "independent-review/first-subject-findings.md": "c4d3ac0f609a92af76142d57ae84f57f2f93ebf26c141d99ec6ebefe07342e46",
+    "independent-review/first-subject-probes.json": "c176097612d3ecca336843227fd7164223e8166f923a57e53153a673c9724bbd",
+    "independent-review/frozen_baseline_probe.py.txt": "63b7dc03601a60ae94d305cf4567af6d8bc5a06c356dca64b6fd80429bfc662a",
+    "independent-review/historical-baseline-results.json": "c9b373a4a1238388e1d830cccbffca9bf6729464ece8b12e76a39f8b72427a15",
+    "independent-review/initial-review-manifest.json": "95ffc52a44d3eb65dbaa0807a9605e79d1f07440ae4b750bfb35583bac2fc0b9",
+    "independent-review/review-receipt.json": "a8086a8168faaee004d444be49fa464e2c8c9e9bdca05bcb34456f1146cf543d",
+    "independent-review/review_successor_probes.py.txt": "a142de7ee09c1a8685cc066e8dda42118a20fbc09c52002f7da3e94e35ea15a2",
+    "local-canonical-materialization-commit.txt": "eac60553f56e8b6c851a65bacc54f9067c2905830b1ddd72c286b28bb3fd0856",
+    "local-initial-commit.txt": "5d03218ad330157de9a4fee10091c44e88767edaa7beca3efd2395e04e1cd3ec",
+    "local-retained-custody-commit.txt": "d7853ed9bcd5ee9653a92c0205a181dabc165366ff20492dbcd6829efb38ff8d",
+    "publication-map.json": "828c0b5be0907c6ca8fc8b6202d48d0d11b68eb8e874ec3c9dca53db5b186962"
+  },
+  "downstream_state": {
+    "real_provider_calls": 0,
+    "semantic_authoring": "NOT_RUN",
+    "adjudication": "NOT_RUN",
+    "semantic_assessor": "NOT_RUN",
+    "reducer": "NOT_RUN",
+    "integration": "NOT_RUN"
+  }
+}

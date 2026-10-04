@@ -1,0 +1,183 @@
+"""Reproduce historical structural gaps with uninterpreted tokens, never a provider.
+
+Loads only exact Git object 1e3d79a53f181c79bdeeb6137e88ae2897797106.
+Every generated draft is a structural test fixture, not a semantic control corpus.
+"""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import hashlib
+import importlib.metadata
+import json
+import subprocess
+import sys
+import tempfile
+import types
+from pathlib import Path
+
+FROZEN_COMMIT = "1e3d79a53f181c79bdeeb6137e88ae2897797106"
+PACKAGE = "research/evidence/qualifier-grounding-semantic-assessor-controls-v1"
+RUN = "research/evidence/semantic-adjudication-request-bound-v2"
+
+
+def run(repo: Path, result: Path):
+    def raw(path):
+        return subprocess.check_output(["git", "show", f"{FROZEN_COMMIT}:{path}"], cwd=repo)
+
+    def data(path):
+        return json.loads(raw(path))
+
+    module_hashes = {}
+    for name in (
+        "check_semantic_assessor_preparation",
+        "run_semantic_request_once",
+        "build_semantic_author_requests",
+    ):
+        path = f"research/{name}.py"
+        source = raw(path)
+        module_hashes[path] = hashlib.sha256(source).hexdigest()
+        module = types.ModuleType(name)
+        module.__file__ = f"git:{FROZEN_COMMIT}:{path}"
+        sys.modules[name] = module
+        exec(compile(source, module.__file__, "exec"), module.__dict__)
+
+    frozen = sys.modules["check_semantic_assessor_preparation"]
+    builder = sys.modules["build_semantic_author_requests"]
+    partition = data(f"{RUN}/author-partition.json")
+    inventory = data(f"{PACKAGE}/case-design.json")
+    anchors = {x["slot"]: x for x in inventory["anchors"]}
+    by_category = {x["category"]: x for x in inventory["anchors"]}
+    variants = {x["slot"]: x for x in inventory["invariance"] + inventory["mutations"]}
+    specs = {
+        g["id"]: data(f"{RUN}/requests/{g['id']}.spec.json")
+        for g in partition["partitions"]
+    }
+
+    def fixture(group):
+        cases, design_entries, relations = [], [], []
+        claims = {slot: f"T{partition['corpus_order'].index(slot):02}" for slot in group["slots"]}
+        for slot in group["slots"]:
+            case = {"slot": slot, "claim": claims[slot], "authorized_body": [{"text": "B00"}],
+                    "distractors": [], "projection": None}
+            if slot in anchors:
+                recipe = anchors[slot]
+                category, role, seed = recipe["category"], "ANCHOR", recipe["seed_kind"]
+            else:
+                recipe = variants[slot]
+                category = recipe["anchor_category"]
+                role = "INVARIANT" if recipe["mode"] == "INVARIANT" else "MUTATION"
+                seed = by_category[category]["seed_kind"]
+            # Uninterpreted structural declarations only. This is never semantic evidence.
+            opportunities = [{"guard": guard, "value": value}
+                             for guard in frozen.GUARDS for value in ("TRUE", "FALSE", "UNKNOWN")]
+            design = {"slot": slot, "category": category, "role": role, "seed_kind": seed,
+                      "guard_opportunities": opportunities, "author_hypothesis": "H00",
+                      "contrast_anchors": [{"text": claims[slot]}]}
+            cases.append(case)
+            design_entries.append(design)
+        for slot in group["relation_slots"]:
+            recipe = variants[slot]
+            relations.append({"id": slot, "family": recipe["family"], "mode": recipe["mode"],
+                              "dimensions": ["D00"], "anchor_map": [{
+                                  "left": {"text": claims[group["anchor_slot"]]},
+                                  "right": {"text": claims[slot]}, "kind": "ASSERTION"}],
+                              "changed_ranges": [], "hypothesis": "R00"})
+        return {"cases": cases, "design_entries": design_entries, "relations": relations}
+
+    def write_json(path, value):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(value), encoding="utf-8")
+
+    def stage(root, group, draft):
+        for suffix in ("case-design.json", "schemas/case.schema.json", "schemas/author-design.schema.json",
+                       "schemas/relations.schema.json"):
+            path = root / PACKAGE / suffix
+            path.parent.mkdir(parents=True, exist_ok=True)
+            if not path.exists():
+                path.write_bytes(raw(f"{PACKAGE}/{suffix}"))
+        write_json(root / RUN / "author-partition.json", partition)
+        write_json(root / RUN / "requests" / f"{group['id']}.spec.json", specs[group["id"]])
+        write_json(root / RUN / "calls" / group["id"] / "parsed-output.json", draft)
+
+    first = partition["partitions"][0]
+    nominal = fixture(first)
+    mutations = {}
+    mutations["duplicate_case_slot"] = copy.deepcopy(nominal)
+    mutations["duplicate_case_slot"]["cases"][1]["slot"] = "anchor_01"
+    mutations["reordered_case_rows"] = copy.deepcopy(nominal)
+    mutations["reordered_case_rows"]["cases"][:2] = list(reversed(mutations["reordered_case_rows"]["cases"][:2]))
+    mutations["duplicate_design_slot"] = copy.deepcopy(nominal)
+    mutations["duplicate_design_slot"]["design_entries"][1]["slot"] = "anchor_01"
+    mutations["reordered_design_rows"] = copy.deepcopy(nominal)
+    mutations["reordered_design_rows"]["design_entries"].reverse()
+    mutations["wrong_design_assignment"] = copy.deepcopy(nominal)
+    mutations["wrong_design_assignment"]["design_entries"][0]["category"] = "unsupported_temporal"
+    mutations["wrong_relation_id"] = copy.deepcopy(nominal)
+    mutations["wrong_relation_id"]["relations"][0]["id"] = "relation_1"
+    mutations["reordered_relation_rows"] = copy.deepcopy(nominal)
+    mutations["reordered_relation_rows"]["relations"].reverse()
+    mutations["wrong_relation_family"] = copy.deepcopy(nominal)
+    mutations["wrong_relation_family"]["relations"][0]["family"] = "numeric"
+
+    outcomes = []
+    for name, draft in {"nominal_tokens": nominal, **mutations}.items():
+        frozen.schema_check(draft, specs[first["id"]]["output_schema"])
+        with tempfile.TemporaryDirectory(prefix="frozen-probe-", dir=result.parent) as directory:
+            stage(Path(directory), first, draft)
+            try:
+                builder.materialize(Path(directory), first["id"])
+                materializer_result = "ACCEPTED_STRUCTURAL_FIXTURE"
+            except Exception as error:
+                materializer_result = f"{type(error).__name__}: {error}"
+        outcomes.append({"fixture": name, "transport_schema": "PASS", "materializer": materializer_result})
+
+    # Show that the historical assembler has no raw custody gate on its own.
+    # This neither alleges historical tampering nor treats fixture output as an authored corpus.
+    with tempfile.TemporaryDirectory(prefix="frozen-assembler-", dir=result.parent) as directory:
+        root = Path(directory)
+        for group in partition["partitions"]:
+            stage(root, group, fixture(group))
+            builder.materialize(root, group["id"])
+        import shutil
+        shutil.rmtree(root / RUN / "calls")
+        hashes = builder.assemble(root)
+        rawless_assembly = {
+            "calls_directory_exists": (root / RUN / "calls").exists(),
+            "assembled_artifact_names": sorted(hashes),
+            "result": "ACCEPTED_STRUCTURAL_FIXTURE_WITHOUT_RAW_CUSTODY",
+        }
+
+    identities = []
+    for identity in partition["identities"].values():
+        identities.append(identity["case_id"])
+        identities.extend(value for pair in identity["bodies"] for value in pair.values())
+        identities.extend(identity["distractors"])
+    report = {
+        "schema_version": "frozen-boundary-baseline-probe/v1",
+        "scope": "HISTORICAL_SOURCE_AND_UNINTERPRETED_STRUCTURAL_FIXTURES_ONLY",
+        "source_commit": FROZEN_COMMIT,
+        "provider_calls": 0,
+        "semantic_adjudication": "NOT_RUN",
+        "jsonschema_version": importlib.metadata.version("jsonschema"),
+        "module_sha256": module_hashes,
+        "plan_counts": {"partitions": len(partition["partitions"]), "slots": len(partition["corpus_order"]),
+                        "relations": sum(len(g["relation_slots"]) for g in partition["partitions"]),
+                        "reserved_ids": len(identities), "unique_reserved_ids": len(set(identities))},
+        "schema_and_materializer_controls": outcomes,
+        "rawless_assembly_control": rawless_assembly,
+    }
+    with result.open("x", encoding="utf-8") as output:
+        json.dump(report, output, indent=2)
+        output.write("\n")
+    print(json.dumps(report, indent=2))
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repo", type=Path, required=True)
+    parser.add_argument("--result", type=Path, required=True)
+    args = parser.parse_args()
+    args.result.parent.mkdir(parents=True, exist_ok=True)
+    run(args.repo, args.result)

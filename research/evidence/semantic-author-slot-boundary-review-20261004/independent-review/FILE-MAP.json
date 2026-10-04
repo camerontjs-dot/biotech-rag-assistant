@@ -1,0 +1,75 @@
+{
+  "schema_version": "review-publication-file-map/v1",
+  "projection_rule": "Replace the absolute review scratch prefix with <scratch> in text/JSON projections only; numerical results, source identities, and all other bytes remain unchanged. Preserve .py archives byte for byte under .py.txt names.",
+  "files": [
+    {
+      "published_name": "README.md",
+      "original_name": "final_review.md",
+      "original_sha256": "b9ce4e9140f3af6e45aad3e8110f5eddbb2dcc84027bc5e889fbfbcb78d715c7",
+      "published_sha256": "f023153539899c850663ab4236b28924b070372e0b2a46a471d94e3af7ee6aa5",
+      "transformation": "replace absolute review scratch prefix with <scratch>"
+    },
+    {
+      "published_name": "acceptance-plan.md",
+      "original_name": "initial_review.md",
+      "original_sha256": "6205b18babb278c3be11f49b24d5ed2b2c4f4d619c7e85e90dfe10329100b6c9",
+      "published_sha256": "eafb99f8b0135f0e48b02103db56727bc4359e207e914bdabd3f19326ef8597e",
+      "transformation": "replace absolute review scratch prefix with <scratch>"
+    },
+    {
+      "published_name": "initial-review-manifest.json",
+      "original_name": "initial-review-manifest.json",
+      "original_sha256": "95ffc52a44d3eb65dbaa0807a9605e79d1f07440ae4b750bfb35583bac2fc0b9",
+      "published_sha256": "95ffc52a44d3eb65dbaa0807a9605e79d1f07440ae4b750bfb35583bac2fc0b9",
+      "transformation": "byte-identical"
+    },
+    {
+      "published_name": "historical-baseline-results.json",
+      "original_name": "frozen-baseline-results.json",
+      "original_sha256": "c9b373a4a1238388e1d830cccbffca9bf6729464ece8b12e76a39f8b72427a15",
+      "published_sha256": "c9b373a4a1238388e1d830cccbffca9bf6729464ece8b12e76a39f8b72427a15",
+      "transformation": "byte-identical"
+    },
+    {
+      "published_name": "first-subject-findings.md",
+      "original_name": "fae_review_notes.md",
+      "original_sha256": "80e9578f6e83bd7818849a25fe1d69687eeb86f38965dc58a457ffdc8f05bea9",
+      "published_sha256": "c4d3ac0f609a92af76142d57ae84f57f2f93ebf26c141d99ec6ebefe07342e46",
+      "transformation": "replace absolute review scratch prefix with <scratch>"
+    },
+    {
+      "published_name": "first-subject-probes.json",
+      "original_name": "successor-fae-probe-results.json",
+      "original_sha256": "1dd1d0c920554764f79bea8b9b36b7f0696d7a5dbf237bdd11eef8ef28d8e2a7",
+      "published_sha256": "c176097612d3ecca336843227fd7164223e8166f923a57e53153a673c9724bbd",
+      "transformation": "replace absolute review scratch prefix with <scratch>"
+    },
+    {
+      "published_name": "final-subject-probes.json",
+      "original_name": "successor-d1b-probe-results.json",
+      "original_sha256": "94e65f899bfa9b5b21e7bf16fbad0e927b34a1829c3ce19e0ea530dc37308620",
+      "published_sha256": "abc52699c2a709114e4139f8b3107f3d76e8ab64382bb488a1aa0598673ff88d",
+      "transformation": "replace absolute review scratch prefix with <scratch>"
+    },
+    {
+      "published_name": "frozen_baseline_probe.py.txt",
+      "original_name": "frozen_baseline_probe.py",
+      "original_sha256": "63b7dc03601a60ae94d305cf4567af6d8bc5a06c356dca64b6fd80429bfc662a",
+      "published_sha256": "63b7dc03601a60ae94d305cf4567af6d8bc5a06c356dca64b6fd80429bfc662a",
+      "transformation": "byte-identical .py archive with .py.txt suffix"
+    },
+    {
+      "published_name": "review_successor_probes.py.txt",
+      "original_name": "review_successor_probes.py",
+      "original_sha256": "a142de7ee09c1a8685cc066e8dda42118a20fbc09c52002f7da3e94e35ea15a2",
+      "published_sha256": "a142de7ee09c1a8685cc066e8dda42118a20fbc09c52002f7da3e94e35ea15a2",
+      "transformation": "byte-identical .py archive with .py.txt suffix"
+    },
+    {
+      "published_name": "review-receipt.json",
+      "original_name": "new final public-safe receipt",
+      "published_sha256": "a8086a8168faaee004d444be49fa464e2c8c9e9bdca05bcb34456f1146cf543d",
+      "transformation": "new derived receipt; exact source and validation facts only"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+"""Focused separate engineering probes; only fake HTTP and structural token fixtures.
+
+Run against an exact isolated source snapshot. No Git, provider, or network operation
+is performed by this script. Files are copied to disposable scratch roots for edits.
+"""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import hashlib
+import json
+import shutil
+import sys
+import tempfile
+from pathlib import Path
+
+
+def review(subject, result_path):
+    sys.path.insert(0, str(subject / "research"))
+    import semantic_author_slot_boundary_v1 as boundary
+    import run_semantic_request_once as once
+    import check_semantic_assessor_preparation as frozen
+
+    config = {"model": "review-structural-token", "model_digest": "a" * 64,
+              "provider_version": "review-only", "timeout_seconds": 1,
+              "options": {"temperature": 0, "seed": 91, "num_ctx": 1000000, "num_predict": 64}}
+    inventory, partition, schemas = boundary.authority(subject)
+    anchors = {row["slot"]: row for row in inventory["anchors"]}
+    variants = {row["slot"]: row for row in inventory["invariance"] + inventory["mutations"]}
+    groups = {row["id"]: row for row in partition["partitions"]}
+    cases_run = []
+
+    def draft_for(group):
+        draft = {"cases": [], "design_entries": [], "relations": []}
+        for slot in group["slots"]:
+            if slot in anchors:
+                recipe = anchors[slot]
+                category, role, seed = recipe["category"], "ANCHOR", recipe["seed_kind"]
+            else:
+                recipe = variants[slot]
+                category = recipe["anchor_category"]
+                role = "INVARIANT" if recipe["mode"] == "INVARIANT" else "MUTATION"
+                seed = "uncertain"
+            draft["cases"].append({"slot": slot, "claim": f"λ 🧬 T{slot} e\u0301",
+                                   "authorized_body": [{"text": f"B{slot} λ\nZ"}],
+                                   "distractors": [], "projection": None})
+            draft["design_entries"].append({"slot": slot, "category": category, "role": role,
+                "seed_kind": seed, "guard_opportunities": [
+                    {"guard": guard, "value": value}
+                    for guard in frozen.GUARDS for value in ("TRUE", "FALSE", "UNKNOWN")],
+                "author_hypothesis": "UNINTERPRETED REVIEW TOKEN; NOT SEMANTIC EVIDENCE",
+                "contrast_anchors": [{"text": f"T{slot}"}]})
+        for slot in group["relation_slots"]:
+            recipe = variants[slot]
+            draft["relations"].append({"id": slot, "family": recipe["family"], "mode": recipe["mode"],
+                "left_slot": group["anchor_slot"], "right_slot": slot, "dimensions": ["R00"],
+                "anchor_map": [{"kind": "ASSERTION", "left": {"text": f"T{group['anchor_slot']}"},
+                                "right": {"text": f"T{slot}"}}],
+                "changed_ranges": [], "hypothesis": "UNINTERPRETED RELATION TOKEN"})
+        return draft
+
+    def note(name, expectation_met, **details):
+        row = {"probe": name, "expectation_met": bool(expectation_met), **details}
+        cases_run.append(row)
+        print(json.dumps(row), flush=True)
+
+    def fake(draft, calls, text_override=None):
+        def transport(method, endpoint, body=None, timeout=10):
+            if endpoint == "/api/version":
+                raw = once.encoded({"version": config["provider_version"]})
+            elif endpoint == "/api/tags":
+                raw = once.encoded({"models": [{"name": config["model"], "digest": config["model_digest"]}]})
+            else:
+                text = once.encoded(draft).decode() if text_override is None else text_override
+                raw = once.encoded({"model": config["model"], "done": True, "done_reason": "stop",
+                                    "prompt_eval_count": 100, "response": text})
+            calls.append({"method": method, "endpoint": endpoint, "request": body, "response": raw})
+            return 200, [("Content-Type", "application/json")], raw, None
+        return transport
+
+    def save(path, value):
+        path.write_bytes(once.encoded(value) + b"\n")
+
+    def capture(operation):
+        try:
+            return {"returned": operation()}
+        except Exception as error:
+            return {"exception": f"{type(error).__name__}: {error}"}
+
+    # Direct independent negatives fill gaps in the author's assignment controls.
+    for group_id, field, key, wrong in (
+        ("author-11", "design_entries", "slot", "mutation_ case_id"),
+        ("author-02", "relations", "id", "rel-invariant-7"),
+    ):
+        group = groups[group_id]
+        draft = draft_for(group)
+        index = 1 if field == "design_entries" else 0
+        draft[field][index][key] = wrong
+        outcome = capture(lambda: frozen.schema_check(draft, boundary.bound_schema(group, inventory, schemas)))
+        note(f"historical_{field}_alias_rejected", "exception" in outcome, **outcome)
+
+    identity_plan = copy.deepcopy(partition)
+    identity_plan["identities"]["anchor_28"]["bodies"][3]["source_id"] = (
+        identity_plan["identities"]["anchor_01"]["distractors"][2])
+    outcome = capture(lambda: boundary.validate_plan(identity_plan, inventory))
+    note("unused_reserved_cross_kind_uuid_collision_rejected", "exception" in outcome, **outcome)
+
+    draft = draft_for(groups["author-01"])
+    materialized = boundary.materialize(draft, groups["author-01"], inventory, partition, schemas)
+    restored = copy.deepcopy(materialized)
+    for index, case in enumerate(restored["cases"]):
+        case["slot"] = groups["author-01"]["slots"][index]
+        for key in ("case_id", "claim_sha256"):
+            case.pop(key)
+        for body in case["authorized_body"]:
+            for key in ("witness_id", "source_id", "text_sha256", "source_sha256", "source_span"):
+                body.pop(key)
+        for distractor in case["distractors"]:
+            distractor.pop("id")
+    for entry in restored["design_entries"]:
+        entry.pop("case_id")
+        for anchor in entry["contrast_anchors"]:
+            anchor.pop("start")
+            anchor.pop("end")
+    for index, relation in enumerate(restored["relations"]):
+        for key in ("left_case_id", "right_case_id"):
+            relation.pop(key)
+        relation["left_slot"] = groups["author-01"]["anchor_slot"]
+        relation["right_slot"] = groups["author-01"]["relation_slots"][index]
+        for mapping in relation["anchor_map"]:
+            for side in ("left", "right"):
+                mapping[side].pop("start")
+                mapping[side].pop("end")
+    source_body = materialized["cases"][0]["authorized_body"][0]
+    note("unicode_and_all_authored_content_preserved", restored == draft and
+         source_body["source_span"]["end"] == len(source_body["text"]) and
+         source_body["text_sha256"] == once.sha(source_body["text"].encode()))
+
+    with tempfile.TemporaryDirectory(prefix="independent-boundary-", dir=result_path.parent) as scratch:
+        scratch = Path(scratch)
+        prepared = scratch / "prepared"
+        prepared.mkdir()
+        manifest = boundary.read(subject / boundary.INHERITED_FREEZE)
+        files = set(manifest["artifacts"]) | {str(path) for path in (
+            boundary.INHERITED_FREEZE, boundary.MODULE, boundary.TESTS, boundary.PROTOCOL)}
+        for name in files:
+            destination = prepared / name
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(subject / name, destination)
+        run_rel = Path("research/evidence/semantic-author-slot-bound-v1-independent-review")
+        boundary.prepare(prepared, prepared / run_rel, config)
+        calls = []
+        canary = {"rows": [{"slot": "token-a"}, {"slot": "token-b"}]}
+        canary_result = boundary.execute(prepared, prepared / run_rel, "canary", fake(canary, calls))
+        first_result = boundary.execute(prepared, prepared / run_rel, "author-01",
+                                        fake(draft_for(groups["author-01"]), calls))
+        note("positive_canary_and_partition_control", canary_result["status"] ==
+             "PASS_NONSEMANTIC_CANARY_ONLY" and first_result["status"] == boundary.STATUS,
+             fake_http_actions=len(calls))
+
+        def tamper_probe(name, mutate):
+            root = scratch / name
+            shutil.copytree(prepared, root)
+            run = root / run_rel
+            mutate(run)
+            calls = []
+            outcome = capture(lambda: boundary.execute(root, run, "author-02",
+                fake(draft_for(groups["author-02"]), calls)))
+            note(name, "exception" in outcome and not calls, fake_http_actions=len(calls), **outcome)
+
+        def paired_materialization(run):
+            output = run / "calls/author-01"
+            (output / "materialized.json").write_bytes(b"HAND-EDITED NON-JSON MATERIALIZATION\n")
+            receipt = boundary.read(output / "author-boundary.json")
+            receipt["materialized_sha256"] = once.sha((output / "materialized.json").read_bytes())
+            save(output / "author-boundary.json", receipt)
+
+        tamper_probe("paired_materialization_hash_edit_rejected", paired_materialization)
+        tamper_probe("response_text_edit_rejected", lambda run:
+                     (run / "calls/canary/response-text.txt").write_text("EDITED RESPONSE TEXT"))
+        tamper_probe("missing_model_discovery_rejected", lambda run:
+                     (run / "calls/canary/models-discovery.raw.json").unlink())
+
+        def changed_model_discovery(run):
+            path = run / "calls/canary/models-discovery.raw.json"
+            value = boundary.read(path)
+            value["models"][0]["digest"] = "b" * 64
+            save(path, value)
+
+        tamper_probe("model_discovery_digest_edit_rejected", changed_model_discovery)
+        tamper_probe("missing_send_marker_rejected", lambda run:
+                     (run / "calls/canary/send-started.json").unlink())
+
+        def boundary_claim_edit(run):
+            path = run / "calls/canary/author-boundary.json"
+            value = boundary.read(path)
+            value["request"] = "author-28"
+            value["adjudication"] = "FALSE_CLAIM_OF_ADJUDICATION"
+            save(path, value)
+
+        tamper_probe("contradictory_boundary_identity_rejected", boundary_claim_edit)
+
+        root = scratch / "late-invalid"
+        shutil.copytree(prepared, root)
+        run = root / run_rel
+        bad = draft_for(groups["author-02"])
+        bad["cases"][0]["claim"] = " ".join(["X"] * 61)
+        calls = []
+        invalid = boundary.execute(root, run, "author-02", fake(bad, calls))
+        preserved = (run / "calls/author-02/provider-response.raw.json").read_bytes() == calls[-1]["response"]
+        before = len(calls)
+        next_outcome = capture(lambda: boundary.execute(root, run, "author-03",
+            fake(draft_for(groups["author-03"]), calls)))
+        retry_outcome = capture(lambda: boundary.execute(root, run, "author-02", fake(bad, calls)))
+        note("late_structural_failure_preserves_raw_and_stops_network", invalid["status"] ==
+             "APPARATUS_INVALID" and preserved and len(calls) == before and
+             "exception" in next_outcome and "exception" in retry_outcome,
+             fake_http_actions=len(calls), invalid_status=invalid["status"],
+             exact_raw_preserved=preserved, next_result=next_outcome, retry_result=retry_outcome)
+
+    report = {"schema_version": "independent-successor-boundary-probes/v1",
+              "subject_path": str(subject), "module_sha256": hashlib.sha256(
+                  (subject / boundary.MODULE).read_bytes()).hexdigest(),
+              "scope": "STRUCTURAL_TOKENS_AND_FAKE_HTTP_ONLY",
+              "real_provider_calls": 0, "semantic_adjudication": "NOT_RUN", "probes": cases_run,
+              "passed": sum(row["expectation_met"] for row in cases_run),
+              "failed": sum(not row["expectation_met"] for row in cases_run)}
+    with result_path.open("x", encoding="utf-8") as output:
+        json.dump(report, output, indent=2)
+        output.write("\n")
+    print(json.dumps({key: report[key] for key in ("module_sha256", "passed", "failed")}), flush=True)
+    return int(report["failed"] != 0)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--subject", type=Path, required=True)
+    parser.add_argument("--result", type=Path, required=True)
+    args = parser.parse_args()
+    raise SystemExit(review(args.subject.resolve(), args.result.resolve()))

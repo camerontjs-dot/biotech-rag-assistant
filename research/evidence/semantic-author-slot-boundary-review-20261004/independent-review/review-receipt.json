@@ -1,0 +1,91 @@
+{
+  "schema_version": "separate-semantic-author-boundary-engineering-review/v1",
+  "disposition": "PASS_BOUNDED_ENGINEERING_REVIEW",
+  "completed_at_utc": "2026-10-04T14:03:17.447931+00:00",
+  "review_scope": "Separate-context engineering review with historical context; no blind semantic adjudication, human agreement, or model/training independence claim.",
+  "frozen_base_commit": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+  "historical_failure_object": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+  "preimplementation_design": {
+    "original_sha256": "6205b18babb278c3be11f49b24d5ed2b2c4f4d619c7e85e90dfe10329100b6c9",
+    "published_projection": "acceptance-plan.md",
+    "successor_files_read_when_sealed": false
+  },
+  "source_subject": {
+    "local_tested_commit": "d1b256347d320e6268506b00978168c2d32b65ce",
+    "tree": "6428495c4f3b373cd07bdebcc7916834c157da3f",
+    "module_path": "research/semantic_author_slot_boundary_v1.py",
+    "module_sha256": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
+    "author_tests_sha256": "4cddc26c63dbf70201f11a7d19aab83dbb078fbf270dc61fa46a81f2a3cb7867",
+    "protocol_sha256": "23bfcfd62064a723512518b8cf7d70ee674e6d238bcd4740bf187db827e15634"
+  },
+  "source_publication": {
+    "commit": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+    "tree": "6428495c4f3b373cd07bdebcc7916834c157da3f",
+    "pr": 54,
+    "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/54",
+    "reviewer_verification": "Independently read already-fetched Git object locally; same complete tree and module hash. No reviewer GitHub/network request."
+  },
+  "executed_probe": {
+    "original_name": "review_successor_probes.py",
+    "archived_name": "review_successor_probes.py.txt",
+    "sha256": "a142de7ee09c1a8685cc066e8dda42118a20fbc09c52002f7da3e94e35ea15a2",
+    "same_probe_bytes_for_both_subjects": true,
+    "command_template": [
+      "python",
+      "review_successor_probes.py.txt",
+      "--subject",
+      "/path/to/exact-source-snapshot",
+      "--result",
+      "/path/to/new-result.json"
+    ]
+  },
+  "results": {
+    "first_subject": {
+      "commit": "fae7520a8d2b5e5b45a91efa5ad5e8d90f1237c8",
+      "module_sha256": "facefd417bba3548420498a036de2bb3da36062a1942851c417206883dc5d4e0",
+      "passed": 6,
+      "failed": 6,
+      "exit_code": 1,
+      "evidence": "first-subject-probes.json"
+    },
+    "final_subject": {
+      "passed": 12,
+      "failed": 0,
+      "exit_code": 0,
+      "evidence": "final-subject-probes.json"
+    },
+    "fixed_corruptions_block_next_http_actions": 6,
+    "next_http_actions_after_each_fixed_corruption": 0
+  },
+  "environment": {
+    "python": "3.12.14",
+    "jsonschema": "4.25.1",
+    "pytest_installed": "9.1.1"
+  },
+  "counts": {
+    "real_provider_calls": 0,
+    "real_semantic_author_calls": 0,
+    "adjudicator_calls": 0,
+    "reducer_calls": 0,
+    "github_writes_by_reviewer": 0,
+    "author_worktree_changes_by_reviewer": 0
+  },
+  "validation_boundary": {
+    "broad_suite_rerun": false,
+    "independent_validation": "Twelve focused fake-HTTP/token probes plus exact-source review and historical baseline reproduction. Author reports are not presented as independently rerun.",
+    "final_canary_commitment": "Source verified: mandatory canary acceptance plus all 28 author acceptances are committed by final corpus receipt."
+  },
+  "handoff": {
+    "reviewed_snapshot_sha256": "94ab3004666be11e9e5ffbd0f948d3f8155f5dbc7de32c12a30c089406e1071f",
+    "actionability": "Exact source/configuration, local resource and schema checks, fresh ordered execution, EB isolation, and corpus-freeze stop are actionable.",
+    "sequencing_clarification": "Parent reports freeze-before-canary sequencing clarification applied to the later final handoff; this reviewer did not retest that documentation as source.",
+    "source_blocker": false
+  },
+  "limits": [
+    "Real provider schema-feature support and completion capacity remain unobserved.",
+    "Prompt token observations do not prove untruncated request consumption.",
+    "Corpus semantics, privacy/historical separation, and semantic-assessor qualification remain unassessed.",
+    "Local hashes/reconstruction do not authenticate a provider after coordinated rewriting of all records and external source authority."
+  ],
+  "archive_note": "The two .py.txt files are byte-identical review-code archives, not maintained or test-discovered source. They can be executed explicitly with Python. FILE-MAP.json preserves original-name and hash mappings."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "review-publication-manifest/v1",
+  "source_commit": "d1b256347d320e6268506b00978168c2d32b65ce",
+  "source_tree": "6428495c4f3b373cd07bdebcc7916834c157da3f",
+  "source_publication_commit": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+  "artifacts": {
+    "FILE-MAP.json": "823de968cb4be486402e4c0bd3534ceb5836a3181948c5cafc9a6f5f674cd3ab",
+    "README.md": "f023153539899c850663ab4236b28924b070372e0b2a46a471d94e3af7ee6aa5",
+    "acceptance-plan.md": "eafb99f8b0135f0e48b02103db56727bc4359e207e914bdabd3f19326ef8597e",
+    "final-subject-probes.json": "abc52699c2a709114e4139f8b3107f3d76e8ab64382bb488a1aa0598673ff88d",
+    "first-subject-findings.md": "c4d3ac0f609a92af76142d57ae84f57f2f93ebf26c141d99ec6ebefe07342e46",
+    "first-subject-probes.json": "c176097612d3ecca336843227fd7164223e8166f923a57e53153a673c9724bbd",
+    "frozen_baseline_probe.py.txt": "63b7dc03601a60ae94d305cf4567af6d8bc5a06c356dca64b6fd80429bfc662a",
+    "historical-baseline-results.json": "c9b373a4a1238388e1d830cccbffca9bf6729464ece8b12e76a39f8b72427a15",
+    "initial-review-manifest.json": "95ffc52a44d3eb65dbaa0807a9605e79d1f07440ae4b750bfb35583bac2fc0b9",
+    "review-receipt.json": "a8086a8168faaee004d444be49fa464e2c8c9e9bdca05bcb34456f1146cf543d",
+    "review_successor_probes.py.txt": "a142de7ee09c1a8685cc066e8dda42118a20fbc09c52002f7da3e94e35ea15a2"
+  }
+}

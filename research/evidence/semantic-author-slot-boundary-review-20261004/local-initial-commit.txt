@@ -1,0 +1,6 @@
+tree 8f5b337065d88e2a3827006ab193c1bac2d8d43f
+parent 1e3d79a53f181c79bdeeb6137e88ae2897797106
+author Codex <codex@openai.com> 1791121425 -0600
+committer Codex <codex@openai.com> 1791121425 -0600
+
+research-infra: enforce prospective semantic author slot assignments
