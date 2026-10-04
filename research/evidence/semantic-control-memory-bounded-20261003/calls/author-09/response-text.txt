@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "authorized_body": [
+        {
+          "text": "The system must execute the backup procedure."
+        }
+      ],
+      "claim": "The system must execute the backup procedure.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_09"
+    },
+    {
+      "authorized_body": [
+        {
+          "text": "The system must execute the backup procedure."
+        }
+      ],
+      "claim": "The system has executed the backup procedure.",
+      "distractors": [],
+      "projection": null,
+      "slot": "anchor_09"
+    }
+  ],
+  "design_entries": [
+    {
+      "author_hypothesis": "Claim reports execution; BODY states requirement. No execution report exists in BODY.",
+      "category": "obligation_vs_action",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "ANCHOR",
+      "seed_kind": "explicit",
+      "slot": "anchor_09"
+    },
+    {
+      "author_hypothesis": "Claim reports execution; BODY states requirement. No execution report exists in BODY.",
+      "category": "obligation_vs_action",
+      "contrast_anchors": [],
+      "guard_opportunities": [],
+      "role": "INVARIANT",
+      "seed_kind": "positive",
+      "slot": "invariant_5"
+    }
+  ],
+  "relations": [
+    {
+      "anchor_map": [
+        {
+          "kind": "REQUIRED_ACTION",
+          "left": {
+            "text": "The system must execute the backup procedure."
+          },
+          "right": {
+            "text": "The system has executed the backup procedure."
+          }
+        }
+      ],
+      "changed_ranges": [
+        {
+          "after": "The system has executed the backup procedure.",
+          "before": "The system must execute the anchor text that occurs exactly once in the relevant claim.",
+          "surface": "CLAIM"
+        }
+      ],
+      "dimensions": ["obligation_vs_action"],
+      "family": "negation",
+      "hypothesis": "Claim reports execution; BODY states requirement. No execution report exists in BODY.",
+      "id": "rel-09-invariant-5",
+      "mode": "INVARIANT"
+    }
+  ]
+}

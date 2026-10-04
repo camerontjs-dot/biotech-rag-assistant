@@ -1,0 +1,39 @@
+{
+  "schema_version": "semantic-control-two-slot-schedule/v1",
+  "budget_call": "author-09",
+  "budget_result": {
+    "status": "PASS_REQUEST_PATH_ONLY",
+    "semantic_acceptance": false,
+    "done_reason": "stop",
+    "eval_count": 562,
+    "prompt_eval_count": 15591,
+    "wall_clock_s": 164.6,
+    "num_predict_cap": 1024,
+    "timeout_seconds": 420
+  },
+  "memory_during_budget": {
+    "swap_used_mb_before": 4258,
+    "swap_used_mb_after": 3882,
+    "free_percentage_after_unload": 77,
+    "ceiling_tripped": false
+  },
+  "authorized_same_caps": [
+    "author-10",
+    "author-11",
+    "author-12",
+    "author-15",
+    "author-16",
+    "author-18",
+    "author-21"
+  ],
+  "still_not_authorized": {
+    "author-02": "3 slots. 562 tokens at 2 slots does not show that 3 slots fit under 1024.",
+    "author-01": "7 slots. This is the partition shape that timed out in PR #38."
+  },
+  "execution": {
+    "parallelism": 1,
+    "retries": 0,
+    "stop_on_first_non_pass": true,
+    "swap_rule": "stop if swap in use grows by 256MB from the pre-batch baseline, if free memory falls below 25%, if resident size reaches 12GB, or if reported context exceeds 16384"
+  }
+}
