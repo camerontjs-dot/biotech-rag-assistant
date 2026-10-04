@@ -1,0 +1,142 @@
+{
+  "probe_set": "automatic-extra",
+  "commit": "093fcd031138b8219722f4e9c888dec2d7ebc354",
+  "tree": "d7a96fe4bae53f30dbdcf1f179b3710bd1a5b5cf",
+  "subject_identity": {
+    "tree": "d7a96fe4bae53f30dbdcf1f179b3710bd1a5b5cf",
+    "source_sha256": "386749546e2cafaf237e69936dae894982b6d9592d0efc0594a2f8d83a2c4df5",
+    "contract_sha256": "8477fbc9c883c1b07502da0ec0fa16c4edb0be663dbd361c3b3ad4d9f4775adc",
+    "reviewed_local_commit": "093fcd031138b8219722f4e9c888dec2d7ebc354",
+    "published_commit": "8ddd2a8969869be5e5dfe339b45087f1ee7e8803"
+  },
+  "probe_sha256": "f11f7de4bb738700d4b0e3729f02ede50c5a89492c09e72e65811ce772e3074b",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "command": [
+    "research/evidence/citation-authorized-bounds-20261004/independent-review/reproduce_review.py",
+    "--probe-set",
+    "automatic-extra",
+    "--checkout",
+    "/workspace/scratch/7b8946fc1488/biotech-citation-automatic-093fcd0",
+    "--output",
+    "research/evidence/citation-authorized-bounds-20261004/independent-review/formatted-automatic-extra-report.json"
+  ],
+  "total": 6,
+  "passed": 0,
+  "failed": 6,
+  "results": [
+    {
+      "id": "coord_condition_truncation",
+      "pass": false,
+      "expected_outcomes": [
+        "ambiguous",
+        "boundary_uncertain",
+        "not_found",
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is allowed only after Coord.",
+        "start": 0,
+        "end": 36
+      },
+      "failures": [
+        "selected span differs from the complete expected exact span"
+      ]
+    },
+    {
+      "id": "prof_sentence_start_loss",
+      "pass": false,
+      "expected_outcomes": [
+        "ambiguous",
+        "boundary_uncertain",
+        "not_found",
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Vale must approve release.",
+        "start": 6,
+        "end": 32
+      },
+      "failures": [
+        "selected span differs from the complete expected exact span"
+      ]
+    },
+    {
+      "id": "root_paragraph_merge",
+      "pass": false,
+      "expected_outcomes": [
+        "ambiguous",
+        "boundary_uncertain",
+        "not_found",
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is permitted\n\nOnly after QA approval.",
+        "start": 0,
+        "end": 45
+      },
+      "failures": [
+        "selected span differs from the complete expected exact span"
+      ]
+    },
+    {
+      "id": "prof_condition_truncation",
+      "pass": false,
+      "expected_outcomes": [
+        "ambiguous",
+        "boundary_uncertain",
+        "not_found",
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is allowed by Prof.",
+        "start": 0,
+        "end": 27
+      },
+      "failures": [
+        "selected span differs from the complete expected exact span"
+      ]
+    },
+    {
+      "id": "crlf_blank_paragraph_merge",
+      "pass": false,
+      "expected_outcomes": [
+        "ambiguous",
+        "boundary_uncertain",
+        "not_found",
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is permitted\r\n\r\nOnly after QA approval.",
+        "start": 0,
+        "end": 47
+      },
+      "failures": [
+        "selected span differs from the complete expected exact span"
+      ]
+    },
+    {
+      "id": "unicode_paragraph_separator_merge",
+      "pass": false,
+      "expected_outcomes": [
+        "ambiguous",
+        "boundary_uncertain",
+        "not_found",
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is permitted Only after QA approval.",
+        "start": 0,
+        "end": 44
+      },
+      "failures": [
+        "selected span differs from the complete expected exact span"
+      ]
+    }
+  ]
+}

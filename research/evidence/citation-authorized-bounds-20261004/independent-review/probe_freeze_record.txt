@@ -1,0 +1,5 @@
+The probe source was created and frozen before the reviewer read candidate implementation or candidate documentation.
+The historical QA QA overlap and No. 7 failures were provided in the task.
+Two ambiguous paragraph/quotation cases were relaxed to exact-or-refuse before this final freeze.
+No author worktree has been read or modified.
+Final SHA-256: 3666cec6252e3e3d074d49667cdc0f608c1bb8a5b907d39aa1db70de537fb101

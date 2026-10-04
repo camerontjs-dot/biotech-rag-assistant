@@ -1,0 +1,47 @@
+{
+  "schema_version": "biotech-citation-hosted-ci/v1",
+  "source_head": "897e22827fe9848d460734f1b2432c6f6babc45d",
+  "source_tree": "4ff09a40a38c41a20d64d436ff67463750a254cd",
+  "run_id": 37206464769,
+  "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37206464769",
+  "review": "Decoded all four job logs; test, lint, compile and corpus steps physically completed.",
+  "jobs": [
+    {
+      "job_id": 111448566391,
+      "python": "3.11",
+      "pytest_passed": 164,
+      "warnings": 1,
+      "ruff": "PASS",
+      "compile": "PASS",
+      "corpus": "PASS"
+    },
+    {
+      "job_id": 111448566387,
+      "python": "3.12",
+      "pytest_passed": 164,
+      "warnings": 1,
+      "ruff": "PASS",
+      "compile": "PASS",
+      "corpus": "PASS"
+    },
+    {
+      "job_id": 111448566400,
+      "python": "3.13",
+      "pytest_passed": 164,
+      "warnings": 1,
+      "ruff": "PASS",
+      "compile": "PASS",
+      "corpus": "PASS"
+    },
+    {
+      "job_id": 111448566299,
+      "pages_parity_passed": 42,
+      "pages_parity_total": 42
+    }
+  ],
+  "nonclaims": [
+    "CI does not establish source authority, sentence completeness or semantic support.",
+    "No semantic model or Biotech integration was executed."
+  ]
+}
+

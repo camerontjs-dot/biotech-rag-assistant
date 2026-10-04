@@ -1,0 +1,854 @@
+{
+  "probe_set": "authorized",
+  "commit": "897e22827fe9848d460734f1b2432c6f6babc45d",
+  "tree": "4ff09a40a38c41a20d64d436ff67463750a254cd",
+  "subject_identity": {
+    "tree": "4ff09a40a38c41a20d64d436ff67463750a254cd",
+    "source_sha256": "e3c1198b900aa075edd2bf04575783419dc0de87d63ab2e640ed6309a5ae94d1",
+    "contract_sha256": "50bb6d702abc65583e339d1c05e9b97c583849d752863ddd7c2a790c9399c29e",
+    "reviewed_local_commit": "786a09421c95c55506a3e82f96006449e064b4d7",
+    "published_commit": "897e22827fe9848d460734f1b2432c6f6babc45d"
+  },
+  "probe_sha256": "22460e1fe41a0b0a3875d15e56552ee473e1ad36ae80e771c51333699e4f8659",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "command": [
+    "research/evidence/citation-authorized-bounds-20261004/independent-review/reproduce_review.py",
+    "--probe-set",
+    "authorized",
+    "--checkout",
+    "/workspace/scratch/7b8946fc1488/biotech-citation-review-published-897e",
+    "--output",
+    "research/evidence/citation-authorized-bounds-20261004/independent-review/formatted-authorized-report.json"
+  ],
+  "total": 51,
+  "passed": 49,
+  "failed": 2,
+  "results": [
+    {
+      "id": "ordinary_authorized_span",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 0,
+        "end": 29
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "neighboring_sentences_not_widened",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 26,
+        "end": 55
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "authorized_edge_whitespace_preserved",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "  QA must sign. \t",
+        "start": 7,
+        "end": 24
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "unicode_codepoint_offsets",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Café batches require QA authorization.",
+        "start": 26,
+        "end": 64
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "decomposed_unicode_preserved",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Café batches need review.",
+        "start": 0,
+        "end": 26
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "single_lf_wrap",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign\nbefore shipment.",
+        "start": 0,
+        "end": 29
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "single_crlf_wrap",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign\r\nbefore shipment.",
+        "start": 0,
+        "end": 30
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "full_authorized_abbreviation_syntax",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Asst. Director Chen must approve shipment.",
+        "start": 0,
+        "end": 42
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "quoted_punctuation_and_parentheses",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "The instruction reads “Hold!” (until QA signs).",
+        "start": 0,
+        "end": 47
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "punctuation_outside_span_irrelevant",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 28,
+        "end": 57
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "other_paragraphs_outside_span_allowed",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 9,
+        "end": 38
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "full_span_quote_unchanged",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Shipment requires QA authorization.",
+        "start": 9,
+        "end": 44
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "quote_at_start_boundary",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "quote_at_end_boundary",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "case_distinct_occurrence_not_ambiguous",
+      "pass": true,
+      "expected_outcomes": [
+        "selected"
+      ],
+      "actual": {
+        "outcome": "selected",
+        "text": "Marker is required; marker means something else.",
+        "start": 0,
+        "end": 48
+      },
+      "failures": [],
+      "required_behavior": "exact_selection",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "missing_both_bounds",
+      "pass": true,
+      "expected_outcomes": [
+        "bounds_required"
+      ],
+      "actual": {
+        "outcome": "bounds_required",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "missing_start_bound",
+      "pass": false,
+      "expected_outcomes": [
+        "bounds_required"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [
+        "outcome differs from frozen expected outcome names"
+      ],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "missing_end_bound",
+      "pass": false,
+      "expected_outcomes": [
+        "bounds_required"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [
+        "outcome differs from frozen expected outcome names"
+      ],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "explicit_null_bounds",
+      "pass": true,
+      "expected_outcomes": [
+        "bounds_required"
+      ],
+      "actual": {
+        "outcome": "bounds_required",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "negative_start",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "negative_end",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "reversed_bounds",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "empty_bounds",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "end_out_of_range",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "start_out_of_range",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "boolean_start",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "boolean_end",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "floating_start",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "floating_end",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "string_start",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "string_end",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "missing_quote",
+      "pass": true,
+      "expected_outcomes": [
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "case_mismatched_quote",
+      "pass": true,
+      "expected_outcomes": [
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "empty_quote",
+      "pass": true,
+      "expected_outcomes": [
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "whitespace_only_quote",
+      "pass": true,
+      "expected_outcomes": [
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "normalization_mismatch_quote",
+      "pass": true,
+      "expected_outcomes": [
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "overlapping_occurrences",
+      "pass": true,
+      "expected_outcomes": [
+        "ambiguous"
+      ],
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "overlap_outside_authorized_span",
+      "pass": true,
+      "expected_outcomes": [
+        "ambiguous"
+      ],
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "duplicate_outside_authorized_span",
+      "pass": true,
+      "expected_outcomes": [
+        "ambiguous"
+      ],
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "duplicate_other_paragraph",
+      "pass": true,
+      "expected_outcomes": [
+        "ambiguous"
+      ],
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "lf_blank_line",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "lf_blank_line_with_spaces",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "crlf_blank_line",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "crlf_blank_line_with_spaces",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "cr_blank_line",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "unicode_paragraph_separator",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "blank_line_with_nonbreaking_space",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "quote_itself_crosses_paragraph",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "quote_starts_before_span",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds",
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "quote_ends_after_span",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds",
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    },
+    {
+      "id": "quote_completely_outside_span",
+      "pass": true,
+      "expected_outcomes": [
+        "invalid_bounds",
+        "not_found"
+      ],
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [],
+      "required_behavior": "refusal",
+      "required_behavior_observed": true
+    }
+  ],
+  "required_exact_selections_observed": 15,
+  "required_refusals_observed": 36,
+  "adjudication": "The frozen missing_start_bound and missing_end_bound probes expected bounds_required before the docs were read. The documented contract classifies incomplete bounds as invalid_bounds. Both are safe refusals; raw expectations are preserved, not edited or relabeled as passing."
+}

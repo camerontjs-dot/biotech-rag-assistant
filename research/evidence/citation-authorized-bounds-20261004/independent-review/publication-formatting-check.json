@@ -1,0 +1,40 @@
+{
+  "schema_version": "citation-review-publication-formatting/v1",
+  "original_reproducer_sha256": "a494cd6d2253f391eeb929daa23bcd180eb23a0e145cd92042061a1d3e85fa4b",
+  "active_reproducer_sha256": "237a1693df18ef3e1fe22e99d1825f98a64903be4d7c58bc37e2e39b2c597e21",
+  "non_import_ast_identical": true,
+  "import_set_identical": true,
+  "original_review_artifact_hashes_verified": 25,
+  "reproductions": [
+    {
+      "probe_set": "automatic",
+      "exit_status": 1,
+      "passed": 30,
+      "total": 32,
+      "report": "formatted-automatic-report.json",
+      "sha256": "d97fb4e2640472e0661d258ecf9b9189bbc7a22c8c75e50b8f4ec99c02d0ddab"
+    },
+    {
+      "probe_set": "automatic-extra",
+      "exit_status": 1,
+      "passed": 0,
+      "total": 6,
+      "report": "formatted-automatic-extra-report.json",
+      "sha256": "c5fd4e6f9a7ae8ef4dbd535212312ab8700b99555b1cf8d6040b28ac03240816"
+    },
+    {
+      "probe_set": "authorized",
+      "exit_status": 1,
+      "passed": 49,
+      "total": 51,
+      "report": "formatted-authorized-report.json",
+      "sha256": "0dcdb9b16edc9fab9d9e626b2dbb50a2bbadc6d555de6278428757371fe96e69"
+    }
+  ],
+  "publication_ci_failure": {
+    "head": "15b1055abcddd08b645a6b52f623bb9501483182",
+    "run_id": 37207175942,
+    "cause": "12 lint style findings in the newly copied review scripts; all three test/compile/corpus sequences skipped; Pages parity passed. No candidate implementation failure was inferred."
+  },
+  "correction": "Original Python evidence bytes archived with .txt appended; active portable reproducer formatted and import ordering normalized. No lint settings or frozen expectations changed."
+}
