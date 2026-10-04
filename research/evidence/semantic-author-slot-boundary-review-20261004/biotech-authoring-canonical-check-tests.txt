@@ -1,0 +1,7 @@
+test_self_consistent_materialized_edit_cannot_override_unchanged_raw_response (test_semantic_author_slot_boundary_v1.Wrapper.test_self_consistent_materialized_edit_cannot_override_unchanged_raw_response) ... ok
+test_all_28_synthetic_partitions_freeze_only_after_exact_raw_revalidation (test_semantic_author_slot_boundary_v1.Wrapper.test_all_28_synthetic_partitions_freeze_only_after_exact_raw_revalidation) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 82.667s
+
+OK

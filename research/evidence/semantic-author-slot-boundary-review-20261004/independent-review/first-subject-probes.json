@@ -1,0 +1,157 @@
+{
+  "schema_version": "independent-successor-boundary-probes/v1",
+  "subject_path": "<scratch>/boundary-review/successor-fae7520",
+  "module_sha256": "facefd417bba3548420498a036de2bb3da36062a1942851c417206883dc5d4e0",
+  "scope": "STRUCTURAL_TOKENS_AND_FAKE_HTTP_ONLY",
+  "real_provider_calls": 0,
+  "semantic_adjudication": "NOT_RUN",
+  "probes": [
+    {
+      "probe": "historical_design_entries_alias_rejected",
+      "expectation_met": true,
+      "exception": "ValueError: ['design_entries', 1, 'slot']: 'mutation_8' was expected"
+    },
+    {
+      "probe": "historical_relations_alias_rejected",
+      "expectation_met": true,
+      "exception": "ValueError: ['relations', 0, 'id']: 'invariant_7' was expected"
+    },
+    {
+      "probe": "unused_reserved_cross_kind_uuid_collision_rejected",
+      "expectation_met": true,
+      "exception": "ValueError: duplicate frozen identity"
+    },
+    {
+      "probe": "unicode_and_all_authored_content_preserved",
+      "expectation_met": true
+    },
+    {
+      "probe": "positive_canary_and_partition_control",
+      "expectation_met": true,
+      "fake_http_actions": 6
+    },
+    {
+      "probe": "paired_materialization_hash_edit_rejected",
+      "expectation_met": false,
+      "fake_http_actions": 3,
+      "returned": {
+        "schema_version": "semantic-author-boundary-receipt/v1",
+        "request": "author-02",
+        "status": "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY",
+        "errors": [],
+        "semantic_validity": "NOT_ASSESSED",
+        "adjudication": "NOT_RUN",
+        "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
+        "request_receipt_sha256": "88defcdd73371febfce6cea34de2b3e01e41fd12b3dcc1943dee7e09acbb6d5c",
+        "execution_freeze_sha256": "6e9bc5bcd88f8bc83a65f9b10ad5c7a5f222a5cebbc8ade17cce47716d1019e8",
+        "observed_prompt_tokens": 100,
+        "materialized_sha256": "967928171525bc91c9ca50cdc955bca64080babcad19f8ea2441c4746ceba9a5"
+      }
+    },
+    {
+      "probe": "response_text_edit_rejected",
+      "expectation_met": false,
+      "fake_http_actions": 3,
+      "returned": {
+        "schema_version": "semantic-author-boundary-receipt/v1",
+        "request": "author-02",
+        "status": "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY",
+        "errors": [],
+        "semantic_validity": "NOT_ASSESSED",
+        "adjudication": "NOT_RUN",
+        "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
+        "request_receipt_sha256": "23afef489f8443360329499b7da8b47c9e39cf42330511781b88af02a47af16c",
+        "execution_freeze_sha256": "6e9bc5bcd88f8bc83a65f9b10ad5c7a5f222a5cebbc8ade17cce47716d1019e8",
+        "observed_prompt_tokens": 100,
+        "materialized_sha256": "967928171525bc91c9ca50cdc955bca64080babcad19f8ea2441c4746ceba9a5"
+      }
+    },
+    {
+      "probe": "missing_model_discovery_rejected",
+      "expectation_met": false,
+      "fake_http_actions": 3,
+      "returned": {
+        "schema_version": "semantic-author-boundary-receipt/v1",
+        "request": "author-02",
+        "status": "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY",
+        "errors": [],
+        "semantic_validity": "NOT_ASSESSED",
+        "adjudication": "NOT_RUN",
+        "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
+        "request_receipt_sha256": "e3f014c08030e560da125c42f1c121313e2f669eec0aa0af76913852fec13ff0",
+        "execution_freeze_sha256": "6e9bc5bcd88f8bc83a65f9b10ad5c7a5f222a5cebbc8ade17cce47716d1019e8",
+        "observed_prompt_tokens": 100,
+        "materialized_sha256": "967928171525bc91c9ca50cdc955bca64080babcad19f8ea2441c4746ceba9a5"
+      }
+    },
+    {
+      "probe": "model_discovery_digest_edit_rejected",
+      "expectation_met": false,
+      "fake_http_actions": 3,
+      "returned": {
+        "schema_version": "semantic-author-boundary-receipt/v1",
+        "request": "author-02",
+        "status": "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY",
+        "errors": [],
+        "semantic_validity": "NOT_ASSESSED",
+        "adjudication": "NOT_RUN",
+        "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
+        "request_receipt_sha256": "9bc61c2282962fb390923e3b31f26b2bbb12f0132ef572db50bb96cbccbe301e",
+        "execution_freeze_sha256": "6e9bc5bcd88f8bc83a65f9b10ad5c7a5f222a5cebbc8ade17cce47716d1019e8",
+        "observed_prompt_tokens": 100,
+        "materialized_sha256": "967928171525bc91c9ca50cdc955bca64080babcad19f8ea2441c4746ceba9a5"
+      }
+    },
+    {
+      "probe": "missing_send_marker_rejected",
+      "expectation_met": false,
+      "fake_http_actions": 3,
+      "returned": {
+        "schema_version": "semantic-author-boundary-receipt/v1",
+        "request": "author-02",
+        "status": "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY",
+        "errors": [],
+        "semantic_validity": "NOT_ASSESSED",
+        "adjudication": "NOT_RUN",
+        "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
+        "request_receipt_sha256": "f5ed056a6221747915f159a80df308e23d48a2b2b6dffe25fbab1449f52cd793",
+        "execution_freeze_sha256": "6e9bc5bcd88f8bc83a65f9b10ad5c7a5f222a5cebbc8ade17cce47716d1019e8",
+        "observed_prompt_tokens": 100,
+        "materialized_sha256": "967928171525bc91c9ca50cdc955bca64080babcad19f8ea2441c4746ceba9a5"
+      }
+    },
+    {
+      "probe": "contradictory_boundary_identity_rejected",
+      "expectation_met": false,
+      "fake_http_actions": 3,
+      "returned": {
+        "schema_version": "semantic-author-boundary-receipt/v1",
+        "request": "author-02",
+        "status": "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY",
+        "errors": [],
+        "semantic_validity": "NOT_ASSESSED",
+        "adjudication": "NOT_RUN",
+        "untruncated_request_context": "UNKNOWN_SEPARATE_LOCAL_EVIDENCE_REQUIRED",
+        "request_receipt_sha256": "24800574d5b63c0c46b2999deafe57109297108cd511e9eaf451238c0534591c",
+        "execution_freeze_sha256": "6e9bc5bcd88f8bc83a65f9b10ad5c7a5f222a5cebbc8ade17cce47716d1019e8",
+        "observed_prompt_tokens": 100,
+        "materialized_sha256": "967928171525bc91c9ca50cdc955bca64080babcad19f8ea2441c4746ceba9a5"
+      }
+    },
+    {
+      "probe": "late_structural_failure_preserves_raw_and_stops_network",
+      "expectation_met": true,
+      "fake_http_actions": 3,
+      "invalid_status": "APPARATUS_INVALID",
+      "exact_raw_preserved": true,
+      "next_result": {
+        "exception": "ValueError: previous call is invalid"
+      },
+      "retry_result": {
+        "exception": "ValueError: call directory exists, interrupted sequence or out-of-order attempt"
+      }
+    }
+  ],
+  "passed": 6,
+  "failed": 6
+}

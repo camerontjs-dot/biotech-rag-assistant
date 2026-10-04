@@ -1,0 +1,13 @@
+{
+  "schema_version": "preimplementation-boundary-review-manifest/v1",
+  "created_at_utc": "2026-10-04T13:33:58.192083+00:00",
+  "source_commit": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+  "failure_object": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+  "successor_files_read": false,
+  "provider_calls": 0,
+  "files": {
+    "initial_review.md": "6205b18babb278c3be11f49b24d5ed2b2c4f4d619c7e85e90dfe10329100b6c9",
+    "frozen_baseline_probe.py": "63b7dc03601a60ae94d305cf4567af6d8bc5a06c356dca64b6fd80429bfc662a",
+    "frozen-baseline-results.json": "c9b373a4a1238388e1d830cccbffca9bf6729464ece8b12e76a39f8b72427a15"
+  }
+}

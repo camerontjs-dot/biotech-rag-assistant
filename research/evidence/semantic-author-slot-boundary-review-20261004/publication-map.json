@@ -1,0 +1,44 @@
+{
+  "schema_version": "biotech-author-boundary-publication-map/v1",
+  "publication_method": "GitHub Git Data API",
+  "same_commit_identity": false,
+  "verification": "Each GitHub-created tree exactly matched its local tree. Final source publication513cf062 was independently fetched and returned tree6428495. Distinct author/timestamp/parent metadata are preserved as distinct identities. Original local commit bytes reproduce the local commit SHA.",
+  "objects": [
+    {
+      "role": "initial",
+      "local_commit": "fae7520a8d2b5e5b45a91efa5ad5e8d90f1237c8",
+      "github_commit": "d5c7e146c1edd79434495eb9fe9ad157653dba1a",
+      "tree": "8f5b337065d88e2a3827006ab193c1bac2d8d43f",
+      "source_hashes": {
+        "research/semantic_author_slot_boundary_v1.py": "facefd417bba3548420498a036de2bb3da36062a1942851c417206883dc5d4e0",
+        "research/test_semantic_author_slot_boundary_v1.py": "45424fe4a2995e430481407d05f541afa0079ab6b0b9b01e34b0428b9dd16a97",
+        "research/semantic-author-slot-boundary-v1-protocol.md": "2d235843a9e4c80a40f5524f12ba8209ad6050d097cad941ea4c1953955ec179"
+      },
+      "raw_local_commit": "local-initial-commit.txt"
+    },
+    {
+      "role": "canonical-materialization",
+      "local_commit": "24509538a980edf1daa0049a01f1ad6a9d57fa6b",
+      "github_commit": "ddf4bad4514df41636df3c66f4ce54f818381046",
+      "tree": "f3b73f5cbc794bb6f22bde243ced81f8d41c4494",
+      "source_hashes": {
+        "research/semantic_author_slot_boundary_v1.py": "f8ce3e91738dad6f46d88696890e627f85759346144245ba27bb94c74ed4a7c1",
+        "research/test_semantic_author_slot_boundary_v1.py": "210b36ba9486a93c6decf487d76f89e28e66cdf8c07e04f182e5d3791e8545cb",
+        "research/semantic-author-slot-boundary-v1-protocol.md": "d8816c2212376480a8bd9990ef24394e7f75b897c4cb706dbde4315dc16ccb0b"
+      },
+      "raw_local_commit": "local-canonical-materialization-commit.txt"
+    },
+    {
+      "role": "retained-custody",
+      "local_commit": "d1b256347d320e6268506b00978168c2d32b65ce",
+      "github_commit": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+      "tree": "6428495c4f3b373cd07bdebcc7916834c157da3f",
+      "source_hashes": {
+        "research/semantic_author_slot_boundary_v1.py": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
+        "research/test_semantic_author_slot_boundary_v1.py": "4cddc26c63dbf70201f11a7d19aab83dbb078fbf270dc61fa46a81f2a3cb7867",
+        "research/semantic-author-slot-boundary-v1-protocol.md": "23bfcfd62064a723512518b8cf7d70ee674e6d238bcd4740bf187db827e15634"
+      },
+      "raw_local_commit": "local-retained-custody-commit.txt"
+    }
+  ]
+}

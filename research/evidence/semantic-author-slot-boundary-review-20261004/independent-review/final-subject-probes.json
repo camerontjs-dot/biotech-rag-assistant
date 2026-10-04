@@ -1,0 +1,85 @@
+{
+  "schema_version": "independent-successor-boundary-probes/v1",
+  "subject_path": "<scratch>/boundary-review/successor-d1b2563",
+  "module_sha256": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
+  "scope": "STRUCTURAL_TOKENS_AND_FAKE_HTTP_ONLY",
+  "real_provider_calls": 0,
+  "semantic_adjudication": "NOT_RUN",
+  "probes": [
+    {
+      "probe": "historical_design_entries_alias_rejected",
+      "expectation_met": true,
+      "exception": "ValueError: ['design_entries', 1, 'slot']: 'mutation_8' was expected"
+    },
+    {
+      "probe": "historical_relations_alias_rejected",
+      "expectation_met": true,
+      "exception": "ValueError: ['relations', 0, 'id']: 'invariant_7' was expected"
+    },
+    {
+      "probe": "unused_reserved_cross_kind_uuid_collision_rejected",
+      "expectation_met": true,
+      "exception": "ValueError: duplicate frozen identity"
+    },
+    {
+      "probe": "unicode_and_all_authored_content_preserved",
+      "expectation_met": true
+    },
+    {
+      "probe": "positive_canary_and_partition_control",
+      "expectation_met": true,
+      "fake_http_actions": 6
+    },
+    {
+      "probe": "paired_materialization_hash_edit_rejected",
+      "expectation_met": true,
+      "fake_http_actions": 0,
+      "exception": "ValueError: materialized bytes differ from canonical raw-response rederivation"
+    },
+    {
+      "probe": "response_text_edit_rejected",
+      "expectation_met": true,
+      "fake_http_actions": 0,
+      "exception": "ValueError: response text differs from raw response"
+    },
+    {
+      "probe": "missing_model_discovery_rejected",
+      "expectation_met": true,
+      "fake_http_actions": 0,
+      "exception": "FileNotFoundError: [Errno 2] No such file or directory: '<scratch>/boundary-review/independent-boundary-v7xo_4og/missing_model_discovery_rejected/research/evidence/semantic-author-slot-bound-v1-independent-review/calls/canary/models-discovery.raw.json'"
+    },
+    {
+      "probe": "model_discovery_digest_edit_rejected",
+      "expectation_met": true,
+      "fake_http_actions": 0,
+      "exception": "ValueError: runtime/transport receipt or response custody drift"
+    },
+    {
+      "probe": "missing_send_marker_rejected",
+      "expectation_met": true,
+      "fake_http_actions": 0,
+      "exception": "FileNotFoundError: [Errno 2] No such file or directory: '<scratch>/boundary-review/independent-boundary-v7xo_4og/missing_send_marker_rejected/research/evidence/semantic-author-slot-bound-v1-independent-review/calls/canary/send-started.json'"
+    },
+    {
+      "probe": "contradictory_boundary_identity_rejected",
+      "expectation_met": true,
+      "fake_http_actions": 0,
+      "exception": "ValueError: acceptance metadata or retained-artifact custody mismatch"
+    },
+    {
+      "probe": "late_structural_failure_preserves_raw_and_stops_network",
+      "expectation_met": true,
+      "fake_http_actions": 3,
+      "invalid_status": "APPARATUS_INVALID",
+      "exact_raw_preserved": true,
+      "next_result": {
+        "exception": "ValueError: previous call is invalid"
+      },
+      "retry_result": {
+        "exception": "ValueError: call directory exists, interrupted sequence or out-of-order attempt"
+      }
+    }
+  ],
+  "passed": 12,
+  "failed": 0
+}

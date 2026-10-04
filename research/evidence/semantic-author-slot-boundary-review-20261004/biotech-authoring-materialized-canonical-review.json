@@ -1,0 +1,8 @@
+{
+  "candidate": "fae7520a8d2b5e5b45a91efa5ad5e8d90f1237c8",
+  "probe": "materialized bytes changed and acceptance hash updated, raw response unchanged",
+  "next_status": "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY",
+  "next_fake_transport_calls": 3,
+  "real_provider_calls": 0,
+  "finding": "canonical materialized rederivation was not compared before next request"
+}

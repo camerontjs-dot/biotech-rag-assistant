@@ -1,0 +1,6 @@
+tree f3b73f5cbc794bb6f22bde243ced81f8d41c4494
+parent fae7520a8d2b5e5b45a91efa5ad5e8d90f1237c8
+author Codex <codex@openai.com> 1791121752 -0600
+committer Codex <codex@openai.com> 1791121752 -0600
+
+research-infra: bind materialized author records to raw rederivation

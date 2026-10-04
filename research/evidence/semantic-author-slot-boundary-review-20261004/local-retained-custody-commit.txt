@@ -1,0 +1,6 @@
+tree 6428495c4f3b373cd07bdebcc7916834c157da3f
+parent 24509538a980edf1daa0049a01f1ad6a9d57fa6b
+author Codex <codex@openai.com> 1791122187 -0600
+committer Codex <codex@openai.com> 1791122187 -0600
+
+research-infra: verify retained author transport custody and stage metadata
