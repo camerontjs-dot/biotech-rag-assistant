@@ -1,0 +1,25 @@
+{
+  "schema_version": "semantic-control-author-01-attempt-2/v1",
+  "attempt_1": {
+    "status": "APPARATUS_INVALID",
+    "done_reason": "length",
+    "eval_count": 2048,
+    "prompt_eval_count": 15631,
+    "sum": 17679,
+    "num_ctx": 18432,
+    "context_tokens_unused": 753,
+    "num_predict": 2048,
+    "wall_clock_s": 568.5,
+    "memory_ceiling_tripped": false,
+    "mechanism": "num_predict bound the response. The context window still had 753 tokens free."
+  },
+  "attempt_2": {
+    "directory": "calls/author-01-attempt-2",
+    "requested_num_ctx": 18432,
+    "num_predict": 3072,
+    "timeout_seconds": 900,
+    "why": "3072 is above the 2801 tokens the 18432 context can still hold after a 15631-token prompt, so a length stop at about 2801 tokens is the context remainder and a length stop at 3072 would mean the server loaded a larger context. A natural stop before either cap completes the request path.",
+    "retries": 0,
+    "semantic_use": "NONE"
+  }
+}
