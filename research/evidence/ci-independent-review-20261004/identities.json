@@ -1,0 +1,144 @@
+{
+  "schema_version": "ci-reviewed-identities/v1",
+  "repository": "camerontjs-dot/biotech-rag-assistant",
+  "source_identities": {
+    "main": {
+      "head": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+      "tree": "f18297d7aac560d3efbde525c3b3776c5e091490",
+      "workflow_blob": "bf31d9543919847171ab5eaf39fdb82221bb5eb2",
+      "parents": [
+        "80253169595004e5054c639451d3cd58f3d9272e"
+      ]
+    },
+    "product": {
+      "head": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+      "tree": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+      "workflow_blob": "e6a9886621e36f255ad6e9f9e88b9e9bfdb7a00d",
+      "parents": [
+        "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3"
+      ]
+    },
+    "research": {
+      "head": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+      "tree": "f54b18e018221bb39891d48b69e037358e1ec756",
+      "workflow_blob": "bf31d9543919847171ab5eaf39fdb82221bb5eb2",
+      "parents": [
+        "ae06553be6481fee82c175361849e01b20a1112e"
+      ]
+    },
+    "proof": {
+      "head": "7196aec48378932e2dde235b560ddaff56a814dc",
+      "tree": "75706cd25b39d526b14fc71b975087bddd38fecf",
+      "workflow_blob": "e6a9886621e36f255ad6e9f9e88b9e9bfdb7a00d",
+      "parents": [
+        "1e3d79a53f181c79bdeeb6137e88ae2897797106"
+      ]
+    }
+  },
+  "hosted_runs": [
+    {
+      "id": 37023159772,
+      "name": "CI",
+      "head_branch": "research/semantic-adjudication-request-bound-v2",
+      "head_sha": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+      "path": ".github/workflows/ci.yml",
+      "run_number": 126,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "workflow_id": 295462568,
+      "url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/runs/37023159772",
+      "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37023159772",
+      "created_at": "2026-10-02T14:54:22Z",
+      "updated_at": "2026-10-02T14:54:51Z",
+      "run_started_at": "2026-10-02T14:54:22Z",
+      "run_attempt": 1,
+      "role": "predecessor",
+      "base_ref": "research/qualifier-grounding-semantic-assessor-controls-v1",
+      "base_sha": "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+      "head_tree_sha": "f54b18e018221bb39891d48b69e037358e1ec756",
+      "checked_out_merge_sha": "21f3c854c8c3b2055c4d9c16c8ad8b078a7c2355",
+      "checked_out_merge_tree_sha": "f54b18e018221bb39891d48b69e037358e1ec756",
+      "checked_out_merge_parents": [
+        "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+        "1e3d79a53f181c79bdeeb6137e88ae2897797106"
+      ],
+      "merge_metadata_url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/git/commits/21f3c854c8c3b2055c4d9c16c8ad8b078a7c2355",
+      "head_tree_matches_checkout_tree": true,
+      "job_count": 4,
+      "job_conclusions": {
+        "failure": 3,
+        "success": 1
+      }
+    },
+    {
+      "id": 37137560112,
+      "name": "CI",
+      "head_branch": "research/ci-observability-proof-20261003",
+      "head_sha": "7196aec48378932e2dde235b560ddaff56a814dc",
+      "path": ".github/workflows/ci.yml",
+      "run_number": 129,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "workflow_id": 295462568,
+      "url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112",
+      "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112",
+      "created_at": "2026-10-03T16:37:56Z",
+      "updated_at": "2026-10-03T16:39:04Z",
+      "run_started_at": "2026-10-03T16:37:56Z",
+      "run_attempt": 1,
+      "role": "proof",
+      "base_ref": "research/semantic-adjudication-request-bound-v2",
+      "base_sha": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+      "head_tree_sha": "75706cd25b39d526b14fc71b975087bddd38fecf",
+      "checked_out_merge_sha": "0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+      "checked_out_merge_tree_sha": "75706cd25b39d526b14fc71b975087bddd38fecf",
+      "checked_out_merge_parents": [
+        "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "7196aec48378932e2dde235b560ddaff56a814dc"
+      ],
+      "merge_metadata_url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/git/commits/0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+      "head_tree_matches_checkout_tree": true,
+      "job_count": 11,
+      "job_conclusions": {
+        "failure": 1,
+        "success": 10
+      }
+    },
+    {
+      "id": 37137557939,
+      "name": "CI",
+      "head_branch": "chore/ci-independent-evidence-surfaces",
+      "head_sha": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+      "path": ".github/workflows/ci.yml",
+      "run_number": 128,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "workflow_id": 295462568,
+      "url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939",
+      "html_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939",
+      "created_at": "2026-10-03T16:37:54Z",
+      "updated_at": "2026-10-03T16:38:18Z",
+      "run_started_at": "2026-10-03T16:37:54Z",
+      "run_attempt": 1,
+      "role": "product",
+      "base_ref": "main",
+      "base_sha": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+      "head_tree_sha": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+      "checked_out_merge_sha": "13e0d253d37071839709b9e86bf2f09dde7c1d11",
+      "checked_out_merge_tree_sha": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+      "checked_out_merge_parents": [
+        "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "bc457271bc9a29fbe5561dfcba6b3b398df09616"
+      ],
+      "merge_metadata_url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/git/commits/13e0d253d37071839709b9e86bf2f09dde7c1d11",
+      "head_tree_matches_checkout_tree": true,
+      "job_count": 11,
+      "job_conclusions": {
+        "success": 11
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "ci-merge-authority-observation/v1",
+  "observation_date": "2026-10-04",
+  "product_pr": 45,
+  "recorded_product_state": {
+    "state": "open",
+    "draft": true,
+    "head_sha": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+    "base_sha": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+    "submitted_review_count": 0,
+    "inline_review_thread_count": 0
+  },
+  "gate": "operator_promotion_required",
+  "sources": [
+    {
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5971207812",
+      "record": "PR #45 comment",
+      "excerpt": "This PR stays Draft until an operator promotes it to main."
+    },
+    {
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40#issuecomment-5971207277",
+      "record": "Issue #40 terminal qualification",
+      "excerpt": "Merging #45 onto main is an operator promotion, not part of this qualification."
+    },
+    {
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40#issuecomment-5971207409",
+      "record": "Issue #40 closure",
+      "excerpt": "Merge of #45 is a separate promotion."
+    }
+  ],
+  "branch_configuration_observed": {
+    "source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/branches/main",
+    "name": "main",
+    "sha": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+    "tree": {
+      "sha": "f18297d7aac560d3efbde525c3b3776c5e091490",
+      "url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/git/trees/f18297d7aac560d3efbde525c3b3776c5e091490"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/branches/main/protection"
+  },
+  "rulesets_observed": {
+    "source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/rulesets",
+    "rulesets": []
+  },
+  "inference": "No GitHub-enforced check context was configured at this observation. The explicit operator promotion gate remains independent of that configuration."
+}

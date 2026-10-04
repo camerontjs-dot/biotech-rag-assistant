@@ -1,0 +1,63 @@
+{
+  "checks": {
+    "clean_product_worktree": true,
+    "product_worktree_exact_head": true,
+    "product_only_workflow_changed": true,
+    "proof_only_workflow_changed": true,
+    "product_and_proof_workflow_bytes_identical": true,
+    "before_main_and_research_workflow_bytes_identical": true,
+    "same_triggers": true,
+    "pages_job_bytes_unchanged": true,
+    "five_expected_jobs": true,
+    "no_continue_on_error_needs_if_or_concurrency": true,
+    "matrices_311_312_313_fail_fast_false": true,
+    "surface_commands_exact": true,
+    "old_commands_retained": true,
+    "install_commands_unchanged": true,
+    "pytest_setup_unchanged": true,
+    "compile_and_corpus_setup_same_as_pytest": true,
+    "ruff_target_remains_py311": true,
+    "lint_runtime_311": true,
+    "no_diff_whitespace_errors": true,
+    "product_hosted_merge_tree_matches_head": true,
+    "proof_hosted_merge_tree_matches_head": true,
+    "research_hosted_merge_tree_matches_head": true
+  },
+  "identities": {
+    "main": {
+      "head": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+      "tree": "f18297d7aac560d3efbde525c3b3776c5e091490",
+      "workflow_blob": "bf31d9543919847171ab5eaf39fdb82221bb5eb2",
+      "parents": [
+        "80253169595004e5054c639451d3cd58f3d9272e"
+      ]
+    },
+    "product": {
+      "head": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+      "tree": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+      "workflow_blob": "e6a9886621e36f255ad6e9f9e88b9e9bfdb7a00d",
+      "parents": [
+        "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3"
+      ]
+    },
+    "research": {
+      "head": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+      "tree": "f54b18e018221bb39891d48b69e037358e1ec756",
+      "workflow_blob": "bf31d9543919847171ab5eaf39fdb82221bb5eb2",
+      "parents": [
+        "ae06553be6481fee82c175361849e01b20a1112e"
+      ]
+    },
+    "proof": {
+      "head": "7196aec48378932e2dde235b560ddaff56a814dc",
+      "tree": "75706cd25b39d526b14fc71b975087bddd38fecf",
+      "workflow_blob": "e6a9886621e36f255ad6e9f9e88b9e9bfdb7a00d",
+      "parents": [
+        "1e3d79a53f181c79bdeeb6137e88ae2897797106"
+      ]
+    }
+  },
+  "product_diff_stat": ".github/workflows/ci.yml | 55 ++++++++++++++++++++++++++++++++++++++++++++----\n 1 file changed, 51 insertions(+), 4 deletions(-)",
+  "proof_diff_stat": ".github/workflows/ci.yml | 55 ++++++++++++++++++++++++++++++++++++++++++++----\n 1 file changed, 51 insertions(+), 4 deletions(-)",
+  "scope": "Static YAML/Git comparison and whitespace check at frozen identities. Hosted logs supply execution evidence; the review did not rerun a full local product suite."
+}

@@ -1,0 +1,806 @@
+{
+  "schema_version": "ci-hosted-excerpts/v1",
+  "evidence_read_date": "2026-10-04",
+  "repository": "camerontjs-dot/biotech-rag-assistant",
+  "excerpts_are_selected_verbatim_lines": true,
+  "full_log_content_is_not_embedded": true,
+  "job_count": 26,
+  "jobs": [
+    {
+      "job_id": 110891057896,
+      "job_name": "static demo JS==Python parity",
+      "run_id": 37023159772,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37023159772/job/110891057896",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Build + verify static demo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/110891057896/logs",
+      "raw_log_excerpt": [
+        "2026-10-02T14:54:29.2246482Z HEAD is now at 21f3c85 Merge 1e3d79a53f181c79bdeeb6137e88ae2897797106 into d1e092b7cdb878d064735d597e8c3b2d6c710157",
+        "2026-10-02T14:54:29.2316718Z 21f3c854c8c3b2055c4d9c16c8ad8b078a7c2355",
+        "2026-10-02T14:54:46.2165623Z ##[group]Run python scripts/build_pages_demo.py",
+        "2026-10-02T14:54:46.6206623Z PARITY OK: 40/40 JS matches Python (outcome + top doc + top chunk)"
+      ],
+      "log_character_count": 30174,
+      "excerpt_sha256": "17c355481059c9b329c2594e94213b61553964ee2ed1eb608c0f2db3c1f24511",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "predecessor"
+    },
+    {
+      "job_id": 110891058158,
+      "job_name": "ruff + pytest (py3.11)",
+      "run_id": 37023159772,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37023159772/job/110891058158",
+      "status": "completed",
+      "conclusion": "failure",
+      "physical_steps": [
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5
+        },
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6
+        },
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7
+        },
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/110891058158/logs",
+      "raw_log_excerpt": [
+        "2026-10-02T14:54:26.8712240Z HEAD is now at 21f3c85 Merge 1e3d79a53f181c79bdeeb6137e88ae2897797106 into d1e092b7cdb878d064735d597e8c3b2d6c710157",
+        "2026-10-02T14:54:26.8784909Z 21f3c854c8c3b2055c4d9c16c8ad8b078a7c2355",
+        "2026-10-02T14:54:37.5338067Z ##[group]Run ruff check .",
+        "2026-10-02T14:54:37.6736131Z Found 298 errors.",
+        "2026-10-02T14:54:37.6747408Z ##[error]Process completed with exit code 1."
+      ],
+      "log_character_count": 331434,
+      "excerpt_sha256": "27747d02af4c70c9a2053d5cf0e88d475507bdfa273541369ea6efbb5f4762c8",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "predecessor"
+    },
+    {
+      "job_id": 110891058211,
+      "job_name": "ruff + pytest (py3.13)",
+      "run_id": 37023159772,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37023159772/job/110891058211",
+      "status": "completed",
+      "conclusion": "failure",
+      "physical_steps": [
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5
+        },
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6
+        },
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7
+        },
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/110891058211/logs",
+      "raw_log_excerpt": [
+        "2026-10-02T14:54:27.8809179Z HEAD is now at 21f3c85 Merge 1e3d79a53f181c79bdeeb6137e88ae2897797106 into d1e092b7cdb878d064735d597e8c3b2d6c710157",
+        "2026-10-02T14:54:27.8881013Z 21f3c854c8c3b2055c4d9c16c8ad8b078a7c2355",
+        "2026-10-02T14:54:43.6672594Z ##[group]Run ruff check .",
+        "2026-10-02T14:54:43.8098802Z Found 298 errors.",
+        "2026-10-02T14:54:43.8110056Z ##[error]Process completed with exit code 1."
+      ],
+      "log_character_count": 331434,
+      "excerpt_sha256": "6f5db0c7a43a4e59ed527386f442396f632095b01524d03f75d885c82ea7d784",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "predecessor"
+    },
+    {
+      "job_id": 110891058365,
+      "job_name": "ruff + pytest (py3.12)",
+      "run_id": 37023159772,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37023159772/job/110891058365",
+      "status": "completed",
+      "conclusion": "failure",
+      "physical_steps": [
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5
+        },
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6
+        },
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7
+        },
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/110891058365/logs",
+      "raw_log_excerpt": [
+        "2026-10-02T14:54:27.9636490Z HEAD is now at 21f3c85 Merge 1e3d79a53f181c79bdeeb6137e88ae2897797106 into d1e092b7cdb878d064735d597e8c3b2d6c710157",
+        "2026-10-02T14:54:27.9708637Z 21f3c854c8c3b2055c4d9c16c8ad8b078a7c2355",
+        "2026-10-02T14:54:40.1897843Z ##[group]Run ruff check .",
+        "2026-10-02T14:54:40.3336891Z Found 298 errors.",
+        "2026-10-02T14:54:40.3348465Z ##[error]Process completed with exit code 1."
+      ],
+      "log_character_count": 331438,
+      "excerpt_sha256": "f895fd082b287891f096947b3a5a7ea43374634fe967dacc45878bb83ec508a7",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "predecessor"
+    },
+    {
+      "job_id": 111245074540,
+      "job_name": "ruff",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074540",
+      "status": "completed",
+      "conclusion": "failure",
+      "physical_steps": [
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074540/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:03.3383354Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:03.3904859Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:19.5451066Z ##[group]Run ruff check .",
+        "2026-10-03T16:38:19.6608536Z Found 298 errors.",
+        "2026-10-03T16:38:19.6617217Z ##[error]Process completed with exit code 1."
+      ],
+      "log_character_count": 331417,
+      "excerpt_sha256": "42d741030c872c8bcc0d395134c5944d2c06dbd2c2e7296aaf8158fe0166f733",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074600,
+      "job_name": "pytest (py3.13)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074600",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074600/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:00.4945101Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:00.5004447Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:12.8822831Z ##[group]Run python -m pytest -q",
+        "2026-10-03T16:38:17.1245988Z 189 passed, 1 warning in 3.32s"
+      ],
+      "log_character_count": 28524,
+      "excerpt_sha256": "77ae097e8df9ba3c4217a5863d09a1070cf64673ff2b70867973fcb0d0c45eb6",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074601,
+      "job_name": "compile (py3.12)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074601",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074601/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:00.5531914Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:00.5622722Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:08.9613533Z ##[group]Run python -m compileall src",
+        "2026-10-03T16:38:09.0202155Z Listing 'src'...",
+        "2026-10-03T16:38:09.0202446Z Listing 'src/biotech_rag_assistant'...",
+        "2026-10-03T16:38:09.0203176Z Listing 'src/biotech_rag_assistant/api'...",
+        "2026-10-03T16:38:09.0204805Z Listing 'src/biotech_rag_assistant/api/static'...",
+        "2026-10-03T16:38:09.0207518Z Listing 'src/biotech_rag_assistant.egg-info'..."
+      ],
+      "log_character_count": 29540,
+      "excerpt_sha256": "071bf07687996916c87be90498f678547b61ddf96ac33e1e301b3ca847e15c91",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074608,
+      "job_name": "compile (py3.13)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074608",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074608/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:02.0717947Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:02.0789158Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:14.2401497Z ##[group]Run python -m compileall src",
+        "2026-10-03T16:38:14.3248334Z Listing 'src'...",
+        "2026-10-03T16:38:14.3248882Z Listing 'src/biotech_rag_assistant'...",
+        "2026-10-03T16:38:14.3250880Z Listing 'src/biotech_rag_assistant/api'...",
+        "2026-10-03T16:38:14.3255166Z Listing 'src/biotech_rag_assistant/api/static'...",
+        "2026-10-03T16:38:14.3262054Z Listing 'src/biotech_rag_assistant.egg-info'..."
+      ],
+      "log_character_count": 29538,
+      "excerpt_sha256": "94e594b58f1907fdeaf63f7659e6af3ef033b5a27d62abbf3d48c1641243a0b8",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074634,
+      "job_name": "compile (py3.11)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074634",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074634/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:01.7960338Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:01.8033243Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:18.5701392Z ##[group]Run python -m compileall src",
+        "2026-10-03T16:38:18.6466788Z Listing 'src'...",
+        "2026-10-03T16:38:18.6467233Z Listing 'src/biotech_rag_assistant'...",
+        "2026-10-03T16:38:18.6468700Z Listing 'src/biotech_rag_assistant/api'...",
+        "2026-10-03T16:38:18.6472170Z Listing 'src/biotech_rag_assistant/api/static'...",
+        "2026-10-03T16:38:18.6477230Z Listing 'src/biotech_rag_assistant.egg-info'..."
+      ],
+      "log_character_count": 29544,
+      "excerpt_sha256": "bf6a5233a8297d33b6b6352f5524c77690a65772c1a40c82b9d152d4faa20692",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074636,
+      "job_name": "corpus smoke (py3.13)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074636",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074636/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:14.2947603Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:14.3024718Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:25.0863790Z ##[group]Run biotech-rag validate-corpus examples/synthetic-controlled-docs",
+        "2026-10-03T16:38:25.4338921Z Documents valid: 10",
+        "2026-10-03T16:38:25.4339787Z Documents excluded by status: 2",
+        "2026-10-03T16:38:25.4340129Z Corpus validation passed"
+      ],
+      "log_character_count": 27798,
+      "excerpt_sha256": "baf09d721a30b1135a31667ac49e34de75404b94db073c32fad6d3a6c264b004",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074646,
+      "job_name": "corpus smoke (py3.12)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074646",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074646/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:01.9430514Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:01.9489330Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:11.6493398Z ##[group]Run biotech-rag validate-corpus examples/synthetic-controlled-docs",
+        "2026-10-03T16:38:11.9083019Z Documents valid: 10",
+        "2026-10-03T16:38:11.9143130Z Documents excluded by status: 2",
+        "2026-10-03T16:38:11.9173094Z Corpus validation passed"
+      ],
+      "log_character_count": 27790,
+      "excerpt_sha256": "ac257a819197c6687ea793a73d9b2cc1372e3eb2b7254431e8bfe636140d1328",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074659,
+      "job_name": "pytest (py3.12)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074659",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074659/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:00.5376822Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:00.5442841Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:14.3698210Z ##[group]Run python -m pytest -q",
+        "2026-10-03T16:38:19.2310910Z 189 passed, 1 warning in 3.93s"
+      ],
+      "log_character_count": 28525,
+      "excerpt_sha256": "3fa6af8e4a868c117eb5425bb0521b83c5b5c8f428239aec2a0933f1c8ba2f1c",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074662,
+      "job_name": "static demo JS==Python parity",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074662",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Build + verify static demo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074662/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:00.6278285Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:00.6364820Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:16.0501204Z ##[group]Run python scripts/build_pages_demo.py",
+        "2026-10-03T16:38:16.4804655Z PARITY OK: 40/40 JS matches Python (outcome + top doc + top chunk)"
+      ],
+      "log_character_count": 30179,
+      "excerpt_sha256": "342199fe13fbd031d5f99f2276916ed385ddf11a4f326902b136ff8af1244264",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074675,
+      "job_name": "pytest (py3.11)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074675",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074675/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:01.3640496Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:01.3712711Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:38:12.7668879Z ##[group]Run python -m pytest -q",
+        "2026-10-03T16:38:16.4733675Z 189 passed, 1 warning in 3.22s"
+      ],
+      "log_character_count": 28529,
+      "excerpt_sha256": "0f69a85627d70c4488bbc109d8d7b508b639aa2273e0b0c6e630887465b0d776",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245074920,
+      "job_name": "corpus smoke (py3.11)",
+      "run_id": 37137560112,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112/job/111245074920",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245074920/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:38:51.1472812Z HEAD is now at 0a04fb6 Merge 7196aec48378932e2dde235b560ddaff56a814dc into 1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "2026-10-03T16:38:51.1565551Z 0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "2026-10-03T16:39:01.8267941Z ##[group]Run biotech-rag validate-corpus examples/synthetic-controlled-docs",
+        "2026-10-03T16:39:02.1559190Z Documents valid: 10",
+        "2026-10-03T16:39:02.1560864Z Documents excluded by status: 2",
+        "2026-10-03T16:39:02.1561329Z Corpus validation passed"
+      ],
+      "log_character_count": 27788,
+      "excerpt_sha256": "1988fe4a41c6e9d1eebf090c68b66585a1ec37e2bf1589f3057d3f12077db032",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "proof"
+    },
+    {
+      "job_id": 111245067977,
+      "job_name": "corpus smoke (py3.13)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245067977",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245067977/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:58.6848739Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:58.6927128Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:08.8765115Z ##[group]Run biotech-rag validate-corpus examples/synthetic-controlled-docs",
+        "2026-10-03T16:38:09.2223320Z Documents valid: 10",
+        "2026-10-03T16:38:09.2223873Z Documents excluded by status: 2",
+        "2026-10-03T16:38:09.2224126Z Corpus validation passed"
+      ],
+      "log_character_count": 27792,
+      "excerpt_sha256": "5a1f1f42a9164a177476cf5cfc03965eb2a9ff226fb361632a3e312e80fce384",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068093,
+      "job_name": "compile (py3.12)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068093",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068093/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:59.2108035Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:59.2172602Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:13.5594185Z ##[group]Run python -m compileall src",
+        "2026-10-03T16:38:13.6334186Z Listing 'src'...",
+        "2026-10-03T16:38:13.6334948Z Listing 'src/biotech_rag_assistant'...",
+        "2026-10-03T16:38:13.6336834Z Listing 'src/biotech_rag_assistant/api'...",
+        "2026-10-03T16:38:13.6342131Z Listing 'src/biotech_rag_assistant/api/static'...",
+        "2026-10-03T16:38:13.6348333Z Listing 'src/biotech_rag_assistant.egg-info'..."
+      ],
+      "log_character_count": 29275,
+      "excerpt_sha256": "d0e9ab13be33583dff93a84d437fdb0a4a957cd9a8dcd4e5e13a12689045a888",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068123,
+      "job_name": "ruff",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068123",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068123/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:58.4178462Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:58.4183784Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:07.7380867Z ##[group]Run ruff check .",
+        "2026-10-03T16:38:07.7604586Z All checks passed!"
+      ],
+      "log_character_count": 27458,
+      "excerpt_sha256": "8392dfd0b5db5244fbf6bef896dfbbcb15c341118b62b6b4c0b42a0df1d71257",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068144,
+      "job_name": "corpus smoke (py3.11)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068144",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068144/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:58.6232236Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:58.6317206Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:10.2683884Z ##[group]Run biotech-rag validate-corpus examples/synthetic-controlled-docs",
+        "2026-10-03T16:38:10.6246220Z Documents valid: 10",
+        "2026-10-03T16:38:10.6247484Z Documents excluded by status: 2",
+        "2026-10-03T16:38:10.6247824Z Corpus validation passed"
+      ],
+      "log_character_count": 27798,
+      "excerpt_sha256": "a0ffb7714884e0362627d9f23c182cc70af1e604ecf1d57c0dd2f7bf13a648f2",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068162,
+      "job_name": "compile (py3.13)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068162",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068162/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:59.3557405Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:59.3620984Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:11.7864238Z ##[group]Run python -m compileall src",
+        "2026-10-03T16:38:11.8595654Z Listing 'src'...",
+        "2026-10-03T16:38:11.8596315Z Listing 'src/biotech_rag_assistant'...",
+        "2026-10-03T16:38:11.8597999Z Listing 'src/biotech_rag_assistant/api'...",
+        "2026-10-03T16:38:11.8602041Z Listing 'src/biotech_rag_assistant/api/static'...",
+        "2026-10-03T16:38:11.8606046Z Listing 'src/biotech_rag_assistant.egg-info'..."
+      ],
+      "log_character_count": 29275,
+      "excerpt_sha256": "4e03d240c53361e7bfe81770830753da47e63d0e7efd0bdfc79be8d929c8b9a7",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068198,
+      "job_name": "pytest (py3.13)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068198",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068198/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:58.2217046Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:58.2285948Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:10.1218647Z ##[group]Run python -m pytest -q",
+        "2026-10-03T16:38:12.5964504Z 113 passed, 1 warning in 1.82s"
+      ],
+      "log_character_count": 28417,
+      "excerpt_sha256": "1029b26ef0197319abafffff3dc5424b646173e7df2c5032d680af1abe405e49",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068207,
+      "job_name": "static demo JS==Python parity",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068207",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Build + verify static demo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068207/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:59.2191931Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:59.2239303Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:12.1624600Z ##[group]Run python scripts/build_pages_demo.py",
+        "2026-10-03T16:38:12.4426363Z PARITY OK: 42/42 JS matches Python (outcome + top doc + top chunk + held-out hits)"
+      ],
+      "log_character_count": 30196,
+      "excerpt_sha256": "22f0ed18cad65e3191fe0323d10d8f200fc8b0ee4c2f5498deebc4fef180cb3d",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068213,
+      "job_name": "compile (py3.11)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068213",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Compile",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068213/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:59.7961175Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:59.8018105Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:11.0139315Z ##[group]Run python -m compileall src",
+        "2026-10-03T16:38:11.0716812Z Listing 'src'...",
+        "2026-10-03T16:38:11.0717174Z Listing 'src/biotech_rag_assistant'...",
+        "2026-10-03T16:38:11.0718484Z Listing 'src/biotech_rag_assistant/api'...",
+        "2026-10-03T16:38:11.0721776Z Listing 'src/biotech_rag_assistant/api/static'...",
+        "2026-10-03T16:38:11.0730249Z Listing 'src/biotech_rag_assistant.egg-info'..."
+      ],
+      "log_character_count": 29273,
+      "excerpt_sha256": "2c2569178cfbc44898cfa6a89090a139af23fd77ef7c0d251d6e3e8c5a0478a1",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068225,
+      "job_name": "corpus smoke (py3.12)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068225",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Corpus smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068225/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:58.1664306Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:58.1727168Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:09.1502404Z ##[group]Run biotech-rag validate-corpus examples/synthetic-controlled-docs",
+        "2026-10-03T16:38:09.4745899Z Documents valid: 10",
+        "2026-10-03T16:38:09.4746444Z Documents excluded by status: 2",
+        "2026-10-03T16:38:09.4746705Z Corpus validation passed"
+      ],
+      "log_character_count": 27790,
+      "excerpt_sha256": "7622c9582ae8ce08d204b7aa569d397564671c3e9630ee6d1c4f08d5207ba2a5",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068262,
+      "job_name": "pytest (py3.11)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068262",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068262/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:58.3785576Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:58.3862436Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:08.5567677Z ##[group]Run python -m pytest -q",
+        "2026-10-03T16:38:11.0510786Z 113 passed, 1 warning in 1.80s"
+      ],
+      "log_character_count": 28418,
+      "excerpt_sha256": "4d0aa11bb72bdef113d70a45516402aa75129824d53d4c3d6fa97605457b2c63",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    },
+    {
+      "job_id": 111245068294,
+      "job_name": "pytest (py3.12)",
+      "run_id": 37137557939,
+      "job_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939/job/111245068294",
+      "status": "completed",
+      "conclusion": "success",
+      "physical_steps": [
+        {
+          "name": "Tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ],
+      "log_source": "https://api.github.com/repos/camerontjs-dot/biotech-rag-assistant/actions/jobs/111245068294/logs",
+      "raw_log_excerpt": [
+        "2026-10-03T16:37:58.8136072Z HEAD is now at 13e0d25 Merge bc457271bc9a29fbe5561dfcba6b3b398df09616 into cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+        "2026-10-03T16:37:58.8214391Z 13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "2026-10-03T16:38:12.8352738Z ##[group]Run python -m pytest -q",
+        "2026-10-03T16:38:15.8262578Z 113 passed, 1 warning in 2.04s"
+      ],
+      "log_character_count": 28416,
+      "excerpt_sha256": "1b9c29550507c464f414e73e896584dd9e29b7949876565cb9cf390291fd7660",
+      "excerpt_hash_encoding": "UTF-8; selected original lines joined with LF and a final LF",
+      "role": "product"
+    }
+  ]
+}
