@@ -1,0 +1,34 @@
+{
+  "schema_version": "semantic-control-context-remainder/v1",
+  "call_id": "author-12",
+  "attempt": 1,
+  "status": "APPARATUS_INVALID",
+  "error": "provider response incomplete or truncated",
+  "done_reason": "length",
+  "prompt_eval_count": 15591,
+  "eval_count": 793,
+  "sum_equals_num_ctx": 16384,
+  "num_predict_cap": 1024,
+  "num_predict_reached": false,
+  "memory_ceiling_tripped": false,
+  "comparison": {
+    "author-09": {"done_reason": "stop", "eval_count": 562},
+    "author-10": {"done_reason": "stop", "eval_count": 606},
+    "author-11": {"done_reason": "stop", "eval_count": 565}
+  },
+  "mechanism": "The frozen prompt leaves 793 tokens of the 16384 context. author-12 was still writing when that remainder was exhausted. num_predict 1024 was not the binding limit.",
+  "attempt_2": {
+    "directory": "calls/author-12-attempt-2",
+    "config": "author-config-room-18432.json",
+    "requested_num_ctx": 18432,
+    "allowed_reported_context_at_most": 20480,
+    "num_predict": 2048,
+    "timeout_seconds": 600,
+    "unchanged": ["model", "model_digest", "temperature", "top_k", "top_p", "seed", "repeat_penalty", "spec bytes"],
+    "abort_if_resident_gb_at_least": 12,
+    "abort_if_free_percentage_below": 25,
+    "abort_if_swap_grows_mb": 256,
+    "retries": 0
+  },
+  "not_authorized_by_this_file": ["author-15", "author-16", "author-18", "author-21", "author-02", "author-01"]
+}
