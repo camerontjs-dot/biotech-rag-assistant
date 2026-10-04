@@ -1,0 +1,742 @@
+{
+  "access_observations": [],
+  "baseline_binding": {
+    "commit": "8369dcfdc8f473c5dce4d301072b77b05fd0d569",
+    "episodes_sha256": "c5f5acb3d66214264f78d18b708635bc5f73466a5b3d0b8d1e1f273e2307ca9f",
+    "tree": "215eb772e43f62d29405b4243401172e6ca7ea0f"
+  },
+  "collection_nominations": [
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-ci-predecessor-run-37023159772-attempt-1",
+      "record_id": "biotech-ci-predecessor-run-37023159772-attempt-1"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-ci-proof-run-37137560112-attempt-1",
+      "record_id": "biotech-ci-proof-run-37137560112-attempt-1"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-ci-product-run-37137557939-attempt-1",
+      "record_id": "biotech-ci-product-run-37137557939-attempt-1"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-ci-proof-independent-review-20261004",
+      "record_id": "biotech-ci-proof-independent-review-20261004"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-ci-product-independent-review-20261004",
+      "record_id": "biotech-ci-product-independent-review-20261004"
+    }
+  ],
+  "delta_id": "biotech-ci-execution-and-review-20261004",
+  "records": [
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "hosted_workflow_source_receipt",
+        "independent_log_inspection"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "state": "UNKNOWN"
+      },
+      "episode_id": "biotech-ci-predecessor-run-37023159772-attempt-1",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "run_attempt": 1,
+          "workflow_run_id": 37023159772
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "checkout_commit": "21f3c854c8c3b2055c4d9c16c8ad8b078a7c2355",
+        "checkout_tree": "f54b18e018221bb39891d48b69e037358e1ec756",
+        "head_tree_matches_checkout_tree": true,
+        "hosted_receipts_sha256": "4d4a1a305fa4fb16e37fa19d75441b58ea229bf91142141439ae45283af48e7c",
+        "receipt_publication": {
+          "head": "72711ba2f81b27e68033b287e0035ab8ad170a9a",
+          "manifest_sha256": "1604bb35d731ad9c6c9b59d272aaf9192a7abfd3a4c578eb418eaa328b85be6f",
+          "prefix": "research/evidence/ci-independent-review-20261004/",
+          "product_qualification_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5976523390",
+          "proof_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46#issuecomment-5976523546",
+          "tree": "ceb980cdc2aa1d35c47cb5c8d32ada21c3f6573a"
+        },
+        "source_head": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "source_tree": "f54b18e018221bb39891d48b69e037358e1ec756",
+        "summary_sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "job_conclusions": {
+          "failure": 3,
+          "success": 1
+        },
+        "job_count": 4,
+        "observed_surfaces": {
+          "parity_cases_passed": 40,
+          "python_versions": [
+            "3.11",
+            "3.12",
+            "3.13"
+          ],
+          "ruff_findings_each_matrix_job": 298,
+          "skipped_steps_each_matrix_job": [
+            "Tests",
+            "Compile",
+            "Corpus smoke"
+          ]
+        },
+        "value": "failure"
+      },
+      "nonclaims": [
+        "This record reuses an existing physical hosted run; it is not a new run or independent replication.",
+        "No semantic corpus, assessor, retrieval, or production-feature claim follows from this CI result."
+      ],
+      "observations": [
+        "Each of three combined Python-matrix jobs fails on Ruff with 298 findings; later Tests, Compile, and Corpus smoke steps are skipped. Separate parity succeeds (40 cases)."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/hosted-receipts.json",
+            "sha256": "4d4a1a305fa4fb16e37fa19d75441b58ea229bf91142141439ae45283af48e7c"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/identities.json",
+            "sha256": "0fd231a9116bd3ece7e4234b52b4cc9153de259dee6e1d9aa4c13bf998ae8cec"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/summary.json",
+            "sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "event": "pull_request",
+        "provider": "GitHub Actions",
+        "run_started_at": "2026-10-02T14:54:22Z",
+        "source": "hosted run metadata and log excerpts"
+      },
+      "record_id": "biotech-ci-predecessor-run-37023159772-attempt-1",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "GitHub Actions physical run",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37023159772"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/"
+        }
+      ],
+      "stage": "HOSTED_CI_WORKFLOW_EXECUTION",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "log_inspection_count_this_run": 4,
+        "log_inspection_total_for_three_runs": 26,
+        "run_role": "predecessor"
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "hosted_workflow_source_receipt",
+        "independent_log_inspection"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "state": "UNKNOWN"
+      },
+      "episode_id": "biotech-ci-proof-run-37137560112-attempt-1",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "run_attempt": 1,
+          "workflow_run_id": 37137560112
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "checkout_commit": "0a04fb6f606cd0633f6e07f79bf6302b4e5e2e67",
+        "checkout_tree": "75706cd25b39d526b14fc71b975087bddd38fecf",
+        "head_tree_matches_checkout_tree": true,
+        "hosted_receipts_sha256": "4d4a1a305fa4fb16e37fa19d75441b58ea229bf91142141439ae45283af48e7c",
+        "receipt_publication": {
+          "head": "72711ba2f81b27e68033b287e0035ab8ad170a9a",
+          "manifest_sha256": "1604bb35d731ad9c6c9b59d272aaf9192a7abfd3a4c578eb418eaa328b85be6f",
+          "prefix": "research/evidence/ci-independent-review-20261004/",
+          "product_qualification_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5976523390",
+          "proof_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46#issuecomment-5976523546",
+          "tree": "ceb980cdc2aa1d35c47cb5c8d32ada21c3f6573a"
+        },
+        "source_head": "7196aec48378932e2dde235b560ddaff56a814dc",
+        "source_tree": "75706cd25b39d526b14fc71b975087bddd38fecf",
+        "summary_sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "job_conclusions": {
+          "failure": 1,
+          "success": 10
+        },
+        "job_count": 11,
+        "observed_surfaces": {
+          "compile_executed_each_version": true,
+          "corpus_excluded_each_version": 2,
+          "corpus_valid_each_version": 10,
+          "parity_cases_passed": 40,
+          "pytest_passed_each_version": 189,
+          "pytest_warnings_each_version": 1,
+          "python_versions": [
+            "3.11",
+            "3.12",
+            "3.13"
+          ],
+          "ruff_exit_code": 1,
+          "ruff_findings": 298
+        },
+        "value": "failure"
+      },
+      "nonclaims": [
+        "This record reuses an existing physical hosted run; it is not a new run or independent replication.",
+        "No semantic corpus, assessor, retrieval, or production-feature claim follows from this CI result."
+      ],
+      "observations": [
+        "Ruff fails with 298 findings, while pytest, compile, corpus smoke, and parity physically run and succeed in independent jobs.",
+        "The workflow conclusion remains failure: one failed job and ten successful jobs."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/hosted-receipts.json",
+            "sha256": "4d4a1a305fa4fb16e37fa19d75441b58ea229bf91142141439ae45283af48e7c"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/identities.json",
+            "sha256": "0fd231a9116bd3ece7e4234b52b4cc9153de259dee6e1d9aa4c13bf998ae8cec"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/summary.json",
+            "sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "event": "pull_request",
+        "provider": "GitHub Actions",
+        "run_started_at": "2026-10-03T16:37:56Z",
+        "source": "hosted run metadata and log excerpts"
+      },
+      "record_id": "biotech-ci-proof-run-37137560112-attempt-1",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "GitHub Actions physical run",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137560112"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/"
+        }
+      ],
+      "stage": "HOSTED_CI_WORKFLOW_EXECUTION",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "log_inspection_count_this_run": 11,
+        "log_inspection_total_for_three_runs": 26,
+        "run_role": "proof"
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "hosted_workflow_source_receipt",
+        "independent_log_inspection"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "state": "UNKNOWN"
+      },
+      "episode_id": "biotech-ci-product-run-37137557939-attempt-1",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "run_attempt": 1,
+          "workflow_run_id": 37137557939
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "checkout_commit": "13e0d253d37071839709b9e86bf2f09dde7c1d11",
+        "checkout_tree": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+        "head_tree_matches_checkout_tree": true,
+        "hosted_receipts_sha256": "4d4a1a305fa4fb16e37fa19d75441b58ea229bf91142141439ae45283af48e7c",
+        "receipt_publication": {
+          "head": "72711ba2f81b27e68033b287e0035ab8ad170a9a",
+          "manifest_sha256": "1604bb35d731ad9c6c9b59d272aaf9192a7abfd3a4c578eb418eaa328b85be6f",
+          "prefix": "research/evidence/ci-independent-review-20261004/",
+          "product_qualification_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5976523390",
+          "proof_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46#issuecomment-5976523546",
+          "tree": "ceb980cdc2aa1d35c47cb5c8d32ada21c3f6573a"
+        },
+        "source_head": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+        "source_tree": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+        "summary_sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "job_conclusions": {
+          "success": 11
+        },
+        "job_count": 11,
+        "observed_surfaces": {
+          "compile_executed_each_version": true,
+          "corpus_excluded_each_version": 2,
+          "corpus_valid_each_version": 10,
+          "parity_cases_passed": 42,
+          "pytest_passed_each_version": 113,
+          "pytest_warnings_each_version": 1,
+          "python_versions": [
+            "3.11",
+            "3.12",
+            "3.13"
+          ],
+          "ruff_passed": true
+        },
+        "value": "success"
+      },
+      "nonclaims": [
+        "This record reuses an existing physical hosted run; it is not a new run or independent replication.",
+        "No semantic corpus, assessor, retrieval, or production-feature claim follows from this CI result."
+      ],
+      "observations": [
+        "All eleven jobs succeed at the exact product candidate: Ruff, pytest, compile, corpus smoke, and parity.",
+        "A green workflow is an execution observation; merge authority remains separately gated."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/hosted-receipts.json",
+            "sha256": "4d4a1a305fa4fb16e37fa19d75441b58ea229bf91142141439ae45283af48e7c"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/identities.json",
+            "sha256": "0fd231a9116bd3ece7e4234b52b4cc9153de259dee6e1d9aa4c13bf998ae8cec"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/summary.json",
+            "sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "event": "pull_request",
+        "provider": "GitHub Actions",
+        "run_started_at": "2026-10-03T16:37:54Z",
+        "source": "hosted run metadata and log excerpts"
+      },
+      "record_id": "biotech-ci-product-run-37137557939-attempt-1",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "GitHub Actions physical run",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/actions/runs/37137557939"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/"
+        }
+      ],
+      "stage": "HOSTED_CI_WORKFLOW_EXECUTION",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "log_inspection_count_this_run": 11,
+        "log_inspection_total_for_three_runs": 26,
+        "run_role": "product"
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "independent_engineering_review",
+        "owner_recorded_promotion_boundary"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "scope": "exact frozen proof candidate",
+        "value": "SUPPORTED_FOR_PROMOTION"
+      },
+      "episode_id": "biotech-ci-proof-independent-review-20261004",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "state": "UNKNOWN"
+        },
+        "status": {
+          "state": "UNKNOWN"
+        }
+      },
+      "immutable_identities": {
+        "receipt_publication": {
+          "head": "72711ba2f81b27e68033b287e0035ab8ad170a9a",
+          "manifest_sha256": "1604bb35d731ad9c6c9b59d272aaf9192a7abfd3a4c578eb418eaa328b85be6f",
+          "prefix": "research/evidence/ci-independent-review-20261004/",
+          "product_qualification_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5976523390",
+          "proof_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46#issuecomment-5976523546",
+          "tree": "ceb980cdc2aa1d35c47cb5c8d32ada21c3f6573a"
+        },
+        "review_sha256": "66d6cc26c7e3b9107364cfa8a9f8d5908779ae383d677769d2238474ead9a4e7",
+        "reviewed_subject": {
+          "head": "7196aec48378932e2dde235b560ddaff56a814dc",
+          "parents": [
+            "1e3d79a53f181c79bdeeb6137e88ae2897797106"
+          ],
+          "tree": "75706cd25b39d526b14fc71b975087bddd38fecf",
+          "workflow_blob": "e6a9886621e36f255ad6e9f9e88b9e9bfdb7a00d"
+        },
+        "summary_sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+      },
+      "inferences": [
+        "On the frozen research tree, a failing Ruff job coexists with physical execution of all other intended evidence surfaces in the same completed workflow."
+      ],
+      "limitations": [
+        "Ruff environment execution is explicitly consolidated to Python 3.11, while the existing py311 target and lint rules are retained. pytest, compile, and corpus preserve 3.11/3.12/3.13. CI check names change."
+      ],
+      "lineage": {
+        "kind": "review_of",
+        "replication": false,
+        "target_record_id": "biotech-ci-proof-run-37137560112-attempt-1"
+      },
+      "machine_result": {
+        "state": "UNKNOWN"
+      },
+      "nonclaims": [
+        "Qualification is not merge authorization.",
+        "No research semantic or scientific claim is validated.",
+        "No release or production feature promotion is authorized by this record."
+      ],
+      "observations": [
+        "Published review inspected 26 job logs across three exact-head/tree-bound hosted runs.",
+        "Product and proof candidates change only one workflow file and use identical workflow blobs."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/summary.json",
+            "sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/review.md",
+            "sha256": "66d6cc26c7e3b9107364cfa8a9f8d5908779ae383d677769d2238474ead9a4e7"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/static-verification.json",
+            "sha256": "6a38f0b43c36cd56da07036ffcb4c032433f17388cdebebf070ce8057ad6abae"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/authority.json",
+            "sha256": "14b6d995747059f088777e58a9097f478b3a2654be4acc4ed7bf9c20be99b820"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "state": "UNKNOWN"
+      },
+      "record_id": "biotech-ci-proof-independent-review-20261004",
+      "review": {
+        "classification": "bounded CI engineering review; not semantic adjudication or operator merge authorization",
+        "disposition": "SUPPORTED_FOR_PROMOTION"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/"
+        }
+      ],
+      "stage": "CI_ENGINEERING_QUALIFICATION_REVIEW",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "all_logs_inspected": 26,
+        "cross_run_record_ids": [
+          "biotech-ci-predecessor-run-37023159772-attempt-1",
+          "biotech-ci-proof-run-37137560112-attempt-1",
+          "biotech-ci-product-run-37137557939-attempt-1"
+        ],
+        "operator_gate": {
+          "operator_gate_remains": true,
+          "qualification_is_not_merge_authorization": true,
+          "sources": [
+            "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5971207812",
+            "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40#issuecomment-5971207277",
+            "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40#issuecomment-5971207409"
+          ]
+        }
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "independent_engineering_review",
+        "owner_recorded_promotion_boundary"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "scope": "exact frozen product candidate",
+        "value": "QUALIFIED_READY_FOR_OPERATOR_PROMOTION"
+      },
+      "episode_id": "biotech-ci-product-independent-review-20261004",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "state": "UNKNOWN"
+        },
+        "status": {
+          "state": "UNKNOWN"
+        }
+      },
+      "immutable_identities": {
+        "receipt_publication": {
+          "head": "72711ba2f81b27e68033b287e0035ab8ad170a9a",
+          "manifest_sha256": "1604bb35d731ad9c6c9b59d272aaf9192a7abfd3a4c578eb418eaa328b85be6f",
+          "prefix": "research/evidence/ci-independent-review-20261004/",
+          "product_qualification_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5976523390",
+          "proof_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46#issuecomment-5976523546",
+          "tree": "ceb980cdc2aa1d35c47cb5c8d32ada21c3f6573a"
+        },
+        "review_sha256": "66d6cc26c7e3b9107364cfa8a9f8d5908779ae383d677769d2238474ead9a4e7",
+        "reviewed_subject": {
+          "head": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+          "parents": [
+            "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3"
+          ],
+          "tree": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+          "workflow_blob": "e6a9886621e36f255ad6e9f9e88b9e9bfdb7a00d"
+        },
+        "summary_sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+      },
+      "inferences": [
+        "One workflow file, with existing commands and runtime matrices separated into independent job results; no research implementation or lint waiver is added."
+      ],
+      "limitations": [
+        "Ruff environment execution is explicitly consolidated to Python 3.11, while the existing py311 target and lint rules are retained. pytest, compile, and corpus preserve 3.11/3.12/3.13. CI check names change."
+      ],
+      "lineage": {
+        "kind": "review_of",
+        "replication": false,
+        "target_record_id": "biotech-ci-product-run-37137557939-attempt-1"
+      },
+      "machine_result": {
+        "state": "UNKNOWN"
+      },
+      "nonclaims": [
+        "Qualification is not merge authorization.",
+        "No research semantic or scientific claim is validated.",
+        "No release or production feature promotion is authorized by this record."
+      ],
+      "observations": [
+        "Published review inspected 26 job logs across three exact-head/tree-bound hosted runs.",
+        "Product and proof candidates change only one workflow file and use identical workflow blobs."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/summary.json",
+            "sha256": "63936c697f0fbbc651292d831f69b56f040f4cbf4f6e2bae9e717e78a3977b71"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/review.md",
+            "sha256": "66d6cc26c7e3b9107364cfa8a9f8d5908779ae383d677769d2238474ead9a4e7"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/static-verification.json",
+            "sha256": "6a38f0b43c36cd56da07036ffcb4c032433f17388cdebebf070ce8057ad6abae"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/authority.json",
+            "sha256": "14b6d995747059f088777e58a9097f478b3a2654be4acc4ed7bf9c20be99b820"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "state": "UNKNOWN"
+      },
+      "record_id": "biotech-ci-product-independent-review-20261004",
+      "review": {
+        "classification": "bounded CI engineering review; not semantic adjudication or operator merge authorization",
+        "disposition": "QUALIFIED_READY_FOR_OPERATOR_PROMOTION"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/72711ba2f81b27e68033b287e0035ab8ad170a9a/research/evidence/ci-independent-review-20261004/"
+        }
+      ],
+      "stage": "CI_ENGINEERING_QUALIFICATION_REVIEW",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "all_logs_inspected": 26,
+        "cross_run_record_ids": [
+          "biotech-ci-predecessor-run-37023159772-attempt-1",
+          "biotech-ci-proof-run-37137560112-attempt-1",
+          "biotech-ci-product-run-37137557939-attempt-1"
+        ],
+        "operator_gate": {
+          "operator_gate_remains": true,
+          "qualification_is_not_merge_authorization": true,
+          "sources": [
+            "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5971207812",
+            "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40#issuecomment-5971207277",
+            "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40#issuecomment-5971207409"
+          ]
+        }
+      }
+    }
+  ],
+  "schema": "evidence-intake-delta/v0"
+}

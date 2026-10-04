@@ -1,0 +1,126 @@
+{
+  "deduplication_scope": {
+    "checked": [
+      "Evidence Room default-branch code search A07/A08",
+      "promoted 26-episode seed baseline at 8369dcf",
+      "live #47 issue/comments",
+      "Inspected live intake branch search results; not an exhaustive private branch inventory",
+      "live #50/#52 pilot identities"
+    ],
+    "limit": "Not a claim about inaccessible/private/local nominations. Recheck current accepted deltas before any future admission.",
+    "observed": "The source-side A07/A08 INTAKE.json nominations already exist. No A07/A08 admission or intake delta was located in inspected Evidence Room surfaces; current #52 real pilot contains VE-NOM-01/02/03 only."
+  },
+  "new_physical_executions_nominated": 0,
+  "nominations": [
+    {
+      "action": "REUSE_EXISTING_SOURCE_NOMINATION_DO_NOT_CREATE_SECOND_EXECUTION",
+      "closure_reconciliation": {
+        "branch_preserved": true,
+        "coordination_issue_reason": "completed",
+        "coordination_issue_state": "closed",
+        "exact_head_unchanged": true,
+        "issue_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/42#issuecomment-5976434665",
+        "live_source_state_independently_rechecked": true,
+        "merged": false,
+        "pr_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/47#issuecomment-5976435115",
+        "source_pr_state": "closed"
+      },
+      "coordination_issue": 42,
+      "disposition": "BOUNDED_CITATION_SPAN_EXPANSION_SUPPORTED",
+      "head": "17ebc301c9fa810d49c443d6d9919bbcad0e95d4",
+      "inherited_semantic_limits": {
+        "confidence": "moderate",
+        "epistemic_status": "needs-audit",
+        "evaluator": "agent_llm",
+        "independent_human": false
+      },
+      "inherited_semantic_source": {
+        "commit": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+        "path": "research/evidence/wave-a-ep1-authority-readjudication-v1/adjudication.json",
+        "repository": "camerontjs-dot/biotech-rag-assistant",
+        "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9/research/evidence/wave-a-ep1-authority-readjudication-v1/adjudication.json"
+      },
+      "new_independent_semantic_adjudication": false,
+      "nomination": {
+        "blob": "886abfa5e3a4c028587fbfb329ebbcadcd7eb7ec",
+        "bytes": 1904,
+        "commit": "17ebc301c9fa810d49c443d6d9919bbcad0e95d4",
+        "path": "research/evidence/a08-citation-span-20261003/INTAKE.json",
+        "sha256": "b61f64c2f03ebf92c12d66f0ccec20cda846c51b25a3f9a64ee194fd051ba4fe",
+        "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/17ebc301c9fa810d49c443d6d9919bbcad0e95d4/research/evidence/a08-citation-span-20261003/INTAKE.json"
+      },
+      "reporting_correction": {
+        "frozen_and_recomputed_increase": 28,
+        "prior_prose_character_increase": 30
+      },
+      "repository": "camerontjs-dot/biotech-rag-assistant",
+      "result": {
+        "blob": "41251b1145b396c693344b68aecd922374934ea7",
+        "bytes": 3634,
+        "commit": "17ebc301c9fa810d49c443d6d9919bbcad0e95d4",
+        "path": "research/evidence/a08-citation-span-20261003/RESULT.json",
+        "sha256": "1d3d14edb8e91faabb476094613b18634aa0a1725d9fa4c8e74063a66c247bc2",
+        "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/17ebc301c9fa810d49c443d6d9919bbcad0e95d4/research/evidence/a08-citation-span-20261003/RESULT.json"
+      },
+      "source_pr": 47,
+      "source_replay_matches": true,
+      "stable_source_experiment_id": "a08-citation-span-20261003",
+      "successor": 50,
+      "tree": "6b05cc844db1777ad3ceda63c60e265deb53c933"
+    },
+    {
+      "action": "REUSE_EXISTING_SOURCE_NOMINATION_DO_NOT_CREATE_SECOND_EXECUTION",
+      "closure_reconciliation": {
+        "branch_preserved": true,
+        "coordination_issue_reason": "completed",
+        "coordination_issue_state": "closed",
+        "exact_head_unchanged": true,
+        "issue_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/43#issuecomment-5976435526",
+        "live_source_state_independently_rechecked": true,
+        "merged": false,
+        "pr_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/48#issuecomment-5976435918",
+        "source_pr_state": "closed"
+      },
+      "coordination_issue": 43,
+      "disposition": "SAME_SECTION_BODY_EXPANSION_NOT_SUPPORTED",
+      "head": "8bebd572ca3628e3fc992c8cd0a3fb17cb2b69dc",
+      "inherited_semantic_limits": {
+        "confidence": "moderate",
+        "epistemic_status": "needs-audit",
+        "evaluator": "agent_llm",
+        "independent_human": false
+      },
+      "inherited_semantic_source": {
+        "commit": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+        "path": "research/evidence/wave-a-ep1-authority-readjudication-v1/adjudication.json",
+        "repository": "camerontjs-dot/biotech-rag-assistant",
+        "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9/research/evidence/wave-a-ep1-authority-readjudication-v1/adjudication.json"
+      },
+      "new_independent_semantic_adjudication": false,
+      "nomination": {
+        "blob": "78302665284d1002b463e4aebefffae9dc410958",
+        "bytes": 2818,
+        "commit": "8bebd572ca3628e3fc992c8cd0a3fb17cb2b69dc",
+        "path": "research/evidence/a07-body-expansion-20261003/INTAKE.json",
+        "sha256": "bdeed6232bc5acb5a448d9016a079df3185a33c3597a7dfac80443e17475eaf3",
+        "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/8bebd572ca3628e3fc992c8cd0a3fb17cb2b69dc/research/evidence/a07-body-expansion-20261003/INTAKE.json"
+      },
+      "reporting_correction": null,
+      "repository": "camerontjs-dot/biotech-rag-assistant",
+      "result": {
+        "blob": "44acda51a22a403f88b283bb68145322401ae5e7",
+        "bytes": 4835,
+        "commit": "8bebd572ca3628e3fc992c8cd0a3fb17cb2b69dc",
+        "path": "research/evidence/a07-body-expansion-20261003/RESULT.json",
+        "sha256": "7f765068965667a497a24f9052b7d78a8fcfd97eb7638b7e9cd32e9955484ae8",
+        "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/8bebd572ca3628e3fc992c8cd0a3fb17cb2b69dc/research/evidence/a07-body-expansion-20261003/RESULT.json"
+      },
+      "source_pr": 48,
+      "source_replay_matches": true,
+      "stable_source_experiment_id": "a07-body-expansion-20261003",
+      "successor": 49,
+      "tree": "bc17b9495980367cee34861cc7bb3997e9ffb76c"
+    }
+  ],
+  "schema": "biotech-existing-nomination-reconciliation/v1"
+}

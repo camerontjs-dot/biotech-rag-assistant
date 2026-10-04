@@ -1,0 +1,919 @@
+{
+  "access_observations": [],
+  "baseline_binding": {
+    "commit": "8369dcfdc8f473c5dce4d301072b77b05fd0d569",
+    "episodes_sha256": "c5f5acb3d66214264f78d18b708635bc5f73466a5b3d0b8d1e1f273e2307ca9f",
+    "tree": "215eb772e43f62d29405b4243401172e6ca7ea0f"
+  },
+  "collection_nominations": [
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr51-author-transport-complete-20261003",
+      "record_id": "biotech-pr51-author-transport-complete-20261003"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr51-author-01-first-attempt-20261003",
+      "record_id": "biotech-pr51-author-01-first-attempt-20261003"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr51-author-12-first-attempt-20261003",
+      "record_id": "biotech-pr51-author-12-first-attempt-20261003"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr51-author-20-first-attempt-20261003",
+      "record_id": "biotech-pr51-author-20-first-attempt-20261003"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr51-author-corpus-freeze-20261004",
+      "record_id": "biotech-pr51-author-corpus-freeze-20261004"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr51-semantic-stages-not-run-20261004",
+      "record_id": "biotech-pr51-semantic-stages-not-run-20261004"
+    }
+  ],
+  "delta_id": "biotech-pr51-apparatus-and-nonexecution-20261004",
+  "records": [
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "owner_source_material",
+        "local_mechanical_review"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "state": "UNKNOWN"
+      },
+      "episode_id": "biotech-pr51-author-transport-complete-20261003",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "state": "UNKNOWN"
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "attempt_custody_sha256": "becf46cb17b745aae9f098e2f36cacbe98507da69ee50d40eb6be792e84a0e5d",
+        "canonical_attempt_map_sha256": "c0e10fa3ac6883b1c91b179baf253208453e187077a8645140b75be06b24dd6b",
+        "receipt_publication": {
+          "comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057",
+          "head": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+          "manifest_sha256": "f1e1b898eb264efa4ed2e9aac78a0aa1263a67f4ef2333f92b6659e331f03283",
+          "prefix": "research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/",
+          "tree": "9a5baa2f1c17a81ef2eb80be3258dbca61af5d00"
+        },
+        "runtime_check_sha256": "fea9fc0130de9f6317b27beae375b590e2cc24f8b00e4cdc3da0c1ed3fa7cefa",
+        "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+        "source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "counts": {
+          "canonical_partitions": 28,
+          "raw_responses": 30,
+          "source_attempt_directories": 31
+        },
+        "value": "28_COMPLETE_TRANSPORT_SCHEMA_VALID_RESPONSES"
+      },
+      "nonclaims": [
+        "This is an aggregate reconstruction of existing author calls, not a new physical attempt or independent replication.",
+        "Transport schema validity does not establish planned-slot completeness, semantic validity, or a valid corpus freeze."
+      ],
+      "observations": [
+        "Mechanical canonical selection identifies one complete transport-schema-valid response for each of 28 frozen partitions.",
+        "Thirty-one request byte reconstructions and thirty response hashes were checked; author-20's first response is absent."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/canonical-attempt-map.json",
+            "sha256": "c0e10fa3ac6883b1c91b179baf253208453e187077a8645140b75be06b24dd6b"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/attempt-custody.json",
+            "sha256": "becf46cb17b745aae9f098e2f36cacbe98507da69ee50d40eb6be792e84a0e5d"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/runtime-identity-check.json",
+            "sha256": "fea9fc0130de9f6317b27beae375b590e2cc24f8b00e4cdc3da0c1ed3fa7cefa"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "model": "qwen3.5:9b",
+        "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "provider": "Ollama",
+        "provider_hidden_context": "UNKNOWN",
+        "provider_version": "0.35.1"
+      },
+      "record_id": "biotech-pr51-author-transport-complete-20261003",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant"
+        },
+        {
+          "source": {
+            "commit": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+            "path": "research/evidence/semantic-control-memory-bounded-20261003",
+            "repository": "camerontjs-dot/biotech-rag-assistant",
+            "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003"
+          }
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/"
+        },
+        {
+          "role": "owner terminal reconciliation",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057"
+        }
+      ],
+      "stage": "AUTHOR_TRANSPORT",
+      "unknowns": [
+        "Full private model inventory is intentionally unpublished; its hash is not independent inspection of its bytes.",
+        "Provider hidden context remains UNKNOWN."
+      ],
+      "unmodeled_source_fields": {
+        "aggregation": "28 canonical calls; constituent attempt identities remain in canonical map",
+        "constituent_request_hashes": [
+          "ddc24f83b913c141239335fae3decb137d64c26e7c1ba7e9244426cd8f1e3700",
+          "d9cf47ea52f4fd82a748d152270940363adf7e5559edc2607f073ec7deae1ea0",
+          "f819e64b3ba87435caa95db037036e3987e746fcec5bf76fd2b9d888559274ea",
+          "d63bd664310b1235272ce3d2f3acf32165b28b49f964ec744f70c557fd36763e",
+          "389df83af6e097e9c667df4dc2e8ac8355ca2a87518e96d4e6de860be839db2f",
+          "5cead1adc355a8a1f3c50a04928b95f9cc4bda8641475a73bf56b6dc6dcd0658",
+          "e52e4a9e996cd1be75c0bcf0c24d4fa591d237c7c88fb346cd112703af0d497a",
+          "9557db23bebd2859cfdb6ee982f0acac24207cf0947891fa549cc526cc677f07",
+          "3a6dbfa5aac0c9e266169ea97d26c2f3c0bfd7def3a4e9174243849875a506be",
+          "b5bf6202654df5abcfa5694db1efe6f894d429cda595ab69058bbb9e287d714f",
+          "bd0d0fe88f0bd43142efb01daa585ff356e348a9360ba668a1fecf68cdeb6f10",
+          "b3d6abb1afb14e41649ec7081d7d29e5e302eac09ac0a87f91fa0c74534ca918",
+          "f72aaa53476ee6b0cb759b6cba4a0e7361261a3acd34f4c6010a1c9e3202ae87",
+          "26b7b425864d2614993a0aa5ee60dfd031ab10cc96ddce3868e775af3181be4c",
+          "5006ab805f94be1d5d5da986999172ed298e33a7bb6e0d65bd4a70c31a9b77c0",
+          "c9288a99eeb9a9baafb6a4fd8b5f0f29953e7f08d8d10ee5eb96bda07e55687f",
+          "065b15bdfdf7089ec22e13a4926c69d255e61b6b06c1f904e9d5d4078158965f",
+          "dca5457cfebb28c16eaeb2e98ad951a22dc418687a44042c16c798551ebbaa1d",
+          "faf90ef83414bfd84be815ff804f6938f3a2576f37af217e257d2f3473546994",
+          "ce90c20948ef4210e796833f87bf5c3a236f905c1981b6f8ecdbd792a3a94a30",
+          "ae853db925c68772bce64f3be6fb85228380e83b433b04fd40ab7965c5b5cdb1",
+          "b859b1fbd5d23657ee57100f29dbc07de73aaabd4ac29f3d9e5ce300c7502169",
+          "c1c3698e715740b243e81b154752edac1ea634178677c13eeeff53a4845deb0e",
+          "ecda78b239143c890f7561cdfaa339c584030c9beb9822eb0019a7dd48159dca",
+          "7f6a6bf6206f9b0deadef5caf4cfefc06cfba2d535e7280cd97e3d40f2fb39c6",
+          "386da08d97c4f3d6edc299f75684ed51d7418b77f8e8c25d8af64c45d4875be0",
+          "e8cfeda9aefcbcefea4a006d6091130def4c4467ba0a5557e7032fc30ce1529f",
+          "379cee7609f3e81e0859d70f71d84e355bdc85d2050be4fd3f1587d6041fda38"
+        ]
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "direct_source_receipt",
+        "source_owner_apparatus_classification"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "classification_source": "preserved owner correction records and local mechanical custody check",
+        "scope": "author transport; no semantic decision",
+        "value": "OUTPUT_CEILING_FAILURE"
+      },
+      "episode_id": "biotech-pr51-author-01-first-attempt-20261003",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "directory": "author-01",
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "started_at_utc": "2026-10-04T01:20:27.447876+00:00"
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "config_sha256": "0e67c6a3ae9d8b0828c3e0b56682f04853660db3a3cf3ccdc8120f153a2e1961",
+        "files": {
+          "before-send.json": "1e6f636521a7258aa8803398149b18e227b61b1ceeee1d5fc624e8e65f1df3d9",
+          "http-response.json": "39eb6ebb7a7e733230402a4a9836b6af40482f7aa5259ef3606ad51aa8307c8e",
+          "prompt.txt": "8575963f5311f9c3b4d50ab067f8e35fa437f50535e779e538a1d0dc4c8026b3",
+          "provider-discovery.raw.json": "396db0946fbcb2896995ef22b1785c54fa7cfae0e03badb57a381f066141cad7",
+          "provider-response.raw.json": "e1fe88d6a51844c2ddfb957ac000429ab8a93924d12ac56769baff728897bfb8",
+          "receipt.json": "1f7ca68bd29054bc4048938a0278a7082a448bc67912596dbaf8f75c499f1aba",
+          "request.json": "4dabd807e1f456a69d07a453b75bb343b342dc4e3807699abd5e42ef894b287f",
+          "send-started.json": "d31d30fefea2844ca43ec6cd2fd55bf2dea2cd9eea9f5d8999cd84f2b6ed0a1f"
+        },
+        "source_directory": "research/evidence/semantic-control-memory-bounded-20261003/calls/author-01",
+        "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+        "source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91",
+        "spec_sha256": "18910a954ab280317f0e438564ddf610b648e5e7ceaa9cc3b1e6788cde59801b"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "complete_transport_schema_valid": false,
+        "done_reason": "length",
+        "eval_count": 2048,
+        "polarity": "adverse",
+        "prompt_eval_count": 15631,
+        "value": "APPARATUS_INVALID"
+      },
+      "nonclaims": [
+        "No semantic performance or independent replication claim.",
+        "A later complete response does not erase this earlier attempt."
+      ],
+      "observations": [
+        "First attempt remains separate from its later complete canonical response."
+      ],
+      "privacy": {
+        "class": "PUBLIC_OWNER_RECEIPT_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-01/provider-response.raw.json",
+            "sha256": "e1fe88d6a51844c2ddfb957ac000429ab8a93924d12ac56769baff728897bfb8"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-01/receipt.json",
+            "sha256": "1f7ca68bd29054bc4048938a0278a7082a448bc67912596dbaf8f75c499f1aba"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-01/request.json",
+            "sha256": "4dabd807e1f456a69d07a453b75bb343b342dc4e3807699abd5e42ef894b287f"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-01/send-started.json",
+            "sha256": "d31d30fefea2844ca43ec6cd2fd55bf2dea2cd9eea9f5d8999cd84f2b6ed0a1f"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "aperture": "exact request bytes",
+        "hidden_provider_context": "UNKNOWN",
+        "model": "qwen3.5:9b",
+        "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "parameters": {
+          "num_ctx": 18432,
+          "num_predict": 2048,
+          "repeat_penalty": 1.0,
+          "seed": 37030,
+          "temperature": 0,
+          "top_k": 1,
+          "top_p": 1.0
+        },
+        "provider_version": "0.35.1",
+        "session_reuse": false,
+        "tools": []
+      },
+      "record_id": "biotech-pr51-author-01-first-attempt-20261003",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "source": {
+            "commit": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+            "path": "research/evidence/semantic-control-memory-bounded-20261003/calls/author-01",
+            "repository": "camerontjs-dot/biotech-rag-assistant",
+            "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-01"
+          }
+        },
+        {
+          "role": "owner terminal reconciliation",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057"
+        }
+      ],
+      "stage": "AUTHOR_TRANSPORT_ATTEMPT",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "independent_replication": false,
+        "same_research_question": true,
+        "successor_directory": "author-01-attempt-2"
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "direct_source_receipt",
+        "source_owner_apparatus_classification"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "classification_source": "preserved owner correction records and local mechanical custody check",
+        "scope": "author transport; no semantic decision",
+        "value": "CONTEXT_WINDOW_FAILURE"
+      },
+      "episode_id": "biotech-pr51-author-12-first-attempt-20261003",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "directory": "author-12",
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "started_at_utc": "2026-10-04T00:43:17.484638+00:00"
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "config_sha256": "58e8189aa29ecf6064f978aeae68d3132cf1d7001465ccd6ec7bde91b042d3d8",
+        "files": {
+          "before-send.json": "31a44559dbbec5478ab908d978246d400921ece8d719493d5384ff5f264b7a40",
+          "http-response.json": "e8dada524b105598e79171c31effc5cc13675d0b01b6d44e8081bd604fac0108",
+          "prompt.txt": "36880935fbf396f1088892a0d455d4d18e1fdaf18297b5bf22dcd2f1fe9a85b9",
+          "provider-discovery.raw.json": "396db0946fbcb2896995ef22b1785c54fa7cfae0e03badb57a381f066141cad7",
+          "provider-response.raw.json": "0fd01b16552ecdaa508a06e7e6f90a52c164f33b592a11f8dd99f460d9aa5172",
+          "receipt.json": "40d3aaab118b3c5c17be80da8b6c0b7408a5682ddfef905addbe31110cedea64",
+          "request.json": "1871f2e2297bf87e113f4659313fcbdb1a236af937749a7cb2bfa7c9dc587a73",
+          "send-started.json": "80a684c73c50f205bd018470ed3c0b86fceaef54f35769abdebdf6ded47ea1a3"
+        },
+        "source_directory": "research/evidence/semantic-control-memory-bounded-20261003/calls/author-12",
+        "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+        "source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91",
+        "spec_sha256": "df6d579281c1e46c3263af6952b25f34d69026281be12394d430c08e671170c3"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "complete_transport_schema_valid": false,
+        "done_reason": "length",
+        "eval_count": 793,
+        "polarity": "adverse",
+        "prompt_eval_count": 15591,
+        "value": "APPARATUS_INVALID"
+      },
+      "nonclaims": [
+        "No semantic performance or independent replication claim.",
+        "A later complete response does not erase this earlier attempt."
+      ],
+      "observations": [
+        "First attempt remains separate from its later complete canonical response."
+      ],
+      "privacy": {
+        "class": "PUBLIC_OWNER_RECEIPT_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-12/provider-response.raw.json",
+            "sha256": "0fd01b16552ecdaa508a06e7e6f90a52c164f33b592a11f8dd99f460d9aa5172"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-12/receipt.json",
+            "sha256": "40d3aaab118b3c5c17be80da8b6c0b7408a5682ddfef905addbe31110cedea64"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-12/request.json",
+            "sha256": "1871f2e2297bf87e113f4659313fcbdb1a236af937749a7cb2bfa7c9dc587a73"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-12/send-started.json",
+            "sha256": "80a684c73c50f205bd018470ed3c0b86fceaef54f35769abdebdf6ded47ea1a3"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "aperture": "exact request bytes",
+        "hidden_provider_context": "UNKNOWN",
+        "model": "qwen3.5:9b",
+        "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "parameters": {
+          "num_ctx": 16384,
+          "num_predict": 1024,
+          "repeat_penalty": 1.0,
+          "seed": 37030,
+          "temperature": 0,
+          "top_k": 1,
+          "top_p": 1.0
+        },
+        "provider_version": "0.35.1",
+        "session_reuse": false,
+        "tools": []
+      },
+      "record_id": "biotech-pr51-author-12-first-attempt-20261003",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "source": {
+            "commit": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+            "path": "research/evidence/semantic-control-memory-bounded-20261003/calls/author-12",
+            "repository": "camerontjs-dot/biotech-rag-assistant",
+            "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-12"
+          }
+        },
+        {
+          "role": "owner terminal reconciliation",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057"
+        }
+      ],
+      "stage": "AUTHOR_TRANSPORT_ATTEMPT",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "independent_replication": false,
+        "same_research_question": true,
+        "successor_directory": "author-12-attempt-2"
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "direct_source_receipt",
+        "source_owner_apparatus_classification"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "classification_source": "preserved owner correction records and local mechanical custody check",
+        "scope": "author transport; no semantic decision",
+        "value": "REQUEST_SENT_RESPONSE_ABSENT"
+      },
+      "episode_id": "biotech-pr51-author-20-first-attempt-20261003",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "directory": "author-20",
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "started_at_utc": "2026-10-03T18:24:24.872513+00:00"
+        },
+        "status": "REQUEST_SENT_NO_RESPONSE"
+      },
+      "immutable_identities": {
+        "config_sha256": "58e8189aa29ecf6064f978aeae68d3132cf1d7001465ccd6ec7bde91b042d3d8",
+        "files": {
+          "before-send.json": "568a1bc0a85bd4bf941b519f100b33d981fe9d2a128e8306c16c4b8967348c7e",
+          "prompt.txt": "60ce75386b8ff17d21e939b48b268c6f1876e723d6b4777df72ad6d3f2c114f0",
+          "provider-discovery.raw.json": "396db0946fbcb2896995ef22b1785c54fa7cfae0e03badb57a381f066141cad7",
+          "request.json": "ce90c20948ef4210e796833f87bf5c3a236f905c1981b6f8ecdbd792a3a94a30",
+          "send-started.json": "bed02e302f9e1928a3d6e844345a081e9bd650a085dea04f2091926845720be8"
+        },
+        "source_directory": "research/evidence/semantic-control-memory-bounded-20261003/calls/author-20",
+        "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+        "source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91",
+        "spec_sha256": "8ab431156acf759650824a1575c18f895f70f63747534d41f3dd6757e870a5dc"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "complete_transport_schema_valid": false,
+        "done_reason": {
+          "state": "UNKNOWN"
+        },
+        "eval_count": {
+          "state": "UNKNOWN"
+        },
+        "polarity": "adverse",
+        "prompt_eval_count": {
+          "state": "UNKNOWN"
+        },
+        "value": "INTERRUPTED_BEFORE_RESPONSE"
+      },
+      "nonclaims": [
+        "No semantic performance or independent replication claim.",
+        "A later complete response does not erase this earlier attempt."
+      ],
+      "observations": [
+        "First attempt remains separate from its later complete canonical response.",
+        "Request/send evidence exists, but no response bytes or final receipt are preserved."
+      ],
+      "privacy": {
+        "class": "PUBLIC_OWNER_RECEIPT_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-20/request.json",
+            "sha256": "ce90c20948ef4210e796833f87bf5c3a236f905c1981b6f8ecdbd792a3a94a30"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-20/send-started.json",
+            "sha256": "bed02e302f9e1928a3d6e844345a081e9bd650a085dea04f2091926845720be8"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "aperture": "exact request bytes",
+        "hidden_provider_context": "UNKNOWN",
+        "model": "qwen3.5:9b",
+        "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "parameters": {
+          "num_ctx": 16384,
+          "num_predict": 1024,
+          "repeat_penalty": 1.0,
+          "seed": 37030,
+          "temperature": 0,
+          "top_k": 1,
+          "top_p": 1.0
+        },
+        "provider_version": "0.35.1",
+        "session_reuse": false,
+        "tools": []
+      },
+      "record_id": "biotech-pr51-author-20-first-attempt-20261003",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "source": {
+            "commit": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+            "path": "research/evidence/semantic-control-memory-bounded-20261003/calls/author-20",
+            "repository": "camerontjs-dot/biotech-rag-assistant",
+            "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/bf07ea3b16854830a9a2ec5a0c9725488bb02f17/research/evidence/semantic-control-memory-bounded-20261003/calls/author-20"
+          }
+        },
+        {
+          "role": "owner terminal reconciliation",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057"
+        }
+      ],
+      "stage": "AUTHOR_TRANSPORT_ATTEMPT",
+      "unknowns": [
+        "Absent response is not an empty response and has no SHA-256; exact interruption cause remains unknown here."
+      ],
+      "unmodeled_source_fields": {
+        "independent_replication": false,
+        "same_research_question": true,
+        "successor_directory": "author-20-attempt-2"
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "owner_source_material",
+        "local_mechanical_review"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "scope": "AUTHOR_CORPUS_MATERIALIZATION_AND_FREEZE",
+        "value": "APPARATUS_INVALID"
+      },
+      "episode_id": "biotech-pr51-author-corpus-freeze-20261004",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+          "stage": "read-only mechanical corpus reconstruction",
+          "terminal_receipt_sha256": "9356adffb1c0e24234be6771f5367471ed9705d2a2381e531c82407b77685808"
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "attempt_receipt_sha256": "142785de4ade0208630efb851ea4bfa104b2ac54df2965038b0692e19e2d43bd",
+        "identifier_checks_sha256": "f140cef9bb7fe68cf18f340e47d9c355084da1aff64ee13e4926a545f6665e56",
+        "materialization_sha256": "4b717f649f38461ba61eb045808cfb6c769f47ff4fc61904ab1e6e0844c7521d",
+        "receipt_publication": {
+          "comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057",
+          "head": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+          "manifest_sha256": "f1e1b898eb264efa4ed2e9aac78a0aa1263a67f4ef2333f92b6659e331f03283",
+          "prefix": "research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/",
+          "tree": "9a5baa2f1c17a81ef2eb80be3258dbca61af5d00"
+        },
+        "slot_proof_sha256": "17b29b3dc525d6268b60bb0b738c870f13eff870e91ff995ffeeeab34820cf27",
+        "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+        "source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91",
+        "terminal_sha256": "9356adffb1c0e24234be6771f5367471ed9705d2a2381e531c82407b77685808"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "counts": {
+          "author_partitions": 28,
+          "authored_rows": 44,
+          "failed_materialization_partitions": 10,
+          "materialized_partitions": 18,
+          "missing_planned_slots": 11,
+          "new_provider_calls": 0,
+          "new_reducer_calls": 0,
+          "new_semantic_adjudicator_calls": 0,
+          "transport_schema_valid_complete_responses": 28,
+          "unique_planned_slots": 33
+        },
+        "polarity": "adverse",
+        "slot_completeness_passed": false,
+        "value": "AUTHOR_CORPUS_NOT_READY"
+      },
+      "nonclaims": [
+        "No semantic assessor performance result.",
+        "No schema-valid response or repair is silently reclassified as a complete corpus.",
+        "No new provider calls or output repairs.",
+        "Identifier and materializer failures are structural contract observations; no source content or scientific adequacy was adjudicated."
+      ],
+      "observations": [
+        "44 authored rows contain only 33 unique planned slots; 11 planned slots are absent and 11 planned anchor slots occur twice.",
+        "Unchanged materialization accepts 18/28 partitions and rejects 10/28: six case-slot/order, one design-slot, and three relation-slot failures.",
+        "No valid full cases.jsonl/design.json/relations.json freeze exists.",
+        "Identifier-only inspection additionally finds all 16 relation identifiers outside the frozen required relation IDs; the design has 37 unique planned slots, 7 missing, 6 duplicated identifiers, and 1 unexpected identifier."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/TERMINAL.json",
+            "sha256": "9356adffb1c0e24234be6771f5367471ed9705d2a2381e531c82407b77685808"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/slot-proof.json",
+            "sha256": "17b29b3dc525d6268b60bb0b738c870f13eff870e91ff995ffeeeab34820cf27"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/materialization-check.json",
+            "sha256": "4b717f649f38461ba61eb045808cfb6c769f47ff4fc61904ab1e6e0844c7521d"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/corpus-freeze-attempt-receipt.json",
+            "sha256": "142785de4ade0208630efb851ea4bfa104b2ac54df2965038b0692e19e2d43bd"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/identifier-checks.json",
+            "sha256": "f140cef9bb7fe68cf18f340e47d9c355084da1aff64ee13e4926a545f6665e56"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "state": "UNKNOWN"
+      },
+      "record_id": "biotech-pr51-author-corpus-freeze-20261004",
+      "review": {
+        "classification": "structural corpus materialization under frozen protocol; no semantic adjudication",
+        "disposition": "APPARATUS_INVALID"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/"
+        },
+        {
+          "role": "owner terminal reconciliation",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057"
+        }
+      ],
+      "stage": "AUTHOR_CORPUS_MATERIALIZATION_AND_FREEZE",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "case_design_relation_hashes": null,
+        "prior_diagnostic_attempt": {
+          "raw_included": false,
+          "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/execution-attempt-001.json",
+          "sha256": "3785bedf4b581eebe152155a1806df063a8e9549d70faee8595445d929a07c47"
+        },
+        "semantic_question": "UNRESOLVED"
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "owner_source_material",
+        "local_mechanical_review"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "state": "UNKNOWN"
+      },
+      "episode_id": "biotech-pr51-semantic-stages-not-run-20261004",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "state": "UNKNOWN"
+        },
+        "status": "NOT_RUN"
+      },
+      "immutable_identities": {
+        "receipt_publication": {
+          "comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057",
+          "head": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+          "manifest_sha256": "f1e1b898eb264efa4ed2e9aac78a0aa1263a67f4ef2333f92b6659e331f03283",
+          "prefix": "research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/",
+          "tree": "9a5baa2f1c17a81ef2eb80be3258dbca61af5d00"
+        },
+        "source_head": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+        "source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91",
+        "terminal_sha256": "9356adffb1c0e24234be6771f5367471ed9705d2a2381e531c82407b77685808"
+      },
+      "inferences": [],
+      "limitations": [],
+      "lineage": {
+        "kind": "source_stated",
+        "note": "Required prior-stage freeze did not exist; later stages stayed NOT_RUN.",
+        "replication": false,
+        "target_record_id": "biotech-pr51-author-corpus-freeze-20261004"
+      },
+      "machine_result": {
+        "state": "UNKNOWN"
+      },
+      "nonclaims": [
+        "Non-execution is not negative semantic performance.",
+        "No adjudicator identities or agreement denominator are invented.",
+        "No desired semantic outcome was supplied to an adjudicator."
+      ],
+      "observations": [
+        "A, B, C, comparison/disagreement computation, reconciliation, semantic assurance, semantic qualification, and assessor implementation were not executed because the required corpus freeze failed."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/TERMINAL.json",
+            "sha256": "9356adffb1c0e24234be6771f5367471ed9705d2a2381e531c82407b77685808"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "state": "UNKNOWN"
+      },
+      "record_id": "biotech-pr51-semantic-stages-not-run-20261004",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/7556badf6077bac2edd20f163faa5af0ef1b95d1/research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/"
+        },
+        {
+          "role": "owner terminal reconciliation",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057"
+        },
+        {
+          "role": "closed apparatus recovery coordination issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/41"
+        }
+      ],
+      "stage": "SEMANTIC_ADJUDICATION_COMPARISON_AND_ASSURANCE",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "adjudicator_A": {
+          "state": "UNKNOWN"
+        },
+        "adjudicator_B": {
+          "state": "UNKNOWN"
+        },
+        "adjudicator_C": {
+          "state": "UNKNOWN"
+        },
+        "stage_states": {
+          "A": "NOT_RUN",
+          "B": "NOT_RUN",
+          "C": "NOT_RUN",
+          "assessor_implementation": "NOT_RUN",
+          "canonical_attempt_selection": "RECORDED_MECHANICALLY",
+          "corpus_design_relation_freeze": "APPARATUS_INVALID",
+          "raw_comparison_disagreements": "NOT_RUN",
+          "reconciliation": "NOT_RUN",
+          "request_path": "REQUEST_PATH_COMPLETE",
+          "semantic_assurance": "NOT_RUN",
+          "semantic_qualification": "NOT_RUN"
+        }
+      }
+    }
+  ],
+  "schema": "evidence-intake-delta/v0"
+}

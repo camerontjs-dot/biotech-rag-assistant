@@ -1,0 +1,34 @@
+{
+  "existing_source_nominations": 2,
+  "intake_contract": {
+    "candidate_pr": 52,
+    "composer_blob": "282f87c0ef5d2534031dc4c06830fe3735c3964f",
+    "head": "ac5aefd0b7fc6bed426b29c62920adf706fecfc5",
+    "issue": 47,
+    "mechanism_disposition": "BOUNDED_APPEND_ONLY_EVIDENCE_INTAKE_QUALIFIED",
+    "repository": "camerontjs-dot/the-evidence-room",
+    "review": "https://github.com/camerontjs-dot/the-evidence-room/issues/47#issuecomment-5975739356",
+    "schema": "evidence-intake-delta/v0",
+    "semantic_admission": "MIXED / HOLD"
+  },
+  "new_candidate_records": 13,
+  "new_delta_candidates": 3,
+  "nonexecution": {
+    "admission": false,
+    "collector": false,
+    "compose": false,
+    "promotion": false,
+    "stage": false
+  },
+  "observed_at": "2026-10-04T04:22:26.026936+00:00",
+  "publication_bindings_complete": true,
+  "publication_note": "Published receipts are linked at immutable Git commits with exact hashes. Original source executions and original product heads remain separate. Any remaining logical hash pointer is not a claim of public byte availability.",
+  "required_next": [
+    "Recheck the promoted baseline and current accepted delta identities before admission.",
+    "Reuse the existing A07/A08 nomination identities instead of counting new experiments.",
+    "Perform separate source/provenance and semantic-admission review; this package has only structural preflight.",
+    "Respect the existing CI operator-promotion gate and all research terminal boundaries."
+  ],
+  "schema": "biotech-intake-preparation-status/v1",
+  "status": "STAGED_NOT_ADMITTED"
+}

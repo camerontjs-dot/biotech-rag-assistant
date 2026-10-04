@@ -1,0 +1,298 @@
+{
+  "access_observations": [],
+  "baseline_binding": {
+    "commit": "8369dcfdc8f473c5dce4d301072b77b05fd0d569",
+    "episodes_sha256": "c5f5acb3d66214264f78d18b708635bc5f73466a5b3d0b8d1e1f273e2307ca9f",
+    "tree": "215eb772e43f62d29405b4243401172e6ca7ea0f"
+  },
+  "collection_nominations": [
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr50-independent-contract-probes-20261004",
+      "record_id": "biotech-pr50-independent-contract-probes-20261004"
+    },
+    {
+      "authority": "navigation_only",
+      "collection_id": "intake-navigation",
+      "facet": "biotech-rag apparatus or grounding",
+      "nomination_id": "nav-biotech-pr50-independent-contract-review-20261004",
+      "record_id": "biotech-pr50-independent-contract-review-20261004"
+    }
+  ],
+  "delta_id": "biotech-pr50-independent-contract-review-20261004",
+  "records": [
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "owner_source_material",
+        "local_mechanical_review"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "state": "UNKNOWN"
+      },
+      "episode_id": "biotech-pr50-independent-contract-probes-20261004",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "probe_log_sha256": "88a7fe76a2b3196ee4014cf4ce53963ef3780bd74fdf4f60680027e262b56870",
+          "subject": "9685872827b37b55c981b88ad3177a2ed3b13533"
+        },
+        "status": "EXECUTED"
+      },
+      "immutable_identities": {
+        "counterexamples_sha256": "fdb9439935551bb0c7cbcee9bee75a89cc12e63c39b5021a7b8813a5aaf54fd8",
+        "independent_tests_sha256": "48818936a0b317d23eed48ef507e9516bb0de9c67cf29a02592338175711444a",
+        "original_local_independent_log_sha256": "88a7fe76a2b3196ee4014cf4ce53963ef3780bd74fdf4f60680027e262b56870",
+        "original_local_maintained_log_sha256": "21fef71a65905577baa5805cc12c91b7a6a037ad78e24457882a73bf0210f532",
+        "public_artifact_sha256": {
+          "contract-probes.py.txt": "48818936a0b317d23eed48ef507e9516bb0de9c67cf29a02592338175711444a",
+          "counterexamples.json": "fdb9439935551bb0c7cbcee9bee75a89cc12e63c39b5021a7b8813a5aaf54fd8",
+          "full-pytest.log": "9280d09732fc17d110f4709811c88b6d1d148cdfb1d5189398ecd6d9ef7c116c",
+          "independent-pytest.log": "d97b99c953546d3833ad9918e38fb85c626582703aa2bd7fb1e1887abefb3395",
+          "provenance.json": "75b4253b87b879579813f5edcd1da5bde88ab00734938f047cc319ff8c51d474",
+          "results.json": "c5be157b5858674625086f8d552d3eb9a08d7f5b7955cbaecaaeeda8bd020070"
+        },
+        "receipt_publication": {
+          "head": "4191e9b7809f76956330f0c01312ccdb09f8055e",
+          "manifest_sha256": "7215ccdd09277c71af4f2933a9c183c302562574c37a78e7f397adb7a3df2097",
+          "prefix": "research/evidence/citation-sentence-selection-review-20261004/",
+          "tree": "55c13b881e2132b209dc3bab5a9333439f1d6c1c"
+        },
+        "reviewed_head": "9685872827b37b55c981b88ad3177a2ed3b13533",
+        "reviewed_tree": "68a241ea95194929f4b1ac631eebe4962dd32cae"
+      },
+      "inferences": [],
+      "limitations": [
+        "Local Python 3.12.14 review, not the full 3.11–3.13 matrix.",
+        "Leading-whitespace stability is retained as a limitation, not a third material finding."
+      ],
+      "lineage": {
+        "kind": "none",
+        "replication": false,
+        "target_record_id": {
+          "state": "UNKNOWN"
+        }
+      },
+      "machine_result": {
+        "independent_probes_failed": 10,
+        "independent_probes_passed": 14,
+        "maintained_tests_passed": 118,
+        "material_root_causes": 2,
+        "polarity": "adverse",
+        "value": "CONTRACT_PROBE_FAILURES"
+      },
+      "nonclaims": [
+        "No semantic support decision or adjudicator validation.",
+        "The helper has no production caller at the reviewed head; existing retrieval/API/CLI/citation behavior is unchanged."
+      ],
+      "observations": [
+        "Overlapping exact quote occurrences are accepted as unique.",
+        "Period/whitespace segmentation can select an abbreviation fragment and omit the remainder of the same sentence.",
+        "Ten probe failures are grouped by cause, not presented as ten independent defects.",
+        "Source local and published artifact identities are separately bound; provenance.json records which copies are byte-identical and which replaced workspace prefixes."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/counterexamples.json",
+            "sha256": "fdb9439935551bb0c7cbcee9bee75a89cc12e63c39b5021a7b8813a5aaf54fd8"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/contract-probes.py.txt",
+            "sha256": "48818936a0b317d23eed48ef507e9516bb0de9c67cf29a02592338175711444a"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/independent-pytest.log",
+            "sha256": "d97b99c953546d3833ad9918e38fb85c626582703aa2bd7fb1e1887abefb3395"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/full-pytest.log",
+            "sha256": "9280d09732fc17d110f4709811c88b6d1d148cdfb1d5189398ecd6d9ef7c116c"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/results.json",
+            "sha256": "c5be157b5858674625086f8d552d3eb9a08d7f5b7955cbaecaaeeda8bd020070"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/provenance.json",
+            "sha256": "75b4253b87b879579813f5edcd1da5bde88ab00734938f047cc319ff8c51d474"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "state": "UNKNOWN"
+      },
+      "record_id": "biotech-pr50-independent-contract-probes-20261004",
+      "review": {
+        "state": "UNKNOWN"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/50"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/"
+        }
+      ],
+      "stage": "PRODUCT_CONTRACT_VERIFICATION",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "public_review_source": {
+          "head": "4191e9b7809f76956330f0c01312ccdb09f8055e",
+          "manifest_sha256": "7215ccdd09277c71af4f2933a9c183c302562574c37a78e7f397adb7a3df2097",
+          "prefix": "research/evidence/citation-sentence-selection-review-20261004/",
+          "tree": "55c13b881e2132b209dc3bab5a9333439f1d6c1c"
+        }
+      }
+    },
+    {
+      "access": {
+        "state": "available"
+      },
+      "authority_classes": [
+        "owner_source_material",
+        "local_mechanical_review"
+      ],
+      "contamination": {
+        "state": "UNKNOWN"
+      },
+      "deviations": [],
+      "disposition": {
+        "scope": "exact original PR #50 helper contract",
+        "value": "NOT_QUALIFIED"
+      },
+      "episode_id": "biotech-pr50-independent-contract-review-20261004",
+      "evaluator": {
+        "state": "UNKNOWN"
+      },
+      "execution": {
+        "attempt_id": {
+          "state": "UNKNOWN"
+        },
+        "status": {
+          "state": "UNKNOWN"
+        }
+      },
+      "immutable_identities": {
+        "original_local_review_sha256": "4ff52603acc46722d12adde41e8a36c1eb048234f228aceacd321eb0f5633a11",
+        "public_artifact_sha256": {
+          "REVIEW.md": "625dfedbaa00c96dc97f5a51369abbd5a45df834c64049d8ab64bae82824fe13",
+          "provenance.json": "75b4253b87b879579813f5edcd1da5bde88ab00734938f047cc319ff8c51d474",
+          "results.json": "c5be157b5858674625086f8d552d3eb9a08d7f5b7955cbaecaaeeda8bd020070",
+          "review-original.md": "52fa87f76b8fcaec2d00b779785526d4e5ca68033e7699cad2a17031254ff0fe"
+        },
+        "receipt_publication": {
+          "head": "4191e9b7809f76956330f0c01312ccdb09f8055e",
+          "manifest_sha256": "7215ccdd09277c71af4f2933a9c183c302562574c37a78e7f397adb7a3df2097",
+          "prefix": "research/evidence/citation-sentence-selection-review-20261004/",
+          "tree": "55c13b881e2132b209dc3bab5a9333439f1d6c1c"
+        },
+        "reviewed_head": "9685872827b37b55c981b88ad3177a2ed3b13533"
+      },
+      "inferences": [
+        "Original exact candidate does not satisfy the accepted unique-quote and enclosing-sentence contract."
+      ],
+      "limitations": [],
+      "lineage": {
+        "kind": "review_of",
+        "replication": false,
+        "target_record_id": "biotech-pr50-independent-contract-probes-20261004"
+      },
+      "machine_result": {
+        "state": "UNKNOWN"
+      },
+      "nonclaims": [
+        "Does not falsify the earlier single-case A08 research observation.",
+        "Does not qualify a repaired successor or authorize merge."
+      ],
+      "observations": [
+        "Independent contract probe evidence and passing maintained checks were considered separately.",
+        "Source local and published artifact identities are separately bound; provenance.json records which copies are byte-identical and which replaced workspace prefixes."
+      ],
+      "privacy": {
+        "class": "HASH_BOUND_REVIEW_POINTERS",
+        "pointers": [
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/REVIEW.md",
+            "sha256": "625dfedbaa00c96dc97f5a51369abbd5a45df834c64049d8ab64bae82824fe13"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/review-original.md",
+            "sha256": "52fa87f76b8fcaec2d00b779785526d4e5ca68033e7699cad2a17031254ff0fe"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/results.json",
+            "sha256": "c5be157b5858674625086f8d552d3eb9a08d7f5b7955cbaecaaeeda8bd020070"
+          },
+          {
+            "raw_included": false,
+            "reference": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/provenance.json",
+            "sha256": "75b4253b87b879579813f5edcd1da5bde88ab00734938f047cc319ff8c51d474"
+          }
+        ],
+        "raw_bytes_in_git": false
+      },
+      "provider_runtime": {
+        "state": "UNKNOWN"
+      },
+      "record_id": "biotech-pr50-independent-contract-review-20261004",
+      "review": {
+        "classification": "separate engineering review; contract probes drafted before author tests; not semantic adjudication",
+        "disposition": "NOT_QUALIFIED"
+      },
+      "scientific_result": {
+        "state": "UNKNOWN"
+      },
+      "semantic_review_required": true,
+      "source_owners": [
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant"
+        },
+        {
+          "repository": "camerontjs-dot/biotech-rag-assistant",
+          "role": "published source record for observations and attributed review",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/tree/4191e9b7809f76956330f0c01312ccdb09f8055e/research/evidence/citation-sentence-selection-review-20261004/"
+        }
+      ],
+      "stage": "PRODUCT_QUALIFICATION_REVIEW",
+      "unknowns": [],
+      "unmodeled_source_fields": {
+        "public_review_source": {
+          "head": "4191e9b7809f76956330f0c01312ccdb09f8055e",
+          "manifest_sha256": "7215ccdd09277c71af4f2933a9c183c302562574c37a78e7f397adb7a3df2097",
+          "prefix": "research/evidence/citation-sentence-selection-review-20261004/",
+          "tree": "55c13b881e2132b209dc3bab5a9333439f1d6c1c"
+        }
+      }
+    }
+  ],
+  "schema": "evidence-intake-delta/v0"
+}

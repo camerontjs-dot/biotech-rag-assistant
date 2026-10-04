@@ -1,0 +1,86 @@
+{
+  "observed_at": "2026-10-04T04:08:04.202418+00:00",
+  "work_class": "read-only source-state reconciliation; no CAL or Biotech integration execution",
+  "original_falsifier": {
+    "record": "https://github.com/camerontjs-dot/claim-audit-lab/pull/189",
+    "head": "6d1e673e9446710f0f4bbe196945f2f023420f1c",
+    "state": "closed",
+    "merged": false,
+    "disposition": "PRESSURE_FALSIFIED_CRITICAL_SEMANTIC_FAILURE",
+    "subject": "6bb0d60f3e2286123f56de5657de4e97d6374c63",
+    "subject_pr": "https://github.com/camerontjs-dot/claim-audit-lab/pull/186",
+    "subject_state": "open",
+    "claim": "Alpha had a higher rate than Beta.",
+    "evidence": "Alpha did not have a higher rate than Beta.",
+    "recorded_result": "supported",
+    "historical_result_preserved": true
+  },
+  "bounded_successor": {
+    "record": "https://github.com/camerontjs-dot/claim-audit-lab/pull/191",
+    "head": "86b60022420a006358fde38b20a204ffe4df1a96",
+    "semantic_implementation": "caa0048f8f511ec3c4aa1ce713766f2219a04bc1",
+    "scope": "one adjacent did not in strict_comparison; unsupported overt negation refuses",
+    "exact_prior_falsifier_recorded_result": "contradicted",
+    "product_commit": "64b6c7702696c851057c1cf0b2c105b1c81db543",
+    "product_tree": "62c32ab15489e6c3b20e63efb500c0fa26d0084d",
+    "qualification_lineage": [
+      "https://github.com/camerontjs-dot/claim-audit-lab/pull/194",
+      "https://github.com/camerontjs-dot/claim-audit-lab/pull/199",
+      "https://github.com/camerontjs-dot/claim-audit-lab/pull/201"
+    ]
+  },
+  "successor_pressure": {
+    "record": "https://github.com/camerontjs-dot/claim-audit-lab/pull/203",
+    "head": "1f3a73d01fe610f80b2bbb89c811a9871bd476f1",
+    "tree": "0d77942d7b7c8334331b5daf0659c3524f41a655",
+    "state": "closed",
+    "merged": false,
+    "disposition": "PRESSURE_SUPPORTED_NO_CRITICAL_FAIL_WITH_DOCUMENTED_LIMITS",
+    "result_sha256": "fc2844be3a43718c4fd572741016f7953713f4a8b3b1cda8e42bfa4736bb91ec",
+    "rows": 95,
+    "pass": 52,
+    "authoring_limit": 26,
+    "no_eligible_active_family_claim": 9,
+    "robustness_limit": 5,
+    "interface_gap": 3,
+    "critical_fail": 0,
+    "real_claim_semantic_decisions": 0
+  },
+  "independent_review": {
+    "record": "https://github.com/camerontjs-dot/claim-audit-lab/issues/204#issuecomment-5975316839",
+    "issue_state": "closed",
+    "disposition": "INDEPENDENTLY_SUPPORTS_PRESSURE_RESULT_WITH_DOCUMENTED_LIMITS",
+    "separate_v1_boundary_judgment": "V1_BOUNDARY_DECISION_REQUIRED",
+    "review_sha256": "cdaa0e6b8e5b210b5ce166284e670f97e3e34217cfd5147c271a1718b10c2a7c",
+    "receipt_sha256": "920d92d71ffda9d61ffb2d96dca8f20df748c0914dfbea2f73bd8ae8b5d142e5"
+  },
+  "provenance_successor": {
+    "record": "https://github.com/camerontjs-dot/evidence-bundler/issues/131#issuecomment-5976059899",
+    "issue_state": "closed",
+    "disposition": "SUPPORTED_VERIFIED_SOURCE_CUSTODY_BEFORE_CAL",
+    "eb_commit": "4e1f6fe00e7c350b28f52bfea14f1f8988847884",
+    "contract_b_authority": "c314e53bd91c0736aa4370a364673b069aceb43e",
+    "cal_commit": "64b6c7702696c851057c1cf0b2c105b1c81db543",
+    "bounded_observation": "Real EB verifier rejects repaired-seal false raw-source digest; weak syntax/seal verifier accepts; no downstream Contract B/CAL result on forged arm",
+    "limits": [
+      "Raw/direct caller source_sha256 remains unverified custody.",
+      "No committed research tree for EB #131; terminal comment carries source-reported execution hashes."
+    ]
+  },
+  "current_compatibility_record": "https://github.com/camerontjs-dot/claim-audit-lab/issues/185#issuecomment-5976060065",
+  "biotech_integration": {
+    "status": "NOT_RUN",
+    "authorized_by_this_review": false,
+    "reason": "A bounded polarity successor exists; Biotech-specific integration qualification remains absent. General natural-language authoring and direct-caller verified provenance are not supported by these records."
+  },
+  "interpretation": [
+    "Do not say the original frozen #186 negation failure was repaired in place.",
+    "Do not say no qualified polarity successor exists.",
+    "Do not interpret authoring refusals as semantic correctness.",
+    "Do not convert owner-source/test/review assertions into newly reproduced observations by this intake audit."
+  ],
+  "source_inspection_limitations": [
+    "This pass inspected live GitHub records and exact referenced identities, not all CAL raw outputs or a fresh CAL runtime.",
+    "The independent #204 review reports unavailable historical execution trees and dependency/build artifacts; it separately corroborated exact available product behavior."
+  ]
+}

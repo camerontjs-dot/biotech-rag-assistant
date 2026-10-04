@@ -1,0 +1,306 @@
+{
+  "schema": "biotech-programme-convergence/v1",
+  "repository": "camerontjs-dot/biotech-rag-assistant",
+  "observed_at_utc": "2026-10-04T04:30:22Z",
+  "record_role": "Immutable coordination snapshot, not an independently executed experiment or a continuously maintained dashboard.",
+  "main": {
+    "sha": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+    "tree": "f18297d7aac560d3efbde525c3b3776c5e091490",
+    "unchanged": true,
+    "product_merges_this_pass": 0,
+    "required_status_contexts_observed": [],
+    "branch_protected_observed": false,
+    "authority_note": "Lack of branch enforcement does not waive an explicit operator gate."
+  },
+  "closure_totals": {
+    "original_open_prs": 20,
+    "original_open_issues": 5,
+    "original_prs_closed_unmerged": 19,
+    "issues_closed_completed": 3,
+    "branches_deleted": 0,
+    "history_rewrites": 0
+  },
+  "publications": {
+    "ci_review": {
+      "head": "72711ba2f81b27e68033b287e0035ab8ad170a9a",
+      "manifest_sha256": "1604bb35d731ad9c6c9b59d272aaf9192a7abfd3a4c578eb418eaa328b85be6f",
+      "prefix": "research/evidence/ci-independent-review-20261004/",
+      "product_qualification_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5976523390",
+      "proof_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46#issuecomment-5976523546",
+      "tree": "ceb980cdc2aa1d35c47cb5c8d32ada21c3f6573a"
+    },
+    "citation_review": {
+      "head": "4191e9b7809f76956330f0c01312ccdb09f8055e",
+      "manifest_sha256": "7215ccdd09277c71af4f2933a9c183c302562574c37a78e7f397adb7a3df2097",
+      "prefix": "research/evidence/citation-sentence-selection-review-20261004/",
+      "tree": "55c13b881e2132b209dc3bab5a9333439f1d6c1c"
+    },
+    "corpus_freeze": {
+      "comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057",
+      "head": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+      "manifest_sha256": "f1e1b898eb264efa4ed2e9aac78a0aa1263a67f4ef2333f92b6659e331f03283",
+      "prefix": "research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/",
+      "tree": "9a5baa2f1c17a81ef2eb80be3258dbca61af5d00"
+    }
+  },
+  "handoff_items": [
+    {
+      "item": 1,
+      "name": "Current main",
+      "sha": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+      "tree": "f18297d7aac560d3efbde525c3b3776c5e091490"
+    },
+    {
+      "item": 2,
+      "name": "Closed surfaces",
+      "prs": [
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        19,
+        38,
+        44,
+        46,
+        47,
+        48,
+        50,
+        51
+      ],
+      "issues": [
+        41,
+        42,
+        43
+      ],
+      "ledger": "surface-ledger.json"
+    },
+    {
+      "item": 3,
+      "name": "Preserved lineage",
+      "ledger": "historical-lineage.json",
+      "notes": [
+        "#9/#10 are distinct retired prototype implementations; no byte equivalence asserted.",
+        "#11/#12 qualified original commits and later equivalent manifest repairs remain separate.",
+        "Failures, bounded positive/negative observations, replay corrections and authority decisions remain visible.",
+        "ADR-018 remains ACCEPTED_EP1_HEADING_AUTHORITY_EXCLUSION. BM25 remains the retrieval control."
+      ]
+    },
+    {
+      "item": 4,
+      "name": "CI observability",
+      "product_pr": 45,
+      "product_sha": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+      "product_tree": "fce23e2c33bb5c63c53a7c42a895f21d184c2e08",
+      "status": "QUALIFIED_READY_FOR_OPERATOR_PROMOTION",
+      "proof_pr": 46,
+      "proof_execution_sha": "7196aec48378932e2dde235b560ddaff56a814dc",
+      "physical_runs": [
+        37023159772,
+        37137560112,
+        37137557939
+      ],
+      "jobs_with_decoded_logs_reviewed": 26,
+      "proof_observation": "Ruff fails with 298 findings; 10 other jobs pass, including pytest 189 on Python 3.11/3.12/3.13, compile/corpus on all three, and parity 40/40.",
+      "product_observation": "11 of 11 jobs pass; pytest 113 on each Python version, parity 42/42.",
+      "gate": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5971207812"
+    },
+    {
+      "item": 5,
+      "name": "A08 and product candidate",
+      "research_status": "BOUNDED_CITATION_SPAN_EXPANSION_SUPPORTED",
+      "research_sha": "17ebc301c9fa810d49c443d6d9919bbcad0e95d4",
+      "old_characters": 48,
+      "new_characters": 76,
+      "increase": 28,
+      "research_semantic_limit": "Inherits #20 N/P semantic judgment (agent_llm, moderate confidence, needs-audit), not a new independent semantic adjudication.",
+      "product_pr": 50,
+      "product_subject_sha": "9685872827b37b55c981b88ad3177a2ed3b13533",
+      "product_status": "NOT_QUALIFIED",
+      "maintained_tests": {
+        "pass": 118
+      },
+      "independent_probes": {
+        "pass": 14,
+        "fail": 10,
+        "total": 24
+      },
+      "material_failures": [
+        "Overlapping repeated quote accepted as unique.",
+        "Period before whitespace treated as sentence boundary, truncating conditions at abbreviations; additional terminal-punctuation limitations."
+      ],
+      "product_code_changed_by_review": false
+    },
+    {
+      "item": 6,
+      "name": "A07 and heading successor",
+      "status": "SAME_SECTION_BODY_EXPANSION_NOT_SUPPORTED",
+      "research_sha": "8bebd572ca3628e3fc992c8cd0a3fb17cb2b69dc",
+      "body_offsets": [
+        55,
+        240
+      ],
+      "body_characters": 185,
+      "characters_added": 0,
+      "successor_issue": 49,
+      "successor_status": "NOT_RUN",
+      "heading_semantics_granted": false
+    },
+    {
+      "item": 7,
+      "name": "Authored corpus freeze",
+      "author_source_sha": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+      "author_source_tree": "cdb440064c4ec469aa7bc48d8bfc7fd3e5185a91",
+      "freeze_valid": false,
+      "case_rows": 44,
+      "unique_planned_case_slots": 33,
+      "missing_case_slots": 11,
+      "duplicated_case_slots": 11,
+      "complete_transport_schema_valid_partitions": 28,
+      "materializer_accepted_partitions": 18,
+      "materializer_rejected_partitions": 10,
+      "cases_sha256": null,
+      "design_sha256": null,
+      "relations_sha256": null,
+      "terminal_publication_sha": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+      "terminal_sha256": "9356adffb1c0e24234be6771f5367471ed9705d2a2381e531c82407b77685808",
+      "custody_manifest_sha256": "f1e1b898eb264efa4ed2e9aac78a0aa1263a67f4ef2333f92b6659e331f03283",
+      "canonical_attempt_policy": "Mechanical selection of the sole first complete transport-schema-valid response after the prospectively recorded capacity correction, with author-03 sole budget response carried under its recorded rule; no answer-quality selection.",
+      "canonical_attempt_map_sha256": "c0e10fa3ac6883b1c91b179baf253208453e187077a8645140b75be06b24dd6b",
+      "label_note": "This identifies a failed freeze receipt, not a valid 44-slot corpus."
+    },
+    {
+      "item": 8,
+      "name": "A/B adjudicators",
+      "A": {
+        "status": "NOT_RUN",
+        "identity": null,
+        "result": "UNKNOWN"
+      },
+      "B": {
+        "status": "NOT_RUN",
+        "identity": null,
+        "result": "UNKNOWN"
+      },
+      "reason": "Structural corpus precondition failed before any adjudication request.",
+      "new_provider_or_semantic_calls_this_pass": 0
+    },
+    {
+      "item": 9,
+      "name": "Comparison and semantic assurance",
+      "agreement": "NOT_RUN",
+      "agreement_denominator": null,
+      "disagreement_ledger": "NOT_RUN",
+      "blind_C": "NOT_RUN",
+      "reconciliation": "NOT_RUN",
+      "sealed_design_reveal_for_semantic_evaluation": "NOT_RUN",
+      "mutation_invariance_assurance": "NOT_RUN",
+      "semantic_assessor_qualification": "NOT_RUN"
+    },
+    {
+      "item": 10,
+      "name": "#41 terminal",
+      "status": "APPARATUS_INVALID",
+      "stage": "author-corpus structural materialization/freeze",
+      "issue_state": "closed",
+      "state_reason": "completed",
+      "semantic_assessor_verdict": "UNKNOWN",
+      "terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/41#issuecomment-5976498114"
+    },
+    {
+      "item": 11,
+      "name": "Wave B",
+      "status": "LOCKED",
+      "execution": "NOT_RUN",
+      "new_TEST_or_PROSPECTIVE_execution_this_pass": "NOT_RUN",
+      "retrieval_control": "BM25"
+    },
+    {
+      "item": 12,
+      "name": "CAL",
+      "reconciliation": "intake/cal-status-reconciliation.json",
+      "bounded_polarity_successor_exists": true,
+      "cal_product_sha": "64b6c7702696c851057c1cf0b2c105b1c81db543",
+      "pressure_status": "PRESSURE_SUPPORTED_NO_CRITICAL_FAIL_WITH_DOCUMENTED_LIMITS",
+      "independent_review_status": "INDEPENDENTLY_SUPPORTS_PRESSURE_RESULT_WITH_DOCUMENTED_LIMITS",
+      "v1_boundary_status": "V1_BOUNDARY_DECISION_REQUIRED",
+      "verified_provenance_scope": "Pinned EB -> Contract B 1.2 -> CAL chain only; direct caller source_sha256 remains unverified.",
+      "general_natural_language_authoring": "Outside bounded V1 supported aperture; 26 authoring refusals produced zero semantic decisions.",
+      "biotech_integration": "NOT_RUN",
+      "integration_authorized_by_this_pass": false
+    },
+    {
+      "item": 13,
+      "name": "Evidence Room",
+      "prepared_delta_candidates": 3,
+      "candidate_records": 13,
+      "existing_A07_A08_nomination_references": 2,
+      "intake_manifest_sha256": "ebeb5677861c0c54870cc399ce414b2e89380b40822d6065307870a7b5e4aabe",
+      "structural_preflight": "PASS",
+      "semantic_admission": "NOT_PERFORMED",
+      "platform_stage": "NOT_RUN",
+      "composition": "NOT_RUN",
+      "promotion": "NOT_RUN",
+      "current_accepted_delta_inventory": "UNKNOWN",
+      "status_wording_note": "The preserved candidate-status.json uses STAGED_NOT_ADMITTED as a preparation label while explicitly reporting stage=false. No platform stage operation occurred."
+    },
+    {
+      "item": 14,
+      "name": "Remaining open work",
+      "pull_requests": [
+        {
+          "number": 45,
+          "draft": true,
+          "head": "bc457271bc9a29fbe5561dfcba6b3b398df09616",
+          "status": "QUALIFIED_READY_FOR_OPERATOR_PROMOTION"
+        }
+      ],
+      "issues": [
+        {
+          "number": 39,
+          "classification": "ACTIVE"
+        },
+        {
+          "number": 49,
+          "classification": "BLOCKED / NOT_RUN"
+        }
+      ]
+    },
+    {
+      "item": 15,
+      "name": "Smallest next product step",
+      "immediately_ready": "Operator promotion of qualified CI #45.",
+      "citation_successor": "On a separately identified candidate, reject overlapping repeated occurrences and establish an explicit conservative sentence-boundary policy against the preserved independent probes. Preserve authorized BODY/source offsets; no retrieval or semantic decision expansion.",
+      "research_successor": "Prospectively enforce the already frozen case/design/relation slot assignments at the author-output boundary, then qualify that new apparatus independently before a newly identified execution. Do not relabel or re-author the failed #51 corpus in place.",
+      "owner_issue": 39
+    },
+    {
+      "item": 16,
+      "name": "Operator-only decision",
+      "action": "Authorize normal merge of exact qualified PR #45 head bc457271bc9a29fbe5561dfcba6b3b398df09616 into unchanged main.",
+      "authorization_status": "PENDING",
+      "gate_sources": [
+        "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5971207812",
+        "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40#issuecomment-5971207277"
+      ],
+      "post_authorization_checks": [
+        "Recheck exact candidate and main for drift.",
+        "Use normal merge topology to retain qualified commit.",
+        "Record merge SHA/tree and verify resulting maintained checks."
+      ]
+    }
+  ],
+  "stop_basis": [
+    "Each completed research candidate reached its declared terminal disposition.",
+    "#51 structural contract failure prohibits A/B execution for this candidate.",
+    "#50 needs a separately identified sentence-boundary successor; current exact candidate is rejected.",
+    "#49 has no qualified semantic route from this execution.",
+    "Only CI #45 is ready for product promotion and has an explicit operator gate."
+  ]
+}

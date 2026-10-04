@@ -1,0 +1,27 @@
+{
+  "meaning": "Receipt publication identities are separate from the earlier execution or product subject heads. Publication does not imply a new experiment, repaired result, admission, or merge.",
+  "schema": "biotech-intake-source-publications/v1",
+  "sources": {
+    "ci_review": {
+      "head": "72711ba2f81b27e68033b287e0035ab8ad170a9a",
+      "manifest_sha256": "1604bb35d731ad9c6c9b59d272aaf9192a7abfd3a4c578eb418eaa328b85be6f",
+      "prefix": "research/evidence/ci-independent-review-20261004/",
+      "product_qualification_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/45#issuecomment-5976523390",
+      "proof_terminal_comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/46#issuecomment-5976523546",
+      "tree": "ceb980cdc2aa1d35c47cb5c8d32ada21c3f6573a"
+    },
+    "citation_review": {
+      "head": "4191e9b7809f76956330f0c01312ccdb09f8055e",
+      "manifest_sha256": "7215ccdd09277c71af4f2933a9c183c302562574c37a78e7f397adb7a3df2097",
+      "prefix": "research/evidence/citation-sentence-selection-review-20261004/",
+      "tree": "55c13b881e2132b209dc3bab5a9333439f1d6c1c"
+    },
+    "corpus_freeze": {
+      "comment": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51#issuecomment-5976498057",
+      "head": "7556badf6077bac2edd20f163faa5af0ef1b95d1",
+      "manifest_sha256": "f1e1b898eb264efa4ed2e9aac78a0aa1263a67f4ef2333f92b6659e331f03283",
+      "prefix": "research/evidence/semantic-control-memory-bounded-20261003/corpus-freeze-20261004/",
+      "tree": "9a5baa2f1c17a81ef2eb80be3258dbca61af5d00"
+    }
+  }
+}

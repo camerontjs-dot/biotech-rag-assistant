@@ -1,0 +1,43 @@
+{
+  "accepted_delta_inventory_claim": "UNKNOWN; no claim that an empty fixture represents every currently admitted remote delta",
+  "authority": {
+    "blob": "282f87c0ef5d2534031dc4c06830fe3735c3964f",
+    "head": "ac5aefd0b7fc6bed426b29c62920adf706fecfc5",
+    "repository": "camerontjs-dot/the-evidence-room",
+    "sha256": "113a2321076987e103c926e9859e190c49b7f70504259d03926ac5b2efb314ec"
+  },
+  "baseline": {
+    "commit": "8369dcfdc8f473c5dce4d301072b77b05fd0d569",
+    "episodes_sha256": "c5f5acb3d66214264f78d18b708635bc5f73466a5b3d0b8d1e1f273e2307ca9f",
+    "tree": "215eb772e43f62d29405b4243401172e6ca7ea0f"
+  },
+  "cross_candidate_record_ids_unique": true,
+  "observed_at": "2026-10-04T04:24:25.461708+00:00",
+  "prior_preflight_sha256": "61b9d77bcca14b90d300c602070ef70f653fb4b30cb859f546da31013efe4b04",
+  "record_count": 13,
+  "results": [
+    {
+      "errors": [],
+      "file": "candidate-deltas/ci-execution-and-review.json",
+      "ok": true,
+      "record_count": 5,
+      "sha256": "d7c75a5806d20f456eb92d6c8d42e7ae3b5aaeb9cd6f3634b617bb9b6f1cf7ec"
+    },
+    {
+      "errors": [],
+      "file": "candidate-deltas/pr50-independent-contract-review.json",
+      "ok": true,
+      "record_count": 2,
+      "sha256": "8e22e35a2f8141ef56ee0dcc956c292755b96a756bca3215e97b0e63fe6f9dc1"
+    },
+    {
+      "errors": [],
+      "file": "candidate-deltas/pr51-apparatus-and-nonexecution.json",
+      "ok": true,
+      "record_count": 6,
+      "sha256": "f4ce70c874c40dc40f5bae02ca657e7b90cf1fbfd665bd1f7345ccd7c83c8232"
+    }
+  ],
+  "schema": "biotech-intake-structural-preflight/v1",
+  "scope": "Pure validate_delta calls against exact 26 seed episodes and explicit baseline binding; no compose/stage/admission or accepted-state mutation"
+}

@@ -1,0 +1,715 @@
+{
+  "schema": "biotech-historical-lineage-projection/v1",
+  "source_reviewed_at_utc": "2026-10-04T04:04:53.008078+00:00",
+  "projection_note": "Projection of the original read-only classification; local scratch location and proposed comment text omitted. Historical qualified commits remain separate from later tips. surface-ledger.json records actual final closures and successor publications.",
+  "method": "Live REST PR metadata, all discussion/review comments, complete remote changed-file lists and live Git commit/tree objects; exact local Git source/receipt inspection. No historical tests rerun or branches modified.",
+  "independence_limit": "Informed coordination review, not independent semantic adjudication or new product qualification.",
+  "protected_payloads": "No TEST/PROSPECTIVE or current sealed author corpus payload opened; historical PR prose, file metadata, authority protocols and receipts inspected.",
+  "items": [
+    {
+      "number": 3,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/3",
+      "head_sha": "c0a5c3167a8aed2f6b3a03bb4127de27d37042ae",
+      "tree_sha": "f1d286083b0987035783675fd7f41b133368f431",
+      "base_sha": "40de3cdcd98973b0e3a1c91d6ac114bc62857c04",
+      "head_branch": "plan/public-generative-rag-v2",
+      "base_branch": "main",
+      "classification": "PLANNING_COMPLETE",
+      "classification_rationale": "The initial plan has produced the benchmark, retrieval experiment and shadow-boundary research. Current bounded execution is owned by #39 and its children; future slices remain gated in the preserved plan.",
+      "historical_terminal_dispositions": [],
+      "successors": [
+        {
+          "number": 4,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/4",
+          "head_or_source_sha": "379a3e65942e8af7dcf21a4d24077642d45b364d",
+          "relationship": "Corpus import implements the first planned evidence-producing step."
+        },
+        {
+          "number": 11,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/11",
+          "head_or_source_sha": null,
+          "relationship": "Selected EvidencePacket research implementation."
+        },
+        {
+          "number": 12,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/12",
+          "head_or_source_sha": null,
+          "relationship": "Selected scripted-generation research implementation."
+        },
+        {
+          "number": 39,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39",
+          "head_or_source_sha": null,
+          "relationship": "Current programme coordination owns the live grounding work."
+        }
+      ],
+      "limits": [
+        "No new scientific terminal disposition is assigned to the historical plan; PLANNING_COMPLETE is a coordination decision in this review."
+      ],
+      "local_live_identity_verification": {
+        "number": 3,
+        "head": "c0a5c3167a8aed2f6b3a03bb4127de27d37042ae",
+        "tree": "f1d286083b0987035783675fd7f41b133368f431",
+        "tree_matches_live": true,
+        "changed_files": 1,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/4",
+      "head_sha": "379a3e65942e8af7dcf21a4d24077642d45b364d",
+      "tree_sha": "07c8d32f52c4a77a5a8bcf763de13a5e168ec28e",
+      "base_sha": "40de3cdcd98973b0e3a1c91d6ac114bc62857c04",
+      "head_branch": "data/controlled-docs-v2",
+      "base_branch": "main",
+      "classification": "SUPERSEDED",
+      "classification_rationale": "Frozen v2 benchmark was evaluated under #6; its non-discrimination result prompted the separately frozen v2.1 successor #7.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "BLOCK_SLICE3_BENCHMARK_NOT_DISCRIMINATING",
+          "qualified_or_terminal_commit": "df300742db449effa6f47cc340e19bead015472a",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/6#issuecomment-5882765629",
+          "authority_bound": "This is the downstream #6 discriminator result on #4 frozen data, not an import-structure failure or a retrieval-product verdict."
+        }
+      ],
+      "successors": [
+        {
+          "number": 6,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/6",
+          "head_or_source_sha": "df300742db449effa6f47cc340e19bead015472a",
+          "relationship": "Unchanged v2 data consumed by the terminal discriminator."
+        },
+        {
+          "number": 7,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/7",
+          "head_or_source_sha": "e74fc9c1486dba99f6090e2f5536e61238bccbae",
+          "relationship": "Separately identified v2.1 repair; predecessor data was not overwritten."
+        }
+      ],
+      "limits": [
+        "#4 has a frozen benchmark receipt, not its own scientific terminal label. Its downstream failure is attributed explicitly to #6."
+      ],
+      "local_live_identity_verification": {
+        "number": 4,
+        "head": "379a3e65942e8af7dcf21a4d24077642d45b364d",
+        "tree": "07c8d32f52c4a77a5a8bcf763de13a5e168ec28e",
+        "tree_matches_live": true,
+        "changed_files": 161,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 7,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/7",
+      "head_sha": "e74fc9c1486dba99f6090e2f5536e61238bccbae",
+      "tree_sha": "bd29dd0c84cab80c726ab07d5f642440b90cf2fa",
+      "base_sha": "379a3e65942e8af7dcf21a4d24077642d45b364d",
+      "head_branch": "research/controlled-docs-v2.1-b04-hardening",
+      "base_branch": "data/controlled-docs-v2",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "Benchmark/evaluator repair and first-run discrimination are complete; #8 consumed the qualified result.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "PASS_FOR_SLICE3_RETRIEVAL_COMPARISON",
+          "qualified_or_terminal_commit": "e74fc9c1486dba99f6090e2f5536e61238bccbae",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/7#issuecomment-5893829652",
+          "authority_bound": "Benchmark/evaluator discrimination for comparison work only; B04 margin is one MiniLM miss; no retrieval promotion."
+        }
+      ],
+      "successors": [
+        {
+          "number": 8,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/8",
+          "head_or_source_sha": "76ff886db55222e6518be712e1b3c60ea6b14ddf",
+          "relationship": "Starts from exact #7 head and executes the authorized comparison."
+        }
+      ],
+      "limits": [],
+      "local_live_identity_verification": {
+        "number": 7,
+        "head": "e74fc9c1486dba99f6090e2f5536e61238bccbae",
+        "tree": "bd29dd0c84cab80c726ab07d5f642440b90cf2fa",
+        "tree_matches_live": true,
+        "changed_files": 172,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 8,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/8",
+      "head_sha": "76ff886db55222e6518be712e1b3c60ea6b14ddf",
+      "tree_sha": "2abc12f7b3b062631451fd38910d416c7eb6186b",
+      "base_sha": "e74fc9c1486dba99f6090e2f5536e61238bccbae",
+      "head_branch": "research/controlled-docs-v2.1-slice3-retrieval",
+      "base_branch": "research/controlled-docs-v2.1-b04-hardening",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "The first preregistered TEST run ended with no eligible challenger and explicitly retained BM25; further retrieval measurement is not live work.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "NO_RETRIEVAL_PROMOTION_RETAIN_BM25",
+          "qualified_or_terminal_commit": "76ff886db55222e6518be712e1b3c60ea6b14ddf",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/8#issuecomment-5898107374",
+          "authority_bound": "Earlier receipt label for the same exact run."
+        },
+        {
+          "value": "NO_CHALLENGER_QUALIFIED_RETAIN_BM25_BASELINE",
+          "qualified_or_terminal_commit": "76ff886db55222e6518be712e1b3c60ea6b14ddf",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/8#issuecomment-5898769139",
+          "authority_bound": "Final receipt label; no challenger qualifies for sealed prospective replication."
+        }
+      ],
+      "successors": [
+        {
+          "number": 11,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/11",
+          "head_or_source_sha": "778cfd4caead38441aa36cd45417f41aefb550e1",
+          "relationship": "Consumes retained BM25 as the research baseline."
+        },
+        {
+          "number": 39,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39",
+          "head_or_source_sha": null,
+          "relationship": "Current programme explicitly preserves retrieval selection and addresses downstream grounding."
+        }
+      ],
+      "limits": [],
+      "local_live_identity_verification": {
+        "number": 8,
+        "head": "76ff886db55222e6518be712e1b3c60ea6b14ddf",
+        "tree": "2abc12f7b3b062631451fd38910d416c7eb6186b",
+        "tree_matches_live": true,
+        "changed_files": 10,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 9,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/9",
+      "head_sha": "6425dc504069e62a168f1a713b118ecd364766b9",
+      "tree_sha": "3f7553af29013babbea6e3e2f2989e3bcec01a9d",
+      "base_sha": "14c824055534db33855a1e017c47087ffffaa667",
+      "head_branch": "feature/evidence-packet-v1",
+      "base_branch": "main",
+      "classification": "SUPERSEDED",
+      "classification_rationale": "Narrow coordination decision: retire the parallel main-based prototype route; the ongoing programme already follows #11/#12 and their descendants. No equivalence, failure or promotion is asserted.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "PASS_FOR_EVIDENCE_PACKET_V1_BOUNDARY",
+          "qualified_or_terminal_commit": "6425dc504069e62a168f1a713b118ecd364766b9",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/9#issuecomment-5898440591",
+          "authority_bound": "Historical deterministic-boundary qualification for this distinct implementation; not semantic or production qualification."
+        }
+      ],
+      "successors": [
+        {
+          "number": 10,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/10",
+          "head_or_source_sha": "3fa15280ae060755d4e715a8b324b60a027f19bd",
+          "relationship": "Actual descendant of this parallel prototype."
+        },
+        {
+          "number": 11,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/11",
+          "head_or_source_sha": "778cfd4caead38441aa36cd45417f41aefb550e1",
+          "relationship": "Separate implementation selected for programme execution; not an ancestor/descendant replacement."
+        },
+        {
+          "number": 39,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39",
+          "head_or_source_sha": null,
+          "relationship": "Owns the selected programme continuation."
+        }
+      ],
+      "limits": [
+        "SUPERSEDED is a new coordination choice authorized by current cleanup, not a pre-existing scientific disposition or implementation equivalence claim."
+      ],
+      "local_live_identity_verification": {
+        "number": 9,
+        "head": "6425dc504069e62a168f1a713b118ecd364766b9",
+        "tree": "3f7553af29013babbea6e3e2f2989e3bcec01a9d",
+        "tree_matches_live": true,
+        "changed_files": 11,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 10,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/10",
+      "head_sha": "3fa15280ae060755d4e715a8b324b60a027f19bd",
+      "tree_sha": "579992e3505fe6db800bafaef3932f828939b854",
+      "base_sha": "6425dc504069e62a168f1a713b118ecd364766b9",
+      "head_branch": "feature/shadow-generation-gates",
+      "base_branch": "feature/evidence-packet-v1",
+      "classification": "SUPERSEDED",
+      "classification_rationale": "Retire the unused generation prototype stacked on #9; selected programme runs #12 and its independently recorded later pressure/transport milestones.",
+      "historical_terminal_dispositions": [],
+      "successors": [
+        {
+          "number": 12,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/12",
+          "head_or_source_sha": "e13e7dc69a4ec927a1e869b1b1d632bc3560b027",
+          "relationship": "Separate scripted-gate implementation selected for execution; not byte-equivalent."
+        },
+        {
+          "number": 39,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39",
+          "head_or_source_sha": null,
+          "relationship": "Current programme owner."
+        }
+      ],
+      "limits": [
+        "No historical terminal scientific disposition found in this PR body/discussion. No new implementation qualification performed."
+      ],
+      "local_live_identity_verification": {
+        "number": 10,
+        "head": "3fa15280ae060755d4e715a8b324b60a027f19bd",
+        "tree": "579992e3505fe6db800bafaef3932f828939b854",
+        "tree_matches_live": true,
+        "changed_files": 6,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 11,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/11",
+      "head_sha": "778cfd4caead38441aa36cd45417f41aefb550e1",
+      "tree_sha": "92a8c40f180c42a39234c62161557ae10e198418",
+      "base_sha": "76ff886db55222e6518be712e1b3c60ea6b14ddf",
+      "head_branch": "research/controlled-docs-v2.1-slice4-evidence-packet",
+      "base_branch": "research/controlled-docs-v2.1-slice3-retrieval",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "The bounded packet milestone completed, and its manifest correction is identically propagated into #12/#13. Future production extraction is separate.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "PASS_EVIDENCE_PACKET_V1_BOUNDARY",
+          "qualified_or_terminal_commit": "e851b868966fb0b572b0f6c349e2987ccf938c23",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/11#issuecomment-5898921041",
+          "authority_bound": "Qualification applies to that exact pre-correction head. Current head additionally contains the manifest repair; these identities are not conflated."
+        }
+      ],
+      "successors": [
+        {
+          "number": 12,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/12",
+          "head_or_source_sha": "e13e7dc69a4ec927a1e869b1b1d632bc3560b027",
+          "relationship": "Started from qualified e851b868; propagated later corpus-manifest correction with distinct commits."
+        },
+        {
+          "number": 13,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/13",
+          "head_or_source_sha": "d195b689ea51cf34cf952d572c6557b87fcd1f1e",
+          "relationship": "Explicitly documents and consumes the corrected packet implementation."
+        }
+      ],
+      "limits": [
+        "Current #11 tip is not a Git ancestor of current #12 tip; corrected source blob equality, exact qualified-base ancestry and explicit propagation are the linkage."
+      ],
+      "local_live_identity_verification": {
+        "number": 11,
+        "head": "778cfd4caead38441aa36cd45417f41aefb550e1",
+        "tree": "92a8c40f180c42a39234c62161557ae10e198418",
+        "tree_matches_live": true,
+        "changed_files": 10,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 12,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/12",
+      "head_sha": "e13e7dc69a4ec927a1e869b1b1d632bc3560b027",
+      "tree_sha": "efddeb9c0007a683dd7b9ef56ff7f097a83ef04f",
+      "base_sha": "e851b868966fb0b572b0f6c349e2987ccf938c23",
+      "head_branch": "research/controlled-docs-v2.1-slice5-claim-gates",
+      "base_branch": "research/controlled-docs-v2.1-slice4-evidence-packet",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "Scripted structural-gate milestone completed and was consumed by #13; later pressure failures and fixes are separate records in #14.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "PASS_SCRIPTED_GENERATION_GATES",
+          "qualified_or_terminal_commit": "2f5bfb966963ed4f8fcc8dd147acfc75a78e8f5c",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/12#issuecomment-5899095602",
+          "authority_bound": "Exact historical scripted-gate qualification only; not semantic entailment, arbitrary prompt-injection security or public generation."
+        }
+      ],
+      "successors": [
+        {
+          "number": 13,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/13",
+          "head_or_source_sha": "d195b689ea51cf34cf952d572c6557b87fcd1f1e",
+          "relationship": "Started from qualified 2f5bfb96 and propagated the packet correction separately."
+        },
+        {
+          "number": 14,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/14",
+          "head_or_source_sha": "0721097129c29c375f8521cfa044d5268e337138",
+          "relationship": "Preserved three later boundary falsifiers and a separately identified repair."
+        }
+      ],
+      "limits": [
+        "Current #12 tip is not a Git ancestor of #13 tip; generation and packet modules match byte-for-byte after equivalent propagated corrections."
+      ],
+      "local_live_identity_verification": {
+        "number": 12,
+        "head": "e13e7dc69a4ec927a1e869b1b1d632bc3560b027",
+        "tree": "efddeb9c0007a683dd7b9ef56ff7f097a83ef04f",
+        "tree_matches_live": true,
+        "changed_files": 10,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 13,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/13",
+      "head_sha": "d195b689ea51cf34cf952d572c6557b87fcd1f1e",
+      "tree_sha": "13a840264d2ac15d00dc9a41dfaf494d2af94f61",
+      "base_sha": "e13e7dc69a4ec927a1e869b1b1d632bc3560b027",
+      "head_branch": "research/controlled-docs-v2.1-slice5b-dev-live",
+      "base_branch": "research/controlled-docs-v2.1-slice5-claim-gates",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "Bundle export and selected-wave replay-aperture repair completed; the next pressure test and structured-transport run own the continuation.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "PASS_DEV_GENERATION_BUNDLE_EXPORT",
+          "qualified_or_terminal_commit": "a7d2e69cd8ebbee2e0d66a596a39db7334fb43a5",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/13#issuecomment-5899267809",
+          "authority_bound": "Deterministic bundle export, Wave A only."
+        },
+        {
+          "value": "BLOCK_WAVE_A_REPLAY_SELECTED_WAVE_APERTURE_DEFECT",
+          "qualified_or_terminal_commit": "a7d2e69cd8ebbee2e0d66a596a39db7334fb43a5",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/13#issuecomment-5900763825",
+          "authority_bound": "Replay did not run before correction because hashing the unselected wave breached the authorized aperture."
+        },
+        {
+          "value": "PASS_WAVE_A_REPLAY_APERTURE_REPAIR",
+          "qualified_or_terminal_commit": "d195b689ea51cf34cf952d572c6557b87fcd1f1e",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/13#issuecomment-5900772614",
+          "authority_bound": "Repaired evaluator verifies the selected wave only; original bundle/raw outputs stay bound to original identities."
+        }
+      ],
+      "successors": [
+        {
+          "number": 14,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/14",
+          "head_or_source_sha": "0721097129c29c375f8521cfa044d5268e337138",
+          "relationship": "Exact descendant; records original replay result and pressure tests."
+        },
+        {
+          "number": 15,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/15",
+          "head_or_source_sha": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+          "relationship": "Separately identified schema-constrained transport successor."
+        }
+      ],
+      "limits": [],
+      "local_live_identity_verification": {
+        "number": 13,
+        "head": "d195b689ea51cf34cf952d572c6557b87fcd1f1e",
+        "tree": "13a840264d2ac15d00dc9a41dfaf494d2af94f61",
+        "tree_matches_live": true,
+        "changed_files": 7,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 14,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/14",
+      "head_sha": "0721097129c29c375f8521cfa044d5268e337138",
+      "tree_sha": "d2cd54178cca6884b5fabd7f5ec234a2e9f5d0eb",
+      "base_sha": "d195b689ea51cf34cf952d572c6557b87fcd1f1e",
+      "head_branch": "research/controlled-docs-v2.1-slice5c-pressure-test",
+      "base_branch": "research/controlled-docs-v2.1-slice5b-dev-live",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "Pressure test both falsified the prior boundary and qualified a bounded repair; #15 consumed the repaired head.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "FAIL_GENERATION_BOUNDARY_PRESSURE_TEST_V1",
+          "qualified_or_terminal_commit": "055672e382402409342fdfae638551f5186f4555",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/14#issuecomment-5901087091",
+          "authority_bound": "First preserved pressure run exposed packet-ID, numeric substring and lowercase identifier failures."
+        },
+        {
+          "value": "PASS_GENERATION_BOUNDARY_PRESSURE_TEST_V1",
+          "qualified_or_terminal_commit": "0721097129c29c375f8521cfa044d5268e337138",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/14#issuecomment-5901138352",
+          "authority_bound": "Repaired exact candidate passed six frozen falsifiers; no general semantic qualification."
+        }
+      ],
+      "successors": [
+        {
+          "number": 15,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/15",
+          "head_or_source_sha": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+          "relationship": "Exact descendant and explicit consumer of the qualified repair."
+        }
+      ],
+      "limits": [],
+      "local_live_identity_verification": {
+        "number": 14,
+        "head": "0721097129c29c375f8521cfa044d5268e337138",
+        "tree": "d2cd54178cca6884b5fabd7f5ec234a2e9f5d0eb",
+        "tree_matches_live": true,
+        "changed_files": 5,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 15,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/15",
+      "head_sha": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+      "tree_sha": "308de8a25388ab451f87bd98d5ea798b55424d41",
+      "base_sha": "0721097129c29c375f8521cfa044d5268e337138",
+      "head_branch": "research/controlled-docs-v2.1-slice5d-ollama-structured",
+      "base_branch": "research/controlled-docs-v2.1-slice5c-pressure-test",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "Structured Wave A apparatus, execution and replay completed; support-aperture adjudication and evidence preservation continued in #17 and #20.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "PASS_OLLAMA_STRUCTURED_WAVE_A_APPARATUS",
+          "qualified_or_terminal_commit": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/15#issuecomment-5901577252",
+          "authority_bound": "No-network contract and bundle qualification."
+        },
+        {
+          "value": "PASS_OLLAMA_STRUCTURED_WAVE_A_EXECUTION",
+          "qualified_or_terminal_commit": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/15#issuecomment-5901902011",
+          "authority_bound": "One six-call Wave A run; no retries; transport success is not semantic support."
+        },
+        {
+          "value": "PASS_DEV_OUTPUT_REPLAY",
+          "qualified_or_terminal_commit": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/15#issuecomment-5901902011",
+          "authority_bound": "Replay executed; accepted claims still required later semantic aperture adjudication."
+        }
+      ],
+      "successors": [
+        {
+          "number": 17,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/17",
+          "head_or_source_sha": "457be991da5835f642195ffcf289d8f271e5f51b",
+          "relationship": "Explicit successor in PR comment; exact descendant preserving the raw Wave A evidence."
+        },
+        {
+          "number": 20,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/20",
+          "head_or_source_sha": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+          "relationship": "Later policy-bounded re-adjudication; not a relabeling of original #15 generation."
+        },
+        {
+          "number": 39,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39",
+          "head_or_source_sha": null,
+          "relationship": "Current recovery and citation/packet work."
+        }
+      ],
+      "limits": [],
+      "local_live_identity_verification": {
+        "number": 15,
+        "head": "2bcd4094d5538dc679db73ddba5ff7e329b9ccfc",
+        "tree": "308de8a25388ab451f87bd98d5ea798b55424d41",
+        "tree_matches_live": true,
+        "changed_files": 7,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 19,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/19",
+      "head_sha": "7724695c21882afb45a512fbf6ee07717da5120f",
+      "tree_sha": "e2004cf04a5a20140516e905c52029aa16da77a5",
+      "base_sha": "457be991da5835f642195ffcf289d8f271e5f51b",
+      "head_branch": "decision/heading-semantic-authority",
+      "base_branch": "research/wave-a-support-aperture-adjudication",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "Accepted bounded heading-authority decision and qualification completed. The current programme carries its identical policy/evidence; keeping the PR open is unnecessary to retain authority.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "ACCEPTED_EP1_HEADING_AUTHORITY_EXCLUSION",
+          "qualified_or_terminal_commit": "97beb5d81492b196affda7da03276dbc7b14246d",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/7724695c21882afb45a512fbf6ee07717da5120f/research/evidence/ep1-heading-authority-v1/decision.json",
+          "authority_bound": "ADR-018 authority rule for ep1 only; no universal linguistic claim or packet-integrity repair."
+        }
+      ],
+      "successors": [
+        {
+          "number": 20,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/20",
+          "head_or_source_sha": "bdcc8f0a315e7454dffb878b87f8ad51a9a25fd9",
+          "relationship": "Separate policy-bounded re-adjudication started from accepted 97beb5d8; equivalent historical-custody correction."
+        },
+        {
+          "number": 22,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/22",
+          "head_or_source_sha": "356e0da4aeb486d89b35f57e35b1b17e4587628c",
+          "relationship": "Preserves accepted decision and consumes #20 result."
+        },
+        {
+          "number": 39,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39",
+          "head_or_source_sha": null,
+          "relationship": "Current programme retains the authority boundary."
+        },
+        {
+          "number": 49,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/49",
+          "head_or_source_sha": null,
+          "relationship": "Different possible heading-grant question; currently NOT_RUN, not an amendment to this rule."
+        }
+      ],
+      "limits": [
+        "This turn explicitly authorizes closing completed records; it supersedes the old coordination comment retaining #19 open, not the accepted authority decision."
+      ],
+      "local_live_identity_verification": {
+        "number": 19,
+        "head": "7724695c21882afb45a512fbf6ee07717da5120f",
+        "tree": "e2004cf04a5a20140516e905c52029aa16da77a5",
+        "tree_matches_live": true,
+        "changed_files": 16,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 38,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/38",
+      "head_sha": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+      "tree_sha": "f54b18e018221bb39891d48b69e037358e1ec756",
+      "base_sha": "d1e092b7cdb878d064735d597e8c3b2d6c710157",
+      "head_branch": "research/semantic-adjudication-request-bound-v2",
+      "base_branch": "research/qualifier-grounding-semantic-assessor-controls-v1",
+      "classification": "TERMINAL_RESEARCH_EVIDENCE",
+      "classification_rationale": "Original request-bound timeout experiment is terminal and unchanged; closure waits for published successor terminal state under the explicit user condition.",
+      "historical_terminal_dispositions": [
+        {
+          "value": "APPARATUS_INVALID",
+          "qualified_or_terminal_commit": "ae06553be6481fee82c175361849e01b20a1112e",
+          "evidence_url": "https://github.com/camerontjs-dot/biotech-rag-assistant/blob/1e3d79a53f181c79bdeeb6137e88ae2897797106/research/evidence/semantic-adjudication-request-bound-v2/TERMINAL.json",
+          "authority_bound": "First author partition timed out after 1800 s with no response; no corpus freeze or A/B/C/assurance; no semantic candidate verdict."
+        }
+      ],
+      "successors": [
+        {
+          "number": 51,
+          "type": "pull",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/51",
+          "head_or_source_sha": "bf07ea3b16854830a9a2ec5a0c9725488bb02f17",
+          "relationship": "Separately identified bounded-runtime recovery; current user condition requires its terminal state before this PR closure."
+        },
+        {
+          "number": 41,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/41",
+          "head_or_source_sha": null,
+          "relationship": "Owns corpus/semantic-control recovery; remains independent of this predecessor outcome."
+        }
+      ],
+      "limits": [
+        "Corpus worker reported a separate structural freeze failure in #51 during this review. The parent owns publishing its final disposition; this ledger does not assert that terminal publication occurred."
+      ],
+      "local_live_identity_verification": {
+        "number": 38,
+        "head": "1e3d79a53f181c79bdeeb6137e88ae2897797106",
+        "tree": "f54b18e018221bb39891d48b69e037358e1ec756",
+        "tree_matches_live": true,
+        "changed_files": 88,
+        "files_match_live": true
+      }
+    },
+    {
+      "number": 44,
+      "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/pull/44",
+      "head_sha": "e8d73ec63db5bbaa09511d45a40c0b8590424bda",
+      "tree_sha": "c5f0f95ac1cdd49069f4041fa86ec66f439dea87",
+      "base_sha": "cd9ba8bc4351ac0cb4cf022ec1ddf449671454c3",
+      "head_branch": "planning/evidence-room-guided-grounding-20261003",
+      "base_branch": "main",
+      "classification": "PLANNING_COMPLETE",
+      "classification_rationale": "All bounded plan lanes now have execution owners and records: #39/#41/#40/#42/#43 with #49 as the explicitly separate A07 successor.",
+      "historical_terminal_dispositions": [],
+      "successors": [
+        {
+          "number": 39,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/39",
+          "head_or_source_sha": null,
+          "relationship": "Programme owner."
+        },
+        {
+          "number": 41,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/41",
+          "head_or_source_sha": null,
+          "relationship": "Semantic-control recovery."
+        },
+        {
+          "number": 40,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/40",
+          "head_or_source_sha": null,
+          "relationship": "CI observability, implemented/proved in #45/#46."
+        },
+        {
+          "number": 42,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/42",
+          "head_or_source_sha": null,
+          "relationship": "A08 experiment #47 and product successor #50."
+        },
+        {
+          "number": 43,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/43",
+          "head_or_source_sha": null,
+          "relationship": "A07 body-expansion experiment #48."
+        },
+        {
+          "number": 49,
+          "type": "issue",
+          "url": "https://github.com/camerontjs-dot/biotech-rag-assistant/issues/49",
+          "head_or_source_sha": null,
+          "relationship": "Separate heading-grant question after the negative BODY expansion."
+        }
+      ],
+      "limits": [
+        "No scientific terminal verdict is assigned to planning. Current execution may be blocked while the planning surface is complete."
+      ],
+      "local_live_identity_verification": {
+        "number": 44,
+        "head": "e8d73ec63db5bbaa09511d45a40c0b8590424bda",
+        "tree": "c5f0f95ac1cdd49069f4041fa86ec66f439dea87",
+        "tree_matches_live": true,
+        "changed_files": 2,
+        "files_match_live": true
+      }
+    }
+  ]
+}
