@@ -1,0 +1,107 @@
+{
+  "original_review_manifest": "review_manifest.json",
+  "archival_paths": {
+    "README.md": {
+      "stored_as": "README.md",
+      "sha256": "49f81b73de5b2f2ca50781351ebec8ec54f70754518ea562e4121d8b1a6fca9e"
+    },
+    "review_093fcd0.md": {
+      "stored_as": "review_093fcd0.md",
+      "sha256": "1b14832977a4145029d89b739af87fb0e69be97a76a58653bc4f0941a8065fd3"
+    },
+    "review_explicit_bounds_786a094.md": {
+      "stored_as": "review_explicit_bounds_786a094.md",
+      "sha256": "75b4a83475b31e7f67178394f82ff5ca04d4de5293cad4e3f58b19b45299fd97"
+    },
+    "preimplementation_probes.json": {
+      "stored_as": "preimplementation_probes.json",
+      "sha256": "3666cec6252e3e3d074d49667cdc0f608c1bb8a5b907d39aa1db70de537fb101"
+    },
+    "preimplementation_probes.sha256": {
+      "stored_as": "preimplementation_probes.sha256",
+      "sha256": "d4b34a215c3d7fb5e1e2443d56b815283227b23e163960c030bd6389c98285f9"
+    },
+    "probe_freeze_record.txt": {
+      "stored_as": "probe_freeze_record.txt",
+      "sha256": "344aedbae5f4b1716bf04b951d7354e1cbf9bebad14705485ac83ea9f63a39f0"
+    },
+    "frozen_candidate_outcomes.json": {
+      "stored_as": "frozen_candidate_outcomes.json",
+      "sha256": "8110c417012dbbc9d42bd3042b0c8fc9e7265f1c238f67ce73d8125deef3567d"
+    },
+    "frozen_candidate_report.json": {
+      "stored_as": "frozen_candidate_report.json",
+      "sha256": "903ee045e96f5a97958c9787e221e67d76d67e03228616f5cb9189c67748dd9b"
+    },
+    "postfreeze_probes.json": {
+      "stored_as": "postfreeze_probes.json",
+      "sha256": "f11f7de4bb738700d4b0e3729f02ede50c5a89492c09e72e65811ce772e3074b"
+    },
+    "postfreeze_probes.sha256": {
+      "stored_as": "postfreeze_probes.sha256",
+      "sha256": "f40fadce45f4d826fb870e28f136d23e0248b47f4d82b4a92537ced97b7962d6"
+    },
+    "postfreeze_candidate_report.json": {
+      "stored_as": "postfreeze_candidate_report.json",
+      "sha256": "2efc7af6b5ec961dc36625df9db2c90bd1a839da49ad2f94b5838938931c5569"
+    },
+    "explicit_bounds_preimplementation_probes.json": {
+      "stored_as": "explicit_bounds_preimplementation_probes.json",
+      "sha256": "22460e1fe41a0b0a3875d15e56552ee473e1ad36ae80e771c51333699e4f8659"
+    },
+    "explicit_bounds_preimplementation_probes.sha256": {
+      "stored_as": "explicit_bounds_preimplementation_probes.sha256",
+      "sha256": "a4ca2e87515cbc809c7b6618255468f9656a9c0011a379089fbf002202b9d4b8"
+    },
+    "explicit_bounds_freeze_record.txt": {
+      "stored_as": "explicit_bounds_freeze_record.txt",
+      "sha256": "594b732eb75a65e913a516896c70fe533531e31828901dcb71f9dc4a2a8c1f6d"
+    },
+    "explicit_bounds_candidate_report.json": {
+      "stored_as": "explicit_bounds_candidate_report.json",
+      "sha256": "0cc3e34082fa5e364f5fe3f4e76a070e3a46d76a49fb82078431af227679e0cf"
+    },
+    "explicit_bounds_adjudication.json": {
+      "stored_as": "explicit_bounds_adjudication.json",
+      "sha256": "ee1219f1ea4d8c428edfd7f9ad270825e1d8713d0258107cfd585aa8c369279d"
+    },
+    "publication_identity_mapping.json": {
+      "stored_as": "publication_identity_mapping.json",
+      "sha256": "852128fdc29233e49b820e056b4c32e55deaffe24b389677163ff8038283fb18"
+    },
+    "reproduce_review.py": {
+      "stored_as": "reproduce_review.py.txt",
+      "sha256": "a494cd6d2253f391eeb929daa23bcd180eb23a0e145cd92042061a1d3e85fa4b"
+    },
+    "portable_authorized_publication_report.json": {
+      "stored_as": "portable_authorized_publication_report.json",
+      "sha256": "e4878f40d528182e5b2cb54371bb926e34ed2741724a95fb83fae21d8c5d50fa"
+    },
+    "portable_automatic_report.json": {
+      "stored_as": "portable_automatic_report.json",
+      "sha256": "01097a3de037009dbddb6227d08557a5e5656dc785a415fc157889a58d80ba04"
+    },
+    "portable_automatic_extra_report.json": {
+      "stored_as": "portable_automatic_extra_report.json",
+      "sha256": "5f471605d19e50d48e2701d3bee64f2880d94500edcebe167c5721dc6a8bf255"
+    },
+    "score_probes.py": {
+      "stored_as": "score_probes.py.txt",
+      "sha256": "89fd8a1d3c6385827bd9702ce5dd9608c057a09c078ea61e0de82f949e9f565f"
+    },
+    "run_frozen_candidate.py": {
+      "stored_as": "run_frozen_candidate.py.txt",
+      "sha256": "04dceab88266c80b6b54a6495c15788f3aaac705e59d45844158b7bef2dd9a77"
+    },
+    "run_postfreeze_candidate.py": {
+      "stored_as": "run_postfreeze_candidate.py.txt",
+      "sha256": "7ad342b15aeb7670b80bf7c6435d1c030389d60169bf65f022bc218641d0e4e8"
+    },
+    "run_explicit_bounds_candidate.py": {
+      "stored_as": "run_explicit_bounds_candidate.py.txt",
+      "sha256": "32f5e9eda4c08ba6efbd91701474e736a046a6b2b6e912bf5b69d128c547e5e8"
+    }
+  },
+  "active_reproducer": "reproduce_review.py",
+  "note": "Original Python evidence bytes are stored with .txt appended. The active portable reproducer receives repository formatting only; original probe expectations, reports and review text remain unchanged."
+}
