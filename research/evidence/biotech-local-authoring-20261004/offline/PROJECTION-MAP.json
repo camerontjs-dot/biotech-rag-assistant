@@ -1,0 +1,66 @@
+{
+  "files": {
+    "03-pip-freeze.txt": {
+      "changed": false,
+      "original_sha256": "81c348e20124e5de569b3034281e180c7fdd415f2872e12164e6a8b3c0e28cec",
+      "published_sha256": "81c348e20124e5de569b3034281e180c7fdd415f2872e12164e6a8b3c0e28cec"
+    },
+    "10-unittest.stderr.txt": {
+      "changed": false,
+      "original_sha256": "b6ff6875b72ecb013d9604a8b1dfa15e1e72bb8c842c69a4492064b9e8660899",
+      "published_sha256": "b6ff6875b72ecb013d9604a8b1dfa15e1e72bb8c842c69a4492064b9e8660899"
+    },
+    "10-unittest.stdout.txt": {
+      "changed": false,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20-prep-receipt.json": {
+      "changed": false,
+      "original_sha256": "5968fed2c2271fa5d1065b575ab3d846aea7b15dc9aae2cf8a28e5a0520f0010",
+      "published_sha256": "5968fed2c2271fa5d1065b575ab3d846aea7b15dc9aae2cf8a28e5a0520f0010"
+    },
+    "20-prep.stderr.txt": {
+      "changed": false,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20-prep.stdout.txt": {
+      "changed": false,
+      "original_sha256": "d005a060bbce025dedf84a3582d57c3d518a5f56c021818318e30dcda60688dd",
+      "published_sha256": "d005a060bbce025dedf84a3582d57c3d518a5f56c021818318e30dcda60688dd"
+    },
+    "30-supervisor-selftest.stderr.txt": {
+      "changed": true,
+      "original_sha256": "427ff7fa79eb8873319624a295869463614d53cb9b0b9e01672d54d675b40cf1",
+      "published_sha256": "b989d0555ceb8563a172f353eaeb9a2fa8551a1c48878fa075728971fafa6435"
+    },
+    "30-supervisor-selftest.stdout.txt": {
+      "changed": true,
+      "original_sha256": "43ba4911206d38aa070dbb90780741f48176d9bb5e9610c09fa71ba3ea91a055",
+      "published_sha256": "e20e2c19fcc765da65e3f692d7fae2c9dd46b42d5634bf4a21e9bab289ea73ad"
+    },
+    "40-prepare.stderr.txt": {
+      "changed": false,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "40-prepare.stdout.txt": {
+      "changed": false,
+      "original_sha256": "ebd153064d3b67c446234c4fe12f90a2e5d01577edc1eb13fa7aae8be3cb4164",
+      "published_sha256": "ebd153064d3b67c446234c4fe12f90a2e5d01577edc1eb13fa7aae8be3cb4164"
+    },
+    "41-verify.stderr.txt": {
+      "changed": false,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "41-verify.stdout.txt": {
+      "changed": false,
+      "original_sha256": "ac8fee7301e3e17e262d66e37c80dccb1ce92e9cea2dd4682944572a1efa789d",
+      "published_sha256": "ac8fee7301e3e17e262d66e37c80dccb1ce92e9cea2dd4682944572a1efa789d"
+    }
+  },
+  "rule": "Only local filesystem prefixes were replaced with placeholders; no other byte changed. Both the original (kept private) and published hashes are recorded.",
+  "schema_version": "biotech-local-projection-map/v1"
+}

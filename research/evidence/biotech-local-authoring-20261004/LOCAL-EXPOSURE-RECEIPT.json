@@ -1,0 +1,69 @@
+{
+  "author_role_receives": "The exact frozen request bytes only, as the prompt of one non-streaming raw POST /api/generate per call.",
+  "frozen_artifacts_in_every_request": [
+    {
+      "reference": "rubric.md",
+      "sha256": "11092f20ec28a1124b208f4eb09d43258c125fe4e57b94692613fa8ad009359d"
+    },
+    {
+      "reference": "case-construction.md",
+      "sha256": "9d8f11e91f8edf4a065e0fac803acb074ae4ed80d070c84ee2f460f756d529f6"
+    },
+    {
+      "reference": "case-design.json",
+      "sha256": "b19a716ee490e4aa3d2509b9bc7e7eae3186390a267f32b8dbd063b62539f1dd"
+    },
+    {
+      "reference": "schemas/case.schema.json",
+      "sha256": "602425c440fb4b910841894b97a55589b1f876f456686c5db118f8a763b77c31"
+    },
+    {
+      "reference": "schemas/author-design.schema.json",
+      "sha256": "a33b9c6a3c435da233a78a0acced462cb27d2071bdeb436f2122c877ca1bb689"
+    },
+    {
+      "reference": "schemas/relations.schema.json",
+      "sha256": "2b189e46f6d684e88c00c090e6cb0c690712ad177d4f4254825f10829f1390e4"
+    },
+    {
+      "reference": "schemas/launch-receipt.schema.json",
+      "sha256": "5835b9448ce2657c81e67926e8fa879eaa9e1770007d1cfab5202d20b7dbf820"
+    }
+  ],
+  "frozen_request_set": {
+    "canary": 1,
+    "execution_freeze_sha256": "0f41b3ae675d37c0ad937ed6e755562edeff6b760d262ed9cc274170175ff366",
+    "requests": 28
+  },
+  "hidden_provider_context": "UNKNOWN",
+  "model_training_independence": "UNKNOWN",
+  "never_exposed_to_the_author": [
+    "this supervisor task text",
+    "the repository checkout",
+    "GitHub or chat discussion",
+    "historical authored rows",
+    "peer or earlier outputs",
+    "any adjudicator output"
+  ],
+  "prompt_contents": "role instruction, hash-checked frozen artifacts, the frozen partition assignment and the bound output schema",
+  "provider_flags": {
+    "keep_alive_seconds": 0,
+    "raw": true,
+    "stream": false
+  },
+  "request_payload_fields": [
+    "model",
+    "prompt",
+    "format",
+    "raw",
+    "stream",
+    "keep_alive",
+    "options"
+  ],
+  "schema_version": "biotech-local-exposure-receipt/v1",
+  "session_reuse": false,
+  "supervisor_use_of_history": "Only numeric run metrics from an earlier run (token counts, durations, memory) informed sizing. No earlier authored text was read.",
+  "system_prompt_or_template": "none: raw mode bypasses the model template",
+  "tools": [],
+  "untruncated_request_context": "UNKNOWN at wrapper level; the supervisor records the runner's own prompt-token count and truncation flag for each call as separate supporting evidence."
+}

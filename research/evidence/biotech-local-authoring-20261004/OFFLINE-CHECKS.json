@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "command": "PYTHONPATH=src:research python -m unittest discover -s research -p 'test_semantic*.py' -v",
+      "duration_seconds_reported": 44.697,
+      "exit_status": 0,
+      "failures_errors_skips_in_log": 0,
+      "id": "documented_unittest_discover_test_semantic",
+      "log": "offline/10-unittest.stderr.txt",
+      "result": "OK",
+      "stderr_sha256": "b6ff6875b72ecb013d9604a8b1dfa15e1e72bb8c842c69a4492064b9e8660899",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests_run": 53
+    },
+    {
+      "command": "python research/check_semantic_assessor_preparation.py --root . --check --require-freeze --receipt <receipt>",
+      "exit_status": 0,
+      "id": "frozen_preparation_validator",
+      "receipt": {
+        "artifact_hash_checks": 31,
+        "assessor_or_adjudicator_invocations": 0,
+        "at_utc": "2026-10-05T00:51:32.317653+00:00",
+        "launch_packets": 6,
+        "schema_version": "semantic-structural-check/v1",
+        "scope": "structure and custody only",
+        "semantic_judgments_performed": 0,
+        "status": "PASS_PREPARATION_STRUCTURE_ONLY"
+      },
+      "receipt_sha256": "5968fed2c2271fa5d1065b575ab3d846aea7b15dc9aae2cf8a28e5a0520f0010"
+    },
+    {
+      "duration_seconds_reported": 40.499,
+      "exit_status": 0,
+      "id": "supervisor_selftest",
+      "log": "offline/30-supervisor-selftest.stderr.txt",
+      "note": "The printed traceback is the intended interruption test: SIGTERM to the supervisor must leave no running child.",
+      "result": "OK",
+      "tests_run": 21
+    },
+    {
+      "exit_status": 0,
+      "id": "prepare",
+      "stdout_sha256": "ebd153064d3b67c446234c4fe12f90a2e5d01577edc1eb13fa7aae8be3cb4164"
+    },
+    {
+      "exit_status": 0,
+      "id": "verify",
+      "stdout": {
+        "cases": 44,
+        "partitions": 28,
+        "provider_calls_in_this_action": 0,
+        "relations": 16,
+        "semantic_validity": "NOT_ASSESSED",
+        "status": "PASS_PROSPECTIVE_PLAN_ONLY"
+      },
+      "stdout_sha256": "ac8fee7301e3e17e262d66e37c80dccb1ce92e9cea2dd4682944572a1efa789d"
+    }
+  ],
+  "environment": {
+    "bytecode_writing_disabled": true,
+    "dependency_source": "pip from the package index at install time; only jsonschema is pinned by the repo",
+    "machine": "arm64",
+    "packages": {
+      "attrs": "26.1.0",
+      "jsonschema": "4.25.1",
+      "jsonschema-specifications": "2025.9.1",
+      "pip": "24.0",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "setuptools": "79.0.1",
+      "typing_extensions": "4.16.0"
+    },
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.11.15"
+  },
+  "schema_version": "biotech-local-offline-checks/v1",
+  "scope": "Offline token and fake-HTTP structure/custody checks only. No provider generation and no semantic evidence.",
+  "source": {
+    "commit": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+    "local_branch": "local/biotech-authoring-20261004",
+    "module_sha256": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
+    "protocol_sha256": "23bfcfd62064a723512518b8cf7d70ee674e6d238bcd4740bf187db827e15634",
+    "tests_sha256": "4cddc26c63dbf70201f11a7d19aab83dbb078fbf270dc61fa46a81f2a3cb7867",
+    "tree": "6428495c4f3b373cd07bdebcc7916834c157da3f",
+    "worktree_clean_before_checks": true
+  }
+}

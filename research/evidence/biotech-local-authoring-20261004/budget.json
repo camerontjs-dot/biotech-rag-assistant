@@ -1,0 +1,80 @@
+{
+  "schema_version": "biotech-local-authoring-budget/v1",
+  "declared_before_provider_generation": true,
+  "purpose": "Finite context, output, time, memory and power budget for one local author-slot-bound-v1 run. Declared from current local inventory before any provider generation. The wrapper does not police resources; the local supervisor enforces these limits and stops, rather than retries, on any breach.",
+  "run_name": "semantic-author-slot-bound-v1-20261004-attempt01",
+  "provider": {
+    "name": "ollama",
+    "version": "0.35.1",
+    "endpoint": "http://127.0.0.1:11434"
+  },
+  "model": {
+    "name": "qwen3.5:9b",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7"
+  },
+  "request_options": {
+    "num_ctx": 40960,
+    "num_predict": 6144,
+    "timeout_seconds": 1800
+  },
+  "sizing_evidence": {
+    "host": "Apple M3, 24 GiB unified memory, fanless; battery power at declaration",
+    "model_architecture": "qwen35 hybrid: 32 blocks, full attention on every 4th block (8 layers), 4 KV heads, key/value length 256 each",
+    "estimated_kv_bytes_per_token_fp16": 32768,
+    "estimated_kv_gib_at_declared_num_ctx": 1.25,
+    "expected_resident_gib_range": "7 to 8",
+    "largest_author_prompt_utf8_bytes": 69537,
+    "canary_prompt_utf8_bytes": 78421,
+    "bytes_per_token_lead": "4.206 observed for a comparable earlier prompt on this model; 3.0 used as a pessimistic bound",
+    "pessimistic_canary_prompt_plus_reserve_tokens": 32236,
+    "largest_earlier_output_tokens_lead": 2185,
+    "limits_of_this_evidence": "Earlier measurements use a different request schema. They are leads only. The canary and each response still must satisfy observed prompt tokens plus num_predict <= num_ctx."
+  },
+  "limits": {
+    "start_requires": {
+      "loaded_models": 0,
+      "min_free_percentage": 60,
+      "pressure_level": 1,
+      "max_swap_used_mib": 768,
+      "min_battery_percentage_when_on_battery": 35
+    },
+    "abort_if": {
+      "free_percentage_below": 20,
+      "free_percentage_consecutive_samples": 2,
+      "pressure_level_at_least": 4,
+      "pressure_level_warn_consecutive_samples": 3,
+      "resident_bytes_at_least": 12884901888,
+      "swap_growth_mib_at_least": 256,
+      "reported_context_above": 40960,
+      "battery_percentage_below_when_on_battery": 12,
+      "memory_probe_failures_consecutive": 3
+    },
+    "sample_interval_seconds": 10,
+    "per_call_wall_limit_seconds": 2100,
+    "max_wait_for_slot_seconds": 14400,
+    "wait_poll_seconds_first_120s": 5,
+    "wait_poll_seconds_after": 30
+  },
+  "context_evidence": {
+    "purpose": "Separate local evidence about whether the provider received the whole request. Reported prompt counts alone are not enough.",
+    "provider_log": "~/.ollama/logs/server.log",
+    "per_call_window": "The supervisor records the byte range of the provider log written during each call and keeps the raw window private (it can contain other clients' lines). Public receipts carry only the byte range, window hash and the extracted numbers.",
+    "extracted_fields": [
+      "runner-reported allocated context (n_ctx, n_ctx_slot)",
+      "runner-reported KV and compute buffer sizes",
+      "runner-reported prompt tokens received (task.n_tokens)",
+      "runner-reported timings and token counts",
+      "runner slot-release line: n_tokens and truncated flag"
+    ],
+    "terminal_if": "any slot-release line in the call window reports truncated other than 0",
+    "unavailable_is": "recorded as UNAVAILABLE, not a stop; context visibility stays UNKNOWN and semantic readiness stays NOT_READY",
+    "limit": "A log written by the provider is not authentication against coordinated rewriting, and it does not establish semantic readiness."
+  },
+  "contention_policy": "Another local client may hold or later take the provider or memory. Before each call the supervisor waits, without signalling, stopping or inspecting any other process, until no model is resident and the start limits hold. A wait that exceeds max_wait_for_slot_seconds stops the sequence before any request; no call has started and the run stays resumable. If an abort limit trips during a call, only the supervisor's own wrapper process is terminated; that call is terminal and is preserved as a resource stop, never repeated.",
+  "terminal_rules": [
+    "One attempt per frozen call, in the frozen order. No retry, repair, repartition or favorable-attempt selection.",
+    "The first nonzero wrapper exit, non-accepted boundary status, interruption, timeout or resource stop ends the author sequence.",
+    "A wait that never started a request is not a failed call.",
+    "Resource stop is an apparatus outcome, not a semantic result."
+  ]
+}

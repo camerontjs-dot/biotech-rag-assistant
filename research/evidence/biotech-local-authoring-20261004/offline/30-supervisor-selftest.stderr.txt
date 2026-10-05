@@ -1,0 +1,39 @@
+test_critical_pressure_trips_at_once_and_warn_needs_three (__main__.AbortRules.test_critical_pressure_trips_at_once_and_warn_needs_three) ... ok
+test_healthy_never_trips (__main__.AbortRules.test_healthy_never_trips) ... ok
+test_single_low_free_sample_is_not_enough_but_two_are (__main__.AbortRules.test_single_low_free_sample_is_not_enough_but_two_are) ... ok
+test_swap_growth_resident_context_battery_and_probe_failure (__main__.AbortRules.test_swap_growth_resident_context_battery_and_probe_failure) ... ok
+test_commands_match_the_protocol_actions_exactly (__main__.Commands.test_commands_match_the_protocol_actions_exactly) ... ok
+test_sigterm_to_the_supervisor_leaves_no_running_child (__main__.Interruption.test_sigterm_to_the_supervisor_leaves_no_running_child) ... Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+  File "<worktree>/research/evidence/biotech-local-authoring-20261004/supervisor.py", line 400, in main
+    result = run_call(args, budget, group, args.log_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<worktree>/research/evidence/biotech-local-authoring-20261004/supervisor.py", line 313, in run_call
+    time.sleep(1)
+  File "<worktree>/research/evidence/biotech-local-authoring-20261004/supervisor.py", line 388, in <lambda>
+    signal.signal(signal.SIGTERM, lambda *_: (_ for _ in ()).throw(KeyboardInterrupt()))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<worktree>/research/evidence/biotech-local-authoring-20261004/supervisor.py", line 388, in <genexpr>
+    signal.signal(signal.SIGTERM, lambda *_: (_ for _ in ()).throw(KeyboardInterrupt()))
+KeyboardInterrupt
+ok
+test_abort_limit_kills_only_the_started_child (__main__.Launch.test_abort_limit_kills_only_the_started_child) ... ok
+test_accepted_call_is_recorded_with_real_exit_status (__main__.Launch.test_accepted_call_is_recorded_with_real_exit_status) ... ok
+test_missing_boundary_file_is_terminal (__main__.Launch.test_missing_boundary_file_is_terminal) ... ok
+test_nonzero_exit_is_terminal_even_with_accepted_looking_files (__main__.Launch.test_nonzero_exit_is_terminal_even_with_accepted_looking_files) ... ok
+test_rotated_log_cannot_yield_a_window (__main__.Launch.test_rotated_log_cannot_yield_a_window) ... ok
+test_runner_log_window_is_extracted_and_untruncated_call_is_accepted (__main__.Launch.test_runner_log_window_is_extracted_and_untruncated_call_is_accepted) ... ok
+test_runner_reported_truncation_is_terminal_even_when_everything_else_passes (__main__.Launch.test_runner_reported_truncation_is_terminal_even_when_everything_else_passes) ... ok
+test_unreadable_provider_log_is_recorded_unavailable_and_is_not_a_stop (__main__.Launch.test_unreadable_provider_log_is_recorded_unavailable_and_is_not_a_stop) ... ok
+test_wait_that_never_starts_a_request_is_not_a_failed_call (__main__.Launch.test_wait_that_never_starts_a_request_is_not_a_failed_call) ... ok
+test_wall_limit_terminates_a_hung_child (__main__.Launch.test_wall_limit_terminates_a_hung_child) ... ok
+test_wrong_boundary_status_is_terminal (__main__.Launch.test_wrong_boundary_status_is_terminal) ... ok
+test_probe_text (__main__.Parsers.test_probe_text) ... ok
+test_ac_power_ignores_battery_floor (__main__.StartLimits.test_ac_power_ignores_battery_floor) ... ok
+test_each_start_blocker (__main__.StartLimits.test_each_start_blocker) ... ok
+test_healthy_start (__main__.StartLimits.test_healthy_start) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 40.499s
+
+OK

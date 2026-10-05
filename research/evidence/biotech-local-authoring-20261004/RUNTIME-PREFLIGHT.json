@@ -1,0 +1,93 @@
+{
+  "before_any_provider_generation": true,
+  "budget": {
+    "file": "budget.json",
+    "sha256": "09171c46ffcfe680c00a33ddb0ae85e898e251ec1eb4a134dac2bd5389b779bb"
+  },
+  "captured_at_utc": "2026-10-05T01:02:44Z",
+  "contention_observed": {
+    "action": "None needed at capture. The supervisor waits for a free slot before every call and never signals, stops or inspects another process.",
+    "evidence_branch_or_process_touched": false,
+    "other_client_activity": "idle; no model resident and no generation request from any client since this task began, per the provider's own log",
+    "other_local_clients_with_open_provider_connection": 1,
+    "resident_models": 0
+  },
+  "host": {
+    "architecture": "arm64",
+    "chip": "Apple M3",
+    "memory_bytes": 25769803776,
+    "os": "macOS 27.0",
+    "unified_memory": true
+  },
+  "memory_at_capture": {
+    "free_percentage": 78,
+    "pressure_level": 1,
+    "swap_used_mib": 164.5
+  },
+  "power_at_capture": {
+    "percentage": 100,
+    "source": "battery"
+  },
+  "private_evidence_hash_only": {
+    "api-show-qwen3.5-9b.private.json": "b5ce5b8c4b52c87d27f3b2a9b27c28379d262e493f90e2e2e6022ae2e4a1a12b",
+    "api-tags.full-inventory.private.json": "cf8df36d43bb55e1f0fdd7562e729c5b3245a74502a0125194928e8dfd99532f",
+    "host-memory-power-preflight.private.txt": "a32cacf33a7bc60202facd0d723296d292331e57597d8ce17d5e4870408e0ec2",
+    "ollama-show-qwen3.5-9b.private.txt": "d7f6d94fe9e0afcf37d45e9256d9a03aa4d7a8b0011bd4d7d894b6b9f36330b1",
+    "provider-clients.private.txt": "9533a7c6c46a7469947c43af18151424fe1db73cb61873e1705ed24246d2d0de",
+    "provider-processes.private.txt": "ca19de1868a4ebbc00f64ab818a0fc03eaa2377f1b97e7f44625bc24bdba9fda"
+  },
+  "private_publication_limit": "The full model inventory, other clients and process listings contain unrelated local metadata and stay local. Their hashes are declared here.",
+  "provider": {
+    "endpoint": "loopback only (port 11434)",
+    "installed_model_count": 10,
+    "loaded_models_at_capture": [],
+    "name": "ollama",
+    "version": "0.35.1"
+  },
+  "schema_version": "biotech-local-runtime-preflight/v1",
+  "selected_model": {
+    "attention_layout": {
+      "blocks": 32,
+      "full_attention_interval": 4,
+      "full_attention_layers": 8,
+      "key_length": 256,
+      "kv_heads_on_full_attention_layers": 4,
+      "value_length": 256
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ],
+    "default_options_not_overridable_through_the_wrapper_allowlist": {
+      "presence_penalty": 1.5
+    },
+    "default_options_overridden_by_frozen_config": [
+      "temperature",
+      "top_k",
+      "top_p"
+    ],
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "disk_bytes": 6594474711,
+    "estimated_kv_bytes_per_token_fp16": 32768,
+    "family": "qwen35",
+    "modelfile_default_options": {
+      "presence_penalty": 1.5,
+      "temperature": 1.0,
+      "top_k": 20.0,
+      "top_p": 0.95
+    },
+    "name": "qwen3.5:9b",
+    "parameter_size": "9.7B",
+    "quantization": "Q4_K_M",
+    "same_digest_as_earlier_run_lead": true,
+    "trained_context_tokens": 262144
+  },
+  "unknowns": [
+    "hidden provider context",
+    "model training independence",
+    "untruncated request context at wrapper level (runner log evidence is collected per call as separate evidence)",
+    "capacity under later contention"
+  ]
+}
