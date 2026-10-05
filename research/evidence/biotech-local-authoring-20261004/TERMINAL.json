@@ -1,0 +1,208 @@
+{
+  "canary_artifact_sha256": {
+    "author-boundary.json": "b70a206dc2243fb2c8fd83ee55bd62834b7aa6fcab5007df8fde632e30b7ef11",
+    "before-send.json": "e3bcf31a6acf42a622646f79bb7b1fec232047705f5913bd72910ec7e3f404af",
+    "http-response.json": "c3cfe306f09cb42e0438f8ea09a49124eaed2b3b66b5a166fdbbc9cc3d3c0911",
+    "models-discovery.raw.json": "cf8df36d43bb55e1f0fdd7562e729c5b3245a74502a0125194928e8dfd99532f",
+    "prompt.txt": "7094ef9e9ff2aeca2afb2d945edc4e13b82a60ee0255cd4e9cefc1e04ba6e5d8",
+    "provider-discovery.raw.json": "396db0946fbcb2896995ef22b1785c54fa7cfae0e03badb57a381f066141cad7",
+    "provider-response.raw.json": "635980a72047dde831f47bd6447e547c125cf1dc3f40f3a5e802450368548af7",
+    "receipt.json": "6be537ca812ac1b576f322386d1e2132b8113e38a6720207f7a96dc652a0407f",
+    "request.json": "d5f1920b0c96694dbdc663579612fa07396d7f9e09b9935eba4f43dad77e5a82",
+    "send-started.json": "b9d164f489357d3387ef8be31425a8a49ffdd801fba804b09503d262d3e12c14"
+  },
+  "canary_models_discovery_publication": "hash-only: the file is the full local model inventory (unrelated local metadata). Its hash equals the preflight inventory hash, so the inventory did not change between preflight and canary.",
+  "classification": "Provider structured-output schema conversion refused the canary request before any prompt evaluation or generation. Provider formatter compatibility. Not a resource, timeout, truncation or semantic outcome.",
+  "corpus": {
+    "cases_jsonl_sha256": null,
+    "corpus_freeze_started_marker": "absent",
+    "corpus_sha256": null,
+    "custodian_privacy_provenance_historical_check": "NOT_APPLICABLE: no authored text exists",
+    "design_json_sha256": null,
+    "freeze_corpus_command": "NOT_RUN (precondition of 28 accepted partitions unmet)",
+    "relations_json_sha256": null,
+    "status": "NOT_RUN"
+  },
+  "denominators": {
+    "author_partitions_accepted": 0,
+    "author_partitions_invalid": 0,
+    "author_partitions_not_attempted_sequence_closed": 28,
+    "author_partitions_planned": 28,
+    "author_requests_sent": 0,
+    "canary_accepted": 0,
+    "canary_attempts": 1,
+    "cases_authored": 0,
+    "cases_planned": 44,
+    "prompt_tokens_evaluated": 0,
+    "provider_generation_requests_sent": 1,
+    "relations_authored": 0,
+    "relations_planned": 16,
+    "retries": 0,
+    "tokens_generated": 0
+  },
+  "deviations_from_the_handoff_plan": [
+    "Worktree created under the project's .worktrees directory instead of the plan's sibling path.",
+    "Python 3.11.15 used for the virtual environment instead of the default python3 (3.14.4); 3.11 is in the hosted matrix.",
+    "PYTHONDONTWRITEBYTECODE=1 set; offline receipt written outside /tmp.",
+    "A local resource supervisor, budget and self-test were added and published in the freeze commit before any provider call. The wrapper ran exactly the protocol's canary command through it.",
+    "caffeinate -i held the machine awake because it was on battery power.",
+    "Earlier-run numeric metrics (token counts, durations, memory) informed sizing; no earlier authored text was read."
+  ],
+  "disposition": "FIRST_DURABLE_BLOCKER",
+  "first_failure": {
+    "construct_at_that_location": "items: false (a boolean subschema), frozen in canary.spec.json",
+    "named_schema_location": "#/properties/rows/items",
+    "provider_elapsed": "4.929859458s",
+    "provider_http_status": 400,
+    "provider_message": "Field 'json_schema': \"json_schema\": JSON schema conversion failed:\nJSON schema error at #/properties/rows/items: schema must be an object",
+    "request": "canary",
+    "runner_before_refusal": {
+      "compute_buffer_mib": [
+        257.24,
+        56.02,
+        275.48,
+        24.93
+      ],
+      "kv_buffer_mib": [
+        1280.0
+      ],
+      "n_ctx": [
+        40960
+      ],
+      "prompt_tokens_evaluated": 0,
+      "slot_activity_lines_in_window": 0,
+      "tokens_generated": 0
+    },
+    "supervisor_exit_status": 1,
+    "wrapper_boundary_errors": [
+      "ValueError: request path invalid"
+    ],
+    "wrapper_exit_status": 1,
+    "wrapper_receipt_errors": [
+      "ValueError: provider HTTP failure: 400, None"
+    ]
+  },
+  "identities": {
+    "boundary_module_sha256": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
+    "canary_call_started_utc": "2026-10-05T01:06:52.622217+00:00",
+    "execution_freeze_sha256": "0f41b3ae675d37c0ad937ed6e755562edeff6b760d262ed9cc274170175ff366",
+    "host": {
+      "architecture": "arm64",
+      "chip": "Apple M3",
+      "memory_bytes": 25769803776,
+      "os": "macOS 27.0",
+      "unified_memory": true
+    },
+    "model": "qwen3.5:9b",
+    "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "options": {
+      "num_ctx": 40960,
+      "num_predict": 6144,
+      "repeat_penalty": 1.0,
+      "seed": 37030,
+      "temperature": 0,
+      "top_k": 1,
+      "top_p": 1.0
+    },
+    "plan_sha256": "fbfb90925274787edf7588b7ae912dc3fe7dd23e913f5c107d76d7003cb57d92",
+    "pr_head_read_for_instructions": "9399e096185e8fc90d9026d97c1e715c750f2787",
+    "prospective_freeze_commit": "9ba158e50b9c9d75503dbc5c946e8271c890c8ea",
+    "prospective_freeze_commit_time_utc": "2026-10-05T01:06:06Z",
+    "provider": "ollama 0.35.1",
+    "run_name": "semantic-author-slot-bound-v1-20261004-attempt01",
+    "runtime_config_sha256": "d55eeba7a31e2c8a2fd2476d8d31b967e040430aa4acce26eccfa6a3b7c94a27",
+    "source_commit": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+    "source_tree": "6428495c4f3b373cd07bdebcc7916834c157da3f",
+    "supervisor_freeze_sha256": "5a1891acdd5a29771d18e8a1939abdfbf4bf87f2fdb86150dadff89160d6ffc0",
+    "timeout_seconds": 1800
+  },
+  "independence": {
+    "achieved": [
+      "exact frozen request bytes, no tools, no session reuse",
+      "freeze published before any provider call",
+      "author role never reached: provider refused before evaluating the prompt"
+    ],
+    "unknown": [
+      "hidden provider context",
+      "model training independence",
+      "untruncated request context"
+    ]
+  },
+  "inference_not_tested": [
+    "Every one of the 28 author output schemas contains the same construct at three locations each (see SCHEMA-FEATURE-SURVEY.json). They would be expected to be refused the same way, but no author request was sent.",
+    "The converter stops at the first error. Provider handling of prefixItems, allOf, const, $ref/$defs and additionalProperties: false in these schemas is therefore untested.",
+    "Whether removing the boolean subschemas is sufficient is untested. It needs a separately frozen successor and canary."
+  ],
+  "next_evidence_producing_action": "A separately identified successor candidate must remove boolean subschemas from the provider-facing output schema contract, add an offline gate that rejects them, and be qualified before a new local run. It needs a new run directory, new frozen configuration and new freeze, and a provider-conversion canary frozen before use. This attempt is not repaired, retried or reused.",
+  "preserved": [
+    "PR #54 head unchanged",
+    "attempt01 run directory and canary call are unmodified and not reusable",
+    "BM25, A07 negative result, A08 bounded result, heading exclusion, Wave B lock, TEST/PROSPECTIVE restrictions",
+    "EB repository and processes were only inspected read-only; none was modified, stopped or signalled"
+  ],
+  "run_status": "APPARATUS_INVALID",
+  "schema_version": "biotech-local-authoring-terminal/v1",
+  "stage": "CANARY",
+  "states": {
+    "A_B_C_adjudication": "NOT_RUN",
+    "biotech_cal_eb_integration": "NOT_RUN",
+    "heading_grant_49": "NOT_RUN",
+    "reducer": "NOT_RUN",
+    "semantic_assessor": "NOT_RUN",
+    "semantic_readiness": "NOT_READY",
+    "semantic_validity": "NOT_ASSESSED",
+    "untruncated_request_context": "UNKNOWN (no prompt was evaluated)",
+    "wave_b": "LOCKED"
+  },
+  "supervisor": {
+    "call_record_sha256_original": "b91a820e95fff24610cbda149fd99c68c89dcf7ba56f86c804ce223d443b281c",
+    "provider_log_window": {
+      "compute_buffer_mib": [
+        257.24,
+        56.02,
+        275.48,
+        24.93
+      ],
+      "end_offset": 3492262,
+      "generate_requests": [
+        {
+          "duration": "4.929859458s",
+          "http_status": 400
+        }
+      ],
+      "generation_eval": [],
+      "kv_buffer_mib": [
+        1280.0
+      ],
+      "n_ctx": [
+        40960
+      ],
+      "n_ctx_slot": [
+        40960
+      ],
+      "prompt_eval": [],
+      "prompt_tokens_received": [],
+      "slot_releases": [],
+      "start_offset": 3458742,
+      "status": "NO_SLOT_RELEASE_IN_WINDOW",
+      "truncated_nonzero": 0,
+      "window_bytes": 33520,
+      "window_sha256": "0bf30097fd292fc3c4d59153cd1f24a272150872394692eceb04fd3f30b66f7c"
+    },
+    "resource": {
+      "max_reported_context": null,
+      "max_resident_bytes": null,
+      "max_swap_used_mib": 164.5,
+      "min_battery_percentage": 100,
+      "min_free_percentage": 67,
+      "resident_model_names_seen": [],
+      "samples": 2,
+      "thermal_values_seen": [
+        "Note: No thermal warning level has been recorded Note: No performance warning level has been recorded Note: No CPU power status has been recorded"
+      ]
+    },
+    "resource_trips": [],
+    "sampling_limit": "The call lasted 9.1 s, shorter than the 10 s sampling interval, so no mid-call resource sample exists."
+  },
+  "task": "Biotech local authoring task, PR #54, issue #39"
+}

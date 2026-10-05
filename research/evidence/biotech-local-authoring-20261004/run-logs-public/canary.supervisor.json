@@ -1,0 +1,79 @@
+{
+ "accepted_by_supervisor": false,
+ "boundary_status": "APPARATUS_INVALID",
+ "command": [
+  "<worktree>/.venv/bin/python",
+  "research/semantic_author_slot_boundary_v1.py",
+  "canary",
+  "--root",
+  "<worktree>",
+  "--run-dir",
+  "<worktree>/research/evidence/semantic-author-slot-bound-v1-20261004-attempt01"
+ ],
+ "end_sample": {
+  "at_utc": "2026-10-05T01:06:58.644917+00:00",
+  "battery_percentage": 100,
+  "free_percentage": 67,
+  "models": [],
+  "on_ac_power": false,
+  "pressure_level": 1,
+  "swap_used_mib": 164.5,
+  "thermal": "Note: No thermal warning level has been recorded Note: No performance warning level has been recorded Note: No CPU power status has been recorded"
+ },
+ "expected_status": "PASS_NONSEMANTIC_CANARY_ONLY",
+ "finished_utc": "2026-10-05T01:06:58.644760+00:00",
+ "group": "canary",
+ "provider_log_window": {
+  "compute_buffer_mib": [
+   257.24,
+   56.02,
+   275.48,
+   24.93
+  ],
+  "end_offset": 3492262,
+  "generate_requests": [
+   {
+    "duration": "4.929859458s",
+    "http_status": 400
+   }
+  ],
+  "generation_eval": [],
+  "kv_buffer_mib": [
+   1280.0
+  ],
+  "n_ctx": [
+   40960
+  ],
+  "n_ctx_slot": [
+   40960
+  ],
+  "prompt_eval": [],
+  "prompt_tokens_received": [],
+  "slot_releases": [],
+  "start_offset": 3458742,
+  "status": "NO_SLOT_RELEASE_IN_WINDOW",
+  "truncated_nonzero": 0,
+  "window_bytes": 33520,
+  "window_sha256": "0bf30097fd292fc3c4d59153cd1f24a272150872394692eceb04fd3f30b66f7c"
+ },
+ "resource": {
+  "max_reported_context": null,
+  "max_resident_bytes": null,
+  "max_swap_used_mib": 164.5,
+  "min_battery_percentage": 100,
+  "min_free_percentage": 67,
+  "resident_model_names_seen": [],
+  "samples": 2,
+  "thermal_values_seen": [
+   "Note: No thermal warning level has been recorded Note: No performance warning level has been recorded Note: No CPU power status has been recorded"
+  ]
+ },
+ "resource_trips": [],
+ "returncode": 1,
+ "schema_version": "biotech-local-supervisor-call/v1",
+ "started_utc": "2026-10-05T01:06:52.622217+00:00",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "stdout_sha256": "eace0081831cf9eefcecdfd4663d7da56bfa01f0d1ac58b741fc43324f352909",
+ "waited_for_slot_seconds": 0.0,
+ "wall_seconds": 9.1
+}

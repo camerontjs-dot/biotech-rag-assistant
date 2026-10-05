@@ -1,0 +1,539 @@
+{
+  "author_01_items_false_paths": [
+    "#/properties/cases/items",
+    "#/properties/design_entries/items",
+    "#/properties/relations/items"
+  ],
+  "author_items_false_per_schema": [
+    3
+  ],
+  "author_schemas_total": 28,
+  "author_schemas_with_items_false": 28,
+  "canary_items_false_paths": [
+    "#/properties/rows/items"
+  ],
+  "per_schema": {
+    "author-01": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 20,
+        "allOf": 20,
+        "const": 59,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "8fce2bbcfb8e51f6f667414d3519f3f02f592e727c9c5776d51983638111fc60"
+    },
+    "author-02": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 8,
+        "allOf": 8,
+        "const": 23,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "612627963b10d23ab8d6ee0bc1982ca24236a3cc6f63577fefd5b6f5de8b29d8"
+    },
+    "author-03": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "cd4c752114e33d46317dfd729c5b4a1539845a72d145f0b79fd91c9750907abf"
+    },
+    "author-04": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "de93201754f9932c863ac83d3ff1a6387754681a5db1527e484bfcb7a4f4b135"
+    },
+    "author-05": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "6e0d6f442bed6f9883cabba020c22ba9e71c60d47729ec7d4dbc4c7afa8ded16"
+    },
+    "author-06": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "90a14d8bfea595ef7271389444ed4f1598006396e51dbb9cee42839ae1293317"
+    },
+    "author-07": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "10c9c2c830c1a6aaee4f90be69265373923787ec86274f53a1829a2daceda6ea"
+    },
+    "author-08": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "47755e7cd44daf8070450022b575bf9761bfd06a58c57fe266e15ed65ad3235f"
+    },
+    "author-09": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "29d2d08715dcd761f11328fdc12c741012d89be60909aca0fa7e01ed80707fb3"
+    },
+    "author-10": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "8d4eef39b75467bf8fffaf27761c0440cbe7507bce320a21282049dff4a30ca8"
+    },
+    "author-11": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "c9c301d401755390ac05a7d8acbccbe46b5e142329ecc08c4e8f726d3995c05a"
+    },
+    "author-12": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "e7fe9197a1f9a7cef08e878257e02d667a3214521cbfdf2704fd1393a4cf098b"
+    },
+    "author-13": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "b94b94273336eab172616f952d114a9607b35412b2a270858518c1749ced7a4a"
+    },
+    "author-14": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "ef6277608e6456d766e61a9009fa6fcf5e3a1af0cb913b7dde3567bc3c7ae5dd"
+    },
+    "author-15": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "59e294faaec60b1161a881be95f821d37dee1853cc1b2db1e8c055b6495a3531"
+    },
+    "author-16": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "ed246703362acbde6a580a39506bbeb7497b259a5fa13898e3c4b6c06ab0d973"
+    },
+    "author-17": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "bd3359cddb80882f0ca4283803a8fe3356dcd55391a316a21b78704b4c8d39dd"
+    },
+    "author-18": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "2d4bd4f853712ed33de50c1766b99cb3b670a2d0fe41b6f3e1cc90ab8fe9534c"
+    },
+    "author-19": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "7225205e9f64effdef186fdee7dd1c0094eb4a61e2cd716b29a4a74a486e5520"
+    },
+    "author-20": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "c832db30136217163920d996e608f01e9a4e20b0c6599eb8f7079e4cdf1890a6"
+    },
+    "author-21": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 5,
+        "allOf": 5,
+        "const": 14,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 3
+      },
+      "spec_sha256": "965f26984af1da99272f75be1a7236e3b5f613094c5bed64ffc05bea60183668"
+    },
+    "author-22": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "1c272b9881ab618393224453b42e36e4956722161963ebb946961b4e151c293d"
+    },
+    "author-23": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "2fd27b4c6fc6016c8cce92da0bcb42bed81d6ced6ba2cd73bdcdc0a9af871002"
+    },
+    "author-24": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "841a1ed6f0d9d989a9f8a87feb64c9b2fe209025500cf0c6b69b2e5006add702"
+    },
+    "author-25": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "f18e90538a3f110d9d42a26ffe83609503333c9dbe1d70b77898eaac991b6567"
+    },
+    "author-26": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "17e66c9d489aa9c501a2eb2370c3eac0004ebed487295f1f8fd6394e0005a065"
+    },
+    "author-27": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "344c40ce23f861eb21da083ab7832cb6f42a5120ee9ba1ac3649370435872696"
+    },
+    "author-28": {
+      "additionalProperties_false_count": 13,
+      "items_false": [
+        "#/properties/cases/items",
+        "#/properties/design_entries/items",
+        "#/properties/relations/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 5,
+        "maxItems": 5,
+        "minItems": 10,
+        "prefixItems": 2
+      },
+      "spec_sha256": "f60f76b2e3588f87623a18d7f19ebbaca4b2cb1a1754fd50e0ec0f8aa0e5e043"
+    },
+    "canary": {
+      "additionalProperties_false_count": 2,
+      "items_false": [
+        "#/properties/rows/items"
+      ],
+      "keyword_counts": {
+        "$defs": 1,
+        "$ref": 2,
+        "allOf": 2,
+        "const": 2,
+        "maxItems": 1,
+        "minItems": 1,
+        "prefixItems": 1
+      },
+      "spec_sha256": "64c2aeaef0ab627b488171850a18f31c5bccd210ba1c1da55342e430dfc772dd"
+    }
+  },
+  "schema_version": "biotech-local-schema-feature-survey/v1",
+  "scope": "Offline walk of the frozen provider-facing output schemas. No provider was contacted. It records where the construct named by the provider's error occurs; it does not establish how the provider treats any other schema."
+}

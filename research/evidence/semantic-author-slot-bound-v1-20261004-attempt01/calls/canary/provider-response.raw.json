@@ -1,0 +1,1 @@
+{"error":"{\"error\":{\"code\":400,\"message\":\"Field 'json_schema': \\\"json_schema\\\": JSON schema conversion failed:\\nJSON schema error at #/properties/rows/items: schema must be an object\",\"type\":\"invalid_request_error\"}}"}
