@@ -1,0 +1,80 @@
+--- v1/.github/workflows/semantic-author-slot-boundary.yml
++++ v2/.github/workflows/semantic-author-slot-boundary-v2.yml
+@@ -1,19 +1,27 @@
+-name: Semantic author slot boundary
++name: Semantic author slot boundary v2
+ 
+ on:
++  push:
++    branches:
++      - 'research/semantic-author-slot-bound-v2-*'
++    paths:
++      - 'research/semantic_author_slot_boundary_v2.py'
++      - 'research/test_semantic_author_slot_boundary_v2.py'
++      - 'research/semantic-author-slot-boundary-v2-protocol.md'
++      - '.github/workflows/semantic-author-slot-boundary-v2.yml'
+   pull_request:
+     paths:
+-      - 'research/semantic_author_slot_boundary_v1.py'
+-      - 'research/test_semantic_author_slot_boundary_v1.py'
+-      - 'research/semantic-author-slot-boundary-v1-protocol.md'
+-      - '.github/workflows/semantic-author-slot-boundary.yml'
++      - 'research/semantic_author_slot_boundary_v2.py'
++      - 'research/test_semantic_author_slot_boundary_v2.py'
++      - 'research/semantic-author-slot-boundary-v2-protocol.md'
++      - '.github/workflows/semantic-author-slot-boundary-v2.yml'
+ 
+ permissions:
+   contents: read
+ 
+ jobs:
+   source-lint:
+-    name: New author boundary source lint
++    name: New v2 author boundary source lint
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v4
+@@ -24,11 +32,11 @@
+         run: python -m pip install ruff==0.16.5
+       - name: Lint only new source
+         run: >-
+-          ruff check research/semantic_author_slot_boundary_v1.py
+-          research/test_semantic_author_slot_boundary_v1.py
++          ruff check research/semantic_author_slot_boundary_v2.py
++          research/test_semantic_author_slot_boundary_v2.py
+ 
+   structural-checks:
+-    name: Author structure and custody (py${{ matrix.python-version }})
++    name: Author structure, custody and schema contract (py${{ matrix.python-version }})
+     runs-on: ubuntu-latest
+     strategy:
+       fail-fast: false
+@@ -42,11 +50,11 @@
+       - name: Record checkout identity
+         run: |
+           git rev-parse HEAD HEAD^{tree} > checkout-identity.txt
+-          sha256sum research/semantic_author_slot_boundary_v1.py research/test_semantic_author_slot_boundary_v1.py >> checkout-identity.txt
++          sha256sum research/semantic_author_slot_boundary_v2.py research/test_semantic_author_slot_boundary_v2.py >> checkout-identity.txt
+       - name: Install frozen structural validator
+         id: install
+         run: python -m pip install -r research/semantic-assessor-preparation-requirements.txt
+-      - name: New and inherited structural controls
++      - name: v2, v1 and inherited structural controls
+         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+         env:
+           PYTHONPATH: src:research
+@@ -59,12 +67,12 @@
+           --check --require-freeze --receipt frozen-preparation-check.json
+       - name: Compile the new apparatus
+         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+-        run: python -m py_compile research/semantic_author_slot_boundary_v1.py research/test_semantic_author_slot_boundary_v1.py
++        run: python -m py_compile research/semantic_author_slot_boundary_v2.py research/test_semantic_author_slot_boundary_v2.py
+       - name: Preserve structural receipts
+         if: always()
+         uses: actions/upload-artifact@v4
+         with:
+-          name: author-slot-boundary-py${{ matrix.python-version }}
++          name: author-slot-boundary-v2-py${{ matrix.python-version }}
+           path: |
+             checkout-identity.txt
+             structural-tests.log

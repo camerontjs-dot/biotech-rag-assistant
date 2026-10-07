@@ -1,0 +1,92 @@
+{
+  "changed": [
+    "tuple_schema: no `items` keyword; exact cardinality closes every tuple",
+    "provider_schema_gate over construction, prepare, verify and the pre-send request format",
+    "canary uses the 18 author keywords (v1: 12) and an exactly empty tuple; coverage equality is enforced",
+    "exact request and prompt bytes of all 29 calls are frozen and checked before each send",
+    "plan and freeze schema versions advance to v2; run namespace is semantic-author-slot-bound-v2-*"
+  ],
+  "files": {
+    "module": {
+      "diff": "v1-to-v2/module.diff",
+      "diff_sha256": "52cb8930fc6911d28145398a7d70b07890a651ef1b3e90b258f6a1626162cf86",
+      "lines_added": 214,
+      "lines_removed": 32,
+      "v1": "v1/research/semantic_author_slot_boundary_v1.py",
+      "v1_commit": "9399e096185e8fc90d9026d97c1e715c750f2787",
+      "v1_sha256": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
+      "v2": "v2/research/semantic_author_slot_boundary_v2.py",
+      "v2_sha256": "2085ece34c01ed117f5bcd0c9ab5cef88569b4e110a4dc1dc3bc680cebaf60c7"
+    },
+    "protocol": {
+      "diff": "v1-to-v2/protocol.diff",
+      "diff_sha256": "f724eb7a25e58f51232937fe5f36ef348386f049062d98bb3ca5a66dbb98a82b",
+      "lines_added": 119,
+      "lines_removed": 30,
+      "v1": "v1/research/semantic-author-slot-boundary-v1-protocol.md",
+      "v1_commit": "9399e096185e8fc90d9026d97c1e715c750f2787",
+      "v1_sha256": "23bfcfd62064a723512518b8cf7d70ee674e6d238bcd4740bf187db827e15634",
+      "v2": "v2/research/semantic-author-slot-boundary-v2-protocol.md",
+      "v2_sha256": "aead177bcfb4a3e6a000af048e65b0481eb4033aa3106a8b256d3fb4104df6fc"
+    },
+    "runtime_config": {
+      "identical": true,
+      "v1_run_runtime_config_sha256": "d55eeba7a31e2c8a2fd2476d8d31b967e040430aa4acce26eccfa6a3b7c94a27",
+      "v2_run_runtime_config_sha256": "d55eeba7a31e2c8a2fd2476d8d31b967e040430aa4acce26eccfa6a3b7c94a27"
+    },
+    "supervisor": {
+      "diff": "v1-to-v2/supervisor.diff",
+      "diff_sha256": "a37896ae9b9d0e0b798f56d0b4d5175a1ba345d11d3c6905fd4ed67e57a712c8",
+      "lines_added": 2,
+      "lines_removed": 2,
+      "v1": "v1/research/evidence/biotech-local-authoring-20261004/supervisor.py",
+      "v1_commit": "bd9ba73a1310564ba40bbb8007da0fe8a333e54c",
+      "v1_sha256": "1b47af697330fddb6523f3044f21a6cbb7b2d36427bf5ed5cf95d5c2ce37646f",
+      "v2": "v2/research/evidence/biotech-local-authoring-v2-20261007/supervisor.py",
+      "v2_sha256": "db2430cae1fadab6cc796d5c9c9573bccbaf239261e5d9eccfddc505e9e2a8a7"
+    },
+    "supervisor_selftest": {
+      "diff": "v1-to-v2/supervisor_selftest.diff",
+      "diff_sha256": "4a6a4ebf5a021f64399733a5eca9e9005ca6d6928ba7d67c0874708554f58ba3",
+      "lines_added": 8,
+      "lines_removed": 4,
+      "v1": "v1/research/evidence/biotech-local-authoring-20261004/supervisor_selftest.py",
+      "v1_commit": "bd9ba73a1310564ba40bbb8007da0fe8a333e54c",
+      "v1_sha256": "debc7bdcd65256d33e2723af9ccc0090bccb5f69cad29e8479e9d913aee11923",
+      "v2": "v2/research/evidence/biotech-local-authoring-v2-20261007/supervisor_selftest.py",
+      "v2_sha256": "56a5dee41a376e507f587d03f0dd360550a89668c4b649533d4d9cbf47bf1ddd"
+    },
+    "tests": {
+      "diff": "v1-to-v2/tests.diff",
+      "diff_sha256": "66f6902df7c59470cee257c28ed8614523d8f6cdd0e0052acb2ce32d11526be7",
+      "lines_added": 495,
+      "lines_removed": 3,
+      "v1": "v1/research/test_semantic_author_slot_boundary_v1.py",
+      "v1_commit": "9399e096185e8fc90d9026d97c1e715c750f2787",
+      "v1_sha256": "4cddc26c63dbf70201f11a7d19aab83dbb078fbf270dc61fa46a81f2a3cb7867",
+      "v2": "v2/research/test_semantic_author_slot_boundary_v2.py",
+      "v2_sha256": "d187d15e1f6db1cb9487a586f98c5727774fc603f618e2b59b171999a5951e2a"
+    },
+    "workflow": {
+      "diff": "v1-to-v2/workflow.diff",
+      "diff_sha256": "379f942725b4d520f5cd5a4a09522e5b5d4deb022acccafc711defb1e77c0b2c",
+      "lines_added": 21,
+      "lines_removed": 13,
+      "v1": "v1/.github/workflows/semantic-author-slot-boundary.yml",
+      "v1_commit": "9399e096185e8fc90d9026d97c1e715c750f2787",
+      "v1_sha256": "1bb97c701575a76bf0aeeafd71278762fc68528a2f9ad419df9fa67d6ee542eb",
+      "v2": "v2/.github/workflows/semantic-author-slot-boundary-v2.yml",
+      "v2_sha256": "adb412d7f66f1ca56a1d222009c2f9e30351d302eea4ed453eec768d1df11e5b"
+    }
+  },
+  "schema_version": "biotech-local-v1-to-v2-changes/v1",
+  "supervisor_budget": "see budget.json: two free-memory thresholds move down together; everything else is identical to the v1 budget",
+  "unchanged_by_construction_and_tests": [
+    "frozen PR #30 design and PR #38 partition/identity authority",
+    "28 author components, 44 case/design slots, 16 relations",
+    "role instructions, artifacts and data of all 28 requests (equality asserted per request)",
+    "author output schemas except the removal of three boolean items values each (equality asserted per request)",
+    "execution order, one-attempt rule, retry policy and acceptance checks",
+    "provider, model digest, generation options and timeout (runtime-config bytes identical)"
+  ]
+}

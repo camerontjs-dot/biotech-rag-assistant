@@ -1,0 +1,10 @@
+{
+  "schema_version": "semantic-structural-check/v1",
+  "at_utc": "2026-10-07T04:55:17.044531+00:00",
+  "semantic_judgments_performed": 0,
+  "assessor_or_adjudicator_invocations": 0,
+  "scope": "structure and custody only",
+  "status": "PASS_PREPARATION_STRUCTURE_ONLY",
+  "artifact_hash_checks": 31,
+  "launch_packets": 6
+}

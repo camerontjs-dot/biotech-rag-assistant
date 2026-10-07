@@ -1,0 +1,35 @@
+--- v1/research/evidence/biotech-local-authoring-20261004/supervisor_selftest.py
++++ v2/research/evidence/biotech-local-authoring-v2-20261007/supervisor_selftest.py
+@@ -18,6 +18,8 @@
+ import supervisor as sup  # noqa: E402
+ 
+ BUDGET = json.loads((Path(__file__).resolve().parent / "budget.json").read_text())
++FREE_FLOOR = BUDGET["limits"]["start_requires"]["min_free_percentage"]
++LOW_FREE = BUDGET["limits"]["abort_if"]["free_percentage_below"] - 1
+ HEALTHY = {"free_percentage": 70, "pressure_level": 1, "swap_used_mib": 100.0, "battery_percentage": 90,
+            "on_ac_power": False, "thermal": None, "models": [], "at_utc": "t"}
+ 
+@@ -42,7 +44,8 @@
+ 
+     def test_each_start_blocker(self):
+         cases = [snap(models=[{"name": "other", "digest": "d", "size": 1, "context_length": 1}]),
+-                 snap(models=None), snap(free_percentage=59), snap(free_percentage=None),
++                 snap(models=None), snap(free_percentage=FREE_FLOOR - 1),
++                 snap(free_percentage=None),
+                  snap(pressure_level=2), snap(swap_used_mib=768.0), snap(swap_used_mib=None),
+                  snap(battery_percentage=34), snap(battery_percentage=None), snap(on_ac_power=None)]
+         for case in cases:
+@@ -64,9 +67,10 @@
+         self.assertEqual(self.check_all(snap(), snap(), snap()), [])
+ 
+     def test_single_low_free_sample_is_not_enough_but_two_are(self):
+-        self.assertEqual(self.check_all(snap(free_percentage=10)), [])
+-        self.assertTrue(self.check_all(snap(free_percentage=10), snap(free_percentage=10)))
+-        self.assertEqual(self.check_all(snap(free_percentage=10), snap(), snap(free_percentage=10)), [])
++        low = snap(free_percentage=LOW_FREE)
++        self.assertEqual(self.check_all(low), [])
++        self.assertTrue(self.check_all(low, low))
++        self.assertEqual(self.check_all(low, snap(), low), [])
+ 
+     def test_critical_pressure_trips_at_once_and_warn_needs_three(self):
+         self.assertTrue(self.check_all(snap(pressure_level=4)))

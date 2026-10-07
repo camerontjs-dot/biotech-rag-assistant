@@ -1,0 +1,106 @@
+{
+  "before_any_provider_generation": true,
+  "budget": {
+    "file": "budget.json",
+    "sha256": "976b78f438e243b1d910ea4219fbafbfca0844ae9dc99c4363dde2292f339820"
+  },
+  "captured_at_utc": "2026-10-07T04:43:35Z",
+  "contention_observed": {
+    "action": "None needed at capture. The supervisor waits for a free slot before every call and never signals, stops or inspects another process.",
+    "evidence_branch_or_process_touched": false,
+    "other_client_activity": "idle: no model resident, and the provider log records no generation request dated 2026/10/07",
+    "other_local_clients_with_open_provider_connection": 1,
+    "resident_models": 0
+  },
+  "host": {
+    "architecture": "arm64",
+    "chip": "Apple M3",
+    "memory_bytes": 25769803776,
+    "os": "macOS 27.0",
+    "unified_memory": true
+  },
+  "identity_with_v1_preflight": {
+    "api_show_sha256": "b5ce5b8c4b52c87d27f3b2a9b27c28379d262e493f90e2e2e6022ae2e4a1a12b",
+    "api_show_sha256_equal_to_v1": true,
+    "api_tags_full_inventory_sha256": "cf8df36d43bb55e1f0fdd7562e729c5b3245a74502a0125194928e8dfd99532f",
+    "api_tags_full_inventory_sha256_equal_to_v1": true,
+    "meaning": "The provider's model inventory and the selected model's metadata are byte-identical to the v1 preflight, so nothing the provider reports about this runtime changed since the refused canary.",
+    "runtime_config_sha256_equal_to_v1_run": true
+  },
+  "memory_at_capture": {
+    "free_percentage": 58,
+    "pressure_level": 1,
+    "swap_used_mib": 277.44
+  },
+  "memory_earlier_reading": {
+    "at_utc": "2026-10-07T04:22:39Z",
+    "free_percentage": 54
+  },
+  "power_at_capture": {
+    "percentage": 80,
+    "source": "AC power (attached, not charging)"
+  },
+  "private_evidence_hash_only": {
+    "api-show-qwen3.5-9b.private.json": "b5ce5b8c4b52c87d27f3b2a9b27c28379d262e493f90e2e2e6022ae2e4a1a12b",
+    "api-tags.full-inventory.private.json": "cf8df36d43bb55e1f0fdd7562e729c5b3245a74502a0125194928e8dfd99532f",
+    "host-memory-power-preflight.private.txt": "a257fd3fcaf98b1f2c6e6675867f83ba6ac2703964850d9e08b0b4810f25a84c",
+    "ollama-show-qwen3.5-9b.private.txt": "d7f6d94fe9e0afcf37d45e9256d9a03aa4d7a8b0011bd4d7d894b6b9f36330b1",
+    "provider-clients.private.txt": "06d64603426921854e389f8b793c54bc1b2692d2d77bed5506bbb15bdb8aa42d",
+    "provider-processes.private.txt": "a9c7d997cc30828a48efe6a94b750813af45968e826ab45760b467822436eef0"
+  },
+  "private_publication_limit": "The full model inventory, other clients and process listings contain unrelated local metadata and stay local. Their hashes are declared here.",
+  "provider": {
+    "endpoint": "loopback only (port 11434)",
+    "installed_model_count": 10,
+    "loaded_models_at_capture": [],
+    "name": "ollama",
+    "version": "0.35.1"
+  },
+  "schema_version": "biotech-local-runtime-preflight/v1",
+  "selected_model": {
+    "attention_layout": {
+      "blocks": 32,
+      "full_attention_interval": 4,
+      "full_attention_layers": 8,
+      "key_length": 256,
+      "kv_heads_on_full_attention_layers": 4,
+      "value_length": 256
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ],
+    "default_options_not_overridable_through_the_wrapper_allowlist": {
+      "presence_penalty": 1.5
+    },
+    "default_options_overridden_by_frozen_config": [
+      "temperature",
+      "top_k",
+      "top_p"
+    ],
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "disk_bytes": 6594474711,
+    "estimated_kv_bytes_per_token_fp16": 32768,
+    "family": "qwen35",
+    "modelfile_default_options": {
+      "presence_penalty": 1.5,
+      "temperature": 1.0,
+      "top_k": 20.0,
+      "top_p": 0.95
+    },
+    "name": "qwen3.5:9b",
+    "parameter_size": "9.7B",
+    "quantization": "Q4_K_M",
+    "same_digest_as_v1_attempt": true,
+    "trained_context_tokens": 262144
+  },
+  "unknowns": [
+    "hidden provider context",
+    "model training independence",
+    "untruncated request context at wrapper level (runner log evidence is collected per call as separate evidence)",
+    "capacity under later contention",
+    "how this provider build converts any schema construct other than the one it refused"
+  ]
+}

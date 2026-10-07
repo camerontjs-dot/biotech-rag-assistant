@@ -1,0 +1,536 @@
+--- v1/research/test_semantic_author_slot_boundary_v1.py
++++ v2/research/test_semantic_author_slot_boundary_v2.py
+@@ -2,17 +2,23 @@
+ 
+ from __future__ import annotations
+ 
++import contextlib
+ import copy
++import io
+ import shutil
++import sys
+ import tempfile
+ import unittest
+ from collections import Counter
+ from pathlib import Path
++from unittest import mock
+ 
+ import build_semantic_author_requests as predecessor
+ import check_semantic_assessor_preparation as frozen
+ import run_semantic_request_once as once
+-import semantic_author_slot_boundary_v1 as boundary
++import semantic_author_slot_boundary_v1 as reference
++import semantic_author_slot_boundary_v2 as boundary
++from jsonschema import Draft202012Validator
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ CONFIG = {"model": "structural-token", "model_digest": "a" * 64,
+@@ -203,14 +209,14 @@
+             destination = self.root / name
+             destination.parent.mkdir(parents=True, exist_ok=True)
+             shutil.copyfile(ROOT / name, destination)
+-        self.run = self.root / "research/evidence/semantic-author-slot-bound-v1-unittest"
++        self.run = self.root / "research/evidence/semantic-author-slot-bound-v2-unittest"
+         self.inventory, self.partition, self.schemas = boundary.authority(self.root)
+         self.calls = []
+         boundary.prepare(self.root, self.run, CONFIG)
+ 
+     def fake(self, draft=None, prompt_tokens=100):
+         if draft is None:
+-            draft = {"rows": [{"slot": "token-a"}, {"slot": "token-b"}]}
++            draft = copy.deepcopy(boundary.CANARY_OUTPUT)
+ 
+         def transport(method, endpoint, body=None, timeout=10):
+             self.calls.append((method, endpoint, body))
+@@ -437,5 +443,491 @@
+             boundary.freeze_corpus(self.root, self.run)
+ 
+ 
++def spare_relation(partition, inventory):
++    """A shape-valid relation row, used only to overfill arrays that must stay empty."""
++    group = next(g for g in partition["partitions"] if g["relation_slots"])
++    return token_draft(group, inventory)["relations"][0]
++
++
++def corruptions(draft, group, spare):
++    """Corrupt each exact tuple array in every way the author boundary must refuse."""
++    out = {}
++
++    def corrupt(label, change):
++        copied = copy.deepcopy(draft)
++        change(copied)
++        out[label] = copied
++
++    for field in ("cases", "design_entries", "relations"):
++        if draft[field]:
++            corrupt(f"{field}: missing last", lambda d, f=field: d[f].pop())
++            corrupt(f"{field}: missing first", lambda d, f=field: d[f].pop(0))
++            corrupt(f"{field}: extra duplicate",
++                    lambda d, f=field: d[f].append(copy.deepcopy(d[f][-1])))
++            corrupt(f"{field}: emptied", lambda d, f=field: d.__setitem__(f, []))
++        else:
++            corrupt(f"{field}: extra row in exact-empty array",
++                    lambda d, f=field: d[f].append(copy.deepcopy(spare)))
++        if len(draft[field]) > 1:
++            corrupt(f"{field}: reordered", lambda d, f=field: d[f].insert(0, d[f].pop(1)))
++    other = "anchor_02" if group["anchor_slot"] == "anchor_01" else "anchor_01"
++    category = draft["design_entries"][0]["category"]
++    other_category = "unsupported_temporal" if category == "full_body_support" \
++        else "full_body_support"
++    corrupt("cases: wrong slot const", lambda d: d["cases"][0].__setitem__("slot", other))
++    corrupt("design_entries: wrong slot const",
++            lambda d: d["design_entries"][0].__setitem__("slot", other))
++    corrupt("design_entries: wrong role const",
++            lambda d: d["design_entries"][0].__setitem__("role", "MUTATION"))
++    corrupt("design_entries: wrong category const",
++            lambda d: d["design_entries"][0].__setitem__("category", other_category))
++    if draft["relations"]:
++        row = draft["relations"][0]
++        other_family = "exact_duplicate" if row["family"] != "exact_duplicate" else "entity_rename"
++        other_mode = "SENSITIVE" if row["mode"] == "INVARIANT" else "INVARIANT"
++        corrupt("relations: wrong id const", lambda d: d["relations"][0].__setitem__("id", other))
++        corrupt("relations: wrong family const",
++                lambda d: d["relations"][0].__setitem__("family", other_family))
++        corrupt("relations: wrong mode const",
++                lambda d: d["relations"][0].__setitem__("mode", other_mode))
++        corrupt("relations: wrong left endpoint",
++                lambda d: d["relations"][0].__setitem__("left_slot", row["right_slot"]))
++        corrupt("relations: wrong right endpoint",
++                lambda d: d["relations"][0].__setitem__("right_slot", other))
++    return out
++
++
++class ProviderSchemaGate(unittest.TestCase):
++    POSITIONS = {
++        "items false": ({"type": "array", "items": False}, "#/items"),
++        "items true": ({"type": "array", "items": True}, "#/items"),
++        "items as list": ({"type": "array", "items": [{"type": "string"}]}, "#/items"),
++        "prefixItems member": ({"prefixItems": [{"type": "string"}, False]}, "#/prefixItems/1"),
++        "property": ({"properties": {"a": True}}, "#/properties/a"),
++        "property named like a keyword": ({"properties": {"uniqueItems": False}},
++                                          "#/properties/uniqueItems"),
++        "$defs member": ({"$defs": {"a": True}}, "#/$defs/a"),
++        "allOf member": ({"allOf": [True]}, "#/allOf/0"),
++        "anyOf member": ({"anyOf": [{"type": "null"}, False]}, "#/anyOf/1"),
++        "oneOf member": ({"oneOf": [True]}, "#/oneOf/0"),
++        "not": ({"not": True}, "#/not"),
++        "if": ({"if": True}, "#/if"),
++        "then": ({"then": False}, "#/then"),
++        "else": ({"else": True}, "#/else"),
++        "contains": ({"contains": True}, "#/contains"),
++        "propertyNames": ({"propertyNames": True}, "#/propertyNames"),
++        "additionalItems": ({"additionalItems": False}, "#/additionalItems"),
++        "unevaluatedItems": ({"unevaluatedItems": False}, "#/unevaluatedItems"),
++        "unevaluatedProperties": ({"unevaluatedProperties": False}, "#/unevaluatedProperties"),
++        "patternProperties": ({"patternProperties": {"^a": True}}, "#/patternProperties/^a"),
++        "dependentSchemas": ({"dependentSchemas": {"a": True}}, "#/dependentSchemas/a"),
++        "additionalProperties true": ({"additionalProperties": True}, "#/additionalProperties"),
++        "additionalProperties zero is not false": ({"additionalProperties": 0},
++                                                   "#/additionalProperties"),
++        "unclassified boolean keyword": ({"nullable": True}, "#/nullable"),
++        "deeply nested": ({"$defs": {"x": {"properties": {"y": {"items": {"allOf": [
++            {"anyOf": [{}, False]}]}}}}}}, "#/$defs/x/properties/y/items/allOf/0/anyOf/1"),
++    }
++
++    def test_boolean_or_nonobject_is_rejected_in_every_schema_position(self):
++        for label, (schema, pointer) in self.POSITIONS.items():
++            with self.subTest(position=label):
++                self.assertEqual(boundary.boolean_subschemas(schema), [pointer])
++                with self.assertRaisesRegex(ValueError, "boolean subschema"):
++                    boundary.provider_schema_gate(schema, "fixture")
++
++    def test_every_offending_position_is_reported_not_only_the_first(self):
++        schema = {"properties": {"a": {"items": False}, "b": {"allOf": [True, {"not": False}]}}}
++        self.assertEqual(boundary.boolean_subschemas(schema),
++                         ["#/properties/a/items", "#/properties/b/allOf/0",
++                          "#/properties/b/allOf/1/not"])
++
++    def test_root_boolean_schema_is_rejected(self):
++        for root in (True, False):
++            self.assertEqual(boundary.boolean_subschemas(root), ["#"])
++
++    def test_declared_flags_and_data_values_are_not_subschemas(self):
++        schema = {
++            "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object",
++            "properties": {
++                "items": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
++                "enum": {"enum": [True, False, None]},
++                "const": {"const": False},
++                "flag": {"type": "boolean", "default": False, "examples": [True, False]},
++            },
++            "required": ["items", "enum", "const", "flag"], "additionalProperties": False}
++        self.assertEqual(boundary.boolean_subschemas(schema), [])
++        self.assertEqual(boundary.provider_schema_gate(schema, "fixture")["boolean_subschemas"], 0)
++
++    def test_schema_keywords_exclude_property_names_and_data(self):
++        schema = {"type": "object", "properties": {"items": {"const": True}, "type": {
++            "enum": [1]}}, "additionalProperties": False}
++        self.assertEqual(boundary.schema_keywords(schema),
++                         {"type", "properties", "additionalProperties", "const", "enum"})
++
++    def test_gate_message_names_the_provider_failure_location(self):
++        closed = reference.tuple_schema("rows", [{"slot": "token-a"}])
++        schema = {"type": "object", "properties": {"rows": closed}}
++        with self.assertRaisesRegex(ValueError, "#/properties/rows/items"):
++            boundary.provider_schema_gate(schema, "canary")
++
++
++class ProviderFacingSchemas(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.inventory, cls.partition, cls.schemas = boundary.authority(ROOT)
++        cls.groups = cls.partition["partitions"]
++        cls.specs = boundary.request_specs(ROOT, cls.inventory, cls.partition, cls.schemas)
++        cls.spare = spare_relation(cls.partition, cls.inventory)
++
++    def schema(self, group):
++        return self.specs[group["id"]]["output_schema"]
++
++    def errors(self, group, draft):
++        return list(Draft202012Validator(self.schema(group)).iter_errors(draft))
++
++    def validators(self, errors):
++        return {error.validator for error in errors}
++
++    def test_all_28_generated_author_schemas_have_no_boolean_subschemas(self):
++        self.assertEqual(len(self.specs), 28)
++        for key, spec in self.specs.items():
++            with self.subTest(request=key):
++                self.assertEqual(boundary.boolean_subschemas(spec["output_schema"]), [])
++
++    def test_the_gate_detects_the_real_v1_construct_in_every_v1_author_schema(self):
++        expected = [f"#/properties/{name}/items" for name in ("cases", "design_entries",
++                                                               "relations")]
++        for group in self.groups:
++            old = reference.bound_schema(group, self.inventory, self.schemas)
++            with self.subTest(request=group["id"]):
++                self.assertEqual(sorted(boundary.boolean_subschemas(old)), sorted(expected))
++
++    def test_v2_schema_is_the_v1_schema_minus_only_its_closed_tuple_booleans(self):
++        for group in self.groups:
++            old = reference.bound_schema(group, self.inventory, self.schemas)
++            for tuple_schema in old["properties"].values():
++                self.assertIs(tuple_schema.pop("items"), False)
++            with self.subTest(request=group["id"]):
++                self.assertEqual(old, self.schema(group))
++
++    def test_assignments_instructions_and_aperture_are_unchanged_from_v1(self):
++        old = reference.request_specs(ROOT, self.inventory, self.partition, self.schemas)
++        self.assertEqual(boundary.BOUND_INSTRUCTION, reference.BOUND_INSTRUCTION)
++        self.assertEqual(set(old), set(self.specs))
++        for key, spec in self.specs.items():
++            with self.subTest(request=key):
++                for field in ("role_instruction", "artifacts", "data"):
++                    self.assertEqual(spec[field], old[key][field])
++
++    def test_exact_cardinality_closes_every_tuple_without_an_items_keyword(self):
++        for group in self.groups:
++            counts = {"cases": len(group["slots"]), "design_entries": len(group["slots"]),
++                      "relations": len(group["relation_slots"])}
++            for name, tuple_schema in self.schema(group)["properties"].items():
++                with self.subTest(request=group["id"], field=name):
++                    count = counts[name]
++                    self.assertEqual((tuple_schema["minItems"], tuple_schema["maxItems"]),
++                                     (count, count))
++                    self.assertNotIn("items", tuple_schema)
++                    self.assertEqual(len(tuple_schema.get("prefixItems", [])), count)
++
++    def test_missing_item_is_rejected(self):
++        group = self.groups[0]
++        for field in ("cases", "design_entries", "relations"):
++            draft = token_draft(group, self.inventory)
++            draft[field].pop()
++            with self.subTest(field=field):
++                self.assertIn("minItems", self.validators(self.errors(group, draft)))
++
++    def test_extra_item_is_rejected_by_exact_cardinality(self):
++        group = self.groups[0]
++        for field in ("cases", "design_entries", "relations"):
++            draft = token_draft(group, self.inventory)
++            draft[field].append(copy.deepcopy(draft[field][-1]))
++            with self.subTest(field=field):
++                self.assertNotIn("items", self.schema(group)["properties"][field])
++                self.assertIn("maxItems", self.validators(self.errors(group, draft)))
++
++    def test_reordered_and_wrong_positional_slots_are_rejected(self):
++        group = self.groups[0]
++        for field in ("cases", "design_entries", "relations"):
++            draft = token_draft(group, self.inventory)
++            draft[field].insert(0, draft[field].pop(1))
++            with self.subTest(field=field):
++                self.assertIn("const", self.validators(self.errors(group, draft)))
++
++    def test_wrong_const_assignment_is_rejected(self):
++        group = self.groups[0]
++        draft = token_draft(group, self.inventory)
++        for label in ("cases: wrong slot const", "design_entries: wrong role const",
++                      "design_entries: wrong category const", "relations: wrong id const",
++                      "relations: wrong family const", "relations: wrong mode const",
++                      "relations: wrong left endpoint", "relations: wrong right endpoint"):
++            bad = corruptions(draft, group, self.spare)[label]
++            with self.subTest(corruption=label):
++                self.assertIn("const", self.validators(self.errors(group, bad)))
++
++    def test_empty_arrays_remain_exactly_empty(self):
++        empty = [g for g in self.groups if not g["relation_slots"]]
++        self.assertGreaterEqual(len(empty), 12)
++        for group in empty:
++            draft = token_draft(group, self.inventory)
++            with self.subTest(request=group["id"]):
++                self.assertEqual(self.schema(group)["properties"]["relations"],
++                                 {"type": "array", "minItems": 0, "maxItems": 0})
++                self.assertEqual(draft["relations"], [])
++                self.assertEqual(self.errors(group, draft), [])
++                draft["relations"].append(copy.deepcopy(self.spare))
++                self.assertIn("maxItems", self.validators(self.errors(group, draft)))
++
++    def test_every_corruption_is_rejected_by_v2_and_by_v1_alike(self):
++        for group in self.groups:
++            old = Draft202012Validator(reference.bound_schema(group, self.inventory,
++                                                              self.schemas))
++            new = Draft202012Validator(self.schema(group))
++            draft = token_draft(group, self.inventory)
++            self.assertTrue(old.is_valid(draft) and new.is_valid(draft), group["id"])
++            for entry in draft["design_entries"][1:]:
++                for seed in ("positive", "explicit", "uncertain"):
++                    entry["seed_kind"] = seed
++                    self.assertTrue(old.is_valid(draft) and new.is_valid(draft), group["id"])
++            draft = token_draft(group, self.inventory)
++            for label, bad in corruptions(draft, group, self.spare).items():
++                with self.subTest(request=group["id"], corruption=label):
++                    self.assertEqual((old.is_valid(bad), new.is_valid(bad)), (False, False))
++
++    def test_provider_facing_schemas_still_pass_the_acceptance_validator(self):
++        for group in self.groups:
++            draft = token_draft(group, self.inventory)
++            with self.subTest(request=group["id"]):
++                frozen.schema_check(draft, self.schema(group))
++                self.assertTrue(boundary.validate_draft(draft, group, self.inventory,
++                                                        self.partition, self.schemas))
++
++
++class CanaryFeatureCoverage(unittest.TestCase):
++    AUTHORING_KEYWORDS = {
++        "$defs", "$ref", "$schema", "additionalProperties", "allOf", "anyOf", "const", "enum",
++        "items", "maxItems", "minItems", "minLength", "prefixItems", "properties", "required",
++        "title", "type", "uniqueItems"}
++
++    @classmethod
++    def setUpClass(cls):
++        cls.inventory, cls.partition, cls.schemas = boundary.authority(ROOT)
++        cls.specs = boundary.request_specs(ROOT, cls.inventory, cls.partition, cls.schemas)
++        cls.canary = boundary.canary_spec(cls.specs, CONFIG)
++        cls.validator = Draft202012Validator(cls.canary["output_schema"])
++
++    def test_canary_exercises_exactly_the_keywords_the_author_schemas_use(self):
++        author = set()
++        for spec in self.specs.values():
++            author |= boundary.schema_keywords(spec["output_schema"])
++        self.assertEqual(author, self.AUTHORING_KEYWORDS)
++        self.assertEqual(boundary.schema_keywords(self.canary["output_schema"]),
++                         self.AUTHORING_KEYWORDS)
++
++    def test_the_v1_canary_exercised_only_twelve_of_the_eighteen(self):
++        old_specs = reference.request_specs(ROOT, self.inventory, self.partition, self.schemas)
++        old = reference.canary_spec(old_specs, CONFIG)
++        used = boundary.schema_keywords(old["output_schema"])
++        self.assertEqual(self.AUTHORING_KEYWORDS - used,
++                         {"$schema", "anyOf", "enum", "minLength", "title", "uniqueItems"})
++        self.assertEqual(len(used), 12)
++
++    def test_the_declared_output_is_valid_and_every_feature_is_an_active_constraint(self):
++        self.assertEqual(list(self.validator.iter_errors(boundary.CANARY_OUTPUT)), [])
++        seen = set()
++
++        def reject(change):
++            bad = copy.deepcopy(boundary.CANARY_OUTPUT)
++            change(bad)
++            errors = list(self.validator.iter_errors(bad))
++            self.assertTrue(errors)
++            seen.update(error.validator for error in errors)
++
++        reject(lambda d: d["rows"].pop())
++        reject(lambda d: d["rows"].append(copy.deepcopy(d["rows"][0])))
++        reject(lambda d: d["rows"].reverse())
++        reject(lambda d: d["rows"][0].__setitem__("kind", "BOGUS"))
++        reject(lambda d: d["rows"][0].__setitem__("label", ""))
++        reject(lambda d: d["rows"][0].__setitem__("tags", ["t", "t"]))
++        reject(lambda d: d["rows"][0].__setitem__("tags", ["a", "b", "c", "d"]))
++        reject(lambda d: d["rows"][0].__setitem__("note", 5))
++        reject(lambda d: d["rows"][0].__setitem__("extra", 1))
++        reject(lambda d: d["rows"][0].pop("tags"))
++        reject(lambda d: d["rows"][0].__setitem__("spans", {}))
++        reject(lambda d: d["none"].append({}))
++        reject(lambda d: d.__setitem__("extra", 1))
++        self.assertGreaterEqual(seen, {
++            "minItems", "maxItems", "const", "enum", "minLength", "uniqueItems", "anyOf",
++            "additionalProperties", "required", "type"})
++
++    def test_the_canary_uses_the_authoring_tuple_construct_and_property_overlap(self):
++        schema = self.canary["output_schema"]
++        positions = [{"slot": "token-a", "kind": "PROBE"}, {"slot": "token-b", "kind": "CONTROL"}]
++        self.assertEqual(schema["properties"]["rows"], boundary.tuple_schema("rows", positions))
++        self.assertEqual(schema["properties"]["none"],
++                         {"type": "array", "minItems": 0, "maxItems": 0})
++        defined = set(schema["$defs"]["rows"]["properties"])
++        for position in schema["properties"]["rows"]["prefixItems"]:
++            self.assertEqual(position["allOf"][0], {"$ref": "#/$defs/rows"})
++            self.assertTrue(set(position["allOf"][1]["properties"]) <= defined)
++        self.assertEqual(schema["$defs"]["rows"]["properties"]["kind"]["enum"],
++                         ["PROBE", "CONTROL", "OTHER"])
++
++    def test_the_canary_still_embeds_the_largest_author_prompt_as_uninterpreted_data(self):
++        prompts = {key: once.build_request(spec, CONFIG)[1] for key, spec in self.specs.items()}
++        largest = max(prompts, key=lambda key: len(prompts[key]))
++        self.assertEqual(self.canary["data"], {"probe_from_request": largest,
++                                               "uninterpreted_probe": prompts[largest].decode()})
++        self.assertEqual(self.canary["artifacts"], [])
++        self.assertEqual(once.decoded(boundary.CANARY_TEXT), boundary.CANARY_OUTPUT)
++        self.assertIn(boundary.CANARY_TEXT, self.canary["role_instruction"])
++
++
++class ProviderGateWiring(unittest.TestCase):
++    setUp = Wrapper.setUp
++    fake = Wrapper.fake
++    canary = Wrapper.canary
++
++    def test_construction_refuses_a_closed_tuple_with_boolean_items(self):
++        group = self.partition["partitions"][0]
++        specs = boundary.request_specs(self.root, self.inventory, self.partition, self.schemas)
++        with mock.patch.object(boundary, "tuple_schema", reference.tuple_schema):
++            with self.assertRaisesRegex(ValueError, "boolean subschema"):
++                boundary.bound_schema(group, self.inventory, self.schemas)
++            with self.assertRaisesRegex(ValueError, "boolean subschema"):
++                boundary.request_specs(self.root, self.inventory, self.partition, self.schemas)
++            with self.assertRaisesRegex(ValueError, "canary schema"):
++                boundary.canary_spec(specs, CONFIG)
++
++    def test_prepare_refuses_before_any_run_directory_exists(self):
++        fresh = self.root / "research/evidence/semantic-author-slot-bound-v2-refused"
++        with mock.patch.object(boundary, "tuple_schema", reference.tuple_schema):
++            with self.assertRaisesRegex(ValueError, "boolean subschema"):
++                boundary.prepare(self.root, fresh, CONFIG)
++        self.assertFalse(fresh.exists())
++        self.assertEqual(self.calls, [])
++
++    def test_presend_check_gates_the_exact_request_format_and_the_frozen_bytes(self):
++        spec = boundary.read(self.run / "canary.spec.json")
++        boundary.presend_check(self.run, "canary", spec, CONFIG)
++        closed = copy.deepcopy(spec)
++        closed["output_schema"]["properties"]["rows"]["items"] = False
++        # The inherited request builder accepts it: boolean subschemas are valid Draft 2020-12.
++        once.build_request(closed, CONFIG)
++        with self.assertRaisesRegex(ValueError, "#/properties/rows/items"):
++            boundary.presend_check(self.run, "canary", closed, CONFIG)
++        frozen_request = self.run / "generated/canary.request.json"
++        frozen_request.write_bytes(frozen_request.read_bytes() + b" ")
++        with self.assertRaisesRegex(ValueError, "frozen request"):
++            boundary.presend_check(self.run, "canary", spec, CONFIG)
++
++    def test_execute_runs_the_presend_check_before_any_network_action(self):
++        with mock.patch.object(boundary, "presend_check",
++                               side_effect=ValueError("boolean subschema")):
++            with self.assertRaisesRegex(ValueError, "boolean subschema"):
++                boundary.execute(self.root, self.run, "canary", self.fake())
++        self.assertEqual(self.calls, [])
++        self.assertFalse((self.run / "calls").exists())
++
++    def test_exact_provider_requests_are_frozen_before_any_call(self):
++        freeze = boundary.read(self.run / "EXECUTION-FREEZE.json")
++        plan = boundary.read(self.run / "PLAN.json")
++        specs = boundary.request_specs(self.root, self.inventory, self.partition, self.schemas)
++        calls = {**specs, "canary": boundary.read(self.run / "canary.spec.json")}
++        self.assertEqual(set(plan["request_sha256"]), set(calls))
++        for key, spec in calls.items():
++            request, prompt = once.build_request(spec, CONFIG)
++            for name, raw in ((f"{key}.request.json", request), (f"{key}.prompt.txt", prompt)):
++                path = self.run / "generated" / name
++                self.assertEqual(path.read_bytes(), raw)
++                self.assertEqual(freeze["artifacts"][str(path.relative_to(self.root))],
++                                 once.sha(raw))
++            self.assertEqual(plan["request_sha256"][key], once.sha(request))
++        self.assertEqual(self.calls, [])
++
++    def test_missing_extra_or_altered_generated_files_fail_before_network(self):
++        generated = self.run / "generated"
++        victim = generated / "author-01.request.json"
++        original = victim.read_bytes()
++        victim.write_bytes(original + b" ")
++        with self.assertRaisesRegex(ValueError, "apparatus drift"):
++            boundary.execute(self.root, self.run, "canary", self.fake())
++        victim.write_bytes(original)
++        victim.unlink()
++        with self.assertRaises((ValueError, FileNotFoundError)):
++            boundary.execute(self.root, self.run, "canary", self.fake())
++        victim.write_bytes(original)
++        (generated / "unfrozen.request.json").write_bytes(b"{}")
++        with self.assertRaisesRegex(ValueError, "incomplete/extra execution freeze"):
++            boundary.verify_prepared(self.root, self.run)
++        self.assertEqual(self.calls, [])
++
++    def test_plan_records_the_gate_and_predecessor_and_is_rederived_on_verify(self):
++        path = self.run / "PLAN.json"
++        plan = boundary.read(path)
++        self.assertEqual(plan["schema_version"], "semantic-author-bound-plan/v2")
++        gate = plan["provider_schema_gate"]
++        self.assertEqual((gate["status"], gate["schemas_checked"], gate["boolean_subschemas"]),
++                         ("PASS_NO_BOOLEAN_SUBSCHEMAS", 29, 0))
++        self.assertEqual(plan["predecessor"], {
++            "run": "semantic-author-slot-bound-v1-20261004-attempt01",
++            "module_sha256": "74e16e97341bb90d8845ba9f7bd78c03257b97ec79ff6a575b299ca7d3f97450",
++            "status": "APPARATUS_INVALID"})
++        plan["provider_schema_gate"]["boolean_subschemas"] = 1
++        path.write_bytes(once.encoded(plan) + b"\n")
++        freeze_path = self.run / "EXECUTION-FREEZE.json"
++        freeze = boundary.read(freeze_path)
++        freeze["artifacts"][str(path.relative_to(self.root))] = once.sha(path.read_bytes())
++        freeze_path.write_bytes(once.encoded(freeze) + b"\n")
++        with self.assertRaisesRegex(ValueError, "invalid prospective plan"):
++            boundary.verify_prepared(self.root, self.run)
++
++    def test_cli_prepare_and_verify_exit_zero_and_report_the_gate(self):
++        config = self.root / "runtime-config.input.json"
++        config.write_bytes(once.encoded(CONFIG))
++        fresh = self.root / "research/evidence/semantic-author-slot-bound-v2-cli"
++
++        def cli(*arguments):
++            out = io.StringIO()
++            with mock.patch.object(sys, "argv", ["boundary", *arguments]), \
++                    contextlib.redirect_stdout(out):
++                code = boundary.main()
++            return code, once.decoded(out.getvalue())
++
++        code, plan = cli("prepare", "--root", str(self.root), "--run-dir", str(fresh),
++                         "--config", str(config))
++        self.assertEqual((code, plan["status"]), (0, "NOT_RUN"))
++        code, verified = cli("verify", "--root", str(self.root), "--run-dir", str(fresh))
++        self.assertEqual(code, 0)
++        self.assertEqual(verified, {
++            "status": "PASS_PROSPECTIVE_PLAN_ONLY", "partitions": 28, "cases": 44,
++            "relations": 16, "provider_schema_gate": "PASS_NO_BOOLEAN_SUBSCHEMAS",
++            "provider_calls_in_this_action": 0, "semantic_validity": "NOT_ASSESSED"})
++        self.assertEqual(self.calls, [])
++
++    def test_v1_run_directories_are_outside_the_v2_namespace(self):
++        old = self.root / "research/evidence/semantic-author-slot-bound-v1-20261004-attempt01"
++        with self.assertRaisesRegex(ValueError, "namespace"):
++            boundary.run_path(self.root, old)
++        with self.assertRaisesRegex(ValueError, "namespace"):
++            boundary.execute(self.root, old, "canary", self.fake())
++        self.assertEqual(self.calls, [])
++
++    def test_the_declared_canary_output_passes(self):
++        self.canary()
++        self.assertEqual(boundary.read(self.run / "calls/canary/author-boundary.json")["status"],
++                         "PASS_NONSEMANTIC_CANARY_ONLY")
++
++    def test_a_v1_shaped_canary_response_is_not_accepted_by_the_richer_canary(self):
++        stale = {"rows": [{"slot": "token-a"}, {"slot": "token-b"}]}
++        result = boundary.execute(self.root, self.run, "canary", self.fake(stale))
++        self.assertEqual(result["status"], "APPARATUS_INVALID")
++        with self.assertRaisesRegex(ValueError, "previous call is invalid"):
++            boundary.execute(self.root, self.run, "author-01", self.fake())
++
++
+ if __name__ == "__main__":
+     unittest.main()

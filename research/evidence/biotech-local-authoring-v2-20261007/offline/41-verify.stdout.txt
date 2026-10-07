@@ -1,0 +1,1 @@
+{"cases": 44, "partitions": 28, "provider_calls_in_this_action": 0, "provider_schema_gate": "PASS_NO_BOOLEAN_SUBSCHEMAS", "relations": 16, "semantic_validity": "NOT_ASSESSED", "status": "PASS_PROSPECTIVE_PLAN_ONLY"}

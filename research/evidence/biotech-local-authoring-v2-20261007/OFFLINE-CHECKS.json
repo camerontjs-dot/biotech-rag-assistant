@@ -1,0 +1,185 @@
+{
+  "checks": [
+    {
+      "command": "PYTHONPATH=src:research python -m unittest discover -s research -p 'test_semantic*.py' -v",
+      "duration_seconds_reported": 93.066,
+      "exit_status": 0,
+      "failures_errors_skips_in_log": 0,
+      "id": "documented_unittest_discover_test_semantic",
+      "log": "offline/10-unittest.stderr.txt",
+      "python": "3.11.15",
+      "result": "OK",
+      "stderr_sha256": "07d7c9a7c0a1302ad2720c418e81e873993865b3d6b334dc18c247a9e79a498a",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests_by_module": {
+        "test_semantic_assessor_preparation": 25,
+        "test_semantic_author_slot_boundary_v1": 20,
+        "test_semantic_author_slot_boundary_v2": 54,
+        "test_semantic_request_once": 8
+      },
+      "tests_run": 107
+    },
+    {
+      "command": "same, under the hosted matrix's other interpreters",
+      "id": "python_3_12_and_3_13",
+      "note": "Throwaway environments outside the repository with the same pinned jsonschema 4.25.1.",
+      "results": [
+        {
+          "duration_seconds_reported": 99.597,
+          "exit_status": 0,
+          "failures_errors_skips_in_log": 0,
+          "log": "offline/12-unittest-py3.12.stderr.txt",
+          "python": "3.12.13",
+          "tests_run": 107
+        },
+        {
+          "duration_seconds_reported": 100.934,
+          "exit_status": 0,
+          "failures_errors_skips_in_log": 0,
+          "log": "offline/13-unittest-py3.13.stderr.txt",
+          "python": "3.13.13",
+          "tests_run": 107
+        }
+      ]
+    },
+    {
+      "command": "python research/check_semantic_assessor_preparation.py --root . --check --require-freeze --receipt <receipt>",
+      "exit_status": 0,
+      "id": "frozen_preparation_validator",
+      "receipt": {
+        "artifact_hash_checks": 31,
+        "assessor_or_adjudicator_invocations": 0,
+        "at_utc": "2026-10-07T04:55:17.044531+00:00",
+        "launch_packets": 6,
+        "schema_version": "semantic-structural-check/v1",
+        "scope": "structure and custody only",
+        "semantic_judgments_performed": 0,
+        "status": "PASS_PREPARATION_STRUCTURE_ONLY"
+      },
+      "receipt_sha256": "ff33f37267177a83b8581150cef9862a38b28edfaa79802cdc35d9ef18471fcf"
+    },
+    {
+      "duration_seconds_reported": 40.585,
+      "exit_status": 0,
+      "id": "supervisor_selftest",
+      "log": "offline/30-supervisor-selftest.stderr.txt",
+      "note": "The printed traceback is the intended interruption test: SIGTERM to the supervisor must leave no running child.",
+      "result": "OK",
+      "tests_run": 21
+    },
+    {
+      "command": "python schema_contract_mutation_check.py --root .",
+      "control_passes": true,
+      "control_tests_run": 18,
+      "exit_status": 0,
+      "id": "schema_contract_mutation_check",
+      "log": "offline/35-mutation-check.stdout.txt",
+      "mutants": [
+        {
+          "failing_results": 1,
+          "killed": true,
+          "mutant": "M1 v1 construct restored: items false"
+        },
+        {
+          "failing_results": 217,
+          "killed": true,
+          "mutant": "M2 maxItems dropped"
+        },
+        {
+          "failing_results": 309,
+          "killed": true,
+          "mutant": "M3 minItems dropped"
+        },
+        {
+          "failing_results": 223,
+          "killed": true,
+          "mutant": "M4 positional const dropped"
+        },
+        {
+          "failing_results": 72,
+          "killed": true,
+          "mutant": "M5 exactly-empty tuple loses its cardinality"
+        },
+        {
+          "failing_results": 289,
+          "killed": true,
+          "mutant": "M6 prefixItems dropped"
+        },
+        {
+          "failing_results": 5,
+          "killed": true,
+          "mutant": "G1 gate ignores items"
+        },
+        {
+          "failing_results": 28,
+          "killed": true,
+          "mutant": "G2 gate never reports"
+        }
+      ],
+      "survivors": []
+    },
+    {
+      "command": "ruff check research/semantic_author_slot_boundary_v2.py research/test_semantic_author_slot_boundary_v2.py",
+      "exit_status": 0,
+      "id": "new_source_lint",
+      "log": "offline/36-ruff.stdout.txt",
+      "tool": "ruff 0.16.5 (the version the workflow pins)"
+    },
+    {
+      "exit_status": 0,
+      "id": "compile",
+      "log": "offline/37-compile.stdout.txt",
+      "note": "In-process compile() of both new files; no bytecode written."
+    },
+    {
+      "exit_status": 0,
+      "id": "prepare",
+      "stdout_sha256": "447c60eda7c3888ce8eafda4e9a7a733a3d19a870729c15ef9c91e398acc7809"
+    },
+    {
+      "exit_status": 0,
+      "id": "verify",
+      "stdout": {
+        "cases": 44,
+        "partitions": 28,
+        "provider_calls_in_this_action": 0,
+        "provider_schema_gate": "PASS_NO_BOOLEAN_SUBSCHEMAS",
+        "relations": 16,
+        "semantic_validity": "NOT_ASSESSED",
+        "status": "PASS_PROSPECTIVE_PLAN_ONLY"
+      },
+      "stdout_sha256": "89f5f4673c447e256bd00541d9b13e8e89195fd9149cc341cee01ea112c1637d"
+    }
+  ],
+  "environment": {
+    "bytecode_writing_disabled": true,
+    "dependency_source": "pip from the package index at install time; only jsonschema is pinned by the repo",
+    "machine": "arm64",
+    "packages": {
+      "attrs": "26.1.0",
+      "jsonschema": "4.25.1",
+      "jsonschema-specifications": "2025.9.1",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "typing_extensions": "4.16.0"
+    },
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.11.15"
+  },
+  "frozen_plan_gate": "PASS_NO_BOOLEAN_SUBSCHEMAS",
+  "schema_version": "biotech-local-offline-checks/v1",
+  "scope": "Offline token and fake-HTTP structure/custody checks only. No provider generation and no semantic evidence.",
+  "source": {
+    "commit": "96a0bf9f6cb77c02a1f2728efff0a99b16dcc4b1",
+    "local_branch": "research/semantic-author-slot-bound-v2-20261007",
+    "module_sha256": "2085ece34c01ed117f5bcd0c9ab5cef88569b4e110a4dc1dc3bc680cebaf60c7",
+    "protocol_sha256": "aead177bcfb4a3e6a000af048e65b0481eb4033aa3106a8b256d3fb4104df6fc",
+    "reviewed_v1_source_commit": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+    "tests_sha256": "d187d15e1f6db1cb9487a586f98c5727774fc603f618e2b59b171999a5951e2a",
+    "tree": "294328c4d1adccab75ddd5903afd4b06077e9f73",
+    "untracked_before_checks": [
+      "?? research/evidence/biotech-local-authoring-v2-20261007/"
+    ],
+    "worktree_clean_before_checks": true
+  }
+}

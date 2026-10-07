@@ -1,0 +1,93 @@
+{
+  "schema_version": "biotech-local-authoring-budget/v1",
+  "declared_before_provider_generation": true,
+  "purpose": "Finite context, output, time, memory and power budget for one local author-slot-bound-v2 run. Declared from current local inventory before any provider generation. The wrapper does not police resources; the local supervisor enforces these limits and stops, rather than retries, on any breach.",
+  "run_name": "semantic-author-slot-bound-v2-20261007-attempt01",
+  "provider": {
+    "name": "ollama",
+    "version": "0.35.1",
+    "endpoint": "http://127.0.0.1:11434"
+  },
+  "model": {
+    "name": "qwen3.5:9b",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7"
+  },
+  "request_options": {
+    "num_ctx": 40960,
+    "num_predict": 6144,
+    "timeout_seconds": 1800
+  },
+  "held_fixed_from_v1_attempt01": {
+    "basis": "The live runtime still supports them. The model inventory and the /api/show output hash exactly as they did at the v1 preflight, and the runtime-config bytes are identical to the v1 run's. The HTTP 400 was a schema-conversion refusal before any prompt token; it is not evidence about model, context or output sizing.",
+    "unchanged": ["provider version", "model name and digest", "num_ctx", "num_predict", "temperature", "top_k", "top_p", "repeat_penalty", "seed", "timeout_seconds"]
+  },
+  "sizing_evidence": {
+    "host": "Apple M3, 24 GiB unified memory, fanless; AC power at declaration (80%, not charging)",
+    "model_architecture": "qwen35 hybrid: 32 blocks, full attention on every 4th block (8 layers), 4 KV heads, key/value length 256 each",
+    "estimated_kv_bytes_per_token_fp16": 32768,
+    "estimated_kv_gib_at_declared_num_ctx": 1.25,
+    "observed_in_v1_attempt01": "The runner log of the refused canary reported n_ctx 40960 and a KV buffer of 1280 MiB, matching the estimate. No prompt was evaluated, so there is no v1 timing or output-length observation.",
+    "expected_resident_gib_range": "7 to 8",
+    "expected_resident_share_of_ram": "about 29 to 33 percent",
+    "largest_author_prompt_utf8_bytes": 69495,
+    "canary_prompt_utf8_bytes": 79357,
+    "bytes_per_token_lead": "4.206 observed for a comparable earlier prompt on this model; 3.0 used as a pessimistic bound",
+    "pessimistic_canary_prompt_plus_reserve_tokens": 32596,
+    "largest_earlier_output_tokens_lead": 2185,
+    "limits_of_this_evidence": "Earlier measurements use a different request schema. They are leads only. The canary and each response still must satisfy observed prompt tokens plus num_predict <= num_ctx."
+  },
+  "limits": {
+    "start_requires": {
+      "loaded_models": 0,
+      "min_free_percentage": 50,
+      "pressure_level": 1,
+      "max_swap_used_mib": 768,
+      "min_battery_percentage_when_on_battery": 35
+    },
+    "abort_if": {
+      "free_percentage_below": 10,
+      "free_percentage_consecutive_samples": 2,
+      "pressure_level_at_least": 4,
+      "pressure_level_warn_consecutive_samples": 3,
+      "resident_bytes_at_least": 12884901888,
+      "swap_growth_mib_at_least": 256,
+      "reported_context_above": 40960,
+      "battery_percentage_below_when_on_battery": 12,
+      "memory_probe_failures_consecutive": 3
+    },
+    "sample_interval_seconds": 10,
+    "per_call_wall_limit_seconds": 2100,
+    "max_wait_for_slot_seconds": 14400,
+    "wait_poll_seconds_first_120s": 5,
+    "wait_poll_seconds_after": 30
+  },
+  "limits_changed_from_v1_budget": {
+    "start_requires.min_free_percentage": {"v1": 60, "v2": 50},
+    "abort_if.free_percentage_below": {"v1": 20, "v2": 10},
+    "reason": "Free memory read 54 to 58 percent at declaration, below v1's 60 percent start gate, with ordinary desktop applications open. The model needs about 7 to 8 GiB (29 to 33 percent of RAM), so a start at 54 percent leaves about 21 to 25 percent free after the load. v1's 20 percent abort floor would sit within a point or two of that level and could stop a healthy call on a small fluctuation, which would end the run as a resource stop. Both thresholds therefore move down 10 points together, which keeps v1's 40-point margin between the start gate and the abort floor. Memory pressure level, swap growth, resident size, reported context, battery and probe-failure limits are unchanged and remain the primary hazard signals.",
+    "everything_else": "identical to the v1 budget"
+  },
+  "context_evidence": {
+    "purpose": "Separate local evidence about whether the provider received the whole request. Reported prompt counts alone are not enough.",
+    "provider_log": "~/.ollama/logs/server.log",
+    "per_call_window": "The supervisor records the byte range of the provider log written during each call and keeps the raw window private (it can contain other clients' lines). Public receipts carry only the byte range, window hash and the extracted numbers.",
+    "extracted_fields": [
+      "runner-reported allocated context (n_ctx, n_ctx_slot)",
+      "runner-reported KV and compute buffer sizes",
+      "runner-reported prompt tokens received (task.n_tokens)",
+      "runner-reported timings and token counts",
+      "runner slot-release line: n_tokens and truncated flag"
+    ],
+    "terminal_if": "any slot-release line in the call window reports truncated other than 0",
+    "unavailable_is": "recorded as UNAVAILABLE, not a stop; context visibility stays UNKNOWN and semantic readiness stays NOT_READY",
+    "limit": "A log written by the provider is not authentication against coordinated rewriting, and it does not establish semantic readiness."
+  },
+  "contention_policy": "Another local client may hold or later take the provider or memory. Before each call the supervisor waits, without signalling, stopping or inspecting any other process, until no model is resident and the start limits hold. A wait that exceeds max_wait_for_slot_seconds stops the sequence before any request; no call has started and the run stays resumable. If an abort limit trips during a call, only the supervisor's own wrapper process is terminated; that call is terminal and is preserved as a resource stop, never repeated.",
+  "terminal_rules": [
+    "One attempt per frozen call, in the frozen order. No retry, repair, repartition or favorable-attempt selection.",
+    "The first nonzero wrapper exit, non-accepted boundary status, interruption, timeout or resource stop ends the author sequence.",
+    "A wait that never started a request is not a failed call.",
+    "Resource stop is an apparatus outcome, not a semantic result.",
+    "A provider refusal of the canary schema is terminal. The exact provider error is preserved and no author request is sent."
+  ]
+}

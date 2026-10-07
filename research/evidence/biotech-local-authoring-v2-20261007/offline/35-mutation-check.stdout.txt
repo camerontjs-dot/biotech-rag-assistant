@@ -1,0 +1,106 @@
+{
+ "control": {
+  "failing_results": 0,
+  "failing_tests": [],
+  "tests_run": 18
+ },
+ "control_passes": true,
+ "mutants": [
+  {
+   "failing_results": 1,
+   "failing_tests": [
+    "setUpClass"
+   ],
+   "killed": true,
+   "mutant": "M1 v1 construct restored: items false",
+   "tests_run": 0
+  },
+  {
+   "failing_results": 217,
+   "failing_tests": [
+    "test_empty_arrays_remain_exactly_empty",
+    "test_every_corruption_is_rejected_by_v2_and_by_v1_alike",
+    "test_exact_cardinality_closes_every_tuple_without_an_items_keyword",
+    "test_extra_item_is_rejected_by_exact_cardinality",
+    "test_v2_schema_is_the_v1_schema_minus_only_its_closed_tuple_booleans"
+   ],
+   "killed": true,
+   "mutant": "M2 maxItems dropped",
+   "tests_run": 12
+  },
+  {
+   "failing_results": 309,
+   "failing_tests": [
+    "test_empty_arrays_remain_exactly_empty",
+    "test_every_corruption_is_rejected_by_v2_and_by_v1_alike",
+    "test_exact_cardinality_closes_every_tuple_without_an_items_keyword",
+    "test_missing_item_is_rejected",
+    "test_v2_schema_is_the_v1_schema_minus_only_its_closed_tuple_booleans"
+   ],
+   "killed": true,
+   "mutant": "M3 minItems dropped",
+   "tests_run": 12
+  },
+  {
+   "failing_results": 223,
+   "failing_tests": [
+    "test_every_corruption_is_rejected_by_v2_and_by_v1_alike",
+    "test_reordered_and_wrong_positional_slots_are_rejected",
+    "test_v2_schema_is_the_v1_schema_minus_only_its_closed_tuple_booleans",
+    "test_wrong_const_assignment_is_rejected"
+   ],
+   "killed": true,
+   "mutant": "M4 positional const dropped",
+   "tests_run": 12
+  },
+  {
+   "failing_results": 72,
+   "failing_tests": [
+    "test_empty_arrays_remain_exactly_empty",
+    "test_every_corruption_is_rejected_by_v2_and_by_v1_alike",
+    "test_exact_cardinality_closes_every_tuple_without_an_items_keyword",
+    "test_v2_schema_is_the_v1_schema_minus_only_its_closed_tuple_booleans"
+   ],
+   "killed": true,
+   "mutant": "M5 exactly-empty tuple loses its cardinality",
+   "tests_run": 12
+  },
+  {
+   "failing_results": 289,
+   "failing_tests": [
+    "test_every_corruption_is_rejected_by_v2_and_by_v1_alike",
+    "test_exact_cardinality_closes_every_tuple_without_an_items_keyword",
+    "test_reordered_and_wrong_positional_slots_are_rejected",
+    "test_v2_schema_is_the_v1_schema_minus_only_its_closed_tuple_booleans",
+    "test_wrong_const_assignment_is_rejected"
+   ],
+   "killed": true,
+   "mutant": "M6 prefixItems dropped",
+   "tests_run": 12
+  },
+  {
+   "failing_results": 5,
+   "failing_tests": [
+    "test_boolean_or_nonobject_is_rejected_in_every_schema_position",
+    "test_every_offending_position_is_reported_not_only_the_first",
+    "test_gate_message_names_the_provider_failure_location"
+   ],
+   "killed": true,
+   "mutant": "G1 gate ignores items",
+   "tests_run": 6
+  },
+  {
+   "failing_results": 28,
+   "failing_tests": [
+    "test_boolean_or_nonobject_is_rejected_in_every_schema_position",
+    "test_every_offending_position_is_reported_not_only_the_first",
+    "test_gate_message_names_the_provider_failure_location",
+    "test_root_boolean_schema_is_rejected"
+   ],
+   "killed": true,
+   "mutant": "G2 gate never reports",
+   "tests_run": 6
+  }
+ ],
+ "survivors": []
+}

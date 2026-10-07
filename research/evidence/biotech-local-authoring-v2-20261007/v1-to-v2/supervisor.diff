@@ -1,0 +1,18 @@
+--- v1/research/evidence/biotech-local-authoring-20261004/supervisor.py
++++ v2/research/evidence/biotech-local-authoring-v2-20261007/supervisor.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Local resource supervisor for one frozen semantic-author-slot-bound-v1 run.
++"""Local resource supervisor for one frozen semantic-author-slot-bound-v2 run.
+ 
+ Research infrastructure only. It never builds, alters, retries, repairs or interprets a
+ request or a response. For each named call it (1) waits for a free provider/memory/power
+@@ -26,7 +26,7 @@
+ from datetime import datetime, timezone
+ from pathlib import Path
+ 
+-WRAPPER = "research/semantic_author_slot_boundary_v1.py"
++WRAPPER = "research/semantic_author_slot_boundary_v2.py"
+ AUTHOR_STATUS = "PASS_AUTHOR_PARTITION_STRUCTURE_ONLY"
+ CANARY_STATUS = "PASS_NONSEMANTIC_CANARY_ONLY"
+ 
