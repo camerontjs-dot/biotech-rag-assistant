@@ -1,0 +1,85 @@
+{
+ "accepted_by_supervisor": false,
+ "boundary_status": null,
+ "command": [
+  "<WORKTREE>/.venv/bin/python",
+  "research/semantic_author_slot_boundary_v2.py",
+  "canary",
+  "--root",
+  "<WORKTREE>",
+  "--run-dir",
+  "<WORKTREE>/research/evidence/semantic-author-slot-bound-v2-20261007-attempt01"
+ ],
+ "end_sample": {
+  "at_utc": "2026-10-07T05:03:18.768713+00:00",
+  "battery_percentage": 80,
+  "free_percentage": 24,
+  "models": [],
+  "on_ac_power": true,
+  "pressure_level": 2,
+  "swap_used_mib": 3167.06,
+  "thermal": "Note: No thermal warning level has been recorded Note: No performance warning level has been recorded Note: No CPU power status has been recorded"
+ },
+ "expected_status": "PASS_NONSEMANTIC_CANARY_ONLY",
+ "finished_utc": "2026-10-07T05:03:18.768706+00:00",
+ "group": "canary",
+ "provider_log_window": {
+  "compute_buffer_mib": [
+   257.24,
+   56.02,
+   275.48,
+   24.93
+  ],
+  "end_offset": 3780546,
+  "generate_requests": [
+   {
+    "duration": "9.718321958s",
+    "http_status": 500
+   }
+  ],
+  "generation_eval": [],
+  "kv_buffer_mib": [
+   1280.0
+  ],
+  "n_ctx": [
+   40960
+  ],
+  "n_ctx_slot": [
+   40960
+  ],
+  "prompt_eval": [],
+  "prompt_tokens_received": [
+   21266
+  ],
+  "slot_releases": [],
+  "start_offset": 3745159,
+  "status": "NO_SLOT_RELEASE_IN_WINDOW",
+  "truncated_nonzero": 0,
+  "window_bytes": 35387,
+  "window_sha256": "399ff8ffc63a69b9eef52dccb597a01620e5612f1186a3f7549cdb8c717f9684"
+ },
+ "resource": {
+  "max_reported_context": 40960,
+  "max_resident_bytes": 6899997080,
+  "max_swap_used_mib": 3167.06,
+  "min_battery_percentage": 80,
+  "min_free_percentage": 24,
+  "resident_model_names_seen": [
+   "qwen3.5:9b"
+  ],
+  "samples": 3,
+  "thermal_values_seen": [
+   "Note: No thermal warning level has been recorded Note: No performance warning level has been recorded Note: No CPU power status has been recorded"
+  ]
+ },
+ "resource_trips": [
+  "swap grew 2889.6 MiB"
+ ],
+ "returncode": -15,
+ "schema_version": "biotech-local-supervisor-call/v1",
+ "started_utc": "2026-10-07T05:03:08.633785+00:00",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "waited_for_slot_seconds": 0.0,
+ "wall_seconds": 13.2
+}

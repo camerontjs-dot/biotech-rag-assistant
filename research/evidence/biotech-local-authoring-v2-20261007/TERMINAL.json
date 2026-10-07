@@ -1,0 +1,186 @@
+{
+  "canary_call_artifacts_sha256": {
+    "before-send.json": "eddabed474edde7c4a06436be16138fad72a8d3e48d3710949bdb825cfce82b7",
+    "models-discovery.raw.json": "cf8df36d43bb55e1f0fdd7562e729c5b3245a74502a0125194928e8dfd99532f",
+    "prompt.txt": "608aaf8a955a471c6f755ce85e10042a8ac629368dfecb26f8471a69d01b2014",
+    "provider-discovery.raw.json": "396db0946fbcb2896995ef22b1785c54fa7cfae0e03badb57a381f066141cad7",
+    "request.json": "9b143e697566cf7734785b574cb9ce6bb9a156f82842707a8b71cc4f78ea1c61",
+    "send-started.json": "19c464a2394196563b7fa06bd75d82172da67b53546fbbbf14e3cb001232d8ec"
+  },
+  "canary_models_discovery_publication": "hash-only: the file is the full local model inventory (unrelated local metadata). Its hash equals the preflight inventory hash.",
+  "cause_in_this_apparatus": "The v2 budget kept v1's 256 MiB swap-growth limit while moving the two free-memory thresholds for today's memory state. The swap limit was not re-derived. Loading about 7 GiB of model weights and context against 5.6 GiB of truly free memory made macOS page out about 2.9 GiB belonging to other applications within ten seconds, which that limit cannot tolerate. The supervisor did what the budget told it to; the budget was wrong for this memory state. This is an error in this run's apparatus.",
+  "classification": "The local supervisor's swap-growth abort rule stopped the wrapper 9.7 s into the canary request. This is a resource stop by this run's own guard, not a provider response, a conversion refusal or a semantic outcome.",
+  "denominators": {
+    "author_partitions_accepted": 0,
+    "author_partitions_not_attempted_sequence_closed": 28,
+    "author_partitions_planned": 28,
+    "author_partitions_requested": 0,
+    "canary_accepted": 0,
+    "canary_attempts": 1,
+    "cases_authored": 0,
+    "cases_planned": 44,
+    "freeze_corpus": "NOT_RUN; precondition of 28 accepted partitions unmet",
+    "generation_requests_sent": 1,
+    "prompt_tokens_evaluation_completed": false,
+    "prompt_tokens_received_by_runner": 21266,
+    "relations_authored": 0,
+    "relations_planned": 16,
+    "responses_received": 0,
+    "retries": 0,
+    "tokens_generated": 0
+  },
+  "disposition": "RESOURCE_STOP_BEFORE_ANY_RESPONSE",
+  "first_failure": {
+    "at_utc": "2026-10-07T05:03:18.763523+00:00",
+    "call_wall_seconds": 13.2,
+    "limit_mib": 256,
+    "observed": [
+      "swap grew 2889.6 MiB"
+    ],
+    "rule": "abort_if.swap_growth_mib_at_least",
+    "wrapper_returncode": -15,
+    "wrapper_signal": "SIGTERM to the wrapper's own process group, sent by the supervisor"
+  },
+  "identities": {
+    "budget_sha256": "976b78f438e243b1d910ea4219fbafbfca0844ae9dc99c4363dde2292f339820",
+    "canary_prompt_sha256": "608aaf8a955a471c6f755ce85e10042a8ac629368dfecb26f8471a69d01b2014",
+    "canary_request_matches_frozen_bytes": true,
+    "canary_request_sha256": "9b143e697566cf7734785b574cb9ce6bb9a156f82842707a8b71cc4f78ea1c61",
+    "execution_freeze_sha256": "35ac02945df4d086c914535357943558e14a9fb15a1b0774232edf78bb26cd25",
+    "freeze_commit": "d81ad3f733556e30e2bc7fbb1eeac0eb09c4a87b",
+    "reviewed_v1_source_commit": "513cf0629b20a8d876e161f32f8bc6c6549e2012",
+    "runtime_config_sha256": "d55eeba7a31e2c8a2fd2476d8d31b967e040430aa4acce26eccfa6a3b7c94a27",
+    "supervisor_freeze_sha256": "157eb18cabde9017b7925062fc38bb161a0bf924b4d89a35bc595557a37de088",
+    "v2_module_sha256": "2085ece34c01ed117f5bcd0c9ab5cef88569b4e110a4dc1dc3bc680cebaf60c7",
+    "v2_source_commit": "f74cd88685b4f8f5a7d59b0460979c690a2028c3",
+    "v2_workflow_commit": "96a0bf9f6cb77c02a1f2728efff0a99b16dcc4b1"
+  },
+  "independence": {
+    "achieved": "exact frozen request bytes, no tools, no session reuse, freeze published before any provider call, author role never reached",
+    "unknown": [
+      "hidden provider context",
+      "model training independence",
+      "untruncated request context"
+    ]
+  },
+  "next_evidence_producing_action": "A new run identity with the same v2 source, requests and runtime configuration, and a revised resource guard, frozen and published before its canary. This run is not retried, repaired or reused. Whether to spend that attempt, and how much swapping this machine should tolerate for it, is a decision for the owner.",
+  "preserved": [
+    "attempt01 of v1 and all its evidence (unchanged)",
+    "the v2 frozen packet (unchanged)",
+    "the partial canary call directory",
+    "raw supervisor logs and provider-log window (private)"
+  ],
+  "provider_observation": {
+    "inferred": "The provider's JSON-schema conversion and grammar initialization accepted the v2 canary format. The v1 canary's refusal surfaced as HTTP 400 before any slot launch (no 'new prompt', no prompt tokens), and v1's refusal came back in 4.93 s, while this request was still running at 9.7 s.",
+    "not_observed": [
+      "any generated token",
+      "constrained output of any kind",
+      "a stop reason",
+      "prompt evaluation completing",
+      "a response body to validate"
+    ],
+    "num_ctx": 40960,
+    "observed": "The runner received the request and began evaluating the prompt: slot launched, 'new prompt', task.n_tokens 21266, then prompt-cache steps at 0, 512 and 1024 tokens. The call ended when the client connection closed; the provider logged HTTP 500 after 9.718321958s.",
+    "prompt_plus_num_predict": 27410,
+    "prompt_plus_reserve_fits_context": true,
+    "prompt_tokens_received": 21266,
+    "runner_log_lines_verbatim": [
+      "time=2026-10-07T01:03:09.114-04:00 level=INFO source=sched.go:618 msg=\"system memory\" total=\"24.0 GiB\" free=\"5.6 GiB\" free_swap=\"0 B\"",
+      "time=2026-10-07T01:03:09.114-04:00 level=INFO source=sched.go:625 msg=\"gpu memory\" id=0 library=Metal available=\"17.3 GiB\" free=\"17.8 GiB\" minimum=\"512.0 MiB\" overhead=\"0 B\"",
+      "common_params_fit_impl: projected to use 6304 MiB of device memory vs. 18135 MiB of free device memory",
+      "llama_context: n_ctx                 = 40960",
+      "llama_kv_cache:       MTL0 KV buffer size =  1280.00 MiB",
+      "time=2026-10-07T01:03:14.928-04:00 level=INFO source=llama_server.go:1374 msg=\"llama-server started in 5.81 seconds\"",
+      "time=2026-10-07T01:03:14.946-04:00 level=INFO source=llama_server.go:1374 msg=\"llama-server started in 5.83 seconds\"",
+      "slot launch_slot_: id  0 | task 0 | processing task, is_child = 0",
+      "slot   operator(): id  0 | task 0 | new prompt, n_ctx_slot = 40960, n_keep = 4, task.n_tokens = 21266",
+      "slot   operator(): id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)",
+      "slot   operator(): id  0 | task 0 | cached n_tokens = 512, memory_seq_rm [512, end)",
+      "slot   operator(): id  0 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)",
+      "[GIN] 2026/10/07 - 01:03:18 | 500 |  9.718321958s |       127.0.0.1 | POST     \"/api/generate\""
+    ],
+    "status": "OBSERVED_IN_RUNNER_LOG",
+    "v1_canary_for_comparison": {
+      "after_seconds": 4.93,
+      "http_status": 400,
+      "prompt_tokens_received": 0,
+      "slot_launched": false
+    },
+    "window": {
+      "bytes": 35387,
+      "end_offset": 3780546,
+      "sha256_private_window": "399ff8ffc63a69b9eef52dccb597a01620e5612f1186a3f7549cdb8c717f9684",
+      "start_offset": 3745159
+    }
+  },
+  "resource_observation": {
+    "after_stop": "No model resident, 63 percent free, pressure level 1, no wrapper or supervisor process. Swap stayed at about 3.1 GiB, pages of other applications, which macOS returns lazily. No other process was signalled.",
+    "first_interval_sample": {
+      "at_utc": "2026-10-07T05:03:18.705732+00:00",
+      "free_percentage": 24,
+      "pressure_level": 2,
+      "resident": [
+        {
+          "bytes": 6899997080,
+          "context_length": 40960,
+          "name": "qwen3.5:9b"
+        }
+      ],
+      "swap_used_mib": 3167.06
+    },
+    "provider_view_at_load": "Ollama's scheduler logged system memory total 24.0 GiB, free 5.6 GiB, free_swap 0 B immediately before loading; the supervisor's memory_pressure reading at the same moment was 57 percent free, because that figure counts reclaimable memory.",
+    "start_sample": {
+      "at_utc": "2026-10-07T05:03:08.605996+00:00",
+      "free_percentage": 57,
+      "pressure_level": 1,
+      "swap_used_mib": 277.44
+    },
+    "swap_growth_mib": 2889.62
+  },
+  "run_name": "semantic-author-slot-bound-v2-20261007-attempt01",
+  "run_status": "APPARATUS_INVALID",
+  "schema_version": "biotech-local-authoring-v2-terminal/v1",
+  "stage": "CANARY",
+  "states": {
+    "adjudication": "NOT_RUN",
+    "canary_output_validity": "NOT_OBSERVED",
+    "corpus_sha256": null,
+    "semantic_readiness": "NOT_READY",
+    "semantic_validity": "NOT_ASSESSED",
+    "untruncated_request_context": "UNKNOWN"
+  },
+  "supervisor": {
+    "call_finished_utc": "2026-10-07T05:03:18.768706+00:00",
+    "call_started_utc": "2026-10-07T05:03:08.633785+00:00",
+    "log_projection": "run-logs-public/PROJECTION-MAP.json",
+    "stop_marker": {
+      "at_utc": "2026-10-07T05:03:21.852311+00:00",
+      "group": "canary",
+      "outcome": "FAILED",
+      "returncode": -15,
+      "status": null,
+      "terminal": true,
+      "trips": [
+        "swap grew 2889.6 MiB"
+      ]
+    }
+  },
+  "task": "Biotech local authoring v2, successor to PR #54 attempt01, issue #39",
+  "timeline_utc": {
+    "freeze_published": "2026-10-07T05:02:21Z (push finished; GitHub committer time 05:02:07Z)",
+    "runner_started_seconds": 5.81,
+    "send_started": "2026-10-07T05:03:09.047541+00:00",
+    "supervisor_call_end": "2026-10-07T05:03:21.852064+00:00",
+    "supervisor_call_start": "2026-10-07T05:03:08.633800+00:00",
+    "supervisor_first_sample_and_trip": "2026-10-07T05:03:18.763523+00:00",
+    "wrapper_before_send": "2026-10-07T05:03:09.028140+00:00"
+  },
+  "wrapper_artifacts_never_written": [
+    "provider-response.raw.json",
+    "http-response.json",
+    "response-text.txt",
+    "parsed-output.json",
+    "receipt.json",
+    "author-boundary.json"
+  ]
+}

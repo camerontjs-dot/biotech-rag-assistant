@@ -1,0 +1,1 @@
+{"at_utc": "2026-10-07T05:03:21.852311+00:00", "group": "canary", "outcome": "FAILED", "returncode": -15, "status": null, "terminal": true, "trips": ["swap grew 2889.6 MiB"]}

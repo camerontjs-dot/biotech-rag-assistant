@@ -1,0 +1,36 @@
+{
+  "files": {
+    "STOP.json": {
+      "changed": false,
+      "original_sha256": "73b6c3c5b8b2fc3d8fb317b9771ce4e79e2cc3db875358404778b29b576dd9ac",
+      "published_sha256": "73b6c3c5b8b2fc3d8fb317b9771ce4e79e2cc3db875358404778b29b576dd9ac"
+    },
+    "canary.samples.jsonl": {
+      "changed": false,
+      "original_sha256": "394e5cbfd07b487315aec74c0661aeea5ee98ea21cb253a5ceb16010dde4b70f",
+      "published_sha256": "394e5cbfd07b487315aec74c0661aeea5ee98ea21cb253a5ceb16010dde4b70f"
+    },
+    "canary.stderr.txt": {
+      "changed": false,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "canary.stdout.txt": {
+      "changed": false,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "canary.supervisor.json": {
+      "changed": true,
+      "original_sha256": "1b40ab17b29a730d48bdd4a58ba0b8e5f7d88313b7d37f066762885726d9847d",
+      "published_sha256": "ba49f26ab41956983bfbf4889bf248899c557752ff58fabc90df0681e2bc5187"
+    },
+    "events.jsonl": {
+      "changed": true,
+      "original_sha256": "64b9af2eda6cbab2061d4a56abb49cc8d3469b8d45754665c0a80fc192d97b52",
+      "published_sha256": "b46e8dedda06fbdabbf834b41a8722f96d57eb3b55713dc1a6623378db937074"
+    }
+  },
+  "rule": "Only local filesystem prefixes were replaced with placeholders; no other byte changed. Originals stay private with the hashes below.",
+  "schema_version": "biotech-local-projection-map/v1"
+}
