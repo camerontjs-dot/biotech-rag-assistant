@@ -1,13 +1,14 @@
-# Biotech local authoring v2: the canary was stopped by a resource guard after the provider accepted its schema
+# Biotech local authoring v2: the canary was stopped by a resource guard after the provider began evaluating it
 
 **Disposition: `RESOURCE_STOP_BEFORE_ANY_RESPONSE`.** Run `semantic-author-slot-bound-v2-20261007-attempt01`
-is `APPARATUS_INVALID` at the canary. The provider's runner accepted the corrected schema and began
-evaluating the 21,266-token prompt. About ten seconds after launch, the local supervisor's swap-growth
-rule stopped the wrapper, before any output existed. There is no canary response, no author request
+is `APPARATUS_INVALID` at the canary. The provider took the corrected request to a slot and began
+evaluating its 21,266-token prompt, which v1's refused request never reached. About ten seconds after
+launch, the local supervisor's swap-growth rule stopped the wrapper, before any output existed. There is no canary response, no author request
 and no corpus; the corpus hash is `null`. The run is closed and is not retried or reused.
 
-The stop leaves open whether the author boundary executes end to end. It does show that the provider
-no longer refuses the schema at the construct that ended v1.
+The stop leaves open whether the author boundary executes end to end. It does point to the provider
+no longer refusing the schema at the construct that ended v1; that is an inference from the log,
+set out below, not a response.
 
 Source: v2 commit `f74cd88685b4f8f5a7d59b0460979c690a2028c3` (module SHA-256
 `2085ece34c01ed117f5bcd0c9ab5cef88569b4e110a4dc1dc3bc680cebaf60c7`), published freeze
@@ -52,12 +53,12 @@ moving the two free-memory thresholds for today's state (54 to 58 percent free a
 and the swap limit was not re-derived. Ollama's scheduler logged 5.6 GiB free and no free swap
 immediately before the load, while `memory_pressure` read 57 percent free because it counts
 reclaimable memory. Loading about 7 GiB of model weights and context against 5.6 GiB free made macOS page out about
-2.9 GiB belonging to other applications. The supervisor did what the budget told it to. This is an error in the run's
+2.9 GiB, most plausibly other applications' memory. The supervisor did what the budget told it to. This is an error in the run's
 apparatus, and it is the first thing the next attempt has to correct.
 
 After the stop: no model resident, 63 percent free, pressure level 1, no wrapper or supervisor process.
-Swap stayed near 3.1 GiB, which are other applications' pages that macOS returns lazily. No other
-process was signalled.
+Swap stayed near 3.1 GiB, because macOS returns paged-out memory lazily. No other process was
+signalled.
 
 ## Counts
 

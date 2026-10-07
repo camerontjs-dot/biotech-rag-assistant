@@ -8,7 +8,7 @@
     "send-started.json": "19c464a2394196563b7fa06bd75d82172da67b53546fbbbf14e3cb001232d8ec"
   },
   "canary_models_discovery_publication": "hash-only: the file is the full local model inventory (unrelated local metadata). Its hash equals the preflight inventory hash.",
-  "cause_in_this_apparatus": "The v2 budget kept v1's 256 MiB swap-growth limit while moving the two free-memory thresholds for today's memory state. The swap limit was not re-derived. Loading about 7 GiB of model weights and context against 5.6 GiB of truly free memory made macOS page out about 2.9 GiB belonging to other applications within ten seconds, which that limit cannot tolerate. The supervisor did what the budget told it to; the budget was wrong for this memory state. This is an error in this run's apparatus.",
+  "cause_in_this_apparatus": "The v2 budget kept v1's 256 MiB swap-growth limit while moving the two free-memory thresholds for today's memory state. The swap limit was not re-derived. Loading about 7 GiB of model weights and context against 5.6 GiB of truly free memory made macOS page out about 2.9 GiB within ten seconds, most plausibly other applications' memory, which that limit cannot tolerate. The supervisor did what the budget told it to; the budget was wrong for this memory state. This is an error in this run's apparatus.",
   "classification": "The local supervisor's swap-growth abort rule stopped the wrapper 9.7 s into the canary request. This is a resource stop by this run's own guard, not a provider response, a conversion refusal or a semantic outcome.",
   "denominators": {
     "author_partitions_accepted": 0,
@@ -114,7 +114,7 @@
     }
   },
   "resource_observation": {
-    "after_stop": "No model resident, 63 percent free, pressure level 1, no wrapper or supervisor process. Swap stayed at about 3.1 GiB, pages of other applications, which macOS returns lazily. No other process was signalled.",
+    "after_stop": "No model resident, 63 percent free, pressure level 1, no wrapper or supervisor process. Swap stayed at about 3.1 GiB because macOS returns paged-out memory lazily. No other process was signalled.",
     "first_interval_sample": {
       "at_utc": "2026-10-07T05:03:18.705732+00:00",
       "free_percentage": 24,
