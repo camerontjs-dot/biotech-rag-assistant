@@ -1,0 +1,10 @@
+doc_id: SOP-ADV-004
+doc_title: Temperature mapping
+doc_type: SOP
+version: "1.0"
+status: Approved
+effective_date: "2026-03-01"
+review_due_date: "2027-03-01"
+department: QC
+source_file_path: documents/SOP-ADV-004-temperature-mapping.md
+source_hash: sha256:821e93acb99041a5449010ec87c11586822042f3436568110075f29746a16d4e
