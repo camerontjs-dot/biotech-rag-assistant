@@ -96,3 +96,9 @@ Specified for later (not implemented):
 
 - `ambiguous_top_results` — near-tied top scores across different `doc_id`s.
 - `citation_validation_failed` — defensive; deterministic extractive answers should not reach it.
+
+## Not part of this contract
+
+The experimental conversational prototype (`biotech-rag chat`, `/chat` routes) is composed beside
+these routes and does not change them. It is documented separately in `chat-prototype.md` and
+recorded as ADR-019.
