@@ -34,8 +34,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# Experimental conversational prototype (docs/chat-prototype.md). Paid calls stay opt-in at
+# runtime; installing the SDK alone never contacts OpenAI.
+chat = [
+    "openai>=3.35,<4",
+]
 dev = [
     "httpx>=0.27,<1",
+    "openai>=3.35,<4",
     "pytest>=8.0,<10",
     "ruff>=0.15,<1",
     "types-PyYAML>=6.0,<7",
@@ -46,6 +52,9 @@ biotech-rag = "biotech_rag_assistant.cli:cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"biotech_rag_assistant.chat" = ["static/*.html"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
