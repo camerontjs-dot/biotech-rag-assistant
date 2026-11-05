@@ -193,6 +193,7 @@ In every state with admitted evidence the passages are returned and shown.
 |---|---|---|
 | Application behavior: interpretation, evidence boundary, checks, isolation, bounds, failure states | `tests/test_chat_*.py` (CI, no credentials, no network) | Passing |
 | OpenAI adapter request/response/error mapping | The real `openai` SDK against an in-process `httpx2.MockTransport` (`tests/test_chat_openai_provider.py`, end-to-end case in `tests/test_chat_api.py`) | Passing |
+| Live smoke harness: request bound, transcript, PASS/FAIL lines, exit codes, vacuous-run detection | The real `openai` SDK against an in-process stand-in returning scripted answers (`tests/test_chat_live_smoke.py`) | Passing |
 | Maintained contracts on the composed app | `/answer` and `/retrieve` CLI parity, maintained suites unchanged | Passing |
 | Browser UI states and safe rendering | `python scripts/chat_ui_check.py` (needs Node + Playwright; not in CI) | Passing when run for this change |
 | Example conversations | `docs/chat-examples.md`, generated through the real app with **scripted** model outputs; drift-checked in CI | Current |
@@ -210,12 +211,22 @@ export OPENAI_API_KEY=...   # server-side secret; see "Enable OpenAI explanation
 ```
 
 It refuses to run without `--live` and a key. It makes at most 8 logical requests (7 expected;
-hard cap 12), each bounded as configured, replays fixed conversations (supported question and
+hard cap 12), each bounded as configured, and replays fixed conversations (supported question and
 follow-ups, the balance gap, a user-supplied value, a retired-document request, an embedded
-instruction) through the real app, writes the complete turn records to
-`build/chat-live-smoke.json`, prints mechanical PASS/FAIL lines, and prints the model's observed
-behavior for a person to judge against the passages. Exit codes: 0 completed, 1 a mechanical
-expectation failed, 2 not run, 3 provider unreachable.
+instruction) through the real app. It writes the complete turn records, the endpoint, and the
+served model to `build/chat-live-smoke.json`, then prints two groups of PASS/FAIL lines:
+
+- **Application guarantees** hold whatever the model does: `store: false` on every request, the
+  served model recorded, no model call and no retired text for the retired-document request, and
+  the chat-introduced 0.5 mg never shown as document content.
+- **Run validity** checks that a model was actually exercised: all 7 expected calls were made,
+  each returned a schema-valid answer, and the supported question shows at least one checked
+  statement. A run in which every call is rejected, malformed, or refused fails here.
+
+It then prints the model's observed behavior for a person to judge against the passages; passing
+lines do not establish semantic support. Exit codes: 0 every expectation passed, 1 an expectation
+failed, 2 not run (nothing sent), 3 blocked (every call failed with a connection or auth error).
+The harness itself is tested offline in CI (`tests/test_chat_live_smoke.py`).
 
 ## Known limitations
 

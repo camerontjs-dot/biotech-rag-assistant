@@ -6,7 +6,7 @@ A controlled-document retrieval pilot for regulated industries (pharma, biotech,
 
 The current slice is deliberately narrow and fully deterministic: it validates document metadata and source hashes (fail-closed), gates retrieval to `Approved`/`Effective` documents, chunks source text with stable IDs and **exact-span provenance** (a citation's quote is the source text at `raw_text[char_start:char_end]`), ranks with BM25 behind a lexical refusal gate, and assembles extractive answers whose citations must resolve to retrieved chunks.
 
-The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (19 ADRs). The Python core is exercised by 247 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
+The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (19 ADRs). The Python core is exercised by 257 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
 
 ## What this is and is not
 

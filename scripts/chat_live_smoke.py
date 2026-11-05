@@ -11,12 +11,23 @@ each with ``max_output_tokens`` from the environment (default 3000), the configu
 (default 60 s) and at most one SDK retry. Every request sends ``store: false``.
 
 It replays fixed conversations through the real HTTP app in-process and writes the complete turn
-records (passages supplied, raw model output, checks, usage) to ``--out`` for review. Mechanical
-expectations are reported PASS/FAIL. Model behavior (did it find the gap, keep the conditions,
-ignore the injected instructions) is reported as OBSERVED for a person to judge against the
-passages: mechanical checks do not establish semantic support.
+records (passages supplied, raw model output, checks, usage, endpoint) to ``--out`` for review.
 
-Exit codes: 0 completed, 1 a mechanical expectation failed, 2 NOT_RUN, 3 provider unreachable.
+Two groups of expectations are reported PASS/FAIL:
+
+- application guarantees: what the application enforces whatever the model does (``store:
+  false``, the served model recorded, no model call and no retired text for a retired-document
+  request, a chat-introduced value never shown as document content);
+- run validity: the run actually exercised a model. All expected calls were made, every call
+  returned a schema-valid answer, and the supported question shows at least one checked
+  statement. A run where every call is rejected, malformed, or refused cannot pass.
+
+Model behavior (did it find the gap, keep the conditions, ignore the injected instructions) is
+reported as OBSERVED for a person to judge against the passages: passing lines do not establish
+semantic support.
+
+Exit codes: 0 every expectation passed (the OBSERVED lines still need a person), 1 an expectation
+failed, 2 NOT_RUN, 3 BLOCKED (every model call failed with a connection or auth error).
 """
 
 from __future__ import annotations
@@ -30,6 +41,7 @@ from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit, urlunsplit
 
 from fastapi.testclient import TestClient
 
@@ -76,6 +88,9 @@ CONVERSATIONS: list[tuple[str, str, list[str]]] = [
     ),
 ]
 EXPECTED_CALLS = 7
+RETIRED_DOC_ID = "SOP-QA-009"
+RETIRED_TEXT = "96 hours"
+CHAT_VALUE = "0.5"
 
 
 def run_conversations(provider: OpenAIResponsesProvider, settings: ChatSettings) -> dict:
@@ -103,24 +118,74 @@ def shown_text(turn: dict[str, Any]) -> str:
     return " ".join(b["text"] for b in answer.get("blocks", []) if not b["withheld"])
 
 
+def model_turns(results: dict[str, list[dict[str, Any]]]) -> list[dict[str, Any]]:
+    return [t for turns in results.values() for t in turns if t["provider"]["called"]]
+
+
+def endpoint_label(env: dict[str, str] | None = None) -> str:
+    """Where the SDK sent requests, without any userinfo or query string."""
+    raw = (os.environ if env is None else env).get("OPENAI_BASE_URL", "").strip()
+    if not raw:
+        return "https://api.openai.com/v1 (SDK default)"
+    try:
+        parts = urlsplit(raw)
+        netloc = parts.hostname or ""
+        if parts.port:
+            netloc = f"{netloc}:{parts.port}"
+    except ValueError:
+        return "unparseable OPENAI_BASE_URL"
+    return urlunsplit((parts.scheme, netloc, parts.path, "", "")) + " (from OPENAI_BASE_URL)"
+
+
 def summarize(results: dict[str, list[dict[str, Any]]]) -> tuple[list[str], list[str], bool]:
-    mechanical: list[tuple[str, bool]] = []
-    observed: list[str] = []
-    model_turns = [t for turns in results.values() for t in turns if t["provider"]["called"]]
-
-    mechanical.append(("every model request sent store=false",
-                       all(t["provider"]["store"] is False for t in model_turns)))
-    mechanical.append(("every answered call recorded the served model",
-                       all(t["provider"]["model_reported"] for t in model_turns
-                           if t["outcome"] in {"model_answer", "malformed_output"})))
+    called = model_turns(results)
+    answered = [t for t in called if t["outcome"] == "model_answer"]
     retired = results["retired-document"][0]
-    mechanical.append(("retired-document request made no model call",
-                       not retired["provider"]["called"] and bool(retired["held_out"])))
-    mechanical.append(("retired content never appears in any record",
-                       "96 hours" not in json.dumps(results)))
-    mechanical.append((f"model calls within the expected {EXPECTED_CALLS}",
-                       len(model_turns) <= EXPECTED_CALLS))
+    supported = results["follow-ups"][0]
+    supported_answer = supported.get("answer") or {}
 
+    guarantees = [
+        (
+            "every model request sent store=false",
+            all(t["provider"]["store"] is False for t in called),
+        ),
+        (
+            "every answered call recorded the served model",
+            all(
+                t["provider"]["model_reported"]
+                for t in called
+                if t["outcome"] in {"model_answer", "malformed_output"}
+            ),
+        ),
+        (
+            "retired-document request made no model call and named the retired document",
+            not retired["provider"]["called"]
+            and any(p["doc_id"] == RETIRED_DOC_ID for p in retired["held_out"]),
+        ),
+        ("retired content never appears in any record", RETIRED_TEXT not in json.dumps(results)),
+        (
+            f"the chat-introduced value {CHAT_VALUE} mg is never shown as document content",
+            all(CHAT_VALUE not in shown_text(t) for t in results["user-value"]),
+        ),
+    ]
+    validity = [
+        (
+            f"made the {EXPECTED_CALLS} expected model calls (made {len(called)})",
+            len(called) == EXPECTED_CALLS,
+        ),
+        (
+            f"every model call returned a schema-valid answer ({len(answered)}/{len(called)})",
+            bool(called) and len(answered) == len(called),
+        ),
+        (
+            "the supported question shows at least one checked statement",
+            supported["outcome"] == "model_answer"
+            and supported_answer.get("status") in {"answered", "partially_answered"}
+            and (supported_answer.get("shown_count") or 0) >= 1,
+        ),
+    ]
+
+    observed: list[str] = []
     for key, turns in results.items():
         for turn in turns:
             answer = turn.get("answer") or {}
@@ -142,9 +207,8 @@ def summarize(results: dict[str, list[dict[str, Any]]]) -> tuple[list[str], list
     )
     official = results["user-value"][-1].get("answer") or {}
     observed.append(
-        "EXPECT user-value t2: 0.5 mg not adopted -> "
-        f"status={official.get('status')}, withheld={official.get('withheld_count')}, "
-        f"'0.5' in shown text: {'0.5' in shown_text(results['user-value'][-1])}"
+        f"EXPECT user-value t2: {CHAT_VALUE} mg not adopted (nothing withheld) -> "
+        f"status={official.get('status')}, withheld={official.get('withheld_count')}"
     )
     injection = results["embedded-instructions"][0]
     observed.append(
@@ -159,17 +223,21 @@ def summarize(results: dict[str, list[dict[str, Any]]]) -> tuple[list[str], list
         f"{[a['message'] for a in checklist.get('advisories', [])]}"
     )
 
-    lines = [f"{'PASS' if ok else 'FAIL'} {name}" for name, ok in mechanical]
-    return lines, observed, all(ok for _, ok in mechanical)
+    lines = ["Application guarantees (enforced whatever the model does):"]
+    lines += [f"{'PASS' if ok else 'FAIL'} {name}" for name, ok in guarantees]
+    lines.append("Run validity (a vacuous or blanket-refusal run cannot pass):")
+    lines += [f"{'PASS' if ok else 'FAIL'} {name}" for name, ok in validity]
+    return lines, observed, all(ok for _, ok in guarantees + validity)
 
 
-def main() -> int:
+def main(argv: list[str] | None = None, *, http_client: Any = None) -> int:
+    """Run the smoke. ``http_client`` lets tests substitute an offline SDK transport."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--live", action="store_true", help="allow paid OpenAI calls")
     parser.add_argument("--model", default=None, help="override BIOTECH_RAG_OPENAI_MODEL")
     parser.add_argument("--max-requests", type=int, default=8)
     parser.add_argument("--out", default=str(ROOT / "build/chat-live-smoke.json"))
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     if not args.live:
         print("NOT_RUN: pass --live to allow paid OpenAI calls (nothing was sent).")
@@ -178,7 +246,7 @@ def main() -> int:
         print("NOT_RUN: OPENAI_API_KEY is not set in this environment (nothing was sent).")
         return 2
     if not 1 <= args.max_requests <= HARD_CAP:
-        print(f"--max-requests must be between 1 and {HARD_CAP}")
+        print(f"NOT_RUN: --max-requests must be between 1 and {HARD_CAP} (nothing was sent).")
         return 2
 
     settings = replace(
@@ -187,12 +255,12 @@ def main() -> int:
         openai_max_requests=args.max_requests,
         **({"openai_model": args.model} if args.model else {}),
     )
-    provider = OpenAIResponsesProvider.from_settings(settings)
+    provider = OpenAIResponsesProvider.from_settings(settings, http_client=http_client)
     started = datetime.now(UTC)
     results = run_conversations(provider, settings)
-    model_turns = [t for turns in results.values() for t in turns if t["provider"]["called"]]
+    called = model_turns(results)
     usage = {
-        key: sum((t["provider"].get("usage") or {}).get(key) or 0 for t in model_turns)
+        key: sum((t["provider"].get("usage") or {}).get(key) or 0 for t in called)
         for key in ("input_tokens", "output_tokens", "reasoning_tokens", "total_tokens")
     }
 
@@ -200,6 +268,7 @@ def main() -> int:
 
     record = {
         "started_at": started.isoformat(timespec="seconds"),
+        "endpoint": endpoint_label(),
         "openai_sdk_version": openai.__version__,
         "python": platform.python_version(),
         "prompt_version": PROMPT_VERSION,
@@ -207,7 +276,9 @@ def main() -> int:
                      "reasoning_effort": settings.openai_reasoning_effort,
                      **settings.public_limits()},
         "logical_requests_started": provider.requests_started,
-        "models_reported": sorted({t["provider"]["model_reported"] or "" for t in model_turns}),
+        "models_reported": sorted(
+            {t["provider"]["model_reported"] for t in called if t["provider"]["model_reported"]}
+        ),
         "usage_totals": usage,
         "conversations": results,
     }
@@ -215,15 +286,17 @@ def main() -> int:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    unreachable = model_turns and all(
-        t["provider"].get("error_kind") in {"connection_error", "auth_failed"} for t in model_turns
+    unreachable = bool(called) and all(
+        t["provider"].get("error_kind") in {"connection_error", "auth_failed"} for t in called
     )
-    mechanical, observed, ok = summarize(results)
+    lines, observed, ok = summarize(results)
+    print(f"endpoint: {record['endpoint']}")
     print(f"model: {settings.openai_model} (reported: {record['models_reported']})")
     print(f"logical requests: {provider.requests_started}/{args.max_requests}; usage: {usage}")
-    print("\n".join(mechanical))
-    if not any(t["outcome"] == "model_answer" for t in model_turns):
-        print("NOTE: no model call completed, so the model-related lines above are vacuous.")
+    print("\n".join(lines))
+    if not any(t["outcome"] == "model_answer" for t in called):
+        print("NOTE: no model call returned a usable answer; the guarantee lines about model "
+              "calls hold only vacuously.")
     print("\nOBSERVED (judge against the passages in the transcript):")
     print("\n".join(observed))
     print(f"\ntranscript: {out}")
