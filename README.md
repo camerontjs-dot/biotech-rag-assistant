@@ -8,6 +8,17 @@ The current slice is deliberately narrow and fully deterministic: it validates d
 
 The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (18 ADRs). The Python core is exercised by 113 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
 
+## Test your own retriever against a retired SOP
+
+The [synthetic corpus](examples/synthetic-controlled-docs) contains ten fictional documents. Load the Markdown files in [documents/](examples/synthetic-controlled-docs/documents) and attach the YAML from [metadata/](examples/synthetic-controlled-docs/metadata) using each record's `source_file_path`. Keep the evaluation files outside your index. You can run these checks with your own retrieval pipeline.
+
+| Ask | Expected result |
+| --- | --- |
+| What is the membrane filtration hold time for sterility? | Refuse to give a hold time. Only the obsolete `SOP-QA-009` v0.8 supplies one. |
+| How do staff confirm the current approved version of a controlled document? | Answer from `POL-DOC-003` v2.0, **Approved**. It directs staff to the current approved or effective version in the controlled repository. |
+
+Record the top document ID, version and status alongside the answer for each question. In the [reference test](tests/test_status_gate_ablation.py), the retired SOP ranks first when the status filter is disabled. The second question catches a system that refuses everything.
+
 ## What this is and is not
 
 This tests how a document assistant should behave before an LLM is added. The useful question is whether the system can keep source identity, document status, version, hash, and chunk IDs attached to retrieval results and answer output.
