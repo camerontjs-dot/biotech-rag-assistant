@@ -1,0 +1,17 @@
+{
+  "automatic": {
+    "reviewed_local_commit": "093fcd031138b8219722f4e9c888dec2d7ebc354",
+    "published_commit": "8ddd2a8969869be5e5dfe339b45087f1ee7e8803",
+    "tree": "d7a96fe4bae53f30dbdcf1f179b3710bd1a5b5cf",
+    "source_sha256": "386749546e2cafaf237e69936dae894982b6d9592d0efc0594a2f8d83a2c4df5",
+    "contract_sha256": "8477fbc9c883c1b07502da0ec0fa16c4edb0be663dbd361c3b3ad4d9f4775adc"
+  },
+  "authorized": {
+    "reviewed_local_commit": "786a09421c95c55506a3e82f96006449e064b4d7",
+    "published_commit": "897e22827fe9848d460734f1b2432c6f6babc45d",
+    "tree": "4ff09a40a38c41a20d64d436ff67463750a254cd",
+    "source_sha256": "e3c1198b900aa075edd2bf04575783419dc0de87d63ab2e640ed6309a5ae94d1",
+    "contract_sha256": "50bb6d702abc65583e339d1c05e9b97c583849d752863ddd7c2a790c9399c29e"
+  },
+  "verification": "Read published worktree/object tree IDs and compared source and contract SHA-256 digests to exact locally tested subjects. No provider calls or GitHub writes by this reviewer."
+}

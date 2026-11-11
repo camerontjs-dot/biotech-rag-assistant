@@ -1,0 +1,23 @@
+{
+  "schema_version": "biotech-citation-publication-map/v1",
+  "publication_method": "GitHub Git Data API; no local git push credentials",
+  "same_commit_identity": false,
+  "objects": [
+    {
+      "role": "automatic_candidate_rejected",
+      "local_commit": "093fcd031138b8219722f4e9c888dec2d7ebc354",
+      "github_commit": "8ddd2a8969869be5e5dfe339b45087f1ee7e8803",
+      "tree": "d7a96fe4bae53f30dbdcf1f179b3710bd1a5b5cf",
+      "raw_local_commit": "local-automatic-commit.txt"
+    },
+    {
+      "role": "explicit_bounds_candidate",
+      "local_commit": "786a09421c95c55506a3e82f96006449e064b4d7",
+      "github_commit": "897e22827fe9848d460734f1b2432c6f6babc45d",
+      "tree": "4ff09a40a38c41a20d64d436ff67463750a254cd",
+      "raw_local_commit": "local-explicit-bounds-commit.txt"
+    }
+  ],
+  "verification": "GitHub-created trees matched local trees; Git fetch independently returned publication897e228 and tree4ff09a40. Commit metadata/parent identities differ. No code or file-byte equivalence is inferred from commit-name similarity."
+}
+

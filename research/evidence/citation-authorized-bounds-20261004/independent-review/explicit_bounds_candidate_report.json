@@ -1,0 +1,881 @@
+{
+  "commit": "786a09421c95c55506a3e82f96006449e064b4d7",
+  "tree": "4ff09a40a38c41a20d64d436ff67463750a254cd",
+  "probe_sha256": "22460e1fe41a0b0a3875d15e56552ee473e1ad36ae80e771c51333699e4f8659",
+  "source_sha256": "e3c1198b900aa075edd2bf04575783419dc0de87d63ab2e640ed6309a5ae94d1",
+  "contract_sha256": "50bb6d702abc65583e339d1c05e9b97c583849d752863ddd7c2a790c9399c29e",
+  "python": "/workspace/scratch/7b8946fc1488/biotech-test-env/bin/python",
+  "total": 51,
+  "passed": 49,
+  "failed": 2,
+  "results": [
+    {
+      "id": "ordinary_authorized_span",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 0,
+        "end": 29
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 0,
+        "end": 29
+      },
+      "failures": []
+    },
+    {
+      "id": "neighboring_sentences_not_widened",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 26,
+        "end": 55
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 26,
+        "end": 55
+      },
+      "failures": []
+    },
+    {
+      "id": "authorized_edge_whitespace_preserved",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "  QA must sign. \t",
+        "start": 7,
+        "end": 24
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "  QA must sign. \t",
+        "start": 7,
+        "end": 24
+      },
+      "failures": []
+    },
+    {
+      "id": "unicode_codepoint_offsets",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Café batches require QA authorization.",
+        "start": 26,
+        "end": 64
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "Café batches require QA authorization.",
+        "start": 26,
+        "end": 64
+      },
+      "failures": []
+    },
+    {
+      "id": "decomposed_unicode_preserved",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Café batches need review.",
+        "start": 0,
+        "end": 26
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "Café batches need review.",
+        "start": 0,
+        "end": 26
+      },
+      "failures": []
+    },
+    {
+      "id": "single_lf_wrap",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign\nbefore shipment.",
+        "start": 0,
+        "end": 29
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign\nbefore shipment.",
+        "start": 0,
+        "end": 29
+      },
+      "failures": []
+    },
+    {
+      "id": "single_crlf_wrap",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign\r\nbefore shipment.",
+        "start": 0,
+        "end": 30
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign\r\nbefore shipment.",
+        "start": 0,
+        "end": 30
+      },
+      "failures": []
+    },
+    {
+      "id": "full_authorized_abbreviation_syntax",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Asst. Director Chen must approve shipment.",
+        "start": 0,
+        "end": 42
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "Asst. Director Chen must approve shipment.",
+        "start": 0,
+        "end": 42
+      },
+      "failures": []
+    },
+    {
+      "id": "quoted_punctuation_and_parentheses",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "The instruction reads “Hold!” (until QA signs).",
+        "start": 0,
+        "end": 47
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "The instruction reads “Hold!” (until QA signs).",
+        "start": 0,
+        "end": 47
+      },
+      "failures": []
+    },
+    {
+      "id": "punctuation_outside_span_irrelevant",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 28,
+        "end": 57
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 28,
+        "end": 57
+      },
+      "failures": []
+    },
+    {
+      "id": "other_paragraphs_outside_span_allowed",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 9,
+        "end": 38
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA must sign before shipment.",
+        "start": 9,
+        "end": 38
+      },
+      "failures": []
+    },
+    {
+      "id": "full_span_quote_unchanged",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Shipment requires QA authorization.",
+        "start": 9,
+        "end": 44
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "Shipment requires QA authorization.",
+        "start": 9,
+        "end": 44
+      },
+      "failures": []
+    },
+    {
+      "id": "quote_at_start_boundary",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      },
+      "failures": []
+    },
+    {
+      "id": "quote_at_end_boundary",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      },
+      "failures": []
+    },
+    {
+      "id": "case_distinct_occurrence_not_ambiguous",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Marker is required; marker means something else.",
+        "start": 0,
+        "end": 48
+      },
+      "actual": {
+        "outcome": "selected",
+        "text": "Marker is required; marker means something else.",
+        "start": 0,
+        "end": 48
+      },
+      "failures": []
+    },
+    {
+      "id": "missing_both_bounds",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      },
+      "actual": {
+        "outcome": "bounds_required",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "missing_start_bound",
+      "pass": false,
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [
+        "outcome differs from frozen expected outcome names"
+      ]
+    },
+    {
+      "id": "missing_end_bound",
+      "pass": false,
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": [
+        "outcome differs from frozen expected outcome names"
+      ]
+    },
+    {
+      "id": "explicit_null_bounds",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      },
+      "actual": {
+        "outcome": "bounds_required",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "negative_start",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "negative_end",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "reversed_bounds",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "empty_bounds",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "end_out_of_range",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "start_out_of_range",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "boolean_start",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "boolean_end",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "floating_start",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "floating_end",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "string_start",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "string_end",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "missing_quote",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "case_mismatched_quote",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "empty_quote",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "whitespace_only_quote",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "normalization_mismatch_quote",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "not_found",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "overlapping_occurrences",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      },
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "overlap_outside_authorized_span",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      },
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "duplicate_outside_authorized_span",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      },
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "duplicate_other_paragraph",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      },
+      "actual": {
+        "outcome": "ambiguous",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "lf_blank_line",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "lf_blank_line_with_spaces",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "crlf_blank_line",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "crlf_blank_line_with_spaces",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "cr_blank_line",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "unicode_paragraph_separator",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "blank_line_with_nonbreaking_space",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "quote_itself_crosses_paragraph",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "quote_starts_before_span",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds",
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "quote_ends_after_span",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds",
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    },
+    {
+      "id": "quote_completely_outside_span",
+      "pass": true,
+      "expected": {
+        "outcomes": [
+          "invalid_bounds",
+          "not_found"
+        ]
+      },
+      "actual": {
+        "outcome": "invalid_bounds",
+        "text": null,
+        "start": null,
+        "end": null
+      },
+      "failures": []
+    }
+  ]
+}

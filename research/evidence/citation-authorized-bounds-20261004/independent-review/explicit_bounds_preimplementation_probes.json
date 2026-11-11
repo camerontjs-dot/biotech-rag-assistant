@@ -1,0 +1,819 @@
+{
+  "schema_version": 1,
+  "contract": "select_authorized_span(body, quote, *, authorized_start=None, authorized_end=None)",
+  "purpose": "Fresh engineering probes of the announced explicit-bounds mechanical contract; not a replay of automatic sentence selection and not a sentence/semantic correctness claim.",
+  "preconditions": "The caller supplies bounds it authorizes. Linguistic correctness, completeness, provenance, and source authorization are external preconditions, not proven by selected.",
+  "exposure_before_freeze": "Announced API/outcomes, known automatic-selector failures, and parent statement that a single CRLF wrap is supported. Parent mentioned atomic grouping in its paragraph regexp in the freeze notice; no new candidate source or documentation has been read.",
+  "expected_semantics": "A selected output must exactly match the specified span and offsets, with no trimming/widening. All refusals must have null text/start/end. Outside-span quote refusal may be invalid_bounds or not_found because the announcement did not specify this distinction.",
+  "cases": [
+    {
+      "id": "ordinary_authorized_span",
+      "rule": "Required exact selection with explicit authority",
+      "body": "QA must sign before shipment.",
+      "quote": "sign before",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "id": "neighboring_sentences_not_widened",
+      "rule": "Respect the explicit span without adding preceding or following sentences",
+      "body": "Evidence remains limited. QA must sign before shipment. Retain these records.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 26,
+        "authorized_end": 55
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 26,
+        "end": 55
+      }
+    },
+    {
+      "id": "authorized_edge_whitespace_preserved",
+      "rule": "No trimming or rewriting of caller-authorized bounds",
+      "body": "Before.  QA must sign. \tAfter.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 7,
+        "authorized_end": 24
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "  QA must sign. \t",
+        "start": 7,
+        "end": 24
+      }
+    },
+    {
+      "id": "unicode_codepoint_offsets",
+      "rule": "Preserve body-relative codepoint indices with astral, accented, and Greek characters",
+      "body": "🧬 Preliminary α evidence. Café batches require QA authorization.",
+      "quote": "Café batches",
+      "kwargs": {
+        "authorized_start": 26,
+        "authorized_end": 64
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Café batches require QA authorization.",
+        "start": 26,
+        "end": 64
+      }
+    },
+    {
+      "id": "decomposed_unicode_preserved",
+      "rule": "No NFC rewriting of text or offsets",
+      "body": "Café batches need review.",
+      "quote": "é batches",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 26
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Café batches need review.",
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "id": "single_lf_wrap",
+      "rule": "A single line wrap is not a paragraph boundary",
+      "body": "QA must sign\nbefore shipment.",
+      "quote": "sign\nbefore",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign\nbefore shipment.",
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "id": "single_crlf_wrap",
+      "rule": "One CRLF pair is one line wrap, not an empty paragraph",
+      "body": "QA must sign\r\nbefore shipment.",
+      "quote": "sign\r\nbefore",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 30
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign\r\nbefore shipment.",
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "id": "full_authorized_abbreviation_syntax",
+      "rule": "Supplied bounds, not abbreviation inference, determine the exact span",
+      "body": "Asst. Director Chen must approve shipment.",
+      "quote": "must approve",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 42
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Asst. Director Chen must approve shipment.",
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "id": "quoted_punctuation_and_parentheses",
+      "rule": "Do not run the retired punctuation inference over authorized spans",
+      "body": "The instruction reads “Hold!” (until QA signs).",
+      "quote": "until QA signs",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 47
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "The instruction reads “Hold!” (until QA signs).",
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "id": "punctuation_outside_span_irrelevant",
+      "rule": "Unsupported punctuation elsewhere must not affect an authorized exact slice",
+      "body": "[Uncertain... preliminary.] QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 28,
+        "authorized_end": 57
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 28,
+        "end": 57
+      }
+    },
+    {
+      "id": "other_paragraphs_outside_span_allowed",
+      "rule": "Only the selected span is constrained against paragraph crossing",
+      "body": "Heading\n\nQA must sign before shipment.\r\n\r\nAppendix Closing",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 9,
+        "authorized_end": 38
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA must sign before shipment.",
+        "start": 9,
+        "end": 38
+      }
+    },
+    {
+      "id": "full_span_quote_unchanged",
+      "rule": "An exact full-span quote must remain byte-for-byte equivalent as a Python string",
+      "body": "Context. Shipment requires QA authorization.",
+      "quote": "Shipment requires QA authorization.",
+      "kwargs": {
+        "authorized_start": 9,
+        "authorized_end": 44
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Shipment requires QA authorization.",
+        "start": 9,
+        "end": 44
+      }
+    },
+    {
+      "id": "quote_at_start_boundary",
+      "rule": "The start index is inclusive",
+      "body": "QA authorization remains required.",
+      "quote": "QA authorization",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 34
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "id": "quote_at_end_boundary",
+      "rule": "The end index is exclusive and may equal len(body)",
+      "body": "QA authorization remains required.",
+      "quote": "required.",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 34
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "QA authorization remains required.",
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "id": "case_distinct_occurrence_not_ambiguous",
+      "rule": "Global matching is literal and case sensitive",
+      "body": "Marker is required; marker means something else.",
+      "quote": "Marker",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 48
+      },
+      "expected": {
+        "outcomes": [
+          "selected"
+        ],
+        "text": "Marker is required; marker means something else.",
+        "start": 0,
+        "end": 48
+      }
+    },
+    {
+      "id": "missing_both_bounds",
+      "rule": "No automatic boundary fallback",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {},
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      }
+    },
+    {
+      "id": "missing_start_bound",
+      "rule": "Both bounds must be supplied",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      }
+    },
+    {
+      "id": "missing_end_bound",
+      "rule": "Both bounds must be supplied",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0
+      },
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      }
+    },
+    {
+      "id": "explicit_null_bounds",
+      "rule": "Explicit None does not authorize bounds",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": null,
+        "authorized_end": null
+      },
+      "expected": {
+        "outcomes": [
+          "bounds_required"
+        ]
+      }
+    },
+    {
+      "id": "negative_start",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": -1,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "negative_end",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": -1
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "reversed_bounds",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 29,
+        "authorized_end": 0
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "empty_bounds",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 0
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "end_out_of_range",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 30
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "start_out_of_range",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 30,
+        "authorized_end": 31
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "boolean_start",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": false,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "boolean_end",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": true
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "floating_start",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0.0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "floating_end",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29.0
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "string_start",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": "0",
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "string_end",
+      "rule": "Refuse invalid integer offsets without coercion",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": "29"
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "missing_quote",
+      "rule": "Never consult text outside the authorized body",
+      "body": "QA must sign before shipment.",
+      "quote": "Shipment approved",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      },
+      "outside_authorized_body": "Shipment approved"
+    },
+    {
+      "id": "case_mismatched_quote",
+      "rule": "Do not case-fold a quote",
+      "body": "QA must sign before shipment.",
+      "quote": "qa must",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      }
+    },
+    {
+      "id": "empty_quote",
+      "rule": "Empty quote cannot identify authorized content",
+      "body": "QA must sign before shipment.",
+      "quote": "",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      }
+    },
+    {
+      "id": "whitespace_only_quote",
+      "rule": "Whitespace-only quote does not identify cited content",
+      "body": "QA must sign before shipment.",
+      "quote": " ",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      }
+    },
+    {
+      "id": "normalization_mismatch_quote",
+      "rule": "Do not normalize quote or body to manufacture a match",
+      "body": "Café batches need review.",
+      "quote": "Café",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 26
+      },
+      "expected": {
+        "outcomes": [
+          "not_found"
+        ]
+      }
+    },
+    {
+      "id": "overlapping_occurrences",
+      "rule": "Reject overlapping global occurrences",
+      "body": "Notify QA QA QA before shipment.",
+      "quote": "QA QA",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 32
+      },
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      }
+    },
+    {
+      "id": "overlap_outside_authorized_span",
+      "rule": "A second overlap is ambiguous even if it extends past the authorized span",
+      "body": "ababa",
+      "quote": "aba",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 3
+      },
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      }
+    },
+    {
+      "id": "duplicate_outside_authorized_span",
+      "rule": "A globally repeated quote is ambiguous even if only one occurrence is in the span",
+      "body": "QA signs this record. QA signs another record.",
+      "quote": "QA signs",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 21
+      },
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      }
+    },
+    {
+      "id": "duplicate_other_paragraph",
+      "rule": "Do not limit uniqueness checking to the authorized paragraph",
+      "body": "QA signs this record.\n\nQA signs another record.",
+      "quote": "QA signs",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 21
+      },
+      "expected": {
+        "outcomes": [
+          "ambiguous"
+        ]
+      }
+    },
+    {
+      "id": "lf_blank_line",
+      "rule": "An authorized span still cannot cross a blank line or paragraph separator",
+      "body": "QA must sign\n\nbefore shipment.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 30
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "lf_blank_line_with_spaces",
+      "rule": "An authorized span still cannot cross a blank line or paragraph separator",
+      "body": "QA must sign\n \t\nbefore shipment.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 32
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "crlf_blank_line",
+      "rule": "An authorized span still cannot cross a blank line or paragraph separator",
+      "body": "QA must sign\r\n\r\nbefore shipment.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 32
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "crlf_blank_line_with_spaces",
+      "rule": "An authorized span still cannot cross a blank line or paragraph separator",
+      "body": "QA must sign\r\n \t\r\nbefore shipment.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 34
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "cr_blank_line",
+      "rule": "An authorized span still cannot cross a blank line or paragraph separator",
+      "body": "QA must sign\r\rbefore shipment.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 30
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "unicode_paragraph_separator",
+      "rule": "An authorized span still cannot cross a blank line or paragraph separator",
+      "body": "QA must sign before shipment.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "blank_line_with_nonbreaking_space",
+      "rule": "An authorized span still cannot cross a blank line or paragraph separator",
+      "body": "QA must sign\n \nbefore shipment.",
+      "quote": "QA must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 31
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "quote_itself_crosses_paragraph",
+      "rule": "A unique exact quote does not authorize crossing paragraph boundaries",
+      "body": "QA must sign\n\nbefore shipment.",
+      "quote": "sign\n\nbefore",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 30
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds"
+        ]
+      }
+    },
+    {
+      "id": "quote_starts_before_span",
+      "rule": "The entire unique quote must be enclosed by the supplied span",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 4,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds",
+          "not_found"
+        ]
+      }
+    },
+    {
+      "id": "quote_ends_after_span",
+      "rule": "The entire unique quote must be enclosed by the supplied span",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 0,
+        "authorized_end": 9
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds",
+          "not_found"
+        ]
+      }
+    },
+    {
+      "id": "quote_completely_outside_span",
+      "rule": "The entire unique quote must be enclosed by the supplied span",
+      "body": "QA must sign before shipment.",
+      "quote": "must sign",
+      "kwargs": {
+        "authorized_start": 13,
+        "authorized_end": 29
+      },
+      "expected": {
+        "outcomes": [
+          "invalid_bounds",
+          "not_found"
+        ]
+      }
+    }
+  ]
+}

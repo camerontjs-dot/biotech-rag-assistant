@@ -1,0 +1,4 @@
+Frozen before reading explicit-bounds candidate source/documentation.
+Known exposure is enumerated in the probe artifact; this is ordinary engineering review, not clean-room or training independence.
+The automatic-selector frozen probes and results remain unchanged.
+SHA-256: 22460e1fe41a0b0a3875d15e56552ee473e1ad36ae80e771c51333699e4f8659

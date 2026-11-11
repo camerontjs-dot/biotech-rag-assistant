@@ -1,0 +1,86 @@
+{
+  "commit": "093fcd031138b8219722f4e9c888dec2d7ebc354",
+  "probe_sha256": "f11f7de4bb738700d4b0e3729f02ede50c5a89492c09e72e65811ce772e3074b",
+  "source_sha256": "386749546e2cafaf237e69936dae894982b6d9592d0efc0594a2f8d83a2c4df5",
+  "phase": "Post-freeze exploratory engineering probes, after source and candidate contract inspection",
+  "results": [
+    {
+      "id": "coord_condition_truncation",
+      "origin": "Root-supplied counterexample after the frozen 32 were executed",
+      "body": "Release is allowed only after Coord. Smith signs the authorization.",
+      "quote": "Release is allowed",
+      "expectation": "The complete body sentence or refusal; never truncate before the named signer and required signature",
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is allowed only after Coord.",
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "id": "prof_sentence_start_loss",
+      "origin": "Root-supplied counterexample after the frozen 32 were executed",
+      "body": "Prof. Vale must approve release. Retain the record.",
+      "quote": "must approve release",
+      "expectation": "Prof. Vale must approve release. or refusal; never omit the sentence's title/prefix",
+      "actual": {
+        "outcome": "selected",
+        "text": "Vale must approve release.",
+        "start": 6,
+        "end": 32
+      }
+    },
+    {
+      "id": "root_paragraph_merge",
+      "origin": "Root-supplied failure family, minimal explicit representative also independently in frozen 32",
+      "body": "Release is permitted\n\nOnly after QA approval.",
+      "quote": "Release is permitted",
+      "expectation": "Release is permitted or refusal; never cross the paragraph break",
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is permitted\n\nOnly after QA approval.",
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "id": "prof_condition_truncation",
+      "origin": "Reviewer exploration after source inspection",
+      "body": "Release is allowed by Prof. Vale only after QA approval.",
+      "quote": "Release is allowed",
+      "expectation": "The complete body sentence or refusal; never truncate before the limiting condition",
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is allowed by Prof.",
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "id": "crlf_blank_paragraph_merge",
+      "origin": "Reviewer exploration after source inspection",
+      "body": "Release is permitted\r\n\r\nOnly after QA approval.",
+      "quote": "Release is permitted",
+      "expectation": "Release is permitted or refusal; never cross the CRLF paragraph break",
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is permitted\r\n\r\nOnly after QA approval.",
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "id": "unicode_paragraph_separator_merge",
+      "origin": "Reviewer exploration after source inspection",
+      "body": "Release is permitted Only after QA approval.",
+      "quote": "Release is permitted",
+      "expectation": "Release is permitted or refusal; never cross the explicit Unicode paragraph separator",
+      "actual": {
+        "outcome": "selected",
+        "text": "Release is permitted Only after QA approval.",
+        "start": 0,
+        "end": 44
+      }
+    }
+  ]
+}

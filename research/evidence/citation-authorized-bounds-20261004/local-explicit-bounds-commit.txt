@@ -1,0 +1,6 @@
+tree 4ff09a40a38c41a20d64d436ff67463750a254cd
+parent 093fcd031138b8219722f4e9c888dec2d7ebc354
+author Codex <codex@openai.com> 1791121048 -0600
+committer Codex <codex@openai.com> 1791121048 -0600
+
+Require explicit authorized citation bounds after parser falsification
