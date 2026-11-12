@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biotech RAG Assistant: conversational prototype</title>
+<style>
+  :root {
+    --bg: #f4f6f8; --panel: #ffffff; --ink: #1b2733; --muted: #5b6b7a; --line: #d8e0e8;
+    --accent: #0f6e8c; --accent-ink: #ffffff; --code: #0b3d4d;
+    --ok-bg: #e6f4ea; --ok-ink: #1d6b3a; --ok-line: #9fd4b1;
+    --warn-bg: #fff4e2; --warn-ink: #8a5a12; --warn-line: #f0cf95;
+    --bad-bg: #fdecec; --bad-ink: #9a2b2b; --bad-line: #f1b5b5;
+    --info-bg: #eaf3f8; --info-ink: #0b4f66; --info-line: #b5d6e6;
+    --mark: #fff0a8; --user-bg: #0f6e8c; --user-ink: #ffffff;
+    --shadow: 0 1px 2px rgba(16,40,60,.06), 0 6px 20px rgba(16,40,60,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10161c; --panel: #18212a; --ink: #e4ebf1; --muted: #9aabba; --line: #2c3a47;
+      --accent: #46a7c7; --accent-ink: #0b1a21; --code: #9fd6ea;
+      --ok-bg: #16301f; --ok-ink: #9fdcb3; --ok-line: #2f5e3d;
+      --warn-bg: #33270f; --warn-ink: #f0cf95; --warn-line: #6b5121;
+      --bad-bg: #3a1a1a; --bad-ink: #f3b0b0; --bad-line: #6e3030;
+      --info-bg: #142a35; --info-ink: #a8d8ea; --info-line: #2b5568;
+      --mark: #5c5220; --user-bg: #1f5d73; --user-ink: #ffffff;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 20px 16px 200px; }
+  header.top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  header.top h1 { font-size: 19px; margin: 0 8px 0 0; letter-spacing: -0.01em; }
+  .pill { font-size: 11px; font-weight: 600; letter-spacing: .03em; padding: 3px 8px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--muted); background: var(--panel); }
+  .pill.exp { color: var(--warn-ink); border-color: var(--warn-line); background: var(--warn-bg); text-transform: uppercase; }
+  .pill.on { color: var(--ok-ink); border-color: var(--ok-line); background: var(--ok-bg); }
+  .pill.off { color: var(--bad-ink); border-color: var(--bad-line); background: var(--bad-bg); }
+  .notice { font-size: 13px; color: var(--muted); margin: 10px 0 14px; }
+  .notice b { color: var(--ink); }
+  .notice a { color: var(--accent); }
+  .banner { border-radius: 10px; padding: 10px 14px; margin: 0 0 14px; font-size: 13.5px; border: 1px solid; }
+  .banner.off { background: var(--warn-bg); color: var(--warn-ink); border-color: var(--warn-line); }
+  .banner.err { background: var(--bad-bg); color: var(--bad-ink); border-color: var(--bad-line); }
+  .hidden { display: none !important; }
+  #log { display: flex; flex-direction: column; gap: 14px; }
+  .empty { color: var(--muted); font-size: 14px; border: 1px dashed var(--line); border-radius: 12px; padding: 16px; }
+  .examples { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+  .chip { font: inherit; font-size: 12.5px; padding: 5px 10px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--panel); color: var(--accent); }
+  .chip:hover { border-color: var(--accent); }
+  .msg.user { align-self: flex-end; max-width: 80%; background: var(--user-bg); color: var(--user-ink);
+    padding: 9px 13px; border-radius: 14px 14px 4px 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .msg.user .tn { display: block; font-size: 11px; opacity: .8; margin-bottom: 2px; }
+  .msg.assistant { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px;
+    box-shadow: var(--shadow); overflow-wrap: anywhere; }
+  .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .status { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
+    padding: 3px 9px; border-radius: 6px; border: 1px solid; }
+  .st-ok { background: var(--ok-bg); color: var(--ok-ink); border-color: var(--ok-line); }
+  .st-gap { background: var(--warn-bg); color: var(--warn-ink); border-color: var(--warn-line); }
+  .st-info { background: var(--info-bg); color: var(--info-ink); border-color: var(--info-line); }
+  .st-bad { background: var(--bad-bg); color: var(--bad-ink); border-color: var(--bad-line); }
+  .interp { font-size: 12.5px; color: var(--muted); }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; font-size: 12.5px; color: var(--muted); }
+  .attempts { font-size: 12.5px; color: var(--muted); margin: 6px 0 0 4px; padding-left: 16px; }
+  .attempts code, .meta code { color: var(--code); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+  .sysmsg { margin: 10px 0 2px; }
+  .answer { margin-top: 10px; }
+  .answer p { margin: 8px 0; }
+  .answer ol, .answer ul { margin: 8px 0; padding-left: 24px; }
+  .answer li { margin: 5px 0; }
+  ul.checklist { list-style: none; padding-left: 4px; }
+  ul.checklist li::before { content: "\2610\00a0"; color: var(--muted); }
+  .cite { font: inherit; font-size: 11.5px; padding: 1px 7px; margin-left: 4px; border-radius: 6px; cursor: pointer;
+    border: 1px solid var(--info-line); background: var(--info-bg); color: var(--info-ink); white-space: nowrap; }
+  .box { border-radius: 10px; padding: 9px 12px; margin: 10px 0; font-size: 13.5px; border: 1px solid; }
+  .box.withheld { background: var(--bad-bg); color: var(--bad-ink); border-color: var(--bad-line); }
+  .box.missing { background: var(--warn-bg); color: var(--warn-ink); border-color: var(--warn-line); }
+  .box.question { background: var(--info-bg); color: var(--info-ink); border-color: var(--info-line); }
+  .box ul { margin: 4px 0 0; padding-left: 20px; }
+  .boxtitle { font-weight: 700; }
+  .notes { font-size: 12.5px; color: var(--muted); }
+  .notes ul { margin: 6px 0; padding-left: 20px; }
+  .sources { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .sources h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 4px 0 0; }
+  .card { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--bg); }
+  .card.flash { outline: 2px solid var(--accent); }
+  .card .ref { font-weight: 700; color: var(--code); }
+  .docid { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; color: var(--code); }
+  .badge { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; padding: 2px 7px;
+    border-radius: 6px; background: var(--ok-bg); color: var(--ok-ink); border: 1px solid var(--ok-line); }
+  .small { font-size: 12px; color: var(--muted); }
+  .quote { border-left: 3px solid var(--ok-line); padding: 3px 0 3px 10px; margin: 6px 0; white-space: pre-wrap; }
+  mark { background: var(--mark); color: inherit; padding: 0 1px; border-radius: 2px; }
+  .linkbtn { font: inherit; font-size: 12px; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; text-decoration: underline; }
+  .heldout { font-size: 12.5px; color: var(--warn-ink); background: var(--warn-bg); border: 1px dashed var(--warn-line);
+    border-radius: 8px; padding: 7px 10px; margin-top: 8px; }
+  .meta { margin-top: 10px; font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 7px; }
+  .spin { display: inline-block; width: 13px; height: 13px; border: 2px solid var(--line); border-top-color: var(--accent);
+    border-radius: 50%; animation: sp .7s linear infinite; vertical-align: -2px; margin-right: 6px; }
+  @keyframes sp { to { transform: rotate(360deg); } }
+  .composer { position: fixed; left: 0; right: 0; bottom: 0; background: var(--bg); border-top: 1px solid var(--line); }
+  .composer .inner { max-width: 920px; margin: 0 auto; padding: 10px 16px 12px; }
+  .composer textarea { width: 100%; min-height: 54px; max-height: 160px; resize: vertical; padding: 10px 12px; font: inherit;
+    border: 1px solid var(--line); border-radius: 10px; background: var(--panel); color: var(--ink); }
+  .composer textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  .controls { display: flex; align-items: center; gap: 10px; margin-top: 7px; flex-wrap: wrap; }
+  .controls label { font-size: 12.5px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+  .spacer { flex: 1; }
+  button.primary { font: inherit; font-weight: 600; padding: 8px 18px; border: 0; border-radius: 9px; background: var(--accent);
+    color: var(--accent-ink); cursor: pointer; }
+  button.secondary { font: inherit; font-size: 13px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 9px;
+    background: var(--panel); color: var(--ink); cursor: pointer; }
+  button:disabled { opacity: .55; cursor: default; }
+  .keyrow { display: flex; gap: 8px; margin-top: 8px; }
+  .keyrow input { flex: 1; padding: 7px 10px; font: inherit; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); }
+  dialog { max-width: 760px; width: calc(100% - 32px); border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink); padding: 16px; }
+  dialog::backdrop { background: rgba(10, 20, 30, .45); }
+  .doctext { white-space: pre-wrap; font-size: 13.5px; border: 1px solid var(--line); border-radius: 8px; padding: 10px; background: var(--bg); max-height: 60vh; overflow: auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Biotech RAG Assistant</h1>
+    <span class="pill exp">Experimental prototype</span>
+    <span class="pill" id="corpus-pill">corpus …</span>
+    <span class="pill" id="provider-pill">provider …</span>
+  </header>
+  <p class="notice">
+    Explanations are generated from <b>Approved/Effective passages only</b>; every passage supplied to the model is shown with its
+    document, version, and status. Citations are checked <b>mechanically</b> (the passage was supplied this turn, the quoted words
+    appear in it, and its numbers match). That is <b>not proof that a passage supports a statement</b>; read the sources. Not a
+    validated GxP system; a qualified person decides. <a href="/">Deterministic extractive demo</a>
+  </p>
+  <div id="banner" class="banner off hidden" role="status"></div>
+  <div id="keybox" class="banner err hidden">
+    <span>This server requires an API key (sent as the <code>X-API-Key</code> header, kept in this page's memory only).</span>
+    <div class="keyrow"><input id="apikey" type="password" autocomplete="off" aria-label="API key" placeholder="API key" />
+      <button class="secondary" id="savekey" type="button">Use key</button></div>
+  </div>
+  <main id="log" role="log" aria-live="polite" aria-relevant="additions">
+    <div class="empty" id="empty">
+      Ask about the synthetic controlled documents. Follow-ups such as “who is responsible?”, “explain that step”, or
+      “turn the stated procedure into a checklist” reuse the passages of the question they refer to.
+      <div class="examples">
+        <button class="chip" type="button" data-q="How does QA respond to a viable environmental monitoring excursion?">Environmental monitoring excursion</button>
+        <button class="chip" type="button" data-q="Who must sign the line clearance record before the run starts?">Line clearance sign-off</button>
+        <button class="chip" type="button" data-q="What is the acceptance range for the analytical balance daily check?">Balance acceptance range (not stated)</button>
+        <button class="chip" type="button" data-q="What is the membrane filtration hold time for sterility?">Retired SOP trap</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="composer">
+  <div class="inner">
+    <textarea id="msg" maxlength="2000" placeholder="Ask a question or a follow-up… (Enter to send, Shift+Enter for a new line)" aria-label="Message"></textarea>
+    <div class="controls">
+      <label><input type="checkbox" id="newtopic" /> Start a new topic with this message</label>
+      <span class="spacer"></span>
+      <span class="small" id="turns"></span>
+      <button class="secondary" id="reset" type="button">New conversation</button>
+      <button class="primary" id="send" type="button">Send</button>
+    </div>
+  </div>
+</div>
+
+<dialog id="docdlg" aria-label="Source document">
+  <div class="row"><span class="docid" id="doc-id"></span><span class="badge" id="doc-status"></span><span class="small" id="doc-meta"></span>
+    <span class="spacer"></span><button class="secondary" id="doc-close" type="button">Close</button></div>
+  <p class="small" id="doc-title"></p>
+  <div class="doctext" id="doc-text"></div>
+  <p class="small">Full text of the admitted source file as loaded at server start. The highlighted span is the passage supplied to the model.</p>
+</dialog>
+
+<script>
+"use strict";
+// Safety rule for this page: never assign markup. Model and document text only ever reach the
+// DOM through textContent / text nodes created by el().
+const $ = (id) => document.getElementById(id);
+let sessionId = null;
+let apiKey = null;
+let busy = false;
+let lastStatus = null;
+
+function el(tag, opts, ...children) {
+  const node = document.createElement(tag);
+  const o = opts || {};
+  if (o.cls) node.className = o.cls;
+  if (o.text !== undefined && o.text !== null) node.textContent = String(o.text);
+  if (o.title) node.title = String(o.title);
+  if (o.id) node.id = o.id;
+  if (o.type) node.type = o.type;
+  if (o.onclick) node.addEventListener("click", o.onclick);
+  for (const child of children) {
+    if (child === null || child === undefined || child === false) continue;
+    node.appendChild(typeof child === "string" ? document.createTextNode(child) : child);
+  }
+  return node;
+}
+
+function headers() {
+  const h = { "content-type": "application/json" };
+  if (apiKey) h["X-API-Key"] = apiKey;
+  return h;
+}
+
+async function api(path, options) {
+  const response = await fetch(path, Object.assign({ headers: headers() }, options || {}));
+  let body = null;
+  try { body = await response.json(); } catch (e) { body = null; }
+  return { status: response.status, body };
+}
+
+function detailText(body, fallback) {
+  if (!body || body.detail === undefined) return fallback;
+  if (typeof body.detail === "string") return body.detail;
+  return fallback;
+}
+
+async function loadStatus() {
+  let result;
+  try { result = await api("/chat/status", { method: "GET" }); }
+  catch (e) { showBanner("err", "Could not reach the service. Start it with: biotech-rag chat"); return; }
+  if (result.status === 401) { $("keybox").classList.remove("hidden"); return; }
+  if (result.status !== 200 || !result.body) { showBanner("err", "Could not read the chat status (HTTP " + result.status + ")."); return; }
+  lastStatus = result.body;
+  const provider = result.body.provider;
+  const snap = result.body.corpora[result.body.default_corpus];
+  $("corpus-pill").textContent = snap ? (snap.corpus + " · " + snap.documents_retrievable + " admitted docs · snapshot " + snap.snapshot_id.slice(7, 15)) : "corpus";
+  $("corpus-pill").title = snap ? (snap.note + " Loaded " + snap.loaded_at + ".") : "";
+  const pill = $("provider-pill");
+  if (provider.available) {
+    pill.textContent = provider.provider + (provider.model ? " · " + provider.model : "") + (provider.store === false ? " · store=false" : "");
+    pill.className = "pill on";
+    hideBanner();
+  } else {
+    pill.textContent = "explanations unavailable";
+    pill.className = "pill off";
+    showBanner("off", provider.message + " Questions still retrieve and show the approved passages.");
+  }
+}
+
+function showBanner(kind, text) { const b = $("banner"); b.className = "banner " + kind; b.textContent = text; }
+function hideBanner() { $("banner").className = "banner hidden"; }
+
+const STATUS_LABELS = {
+  answered: ["Answered from the passages", "st-ok"],
+  partially_answered: ["Partly answered", "st-gap"],
+  not_stated: ["Not stated in the documents", "st-gap"],
+  needs_clarification: ["Needs clarification", "st-info"],
+  out_of_scope: ["Out of scope for these documents", "st-info"],
+};
+const OUTCOME_LABELS = {
+  no_admitted_evidence: ["No approved source found", "st-gap"],
+  clarification_needed: ["Needs clarification", "st-info"],
+  provider_unavailable: ["Explanation unavailable", "st-bad"],
+  provider_error: ["Model request failed", "st-bad"],
+  malformed_output: ["Model output rejected", "st-bad"],
+};
+
+function originLabel(origin) {
+  if (origin === "current_message") return "this message";
+  const m = /^anchor:turn_(\d+)$/.exec(origin);
+  return m ? "turn " + m[1] + "'s question" : origin;
+}
+
+function renderResolution(turn) {
+  const r = turn.resolution;
+  const wrap = el("div", { cls: "interp" }, r.explanation);
+  if (r.attempts && r.attempts.length) {
+    const list = el("ul", { cls: "attempts" });
+    for (const a of r.attempts) {
+      const gate = a.passed_relevance_gate ? "matched" : "no match";
+      const cov = a.top_coverage === null ? "" : " · top coverage " + Number(a.top_coverage).toFixed(2);
+      list.appendChild(el("li", null, "Searched ", el("code", { text: a.query }), " (" + originLabel(a.origin) + "): " + gate + cov));
+    }
+    if (r.removed_words && r.removed_words.length) {
+      list.appendChild(el("li", null, "Not searched (conversational words): " + r.removed_words.join(", ")));
+    }
+    const details = el("details", null, el("summary", { text: "How this message was searched" }), list);
+    wrap.appendChild(details);
+  }
+  return wrap;
+}
+
+function citeButton(turn, ref) {
+  const passage = turn.evidence.find((p) => p.ref === ref);
+  const label = passage ? ref + " · " + passage.doc_id + " v" + passage.version : ref;
+  return el("button", {
+    cls: "cite", type: "button", text: label, title: "Show the source passage",
+    onclick: () => {
+      const card = $("t" + turn.turn_index + "-" + ref);
+      if (!card) return;
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+      card.classList.add("flash");
+      setTimeout(() => card.classList.remove("flash"), 1500);
+    },
+  });
+}
+
+function renderBlocks(turn, answer) {
+  const container = el("div", { cls: "answer" });
+  let list = null;
+  let listKind = null;
+  const withheld = [];
+  for (const block of answer.blocks) {
+    if (block.withheld) { withheld.push(block); continue; }
+    const content = [block.text];
+    for (const ref of block.valid_refs) content.push(citeButton(turn, ref));
+    if (block.kind === "paragraph") {
+      list = null; listKind = null;
+      container.appendChild(el("p", null, ...content));
+      continue;
+    }
+    if (listKind !== block.kind) {
+      listKind = block.kind;
+      list = block.kind === "step" ? el("ol") : el("ul", { cls: block.kind === "checklist_item" ? "checklist" : "" });
+      container.appendChild(list);
+    }
+    list.appendChild(el("li", null, ...content));
+  }
+  if (withheld.length) {
+    const items = el("ul");
+    for (const block of withheld) items.appendChild(el("li", { text: block.withheld_reason }));
+    container.appendChild(el("div", { cls: "box withheld" },
+      el("span", { cls: "boxtitle", text: withheld.length + " generated statement" + (withheld.length === 1 ? " was" : "s were") + " withheld by the citation checks" }),
+      items));
+  }
+  return container;
+}
+
+function renderMissing(turn, answer) {
+  if (!answer.missing_information.length) return null;
+  const items = el("ul");
+  for (const item of answer.missing_information) {
+    const li = el("li", null, el("b", { text: item.requested }), " — " + item.explanation);
+    for (const ref of item.related_refs) li.appendChild(citeButton(turn, ref));
+    items.appendChild(li);
+  }
+  return el("div", { cls: "box missing" }, el("span", { cls: "boxtitle", text: "Not stated in the supplied documents" }), items);
+}
+
+function renderNotes(answer) {
+  const items = el("ul");
+  for (const a of answer.advisories) items.appendChild(el("li", { text: a.message }));
+  if (answer.unknown_refs.length) items.appendChild(el("li", { text: "Unknown citation refs removed: " + answer.unknown_refs.join(", ") }));
+  const count = answer.advisories.length + (answer.unknown_refs.length ? 1 : 0);
+  return el("details", { cls: "notes" },
+    el("summary", { text: "Review notes (" + count + ") and what the checks mean" }),
+    el("p", { text: answer.support_note }),
+    count ? items : el("p", { text: "No advisory notes for this answer." }));
+}
+
+function highlightRanges(turn) {
+  const ranges = {};
+  if (!turn.answer) return ranges;
+  for (const block of turn.answer.blocks) {
+    if (block.withheld) continue;
+    for (const c of block.citations) {
+      if (!c.quote_found) continue;
+      (ranges[c.ref] = ranges[c.ref] || []).push([c.highlight_start, c.highlight_end]);
+    }
+  }
+  for (const ref of Object.keys(ranges)) {
+    const sorted = ranges[ref].sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    for (const r of sorted) {
+      if (merged.length && r[0] <= merged[merged.length - 1][1]) merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], r[1]);
+      else merged.push([r[0], r[1]]);
+    }
+    ranges[ref] = merged;
+  }
+  return ranges;
+}
+
+function passageText(text, ranges) {
+  const node = el("div", { cls: "quote" });
+  let cursor = 0;
+  for (const [start, end] of ranges || []) {
+    if (start > cursor) node.appendChild(document.createTextNode(text.slice(cursor, start)));
+    node.appendChild(el("mark", { text: text.slice(start, end) }));
+    cursor = end;
+  }
+  if (cursor < text.length) node.appendChild(document.createTextNode(text.slice(cursor)));
+  return node;
+}
+
+function renderSources(turn) {
+  if (!turn.evidence.length) return null;
+  const ranges = highlightRanges(turn);
+  const wrap = el("div", { cls: "sources" }, el("h3", { text: "Passages supplied for this turn (" + turn.evidence.length + ")" }));
+  for (const p of turn.evidence) {
+    const cited = Boolean(ranges[p.ref]);
+    wrap.appendChild(el("div", { cls: "card", id: "t" + turn.turn_index + "-" + p.ref },
+      el("div", { cls: "row" },
+        el("span", { cls: "ref", text: p.ref }),
+        el("span", { cls: "docid", text: p.doc_id }),
+        el("span", { cls: "small", text: "v" + p.version }),
+        el("span", { cls: "badge", text: p.status }),
+        el("span", { cls: "small", text: "effective " + p.effective_date }),
+        el("span", { cls: "small", text: cited ? "· cited in this answer" : "· supplied, not cited" })),
+      el("div", { cls: "small", text: p.doc_title + " · section “" + p.section_heading + "” (heading shown for navigation; not sent to the model) · " + p.line_or_page_span }),
+      passageText(p.text, ranges[p.ref]),
+      el("div", { cls: "row small" },
+        el("span", { text: p.source_file_path + " · chars " + p.char_start + "–" + p.char_end + " · " + p.source_hash.slice(0, 19) + "…" }),
+        el("button", { cls: "linkbtn", type: "button", text: "View in document", onclick: () => openDocument(p) }))));
+  }
+  return wrap;
+}
+
+function renderHeldOut(turn) {
+  if (!turn.held_out.length) return null;
+  const box = el("div", { cls: "heldout" }, el("b", { text: "Held out by the status gate (not used as evidence): " }));
+  turn.held_out.forEach((h, i) => box.appendChild(document.createTextNode((i ? "; " : "") + h.doc_id + " v" + h.version + " (" + h.status + ")")));
+  return box;
+}
+
+function renderMeta(turn, snapshot) {
+  const p = turn.provider;
+  const parts = [];
+  if (p.called) {
+    parts.push("model " + (p.model_reported || "unknown") + (p.model_requested && p.model_requested !== p.model_reported ? " (requested " + p.model_requested + ")" : ""));
+    parts.push("provider " + p.provider);
+    if (p.store === false) parts.push("store=false");
+    if (p.usage && p.usage.total_tokens !== null && p.usage.total_tokens !== undefined) parts.push("tokens in/out " + p.usage.input_tokens + "/" + p.usage.output_tokens);
+    if (p.latency_ms !== null && p.latency_ms !== undefined) parts.push(p.latency_ms + " ms");
+    if (p.error_kind) parts.push("error " + p.error_kind);
+  } else {
+    parts.push("no model call");
+  }
+  parts.push("snapshot " + turn.corpus_snapshot_id);
+  return el("div", { cls: "meta", title: snapshot ? snapshot.note : "" }, parts.join(" · "));
+}
+
+function renderTurn(turn, snapshot) {
+  const article = el("article", { cls: "msg assistant" });
+  let label = null;
+  if (turn.outcome === "model_answer" && turn.answer) label = STATUS_LABELS[turn.answer.status];
+  else label = OUTCOME_LABELS[turn.outcome] || null;
+  const head = el("div", { cls: "row" });
+  if (label) head.appendChild(el("span", { cls: "status " + label[1], text: label[0] }));
+  article.appendChild(head);
+  if (turn.outcome !== "courtesy") article.appendChild(renderResolution(turn));
+  if (turn.message) article.appendChild(el("p", { cls: "sysmsg", text: turn.message }));
+  if (turn.answer) {
+    article.appendChild(renderBlocks(turn, turn.answer));
+    const missing = renderMissing(turn, turn.answer);
+    if (missing) article.appendChild(missing);
+    if (turn.answer.clarifying_question) {
+      article.appendChild(el("div", { cls: "box question" }, el("span", { cls: "boxtitle", text: "Question for you: " }), turn.answer.clarifying_question));
+    }
+    article.appendChild(renderNotes(turn.answer));
+  }
+  const held = renderHeldOut(turn);
+  if (held) article.appendChild(held);
+  const sources = renderSources(turn);
+  if (sources) article.appendChild(sources);
+  article.appendChild(renderMeta(turn, snapshot));
+  return article;
+}
+
+function appendUser(text, turnLabel) {
+  $("empty").classList.add("hidden");
+  const node = el("div", { cls: "msg user" }, el("span", { cls: "tn", text: turnLabel }), text);
+  $("log").appendChild(node);
+  return node;
+}
+
+function pending() {
+  return el("article", { cls: "msg assistant" }, el("span", { cls: "spin" }), "Retrieving approved passages and preparing an explanation…");
+}
+
+function setBusy(value) {
+  busy = value;
+  $("send").disabled = value;
+  $("msg").disabled = value;
+}
+
+async function send() {
+  const text = $("msg").value.trim();
+  if (!text || busy) return;
+  setBusy(true);
+  const userNode = appendUser(text, "You");
+  const wait = pending();
+  $("log").appendChild(wait);
+  wait.scrollIntoView({ behavior: "smooth", block: "end" });
+  const payload = { message: text, new_topic: $("newtopic").checked };
+  if (sessionId) payload.session_id = sessionId;
+  let result;
+  try {
+    result = await api("/chat", { method: "POST", body: JSON.stringify(payload) });
+  } catch (e) {
+    wait.replaceWith(el("article", { cls: "msg assistant" }, el("span", { cls: "status st-bad", text: "Request failed" }), el("p", { text: "Could not reach the service." })));
+    setBusy(false);
+    return;
+  }
+  if (result.status === 200 && result.body) {
+    sessionId = result.body.session_id;
+    const turn = result.body.turn;
+    userNode.firstChild.textContent = "You · turn " + turn.turn_index;
+    wait.replaceWith(renderTurn(turn, result.body.corpus_snapshot));
+    $("msg").value = "";
+    $("newtopic").checked = false;
+    $("turns").textContent = "turn " + result.body.turns_used + " of " + result.body.max_turns;
+    if (result.body.provider_status && !result.body.provider_status.available) loadStatus();
+  } else {
+    let text2;
+    if (result.status === 401) { $("keybox").classList.remove("hidden"); text2 = "This server requires an API key."; }
+    else if (result.status === 404 && sessionId) { sessionId = null; text2 = "This conversation expired or was cleared on the server. Your message is still in the box; send it again to start a new conversation."; }
+    else if (result.status === 422) text2 = "Messages must be between 1 and 2,000 characters.";
+    else text2 = detailText(result.body, "The server returned HTTP " + result.status + ".");
+    wait.replaceWith(el("article", { cls: "msg assistant" }, el("span", { cls: "status st-bad", text: "Not sent" }), el("p", { text: text2 })));
+  }
+  setBusy(false);
+  $("msg").focus();
+}
+
+async function openDocument(passage) {
+  const result = await api("/chat/documents/" + encodeURIComponent(passage.doc_id), { method: "GET" });
+  if (result.status !== 200 || !result.body) return;
+  const doc = result.body;
+  $("doc-id").textContent = doc.doc_id;
+  $("doc-status").textContent = doc.status;
+  $("doc-meta").textContent = "v" + doc.version + " · effective " + doc.effective_date + " · " + doc.source_hash.slice(0, 19) + "…";
+  $("doc-title").textContent = doc.doc_title + " · " + doc.source_file_path;
+  const body = $("doc-text");
+  body.replaceChildren();
+  const text = doc.text;
+  if (passage.char_start > 0) body.appendChild(document.createTextNode(text.slice(0, passage.char_start)));
+  const mark = el("mark", { text: text.slice(passage.char_start, passage.char_end) });
+  body.appendChild(mark);
+  body.appendChild(document.createTextNode(text.slice(passage.char_end)));
+  $("docdlg").showModal();
+  mark.scrollIntoView({ block: "center" });
+}
+
+function resetConversation() {
+  if (busy) return;
+  const previous = sessionId;
+  sessionId = null;
+  const log = $("log");
+  for (const node of Array.from(log.children)) if (node.id !== "empty") node.remove();
+  $("empty").classList.remove("hidden");
+  $("turns").textContent = "";
+  $("msg").focus();
+  // Forget the old conversation on the server too; the UI does not wait for it.
+  if (previous) api("/chat/sessions/" + encodeURIComponent(previous), { method: "DELETE" }).catch(() => {});
+}
+
+$("send").addEventListener("click", send);
+$("msg").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } });
+$("reset").addEventListener("click", resetConversation);
+$("doc-close").addEventListener("click", () => $("docdlg").close());
+$("savekey").addEventListener("click", () => { apiKey = $("apikey").value.trim() || null; $("keybox").classList.add("hidden"); loadStatus(); });
+document.querySelectorAll(".chip").forEach((chip) => chip.addEventListener("click", () => { $("msg").value = chip.dataset.q; send(); }));
+loadStatus();
+</script>
+</body>
+</html>

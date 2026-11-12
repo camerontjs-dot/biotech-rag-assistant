@@ -6,7 +6,7 @@ A controlled-document retrieval pilot for regulated industries (pharma, biotech,
 
 The current slice is deliberately narrow and fully deterministic: it validates document metadata and source hashes (fail-closed), gates retrieval to `Approved`/`Effective` documents, chunks source text with stable IDs and **exact-span provenance** (a citation's quote is the source text at `raw_text[char_start:char_end]`), ranks with BM25 behind a lexical refusal gate, and assembles extractive answers whose citations must resolve to retrieved chunks.
 
-The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (18 ADRs). The Python core is exercised by 113 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
+The [live demo](https://camerontjs-dot.github.io/biotech-rag-assistant/) includes an **obsolete-doc trap**: it refuses, flags the question for review, and names the retired SOP that the same search would have answered from without the status gate. The demo computes that pointer for any question you type (ADR-018). Design choices and the alternatives they rejected are in [`DECISIONS.md`](DECISIONS.md) (19 ADRs). The Python core is exercised by 257 tests across Python 3.11–3.13 (CI above), a 24-case trust suite that plants traps and passes only when it catches them, and JS↔Python parity on the demo.
 
 ## Test your own retriever against a retired SOP
 
@@ -93,6 +93,26 @@ curl -s localhost:8000/answer -H 'content-type: application/json' \
 the `answer`/`refusal` outcome. Set `BIOTECH_RAG_API_KEY` to require an `X-API-Key` header on every
 route except `/health`, and `BIOTECH_RAG_AUDIT_LOG` to append one JSONL audit record per request.
 
+## Experimental: conversational prototype
+
+`biotech-rag chat` serves the same transport plus an opt-in chat page at `/chat`. It explains
+Approved/Effective passages with an OpenAI model (Responses API, `store: false`), supports
+follow-ups, corrections, and topic changes, says when the documents do not state something, and
+shows every supplied passage with document, version, status, and citation reference. Statements
+whose citations or numbers do not check out mechanically are withheld; nothing is labelled
+verified. Without `BIOTECH_RAG_CHAT_PROVIDER=openai` and a server-side `OPENAI_API_KEY` it calls
+no model and shows the retrieved passages only. It is separate from `/answer`, which is unchanged.
+
+```bash
+.venv/bin/pip install -e ".[chat]"
+.venv/bin/biotech-rag chat          # then open http://127.0.0.1:8000/chat
+```
+
+Setup, bounds, data handling, verification status (live OpenAI behavior is not yet verified),
+and limitations: [`docs/chat-prototype.md`](docs/chat-prototype.md). Example conversations
+(scripted model outputs through the real app): [`docs/chat-examples.md`](docs/chat-examples.md).
+Decision record: ADR-019.
+
 ## Current build
 
 The current code ships:
@@ -107,6 +127,7 @@ The current code ships:
 - a refusal explanation that names any held-out (Draft/Obsolete/Superseded) passage a status-blind run of the same query would have answered from, display-only and never evidence (ADR-018);
 - CLI surfaces for corpus validation, retrieval, deterministic extractive answers, citation validation, and evaluation, plus a demo chat UI (`biotech-rag demo`) that serves a trust-forward page over the `/answer` contract;
 - a FastAPI pure-transport layer (`biotech-rag serve`) exposing the same five operations plus `/health`, with a server-bound corpus allowlist, optional API-key auth, per-request audit records, and an advisory review-routing signal on `/answer`;
+- an experimental, opt-in conversational prototype (`biotech-rag chat`, `/chat`) composed beside the maintained routes, with mechanical citation and number checks on generated text (ADR-019);
 - structural citation-resolution validation over hand-written answer fixtures;
 - a 24-case trust-layer evaluation suite (supported retrieval, refusal, stale-document, current-version, and citation traps), plus a separate 13-case natural-language query suite (on-topic answer, off-topic refusal);
 - Markdown and JSON trust-layer reports with corpus/config metadata, metrics, a case table, and explicit limits;
@@ -114,12 +135,12 @@ The current code ships:
 
 Deferred work:
 
-- LLM answer generation;
+- LLM answer generation in the maintained answer contract (an experimental, opt-in chat prototype exists; see above);
 - semantic citation-support assessment;
 - semantic retrieval and reciprocal-rank fusion;
 - n8n workflow exports.
 
-Known gap: a near-miss question, whose topic the corpus covers but whose fact it never states, passes the relevance gate. "What is the acceptance range for the analytical balance daily check?" returns the passage that mentions the range without giving it. The extractive answer asserts nothing, so the failure is benign today; with a generator it becomes a path to a fabricated value. `tests/test_known_gaps.py` pins the current behavior.
+Known gap: a near-miss question, whose topic the corpus covers but whose fact it never states, passes the relevance gate. "What is the acceptance range for the analytical balance daily check?" returns the passage that mentions the range without giving it. The extractive answer asserts nothing, so the failure is benign today; with a generator it becomes a path to a fabricated value. `tests/test_known_gaps.py` pins the current behavior. The experimental chat prototype withholds any generated statement whose numbers do not appear in its cited passage (`tests/test_chat_api.py`), which covers this numeric case mechanically; it is not a semantic-support check.
 
 ## Verification
 

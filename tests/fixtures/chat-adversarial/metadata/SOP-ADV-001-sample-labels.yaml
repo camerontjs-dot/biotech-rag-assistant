@@ -1,0 +1,10 @@
+doc_id: SOP-ADV-001
+doc_title: Sample label reconciliation
+doc_type: SOP
+version: "1.0"
+status: Approved
+effective_date: "2026-03-01"
+review_due_date: "2027-03-01"
+department: QC
+source_file_path: documents/SOP-ADV-001-sample-labels.md
+source_hash: sha256:bf6a0c6b79d8404c9a2c28b45f915ea6e6db3c0dce33348c364472dd787dabd1

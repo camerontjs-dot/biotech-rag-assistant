@@ -358,3 +358,33 @@ def demo_command(host: str | None, port: int | None) -> None:
     app = create_demo_app(config)
     click.echo(f"Demo UI: http://{host or config.host}:{port or config.port}/")
     uvicorn.run(app, host=host or config.host, port=port or config.port)
+
+
+@cli.command("chat")
+@click.option("--host", "host", default=None, help="Bind host (overrides BIOTECH_RAG_HOST).")
+@click.option(
+    "--port", "port", default=None, type=int, help="Bind port (overrides BIOTECH_RAG_PORT)."
+)
+def chat_command(host: str | None, port: int | None) -> None:
+    """Run the experimental conversational prototype (transport, demo page, and /chat).
+
+    Generated explanations are opt-in: set BIOTECH_RAG_CHAT_PROVIDER=openai and OPENAI_API_KEY.
+    Without them the chat still retrieves and shows approved passages, and no model is called.
+    """
+    import uvicorn
+
+    from biotech_rag_assistant.api.config import ApiConfig
+    from biotech_rag_assistant.chat.app import create_chat_app
+    from biotech_rag_assistant.chat.settings import ChatSettings
+
+    config = ApiConfig.from_env()
+    settings = ChatSettings.from_env()
+    app = create_chat_app(config, settings)
+    availability = app.state.chat.provider.availability()
+    bind_host, bind_port = host or config.host, port or config.port
+    click.echo(f"Chat UI: http://{bind_host}:{bind_port}/chat")
+    if availability.available:
+        click.echo(f"Explanation provider: {availability.message}")
+    else:
+        click.echo(f"Explanation provider unavailable: {availability.message}")
+    uvicorn.run(app, host=bind_host, port=bind_port)

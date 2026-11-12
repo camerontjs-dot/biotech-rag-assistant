@@ -1,0 +1,10 @@
+doc_id: SOP-ADV-002
+doc_title: Retired sample label practice
+doc_type: SOP
+version: "0.9"
+status: Obsolete
+effective_date: "2025-01-01"
+review_due_date: "2025-12-31"
+department: QC
+source_file_path: documents/SOP-ADV-002-retired-labels.md
+source_hash: sha256:4d05500e7f6dd09bc59c7991be9851daef3773ee723820d4d7b7fdd92a1228f4
